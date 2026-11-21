@@ -1,0 +1,73 @@
+/*
+ * KNJ LAB design tokens — see DESIGN_SYSTEM.md.
+ * Components must use these tokens (via Tailwind theme) instead of raw values.
+ * Every text colour is checked for WCAG AA (≥ 4.5:1) on --bg, --surface-muted and 10% tints.
+ */
+:root {
+  --bg: #faf6ef;
+  --surface: #ffffff;
+  --surface-muted: #f2ece2;
+  --border: #e4dccf;
+  --text: #1c1a17;
+  --text-muted: #5e574d;
+  --accent: #a84508;
+  --accent-hover: #8f3a06;
+  --accent-contrast: #ffffff;
+  --success: #186a3b;
+  --danger: #b53628;
+  --warning: #8a5a12;
+  --info: #2b6cb0;
+  --subject-algebra: #4a4ac4;
+  --subject-geometry: #0b6b61;
+  --subject-physics: #a8380a;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14120f;
+    --surface: #1d1a16;
+    --surface-muted: #26221d;
+    --border: #3a342c;
+    --text: #f3eee6;
+    --text-muted: #b3aa9c;
+    --accent: #ff8a3d;
+    --accent-hover: #ffa366;
+    --accent-contrast: #14120f;
+    --success: #4cc47f;
+    --danger: #ff6b5c;
+    --warning: #f0b44c;
+    --info: #6aa8f0;
+    --subject-algebra: #8f8ff0;
+    --subject-geometry: #3cc2b1;
+    --subject-physics: #ff8a4c;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-algebra: var(--subject-algebra);
+  --color-geometry: var(--subject-geometry);
+  --color-physics: var(--subject-physics);
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-card: 0 1px 2px rgb(28 26 23 / 0.04), 0 4px 16px rgb(28 26 23 / 0.06);
+}

@@ -1,0 +1,57 @@
+import { Container } from '@knj/ui';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+import { LanguageSwitcher } from './language-switcher';
+import { navItems } from './nav-items';
+
+export function SiteHeader() {
+  const t = useTranslations('nav');
+  return (
+    <header className="sticky top-0 z-40 border-b border-border bg-bg/90 backdrop-blur">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:rounded-md focus:bg-surface focus:px-3 focus:py-2"
+      >
+        {t('skipToContent')}
+      </a>
+      <Container className="flex h-16 items-center justify-between gap-4">
+        <Link href="/" aria-label={t('home')} className="text-lg font-bold tracking-tight">
+          KNJ <span className="text-accent">LAB</span>
+        </Link>
+
+        <nav aria-label={t('menu')} className="hidden lg:block">
+          <ul className="flex gap-6 text-sm text-text-muted">
+            {navItems.map((item) => (
+              <li key={item.id}>
+                <a href={`#${item.id}`} className="hover:text-text">
+                  {t(item.key)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <details className="group relative lg:hidden">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md border border-border px-3 text-sm font-medium [&::-webkit-details-marker]:hidden">
+              {t('menu')}
+            </summary>
+            <ul className="absolute right-0 mt-2 w-56 rounded-lg border border-border bg-surface p-2 shadow-card">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    className="flex min-h-11 items-center rounded-md px-3 hover:bg-surface-muted"
+                  >
+                    {t(item.key)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </div>
+      </Container>
+    </header>
+  );
+}

@@ -1,11 +1,13 @@
 # CONTRIBUTING — KNJ LAB
 
 ## Ветки и коммиты
+
 - `main` защищена; работа — в feature-ветках `feat/<module>-<кратко>`, `fix/...`, `docs/...`.
 - Conventional Commits: `feat(task-engine): number checker with units`.
 - Один PR — одна логическая задача; PR требует зелёного CI и ревью.
 
 ## Перед PR
+
 ```bash
 pnpm lint
 pnpm typecheck
@@ -15,6 +17,7 @@ pnpm test:e2e     # при изменении UI/сценариев
 ```
 
 ## Правила кода
+
 - TypeScript strict, без `any` (исключения — с комментарием).
 - Модуль = папка с публичным `index.ts`; файлы > 400 строк — разделять.
 - Бизнес-логика — в `packages/*` или `apps/web/src/server`, не в компонентах.
@@ -27,7 +30,9 @@ pnpm test:e2e     # при изменении UI/сценариев
 - Никаких реальных ПДн в seed, тестах, логах, скриншотах.
 
 ## Definition of Done
+
 Код + тесты + документация + RU/KK + mobile/tablet/desktop + доступность + без новых предупреждений линтера.
 
 ## Архитектурные решения
+
 Значимые решения оформляются ADR в `docs/adr/NNNN-название.md` (контекст, решение, последствия, альтернативы).

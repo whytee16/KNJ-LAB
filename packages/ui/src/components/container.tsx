@@ -1,0 +1,7 @@
+import type { HTMLAttributes } from 'react';
+import { cn } from '../cn.ts';
+
+/** Page-width container: 16px gutters on mobile, 24px on tablet, max 1200px. */
+export function Container({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn('mx-auto w-full max-w-[1200px] px-4 md:px-6', className)} {...props} />;
+}
