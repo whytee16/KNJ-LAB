@@ -103,6 +103,297 @@ export type Database = {
           },
         ];
       };
+      curricula: {
+        Row: {
+          academic_year: string | null;
+          code: string;
+          created_at: string;
+          id: string;
+          is_default: boolean;
+        };
+        ComputedFields: never;
+        Insert: {
+          academic_year?: string | null;
+          code: string;
+          created_at?: string;
+          id?: string;
+          is_default?: boolean;
+        };
+        Update: {
+          academic_year?: string | null;
+          code?: string;
+          created_at?: string;
+          id?: string;
+          is_default?: boolean;
+        };
+        Relationships: [];
+      };
+      curriculum_section_translations: {
+        Row: {
+          locale: Database['public']['Enums']['app_locale'];
+          section_id: string;
+          title: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          locale: Database['public']['Enums']['app_locale'];
+          section_id: string;
+          title: string;
+        };
+        Update: {
+          locale?: Database['public']['Enums']['app_locale'];
+          section_id?: string;
+          title?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'curriculum_section_translations_section_id_fkey';
+            columns: ['section_id'];
+            isOneToOne: false;
+            referencedRelation: 'curriculum_sections';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      curriculum_sections: {
+        Row: {
+          created_at: string;
+          curriculum_id: string;
+          grade: number;
+          id: string;
+          quarter: number;
+          sort: number;
+          subject_code: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          created_at?: string;
+          curriculum_id: string;
+          grade: number;
+          id?: string;
+          quarter: number;
+          sort?: number;
+          subject_code: string;
+        };
+        Update: {
+          created_at?: string;
+          curriculum_id?: string;
+          grade?: number;
+          id?: string;
+          quarter?: number;
+          sort?: number;
+          subject_code?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'curriculum_sections_curriculum_id_fkey';
+            columns: ['curriculum_id'];
+            isOneToOne: false;
+            referencedRelation: 'curricula';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'curriculum_sections_subject_code_fkey';
+            columns: ['subject_code'];
+            isOneToOne: false;
+            referencedRelation: 'subjects';
+            referencedColumns: ['code'];
+          },
+        ];
+      };
+      curriculum_topics: {
+        Row: {
+          section_id: string;
+          sort: number;
+          topic_id: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          section_id: string;
+          sort?: number;
+          topic_id: string;
+        };
+        Update: {
+          section_id?: string;
+          sort?: number;
+          topic_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'curriculum_topics_section_id_fkey';
+            columns: ['section_id'];
+            isOneToOne: false;
+            referencedRelation: 'curriculum_sections';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'curriculum_topics_topic_id_fkey';
+            columns: ['topic_id'];
+            isOneToOne: false;
+            referencedRelation: 'topics';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      curriculum_translations: {
+        Row: {
+          curriculum_id: string;
+          locale: Database['public']['Enums']['app_locale'];
+          title: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          curriculum_id: string;
+          locale: Database['public']['Enums']['app_locale'];
+          title: string;
+        };
+        Update: {
+          curriculum_id?: string;
+          locale?: Database['public']['Enums']['app_locale'];
+          title?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'curriculum_translations_curriculum_id_fkey';
+            columns: ['curriculum_id'];
+            isOneToOne: false;
+            referencedRelation: 'curricula';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      favorites: {
+        Row: {
+          created_at: string;
+          formula_id: string;
+          profile_id: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          created_at?: string;
+          formula_id: string;
+          profile_id: string;
+        };
+        Update: {
+          created_at?: string;
+          formula_id?: string;
+          profile_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'favorites_formula_id_fkey';
+            columns: ['formula_id'];
+            isOneToOne: false;
+            referencedRelation: 'formulas';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'favorites_profile_id_fkey';
+            columns: ['profile_id'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      formula_translations: {
+        Row: {
+          description: string;
+          formula_id: string;
+          locale: Database['public']['Enums']['app_locale'];
+          name: string;
+          variables: NonNullable<Json>;
+        };
+        ComputedFields: never;
+        Insert: {
+          description?: string;
+          formula_id: string;
+          locale: Database['public']['Enums']['app_locale'];
+          name: string;
+          variables?: NonNullable<Json>;
+        };
+        Update: {
+          description?: string;
+          formula_id?: string;
+          locale?: Database['public']['Enums']['app_locale'];
+          name?: string;
+          variables?: NonNullable<Json>;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'formula_translations_formula_id_fkey';
+            columns: ['formula_id'];
+            isOneToOne: false;
+            referencedRelation: 'formulas';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      formulas: {
+        Row: {
+          code: string;
+          created_by: string | null;
+          grade_from: number;
+          grade_to: number;
+          id: string;
+          latex: string;
+          published_at: string | null;
+          reviewed_by: string | null;
+          status: Database['public']['Enums']['formula_status'];
+          subject_code: string;
+          updated_at: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          code: string;
+          created_by?: string | null;
+          grade_from: number;
+          grade_to: number;
+          id?: string;
+          latex: string;
+          published_at?: string | null;
+          reviewed_by?: string | null;
+          status?: Database['public']['Enums']['formula_status'];
+          subject_code: string;
+          updated_at?: string;
+        };
+        Update: {
+          code?: string;
+          created_by?: string | null;
+          grade_from?: number;
+          grade_to?: number;
+          id?: string;
+          latex?: string;
+          published_at?: string | null;
+          reviewed_by?: string | null;
+          status?: Database['public']['Enums']['formula_status'];
+          subject_code?: string;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'formulas_created_by_fkey';
+            columns: ['created_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'formulas_reviewed_by_fkey';
+            columns: ['reviewed_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'formulas_subject_code_fkey';
+            columns: ['subject_code'];
+            isOneToOne: false;
+            referencedRelation: 'subjects';
+            referencedColumns: ['code'];
+          },
+        ];
+      };
       legal_documents: {
         Row: {
           body: string;
@@ -244,11 +535,242 @@ export type Database = {
           },
         ];
       };
+      subject_translations: {
+        Row: {
+          locale: Database['public']['Enums']['app_locale'];
+          name: string;
+          subject_code: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          locale: Database['public']['Enums']['app_locale'];
+          name: string;
+          subject_code: string;
+        };
+        Update: {
+          locale?: Database['public']['Enums']['app_locale'];
+          name?: string;
+          subject_code?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'subject_translations_subject_code_fkey';
+            columns: ['subject_code'];
+            isOneToOne: false;
+            referencedRelation: 'subjects';
+            referencedColumns: ['code'];
+          },
+        ];
+      };
+      subjects: {
+        Row: {
+          code: string;
+          sort: number;
+        };
+        ComputedFields: never;
+        Insert: {
+          code: string;
+          sort?: number;
+        };
+        Update: {
+          code?: string;
+          sort?: number;
+        };
+        Relationships: [];
+      };
+      topic_contents: {
+        Row: {
+          locale: Database['public']['Enums']['app_locale'];
+          mistakes: string[];
+          objectives: string[];
+          published_at: string;
+          published_by: string | null;
+          summary: string;
+          theory: string;
+          title: string;
+          topic_id: string;
+          version: number;
+        };
+        ComputedFields: never;
+        Insert: {
+          locale: Database['public']['Enums']['app_locale'];
+          mistakes?: string[];
+          objectives?: string[];
+          published_at?: string;
+          published_by?: string | null;
+          summary?: string;
+          theory: string;
+          title: string;
+          topic_id: string;
+          version?: number;
+        };
+        Update: {
+          locale?: Database['public']['Enums']['app_locale'];
+          mistakes?: string[];
+          objectives?: string[];
+          published_at?: string;
+          published_by?: string | null;
+          summary?: string;
+          theory?: string;
+          title?: string;
+          topic_id?: string;
+          version?: number;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'topic_contents_published_by_fkey';
+            columns: ['published_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'topic_contents_topic_id_fkey';
+            columns: ['topic_id'];
+            isOneToOne: false;
+            referencedRelation: 'topics';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      topic_drafts: {
+        Row: {
+          is_machine_translation: boolean;
+          locale: Database['public']['Enums']['app_locale'];
+          mistakes: string[];
+          objectives: string[];
+          review_note: string | null;
+          reviewed_at: string | null;
+          reviewed_by: string | null;
+          status: Database['public']['Enums']['draft_status'];
+          submitted_at: string | null;
+          summary: string;
+          theory: string;
+          title: string;
+          topic_id: string;
+          updated_at: string;
+          updated_by: string | null;
+        };
+        ComputedFields: never;
+        Insert: {
+          is_machine_translation?: boolean;
+          locale: Database['public']['Enums']['app_locale'];
+          mistakes?: string[];
+          objectives?: string[];
+          review_note?: string | null;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          status?: Database['public']['Enums']['draft_status'];
+          submitted_at?: string | null;
+          summary?: string;
+          theory?: string;
+          title: string;
+          topic_id: string;
+          updated_at?: string;
+          updated_by?: string | null;
+        };
+        Update: {
+          is_machine_translation?: boolean;
+          locale?: Database['public']['Enums']['app_locale'];
+          mistakes?: string[];
+          objectives?: string[];
+          review_note?: string | null;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          status?: Database['public']['Enums']['draft_status'];
+          submitted_at?: string | null;
+          summary?: string;
+          theory?: string;
+          title?: string;
+          topic_id?: string;
+          updated_at?: string;
+          updated_by?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'topic_drafts_reviewed_by_fkey';
+            columns: ['reviewed_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'topic_drafts_topic_id_fkey';
+            columns: ['topic_id'];
+            isOneToOne: false;
+            referencedRelation: 'topics';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'topic_drafts_updated_by_fkey';
+            columns: ['updated_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      topics: {
+        Row: {
+          created_at: string;
+          created_by: string | null;
+          id: string;
+          slug: string;
+          subject_code: string;
+          updated_at: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          created_at?: string;
+          created_by?: string | null;
+          id?: string;
+          slug: string;
+          subject_code: string;
+          updated_at?: string;
+        };
+        Update: {
+          created_at?: string;
+          created_by?: string | null;
+          id?: string;
+          slug?: string;
+          subject_code?: string;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'topics_created_by_fkey';
+            columns: ['created_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'topics_subject_code_fkey';
+            columns: ['subject_code'];
+            isOneToOne: false;
+            referencedRelation: 'subjects';
+            referencedColumns: ['code'];
+          },
+        ];
+      };
     };
     Views: {
       [_ in never]: never;
     };
     Functions: {
+      find_user_by_email: {
+        Args: { p_email: string };
+        Returns: {
+          display_name: string;
+          email: string;
+          id: string;
+          role: Database['public']['Enums']['app_role'];
+        }[];
+      };
+      publish_topic: {
+        Args: { p_locale: Database['public']['Enums']['app_locale']; p_topic: string };
+        Returns: number;
+      };
       rate_limit_hit: {
         Args: { p_key: string; p_max: number; p_window_seconds: number };
         Returns: boolean;
@@ -265,6 +787,30 @@ export type Database = {
         };
         Returns: undefined;
       };
+      request_topic_changes: {
+        Args: {
+          p_locale: Database['public']['Enums']['app_locale'];
+          p_note: string;
+          p_topic: string;
+        };
+        Returns: undefined;
+      };
+      set_formula_status: {
+        Args: { p_formula: string; p_status: Database['public']['Enums']['formula_status'] };
+        Returns: undefined;
+      };
+      set_user_role: {
+        Args: { p_role: Database['public']['Enums']['app_role']; p_user: string };
+        Returns: undefined;
+      };
+      submit_topic_draft: {
+        Args: { p_locale: Database['public']['Enums']['app_locale']; p_topic: string };
+        Returns: undefined;
+      };
+      unpublish_topic: {
+        Args: { p_locale: Database['public']['Enums']['app_locale']; p_topic: string };
+        Returns: undefined;
+      };
       write_audit: {
         Args: {
           p_action: string;
@@ -279,6 +825,8 @@ export type Database = {
     Enums: {
       app_locale: 'ru' | 'kk';
       app_role: 'student' | 'parent' | 'content_manager' | 'reviewer' | 'admin' | 'support';
+      draft_status: 'draft' | 'in_review' | 'approved';
+      formula_status: 'draft' | 'in_review' | 'published';
       legal_document_type: 'pd_processing' | 'child_pd_processing' | 'offer' | 'terms';
       link_status: 'active' | 'revoked';
     };
@@ -397,6 +945,8 @@ export const Constants = {
     Enums: {
       app_locale: ['ru', 'kk'],
       app_role: ['student', 'parent', 'content_manager', 'reviewer', 'admin', 'support'],
+      draft_status: ['draft', 'in_review', 'approved'],
+      formula_status: ['draft', 'in_review', 'published'],
       legal_document_type: ['pd_processing', 'child_pd_processing', 'offer', 'terms'],
       link_status: ['active', 'revoked'],
     },

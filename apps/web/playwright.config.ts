@@ -1,4 +1,8 @@
+import nextEnv from '@next/env';
 import { defineConfig, devices } from '@playwright/test';
+
+// Tests that create accounts need the same Supabase settings as the app (.env.local).
+nextEnv.loadEnvConfig(process.cwd());
 
 const PORT = Number(process.env.E2E_PORT ?? 3100);
 
@@ -20,13 +24,13 @@ export default defineConfig({
   projects: [
     ...viewports.map((v) => ({
       name: v.name,
-      testIgnore: /auth\.spec\.ts/,
+      testIgnore: /(auth|content)\.spec\.ts/,
       use: { ...devices['Desktop Chrome'], viewport: { width: v.width, height: v.height } },
     })),
-    // Account lifecycle needs the local Supabase stack (pnpm db:start); one viewport is enough.
+    // Account and content lifecycles need the local Supabase stack (pnpm db:start); one viewport is enough.
     {
-      name: 'auth',
-      testMatch: /auth\.spec\.ts/,
+      name: 'accounts',
+      testMatch: /(auth|content)\.spec\.ts/,
       use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 900 } },
     },
   ],

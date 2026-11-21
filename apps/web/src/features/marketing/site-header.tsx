@@ -7,7 +7,8 @@ import { dashboardPath } from '@/server/redirects';
 import { LanguageSwitcher } from './language-switcher';
 import { navItems } from './nav-items';
 
-export async function SiteHeader() {
+/** `landing` adds in-page section links; other public pages show only route links. */
+export async function SiteHeader({ landing = false }: { landing?: boolean }) {
   const t = await getTranslations('nav');
   const locale = (await getLocale()) as 'ru' | 'kk';
   const user = isSupabaseConfigured() ? await getCurrentUser() : null;
@@ -28,7 +29,17 @@ export async function SiteHeader() {
 
         <nav aria-label={t('menu')} className="hidden lg:block">
           <ul className="flex gap-6 text-sm text-text-muted">
-            {navItems.map((item) => (
+            <li>
+              <Link href="/learn" className="hover:text-text">
+                {t('learn')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/reference" className="hover:text-text">
+                {t('reference')}
+              </Link>
+            </li>
+            {(landing ? navItems : []).map((item) => (
               <li key={item.id}>
                 <a href={`#${item.id}`} className="hover:text-text">
                   {t(item.key)}
@@ -66,7 +77,20 @@ export async function SiteHeader() {
                   </Link>
                 </li>
               ) : null}
-              {navItems.map((item) => (
+              {[
+                { href: '/learn', label: t('learn') },
+                { href: '/reference', label: t('reference') },
+              ].map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="flex min-h-11 items-center rounded-md px-3 hover:bg-surface-muted"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+              {(landing ? navItems : []).map((item) => (
                 <li key={item.id}>
                   <a
                     href={`#${item.id}`}

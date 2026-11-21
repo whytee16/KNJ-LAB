@@ -44,7 +44,12 @@ export async function signIn(_prev: FormState, form: FormData): Promise<FormStat
   if (!parsed.success) return fromZodError(parsed.error, publicValues(values));
 
   const email = identifierToEmail(parsed.data.identifier, env().STUDENT_EMAIL_DOMAIN);
-  if (!(await hitAll('login', [`ip:${await ipHash()}`, `acct:${email}`]))) {
+  if (
+    !(await hitAll([
+      ['loginIp', await ipHash()],
+      ['loginAccount', email],
+    ]))
+  ) {
     return errorState('auth.errors.rateLimited', publicValues(values));
   }
 
@@ -141,7 +146,12 @@ export async function requestPasswordReset(_prev: FormState, form: FormData): Pr
   if (!parsed.success) return fromZodError(parsed.error, values);
 
   const email = parsed.data.email;
-  if (!(await hitAll('passwordReset', [`ip:${await ipHash()}`, `acct:${email}`]))) {
+  if (
+    !(await hitAll([
+      ['passwordResetIp', await ipHash()],
+      ['passwordResetAccount', email],
+    ]))
+  ) {
     return errorState('auth.errors.rateLimited', values);
   }
 

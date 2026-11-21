@@ -18,7 +18,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
 
   return (
     <>
-      <SiteHeader />
+      <SiteHeader landing />
       <main id="main">
         <Hero />
         <SubjectsSection />

@@ -5,7 +5,9 @@ describe('dashboardPath', () => {
   it('routes each role to its cabinet', () => {
     expect(dashboardPath('parent', 'ru')).toBe('/ru/parent');
     expect(dashboardPath('student', 'kk')).toBe('/kk/app');
-    expect(dashboardPath('admin', 'ru')).toBe('/ru/account');
+    expect(dashboardPath('admin', 'ru')).toBe('/ru/studio');
+    expect(dashboardPath('content_manager', 'kk')).toBe('/kk/studio');
+    expect(dashboardPath('support', 'ru')).toBe('/ru/account');
   });
 });
 

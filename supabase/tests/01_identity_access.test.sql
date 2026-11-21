@@ -131,7 +131,9 @@ select is((select grade from public.student_profiles where profile_id = '3333333
 
 -- Admin ----------------------------------------------------------------------------------------
 select pg_temp.as_user('44444444-4444-4444-4444-444444444444');
-select is((select count(*)::int from public.profiles), 5, 'admin sees all profiles');
+select is((select count(*)::int from public.profiles where id in ('11111111-1111-1111-1111-111111111111',
+  '22222222-2222-2222-2222-222222222222', '33333333-3333-3333-3333-333333333333', '44444444-4444-4444-4444-444444444444',
+  '55555555-5555-5555-5555-555555555555')), 5, 'admin sees every profile');
 select pg_temp.reset();
 
 -- Anonymous --------------------------------------------------------------------------------------

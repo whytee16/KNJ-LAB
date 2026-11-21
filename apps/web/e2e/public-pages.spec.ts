@@ -8,6 +8,11 @@ const pages = [
   { path: '/kk/register', h1: 'Ата-ананы тіркеу' },
   { path: '/ru/forgot-password', h1: 'Восстановление пароля' },
   { path: '/kk/forgot-password', h1: 'Құпиясөзді қалпына келтіру' },
+  { path: '/ru/learn', h1: 'Учебные темы' },
+  { path: '/kk/learn', h1: 'Оқу тақырыптары' },
+  { path: '/ru/learn/physics/9', h1: 'Физика · 9 класс' },
+  { path: '/ru/reference', h1: 'Справочник формул' },
+  { path: '/kk/reference', h1: 'Формулалар анықтамалығы' },
 ];
 
 for (const p of pages) {
@@ -48,4 +53,14 @@ test('pages are served with a nonce-based Content-Security-Policy', async ({ pag
   // Hydrated forms prove that Next's scripts carry the nonce and are not blocked.
   await page.waitForLoadState('networkidle');
   expect(errors).toEqual([]);
+});
+
+test('unknown subject or grade in the catalogue is a 404', async ({ page }) => {
+  expect((await page.goto('/ru/learn/chemistry/7'))?.status()).toBe(404);
+  expect((await page.goto('/ru/learn/algebra/12'))?.status()).toBe(404);
+});
+
+test('studio requires signing in', async ({ page }) => {
+  await page.goto('/ru/studio');
+  await expect(page).toHaveURL(/\/ru\/login\?next=%2Fru%2Fstudio$/);
 });

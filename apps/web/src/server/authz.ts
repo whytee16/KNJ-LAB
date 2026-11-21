@@ -5,7 +5,7 @@ import { cache } from 'react';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { createUserClient } from '@/lib/supabase/server';
 import { currentDocument } from './legal';
-import { dashboardPath, type AppRole } from './redirects';
+import { dashboardPath, STUDIO_ROLES, type AppRole } from './redirects';
 
 export interface CurrentUser {
   id: string;
@@ -109,4 +109,25 @@ export class ForbiddenError extends Error {
     super('forbidden');
     this.name = 'ForbiddenError';
   }
+}
+
+/**
+ * Staff pages: role check plus a verified second factor (TOTP). Without a factor the user is
+ * sent to set one up; with a factor but a one-factor session, to enter a code.
+ * The database enforces the same rule (aal2) on every staff write.
+ */
+export async function requireStaff(
+  locale: Locale,
+  next: string,
+  roles: AppRole[] = STUDIO_ROLES,
+): Promise<CurrentUser> {
+  const user = await requireUser(locale, { roles, next });
+  const supabase = await createUserClient();
+  const { data, error } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
+  if (error) throw new Error(`MFA status failed: ${error.message}`);
+  if (data.currentLevel !== 'aal2') {
+    const step = data.nextLevel === 'aal2' ? 'verify' : 'enroll';
+    redirect(`/${locale}/security/${step}?next=${encodeURIComponent(next)}`);
+  }
+  return user;
 }

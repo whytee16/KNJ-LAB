@@ -39,25 +39,41 @@ link_status:     pending | active | revoked
 - `private.current_app_role()`, `private.is_admin()`, `private.is_parent_of(uuid)` — хелперы для RLS (`security definer`, фиксированный `search_path`); схема `private` не публикуется через PostgREST.
 - Смена `profiles.role` автоматически пишется в `audit_logs`.
 
-## 3. Учебная программа
+## 3. Учебная программа и темы (реализовано, этап 3)
 
-| Таблица                        | Ключевые поля                                                                                                                                                            |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `subjects`                     | `code` (algebra, geometry, physics…), `sort`                                                                                                                             |
-| `subject_translations`         | `subject_id`, `locale`, `name`                                                                                                                                           |
-| `curricula`                    | `code`, `academic_year`, `school_type`, `is_default`, `status`                                                                                                           |
-| `curriculum_nodes`             | `curriculum_id`, `parent_id` (дерево), `kind` (quarter/section/topic), `subject_id`, `grade`, `quarter`, `topic_id` nullable, `sort`                                     |
-| `curriculum_node_translations` | `node_id`, `locale`, `title`                                                                                                                                             |
-| `topics`                       | `slug`, `subject_id`, `status`, `version`                                                                                                                                |
-| `topic_translations`           | `topic_id`, `locale`, `title`, `summary`, `objectives jsonb`, `theory_md`, `examples jsonb`, `common_mistakes jsonb`, `translation_status`, `reviewed_by`, `reviewed_at` |
-| `topic_formulas`               | `topic_id`, `formula_id`, `sort`                                                                                                                                         |
+Миграция: `supabase/migrations/20261122090000_content_core.sql`. Тесты: `supabase/tests/02_content_access.test.sql`.
 
-Индексы: `curriculum_nodes(curriculum_id, parent_id, sort)`, `(curriculum_id, grade, subject_id)`.
+| Таблица                                                   | Ключевые поля                                                                                                                                      | Доступ                                             |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `subjects` + `subject_translations`                       | `code` (algebra, geometry, physics), `sort`; `name` по языкам                                                                                      | справочные данные миграции; читают все             |
+| `curricula` + `curriculum_translations`                   | `code`, `academic_year`, `is_default` (одна программа по умолчанию)                                                                                | читают все; пишут reviewer/admin с aal2            |
+| `curriculum_sections` + `curriculum_section_translations` | `curriculum_id`, `subject_code`, `grade 7..11`, `quarter 1..4`, `sort`; `title` по языкам                                                          | читают все; пишут reviewer/admin с aal2            |
+| `curriculum_topics`                                       | PK(`section_id`, `topic_id`), `sort`                                                                                                               | то же                                              |
+| `topics`                                                  | `slug` (kebab-case, UNIQUE), `subject_code`, `created_by`                                                                                          | видна всем после публикации хотя бы на одном языке |
+| `topic_contents`                                          | PK(`topic_id`, `locale`), `title`, `summary`, `objectives[]`, `theory` (Markdown + LaTeX), `mistakes[]`, `version`, `published_at`, `published_by` | читают все; пишет только `publish_topic()`         |
+| `topic_drafts`                                            | те же поля + `status` (draft / in_review / approved), `is_machine_translation`, `review_note`, `submitted_at`, `reviewed_by`                       | только сотрудники; статус меняют только функции    |
 
-## 4. Справочник
+Распределение тем по четвертям **не заполняется автоматически**: структуру вводит методист в студии (`/studio/curriculum`). Модель — фиксированные уровни «предмет + класс + четверть → раздел → темы» вместо произвольного дерева `curriculum_nodes` из первоначального плана: проще редактировать и проверять.
 
-`formulas` (`latex`, `variables jsonb` — символ, единица, описание-ключ, `subject_id`, `grades int4range`), `formula_translations` (`name`, `description`, `search_tsv`), `constants` (`symbol`, `value numeric`, `unit`, `source`), `units` (`symbol`, `si_base jsonb` — размерность для проверки единиц), `reference_tables` (+translations, `data jsonb`), `favorites` (`profile_id`, `entity_type`, `entity_id`, UNIQUE).
-Поиск: `tsvector` по `simple`-конфигурации (ru/kk) + trigram (`pg_trgm`).
+Рабочий процесс темы (по каждому языку отдельно): черновик → `submit_topic_draft()` → `publish_topic()` (копирует черновик в `topic_contents`, версия +1) или `request_topic_changes()` (возврат с замечанием). Любое изменение текста черновика триггером возвращает его в `draft`; опубликованная версия при этом не меняется, пока методист не опубликует новую. `unpublish_topic()` снимает язык с публикации.
+
+## 4. Справочник (реализовано, этап 3)
+
+| Таблица                | Ключевые поля                                                                                                    | Доступ                                                                     |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `formulas`             | `code` UNIQUE, `subject_code`, `grade_from..grade_to`, `latex`, `status` (draft / in_review / published)         | опубликованные читают все; автор правит только черновик; методист — всегда |
+| `formula_translations` | PK(`formula_id`, `locale`), `name`, `description`, `variables` jsonb `[{symbol, meaning, unit}]`; trigram-индекс | как у формулы                                                              |
+| `favorites`            | PK(`profile_id`, `formula_id`)                                                                                   | только свои строки, только опубликованные формулы                          |
+
+Статус формулы меняет `set_formula_status()`: автор может только отправить черновик на проверку, остальное — методист. Для формул выбрана модель «статус в строке» (в отличие от тем): справочные формулы редко меняются, а исправление опубликованной формулы выполняет методист.
+
+Константы, единицы и таблицы справочника — следующие итерации (та же модель, что у формул).
+
+## Роли сотрудников и второй фактор (этап 3)
+
+- `private.is_staff()`, `private.can_review()`, `private.has_aal2()`; все записи сотрудников в политиках и функциях требуют `aal2` (TOTP подтверждён в текущей сессии).
+- `set_user_role()` — только admin с aal2; нельзя менять свою роль и роли учеников.
+- `find_user_by_email()` — только `service_role` (поиск пользователя в админке после проверки прав в приложении).
 
 ## 5. Задачи, тесты, тренажёр
 

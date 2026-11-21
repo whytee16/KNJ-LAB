@@ -60,13 +60,30 @@
 | `getOrderStatus({orderId})`                            | parent | для страницы возврата (ничего не активирует)    |
 | `requestRefund({paymentId, reason})`                   | parent | создаёт заявку                                  |
 
-### studio (content_manager / reviewer)
+### studio (реализовано, этап 3)
 
-CRUD черновиков: `upsertTopicDraft`, `upsertTaskTemplateDraft`, `previewTemplate({templateId, seeds: number[]})` (прогон генератора + проверка ОДЗ), `submitForReview`, `publish` (reviewer), `upsertTranslation`, `approveTranslation` (reviewer), `uploadMedia`.
+Server Actions в `apps/web/src/features/studio/*`. Каждое действие проверяет роль и `aal2` в приложении (`actingStaff()`), затем работает от имени пользователя, поэтому RLS и SQL-функции проверяют то же самое ещё раз.
 
-### admin
+| Действие                                                                                    | Роль             | Описание                                                                 |
+| ------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------ |
+| `createTopic(slug, subject, title)`                                                         | staff            | тема + черновик RU                                                       |
+| `saveTopicDraft(topicId, contentLocale, …)`                                                 | staff            | сохраняет черновик; сообщает об ошибках LaTeX                            |
+| `runTopicWorkflow(intent = submit / publish / requestChanges / unpublish)`                  | staff / reviewer | переходы статуса; публикация и отправка запрещены при ошибках в формулах |
+| `createFormula`, `saveFormula`, `setFormulaStatus`, `deleteFormula`                         | staff / reviewer | формулы справочника; LaTeX и обозначения проверяются до сохранения       |
+| `addSection`, `renameSection`, `moveSection`, `deleteSection`, `attachTopic`, `detachTopic` | reviewer, admin  | редактор КТП                                                             |
+| `findUser(email)`, `changeRole(userId, role)`                                               | admin            | роли сотрудников; аудит                                                  |
 
-`listUsers`, `setRole` (аудит), `upsertCurriculum`, `moveCurriculumNode`, `upsertPlan`, `approveRefund`, `grantEntitlement` (ручная выдача, аудит, обязательная причина), `getMetrics({from, to})`.
+### security (этап 3)
+
+`startEnrollment()` (QR-код и секрет TOTP), `confirmEnrollment(factorId, code)`, `verifyMfa(code)` — лимит 10 попыток за 10 минут на пользователя.
+
+### public content (этап 3)
+
+`toggleFavorite(formulaId)` — любой вошедший пользователь. Чтение тем, каталога и справочника — Server Components от имени посетителя (RLS отдаёт только опубликованное).
+
+### admin (позже)
+
+Платежи, тарифы, аналитика — этапы 6–7.
 
 ## 3. Route Handlers
 

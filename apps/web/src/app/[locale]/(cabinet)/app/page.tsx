@@ -1,4 +1,6 @@
 import { Badge, Card, Container } from '@knj/ui';
+import { SUBJECTS } from '@/features/content/queries';
+import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { pageLocale } from '@/features/shell/page-locale';
@@ -14,6 +16,7 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
   const locale = await pageLocale(params);
   const user = await requireUser(locale, { roles: ['student'], next: `/${locale}/app` });
   const t = await getTranslations('student');
+  const s = await getTranslations('studio.subjects');
   const supabase = await createUserClient();
   const { data: student } = await supabase
     .from('student_profiles')
@@ -35,9 +38,25 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
           </span>
         </div>
       ) : null}
-      <Card className="mt-8 max-w-2xl">
-        <p className="text-text-muted">{t('next')}</p>
-      </Card>
+      {student ? (
+        <section aria-labelledby="my-subjects" className="mt-10">
+          <h2 id="my-subjects" className="text-xl font-semibold">
+            {t('subjects')}
+          </h2>
+          <p className="mt-1 text-sm text-text-muted">{t('next')}</p>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-3">
+            {SUBJECTS.map((subject) => (
+              <li key={subject}>
+                <Link href={`/learn/${subject}/${student.grade}`} className="block">
+                  <Card className="hover:border-accent">
+                    <span className="text-lg font-semibold">{s(subject)}</span>
+                  </Card>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </Container>
   );
 }

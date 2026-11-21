@@ -7,13 +7,19 @@ export interface Limit {
   windowSeconds: number;
 }
 
-/** Limits per action (API.md §1). */
+/**
+ * Limits per action (API.md §1). Per-account limits stop password guessing; per-IP limits are
+ * generous because a whole school class can share one NAT address.
+ */
 export const limits = {
-  login: { max: 10, windowSeconds: 600 },
-  register: { max: 5, windowSeconds: 3600 },
-  passwordReset: { max: 3, windowSeconds: 3600 },
+  loginAccount: { max: 10, windowSeconds: 600 },
+  loginIp: { max: 300, windowSeconds: 600 },
+  register: { max: 30, windowSeconds: 3600 },
+  passwordResetAccount: { max: 3, windowSeconds: 3600 },
+  passwordResetIp: { max: 30, windowSeconds: 3600 },
   createChild: { max: 10, windowSeconds: 86_400 },
   childPassword: { max: 20, windowSeconds: 3600 },
+  mfa: { max: 10, windowSeconds: 600 },
 } satisfies Record<string, Limit>;
 
 /**
@@ -32,8 +38,8 @@ export async function hit(bucket: keyof typeof limits, key: string): Promise<boo
   return data === true;
 }
 
-/** Checks several keys (e.g. IP and account); all must pass. */
-export async function hitAll(bucket: keyof typeof limits, keys: string[]): Promise<boolean> {
-  const results = await Promise.all(keys.map((k) => hit(bucket, k)));
+/** Checks several (bucket, key) pairs, e.g. per account and per IP; all must pass. */
+export async function hitAll(checks: [keyof typeof limits, string][]): Promise<boolean> {
+  const results = await Promise.all(checks.map(([bucket, key]) => hit(bucket, key)));
   return results.every(Boolean);
 }
