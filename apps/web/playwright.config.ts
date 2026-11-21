@@ -11,20 +11,32 @@ const viewports = [
 
 export default defineConfig({
   testDir: './e2e',
+  globalSetup: './e2e/global-setup.ts',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? [['github'], ['list']] : 'list',
   use: { baseURL: `http://127.0.0.1:${PORT}`, trace: 'off' },
-  projects: viewports.map((v) => ({
-    name: v.name,
-    use: { ...devices['Desktop Chrome'], viewport: { width: v.width, height: v.height } },
-  })),
+  projects: [
+    ...viewports.map((v) => ({
+      name: v.name,
+      testIgnore: /auth\.spec\.ts/,
+      use: { ...devices['Desktop Chrome'], viewport: { width: v.width, height: v.height } },
+    })),
+    // Account lifecycle needs the local Supabase stack (pnpm db:start); one viewport is enough.
+    {
+      name: 'auth',
+      testMatch: /auth\.spec\.ts/,
+      use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 900 } },
+    },
+  ],
   webServer: {
     command: `pnpm start -p ${PORT}`,
     url: `http://127.0.0.1:${PORT}/api/health`,
     // Never reuse: a stale server from an older build serves missing chunks and breaks hydration.
     reuseExistingServer: false,
     timeout: 60_000,
+    // Links in auth e-mails must point back at this server.
+    env: { APP_URL: `http://127.0.0.1:${PORT}` },
   },
 });

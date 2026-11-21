@@ -17,16 +17,27 @@ payment_status:  created | pending | succeeded | failed | canceled | refunded | 
 link_status:     pending | active | revoked
 ```
 
-## 2. Идентичность и согласия
+## 2. Идентичность и согласия (реализовано, этап 2)
 
-| Таблица                | Ключевые поля                                                                                                                                             | Примечания                    |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| `profiles`             | `id` (=auth.users.id), `role app_role`, `display_name`, `locale`, `timezone`                                                                              | минимум ПДн                   |
-| `parent_profiles`      | `profile_id`, `email` (из auth), `phone` nullable                                                                                                         |                               |
-| `student_profiles`     | `profile_id`, `grade smallint check 7..11`, `curriculum_id`, `birth_year` nullable                                                                        | без ФИО полностью, фото, ИИН  |
-| `parent_student_links` | `parent_id`, `student_id`, `status link_status`, `created_at`, `confirmed_at`                                                                             | UNIQUE(parent_id, student_id) |
-| `consents`             | `subject_profile_id`, `given_by_profile_id`, `type` (pd_processing, offer, marketing, autorenew), `document_version`, `given_at`, `revoked_at`, `ip_hash` | append-only                   |
-| `legal_documents`      | `type`, `version`, `locale`, `body_md`, `published_at`                                                                                                    | версии оферты/политик         |
+Миграция: `supabase/migrations/20261121120000_identity_and_access.sql`. Тесты: `supabase/tests/*.test.sql` (pgTAP).
+
+| Таблица                | Ключевые поля                                                                                                               | Примечания                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `profiles`             | `id` (=auth.users.id), `role app_role`, `display_name` (1–60), `locale`, `timezone`                                         | клиент может менять только `display_name`, `locale`, `timezone` (column grants) |
+| `student_profiles`     | `profile_id`, `username` UNIQUE (`^[a-z0-9][a-z0-9_.]{2,31}$`), `grade 7..11`                                               | без e-mail, телефона, фото, ИИН; класс меняет родитель                          |
+| `parent_student_links` | PK(`parent_id`, `student_id`), `status active/revoked`, `revoked_at`                                                        | пишет только сервер                                                             |
+| `legal_documents`      | `type` (pd_processing, child_pd_processing, offer, terms), `version`, `locale`, `title`, `body`, `is_draft`, `published_at` | читают все опубликованное; черновики только в dev-seed                          |
+| `consents`             | `subject_profile_id`, `given_by_profile_id`, `type`, `document_version`, `given_at`, `revoked_at`, `ip_hash`                | пишет только сервер; IP хранится только как солёный хэш                         |
+| `audit_logs`           | `actor_id`, `action`, `entity`, `entity_id`, `details`, `at`                                                                | append-only: триггер запрещает UPDATE/DELETE/TRUNCATE даже владельцу            |
+| `private.rate_limits`  | `key`, `window_start`, `hits`                                                                                               | фиксированное окно; ключи — хэши                                                |
+
+Функции:
+
+- `private.handle_new_user()` — триггер на `auth.users`: **любой** новый аккаунт получает профиль с ролью `parent`. Метаданные роль не выдают (admin API GoTrue пишет `app_metadata` отдельным запросом после INSERT, а `user_metadata` — ввод клиента).
+- `public.register_student(...)` — только `service_role`: в одной транзакции превращает свежий (< 10 мин), ничем не связанный аккаунт в ученика данного родителя, создаёт профиль ученика, связь и согласие законного представителя. Проверяет, что версия согласия опубликована.
+- `public.write_audit(...)`, `public.rate_limit_hit(...)` — только `service_role`.
+- `private.current_app_role()`, `private.is_admin()`, `private.is_parent_of(uuid)` — хелперы для RLS (`security definer`, фиксированный `search_path`); схема `private` не публикуется через PostgREST.
+- Смена `profiles.role` автоматически пишется в `audit_logs`.
 
 ## 3. Учебная программа
 

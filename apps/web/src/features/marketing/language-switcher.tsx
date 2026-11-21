@@ -6,20 +6,24 @@ import { useLocale, useTranslations } from 'next-intl';
 import type { MouseEvent } from 'react';
 import { getPathname, usePathname, useRouter } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { rememberLocale } from '@/features/auth/actions';
 
 /**
  * Plain links to the same path in another locale (work without JS). With JS the current
  * #hash is read at click time so the reader stays on the same section.
  */
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ persist = false }: { persist?: boolean }) {
   const t = useTranslations('nav');
   const active = useLocale();
   const pathname = usePathname();
   const router = useRouter();
 
-  function switchTo(event: MouseEvent<HTMLAnchorElement>, locale: Locale) {
+  async function switchTo(event: MouseEvent<HTMLAnchorElement>, locale: Locale) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
     event.preventDefault();
+    // Signed-in pages also store the choice in the profile (reports and e-mails use it).
+    // Awaited so that the reload (a locale change swaps the root layout) does not abort it.
+    if (persist) await rememberLocale(locale).catch(() => undefined);
     router.replace(`${pathname}${window.location.hash}`, { locale });
   }
 
@@ -31,7 +35,7 @@ export function LanguageSwitcher() {
           href={getPathname({ href: pathname, locale })}
           hrefLang={locale}
           lang={locale}
-          onClick={(e) => switchTo(e, locale)}
+          onClick={(e) => void switchTo(e, locale)}
           aria-current={locale === active ? 'true' : undefined}
           className={cn(
             'inline-flex min-h-9 items-center rounded-sm px-2.5 text-sm font-medium transition-colors',

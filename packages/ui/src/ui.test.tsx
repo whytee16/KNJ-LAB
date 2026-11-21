@@ -20,3 +20,19 @@ describe('Button', () => {
     expect(buttonVariants({ variant: 'secondary' })).toContain('border-border');
   });
 });
+
+describe('TextField', async () => {
+  const { TextField, Alert } = await import('./index.ts');
+  it('links label, input and error for assistive tech', () => {
+    render(<TextField label="E-mail" name="email" error="Неверный e-mail" />);
+    const input = screen.getByLabelText('E-mail');
+    expect(input.getAttribute('aria-invalid')).toBe('true');
+    const errorId = input.getAttribute('aria-describedby')!;
+    expect(document.getElementById(errorId)?.textContent).toBe('Неверный e-mail');
+  });
+
+  it('announces errors as alerts', () => {
+    render(<Alert tone="error">Ошибка</Alert>);
+    expect(screen.getByRole('alert').textContent).toBe('Ошибка');
+  });
+});

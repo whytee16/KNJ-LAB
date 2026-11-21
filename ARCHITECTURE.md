@@ -13,7 +13,7 @@
   ├─ web: Next.js (App Router, RSC, Server Actions, Route Handlers)  ← бизнес-логика
   ├─ supabase: Postgres 17 + RLS · GoTrue (Auth) · PostgREST · Storage (S3) · Kong
   ├─ worker: pg-boss (очереди и cron на Postgres)
-  ├─ redis: rate limiting, кэш каталога
+  ├─ (redis — при росте: кэш каталога; rate limiting на MVP в Postgres, ADR-0005)
   ├─ observability: GlitchTip/Sentry self-hosted, Uptime Kuma, логи без ПДн
   └─ backups: WAL-G → S3-совместимое хранилище в РК (+ ежедневный restore-тест)
 [Внешние] платёжный провайдер (redirect + webhook) · онлайн-касса/ОФД · e-mail · TTS (тексты контента, без ПДн)
@@ -31,25 +31,25 @@
 
 ## 2. Стек
 
-| Слой           | Выбор                                                                        | Почему / альтернатива                                                                |
-| -------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| UI             | Next.js 16, React 19, TypeScript strict                                      | SSR/RSC для SEO и слабых телефонов                                                   |
-| Стили          | Tailwind CSS v4 + shadcn/ui (адаптирован под токены)                         | быстрые доступные компоненты (Radix)                                                 |
-| i18n           | next-intl                                                                    | типизированные ключи, ICU, локаль в URL                                              |
-| Валидация      | Zod                                                                          | единые схемы клиент/сервер/контент                                                   |
-| Auth           | Supabase GoTrue (self-hosted)                                                | e-mail+пароль, magic link; дети — логин без e-mail через родителя                    |
-| БД             | PostgreSQL 17 + RLS, SQL-миграции Supabase CLI                               | без ORM, чтобы RLS был единственной моделью доступа; типы — `supabase gen types`     |
-| Хранилище      | Supabase Storage (S3-backend в РК)                                           | иллюстрации, аудио                                                                   |
-| Формулы        | KaTeX (рендер), MathLive (ввод), @cortex-js/compute-engine (эквивалентность) | MIT                                                                                  |
-| Графики        | Recharts                                                                     | MIT                                                                                  |
-| 2D геометрия   | собственный SVG-движок + JSXGraph                                            | GeoGebra — только с лицензией ([ADR-0003](docs/adr/0003-geometry-libs-licensing.md)) |
-| 3D             | three + @react-three/fiber + @react-three/drei                               | MIT                                                                                  |
-| Физика         | собственные модели в `packages/physics` (аналитика + фиксированный шаг)      | контролируемая корректность                                                          |
-| Фоновые задачи | pg-boss                                                                      | без отдельного брокера                                                               |
-| Rate limiting  | Redis (`rate-limiter-flexible`)                                              |                                                                                      |
-| Тесты          | Vitest, Playwright, pgTAP, @axe-core/playwright, k6                          |                                                                                      |
-| Монорепо       | pnpm workspaces + Turborepo                                                  | кэш сборок, изоляция пакетов                                                         |
-| CI             | GitHub Actions                                                               | lint, typecheck, unit, pgTAP, e2e, gitleaks                                          |
+| Слой           | Выбор                                                                        | Почему / альтернатива                                                                        |
+| -------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| UI             | Next.js 16, React 19, TypeScript strict                                      | SSR/RSC для SEO и слабых телефонов                                                           |
+| Стили          | Tailwind CSS v4 + shadcn/ui (адаптирован под токены)                         | быстрые доступные компоненты (Radix)                                                         |
+| i18n           | next-intl                                                                    | типизированные ключи, ICU, локаль в URL                                                      |
+| Валидация      | Zod                                                                          | единые схемы клиент/сервер/контент                                                           |
+| Auth           | Supabase GoTrue (self-hosted)                                                | e-mail+пароль, magic link; дети — логин без e-mail через родителя                            |
+| БД             | PostgreSQL 17 + RLS, SQL-миграции Supabase CLI                               | без ORM, чтобы RLS был единственной моделью доступа; типы — `supabase gen types`             |
+| Хранилище      | Supabase Storage (S3-backend в РК)                                           | иллюстрации, аудио                                                                           |
+| Формулы        | KaTeX (рендер), MathLive (ввод), @cortex-js/compute-engine (эквивалентность) | MIT                                                                                          |
+| Графики        | Recharts                                                                     | MIT                                                                                          |
+| 2D геометрия   | собственный SVG-движок + JSXGraph                                            | GeoGebra — только с лицензией ([ADR-0003](docs/adr/0003-geometry-libs-licensing.md))         |
+| 3D             | three + @react-three/fiber + @react-three/drei                               | MIT                                                                                          |
+| Физика         | собственные модели в `packages/physics` (аналитика + фиксированный шаг)      | контролируемая корректность                                                                  |
+| Фоновые задачи | pg-boss                                                                      | без отдельного брокера                                                                       |
+| Rate limiting  | Postgres-функция `rate_limit_hit`                                            | без отдельной инфраструктуры на MVP ([ADR-0005](docs/adr/0005-rate-limiting-in-postgres.md)) |
+| Тесты          | Vitest, Playwright, pgTAP, @axe-core/playwright, k6                          |                                                                                              |
+| Монорепо       | pnpm workspaces + Turborepo                                                  | кэш сборок, изоляция пакетов                                                                 |
+| CI             | GitHub Actions                                                               | lint, typecheck, unit, pgTAP, e2e, gitleaks                                                  |
 
 ## 3. Структура репозитория
 

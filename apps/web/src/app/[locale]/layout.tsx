@@ -6,14 +6,11 @@ import { localeTags } from '@knj/i18n';
 import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { connection } from 'next/server';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { routing } from '@/i18n/routing';
 import { env } from '@/lib/env';
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
 
 export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Promise<Metadata> {
   const { locale } = await params;
@@ -42,6 +39,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
+  // Strict CSP uses a per-request nonce (proxy.ts), so every page must render per request:
+  // a statically prerendered page would carry scripts without the nonce.
+  await connection();
 
   return (
     <html lang={localeTags[locale]}>

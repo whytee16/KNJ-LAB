@@ -7,21 +7,30 @@
 - Каждое действие начинается с `authz.require(role, …)`; доступ к ученику — `authz.requireStudentAccess(studentId)` (сам ученик или родитель с `active` связью).
 - Платный контент — `entitlements.assert(studentId, difficulty)`.
 - Мутации с риском повторной отправки принимают `idempotencyKey` (UUID v4 от клиента).
-- Rate limit (Redis): auth — 5/мин на IP+логин; submitAnswer — 60/мин на ученика; webhooks — без лимита, но с проверкой подписи.
+- Rate limit (Postgres, `rate_limit_hit`, [ADR-0005](docs/adr/0005-rate-limiting-in-postgres.md)): лимиты auth — в таблице ниже; submitAnswer — 60/мин на ученика (этап 4); webhooks — без лимита, но с проверкой подписи.
 - Ошибка: `{ ok: false, error: { code: 'FORBIDDEN' | 'NOT_FOUND' | 'VALIDATION' | 'PAYWALL' | 'RATE_LIMITED' | 'CONFLICT' | 'INTERNAL', messageKey: string, fields?: Record<string,string> } }`. `messageKey` — ключ i18n, не текст.
 - Успех: `{ ok: true, data }`.
 
 ## 2. Server Actions (по модулям)
 
-### auth / accounts
+### auth / accounts (реализовано, этап 2)
 
-| Действие                                                | Роль           | Описание                                                |
-| ------------------------------------------------------- | -------------- | ------------------------------------------------------- |
-| `registerParent({email, password, locale, consents})`   | гость          | создаёт родителя + записи `consents`                    |
-| `createChild({displayName, grade, username, password})` | parent         | создаёт ученика, связь `active`, согласие представителя |
-| `inviteChild({code})` / `acceptInvite`                  | parent/student | привязка существующего аккаунта                         |
-| `updateProfile({displayName, locale, grade})`           | self           |                                                         |
-| `requestAccountDeletion({studentId})`                   | parent         | очередь на анонимизацию                                 |
+Все действия — Server Actions (`apps/web/src/features/auth/actions.ts`, `features/parent/actions.ts`), формы работают через `useActionState`, ответ — `FormState` с ключами i18n.
+
+| Действие                                                       | Роль           | Описание                                                                                                   | Лимит                          |
+| -------------------------------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| `signIn(identifier, password, next)`                           | гость          | e-mail родителя или логин ученика; общий текст ошибки; редирект на `next` (только тот же язык) или кабинет | 10 / 10 мин на IP и на аккаунт |
+| `registerParent(displayName, email, password, consent)`        | гость          | только при `REGISTRATION_ENABLED` и опубликованной политике; письмо подтверждения; согласие в `consents`   | 5 / час на IP                  |
+| `requestPasswordReset(email)`                                  | гость          | одинаковый ответ для существующих и несуществующих адресов; ученикам письма не отправляются                | 3 / час на IP и на адрес       |
+| `updatePassword(password, confirm)`                            | любой вошедший | после ссылки восстановления                                                                                |                                |
+| `acceptPolicy(consent, next)`                                  | parent         | согласие с актуальной версией политики                                                                     |                                |
+| `signOut()`                                                    | любой          |                                                                                                            |                                |
+| `rememberLocale(locale)`                                       | любой вошедший | сохраняет язык интерфейса в профиле                                                                        |                                |
+| `createChild(displayName, username, grade, password, consent)` | parent         | `auth.admin.createUser` → `register_student`; при ошибке созданный логин удаляется; не больше 10 детей     | 10 / сутки на родителя         |
+| `setChildPassword(studentId, password, confirm)`               | parent         | только своему ребёнку (`assertParentOf`)                                                                   | 20 / час на родителя           |
+| `deleteChild(studentId, confirmUsername)`                      | parent         | удаляет аккаунт ребёнка со всеми данными после ввода логина                                                |                                |
+
+Не реализовано (позже): `inviteChild` (привязка второго родителя), отзыв согласия, изменение профиля.
 
 ### learning
 

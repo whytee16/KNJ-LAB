@@ -1,11 +1,18 @@
-import { Container } from '@knj/ui';
-import { useTranslations } from 'next-intl';
+import { buttonVariants, cn, Container } from '@knj/ui';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { isSupabaseConfigured } from '@/lib/env';
+import { getCurrentUser } from '@/server/authz';
+import { dashboardPath } from '@/server/redirects';
 import { LanguageSwitcher } from './language-switcher';
 import { navItems } from './nav-items';
 
-export function SiteHeader() {
-  const t = useTranslations('nav');
+export async function SiteHeader() {
+  const t = await getTranslations('nav');
+  const locale = (await getLocale()) as 'ru' | 'kk';
+  const user = isSupabaseConfigured() ? await getCurrentUser() : null;
+  // Paths from dashboardPath include the locale; next-intl's Link adds it, so strip it here.
+  const cabinet = user ? dashboardPath(user.role, locale).replace(`/${locale}`, '') : null;
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-bg/90 backdrop-blur">
       <a
@@ -33,11 +40,32 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
+          {isSupabaseConfigured() ? (
+            <Link
+              href={cabinet ?? '/login'}
+              className={cn(
+                buttonVariants({ variant: 'primary', size: 'sm' }),
+                'hidden min-h-11 sm:inline-flex',
+              )}
+            >
+              {cabinet ? t('cabinet') : t('login')}
+            </Link>
+          ) : null}
           <details className="group relative lg:hidden">
             <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md border border-border px-3 text-sm font-medium [&::-webkit-details-marker]:hidden">
               {t('menu')}
             </summary>
             <ul className="absolute right-0 mt-2 w-56 rounded-lg border border-border bg-surface p-2 shadow-card">
+              {isSupabaseConfigured() ? (
+                <li className="sm:hidden">
+                  <Link
+                    href={cabinet ?? '/login'}
+                    className="flex min-h-11 items-center rounded-md px-3 font-medium text-accent hover:bg-surface-muted"
+                  >
+                    {cabinet ? t('cabinet') : t('login')}
+                  </Link>
+                </li>
+              ) : null}
               {navItems.map((item) => (
                 <li key={item.id}>
                   <a

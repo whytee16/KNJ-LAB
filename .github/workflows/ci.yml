@@ -32,7 +32,7 @@ jobs:
       - run: pnpm build
 
   e2e:
-    name: E2E (Playwright, ru/kk × 390/768/1440)
+    name: Database (pgTAP) and E2E (Playwright)
     runs-on: ubuntu-latest
     needs: quality
     steps:
@@ -43,6 +43,21 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # Local Supabase in Docker: Postgres, Auth, REST, Kong and Mailpit are all the tests need.
+      - name: Start Supabase
+        run: pnpm exec supabase start -x realtime,storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+      - name: RLS tests (pgTAP)
+        run: pnpm test:db
+      - name: Configure the app for the local stack
+        run: |
+          eval "$(pnpm exec supabase status -o env | grep -E '^(API_URL|ANON_KEY|SERVICE_ROLE_KEY)=')"
+          cat > apps/web/.env.local <<EOF
+          NEXT_PUBLIC_SUPABASE_URL=$API_URL
+          NEXT_PUBLIC_SUPABASE_ANON_KEY=$ANON_KEY
+          SUPABASE_SERVICE_ROLE_KEY=$SERVICE_ROLE_KEY
+          IP_HASH_SALT=ci-only-salt-not-secret
+          REGISTRATION_ENABLED=true
+          EOF
       - run: pnpm --filter @knj/web exec playwright install --with-deps chromium
       - run: pnpm build
       - run: pnpm test:e2e
