@@ -40,3 +40,14 @@ describe('renderMarkdown', () => {
     expect(html).not.toContain('href="javascript');
   });
 });
+
+describe('KaTeX version', () => {
+  it('server rendering and the stylesheet use the same KaTeX', async () => {
+    // Mixed versions silently break glyph layout (≠ rendered as "/=").
+    const { createRequire } = await import('node:module');
+    const require = createRequire(import.meta.url);
+    const ours = require('katex/package.json').version;
+    const viaRehype = createRequire(require.resolve('rehype-katex'))('katex/package.json').version;
+    expect(viaRehype).toBe(ours);
+  });
+});
