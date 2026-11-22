@@ -26,14 +26,15 @@ export function InclineSide2D({
   forceLabels: ForceLabels;
 }) {
   const [ref, W] = useMeasuredWidth<HTMLDivElement>(640);
-  const H = 340;
+  const H = 380;
   const f = inclineFrame(params, tau);
-  const pad = 36;
+  // Room for force arrows (up to ~100 px) above and to the left of the block at the top.
+  const pad = { l: 110, r: 30, t: 120, b: 30 };
   const spanX = Math.max(f.b, 1);
   const spanY = Math.max(f.h, 0.5);
-  const s = Math.min((W - 2 * pad - 60) / spanX, (H - 2 * pad - 40) / spanY);
-  const ox = pad + 30;
-  const oy = H - pad;
+  const s = Math.min((W - pad.l - pad.r) / spanX, (H - pad.t - pad.b) / spanY);
+  const ox = pad.l;
+  const oy = H - pad.b;
   const px = (x: number) => ox + x * s;
   const py = (y: number) => oy - y * s;
   const block = 30; // px
@@ -71,8 +72,8 @@ export function InclineSide2D({
     <div ref={ref} data-testid="scene-2d">
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label} className="w-full">
         <line
-          x1={pad / 2}
-          x2={W - pad / 2}
+          x1={12}
+          x2={W - 12}
           y1={oy}
           y2={oy}
           className="stroke-text"
