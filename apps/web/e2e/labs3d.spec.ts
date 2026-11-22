@@ -254,3 +254,59 @@ test('spring pendulum: period does not depend on the amplitude, energy grows as 
   );
   expect(overflow).toBeLessThanOrEqual(0);
 });
+
+test('circuit: Ohm law, series and parallel rules, the switch and the meters', async ({
+  browser,
+}) => {
+  await reviewAndPublish(reviewerPage, 'Закон Ома и соединения проводников');
+  const page = await newPage(browser);
+  await page.goto('/ru/labs/circuit');
+  await page.getByRole('button', { name: '3D' }).click();
+  await expect(page.getByTestId('scene-3d').locator('canvas')).toBeVisible();
+
+  // Open switch: no current, the meters show zero; the calculation is still there.
+  await expect(page.getByTestId('switch-state')).toContainText('Ключ разомкнут');
+  await expect(page.getByTestId('readout-I')).toContainText('0');
+  await expect(page.getByTestId('readout-calc-I')).toContainText('0,4');
+
+  // Series, ε = 12 V, R1 = 10 Ω, R2 = 20 Ω: I = 0,4 A, U1 = 4 V.
+  await page.getByRole('button', { name: 'Запуск' }).click();
+  await expect(page.getByTestId('switch-state')).toContainText('Ключ замкнут');
+  await expect(page.getByTestId('readout-I')).toContainText('0,4');
+  await expect(page.getByTestId('readout-U1')).toContainText('4');
+  await expect(page.getByTestId('rule')).toContainText('4 В + 8 В = 12 В');
+
+  // Parallel: I = 1,8 A, I1 = 1,2 A, I2 = 0,6 A.
+  await page.getByRole('radio', { name: 'Параллельное' }).check();
+  await expect(page.getByTestId('readout-I')).toContainText('1,8');
+  await expect(page.getByTestId('readout-I1')).toContainText('1,2');
+  await expect(page.getByTestId('readout-I2')).toContainText('0,6');
+
+  // Internal resistance: the terminal voltage drops below the EMF.
+  const r = page.getByRole('textbox', { name: /^Внутреннее сопротивление/ });
+  await r.fill('2');
+  await r.press('Enter');
+  await expect(page.getByTestId('readout-U')).not.toContainText('12');
+
+  // Opening the switch stops the current.
+  await page.getByRole('button', { name: 'Пауза' }).click();
+  await expect(page.getByTestId('readout-I')).toHaveText(/I\s*0\s*А$/);
+
+  await page.getByRole('button', { name: '2D' }).click();
+  await expect(page.getByTestId('scene-2d').locator('[data-meter="A"]')).toBeVisible();
+  await expect(page.getByTestId('scene-2d').locator('[data-meter="V"]')).toBeVisible();
+});
+
+test('circuit lab fits a phone and is accessible', async ({ browser }) => {
+  const page = await newPage(browser, { viewport: { width: 390, height: 860 } });
+  await page.goto('/ru/labs/circuit');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(
+    'Закон Ома и соединения проводников',
+  );
+  const overflow = await page.evaluate(
+    () => document.documentElement.scrollWidth - window.innerWidth,
+  );
+  expect(overflow).toBeLessThanOrEqual(0);
+  const { violations } = await new AxeBuilder({ page }).analyze();
+  expect(violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')).toEqual([]);
+});

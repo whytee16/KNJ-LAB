@@ -1,7 +1,22 @@
 import { z } from 'zod';
 
 /** SI unit codes; the app translates them (labs.units.*). */
-export type UnitCode = 'm' | 's' | 'm/s' | 'deg' | 'm/s2' | 'kg' | 'N' | '1' | 'J' | 'N/m' | 'Hz';
+export type UnitCode =
+  | 'm'
+  | 's'
+  | 'm/s'
+  | 'deg'
+  | 'm/s2'
+  | 'kg'
+  | 'N'
+  | '1'
+  | 'J'
+  | 'N/m'
+  | 'Hz'
+  | 'V'
+  | 'A'
+  | 'Ohm'
+  | 'W';
 
 export interface ParamSpec {
   min: number;

@@ -13,6 +13,10 @@ export const UNIT_KEY = {
   J: 'J',
   'N/m': 'Npm',
   Hz: 'Hz',
+  V: 'V',
+  A: 'A',
+  Ohm: 'Ohm',
+  W: 'W',
 } as const satisfies Record<UnitCode, string>;
 
 export const camelCode = (code: string) =>

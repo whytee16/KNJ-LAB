@@ -48,3 +48,12 @@ export {
   type PendulumState,
 } from './pendulum.ts';
 export { springPendulum, springAt, type SpringParams, type SpringResults } from './spring.ts';
+export {
+  circuit,
+  chargeOffset,
+  iv,
+  SERIES,
+  PARALLEL,
+  type CircuitParams,
+  type CircuitResults,
+} from './circuit.ts';

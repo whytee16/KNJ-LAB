@@ -288,6 +288,35 @@ export function Spring3D({
   );
 }
 
+/** Thick wire through points (straight segments), e.g. circuit conductors. */
+export function Tube3D({
+  points,
+  radius = 0.05,
+  color,
+}: {
+  points: [number, number, number][];
+  radius?: number;
+  color: string;
+}) {
+  const geometry = useMemo(() => {
+    const path = new THREE.CurvePath<THREE.Vector3>();
+    for (let i = 1; i < points.length; i++)
+      path.add(
+        new THREE.LineCurve3(
+          new THREE.Vector3(...points[i - 1]!),
+          new THREE.Vector3(...points[i]!),
+        ),
+      );
+    return new THREE.TubeGeometry(path, Math.max(8, points.length * 8), radius, 8, false);
+  }, [points, radius]);
+  useEffect(() => () => geometry.dispose(), [geometry]);
+  return (
+    <mesh geometry={geometry}>
+      <meshStandardMaterial color={color} />
+    </mesh>
+  );
+}
+
 /** Polyline through model points (dashed for predicted paths). */
 export function Polyline3D({
   points,

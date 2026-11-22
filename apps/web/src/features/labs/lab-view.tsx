@@ -11,6 +11,7 @@ const ProjectileLab = dynamic(() => import('./projectile-lab'));
 const InclineLab = dynamic(() => import('./incline-lab'));
 const PendulumLab = dynamic(() => import('./pendulum-lab'));
 const SpringLab = dynamic(() => import('./spring-lab'));
+const CircuitLab = dynamic(() => import('./circuit-lab'));
 
 export interface LabViewProps {
   code: string;
@@ -65,6 +66,18 @@ export function LabView(props: LabViewProps) {
           {...props}
           defaults={props.defaults as { m: number; k: number; A: number }}
           initial={props.initial as { m: number; k: number; A: number }}
+        />
+      );
+    case 'circuit':
+      return (
+        <CircuitLab
+          {...props}
+          defaults={
+            props.defaults as { emf: number; r: number; R1: number; R2: number; mode: number }
+          }
+          initial={
+            props.initial as { emf: number; r: number; R1: number; R2: number; mode: number }
+          }
         />
       );
     default:

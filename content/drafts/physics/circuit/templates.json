@@ -1,0 +1,155 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        { "name": "u", "kind": "choice", "values": [6, 12, 24] },
+        { "name": "r", "kind": "choice", "values": [10, 20, 40] }
+      ],
+      "constraints": [],
+      "answer": "u / r",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На резистор сопротивлением {{r}} Ом подано напряжение {{u}} В. Найди силу тока в резисторе.",
+        "hints": ["Закон Ома: $I = \\dfrac{U}{R}$."],
+        "solution": "$I = \\dfrac{U}{R} = \\dfrac{ {{u}} }{ {{r}} }$ А."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        { "name": "a", "kind": "choice", "values": [10, 20, 30] },
+        { "name": "b", "kind": "choice", "values": [20, 30, 60] }
+      ],
+      "constraints": [],
+      "answer": "a * b / (a + b)",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Резисторы сопротивлением {{a}} Ом и {{b}} Ом соединены параллельно. Найди их общее сопротивление. Ответ округли до десятых и проверь в лаборатории.",
+        "hints": ["Для двух резисторов $R = \\dfrac{R_1 R_2}{R_1 + R_2}$."],
+        "solution": "$R = \\dfrac{ {{a}} \\cdot {{b}} }{ {{a}} + {{b}} }$ Ом."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        { "name": "e", "kind": "choice", "values": [6, 12] },
+        { "name": "a", "kind": "choice", "values": [10, 20] }
+      ],
+      "constraints": [],
+      "answer": "e * a / (a + 20)",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Резисторы $R_1 = {{a}}$ Ом и $R_2 = 20$ Ом соединены последовательно и подключены к источнику напряжением {{e}} В. Какое напряжение покажет вольтметр, подключённый к $R_1$? Ответ округли до десятых.",
+        "hints": ["Сначала найди ток $I = \\dfrac{U}{R_1 + R_2}$, затем $U_1 = I R_1$."],
+        "solution": "$I = \\dfrac{ {{e}} }{ {{a}} + 20}$ А, $U_1 = I \\cdot {{a}}$ В."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "e", "kind": "choice", "values": [6, 12, 18] }],
+      "constraints": [],
+      "answer": "e / 10 + e / 20",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Резисторы 10 Ом и 20 Ом соединены параллельно и подключены к источнику напряжением {{e}} В (внутренним сопротивлением пренебречь). Какой ток покажет амперметр в общей цепи?",
+        "hints": ["Напряжение на каждой ветви равно {{e}} В; общий ток — сумма токов ветвей."],
+        "solution": "$I = \\dfrac{ {{e}} }{10} + \\dfrac{ {{e}} }{20}$ А."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        { "name": "u", "kind": "choice", "values": [12, 24] },
+        { "name": "r", "kind": "choice", "values": [6, 12, 24] }
+      ],
+      "constraints": [],
+      "answer": "u^2 / r",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая мощность выделяется в резисторе сопротивлением {{r}} Ом при напряжении {{u}} В?",
+        "hints": ["$P = \\dfrac{U^2}{R}$."],
+        "solution": "$P = \\dfrac{ {{u}}^2}{ {{r}} }$ Вт."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 1 },
+    "texts": {
+      "ru": {
+        "statement": "Резисторы 10 Ом и 20 Ом соединены параллельно. Через какой из них идёт больший ток?",
+        "options": [
+          "Через резистор 20 Ом",
+          "Через резистор 10 Ом",
+          "Токи одинаковы",
+          "Это зависит от напряжения источника"
+        ],
+        "solution": "Напряжение на ветвях одинаково, а $I = U/R$, поэтому больший ток — через меньшее сопротивление, 10 Ом (в 2 раза больше, чем через 20 Ом)."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 2 },
+    "texts": {
+      "ru": {
+        "statement": "У источника с ЭДС $\\varepsilon$ увеличили сопротивление внешней цепи. Как изменятся сила тока и напряжение на зажимах источника (внутреннее сопротивление $r$ не равно нулю)?",
+        "options": [
+          "Ток увеличится, напряжение уменьшится",
+          "Ток и напряжение уменьшатся",
+          "Ток уменьшится, напряжение увеличится",
+          "Ток и напряжение не изменятся"
+        ],
+        "solution": "$I = \\dfrac{\\varepsilon}{R + r}$ уменьшается, а $U = \\varepsilon - Ir$ растёт, приближаясь к $\\varepsilon$."
+      }
+    }
+  }
+]
