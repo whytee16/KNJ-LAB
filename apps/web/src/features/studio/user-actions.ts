@@ -19,6 +19,8 @@ export interface ChildPasses {
 }
 
 export interface UserSearchState extends FormState {
+  /** User a role-change result belongs to (so it is not shown next to someone else). */
+  targetId?: string;
   found?: { id: string; email: string; role: Role; displayName: string; children?: ChildPasses[] };
 }
 
@@ -86,17 +88,18 @@ export async function changeRole(prev: UserSearchState, form: FormData): Promise
   if (!(await actingAdmin())) return errorState('auth.errors.forbidden');
   const { userId, role } = readFields(form, ['userId', 'role'] as const);
   if (!ASSIGNABLE.includes(role as Role))
-    return { ...prev, ...errorState('auth.errors.forbidden') };
+    return { ...prev, ...errorState('auth.errors.forbidden'), targetId: userId };
   const supabase = await createUserClient();
   const { error } = await supabase.rpc('set_user_role', { p_user: userId, p_role: role as Role });
   if (error) {
     const key = error.code === '23514' ? 'studio.users.cannotChange' : 'auth.errors.forbidden';
-    return { ...prev, status: 'error', messageKey: key };
+    return { ...prev, status: 'error', messageKey: key, targetId: userId };
   }
   revalidatePath('/[locale]/studio/users', 'page');
   return {
     status: 'success',
     messageKey: 'studio.users.roleChanged',
+    targetId: userId,
     found: prev.found ? { ...prev.found, role: role as Role } : undefined,
   };
 }

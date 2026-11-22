@@ -24,8 +24,8 @@ for (const p of pages) {
     );
     expect(overflow).toBeLessThanOrEqual(0);
     // Next streams <title> after the body; wait for it so axe sees the final document.
-  await expect(page).toHaveTitle(/\S/);
-  const { violations } = await new AxeBuilder({ page }).analyze();
+    await expect(page).toHaveTitle(/\S/);
+    const { violations } = await new AxeBuilder({ page }).analyze();
     const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
     expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
   });

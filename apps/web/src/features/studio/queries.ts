@@ -135,3 +135,32 @@ export async function getTemplateForEditor(id: string) {
   if (error) throw new Error(`template query failed: ${error.message}`);
   return data;
 }
+
+/** Default-curriculum sections as select options: "Алгебра · 7 · 1 · Уравнения". */
+export async function sectionOptions() {
+  const supabase = await createUserClient();
+  const { data } = await supabase
+    .from('curriculum_sections')
+    .select(
+      'id, subject_code, grade, quarter, sort, curriculum_section_translations(locale, title), curricula!inner(is_default)',
+    )
+    .eq('curricula.is_default', true)
+    .order('subject_code')
+    .order('grade')
+    .order('quarter')
+    .order('sort');
+  return (data ?? []).map((s) => ({
+    value: s.id,
+    label: `${s.subject_code} · ${s.grade} · ${s.quarter} · ${s.curriculum_section_translations.find((x) => x.locale === 'ru')?.title ?? ''}`,
+  }));
+}
+
+export async function listStudioTests() {
+  const supabase = await createUserClient();
+  const { data, error } = await supabase
+    .from('tests')
+    .select('id, scope, mode, status, updated_at, test_texts(locale, title)')
+    .order('updated_at', { ascending: false });
+  if (error) throw new Error(`tests query failed: ${error.message}`);
+  return data ?? [];
+}

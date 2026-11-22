@@ -8,6 +8,8 @@ export function StudioNav({ role }: { role: AppRole }) {
   const items = [
     { href: '/studio', label: t('topics') },
     { href: '/studio/tasks', label: t('tasks') },
+    { href: '/studio/tests', label: t('tests') },
+    { href: '/studio/reports', label: t('reports') },
     { href: '/studio/formulas', label: t('formulas') },
     ...(role === 'reviewer' || role === 'admin'
       ? [{ href: '/studio/curriculum', label: t('curriculum') }]

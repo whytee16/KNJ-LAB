@@ -60,7 +60,8 @@ export function UserRoles({ locale }: { locale: Locale }) {
           <p className="text-sm">
             <span className="font-medium">{found.displayName}</span> · {found.email}
           </p>
-          <FormAlert state={change} />
+          {/* Only show the role result for the person it belongs to (not after a new search). */}
+          {change.targetId === found.id ? <FormAlert state={change} /> : null}
           {found.role === 'student' ? (
             <p className="text-sm text-text-muted">{t('studentNote')}</p>
           ) : (

@@ -238,3 +238,45 @@ export async function answerTask(opts: {
     trainerRunId,
   };
 }
+
+/** The student's own answer, rendered for result pages (no HTML from the student passes through). */
+export async function givenAnswerHtml(answer: unknown, prompt: TaskPrompt): Promise<string> {
+  const md = async (s: string) => (await renderMarkdown(s)).html;
+  const escape = (s: string) => s.replace(/[\\`*_{}[\]()#+\-.!|<>$]/g, '\\$&');
+  const option = (id: string) => prompt.options?.find((o) => o.id === id)?.text ?? '?';
+  if (
+    answer === '' ||
+    answer === null ||
+    answer === undefined ||
+    (Array.isArray(answer) && !answer.length)
+  )
+    return '';
+  switch (prompt.type) {
+    case 'formula':
+      try {
+        return renderLatex(String(answer));
+      } catch {
+        return md(escape(String(answer)));
+      }
+    case 'single_choice':
+      return md(option(String(answer)));
+    case 'multi_choice':
+    case 'ordering':
+      return md(
+        (answer as string[])
+          .map((id, i) => `${prompt.type === 'ordering' ? `${i + 1}.` : '-'} ${option(id)}`)
+          .join('\n'),
+      );
+    case 'matching': {
+      const pairs = answer as Record<string, string>;
+      const right = (id: string) => prompt.right?.find((r) => r.id === id)?.text ?? '?';
+      return md(
+        (prompt.left ?? [])
+          .map((l) => `- ${l.text} — ${pairs[l.id] ? right(pairs[l.id]!) : '?'}`)
+          .join('\n'),
+      );
+    }
+    default:
+      return md(escape(String(answer)));
+  }
+}

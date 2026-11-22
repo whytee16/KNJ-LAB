@@ -101,3 +101,14 @@ export async function createPublishedTopic(slug: string, title: string): Promise
     await sql.end();
   }
 }
+
+/** Moves the deadline of the student's open test attempts into the past (simulates time running out). */
+export async function expireOpenAttempts(studentId: string) {
+  const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  try {
+    await sql`update public.attempts set deadline_at = now() - interval '5 minutes'
+              where student_id = ${studentId} and kind = 'test' and finished_at is null`;
+  } finally {
+    await sql.end();
+  }
+}

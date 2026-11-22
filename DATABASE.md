@@ -75,22 +75,30 @@ link_status:     pending | active | revoked
 - `set_user_role()` — только admin с aal2; нельзя менять свою роль и роли учеников.
 - `find_user_by_email()` — только `service_role` (поиск пользователя в админке после проверки прав в приложении).
 
-## 5. Задачи, тесты, тренажёр
+## 5. Задачи, тренажёр, тесты, пропуска (реализовано, этап 4)
 
-| Таблица                      | Ключевые поля                                                                                                                                                                                                             | Примечания                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `task_templates`             | `topic_id`, `type task_type`, `difficulty`, `spec jsonb` (параметры, ограничения, формула ответа, единицы, допуск, округление, шаги решения), `version`, `status`, `source` (manual/imported), `author_id`, `reviewer_id` | spec валидируется Zod-схемой `content-schema`        |
-| `task_template_translations` | `template_id`, `locale`, `statement_tpl`, `hints jsonb`, `solution_tpl`, `translation_status`                                                                                                                             |                                                      |
-| `task_instances`             | `template_id`, `template_version`, `seed`, `params jsonb`, `expected jsonb`, `created_for`                                                                                                                                | `expected` недоступен ученику (RLS + отдельная view) |
-| `media_assets`               | `storage_path`, `kind`, `alt_ru`, `alt_kk`, `uploaded_by`                                                                                                                                                                 |                                                      |
-| `tests`                      | `scope` (topic/section/quarter/grade/subject), `scope_ref`, `mode` (practice/exam), `time_limit_s`, `difficulty_mix jsonb`, `status`, `is_free`                                                                           |                                                      |
-| `test_items`                 | `test_id`, `template_id`, `sort`, `points`                                                                                                                                                                                |                                                      |
-| `attempts`                   | `student_id`, `kind` (test/trainer/lab), `test_id` nullable, `topic_id`, `started_at`, `finished_at`, `score`, `max_score`                                                                                                |                                                      |
-| `attempt_answers`            | `attempt_id`, `instance_id`, `answer jsonb`, `is_correct`, `partial numeric`, `time_ms`, `idempotency_key` UNIQUE, `created_at`                                                                                           | партиционирование по месяцам при росте               |
-| `trainer_runs`               | `student_id`, `topic_id`, `target smallint default 100`, `solved`, `correct`, `status`                                                                                                                                    |                                                      |
-| `content_reports`            | `reporter_id`, `instance_id`, `message`, `status`                                                                                                                                                                         | «сообщить об ошибке»                                 |
+Миграция: `supabase/migrations/20261123090000_practice.sql`. Тесты: `supabase/tests/03_practice_access.test.sql`.
 
-Индексы: `attempts(student_id, started_at desc)`, `attempt_answers(attempt_id)`, `task_templates(topic_id, difficulty, status)`.
+| Таблица                | Ключевые поля                                                                                                                                                                       | Доступ                                                                     |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `task_templates`       | `topic_id`, `type` (single_choice, multi_choice, number, formula, cloze_word, matching, ordering), `difficulty` (easy, medium, sufficient, hard), `spec` jsonb, `status`, `version` | опубликованные читают все; автор правит черновик, методист — всегда (aal2) |
+| `task_template_texts`  | PK(`template_id`, `locale`), `texts` jsonb: statement с `{{param}}`, options, matches, accepted, hints, solution                                                                    | как у шаблона                                                              |
+| `task_instances`       | `template_id` (**restrict**: шаблон с историей не удалить), `template_version`, `student_id`, `attempt_id`, `position`, `seed`, `locale`, `params`, `prompt`                        | ученик — свои, родитель — детей; пишет только сервер                       |
+| `task_instance_keys`   | `instance_id`, `expected`, `solution`                                                                                                                                               | **нет прав ни у одной клиентской роли**                                    |
+| `trainer_runs`         | `student_id`, `topic_id`, `difficulty`, `target` 100, `solved`, `correct`, `status` (одна активная серия на тему и уровень)                                                         | ученик/родитель читают                                                     |
+| `tests` + `test_texts` | `scope` (topic, section, quarter, grade, subject) + ссылки, `mode` (practice, exam), `time_limit_s` (обязателен для exam), `counts` по уровням, `status`                            | как у шаблонов                                                             |
+| `attempts`             | `kind` (trainer, test), `trainer_run_id` / `test_id`, `deadline_at`, `finished_at`, `score`, `max_score`                                                                            | ученик/родитель читают                                                     |
+| `attempt_answers`      | `instance_id` UNIQUE (один ответ на задачу), `answer`, `status`, `score` 0..1, `time_ms`, `idempotency_key` UNIQUE                                                                  | ученик/родитель читают; пишет сервер                                       |
+| `entitlements`         | `student_id`, `starts_at`, `ends_at`, `source` (manual сейчас, order с этапа 7), `granted_by`, `reason`, `revoked_at`                                                               | ученик/родитель/admin читают; выдача — функцией                            |
+| `content_reports`      | `reporter_id`, `instance_id`, `template_id`, `message`, `status`                                                                                                                    | сотрудники читают и закрывают                                              |
+
+Функции и триггеры:
+
+- `private.task_instance_guard` — триггер: задачу можно выдать только по опубликованному шаблону, а платный уровень — только при действующем пропуске (`private.has_entitlement`). Работает даже для service role.
+- `grant_entitlement(student, days, reason)` / `revoke_entitlement(id)` — только admin с aal2; новый пропуск продолжает действующий; аудит.
+- `set_task_template_status`, `set_test_status` — тот же процесс, что у формул (автор отправляет, методист публикует).
+- `record_trainer_answer(run, correct)` — атомарное обновление счётчиков серии (только service role).
+- Любое изменение шаблона или его текстов увеличивает `version`; выданные задачи хранят свою версию.
 
 ## 6. Прогресс и геймификация
 

@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { AddChildForm } from '@/features/parent/add-child-form';
 import { ChildCard } from '@/features/parent/child-card';
 import { listChildren } from '@/features/parent/queries';
+import { childStats } from '@/features/parent/stats';
 import { pageLocale } from '@/features/shell/page-locale';
 import { requireParent } from '@/server/authz';
 
@@ -19,6 +20,7 @@ export default async function ParentPage({ params }: PageProps<'/[locale]/parent
   const user = await requireParent(locale, `/${locale}/parent`);
   const t = await getTranslations('parent');
   const children = await listChildren(user.id);
+  const stats = await Promise.all(children.map((c) => childStats(c.id, locale)));
 
   return (
     <Container className="py-10 md:py-14">
@@ -34,9 +36,9 @@ export default async function ParentPage({ params }: PageProps<'/[locale]/parent
             <p className="text-text-muted">{t('children.empty')}</p>
           ) : (
             <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-              {children.map((child) => (
+              {children.map((child, i) => (
                 <li key={child.id}>
-                  <ChildCard child={child} locale={locale} />
+                  <ChildCard child={child} locale={locale} stats={stats[i]} />
                 </li>
               ))}
             </ul>

@@ -237,12 +237,14 @@ test('admin changes a role; non-admins cannot', async ({ browser }) => {
   await page.getByRole('link', { name: 'Пользователи' }).click();
   await page.getByLabel('E-mail пользователя').fill(manager.email);
   await page.getByRole('button', { name: 'Найти' }).click();
+  await expect(page.getByText(manager.email, { exact: false }).last()).toBeVisible();
   await page.getByLabel('Роль').selectOption('reviewer');
   await page.getByRole('button', { name: 'Изменить роль' }).click();
   await expect(page.getByText('Роль изменена.')).toBeVisible();
 
   await page.getByLabel('E-mail пользователя').fill(admin.email);
   await page.getByRole('button', { name: 'Найти' }).click();
+  await expect(page.getByText(`Админ · ${admin.email}`)).toBeVisible();
   await page.getByRole('button', { name: 'Изменить роль' }).click();
   await expect(page.getByText('Эту роль изменить нельзя', { exact: false })).toBeVisible();
 });

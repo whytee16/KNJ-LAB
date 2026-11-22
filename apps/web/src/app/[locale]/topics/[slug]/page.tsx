@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { getTopicPage } from '@/features/content/queries';
 import { TopicContent } from '@/features/content/topic-content';
 import { PracticeBlock } from '@/features/practice/practice-block';
+import { TopicTests } from '@/features/tests/topic-tests';
 import { PublicShell } from '@/features/shell/public-shell';
 import { pageLocale } from '@/features/shell/page-locale';
 import { Link } from '@/i18n/navigation';
@@ -71,6 +72,7 @@ export default async function TopicPage({ params }: PageProps<'/[locale]/topics/
           headingLevel={1}
         />
         <PracticeBlock topicId={topic.id} slug={topic.slug} locale={locale} />
+        <TopicTests topicId={topic.id} locale={locale} />
       </Container>
     </PublicShell>
   );

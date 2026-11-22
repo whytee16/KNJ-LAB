@@ -11,7 +11,9 @@ export async function assuranceLevel(): Promise<{ current: string | null; next: 
     data: { session },
   } = await supabase.auth.getSession();
   if (!session) return { current: null, next: null };
-  const { data, error } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel(session.access_token);
+  const { data, error } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel(
+    session.access_token,
+  );
   if (error || !data) return { current: null, next: null };
   return { current: data.currentLevel, next: data.nextLevel };
 }

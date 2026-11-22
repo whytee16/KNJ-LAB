@@ -4,6 +4,8 @@ import type { Locale } from '@knj/i18n';
 import { Card, TextField } from '@knj/ui';
 import { useTranslations } from 'next-intl';
 import { useActionState } from 'react';
+import { Link } from '@/i18n/navigation';
+import type { ChildStats } from './stats';
 import { FormAlert } from '@/features/forms/form-alert';
 import { idle } from '@/features/forms/form-state';
 import { SubmitButton } from '@/features/forms/submit-button';
@@ -17,7 +19,15 @@ export interface ChildSummary {
   grade: number;
 }
 
-export function ChildCard({ child, locale }: { child: ChildSummary; locale: Locale }) {
+export function ChildCard({
+  child,
+  locale,
+  stats,
+}: {
+  child: ChildSummary;
+  locale: Locale;
+  stats?: ChildStats;
+}) {
   const t = useTranslations('parent');
   const m = useMessage();
   const [pwState, pwAction] = useActionState(setChildPassword, idle);
@@ -35,6 +45,30 @@ export function ChildCard({ child, locale }: { child: ChildSummary; locale: Loca
         <dt className="text-text-muted">{t('children.username')}</dt>
         <dd className="font-mono">{child.username}</dd>
       </dl>
+
+      {stats ? (
+        <div
+          className="flex flex-col gap-2 rounded-md bg-surface-muted p-3 text-sm"
+          data-testid={`stats-${child.username}`}
+        >
+          <p>{t('stats.summary', { solved: stats.solved, percent: stats.correctPercent })}</p>
+          <p className="text-text-muted">{t('stats.lastWeek', { count: stats.lastWeek })}</p>
+          {stats.results.length ? (
+            <ul className="flex flex-col gap-1">
+              {stats.results.map((r) => (
+                <li key={r.id}>
+                  <Link href={`/app/results/${r.id}`} className="underline underline-offset-4">
+                    {r.title}
+                  </Link>{' '}
+                  <span className="text-text-muted">
+                    — {Math.round(r.max ? (100 * r.score) / r.max : 0)}%
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      ) : null}
 
       <details className="rounded-md border border-border">
         <summary className="flex min-h-11 cursor-pointer items-center px-4 text-sm font-medium">

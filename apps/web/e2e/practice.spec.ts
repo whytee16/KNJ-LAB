@@ -1,5 +1,12 @@
 import { expect, test, type Browser, type BrowserContext, type Page } from '@playwright/test';
-import { createFamily, createPublishedTopic, createStaff, enrollTotp, signIn } from './staff';
+import {
+  createFamily,
+  createPublishedTopic,
+  createStaff,
+  enrollTotp,
+  expireOpenAttempts,
+  signIn,
+} from './staff';
 
 // Practice lifecycle: templates in the studio → trainer for a student → paid level behind a pass.
 test.describe.configure({ mode: 'serial' });
@@ -150,7 +157,7 @@ test('student solves the free level: right and wrong answers', async ({ browser 
 
 test('student reports an error in a task', async () => {
   await studentPage.getByText('Сообщить об ошибке в задаче').click();
-  await studentPage.getByLabel('Что не так?').fill('Опечатка в условии');
+  await studentPage.getByLabel('Что не так?').fill(`Опечатка в условии ${run}`);
   await studentPage.getByRole('button', { name: 'Отправить' }).click();
   await expect(studentPage.getByText('Спасибо! Методист проверит задачу.')).toBeVisible();
 });
@@ -196,4 +203,106 @@ test('with a pass the student solves a choice task and a formula', async () => {
   await studentPage.keyboard.type(`${k}x+${k}`);
   await studentPage.getByRole('button', { name: 'Проверить' }).click();
   await expect(studentPage.getByText('✓ Верно')).toBeVisible();
+});
+
+const testTitle = `Контрольная ${run}`;
+
+test('content manager builds an exam and the reviewer publishes it', async () => {
+  await managerPage.goto('/ru/studio/tests/new');
+  await managerPage.getByLabel('Название (рус.)').fill(testTitle);
+  await managerPage.getByLabel('Тема').selectOption({ label: `${topic.title} (algebra)` });
+  await managerPage.getByLabel('Режим').selectOption('exam');
+  await managerPage.getByLabel('Время, минут').fill('5');
+  await managerPage.getByLabel('Лёгкий').fill('2');
+  await managerPage.getByRole('button', { name: 'Создать тест' }).click();
+  await expect(managerPage).toHaveURL(/\/ru\/studio\/tests\/[0-9a-f-]{36}$/);
+  await managerPage.getByRole('button', { name: 'Отправить на проверку' }).click();
+  await expect(managerPage.getByText('Отправлено на проверку.')).toBeVisible();
+
+  await reviewerPage.goto(managerPage.url());
+  await reviewerPage.getByRole('button', { name: 'Опубликовать' }).click();
+  await expect(reviewerPage.getByText('Опубликовано.')).toBeVisible();
+});
+
+test('student takes the exam and sees a detailed result', async () => {
+  await studentPage.goto(`/ru/topics/${topic.slug}`);
+  const card = studentPage.locator('section[aria-labelledby="topic-tests"]');
+  await expect(card.getByText(testTitle)).toBeVisible();
+  await card.getByRole('button', { name: 'Начать тест' }).click();
+  await expect(studentPage).toHaveURL(/\/ru\/app\/tests\/run\/[0-9a-f-]{36}$/);
+  await expect(studentPage.getByRole('timer')).toHaveText(/^[45]:\d\d$/);
+
+  const items = studentPage.locator('[data-instance]');
+  await expect(items).toHaveCount(2);
+  const first = await items.nth(0).locator('.prose-topic').innerText();
+  const [a, b] = numbersIn(first.replace(run, ''));
+  await items
+    .nth(0)
+    .getByLabel('Ответ', { exact: true })
+    .fill(String(a! + b!));
+  await studentPage.getByRole('button', { name: 'Сдать тест' }).click();
+
+  await expect(studentPage).toHaveURL(/\/ru\/app\/results\/[0-9a-f-]{36}$/);
+  await expect(studentPage.getByTestId('result-score')).toContainText('50%');
+  await expect(studentPage.getByTestId('result-score')).toContainText('Верно 1 из 2');
+  await expect(studentPage.getByTestId('result-item-2')).toContainText('Нет ответа');
+  await expect(studentPage.getByTestId('result-item-2')).toContainText('Правильный ответ');
+  await expect(
+    studentPage
+      .locator('section[aria-labelledby="recommend"]')
+      .getByRole('link', { name: topic.title }),
+  ).toBeVisible();
+
+  // A finished attempt cannot be reopened: the server sends the run page to the result.
+  const resultUrl = studentPage.url();
+  await studentPage.goto(resultUrl.replace('/app/results/', '/app/tests/run/'));
+  await expect(studentPage).toHaveURL(resultUrl);
+});
+
+test('an exam whose time ran out is closed by the server', async () => {
+  await studentPage.goto(`/ru/topics/${topic.slug}`);
+  await studentPage
+    .locator('section[aria-labelledby="topic-tests"]')
+    .getByRole('button', { name: 'Начать тест' })
+    .click();
+  await expect(studentPage).toHaveURL(/\/ru\/app\/tests\/run\//);
+  await expireOpenAttempts(family.studentId);
+  await studentPage.reload();
+  await expect(studentPage).toHaveURL(/\/ru\/app\/results\//);
+  await expect(studentPage.getByTestId('result-score')).toContainText('0%');
+});
+
+test('student cabinet lists results and active trainers', async () => {
+  await studentPage.goto('/ru/app');
+  await expect(
+    studentPage
+      .locator('section[aria-labelledby="my-results"]')
+      .getByRole('link', { name: testTitle })
+      .first(),
+  ).toBeVisible();
+  await expect(
+    studentPage
+      .locator('section[aria-labelledby="my-runs"]')
+      .getByRole('link', { name: topic.title })
+      .first(),
+  ).toBeVisible();
+});
+
+test("parent sees the child's statistics and results", async ({ browser }) => {
+  const page = await newPage(browser);
+  await signIn(page, family.parentEmail, password);
+  await expect(page).toHaveURL(/\/ru\/parent$/);
+  const stats = page.getByTestId(`stats-${family.username}`);
+  await expect(stats).toContainText('Решено задач:');
+  await stats.getByRole('link', { name: testTitle }).first().click();
+  await expect(page.getByTestId('result-score')).toBeVisible();
+});
+
+test('reviewer resolves the error report', async () => {
+  await reviewerPage.goto('/ru/studio/reports');
+  const report = reviewerPage.locator('li').filter({ hasText: `Опечатка в условии ${run}` });
+  await expect(report).toBeVisible();
+  await report.getByRole('button', { name: 'Исправлено' }).click();
+  // Resolved reports leave the open queue.
+  await expect(report).toHaveCount(0);
 });
