@@ -11,6 +11,8 @@ const parent = { name: 'Айгерим', email: `parent-${run}@example.test`, pa
 const child = { name: 'Арман', username: `arman.${run}`, grade: '8', password: 'Uchenik2026' };
 
 async function expectNoSeriousA11yIssues(page: Page) {
+  // Next streams <title> after the body; wait for it so axe sees the final document.
+  await expect(page).toHaveTitle(/\S/);
   const { violations } = await new AxeBuilder({ page }).analyze();
   const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
   expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);

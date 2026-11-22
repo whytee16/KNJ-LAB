@@ -20,6 +20,8 @@ export const limits = {
   createChild: { max: 10, windowSeconds: 86_400 },
   childPassword: { max: 20, windowSeconds: 3600 },
   mfa: { max: 10, windowSeconds: 600 },
+  answer: { max: 60, windowSeconds: 60 },
+  report: { max: 10, windowSeconds: 3600 },
 } satisfies Record<string, Limit>;
 
 /**

@@ -7,6 +7,7 @@ export function StudioNav({ role }: { role: AppRole }) {
   const t = useTranslations('studio.nav');
   const items = [
     { href: '/studio', label: t('topics') },
+    { href: '/studio/tasks', label: t('tasks') },
     { href: '/studio/formulas', label: t('formulas') },
     ...(role === 'reviewer' || role === 'admin'
       ? [{ href: '/studio/curriculum', label: t('curriculum') }]

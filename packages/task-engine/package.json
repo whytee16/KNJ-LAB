@@ -1,0 +1,23 @@
+{
+  "name": "@knj/task-engine",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@cortex-js/compute-engine": "0.173.0",
+    "mathjs": "15.2.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vitest": "5.1.1"
+  }
+}

@@ -1,6 +1,6 @@
 import 'server-only';
 import { isLocale, type Locale } from '@knj/i18n';
-import { createUserClient } from '@/lib/supabase/server';
+import { assuranceLevel } from '@/server/mfa';
 import { getCurrentUser, type CurrentUser } from '@/server/authz';
 import { REVIEW_ROLES, STUDIO_ROLES, type AppRole } from '@/server/redirects';
 
@@ -16,9 +16,7 @@ export function localeOf(form: FormData): Locale {
 export async function actingStaff(roles: AppRole[] = STUDIO_ROLES): Promise<CurrentUser | null> {
   const user = await getCurrentUser();
   if (!user || !roles.includes(user.role)) return null;
-  const supabase = await createUserClient();
-  const { data } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
-  return data?.currentLevel === 'aal2' ? user : null;
+  return (await assuranceLevel()).current === 'aal2' ? user : null;
 }
 
 export const actingReviewer = () => actingStaff(REVIEW_ROLES);

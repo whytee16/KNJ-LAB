@@ -95,3 +95,43 @@ export async function topicOptions(subject: string) {
     label: `${t.topic_drafts.find((d) => d.locale === 'ru')?.title ?? t.slug} (${t.slug})`,
   }));
 }
+
+/** All topics for selects in the studio (staff see drafts). */
+export async function allTopicOptions() {
+  const supabase = await createUserClient();
+  const { data } = await supabase
+    .from('topics')
+    .select('id, slug, subject_code, topic_drafts(locale, title)')
+    .order('subject_code')
+    .order('slug');
+  return (data ?? []).map((t) => ({
+    value: t.id,
+    label: `${t.topic_drafts.find((d) => d.locale === 'ru')?.title ?? t.slug} (${t.subject_code})`,
+  }));
+}
+
+export async function listStudioTemplates(topicId?: string) {
+  const supabase = await createUserClient();
+  let q = supabase
+    .from('task_templates')
+    .select(
+      'id, type, difficulty, status, version, updated_at, topic_id, task_template_texts(locale, texts), topics(slug)',
+    )
+    .order('updated_at', { ascending: false })
+    .limit(200);
+  if (topicId) q = q.eq('topic_id', topicId);
+  const { data, error } = await q;
+  if (error) throw new Error(`templates query failed: ${error.message}`);
+  return data ?? [];
+}
+
+export async function getTemplateForEditor(id: string) {
+  const supabase = await createUserClient();
+  const { data, error } = await supabase
+    .from('task_templates')
+    .select('*, task_template_texts(locale, texts)')
+    .eq('id', id)
+    .maybeSingle();
+  if (error) throw new Error(`template query failed: ${error.message}`);
+  return data;
+}

@@ -23,6 +23,120 @@ export type Database = {
   };
   public: {
     Tables: {
+      attempt_answers: {
+        Row: {
+          answer: NonNullable<Json>;
+          attempt_id: string;
+          created_at: string;
+          id: string;
+          idempotency_key: string;
+          instance_id: string;
+          score: number;
+          status: Database['public']['Enums']['answer_status'];
+          time_ms: number | null;
+        };
+        ComputedFields: never;
+        Insert: {
+          answer: NonNullable<Json>;
+          attempt_id: string;
+          created_at?: string;
+          id?: string;
+          idempotency_key: string;
+          instance_id: string;
+          score: number;
+          status: Database['public']['Enums']['answer_status'];
+          time_ms?: number | null;
+        };
+        Update: {
+          answer?: NonNullable<Json>;
+          attempt_id?: string;
+          created_at?: string;
+          id?: string;
+          idempotency_key?: string;
+          instance_id?: string;
+          score?: number;
+          status?: Database['public']['Enums']['answer_status'];
+          time_ms?: number | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'attempt_answers_attempt_id_fkey';
+            columns: ['attempt_id'];
+            isOneToOne: false;
+            referencedRelation: 'attempts';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'attempt_answers_instance_id_fkey';
+            columns: ['instance_id'];
+            isOneToOne: true;
+            referencedRelation: 'task_instances';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      attempts: {
+        Row: {
+          deadline_at: string | null;
+          finished_at: string | null;
+          id: string;
+          kind: Database['public']['Enums']['attempt_kind'];
+          max_score: number | null;
+          score: number | null;
+          started_at: string;
+          student_id: string;
+          test_id: string | null;
+          trainer_run_id: string | null;
+        };
+        ComputedFields: never;
+        Insert: {
+          deadline_at?: string | null;
+          finished_at?: string | null;
+          id?: string;
+          kind: Database['public']['Enums']['attempt_kind'];
+          max_score?: number | null;
+          score?: number | null;
+          started_at?: string;
+          student_id: string;
+          test_id?: string | null;
+          trainer_run_id?: string | null;
+        };
+        Update: {
+          deadline_at?: string | null;
+          finished_at?: string | null;
+          id?: string;
+          kind?: Database['public']['Enums']['attempt_kind'];
+          max_score?: number | null;
+          score?: number | null;
+          started_at?: string;
+          student_id?: string;
+          test_id?: string | null;
+          trainer_run_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'attempts_student_id_fkey';
+            columns: ['student_id'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'attempts_test_id_fkey';
+            columns: ['test_id'];
+            isOneToOne: false;
+            referencedRelation: 'tests';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'attempts_trainer_run_id_fkey';
+            columns: ['trainer_run_id'];
+            isOneToOne: false;
+            referencedRelation: 'trainer_runs';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       audit_logs: {
         Row: {
           action: string;
@@ -99,6 +213,72 @@ export type Database = {
             columns: ['subject_profile_id'];
             isOneToOne: false;
             referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      content_reports: {
+        Row: {
+          created_at: string;
+          id: string;
+          instance_id: string | null;
+          message: string;
+          reporter_id: string | null;
+          resolved_at: string | null;
+          resolved_by: string | null;
+          status: Database['public']['Enums']['report_status'];
+          template_id: string | null;
+        };
+        ComputedFields: never;
+        Insert: {
+          created_at?: string;
+          id?: string;
+          instance_id?: string | null;
+          message: string;
+          reporter_id?: string | null;
+          resolved_at?: string | null;
+          resolved_by?: string | null;
+          status?: Database['public']['Enums']['report_status'];
+          template_id?: string | null;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          instance_id?: string | null;
+          message?: string;
+          reporter_id?: string | null;
+          resolved_at?: string | null;
+          resolved_by?: string | null;
+          status?: Database['public']['Enums']['report_status'];
+          template_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'content_reports_instance_id_fkey';
+            columns: ['instance_id'];
+            isOneToOne: false;
+            referencedRelation: 'task_instances';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'content_reports_reporter_id_fkey';
+            columns: ['reporter_id'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'content_reports_resolved_by_fkey';
+            columns: ['resolved_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'content_reports_template_id_fkey';
+            columns: ['template_id'];
+            isOneToOne: false;
+            referencedRelation: 'task_templates';
             referencedColumns: ['id'];
           },
         ];
@@ -258,6 +438,58 @@ export type Database = {
             columns: ['curriculum_id'];
             isOneToOne: false;
             referencedRelation: 'curricula';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      entitlements: {
+        Row: {
+          created_at: string;
+          ends_at: string;
+          granted_by: string | null;
+          id: string;
+          reason: string | null;
+          revoked_at: string | null;
+          source: string;
+          starts_at: string;
+          student_id: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          created_at?: string;
+          ends_at: string;
+          granted_by?: string | null;
+          id?: string;
+          reason?: string | null;
+          revoked_at?: string | null;
+          source?: string;
+          starts_at?: string;
+          student_id: string;
+        };
+        Update: {
+          created_at?: string;
+          ends_at?: string;
+          granted_by?: string | null;
+          id?: string;
+          reason?: string | null;
+          revoked_at?: string | null;
+          source?: string;
+          starts_at?: string;
+          student_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'entitlements_granted_by_fkey';
+            columns: ['granted_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'entitlements_student_id_fkey';
+            columns: ['student_id'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
             referencedColumns: ['id'];
           },
         ];
@@ -578,6 +810,314 @@ export type Database = {
         };
         Relationships: [];
       };
+      task_instance_keys: {
+        Row: {
+          expected: NonNullable<Json>;
+          instance_id: string;
+          solution: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          expected: NonNullable<Json>;
+          instance_id: string;
+          solution?: string;
+        };
+        Update: {
+          expected?: NonNullable<Json>;
+          instance_id?: string;
+          solution?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'task_instance_keys_instance_id_fkey';
+            columns: ['instance_id'];
+            isOneToOne: true;
+            referencedRelation: 'task_instances';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      task_instances: {
+        Row: {
+          attempt_id: string;
+          created_at: string;
+          id: string;
+          locale: Database['public']['Enums']['app_locale'];
+          params: NonNullable<Json>;
+          position: number;
+          prompt: NonNullable<Json>;
+          seed: number;
+          student_id: string;
+          template_id: string;
+          template_version: number;
+        };
+        ComputedFields: never;
+        Insert: {
+          attempt_id: string;
+          created_at?: string;
+          id?: string;
+          locale: Database['public']['Enums']['app_locale'];
+          params?: NonNullable<Json>;
+          position?: number;
+          prompt: NonNullable<Json>;
+          seed: number;
+          student_id: string;
+          template_id: string;
+          template_version: number;
+        };
+        Update: {
+          attempt_id?: string;
+          created_at?: string;
+          id?: string;
+          locale?: Database['public']['Enums']['app_locale'];
+          params?: NonNullable<Json>;
+          position?: number;
+          prompt?: NonNullable<Json>;
+          seed?: number;
+          student_id?: string;
+          template_id?: string;
+          template_version?: number;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'task_instances_attempt_id_fkey';
+            columns: ['attempt_id'];
+            isOneToOne: false;
+            referencedRelation: 'attempts';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'task_instances_student_id_fkey';
+            columns: ['student_id'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'task_instances_template_id_fkey';
+            columns: ['template_id'];
+            isOneToOne: false;
+            referencedRelation: 'task_templates';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      task_template_texts: {
+        Row: {
+          locale: Database['public']['Enums']['app_locale'];
+          template_id: string;
+          texts: NonNullable<Json>;
+        };
+        ComputedFields: never;
+        Insert: {
+          locale: Database['public']['Enums']['app_locale'];
+          template_id: string;
+          texts: NonNullable<Json>;
+        };
+        Update: {
+          locale?: Database['public']['Enums']['app_locale'];
+          template_id?: string;
+          texts?: NonNullable<Json>;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'task_template_texts_template_id_fkey';
+            columns: ['template_id'];
+            isOneToOne: false;
+            referencedRelation: 'task_templates';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      task_templates: {
+        Row: {
+          created_at: string;
+          created_by: string | null;
+          difficulty: Database['public']['Enums']['difficulty'];
+          id: string;
+          published_at: string | null;
+          reviewed_by: string | null;
+          spec: NonNullable<Json>;
+          status: Database['public']['Enums']['formula_status'];
+          topic_id: string;
+          type: Database['public']['Enums']['task_type'];
+          updated_at: string;
+          version: number;
+        };
+        ComputedFields: never;
+        Insert: {
+          created_at?: string;
+          created_by?: string | null;
+          difficulty: Database['public']['Enums']['difficulty'];
+          id?: string;
+          published_at?: string | null;
+          reviewed_by?: string | null;
+          spec: NonNullable<Json>;
+          status?: Database['public']['Enums']['formula_status'];
+          topic_id: string;
+          type: Database['public']['Enums']['task_type'];
+          updated_at?: string;
+          version?: number;
+        };
+        Update: {
+          created_at?: string;
+          created_by?: string | null;
+          difficulty?: Database['public']['Enums']['difficulty'];
+          id?: string;
+          published_at?: string | null;
+          reviewed_by?: string | null;
+          spec?: NonNullable<Json>;
+          status?: Database['public']['Enums']['formula_status'];
+          topic_id?: string;
+          type?: Database['public']['Enums']['task_type'];
+          updated_at?: string;
+          version?: number;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'task_templates_created_by_fkey';
+            columns: ['created_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'task_templates_reviewed_by_fkey';
+            columns: ['reviewed_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'task_templates_topic_id_fkey';
+            columns: ['topic_id'];
+            isOneToOne: false;
+            referencedRelation: 'topics';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      test_texts: {
+        Row: {
+          description: string;
+          locale: Database['public']['Enums']['app_locale'];
+          test_id: string;
+          title: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          description?: string;
+          locale: Database['public']['Enums']['app_locale'];
+          test_id: string;
+          title: string;
+        };
+        Update: {
+          description?: string;
+          locale?: Database['public']['Enums']['app_locale'];
+          test_id?: string;
+          title?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'test_texts_test_id_fkey';
+            columns: ['test_id'];
+            isOneToOne: false;
+            referencedRelation: 'tests';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      tests: {
+        Row: {
+          counts: NonNullable<Json>;
+          created_by: string | null;
+          grade: number | null;
+          id: string;
+          mode: Database['public']['Enums']['test_mode'];
+          published_at: string | null;
+          quarter: number | null;
+          reviewed_by: string | null;
+          scope: Database['public']['Enums']['test_scope'];
+          section_id: string | null;
+          status: Database['public']['Enums']['formula_status'];
+          subject_code: string | null;
+          time_limit_s: number | null;
+          topic_id: string | null;
+          updated_at: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          counts?: NonNullable<Json>;
+          created_by?: string | null;
+          grade?: number | null;
+          id?: string;
+          mode?: Database['public']['Enums']['test_mode'];
+          published_at?: string | null;
+          quarter?: number | null;
+          reviewed_by?: string | null;
+          scope: Database['public']['Enums']['test_scope'];
+          section_id?: string | null;
+          status?: Database['public']['Enums']['formula_status'];
+          subject_code?: string | null;
+          time_limit_s?: number | null;
+          topic_id?: string | null;
+          updated_at?: string;
+        };
+        Update: {
+          counts?: NonNullable<Json>;
+          created_by?: string | null;
+          grade?: number | null;
+          id?: string;
+          mode?: Database['public']['Enums']['test_mode'];
+          published_at?: string | null;
+          quarter?: number | null;
+          reviewed_by?: string | null;
+          scope?: Database['public']['Enums']['test_scope'];
+          section_id?: string | null;
+          status?: Database['public']['Enums']['formula_status'];
+          subject_code?: string | null;
+          time_limit_s?: number | null;
+          topic_id?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'tests_created_by_fkey';
+            columns: ['created_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'tests_reviewed_by_fkey';
+            columns: ['reviewed_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'tests_section_id_fkey';
+            columns: ['section_id'];
+            isOneToOne: false;
+            referencedRelation: 'curriculum_sections';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'tests_subject_code_fkey';
+            columns: ['subject_code'];
+            isOneToOne: false;
+            referencedRelation: 'subjects';
+            referencedColumns: ['code'];
+          },
+          {
+            foreignKeyName: 'tests_topic_id_fkey';
+            columns: ['topic_id'];
+            isOneToOne: false;
+            referencedRelation: 'topics';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       topic_contents: {
         Row: {
           locale: Database['public']['Enums']['app_locale'];
@@ -753,6 +1293,64 @@ export type Database = {
           },
         ];
       };
+      trainer_runs: {
+        Row: {
+          correct: number;
+          difficulty: Database['public']['Enums']['difficulty'];
+          finished_at: string | null;
+          id: string;
+          last_activity_at: string;
+          solved: number;
+          started_at: string;
+          status: string;
+          student_id: string;
+          target: number;
+          topic_id: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          correct?: number;
+          difficulty: Database['public']['Enums']['difficulty'];
+          finished_at?: string | null;
+          id?: string;
+          last_activity_at?: string;
+          solved?: number;
+          started_at?: string;
+          status?: string;
+          student_id: string;
+          target?: number;
+          topic_id: string;
+        };
+        Update: {
+          correct?: number;
+          difficulty?: Database['public']['Enums']['difficulty'];
+          finished_at?: string | null;
+          id?: string;
+          last_activity_at?: string;
+          solved?: number;
+          started_at?: string;
+          status?: string;
+          student_id?: string;
+          target?: number;
+          topic_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'trainer_runs_student_id_fkey';
+            columns: ['student_id'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'trainer_runs_topic_id_fkey';
+            columns: ['topic_id'];
+            isOneToOne: false;
+            referencedRelation: 'topics';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
     };
     Views: {
       [_ in never]: never;
@@ -767,6 +1365,10 @@ export type Database = {
           role: Database['public']['Enums']['app_role'];
         }[];
       };
+      grant_entitlement: {
+        Args: { p_days: number; p_reason: string; p_student: string };
+        Returns: string;
+      };
       publish_topic: {
         Args: { p_locale: Database['public']['Enums']['app_locale']; p_topic: string };
         Returns: number;
@@ -774,6 +1376,28 @@ export type Database = {
       rate_limit_hit: {
         Args: { p_key: string; p_max: number; p_window_seconds: number };
         Returns: boolean;
+      };
+      record_trainer_answer: {
+        Args: { p_correct: boolean; p_run: string };
+        Returns: {
+          correct: number;
+          difficulty: Database['public']['Enums']['difficulty'];
+          finished_at: string | null;
+          id: string;
+          last_activity_at: string;
+          solved: number;
+          started_at: string;
+          status: string;
+          student_id: string;
+          target: number;
+          topic_id: string;
+        };
+        SetofOptions: {
+          from: '*';
+          to: 'trainer_runs';
+          isOneToOne: true;
+          isSetofReturn: false;
+        };
       };
       register_student: {
         Args: {
@@ -795,8 +1419,17 @@ export type Database = {
         };
         Returns: undefined;
       };
+      revoke_entitlement: { Args: { p_id: string }; Returns: undefined };
       set_formula_status: {
         Args: { p_formula: string; p_status: Database['public']['Enums']['formula_status'] };
+        Returns: undefined;
+      };
+      set_task_template_status: {
+        Args: { p_status: Database['public']['Enums']['formula_status']; p_template: string };
+        Returns: undefined;
+      };
+      set_test_status: {
+        Args: { p_status: Database['public']['Enums']['formula_status']; p_test: string };
         Returns: undefined;
       };
       set_user_role: {
@@ -823,12 +1456,26 @@ export type Database = {
       };
     };
     Enums: {
+      answer_status: 'correct' | 'wrong';
       app_locale: 'ru' | 'kk';
       app_role: 'student' | 'parent' | 'content_manager' | 'reviewer' | 'admin' | 'support';
+      attempt_kind: 'trainer' | 'test';
+      difficulty: 'easy' | 'medium' | 'sufficient' | 'hard';
       draft_status: 'draft' | 'in_review' | 'approved';
       formula_status: 'draft' | 'in_review' | 'published';
       legal_document_type: 'pd_processing' | 'child_pd_processing' | 'offer' | 'terms';
       link_status: 'active' | 'revoked';
+      report_status: 'open' | 'resolved' | 'rejected';
+      task_type:
+        | 'single_choice'
+        | 'multi_choice'
+        | 'number'
+        | 'formula'
+        | 'cloze_word'
+        | 'matching'
+        | 'ordering';
+      test_mode: 'practice' | 'exam';
+      test_scope: 'topic' | 'section' | 'quarter' | 'grade' | 'subject';
     };
     CompositeTypes: {
       [_ in never]: never;
@@ -943,12 +1590,27 @@ export const Constants = {
   },
   public: {
     Enums: {
+      answer_status: ['correct', 'wrong'],
       app_locale: ['ru', 'kk'],
       app_role: ['student', 'parent', 'content_manager', 'reviewer', 'admin', 'support'],
+      attempt_kind: ['trainer', 'test'],
+      difficulty: ['easy', 'medium', 'sufficient', 'hard'],
       draft_status: ['draft', 'in_review', 'approved'],
       formula_status: ['draft', 'in_review', 'published'],
       legal_document_type: ['pd_processing', 'child_pd_processing', 'offer', 'terms'],
       link_status: ['active', 'revoked'],
+      report_status: ['open', 'resolved', 'rejected'],
+      task_type: [
+        'single_choice',
+        'multi_choice',
+        'number',
+        'formula',
+        'cloze_word',
+        'matching',
+        'ordering',
+      ],
+      test_mode: ['practice', 'exam'],
+      test_scope: ['topic', 'section', 'quarter', 'grade', 'subject'],
     },
   },
 } as const;

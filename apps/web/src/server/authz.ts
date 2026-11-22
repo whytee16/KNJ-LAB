@@ -5,6 +5,7 @@ import { cache } from 'react';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { createUserClient } from '@/lib/supabase/server';
 import { currentDocument } from './legal';
+import { assuranceLevel } from './mfa';
 import { dashboardPath, STUDIO_ROLES, type AppRole } from './redirects';
 
 export interface CurrentUser {
@@ -122,11 +123,9 @@ export async function requireStaff(
   roles: AppRole[] = STUDIO_ROLES,
 ): Promise<CurrentUser> {
   const user = await requireUser(locale, { roles, next });
-  const supabase = await createUserClient();
-  const { data, error } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
-  if (error) throw new Error(`MFA status failed: ${error.message}`);
-  if (data.currentLevel !== 'aal2') {
-    const step = data.nextLevel === 'aal2' ? 'verify' : 'enroll';
+  const level = await assuranceLevel();
+  if (level.current !== 'aal2') {
+    const step = level.next === 'aal2' ? 'verify' : 'enroll';
     redirect(`/${locale}/security/${step}?next=${encodeURIComponent(next)}`);
   }
   return user;

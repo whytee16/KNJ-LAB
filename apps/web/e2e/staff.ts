@@ -52,3 +52,52 @@ export async function enrollTotp(page: Page): Promise<string> {
   await expect(page).toHaveURL(/\/ru\/studio/);
   return secret;
 }
+
+async function createAuthUser(email: string, password: string, name: string): Promise<string> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+  const res = await fetch(`${url}/auth/v1/admin/users`, {
+    method: 'POST',
+    headers: { apikey: key, Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email,
+      password,
+      email_confirm: true,
+      user_metadata: { display_name: name },
+    }),
+  });
+  if (!res.ok) throw new Error(`createAuthUser failed: ${res.status} ${await res.text()}`);
+  return ((await res.json()) as { id: string }).id;
+}
+
+/** Parent (with accepted policy) and one student, created directly for tests that need a family. */
+export async function createFamily(run: string, password: string) {
+  const parentEmail = `family-${run}@example.test`;
+  const username = `pupil.${run}`;
+  const parentId = await createAuthUser(parentEmail, password, 'Сауле');
+  const studentId = await createAuthUser(`${username}@student.knj.invalid`, password, 'Ерасыл');
+  const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  try {
+    await sql`select public.register_student(${studentId}, ${parentId}, ${username}, 8::smallint, 'Ерасыл', 'dev-0')`;
+    await sql`insert into public.consents (subject_profile_id, given_by_profile_id, type, document_version)
+              values (${parentId}, ${parentId}, 'pd_processing', 'dev-0')`;
+  } finally {
+    await sql.end();
+  }
+  return { parentEmail, username, studentId };
+}
+
+/** Published topic fixture (topic content is not what these tests are about). */
+export async function createPublishedTopic(slug: string, title: string): Promise<string> {
+  const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  try {
+    const [t] = await sql<
+      { id: string }[]
+    >`insert into public.topics (slug, subject_code) values (${slug}, 'algebra') returning id`;
+    await sql`insert into public.topic_drafts (topic_id, locale, title, theory, status) values (${t!.id}, 'ru', ${title}, 'Теория', 'approved')`;
+    await sql`insert into public.topic_contents (topic_id, locale, title, theory) values (${t!.id}, 'ru', ${title}, 'Теория')`;
+    return t!.id;
+  } finally {
+    await sql.end();
+  }
+}
