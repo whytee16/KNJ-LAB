@@ -122,6 +122,10 @@ link_status:     pending | active | revoked
 - `set_lab_status(lab, status)`: отправляет на проверку сотрудник с aal2, публикует reviewer/admin с aal2; для публикации нужны название и цель на русском.
 - RLS: опубликованное читают все, черновики — сотрудники; править черновики могут сотрудники с aal2, любые — reviewer/admin. `lab_sessions` читают сам ученик и его родитель, пишет только сервер.
 
+### Происхождение контента (этап 5b)
+
+Миграция `20261125090000_content_origin.sql`: поле `content_origin` (`human` / `ai_draft` / `ai_reviewed`) в `topic_drafts`, `lab_translations`, `task_templates`. Публикация `ai_draft` запрещена триггерами (`topic_contents`, `task_templates`, `labs`). Пометку снимает только `mark_content_reviewed(kind, id, locale)` (reviewer/admin с aal2, пишется в аудит); прямое изменение поля отклоняется. В той же миграции регистрируется лаборатория `projectile`.
+
 ## 8. Монетизация
 
 | Таблица             | Ключевые поля                                                                                                                                             |

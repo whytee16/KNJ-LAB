@@ -2,6 +2,8 @@ import { labModel, parseParams, type ParamSpec } from '@knj/physics';
 import { buttonVariants, Card, Container } from '@knj/ui';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { camelCode as camel, UNIT_KEY } from '@/features/labs/units';
+import { AiDraftNotice, AiReviewedNote } from '@/features/studio/ai-draft-notice';
 import { LabEditor, LabLinks, LabStatusPanel } from '@/features/studio/lab-editor';
 import { allTopicOptions } from '@/features/studio/queries';
 import { StatusBadge } from '@/features/studio/status-badge';
@@ -10,9 +12,6 @@ import { Link } from '@/i18n/navigation';
 import { createUserClient } from '@/lib/supabase/server';
 import { getCurrentUser, requireStaff } from '@/server/authz';
 import { REVIEW_ROLES } from '@/server/redirects';
-
-const UNIT_KEY = { m: 'm', s: 's', 'm/s': 'mps' } as const;
-const camel = (code: string) => code.replace(/-([a-z])/g, (_, c: string) => c.toUpperCase());
 
 export default async function EditLabPage({ params }: PageProps<'/[locale]/studio/labs/[id]'>) {
   const locale = await pageLocale(params);
@@ -132,6 +131,11 @@ export default async function EditLabPage({ params }: PageProps<'/[locale]/studi
           <div className="flex items-center gap-2">
             <span className="font-semibold">{t('status')}</span> <StatusBadge status={lab.status} />
           </div>
+          {ru?.content_origin === 'ai_draft' ? (
+            <AiDraftNotice locale={locale} kind="lab" id={lab.id} canReview={canReview} />
+          ) : ru?.content_origin === 'ai_reviewed' ? (
+            <AiReviewedNote />
+          ) : null}
           <LabStatusPanel
             locale={locale}
             labId={lab.id}

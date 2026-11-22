@@ -3,6 +3,7 @@ import { Alert, Card, Container, cn } from '@knj/ui';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { TopicContent } from '@/features/content/topic-content';
+import { AiDraftNotice, AiReviewedNote } from '@/features/studio/ai-draft-notice';
 import { StatusBadge } from '@/features/studio/status-badge';
 import { TopicEditor } from '@/features/studio/topic-editor';
 import { TopicWorkflow } from '@/features/studio/topic-workflow';
@@ -88,6 +89,17 @@ export default async function TopicEditorPage({
                 ? t('publishedVersion', { version: published.version })
                 : t('notPublished')}
             </p>
+            {draft?.content_origin === 'ai_draft' ? (
+              <AiDraftNotice
+                locale={locale}
+                kind="topic"
+                id={id}
+                lang={lang}
+                canReview={user ? REVIEW_ROLES.includes(user.role) : false}
+              />
+            ) : draft?.content_origin === 'ai_reviewed' ? (
+              <AiReviewedNote />
+            ) : null}
             {draft?.is_machine_translation ? (
               <Alert tone="warning">{t('machineWarning')}</Alert>
             ) : null}

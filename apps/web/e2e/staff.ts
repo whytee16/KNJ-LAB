@@ -157,3 +157,27 @@ export async function grantPass(studentId: string) {
     await sql.end();
   }
 }
+
+/** Clean slate for the projectile lab, then the real draft importer (content/drafts) runs. */
+export async function resetProjectileAndImportDrafts() {
+  const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  try {
+    await sql`delete from public.lab_tasks where lab_id = (select id from public.labs where code = 'projectile')`;
+    await sql`delete from public.lab_topics where lab_id = (select id from public.labs where code = 'projectile')`;
+    await sql`delete from public.lab_translations where lab_id = (select id from public.labs where code = 'projectile')`;
+    await sql`delete from public.task_templates where topic_id = (select id from public.topics where slug = 'projectile-motion')`;
+    await sql`delete from public.topics where slug = 'projectile-motion'`;
+    await sql`update public.labs set status = 'draft', is_free_demo = false, published_at = null where code = 'projectile'`;
+  } finally {
+    await sql.end();
+  }
+  const { execFileSync } = await import('node:child_process');
+  execFileSync(
+    process.execPath,
+    ['--experimental-strip-types', '--no-warnings', 'scripts/import-drafts.ts'],
+    {
+      cwd: new URL('../../../', import.meta.url).pathname,
+      env: { ...process.env, DATABASE_URL: DB },
+    },
+  );
+}

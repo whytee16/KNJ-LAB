@@ -1,6 +1,12 @@
 export { GameLayout, GameHeader, GameInstructions, GameHints, GameNavigation } from './layout.tsx';
 export { GameWorkspace } from './workspace.tsx';
-export { GameControls, ParamControl, snapToRange, type RangeSpec } from './controls.tsx';
+export {
+  ChoiceControl,
+  GameControls,
+  ParamControl,
+  snapToRange,
+  type RangeSpec,
+} from './controls.tsx';
 export {
   GameReadouts,
   GameFeedback,

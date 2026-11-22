@@ -762,6 +762,7 @@ export type Database = {
       };
       lab_translations: {
         Row: {
+          content_origin: Database['public']['Enums']['content_origin'];
           goal: string;
           hints: string[];
           lab_id: string;
@@ -772,6 +773,7 @@ export type Database = {
         };
         ComputedFields: never;
         Insert: {
+          content_origin?: Database['public']['Enums']['content_origin'];
           goal?: string;
           hints?: string[];
           lab_id: string;
@@ -781,6 +783,7 @@ export type Database = {
           translation_status?: Database['public']['Enums']['draft_status'];
         };
         Update: {
+          content_origin?: Database['public']['Enums']['content_origin'];
           goal?: string;
           hints?: string[];
           lab_id?: string;
@@ -1168,6 +1171,7 @@ export type Database = {
       };
       task_templates: {
         Row: {
+          content_origin: Database['public']['Enums']['content_origin'];
           created_at: string;
           created_by: string | null;
           difficulty: Database['public']['Enums']['difficulty'];
@@ -1183,6 +1187,7 @@ export type Database = {
         };
         ComputedFields: never;
         Insert: {
+          content_origin?: Database['public']['Enums']['content_origin'];
           created_at?: string;
           created_by?: string | null;
           difficulty: Database['public']['Enums']['difficulty'];
@@ -1197,6 +1202,7 @@ export type Database = {
           version?: number;
         };
         Update: {
+          content_origin?: Database['public']['Enums']['content_origin'];
           created_at?: string;
           created_by?: string | null;
           difficulty?: Database['public']['Enums']['difficulty'];
@@ -1412,6 +1418,7 @@ export type Database = {
       };
       topic_drafts: {
         Row: {
+          content_origin: Database['public']['Enums']['content_origin'];
           is_machine_translation: boolean;
           locale: Database['public']['Enums']['app_locale'];
           mistakes: string[];
@@ -1430,6 +1437,7 @@ export type Database = {
         };
         ComputedFields: never;
         Insert: {
+          content_origin?: Database['public']['Enums']['content_origin'];
           is_machine_translation?: boolean;
           locale: Database['public']['Enums']['app_locale'];
           mistakes?: string[];
@@ -1447,6 +1455,7 @@ export type Database = {
           updated_by?: string | null;
         };
         Update: {
+          content_origin?: Database['public']['Enums']['content_origin'];
           is_machine_translation?: boolean;
           locale?: Database['public']['Enums']['app_locale'];
           mistakes?: string[];
@@ -1606,6 +1615,14 @@ export type Database = {
         Args: { p_days: number; p_reason: string; p_student: string };
         Returns: string;
       };
+      mark_content_reviewed: {
+        Args: {
+          p_id: string;
+          p_kind: string;
+          p_locale?: Database['public']['Enums']['app_locale'];
+        };
+        Returns: undefined;
+      };
       publish_topic: {
         Args: { p_locale: Database['public']['Enums']['app_locale']; p_topic: string };
         Returns: number;
@@ -1701,6 +1718,7 @@ export type Database = {
       app_locale: 'ru' | 'kk';
       app_role: 'student' | 'parent' | 'content_manager' | 'reviewer' | 'admin' | 'support';
       attempt_kind: 'trainer' | 'test' | 'lab';
+      content_origin: 'human' | 'ai_draft' | 'ai_reviewed';
       difficulty: 'easy' | 'medium' | 'sufficient' | 'hard';
       draft_status: 'draft' | 'in_review' | 'approved';
       formula_status: 'draft' | 'in_review' | 'published';
@@ -1836,6 +1854,7 @@ export const Constants = {
       app_locale: ['ru', 'kk'],
       app_role: ['student', 'parent', 'content_manager', 'reviewer', 'admin', 'support'],
       attempt_kind: ['trainer', 'test', 'lab'],
+      content_origin: ['human', 'ai_draft', 'ai_reviewed'],
       difficulty: ['easy', 'medium', 'sufficient', 'hard'],
       draft_status: ['draft', 'in_review', 'approved'],
       formula_status: ['draft', 'in_review', 'published'],

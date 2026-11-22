@@ -7,6 +7,7 @@ import type { ReactNode } from 'react';
 
 // Each lab is its own chunk: pages load only the simulation they show.
 const UniformMotionLab = dynamic(() => import('./uniform-motion-lab'));
+const ProjectileLab = dynamic(() => import('./projectile-lab'));
 
 export interface LabViewProps {
   code: string;
@@ -27,6 +28,14 @@ export function LabView(props: LabViewProps) {
           {...props}
           defaults={props.defaults as { v: number; t: number; x0: number }}
           initial={props.initial as { v: number; t: number; x0: number }}
+        />
+      );
+    case 'projectile':
+      return (
+        <ProjectileLab
+          {...props}
+          defaults={props.defaults as { v0: number; angle: number; h0: number; g: number }}
+          initial={props.initial as { v0: number; angle: number; h0: number; g: number }}
         />
       );
     default:

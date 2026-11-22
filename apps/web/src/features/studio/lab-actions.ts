@@ -7,6 +7,10 @@ import { createUserClient } from '@/lib/supabase/server';
 import { errorState, type FormState } from '@/features/forms/form-state';
 import { actingStaff } from './guard';
 
+/** The database refuses to publish unchecked automatic drafts (see mark_content_reviewed). */
+const isAiDraftBlock = (e: { message?: string } | null) =>
+  Boolean(e?.message?.includes('automatically prepared'));
+
 const lines = (s: string) =>
   s
     .split('\n')
@@ -203,9 +207,11 @@ export async function setLabStatus(_prev: FormState, form: FormData): Promise<Fo
     return errorState(
       error.code === '42501'
         ? 'auth.errors.forbidden'
-        : error.code === '23514'
-          ? 'studio.labs.goalRequired'
-          : 'studio.errors.workflow',
+        : isAiDraftBlock(error)
+          ? 'studio.aiDraft.blocked'
+          : error.code === '23514'
+            ? 'studio.labs.goalRequired'
+            : 'studio.errors.workflow',
     );
   revalidateLab(id);
   return { status: 'success', messageKey: `studio.formula.status.${status}` };

@@ -159,3 +159,47 @@ export function GameControls({
     </div>
   );
 }
+
+/** A parameter with a fixed set of values (e.g. g on different planets), as radio buttons. */
+export function ChoiceControl({
+  label,
+  symbol,
+  options,
+  value,
+  onChange,
+  disabled,
+}: {
+  label: string;
+  symbol: string;
+  options: { value: number; label: string }[];
+  value: number;
+  onChange: (value: number) => void;
+  disabled?: boolean;
+}) {
+  const name = useId();
+  return (
+    <fieldset className="flex flex-col gap-1.5" disabled={disabled}>
+      <legend className="text-sm font-medium">
+        {label} <span className="font-normal text-text-muted italic">{symbol}</span>
+      </legend>
+      <div className="flex flex-wrap gap-2">
+        {options.map((o) => (
+          <label
+            key={o.value}
+            className="flex min-h-11 cursor-pointer items-center gap-2 rounded-md border border-border bg-surface px-3 text-sm has-[:checked]:border-accent has-[:checked]:bg-accent/10"
+          >
+            <input
+              type="radio"
+              name={name}
+              value={o.value}
+              checked={value === o.value}
+              onChange={() => onChange(o.value)}
+              className="size-4 accent-[var(--accent)]"
+            />
+            {o.label}
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  );
+}

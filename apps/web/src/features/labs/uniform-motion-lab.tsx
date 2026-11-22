@@ -20,9 +20,9 @@ import {
 } from '@knj/ui/game';
 import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { UNIT_KEY } from './units';
 import { useLabSession } from './use-lab-session';
 
-const UNIT_KEY = { m: 'm', s: 's', 'm/s': 'mps' } as const;
 type ParamKey = keyof UniformMotionParams;
 const PARAM_KEYS: ParamKey[] = ['v', 't', 'x0'];
 

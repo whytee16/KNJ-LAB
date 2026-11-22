@@ -61,3 +61,11 @@ docs/adr/           архитектурные решения
 - Монорепо: Next.js + self-hosted Supabase (Postgres + RLS) ([ADR-0002](docs/adr/0002-monorepo-nextjs-supabase.md)).
 - Геометрия/графики без GeoGebra/Desmos до получения коммерческой лицензии ([ADR-0003](docs/adr/0003-geometry-libs-licensing.md)).
 - Тарифы MVP — фиксированные сроки без автосписания ([ADR-0004](docs/adr/0004-fixed-term-passes.md)).
+
+## Черновики учебных материалов
+
+```bash
+DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:54322/postgres pnpm content:import-drafts
+```
+
+Загружает `content/drafts/**` в базу как черновики `ai_draft`. Опубликовать их можно только после «Проверено учителем» в студии.

@@ -18,3 +18,14 @@ export {
   type UniformMotionResults,
 } from './uniform-motion.ts';
 export { LAB_MODELS, LAB_CODES, labModel } from './registry.ts';
+export {
+  projectile,
+  projectileAt,
+  projectileVelocity,
+  trajectory,
+  speedSeries,
+  flightTime,
+  PROJECTILE_MAX,
+  type ProjectileParams,
+  type ProjectileResults,
+} from './projectile.ts';

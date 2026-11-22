@@ -52,7 +52,7 @@ select throws_ok($$ insert into public.labs (code, subject_code, kind) values ('
   '42501', null, 'staff cannot register labs either (models come with code)');
 select throws_ok($$ delete from public.labs where code = 'uniform-motion' $$,
   '42501', null, 'staff cannot delete labs');
-select is((select count(*)::int from public.labs), 2, 'staff see draft labs');
+select is((select count(*)::int from public.labs where code in ('uniform-motion', 'paid-lab-test')), 2, 'staff see draft labs');
 
 -- Workflow ----------------------------------------------------------------------------------------
 select pg_temp.as_user('e5000000-0000-0000-0000-000000000005', 'aal1');

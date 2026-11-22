@@ -12,6 +12,7 @@ import { allTopicOptions, getTemplateForEditor } from '@/features/studio/queries
 import { StatusBadge } from '@/features/studio/status-badge';
 import { checkStoredTemplate } from '@/features/studio/task-actions';
 import { TaskTemplateEditor, ValidationReportView } from '@/features/studio/task-editor';
+import { AiDraftNotice, AiReviewedNote } from '@/features/studio/ai-draft-notice';
 import { TaskStatusPanel } from '@/features/studio/task-status';
 import { pageLocale } from '@/features/shell/page-locale';
 import { getCurrentUser, requireStaff } from '@/server/authz';
@@ -63,6 +64,11 @@ export default async function EditTaskPage({ params }: PageProps<'/[locale]/stud
               {t('version', { version: tpl.version })}
             </span>
           </div>
+          {tpl.content_origin === 'ai_draft' ? (
+            <AiDraftNotice locale={locale} kind="template" id={id} canReview={canReview} />
+          ) : tpl.content_origin === 'ai_reviewed' ? (
+            <AiReviewedNote />
+          ) : null}
           <TaskStatusPanel
             locale={locale}
             templateId={id}

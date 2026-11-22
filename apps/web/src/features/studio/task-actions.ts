@@ -22,6 +22,10 @@ import { createUserClient } from '@/lib/supabase/server';
 import { errorState, readFields, type FormState } from '@/features/forms/form-state';
 import { actingStaff, localeOf } from './guard';
 
+/** The database refuses to publish unchecked automatic drafts (see mark_content_reviewed). */
+const isAiDraftBlock = (e: { message?: string } | null) =>
+  Boolean(e?.message?.includes('automatically prepared'));
+
 const SPEC_FIELDS = [
   'type',
   'params',
@@ -204,7 +208,13 @@ export async function setTaskTemplateStatus(
     p_status: status as 'draft' | 'in_review' | 'published',
   });
   if (error)
-    return errorState(error.code === '42501' ? 'auth.errors.forbidden' : 'studio.errors.workflow');
+    return errorState(
+      error.code === '42501'
+        ? 'auth.errors.forbidden'
+        : isAiDraftBlock(error)
+          ? 'studio.aiDraft.blocked'
+          : 'studio.errors.workflow',
+    );
   revalidatePath(`/[locale]/studio/tasks/${id}`, 'page');
   revalidatePath('/[locale]/studio/tasks', 'page');
   return { status: 'success', messageKey: `studio.formula.status.${status}` };

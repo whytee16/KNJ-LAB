@@ -1,0 +1,124 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "v", "kind": "choice", "values": [7, 14, 21, 28] }],
+      "constraints": [],
+      "answer": "v^2 / 9.8",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили с земли под углом 45° к горизонту со скоростью {{v}} м/с. Найди дальность полёта ($g = 9{,}8$ м/с², сопротивления воздуха нет). Проверь ответ в лаборатории. Ответ округли до десятых.",
+        "hints": ["$L = \\dfrac{v_0^2 \\sin 2\\alpha}{g}$, а $\\sin 90^\\circ = 1$."],
+        "solution": "При $\\alpha = 45^\\circ$: $L = \\dfrac{v_0^2}{g} = \\dfrac{ {{v}}^2}{9{,}8}$ м."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "v", "kind": "choice", "values": [9.8, 14.7, 19.6, 24.5] }],
+      "constraints": [],
+      "answer": "v / 9.8",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень бросили с земли под углом 30° к горизонту со скоростью {{v}} м/с. Сколько секунд он будет в полёте? $g = 9{,}8$ м/с². Ответ округли до десятых.",
+        "hints": ["$t_{\\text{пол}} = \\dfrac{2 v_0 \\sin\\alpha}{g}$, $\\sin 30^\\circ = 0{,}5$."],
+        "solution": "$t_{\\text{пол}} = \\dfrac{2 v_0 \\sin 30^\\circ}{g} = \\dfrac{v_0}{g} = \\dfrac{ {{v}} }{9{,}8}$ с."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "h", "kind": "choice", "values": [4.9, 19.6, 44.1] }],
+      "constraints": [],
+      "answer": "sqrt(2 * h / 9.8)",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили горизонтально с высоты {{h}} м. Через сколько секунд он упадёт на землю? $g = 9{,}8$ м/с².",
+        "hints": [
+          "По вертикали движение такое же, как при свободном падении: $h = \\dfrac{g t^2}{2}$."
+        ],
+        "solution": "$t = \\sqrt{\\dfrac{2h}{g}} = \\sqrt{\\dfrac{2 \\cdot {{h}} }{9{,}8}}$ с. Начальная горизонтальная скорость на время падения не влияет."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 1 },
+    "texts": {
+      "ru": {
+        "statement": "Тело бросили с земли под углом к горизонту. Какова его скорость в верхней точке траектории?",
+        "options": [
+          "Равна нулю",
+          "Равна горизонтальной составляющей начальной скорости $v_0 \\cos\\alpha$",
+          "Равна начальной скорости $v_0$",
+          "Равна вертикальной составляющей начальной скорости $v_0 \\sin\\alpha$"
+        ],
+        "solution": "В верхней точке $v_y = 0$, а горизонтальная составляющая не меняется, поэтому $v = v_x = v_0 \\cos\\alpha$."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 2 },
+    "texts": {
+      "ru": {
+        "statement": "Два мяча бросили с земли с одинаковой скоростью: один под углом 30°, другой под углом 60° к горизонту. Сравни их дальности полёта.",
+        "options": [
+          "Дальше улетит мяч, брошенный под углом 60°",
+          "Дальше улетит мяч, брошенный под углом 30°",
+          "Дальности одинаковы",
+          "Ответ зависит от массы мячей"
+        ],
+        "solution": "$L = \\dfrac{v_0^2 \\sin 2\\alpha}{g}$, а $\\sin 60^\\circ = \\sin 120^\\circ$. Поэтому дальности одинаковы, но мяч под углом 60° летит дольше и поднимается выше."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "v", "kind": "choice", "values": [7, 14, 21] }],
+      "constraints": [],
+      "answer": "v^2 / (2 * 9.8)",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили вертикально вверх со скоростью {{v}} м/с. На какую наибольшую высоту он поднимется? $g = 9{,}8$ м/с². Ответ округли до десятых.",
+        "hints": ["В верхней точке скорость равна нулю: $v_0^2 = 2 g H$."],
+        "solution": "$H = \\dfrac{v_0^2}{2g} = \\dfrac{ {{v}}^2}{2 \\cdot 9{,}8}$ м."
+      }
+    }
+  }
+]

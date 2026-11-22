@@ -20,7 +20,8 @@
     "db:reset": "supabase db reset",
     "db:types": "supabase gen types typescript --local > apps/web/src/lib/supabase/database.types.ts && prettier --write apps/web/src/lib/supabase/database.types.ts",
     "test:db": "supabase test db",
-    "admin:grant-role": "node scripts/grant-role.mjs"
+    "admin:grant-role": "node scripts/grant-role.mjs",
+    "content:import-drafts": "node --experimental-strip-types --no-warnings scripts/import-drafts.ts"
   },
   "devDependencies": {
     "prettier": "3.10.1",

@@ -10,6 +10,10 @@ import { audit } from '@/server/audit';
 import { errorState, fromZodError, readFields, type FormState } from '@/features/forms/form-state';
 import { actingReviewer, actingStaff, localeOf } from './guard';
 
+/** The database refuses to publish unchecked automatic drafts (see mark_content_reviewed). */
+const isAiDraftBlock = (e: { message?: string } | null) =>
+  Boolean(e?.message?.includes('automatically prepared'));
+
 const DRAFT_FIELDS = [
   'title',
   'summary',
@@ -138,7 +142,10 @@ export async function publishTopic(_prev: FormState, form: FormData): Promise<Fo
     if (!draft || (await renderMarkdown(draft.theory)).mathErrors.length)
       return errorState('studio.errors.mathErrors');
     const { error } = await supabase.rpc('publish_topic', { p_topic: topicId, p_locale: lang });
-    if (error) return errorState('studio.errors.workflow');
+    if (error)
+      return errorState(
+        isAiDraftBlock(error) ? 'studio.aiDraft.blocked' : 'studio.errors.workflow',
+      );
     revalidatePath('/[locale]/topics/[slug]', 'page');
     return { status: 'success', messageKey: 'studio.topic.published' };
   });
@@ -170,7 +177,10 @@ export async function unpublishTopic(_prev: FormState, form: FormData): Promise<
     if (!(await actingReviewer())) return errorState('auth.errors.forbidden');
     const supabase = await createUserClient();
     const { error } = await supabase.rpc('unpublish_topic', { p_topic: topicId, p_locale: lang });
-    if (error) return errorState('studio.errors.workflow');
+    if (error)
+      return errorState(
+        isAiDraftBlock(error) ? 'studio.aiDraft.blocked' : 'studio.errors.workflow',
+      );
     revalidatePath('/[locale]/topics/[slug]', 'page');
     return { status: 'success', messageKey: 'studio.topic.unpublished' };
   });

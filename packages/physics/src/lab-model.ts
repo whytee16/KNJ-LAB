@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 /** SI unit codes; the app translates them (labs.units.*). */
-export type UnitCode = 'm' | 's' | 'm/s';
+export type UnitCode = 'm' | 's' | 'm/s' | 'deg' | 'm/s2';
 
 export interface ParamSpec {
   min: number;
@@ -11,6 +11,8 @@ export interface ParamSpec {
   unit: UnitCode;
   /** Symbol used in formulas and chart axes (not translated). */
   symbol: string;
+  /** Fixed set of values (e.g. g on the Earth, the Moon, Mars); `key` is an i18n key suffix. */
+  choices?: { value: number; key: string }[];
 }
 
 export interface ResultSpec {
@@ -43,6 +45,10 @@ const decimals = (n: number) => {
 /** Keeps a value inside the range and on the step grid (counted from `min`). */
 export function clampParam(spec: ParamSpec, value: number): number {
   if (!Number.isFinite(value)) return spec.default;
+  if (spec.choices?.length)
+    return spec.choices.reduce((best, c) =>
+      Math.abs(c.value - value) < Math.abs(best.value - value) ? c : best,
+    ).value;
   const within = Math.min(spec.max, Math.max(spec.min, value));
   const snapped = spec.min + Math.round((within - spec.min) / spec.step) * spec.step;
   const fixed = Number(snapped.toFixed(Math.max(decimals(spec.step), decimals(spec.min))));

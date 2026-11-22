@@ -6,7 +6,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./tokens.css": "./src/styles/tokens.css",
-    "./game": "./src/game/index.ts"
+    "./game": "./src/game/index.ts",
+    "./game3d": "./src/game/three/index.ts"
   },
   "scripts": {
     "lint": "tsc -p tsconfig.json",
@@ -14,9 +15,11 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@react-three/fiber": "9.8.2",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
-    "tailwind-merge": "3.7.1"
+    "tailwind-merge": "3.7.1",
+    "three": "0.187.0"
   },
   "peerDependencies": {
     "react": "^19.0.0"
@@ -24,6 +27,8 @@
   "devDependencies": {
     "@testing-library/react": "16.3.3",
     "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
     "jsdom": "31.0.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
