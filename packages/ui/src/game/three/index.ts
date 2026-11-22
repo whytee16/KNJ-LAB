@@ -1,5 +1,6 @@
 export {
   GameScene3D,
+  Wedge3D,
   Arrow3D,
   Polyline3D,
   Label3D,

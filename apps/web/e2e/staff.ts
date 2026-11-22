@@ -158,16 +158,22 @@ export async function grantPass(studentId: string) {
   }
 }
 
-/** Clean slate for the projectile lab, then the real draft importer (content/drafts) runs. */
-export async function resetProjectileAndImportDrafts() {
+/** Clean slate for the labs whose texts come as AI drafts, then the real draft importer runs. */
+export async function resetDraftLabsAndImport() {
   const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  const labs = [
+    { code: 'projectile', topic: 'projectile-motion' },
+    { code: 'inclined-plane', topic: 'inclined-plane-motion' },
+  ];
   try {
-    await sql`delete from public.lab_tasks where lab_id = (select id from public.labs where code = 'projectile')`;
-    await sql`delete from public.lab_topics where lab_id = (select id from public.labs where code = 'projectile')`;
-    await sql`delete from public.lab_translations where lab_id = (select id from public.labs where code = 'projectile')`;
-    await sql`delete from public.task_templates where topic_id = (select id from public.topics where slug = 'projectile-motion')`;
-    await sql`delete from public.topics where slug = 'projectile-motion'`;
-    await sql`update public.labs set status = 'draft', is_free_demo = false, published_at = null where code = 'projectile'`;
+    for (const { code, topic } of labs) {
+      await sql`delete from public.lab_tasks where lab_id = (select id from public.labs where code = ${code})`;
+      await sql`delete from public.lab_topics where lab_id = (select id from public.labs where code = ${code})`;
+      await sql`delete from public.lab_translations where lab_id = (select id from public.labs where code = ${code})`;
+      await sql`delete from public.task_templates where topic_id = (select id from public.topics where slug = ${topic})`;
+      await sql`delete from public.topics where slug = ${topic}`;
+      await sql`update public.labs set status = 'draft', is_free_demo = false, published_at = null where code = ${code}`;
+    }
   } finally {
     await sql.end();
   }

@@ -1,0 +1,112 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "m", "kind": "choice", "values": [1, 2, 4, 5] }],
+      "constraints": [],
+      "answer": "m * 9.8 * 0.5",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг лежит на наклонной плоскости с углом наклона 60°. Найди силу реакции опоры ($g = 9{,}8$ м/с²). Ответ округли до десятых.",
+        "hints": ["$N = mg \\cos\\alpha$, $\\cos 60^\\circ = 0{,}5$."],
+        "solution": "$N = mg \\cos 60^\\circ = {{m}} \\cdot 9{,}8 \\cdot 0{,}5$ Н."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "len", "kind": "choice", "values": [2.45, 9.8] }],
+      "constraints": [],
+      "answer": "sqrt(2 * len / 4.9)",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок соскальзывает без начальной скорости и без трения с наклонной плоскости длиной {{len}} м и углом наклона 30°. За какое время он доедет до конца? $g = 9{,}8$ м/с². Проверь ответ в лаборатории.",
+        "hints": ["Без трения $a = g \\sin\\alpha$, а путь $L = \\dfrac{a t^2}{2}$."],
+        "solution": "$a = 9{,}8 \\cdot 0{,}5 = 4{,}9$ м/с², $t = \\sqrt{\\dfrac{2L}{a}} = \\sqrt{\\dfrac{2 \\cdot {{len}} }{4{,}9}}$ с."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 2 },
+    "texts": {
+      "ru": {
+        "statement": "Брусок скользит по наклонной плоскости с трением. Как изменится его ускорение, если взять брусок из того же материала, но вдвое большей массы?",
+        "options": ["Увеличится вдвое", "Уменьшится вдвое", "Не изменится", "Станет равным нулю"],
+        "solution": "$a = g(\\sin\\alpha - \\mu\\cos\\alpha)$ — масса в формулу не входит: и сила тяжести, и сила трения пропорциональны массе."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 1 },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой $m$ покоится на наклонной плоскости с углом $\\alpha$; коэффициент трения $\\mu$. Чему равна сила трения?",
+        "options": ["$\\mu mg \\cos\\alpha$", "$mg \\sin\\alpha$", "$\\mu mg$", "Нулю"],
+        "solution": "Брусок покоится, значит, силы вдоль плоскости уравновешены: сила трения покоя равна $mg \\sin\\alpha$. Значение $\\mu mg \\cos\\alpha$ — это лишь наибольшая возможная сила трения покоя."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "mu", "kind": "choice", "values": [0.1, 0.2, 0.3] }],
+      "constraints": [],
+      "answer": "9.8 * (0.5 - mu * sqrt(3) / 2)",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок скользит по наклонной плоскости с углом наклона 30°, коэффициент трения {{mu}}. Найди ускорение бруска ($g = 9{,}8$ м/с²). Ответ округли до десятых и проверь в лаборатории.",
+        "hints": ["$a = g(\\sin\\alpha - \\mu\\cos\\alpha)$, $\\cos 30^\\circ \\approx 0{,}866$."],
+        "solution": "$a = 9{,}8 \\cdot (0{,}5 - {{mu}} \\cdot 0{,}866)$ м/с²."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "a", "kind": "choice", "values": [30, 45] }],
+      "constraints": [],
+      "answer": "tan(a * pi / 180)",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": ""
+    },
+    "texts": {
+      "ru": {
+        "statement": "Наклон доски медленно увеличивают. Брусок начал скользить, когда угол наклона стал равен {{a}}°. Найди коэффициент трения бруска о доску. Ответ округли до сотых.",
+        "hints": ["Скольжение начинается, когда $\\operatorname{tg}\\alpha = \\mu$."],
+        "solution": "$\\mu = \\operatorname{tg} {{a}}^\\circ$."
+      }
+    }
+  }
+]

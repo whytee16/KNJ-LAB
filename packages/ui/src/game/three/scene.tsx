@@ -196,16 +196,52 @@ export function Arrow3D({
   );
   const shaft = len - head;
   return (
+    // Vectors are drawn over the bodies (no depth test): a force must stay visible even when it
+    // points into the wedge or the ground.
     <group position={a} quaternion={q}>
-      <mesh position={[0, shaft / 2, 0]}>
+      <mesh position={[0, shaft / 2, 0]} renderOrder={10}>
         <cylinderGeometry args={[radius, radius, shaft, 8]} />
-        <meshStandardMaterial color={color} />
+        <meshBasicMaterial color={color} depthTest={false} transparent />
       </mesh>
-      <mesh position={[0, shaft + head / 2, 0]}>
+      <mesh position={[0, shaft + head / 2, 0]} renderOrder={10}>
         <coneGeometry args={[radius * 3, head, 12]} />
-        <meshStandardMaterial color={color} />
+        <meshBasicMaterial color={color} depthTest={false} transparent />
       </mesh>
     </group>
+  );
+}
+
+/** Right-angled wedge (inclined plane): legs `base` along x and `height` along y, centred in z. */
+export function Wedge3D({
+  base,
+  height,
+  depth,
+  color,
+  position,
+  shadows,
+}: {
+  base: number;
+  height: number;
+  depth: number;
+  color: string;
+  position: [number, number, number];
+  shadows?: boolean;
+}) {
+  const geometry = useMemo(() => {
+    const shape = new THREE.Shape();
+    shape.moveTo(0, 0);
+    shape.lineTo(Math.max(base, 0.01), 0);
+    shape.lineTo(0, Math.max(height, 0.01));
+    shape.closePath();
+    const g = new THREE.ExtrudeGeometry(shape, { depth, bevelEnabled: false });
+    g.translate(0, 0, -depth / 2);
+    return g;
+  }, [base, height, depth]);
+  useEffect(() => () => geometry.dispose(), [geometry]);
+  return (
+    <mesh geometry={geometry} position={position} castShadow={shadows} receiveShadow={shadows}>
+      <meshStandardMaterial color={color} />
+    </mesh>
   );
 }
 

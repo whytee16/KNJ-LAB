@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Browser, type BrowserContext, type Page } from '@playwright/test';
-import { createStaff, enrollTotp, resetProjectileAndImportDrafts, signIn } from './staff';
+import { createStaff, enrollTotp, resetDraftLabsAndImport, signIn } from './staff';
 
 // 3D lab "projectile": AI drafts are imported, blocked until a reviewer confirms the check,
 // then the 3D scene, the 2D fallback and the readouts work for visitors.
@@ -20,7 +20,7 @@ let reviewerPage: Page;
 
 test.beforeAll(async ({}, testInfo) => {
   use = testInfo.project.use;
-  await resetProjectileAndImportDrafts();
+  await resetDraftLabsAndImport();
   await createStaff(reviewer, password, 'reviewer', 'Методист');
 });
 test.afterAll(async () => {
@@ -136,3 +136,48 @@ for (const width of [390, 1440])
     const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
     expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
   });
+
+test('inclined plane: reviewed and published, forces and the rest condition', async ({
+  browser,
+}) => {
+  const page = reviewerPage;
+  await page.goto('/ru/studio/labs');
+  await page.getByRole('link', { name: 'Брусок на наклонной плоскости' }).click();
+  await page.getByRole('button', { name: 'Проверено учителем' }).click();
+  await expect(page.getByTestId('ai-reviewed')).toBeVisible();
+  await page.getByLabel('Бесплатное демо').check();
+  await page.getByRole('button', { name: 'Сохранить' }).click();
+  await expect(page.getByText('Сохранено.')).toBeVisible();
+  await page.getByRole('button', { name: 'Опубликовать' }).click();
+  await expect(page.getByText('Опубликовано.')).toBeVisible();
+
+  const guest = await newPage(browser);
+  await guest.goto('/ru/labs/inclined-plane');
+  await guest.getByRole('button', { name: '3D' }).click();
+  await expect(guest.getByTestId('scene-3d').locator('canvas')).toBeVisible();
+  // α = 30°, μ = 0,2: a = g(sin α − μ cos α) ≈ 3,2 m/s².
+  await expect(guest.getByTestId('readout-a')).toContainText('3,2');
+  await expect(guest.getByTestId('motion-state')).toContainText('скользит');
+
+  const mass = guest.getByRole('textbox', { name: /^Масса бруска/ });
+  await mass.fill('9');
+  await mass.press('Enter');
+  await expect(guest.getByTestId('readout-a')).toContainText('3,2'); // does not depend on the mass
+
+  const mu = guest.getByRole('textbox', { name: /^Коэффициент трения/ });
+  await mu.fill('0,6');
+  await mu.press('Enter');
+  await expect(guest.getByTestId('motion-state')).toContainText('покоится');
+  await expect(guest.getByTestId('motion-state')).toContainText('30,96');
+  await expect(guest.getByTestId('readout-a')).toContainText('0');
+
+  await guest.getByRole('button', { name: '2D' }).click();
+  await expect(guest.getByTestId('scene-2d').locator('[data-force="Ffr"]')).toBeVisible();
+  await expect(guest.getByTestId('scene-2d').locator('[data-force="ma"]')).toHaveCount(0);
+  const overflow = await guest.evaluate(
+    () => document.documentElement.scrollWidth - window.innerWidth,
+  );
+  expect(overflow).toBeLessThanOrEqual(0);
+  const { violations } = await new AxeBuilder({ page: guest }).analyze();
+  expect(violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')).toEqual([]);
+});

@@ -29,3 +29,11 @@ export {
   type ProjectileParams,
   type ProjectileResults,
 } from './projectile.ts';
+export {
+  inclinedPlane,
+  slideAt,
+  slopeAcceleration,
+  accelerationByAngle,
+  type InclinedPlaneParams,
+  type InclinedPlaneResults,
+} from './inclined-plane.ts';
