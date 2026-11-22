@@ -119,6 +119,7 @@ export default function ProjectileScene3D(props: {
       resetLabel={props.resetLabel}
       camera={[cx - 2, cy + 2.5, 11.5]}
       target={[cx, cy, 0]}
+      fitWidth={Math.max(right * scale, top * scale) + 2}
       onFps={props.onFps}
       onContextLost={props.onContextLost}
     >

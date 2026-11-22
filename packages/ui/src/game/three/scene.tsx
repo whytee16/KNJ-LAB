@@ -96,12 +96,16 @@ function Controls({
   position,
   target,
   resetKey,
+  fitWidth,
 }: {
   position: [number, number, number];
   target: [number, number, number];
   resetKey: number;
+  /** Scene width that must fit the view; the camera moves back on narrow (phone) screens. */
+  fitWidth?: number;
 }) {
-  const { camera, gl } = useThree();
+  const { camera, gl, size } = useThree();
+  const aspect = size.width / Math.max(size.height, 1);
   const controls = useMemo(() => new OrbitControls(camera, gl.domElement), [camera, gl]);
   useEffect(() => {
     controls.enableDamping = true;
@@ -114,10 +118,16 @@ function Controls({
   useEffect(() => {
     const [px, py, pz] = posKey.split(',').map(Number) as [number, number, number];
     const [tx, ty, tz] = targetKey.split(',').map(Number) as [number, number, number];
-    camera.position.set(px, py, pz);
+    const offset = new THREE.Vector3(px - tx, py - ty, pz - tz);
+    if (fitWidth && camera instanceof THREE.PerspectiveCamera) {
+      const half = Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2);
+      const need = (fitWidth / 2 / (half * aspect)) * 1.1;
+      if (offset.length() < need) offset.setLength(need);
+    }
+    camera.position.set(tx + offset.x, ty + offset.y, tz + offset.z);
     controls.target.set(tx, ty, tz);
     controls.update();
-  }, [camera, controls, posKey, targetKey, resetKey]);
+  }, [camera, controls, posKey, targetKey, resetKey, fitWidth, aspect]);
   useFrame(() => controls.update());
   return null;
 }
@@ -241,6 +251,7 @@ export function GameScene3D({
   camera,
   target,
   gridSize = 20,
+  fitWidth,
   onFps,
   onContextLost,
   children,
@@ -251,6 +262,7 @@ export function GameScene3D({
   camera: [number, number, number];
   target: [number, number, number];
   gridSize?: number;
+  fitWidth?: number;
   onFps?: (fps: number) => void;
   onContextLost?: () => void;
   children: ReactNode;
@@ -298,7 +310,7 @@ export function GameScene3D({
                 <planeGeometry args={[gridSize * 2, gridSize * 2]} />
                 <meshStandardMaterial color={tokens.surface} transparent opacity={0.6} />
               </mesh>
-              <Controls position={camera} target={target} resetKey={resetKey} />
+              <Controls position={camera} target={target} resetKey={resetKey} fitWidth={fitWidth} />
               {onFps ? <FpsProbe key={quality} onFps={onFps} /> : null}
               {children}
             </OverlayContext.Provider>
