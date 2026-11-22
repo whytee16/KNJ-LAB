@@ -89,5 +89,7 @@ describe('readouts and chart helpers', () => {
     expect(snapToRange(spec, 99)).toBe(30);
     expect(ticks(20)).toEqual([0, 5, 10, 15, 20]);
     expect(ticks(600)).toEqual([0, 200, 400, 600]);
+    // The top tick covers the maximum even when it is not a multiple of the step.
+    expect(ticks(120)).toEqual([0, 25, 50, 75, 100, 125]);
   });
 });

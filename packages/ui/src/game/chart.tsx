@@ -1,3 +1,29 @@
+'use client';
+
+import { useEffect, useRef, useState, type RefObject } from 'react';
+
+/**
+ * Width of an element in CSS pixels (updates on resize). Drawings use it as their viewBox width,
+ * so one unit is one pixel and labels keep their size on phones and wide screens alike.
+ */
+export function useMeasuredWidth<T extends HTMLElement>(
+  fallback: number,
+): [RefObject<T | null>, number] {
+  const ref = useRef<T>(null);
+  const [width, setWidth] = useState(fallback);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => setWidth(Math.max(240, Math.round(el.clientWidth)));
+    update();
+    if (typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  return [ref, width];
+}
+
 /** "Nice" tick step for an axis of the given length. */
 export function niceStep(max: number, target = 5): number {
   if (!(max > 0)) return 1;
@@ -10,13 +36,17 @@ export function niceStep(max: number, target = 5): number {
 export function ticks(max: number, target = 5): number[] {
   const step = niceStep(max, target);
   const out: number[] = [];
-  for (let v = 0; v <= max + step * 1e-9; v += step) out.push(Number(v.toFixed(6)));
+  // The last tick is the first one at or above `max`, so the data always fits inside the grid.
+  for (let i = 0; ; i++) {
+    const v = Number((i * step).toFixed(6));
+    out.push(v);
+    if (v >= max - step * 1e-9) break;
+  }
   return out;
 }
 
-const W = 320;
-const H = 200;
-const M = { l: 44, r: 12, t: 12, b: 36 };
+const H = 240;
+const M = { l: 48, r: 16, t: 12, b: 40 };
 const fmt = (n: number) => String(Number(n.toFixed(2))).replace('.', ',');
 
 /**
@@ -42,8 +72,9 @@ export function GameChart({
   marker?: { x: number; y: number };
   description: string;
 }) {
-  const xs = ticks(xMax);
-  const ys = ticks(yMax);
+  const [ref, W] = useMeasuredWidth<HTMLElement>(560);
+  const xs = ticks(xMax, W < 400 ? 4 : 6);
+  const ys = ticks(yMax, 5);
   const xTop = xs[xs.length - 1]! || 1;
   const yTop = ys[ys.length - 1]! || 1;
   const px = (x: number) => M.l + (x / xTop) * (W - M.l - M.r);
@@ -53,7 +84,7 @@ export function GameChart({
     .join('');
 
   return (
-    <figure className="flex flex-col gap-1">
+    <figure ref={ref} className="flex flex-col gap-1">
       <figcaption className="text-sm font-medium text-text-muted">{title}</figcaption>
       <svg
         viewBox={`0 0 ${W} ${H}`}
@@ -69,7 +100,7 @@ export function GameChart({
             <line key={`y${v}`} x1={M.l} x2={W - M.r} y1={py(v)} y2={py(v)} />
           ))}
         </g>
-        <g className="fill-text-muted text-[10px]">
+        <g className="fill-text-muted text-xs">
           {xs.map((v) => (
             <text key={`xt${v}`} x={px(v)} y={H - M.b + 14} textAnchor="middle">
               {fmt(v)}
@@ -80,7 +111,7 @@ export function GameChart({
               {fmt(v)}
             </text>
           ))}
-          <text x={(M.l + W - M.r) / 2} y={H - 4} textAnchor="middle">
+          <text x={(M.l + W - M.r) / 2} y={H - 6} textAnchor="middle">
             {xLabel}
           </text>
           <text

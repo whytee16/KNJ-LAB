@@ -8,4 +8,4 @@ export {
   GameResults,
   type Readout,
 } from './readouts.tsx';
-export { GameChart, niceStep, ticks } from './chart.tsx';
+export { GameChart, niceStep, ticks, useMeasuredWidth } from './chart.tsx';

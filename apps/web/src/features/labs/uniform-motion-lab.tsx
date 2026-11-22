@@ -16,6 +16,7 @@ import {
   GameWorkspace,
   ParamControl,
   ticks,
+  useMeasuredWidth,
 } from '@knj/ui/game';
 import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
@@ -43,72 +44,81 @@ function Track({
   unit: string;
   format: (n: number) => string;
 }) {
-  const W = 640;
-  const L = 28;
-  const R = 612;
-  const marks = ticks(scaleMax, 6);
+  const [ref, W] = useMeasuredWidth<HTMLDivElement>(640);
+  const L = 24;
+  const R = W - 24;
+  const marks = ticks(scaleMax, W < 400 ? 4 : 6);
   const top = marks[marks.length - 1] || 1;
   const px = (m: number) => L + (m / top) * (R - L);
   return (
-    <svg viewBox={`0 0 ${W} 132`} role="img" aria-label={label} className="w-full">
-      <rect x={L - 8} y={70} width={R - L + 16} height={14} rx={7} className="fill-surface-muted" />
-      <line
-        x1={px(x0)}
-        x2={px(xEnd)}
-        y1={77}
-        y2={77}
-        className="stroke-accent/40"
-        strokeWidth={14}
-        strokeLinecap="round"
-      />
-      {marks.map((m) => (
-        <g key={m}>
-          <line
-            x1={px(m)}
-            x2={px(m)}
-            y1={88}
-            y2={96}
-            className="stroke-text-muted"
-            strokeWidth={1}
-          />
-          <text x={px(m)} y={112} textAnchor="middle" className="fill-text-muted text-[11px]">
-            {format(m)}
-          </text>
-        </g>
-      ))}
-      <text x={R} y={128} textAnchor="end" className="fill-text-muted text-[11px]">
-        {`x, ${unit}`}
-      </text>
-      <g>
+    <div ref={ref}>
+      <svg viewBox={`0 0 ${W} 132`} role="img" aria-label={label} className="w-full">
+        <rect
+          x={L - 8}
+          y={70}
+          width={R - L + 16}
+          height={14}
+          rx={7}
+          className="fill-surface-muted"
+        />
         <line
           x1={px(x0)}
-          x2={px(x0)}
-          y1={30}
-          y2={70}
-          className="stroke-text-muted"
-          strokeDasharray="3 3"
-        />
-        <text x={px(x0)} y={24} textAnchor="middle" className="fill-text-muted text-[11px]">
-          {'x₀'}
-        </text>
-        <line
-          x1={px(xEnd)}
           x2={px(xEnd)}
-          y1={30}
-          y2={70}
-          className="stroke-text-muted"
-          strokeDasharray="3 3"
+          y1={77}
+          y2={77}
+          className="stroke-accent/40"
+          strokeWidth={14}
+          strokeLinecap="round"
         />
-        <text x={px(xEnd)} y={24} textAnchor="middle" className="fill-text-muted text-[11px]">
-          {'x'}
+        {marks.map((m) => (
+          <g key={m}>
+            <line
+              x1={px(m)}
+              x2={px(m)}
+              y1={88}
+              y2={96}
+              className="stroke-text-muted"
+              strokeWidth={1}
+            />
+            <text x={px(m)} y={112} textAnchor="middle" className="fill-text-muted text-xs">
+              {format(m)}
+            </text>
+          </g>
+        ))}
+        <text x={R} y={128} textAnchor="end" className="fill-text-muted text-xs">
+          {`x, ${unit}`}
         </text>
-      </g>
-      <g transform={`translate(${px(x)} 0)`}>
-        <rect x={-14} y={48} width={28} height={18} rx={5} className="fill-accent" />
-        <circle cx={-7} cy={68} r={4} className="fill-text" />
-        <circle cx={7} cy={68} r={4} className="fill-text" />
-      </g>
-    </svg>
+        <g>
+          <line
+            x1={px(x0)}
+            x2={px(x0)}
+            y1={30}
+            y2={70}
+            className="stroke-text-muted"
+            strokeDasharray="3 3"
+          />
+          <text x={px(x0)} y={24} textAnchor="middle" className="fill-text-muted text-xs">
+            {'x₀'}
+          </text>
+          <line
+            x1={px(xEnd)}
+            x2={px(xEnd)}
+            y1={30}
+            y2={70}
+            className="stroke-text-muted"
+            strokeDasharray="3 3"
+          />
+          <text x={px(xEnd)} y={24} textAnchor="middle" className="fill-text-muted text-xs">
+            {'x'}
+          </text>
+        </g>
+        <g transform={`translate(${px(x)} 0)`}>
+          <rect x={-14} y={48} width={28} height={18} rx={5} className="fill-accent" />
+          <circle cx={-7} cy={68} r={4} className="fill-text" />
+          <circle cx={7} cy={68} r={4} className="fill-text" />
+        </g>
+      </svg>
+    </div>
   );
 }
 
