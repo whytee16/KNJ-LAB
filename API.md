@@ -34,18 +34,20 @@
 
 ### learning
 
-| Действие                                                     | Роль           | Описание                                                               |
-| ------------------------------------------------------------ | -------------- | ---------------------------------------------------------------------- |
-| `getCurriculumTree({grade, subject})`                        | все            | дерево текущей программы ученика                                       |
-| `getTopic({slug, locale})`                                   | все            | теория/формулы; платные секции — по entitlement                        |
-| `startTrainer({topicId, difficulty})`                        | student        | создаёт `trainer_runs`                                                 |
-| `getNextTask({runId})`                                       | student        | генерирует `task_instances`, возвращает условие без ответа             |
-| `submitAnswer({instanceId, answer, timeMs, idempotencyKey})` | student        | проверка на сервере → `{isCorrect, partial, explanationKey, solution}` |
-| `startTest({testId})` / `finishTest({attemptId})`            | student        | таймер считается на сервере (`started_at + time_limit`)                |
-| `getResult({attemptId})`                                     | student/parent | разбор и рекомендации                                                  |
-| `reportContentError({instanceId, message})`                  | student        | `content_reports`                                                      |
-| `toggleFavorite({entityType, entityId})`                     | self           | справочник                                                             |
-| `saveLabSession({labId, params, answers, durationS})`        | student        |                                                                        |
+| Действие                                                     | Роль           | Описание                                                                                 |
+| ------------------------------------------------------------ | -------------- | ---------------------------------------------------------------------------------------- |
+| `getCurriculumTree({grade, subject})`                        | все            | дерево текущей программы ученика                                                         |
+| `getTopic({slug, locale})`                                   | все            | теория/формулы; платные секции — по entitlement                                          |
+| `startTrainer({topicId, difficulty})`                        | student        | создаёт `trainer_runs`                                                                   |
+| `getNextTask({runId})`                                       | student        | генерирует `task_instances`, возвращает условие без ответа                               |
+| `submitAnswer({instanceId, answer, timeMs, idempotencyKey})` | student        | проверка на сервере → `{isCorrect, partial, explanationKey, solution}`                   |
+| `startTest({testId})` / `finishTest({attemptId})`            | student        | таймер считается на сервере (`started_at + time_limit`)                                  |
+| `getResult({attemptId})`                                     | student/parent | разбор и рекомендации                                                                    |
+| `reportContentError({instanceId, message})`                  | student        | `content_reports`                                                                        |
+| `toggleFavorite({entityType, entityId})`                     | self           | справочник                                                                               |
+| `saveLabSession({code, sessionId, params, durationS})`       | student        | параметры проверяются по модели; длительность ≤ времени с начала сессии; лимит `labSave` |
+| `startLabQuestions({code})`                                  | student        | попытка `kind = 'lab'` по вопросам, доступным ученику (без пропуска — лёгкий уровень)    |
+| `saveLab` / `changeLabLink` / `setLabStatus`                 | staff (aal2)   | студия: тексты и параметры, темы и вопросы, публикация (reviewer)                        |
 
 ### parent
 

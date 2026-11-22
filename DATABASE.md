@@ -106,7 +106,21 @@ link_status:     pending | active | revoked
 
 ## 7. Лаборатории
 
-`labs` (`code`, `subject_id`, `kind` (physics/geometry2d/geometry3d), `default_params jsonb`, `is_free_demo`, `status`), `lab_translations`, `lab_topics`, `lab_sessions` (`student_id`, `lab_id`, `params jsonb`, `answers jsonb`, `duration_s`).
+Миграция `20261124090000_labs.sql` (этап 5a, [ADR-0008](docs/adr/0008-labs-models-in-code.md)).
+
+| Таблица            | Ключевые поля                                                                                                                                                        |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `labs`             | `code` (= код модели в `packages/physics`), `subject_code`, `kind` (physics/geometry2d/geometry3d), `grade_from`, `default_params`, `is_free_demo`, `status`, `sort` |
+| `lab_translations` | PK(`lab_id`, `locale`), `title`, `goal`, `steps text[]` (≤ 12), `hints text[]` (≤ 10), `translation_status`                                                          |
+| `lab_topics`       | PK(`lab_id`, `topic_id`) — лаборатория показывается на странице темы                                                                                                 |
+| `lab_tasks`        | PK(`lab_id`, `template_id`), `position`; шаблон — `on delete restrict`                                                                                               |
+| `lab_sessions`     | `student_id`, `lab_id`, `params`, `answers` (`{correct, total}`), `duration_s`, `attempt_id`, `started_at`, `updated_at`                                             |
+
+- Строки `labs` добавляются только миграциями: у клиентов нет `insert`/`delete`, а `code` не изменяется.
+- Вопросы — попытки `attempts.kind = 'lab'` (`attempts.lab_id`), задачи выдаёт и проверяет движок этапа 4.
+- `private.lab_use_guard()` (триггер на `lab_sessions` и `attempts`): лаборатория опубликована, пользователь — ученик, а для лаборатории не из демо нужен активный пропуск, даже под service role.
+- `set_lab_status(lab, status)`: отправляет на проверку сотрудник с aal2, публикует reviewer/admin с aal2; для публикации нужны название и цель на русском.
+- RLS: опубликованное читают все, черновики — сотрудники; править черновики могут сотрудники с aal2, любые — reviewer/admin. `lab_sessions` читают сам ученик и его родитель, пишет только сервер.
 
 ## 8. Монетизация
 

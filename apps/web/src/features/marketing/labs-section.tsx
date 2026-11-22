@@ -1,5 +1,6 @@
-import { Card, Container, SectionHeading } from '@knj/ui';
+import { buttonVariants, Card, Container, SectionHeading } from '@knj/ui';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { CircuitIllustration, CubeSectionIllustration } from './lab-illustrations';
 
 export function LabsSection() {
@@ -20,7 +21,12 @@ export function LabsSection() {
             <p className="text-text-muted">{t('physics.description')}</p>
           </Card>
         </div>
-        <p className="mt-6 text-sm text-text-muted">{t('soon')}</p>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Link href="/labs" className={buttonVariants({ variant: 'primary' })}>
+            {t('openCatalog')}
+          </Link>
+          <p className="text-sm text-text-muted">{t('soon')}</p>
+        </div>
       </Container>
     </section>
   );

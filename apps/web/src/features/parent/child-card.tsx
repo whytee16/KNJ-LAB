@@ -53,6 +53,9 @@ export function ChildCard({
         >
           <p>{t('stats.summary', { solved: stats.solved, percent: stats.correctPercent })}</p>
           <p className="text-text-muted">{t('stats.lastWeek', { count: stats.lastWeek })}</p>
+          <p className="text-text-muted" data-testid="child-labs">
+            {t('stats.labs', { sessions: stats.labSessions, minutes: stats.labMinutes })}
+          </p>
           {stats.results.length ? (
             <ul className="flex flex-col gap-1">
               {stats.results.map((r) => (

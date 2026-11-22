@@ -13,6 +13,8 @@ const pages = [
   { path: '/ru/learn/physics/9', h1: 'Физика · 9 класс' },
   { path: '/ru/reference', h1: 'Справочник формул' },
   { path: '/kk/reference', h1: 'Формулалар анықтамалығы' },
+  { path: '/ru/labs', h1: 'Лаборатории' },
+  { path: '/kk/labs', h1: 'Зертханалар' },
 ];
 
 for (const p of pages) {

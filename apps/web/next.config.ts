@@ -16,7 +16,7 @@ const config: NextConfig = {
   output: process.env.NEXT_OUTPUT === 'standalone' ? 'standalone' : undefined,
   poweredByHeader: false,
   reactStrictMode: true,
-  transpilePackages: ['@knj/ui', '@knj/i18n'],
+  transpilePackages: ['@knj/ui', '@knj/i18n', '@knj/physics'],
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }];
   },

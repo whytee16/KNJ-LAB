@@ -10,6 +10,7 @@ import { getCurrentUser } from '@/server/authz';
 import { canUseLevel } from '@/server/entitlements';
 import { hit } from '@/server/rate-limit';
 import { errorState, type FormState } from '@/features/forms/form-state';
+import { recordLabAnswer } from '@/features/labs/server';
 import { answerTask, type Feedback } from './engine-server';
 
 function localeOf(form: FormData): Locale {
@@ -106,6 +107,7 @@ export async function submitAnswer(_prev: AnswerState, form: FormData): Promise<
           p_correct: outcome.feedback.status === 'correct',
         });
       }
+      if (outcome.firstTime && outcome.labAttemptId) await recordLabAnswer(outcome.labAttemptId);
       return { status: 'idle', feedback: outcome.feedback, instanceId };
     }
   }

@@ -20,6 +20,10 @@ import type { Json } from '@/lib/supabase/database.types';
 
 export class NoTemplatesError extends Error {}
 
+/** Where the next task comes from: a topic level (trainer, tests) or explicit templates (labs). */
+export type TemplateSource =
+  { topicIds: string[]; difficulty: Difficulty } | { templateIds: string[] };
+
 interface TemplateRow {
   id: string;
   version: number;
@@ -31,19 +35,15 @@ interface TemplateRow {
  * Chooses the next template: half the time a template the student got wrong in this attempt
  * (spaced repetition of mistakes), never the same template twice in a row if there is a choice.
  */
-async function pickTemplate(
-  topicIds: string[],
-  difficulty: Difficulty,
-  attemptId: string,
-  rand = Math.random,
-) {
+async function pickTemplate(source: TemplateSource, attemptId: string, rand = Math.random) {
   const admin = createAdminClient();
-  const { data: templates, error } = await admin
+  const base = admin
     .from('task_templates')
     .select('id, version, spec, task_template_texts(locale, texts)')
-    .in('topic_id', topicIds)
-    .eq('difficulty', difficulty)
     .eq('status', 'published');
+  const { data: templates, error } = await ('templateIds' in source
+    ? base.in('id', source.templateIds)
+    : base.in('topic_id', source.topicIds).eq('difficulty', source.difficulty));
   if (error) throw new Error(`templates query failed: ${error.message}`);
   if (!templates?.length) throw new NoTemplatesError();
 
@@ -64,15 +64,15 @@ async function pickTemplate(
 }
 
 /** Creates a task instance (prompt for the student, key for the server) and returns its id. */
-export async function issueTask(opts: {
-  studentId: string;
-  attemptId: string;
-  topicIds: string[];
-  difficulty: Difficulty;
-  locale: Locale;
-  position: number;
-}): Promise<string> {
-  const template = await pickTemplate(opts.topicIds, opts.difficulty, opts.attemptId);
+export async function issueTask(
+  opts: {
+    studentId: string;
+    attemptId: string;
+    locale: Locale;
+    position: number;
+  } & TemplateSource,
+): Promise<string> {
+  const template = await pickTemplate(opts, opts.attemptId);
   const texts =
     template.task_template_texts.find((t) => t.locale === opts.locale) ??
     template.task_template_texts.find((t) => t.locale === 'ru');
@@ -152,7 +152,14 @@ export type AnswerOutcome =
   | { kind: 'invalid'; reason: string }
   | { kind: 'closed' }
   | { kind: 'not_found' }
-  | { kind: 'answered'; feedback: Feedback; firstTime: boolean; trainerRunId: string | null };
+  | {
+      kind: 'answered';
+      feedback: Feedback;
+      firstTime: boolean;
+      trainerRunId: string | null;
+      /** Set when the task is a lab question (the attempt belongs to a lab). */
+      labAttemptId: string | null;
+    };
 
 /**
  * Checks and records an answer. Idempotent: a repeated key (or a second answer to the same task)
@@ -170,7 +177,7 @@ export async function answerTask(opts: {
   const { data: instance } = await admin
     .from('task_instances')
     .select(
-      'id, student_id, attempt_id, prompt, attempts(finished_at, deadline_at, trainer_run_id), task_instance_keys(expected, solution), attempt_answers(status, score)',
+      'id, student_id, attempt_id, prompt, attempts(finished_at, deadline_at, trainer_run_id, lab_id), task_instance_keys(expected, solution), attempt_answers(status, score)',
     )
     .eq('id', opts.instanceId)
     .maybeSingle();
@@ -187,6 +194,7 @@ export async function answerTask(opts: {
   });
 
   const trainerRunId = instance.attempts?.trainer_run_id ?? null;
+  const labAttemptId = instance.attempts?.lab_id ? instance.attempt_id : null;
   const previous = instance.attempt_answers;
   if (previous)
     return {
@@ -194,6 +202,7 @@ export async function answerTask(opts: {
       feedback: await feedbackFor(previous.status, Number(previous.score)),
       firstTime: false,
       trainerRunId,
+      labAttemptId,
     };
 
   const attempt = instance.attempts;
@@ -227,6 +236,7 @@ export async function answerTask(opts: {
           feedback: await feedbackFor(stored.status, Number(stored.score)),
           firstTime: false,
           trainerRunId,
+          labAttemptId,
         };
     }
     throw new Error(`answer insert failed: ${error.message}`);
@@ -236,6 +246,7 @@ export async function answerTask(opts: {
     feedback: await feedbackFor(result.status, result.score),
     firstTime: true,
     trainerRunId,
+    labAttemptId,
   };
 }
 

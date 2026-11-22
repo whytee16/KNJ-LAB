@@ -19,7 +19,7 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
   const t = await getTranslations('student');
   const s = await getTranslations('studio.subjects');
   const supabase = await createUserClient();
-  const [{ data: runRows }, results] = await Promise.all([
+  const [{ data: runRows }, results, { data: labRows }] = await Promise.all([
     supabase
       .from('trainer_runs')
       .select('id, difficulty, solved, target, topics(slug, topic_contents(locale, title))')
@@ -28,7 +28,23 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
       .order('last_activity_at', { ascending: false })
       .limit(5),
     recentResults(user.id, locale),
+    supabase
+      .from('lab_sessions')
+      .select('id, lab_id, updated_at, labs(code, status, lab_translations(locale, title))')
+      .eq('student_id', user.id)
+      .order('updated_at', { ascending: false })
+      .limit(20),
   ]);
+  // Latest session per lab ("continue" opens the lab with the saved parameters).
+  const seen = new Set<string>();
+  const recentLabs = (labRows ?? [])
+    .filter((r) => r.labs?.status === 'published' && !seen.has(r.lab_id) && seen.add(r.lab_id))
+    .slice(0, 3)
+    .map((r) => ({
+      id: r.id,
+      code: r.labs!.code,
+      title: pickLocale(r.labs!.lab_translations, locale)?.title ?? r.labs!.code,
+    }));
   const runs = (runRows ?? []).flatMap((r) =>
     r.topics
       ? [
@@ -83,7 +99,7 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
         </section>
       ) : null}
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
         <section aria-labelledby="my-runs">
           <h2 id="my-runs" className="text-xl font-semibold">
             {t('runs')}
@@ -106,6 +122,30 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
             </ul>
           ) : (
             <p className="mt-2 text-sm text-text-muted">{t('noRuns')}</p>
+          )}
+        </section>
+        <section aria-labelledby="my-labs">
+          <div className="flex items-baseline justify-between gap-2">
+            <h2 id="my-labs" className="text-xl font-semibold">
+              {t('labs')}
+            </h2>
+            <Link href="/labs" className="text-sm underline underline-offset-4">
+              {t('allLabs')}
+            </Link>
+          </div>
+          {recentLabs.length ? (
+            <ul className="mt-3 flex flex-col gap-2">
+              {recentLabs.map((l) => (
+                <li key={l.id}>
+                  <Link href={`/labs/${l.code}`} className="underline underline-offset-4">
+                    {l.title}
+                  </Link>{' '}
+                  <span className="text-sm text-text-muted">{t('continueLab')}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-2 text-sm text-text-muted">{t('noLabs')}</p>
           )}
         </section>
         <section aria-labelledby="my-results">

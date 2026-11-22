@@ -24,6 +24,7 @@ export default async function TestRunPage({
     .from('attempts')
     .select('id, student_id, finished_at, deadline_at, tests(mode, test_texts(locale, title))')
     .eq('id', attemptId)
+    .eq('kind', 'test')
     .maybeSingle();
   if (!attempt || attempt.student_id !== user.id) notFound();
   if (attempt.finished_at) redirect(`/${locale}/app/results/${attemptId}`);

@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getTopicPage } from '@/features/content/queries';
 import { TopicContent } from '@/features/content/topic-content';
+import { TopicLabs } from '@/features/labs/topic-labs';
 import { PracticeBlock } from '@/features/practice/practice-block';
 import { TopicTests } from '@/features/tests/topic-tests';
 import { PublicShell } from '@/features/shell/public-shell';
@@ -71,6 +72,7 @@ export default async function TopicPage({ params }: PageProps<'/[locale]/topics/
           mistakes={topic.mistakes}
           headingLevel={1}
         />
+        <TopicLabs topicId={topic.id} locale={locale} />
         <PracticeBlock topicId={topic.id} slug={topic.slug} locale={locale} />
         <TopicTests topicId={topic.id} locale={locale} />
       </Container>

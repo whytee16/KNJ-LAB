@@ -81,6 +81,7 @@ export type Database = {
           finished_at: string | null;
           id: string;
           kind: Database['public']['Enums']['attempt_kind'];
+          lab_id: string | null;
           max_score: number | null;
           score: number | null;
           started_at: string;
@@ -94,6 +95,7 @@ export type Database = {
           finished_at?: string | null;
           id?: string;
           kind: Database['public']['Enums']['attempt_kind'];
+          lab_id?: string | null;
           max_score?: number | null;
           score?: number | null;
           started_at?: string;
@@ -106,6 +108,7 @@ export type Database = {
           finished_at?: string | null;
           id?: string;
           kind?: Database['public']['Enums']['attempt_kind'];
+          lab_id?: string | null;
           max_score?: number | null;
           score?: number | null;
           started_at?: string;
@@ -114,6 +117,13 @@ export type Database = {
           trainer_run_id?: string | null;
         };
         Relationships: [
+          {
+            foreignKeyName: 'attempts_lab_id_fkey';
+            columns: ['lab_id'];
+            isOneToOne: false;
+            referencedRelation: 'labs';
+            referencedColumns: ['id'];
+          },
           {
             foreignKeyName: 'attempts_student_id_fkey';
             columns: ['student_id'];
@@ -619,6 +629,233 @@ export type Database = {
           },
           {
             foreignKeyName: 'formulas_subject_code_fkey';
+            columns: ['subject_code'];
+            isOneToOne: false;
+            referencedRelation: 'subjects';
+            referencedColumns: ['code'];
+          },
+        ];
+      };
+      lab_sessions: {
+        Row: {
+          answers: NonNullable<Json>;
+          attempt_id: string | null;
+          duration_s: number;
+          id: string;
+          lab_id: string;
+          params: NonNullable<Json>;
+          started_at: string;
+          student_id: string;
+          updated_at: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          answers?: NonNullable<Json>;
+          attempt_id?: string | null;
+          duration_s?: number;
+          id?: string;
+          lab_id: string;
+          params?: NonNullable<Json>;
+          started_at?: string;
+          student_id: string;
+          updated_at?: string;
+        };
+        Update: {
+          answers?: NonNullable<Json>;
+          attempt_id?: string | null;
+          duration_s?: number;
+          id?: string;
+          lab_id?: string;
+          params?: NonNullable<Json>;
+          started_at?: string;
+          student_id?: string;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'lab_sessions_attempt_id_fkey';
+            columns: ['attempt_id'];
+            isOneToOne: false;
+            referencedRelation: 'attempts';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'lab_sessions_lab_id_fkey';
+            columns: ['lab_id'];
+            isOneToOne: false;
+            referencedRelation: 'labs';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'lab_sessions_student_id_fkey';
+            columns: ['student_id'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      lab_tasks: {
+        Row: {
+          lab_id: string;
+          position: number;
+          template_id: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          lab_id: string;
+          position?: number;
+          template_id: string;
+        };
+        Update: {
+          lab_id?: string;
+          position?: number;
+          template_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'lab_tasks_lab_id_fkey';
+            columns: ['lab_id'];
+            isOneToOne: false;
+            referencedRelation: 'labs';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'lab_tasks_template_id_fkey';
+            columns: ['template_id'];
+            isOneToOne: false;
+            referencedRelation: 'task_templates';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      lab_topics: {
+        Row: {
+          lab_id: string;
+          topic_id: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          lab_id: string;
+          topic_id: string;
+        };
+        Update: {
+          lab_id?: string;
+          topic_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'lab_topics_lab_id_fkey';
+            columns: ['lab_id'];
+            isOneToOne: false;
+            referencedRelation: 'labs';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'lab_topics_topic_id_fkey';
+            columns: ['topic_id'];
+            isOneToOne: false;
+            referencedRelation: 'topics';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      lab_translations: {
+        Row: {
+          goal: string;
+          hints: string[];
+          lab_id: string;
+          locale: Database['public']['Enums']['app_locale'];
+          steps: string[];
+          title: string;
+          translation_status: Database['public']['Enums']['draft_status'];
+        };
+        ComputedFields: never;
+        Insert: {
+          goal?: string;
+          hints?: string[];
+          lab_id: string;
+          locale: Database['public']['Enums']['app_locale'];
+          steps?: string[];
+          title: string;
+          translation_status?: Database['public']['Enums']['draft_status'];
+        };
+        Update: {
+          goal?: string;
+          hints?: string[];
+          lab_id?: string;
+          locale?: Database['public']['Enums']['app_locale'];
+          steps?: string[];
+          title?: string;
+          translation_status?: Database['public']['Enums']['draft_status'];
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'lab_translations_lab_id_fkey';
+            columns: ['lab_id'];
+            isOneToOne: false;
+            referencedRelation: 'labs';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      labs: {
+        Row: {
+          code: string;
+          created_at: string;
+          default_params: NonNullable<Json>;
+          grade_from: number;
+          id: string;
+          is_free_demo: boolean;
+          kind: Database['public']['Enums']['lab_kind'];
+          published_at: string | null;
+          reviewed_by: string | null;
+          sort: number;
+          status: Database['public']['Enums']['formula_status'];
+          subject_code: string;
+          updated_at: string;
+        };
+        ComputedFields: never;
+        Insert: {
+          code: string;
+          created_at?: string;
+          default_params?: NonNullable<Json>;
+          grade_from?: number;
+          id?: string;
+          is_free_demo?: boolean;
+          kind: Database['public']['Enums']['lab_kind'];
+          published_at?: string | null;
+          reviewed_by?: string | null;
+          sort?: number;
+          status?: Database['public']['Enums']['formula_status'];
+          subject_code: string;
+          updated_at?: string;
+        };
+        Update: {
+          code?: string;
+          created_at?: string;
+          default_params?: NonNullable<Json>;
+          grade_from?: number;
+          id?: string;
+          is_free_demo?: boolean;
+          kind?: Database['public']['Enums']['lab_kind'];
+          published_at?: string | null;
+          reviewed_by?: string | null;
+          sort?: number;
+          status?: Database['public']['Enums']['formula_status'];
+          subject_code?: string;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'labs_reviewed_by_fkey';
+            columns: ['reviewed_by'];
+            isOneToOne: false;
+            referencedRelation: 'profiles';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'labs_subject_code_fkey';
             columns: ['subject_code'];
             isOneToOne: false;
             referencedRelation: 'subjects';
@@ -1424,6 +1661,10 @@ export type Database = {
         Args: { p_formula: string; p_status: Database['public']['Enums']['formula_status'] };
         Returns: undefined;
       };
+      set_lab_status: {
+        Args: { p_lab: string; p_status: Database['public']['Enums']['formula_status'] };
+        Returns: undefined;
+      };
       set_task_template_status: {
         Args: { p_status: Database['public']['Enums']['formula_status']; p_template: string };
         Returns: undefined;
@@ -1459,10 +1700,11 @@ export type Database = {
       answer_status: 'correct' | 'wrong';
       app_locale: 'ru' | 'kk';
       app_role: 'student' | 'parent' | 'content_manager' | 'reviewer' | 'admin' | 'support';
-      attempt_kind: 'trainer' | 'test';
+      attempt_kind: 'trainer' | 'test' | 'lab';
       difficulty: 'easy' | 'medium' | 'sufficient' | 'hard';
       draft_status: 'draft' | 'in_review' | 'approved';
       formula_status: 'draft' | 'in_review' | 'published';
+      lab_kind: 'physics' | 'geometry2d' | 'geometry3d';
       legal_document_type: 'pd_processing' | 'child_pd_processing' | 'offer' | 'terms';
       link_status: 'active' | 'revoked';
       report_status: 'open' | 'resolved' | 'rejected';
@@ -1593,10 +1835,11 @@ export const Constants = {
       answer_status: ['correct', 'wrong'],
       app_locale: ['ru', 'kk'],
       app_role: ['student', 'parent', 'content_manager', 'reviewer', 'admin', 'support'],
-      attempt_kind: ['trainer', 'test'],
+      attempt_kind: ['trainer', 'test', 'lab'],
       difficulty: ['easy', 'medium', 'sufficient', 'hard'],
       draft_status: ['draft', 'in_review', 'approved'],
       formula_status: ['draft', 'in_review', 'published'],
+      lab_kind: ['physics', 'geometry2d', 'geometry3d'],
       legal_document_type: ['pd_processing', 'child_pd_processing', 'offer', 'terms'],
       link_status: ['active', 'revoked'],
       report_status: ['open', 'resolved', 'rejected'],

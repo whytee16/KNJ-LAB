@@ -112,3 +112,48 @@ export async function expireOpenAttempts(studentId: string) {
     await sql.end();
   }
 }
+
+/** Returns a registered lab to a clean draft (links removed) so the lab spec can run repeatedly. */
+export async function resetLab(code: string) {
+  const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  try {
+    await sql`delete from public.lab_tasks where lab_id = (select id from public.labs where code = ${code})`;
+    await sql`delete from public.lab_topics where lab_id = (select id from public.labs where code = ${code})`;
+    await sql`update public.labs set status = 'draft', is_free_demo = true, published_at = null
+              where code = ${code}`;
+  } finally {
+    await sql.end();
+  }
+}
+
+/** Published "number" template with a fixed answer (the lab spec is not about the template editor). */
+export async function createPublishedNumberTemplate(
+  topicId: string,
+  statement: string,
+  answer: string,
+): Promise<string> {
+  const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  try {
+    const spec = { type: 'number', params: [], constraints: [], answer, tolerance: {}, unit: 'м' };
+    const [t] = await sql<{ id: string }[]>`
+      insert into public.task_templates (topic_id, type, difficulty, spec, status, published_at)
+      values (${topicId}, 'number', 'easy', ${sql.json(spec)}, 'published', now()) returning id`;
+    await sql`insert into public.task_template_texts (template_id, locale, texts)
+              values (${t!.id}, 'ru', ${sql.json({ statement, solution: `S = ${answer} м` })})`;
+    await sql`update public.task_templates set status = 'published' where id = ${t!.id}`;
+    return t!.id;
+  } finally {
+    await sql.end();
+  }
+}
+
+/** Active pass for a student (the admin UI for passes is covered by the practice spec). */
+export async function grantPass(studentId: string) {
+  const sql = postgres(DB, { max: 1, onnotice: () => undefined });
+  try {
+    await sql`insert into public.entitlements (student_id, ends_at, reason)
+              values (${studentId}, now() + interval '15 days', 'e2e')`;
+  } finally {
+    await sql.end();
+  }
+}

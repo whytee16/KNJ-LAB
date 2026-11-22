@@ -22,6 +22,7 @@ export const limits = {
   mfa: { max: 10, windowSeconds: 600 },
   answer: { max: 60, windowSeconds: 60 },
   report: { max: 10, windowSeconds: 3600 },
+  labSave: { max: 120, windowSeconds: 600 },
 } satisfies Record<string, Limit>;
 
 /**

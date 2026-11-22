@@ -35,6 +35,11 @@ export async function SiteHeader({ landing = false }: { landing?: boolean }) {
               </Link>
             </li>
             <li>
+              <Link href="/labs" className="hover:text-text">
+                {t('labs')}
+              </Link>
+            </li>
+            <li>
               <Link href="/reference" className="hover:text-text">
                 {t('reference')}
               </Link>
@@ -79,6 +84,7 @@ export async function SiteHeader({ landing = false }: { landing?: boolean }) {
               ) : null}
               {[
                 { href: '/learn', label: t('learn') },
+                { href: '/labs', label: t('labs') },
                 { href: '/reference', label: t('reference') },
               ].map((l) => (
                 <li key={l.href}>
