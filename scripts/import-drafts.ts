@@ -110,6 +110,18 @@ try {
       }
 
       const templates = read<TemplateDraft[]>(join(dir, 'templates.json')) ?? [];
+      // A bundle without its own topic attaches templates to the lab's first topic — once, while
+      // the lab has no questions yet (so a second run never duplicates them).
+      if (!topic && lab && labId && templates.length) {
+        const [hasTasks] = await tx`select 1 from public.lab_tasks where lab_id = ${labId} limit 1`;
+        const [first] = await tx<
+          { id: string }[]
+        >`select id from public.topics where slug = ${lab.topics[0] ?? ''}`;
+        if (!hasTasks && first) {
+          topicId = first.id;
+          topicCreated = true;
+        }
+      }
       if (templates.length && topicId && topicCreated) {
         let position = 0;
         for (const t of templates) {

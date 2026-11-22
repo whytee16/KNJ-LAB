@@ -1,0 +1,82 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "l", "kind": "choice", "values": [0.4, 0.9, 1.6, 2.5] }],
+      "constraints": [],
+      "answer": "2 * pi * sqrt(l / 9.8)",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найди период малых колебаний математического маятника длиной {{l}} м ($g = 9{,}8$ м/с²). Ответ округли до сотых и проверь в лаборатории при малом угле.",
+        "hints": ["$T = 2\\pi\\sqrt{\\dfrac{l}{g}}$."],
+        "solution": "$T = 2\\pi\\sqrt{\\dfrac{ {{l}} }{9{,}8}}$ с."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 2 },
+    "texts": {
+      "ru": {
+        "statement": "Груз математического маятника заменили на груз вдвое большей массы, длину нити не меняли. Как изменился период малых колебаний?",
+        "options": [
+          "Увеличился в 2 раза",
+          "Уменьшился в 2 раза",
+          "Не изменился",
+          "Увеличился в $\\sqrt{2}$ раз"
+        ],
+        "solution": "$T = 2\\pi\\sqrt{l/g}$ — масса в формулу не входит."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 0 },
+    "texts": {
+      "ru": {
+        "statement": "Длину нити математического маятника увеличили в 4 раза. Как изменился период малых колебаний?",
+        "options": [
+          "Увеличился в 2 раза",
+          "Увеличился в 4 раза",
+          "Увеличился в 16 раз",
+          "Не изменился"
+        ],
+        "solution": "$T \\sim \\sqrt{l}$, поэтому при увеличении $l$ в 4 раза период растёт в $\\sqrt{4} = 2$ раза."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "h", "kind": "choice", "values": [0.05, 0.2, 0.45] }],
+      "constraints": [],
+      "answer": "sqrt(2 * 9.8 * h)",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз математического маятника отвели в сторону так, что он поднялся на {{h}} м над положением равновесия, и отпустили. Найди его скорость в нижней точке ($g = 9{,}8$ м/с², сопротивления нет). Ответ округли до сотых.",
+        "hints": [
+          "Потенциальная энергия в крайней точке переходит в кинетическую: $mgh = \\dfrac{mv^2}{2}$."
+        ],
+        "solution": "$v = \\sqrt{2gh} = \\sqrt{2 \\cdot 9{,}8 \\cdot {{h}} }$ м/с."
+      }
+    }
+  }
+]

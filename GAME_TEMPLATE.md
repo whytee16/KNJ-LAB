@@ -58,10 +58,12 @@ export const ohmLab: LabModel<{ U: number; R: number }, { I: number; P: number }
 
 ## 6. 3D-лаборатории (этап 5b, [ADR-0009](docs/adr/0009-3d-labs-and-ai-drafts.md))
 
-- Слой `@knj/ui/game3d`: `GameScene3D` (свет, сетка, вращение и масштаб мышью и пальцем, «Вид по умолчанию», камера отъезжает на узких экранах — `fitWidth`), `Wedge3D`, `Arrow3D` (векторы рисуются поверх тел), `Polyline3D`, `Label3D`, `ViewToggle`, `useViewMode`.
+- Слой `@knj/ui/game3d`: `GameScene3D` (свет, сетка, вращение и масштаб мышью и пальцем, «Вид по умолчанию», камера отъезжает на узких экранах — `fitWidth`), `Wedge3D`, `Spring3D`, `Arrow3D` (векторы рисуются поверх тел), `Polyline3D`, `Label3D`, `ViewToggle`, `useViewMode`.
 - У каждой 3D-лаборатории есть 2D-представление той же модели (SVG) с теми же приборами. Переключатель «3D / 2D» всегда виден.
 - Качество: high → low (без теней, pixelRatio 1, меньше полигонов) → 2D. Понижение — по подсказкам устройства, FPS за первые 2 с и потере контекста. Явный выбор ученика сохраняется и не понижается автоматически.
 - Сцена загружается через `next/dynamic` с `ssr: false`, three.js не попадает на другие страницы.
+- Каркас страницы 3D-лаборатории — `apps/web/src/features/labs/lab-frame-3d.tsx` (`LabFrame3D`); время модели — `useModelTime`.
+- `GameChart` рисует несколько линий с легендой (`more`, `label`) и симметричную ось для колебаний (`yMin`).
 - Эталон 3D: «Бросок под углом» (`packages/physics/src/projectile.ts`, `apps/web/src/features/labs/projectile-*.tsx`).
 
 ## 5. Чек-лист приёмки лаборатории

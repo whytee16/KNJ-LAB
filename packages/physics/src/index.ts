@@ -37,3 +37,14 @@ export {
   type InclinedPlaneParams,
   type InclinedPlaneResults,
 } from './inclined-plane.ts';
+export {
+  pendulum,
+  exactPeriod,
+  simulatePendulum,
+  pendulumAt,
+  pendulumEnergy,
+  type PendulumParams,
+  type PendulumResults,
+  type PendulumState,
+} from './pendulum.ts';
+export { springPendulum, springAt, type SpringParams, type SpringResults } from './spring.ts';

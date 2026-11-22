@@ -71,14 +71,7 @@ export function InclineSide2D({
   return (
     <div ref={ref} data-testid="scene-2d">
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label} className="w-full">
-        <line
-          x1={12}
-          x2={W - 12}
-          y1={oy}
-          y2={oy}
-          className="stroke-text"
-          strokeWidth={2}
-        />
+        <line x1={12} x2={W - 12} y1={oy} y2={oy} className="stroke-text" strokeWidth={2} />
         <polygon
           points={`${px(0)},${py(0)} ${px(f.b)},${py(0)} ${px(0)},${py(f.h)}`}
           className="fill-surface-muted stroke-border"

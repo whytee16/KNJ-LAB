@@ -164,12 +164,17 @@ export async function resetDraftLabsAndImport() {
   const labs = [
     { code: 'projectile', topic: 'projectile-motion' },
     { code: 'inclined-plane', topic: 'inclined-plane-motion' },
+    { code: 'math-pendulum', topic: 'pendulums' },
+    { code: 'spring-pendulum', topic: 'pendulums' },
   ];
   try {
-    for (const { code, topic } of labs) {
+    // Links first (several labs can share a topic), then the topics and their templates.
+    for (const { code } of labs) {
       await sql`delete from public.lab_tasks where lab_id = (select id from public.labs where code = ${code})`;
       await sql`delete from public.lab_topics where lab_id = (select id from public.labs where code = ${code})`;
       await sql`delete from public.lab_translations where lab_id = (select id from public.labs where code = ${code})`;
+    }
+    for (const { code, topic } of labs) {
       await sql`delete from public.task_templates where topic_id = (select id from public.topics where slug = ${topic})`;
       await sql`delete from public.topics where slug = ${topic}`;
       await sql`update public.labs set status = 'draft', is_free_demo = false, published_at = null where code = ${code}`;

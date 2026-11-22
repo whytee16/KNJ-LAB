@@ -62,6 +62,9 @@ export function GameChart({
   yMax,
   marker,
   description,
+  more,
+  label,
+  yMin = 0,
 }: {
   title: string;
   xLabel: string;
@@ -71,17 +74,43 @@ export function GameChart({
   yMax: number;
   marker?: { x: number; y: number };
   description: string;
+  /** Extra lines with a legend (e.g. kinetic and potential energy). */
+  more?: {
+    points: { x: number; y: number }[];
+    tone: 'info' | 'success' | 'muted';
+    label: string;
+  }[];
+  /** Legend label of the main line (shown when there are extra lines). */
+  label?: string;
+  /** Lower bound of the y axis (negative for oscillations); ticks are symmetric then. */
+  yMin?: number;
 }) {
   const [ref, W] = useMeasuredWidth<HTMLElement>(560);
   const xs = ticks(xMax, W < 400 ? 4 : 6);
-  const ys = ticks(yMax, 5);
+  const ysUp = ticks(yMax, yMin < 0 ? 3 : 5);
+  const ys =
+    yMin < 0
+      ? [
+          ...ysUp
+            .slice(1)
+            .map((v) => -v)
+            .reverse(),
+          ...ysUp,
+        ]
+      : ysUp;
   const xTop = xs[xs.length - 1]! || 1;
   const yTop = ys[ys.length - 1]! || 1;
+  const yBottom = yMin < 0 ? -yTop : 0;
   const px = (x: number) => M.l + (x / xTop) * (W - M.l - M.r);
-  const py = (y: number) => H - M.b - (y / yTop) * (H - M.t - M.b);
-  const d = series
-    .map((p, i) => `${i ? 'L' : 'M'}${px(p.x).toFixed(1)},${py(p.y).toFixed(1)}`)
-    .join('');
+  const py = (y: number) => H - M.b - ((y - yBottom) / (yTop - yBottom)) * (H - M.t - M.b);
+  const path = (pts: { x: number; y: number }[]) =>
+    pts.map((p, i) => `${i ? 'L' : 'M'}${px(p.x).toFixed(1)},${py(p.y).toFixed(1)}`).join('');
+  const d = path(series);
+  const toneClass = {
+    info: 'stroke-info',
+    success: 'stroke-success',
+    muted: 'stroke-text-muted',
+  } as const;
 
   return (
     <figure ref={ref} className="flex flex-col gap-1">
@@ -123,6 +152,16 @@ export function GameChart({
             {yLabel}
           </text>
         </g>
+        {(more ?? []).map((m) => (
+          <path
+            key={m.label}
+            d={path(m.points)}
+            fill="none"
+            className={toneClass[m.tone]}
+            strokeWidth="2"
+            strokeDasharray={m.tone === 'muted' ? '5 4' : undefined}
+          />
+        ))}
         <path
           d={d}
           fill="none"
@@ -140,6 +179,25 @@ export function GameChart({
           />
         ) : null}
       </svg>
+      {more?.length ? (
+        <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-text-muted">
+          {label ? (
+            <li className="flex items-center gap-1.5">
+              <span aria-hidden className="inline-block h-0.5 w-4 bg-accent" />
+              {label}
+            </li>
+          ) : null}
+          {more.map((m) => (
+            <li key={m.label} className="flex items-center gap-1.5">
+              <span
+                aria-hidden
+                className={`inline-block h-0.5 w-4 ${m.tone === 'info' ? 'bg-info' : m.tone === 'success' ? 'bg-success' : 'bg-text-muted'}`}
+              />
+              {m.label}
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </figure>
   );
 }

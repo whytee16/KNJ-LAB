@@ -93,3 +93,46 @@ describe('readouts and chart helpers', () => {
     expect(ticks(120)).toEqual([0, 25, 50, 75, 100, 125]);
   });
 });
+
+describe('GameChart', async () => {
+  const { GameChart } = await import('./index.ts');
+  it('draws extra lines with a legend and a symmetric axis for oscillations', () => {
+    const { container } = render(
+      <GameChart
+        title="Энергия"
+        xLabel="t"
+        yLabel="E"
+        label="Полная"
+        series={[
+          { x: 0, y: 1 },
+          { x: 1, y: 1 },
+        ]}
+        more={[
+          {
+            points: [
+              { x: 0, y: 0 },
+              { x: 1, y: 1 },
+            ],
+            tone: 'success',
+            label: 'Кинетическая',
+          },
+          {
+            points: [
+              { x: 0, y: 1 },
+              { x: 1, y: 0 },
+            ],
+            tone: 'info',
+            label: 'Потенциальная',
+          },
+        ]}
+        xMax={1}
+        yMax={1}
+        yMin={-1}
+        description="d"
+      />,
+    );
+    expect(container.querySelectorAll('path')).toHaveLength(3);
+    expect(screen.getByText('Кинетическая')).toBeTruthy();
+    expect(screen.getByText('-1')).toBeTruthy(); // negative half of the axis
+  });
+});

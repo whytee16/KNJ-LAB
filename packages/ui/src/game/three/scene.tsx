@@ -245,6 +245,49 @@ export function Wedge3D({
   );
 }
 
+class Helix extends THREE.Curve<THREE.Vector3> {
+  constructor(
+    private coils: number,
+    private radius: number,
+  ) {
+    super();
+  }
+  override getPoint(t: number, target = new THREE.Vector3()) {
+    const a = t * this.coils * Math.PI * 2;
+    return target.set(t, this.radius * Math.cos(a), this.radius * Math.sin(a));
+  }
+}
+
+/** Coil spring along +x from `from`, stretched to `length` (the coils stretch evenly, as in a real spring). */
+export function Spring3D({
+  from,
+  length,
+  radius = 0.25,
+  coils = 12,
+  wire = 0.03,
+  color,
+  segments = 240,
+}: {
+  from: [number, number, number];
+  length: number;
+  radius?: number;
+  coils?: number;
+  wire?: number;
+  color: string;
+  segments?: number;
+}) {
+  const geometry = useMemo(
+    () => new THREE.TubeGeometry(new Helix(coils, radius), segments, wire, 6, false),
+    [coils, radius, wire, segments],
+  );
+  useEffect(() => () => geometry.dispose(), [geometry]);
+  return (
+    <mesh geometry={geometry} position={from} scale={[Math.max(length, 0.01), 1, 1]}>
+      <meshStandardMaterial color={color} />
+    </mesh>
+  );
+}
+
 /** Polyline through model points (dashed for predicted paths). */
 export function Polyline3D({
   points,

@@ -124,7 +124,7 @@ link_status:     pending | active | revoked
 
 ### Происхождение контента (этап 5b)
 
-Миграция `20261125090000_content_origin.sql`: поле `content_origin` (`human` / `ai_draft` / `ai_reviewed`) в `topic_drafts`, `lab_translations`, `task_templates`. Публикация `ai_draft` запрещена триггерами (`topic_contents`, `task_templates`, `labs`). Пометку снимает только `mark_content_reviewed(kind, id, locale)` (reviewer/admin с aal2, пишется в аудит); прямое изменение поля отклоняется. В той же миграции регистрируется лаборатория `projectile`; `20261126090000_inclined_plane_lab.sql` регистрирует `inclined-plane`.
+Миграция `20261125090000_content_origin.sql`: поле `content_origin` (`human` / `ai_draft` / `ai_reviewed`) в `topic_drafts`, `lab_translations`, `task_templates`. Публикация `ai_draft` запрещена триггерами (`topic_contents`, `task_templates`, `labs`). Пометку снимает только `mark_content_reviewed(kind, id, locale)` (reviewer/admin с aal2, пишется в аудит); прямое изменение поля отклоняется. В той же миграции регистрируется лаборатория `projectile`; `20261126090000_inclined_plane_lab.sql` регистрирует `inclined-plane`, `20261127090000_pendulum_labs.sql` — `math-pendulum` и `spring-pendulum`.
 
 ## 8. Монетизация
 

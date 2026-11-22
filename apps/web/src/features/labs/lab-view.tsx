@@ -9,6 +9,8 @@ import type { ReactNode } from 'react';
 const UniformMotionLab = dynamic(() => import('./uniform-motion-lab'));
 const ProjectileLab = dynamic(() => import('./projectile-lab'));
 const InclineLab = dynamic(() => import('./incline-lab'));
+const PendulumLab = dynamic(() => import('./pendulum-lab'));
+const SpringLab = dynamic(() => import('./spring-lab'));
 
 export interface LabViewProps {
   code: string;
@@ -47,6 +49,22 @@ export function LabView(props: LabViewProps) {
             props.defaults as { angle: number; m: number; mu: number; L: number; g: number }
           }
           initial={props.initial as { angle: number; m: number; mu: number; L: number; g: number }}
+        />
+      );
+    case 'math-pendulum':
+      return (
+        <PendulumLab
+          {...props}
+          defaults={props.defaults as { l: number; theta0: number; m: number; g: number }}
+          initial={props.initial as { l: number; theta0: number; m: number; g: number }}
+        />
+      );
+    case 'spring-pendulum':
+      return (
+        <SpringLab
+          {...props}
+          defaults={props.defaults as { m: number; k: number; A: number }}
+          initial={props.initial as { m: number; k: number; A: number }}
         />
       );
     default:

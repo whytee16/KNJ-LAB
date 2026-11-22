@@ -1,5 +1,7 @@
 import type { LabModel } from './lab-model.ts';
 import { inclinedPlane } from './inclined-plane.ts';
+import { pendulum } from './pendulum.ts';
+import { springPendulum } from './spring.ts';
 import { projectile } from './projectile.ts';
 import { uniformMotion } from './uniform-motion.ts';
 
@@ -8,6 +10,8 @@ export const LAB_MODELS: Record<string, LabModel> = {
   [uniformMotion.code]: uniformMotion as unknown as LabModel,
   [projectile.code]: projectile as unknown as LabModel,
   [inclinedPlane.code]: inclinedPlane as unknown as LabModel,
+  [pendulum.code]: pendulum as unknown as LabModel,
+  [springPendulum.code]: springPendulum as unknown as LabModel,
 };
 
 export const LAB_CODES = Object.keys(LAB_MODELS);

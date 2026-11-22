@@ -181,3 +181,76 @@ test('inclined plane: reviewed and published, forces and the rest condition', as
   const { violations } = await new AxeBuilder({ page: guest }).analyze();
   expect(violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')).toEqual([]);
 });
+
+async function reviewAndPublish(page: Page, title: string) {
+  await page.goto('/ru/studio/labs');
+  await page.getByRole('link', { name: title }).click();
+  await page.getByRole('button', { name: 'Проверено учителем' }).click();
+  await expect(page.getByTestId('ai-reviewed')).toBeVisible();
+  await page.getByLabel('Бесплатное демо').check();
+  await page.getByRole('button', { name: 'Сохранить' }).click();
+  await expect(page.getByText('Сохранено.')).toBeVisible();
+  await page.getByRole('button', { name: 'Опубликовать' }).click();
+  await expect(page.getByText('Опубликовано.')).toBeVisible();
+}
+
+test('mathematical pendulum: period by length, not by mass; large angles differ from the formula', async ({
+  browser,
+}) => {
+  await reviewAndPublish(reviewerPage, 'Математический маятник');
+  const page = await newPage(browser);
+  await page.goto('/ru/labs/math-pendulum');
+  await page.getByRole('button', { name: '3D' }).click();
+  await expect(page.getByTestId('scene-3d').locator('canvas')).toBeVisible();
+  await expect(page.getByTestId('readout-T0')).toContainText('2,007');
+
+  const mass = page.getByRole('textbox', { name: /^Масса груза/ });
+  await mass.fill('2');
+  await mass.press('Enter');
+  await expect(page.getByTestId('readout-T0')).toContainText('2,007');
+
+  const len = page.getByRole('textbox', { name: /^Длина нити/ });
+  await len.fill('0,25');
+  await len.press('Enter');
+  await expect(page.getByTestId('readout-T0')).toContainText('1,004'); // 4× shorter → 2× faster (2,007 / 2)
+
+  const angle = page.getByRole('textbox', { name: /^Начальный угол/ });
+  await angle.fill('60');
+  await angle.press('Enter');
+  await expect(page.getByTestId('readout-deviation')).toContainText('7,3');
+
+  await page.getByRole('button', { name: '2D' }).click();
+  await expect(page.getByTestId('scene-2d')).toBeVisible();
+  const { violations } = await new AxeBuilder({ page }).analyze();
+  expect(violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')).toEqual([]);
+});
+
+test('spring pendulum: period does not depend on the amplitude, energy grows as A²', async ({
+  browser,
+}) => {
+  await reviewAndPublish(reviewerPage, 'Пружинный маятник');
+  const page = await newPage(browser);
+  await page.goto('/ru/labs/spring-pendulum');
+  await page.getByRole('button', { name: '3D' }).click();
+  await expect(page.getByTestId('scene-3d').locator('canvas')).toBeVisible();
+  await expect(page.getByTestId('readout-T')).toContainText('0,993');
+  await expect(page.getByTestId('readout-E')).toContainText('0,2');
+
+  const amp = page.getByRole('textbox', { name: /^Амплитуда/ });
+  await amp.fill('0,2');
+  await amp.press('Enter');
+  await expect(page.getByTestId('readout-T')).toContainText('0,993');
+  await expect(page.getByTestId('readout-E')).toContainText('0,8');
+
+  // Running moves the block: x leaves the starting amplitude.
+  await page.getByRole('button', { name: 'Запуск' }).click();
+  await expect(page.getByTestId('readout-x')).not.toContainText('0,2', { timeout: 5000 });
+  await page.getByRole('button', { name: 'Пауза' }).click();
+
+  await page.getByRole('button', { name: '2D' }).click();
+  await expect(page.getByTestId('scene-2d')).toBeVisible();
+  const overflow = await page.evaluate(
+    () => document.documentElement.scrollWidth - window.innerWidth,
+  );
+  expect(overflow).toBeLessThanOrEqual(0);
+});
