@@ -135,6 +135,8 @@ test('student solves the free level: right and wrong answers', async ({ browser 
   await studentPage.getByLabel('Ответ', { exact: true }).fill(String(a! + b!));
   await studentPage.getByRole('button', { name: 'Проверить' }).click();
   await expect(studentPage.getByText('✓ Верно')).toBeVisible();
+  // The answer stays visible next to the feedback.
+  await expect(studentPage.getByLabel('Ответ', { exact: true })).toHaveValue(String(a! + b!));
   await studentPage.getByRole('button', { name: 'Следующая задача' }).click();
   await expect(studentPage.getByTestId('run-progress')).toHaveText('Решено 1 из 100');
 
@@ -190,6 +192,7 @@ test('with a pass the student solves a choice task and a formula', async () => {
   await studentPage.getByRole('radio', { name: '4' }).check();
   await studentPage.getByRole('button', { name: 'Проверить' }).click();
   await expect(studentPage.getByText('✓ Верно')).toBeVisible();
+  await expect(studentPage.getByRole('radio', { name: '4' })).toBeChecked();
 
   await studentPage.goto(`/ru/topics/${topic.slug}`);
   await studentPage.getByTestId('level-sufficient').getByRole('button', { name: 'Решать' }).click();

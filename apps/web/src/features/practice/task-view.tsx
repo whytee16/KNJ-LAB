@@ -5,7 +5,15 @@ import type { Locale } from '@knj/i18n';
 import { Button, cn } from '@knj/ui';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import { useActionState, useCallback, useEffect, useId, useRef, useState } from 'react';
+import {
+  startTransition,
+  useActionState,
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from 'react';
 import { FormAlert } from '@/features/forms/form-alert';
 import { idle } from '@/features/forms/form-state';
 import { SubmitButton } from '@/features/forms/submit-button';
@@ -58,9 +66,10 @@ export function TaskView({
   nextLabel: string;
 }) {
   const t = useTranslations('practice');
+  const common = useTranslations('common');
   const router = useRouter();
   const [answer, setAnswer] = useState<Answer>('');
-  const [state, action] = useActionState<AnswerState, FormData>(submitAnswer, idle);
+  const [state, action, pending] = useActionState<AnswerState, FormData>(submitAnswer, idle);
   const started = useRef(0);
   // Stable per task: a retried submission (double click, flaky network) is recognised by the server.
   const [idempotencyKey] = useState(() => crypto.randomUUID());
@@ -83,14 +92,18 @@ export function TaskView({
       <div className="prose-topic" dangerouslySetInnerHTML={{ __html: prompt.statementHtml }} />
 
       <form
-        action={action}
+        // Submitted manually (not via `action`): React would reset the form after the action and
+        // erase the student's answer right when the feedback appears.
         onSubmit={(e) => {
+          e.preventDefault();
           if (timeRef.current) timeRef.current.value = String(Date.now() - started.current);
           // The formula editor is a custom element: read its value at submit time.
           const field = e.currentTarget.querySelector<HTMLElement & { value: string }>(
             'math-field',
           );
           if (field && answerRef.current) answerRef.current.value = JSON.stringify(field.value);
+          const data = new FormData(e.currentTarget);
+          startTransition(() => action(data));
         }}
         className="flex flex-col gap-4"
       >
@@ -103,7 +116,9 @@ export function TaskView({
         {!feedback ? <FormAlert state={state} /> : null}
         {!feedback ? (
           <div>
-            <SubmitButton>{t('check')}</SubmitButton>
+            <Button type="submit" disabled={pending} aria-disabled={pending}>
+              {pending ? common('pending') : t('check')}
+            </Button>
           </div>
         ) : null}
       </form>

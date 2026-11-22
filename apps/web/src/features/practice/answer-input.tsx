@@ -26,6 +26,10 @@ export function AnswerInput({
   const [order, setOrder] = useState(prompt.options?.map((o) => o.id) ?? []);
   const [picked, setPicked] = useState<string[]>([]);
   const [pairs, setPairs] = useState<Record<string, string>>({});
+  // Controlled inputs: React 19 resets uncontrolled fields after a form action, which would
+  // erase the student's answer right when the feedback appears.
+  const [text, setText] = useState('');
+  const [single, setSingle] = useState('');
   const onFormula = useCallback((latex: string) => onChange(latex), [onChange]);
 
   switch (prompt.type) {
@@ -41,7 +45,11 @@ export function AnswerInput({
             autoComplete="off"
             disabled={disabled}
             placeholder={t('numberPlaceholder')}
-            onChange={(e) => onChange(e.target.value)}
+            value={text}
+            onChange={(e) => {
+              setText(e.target.value);
+              onChange(e.target.value);
+            }}
             className="min-h-11 w-48 rounded-md border border-border bg-surface px-3 text-lg"
           />
           {prompt.unit ? <span className="text-text-muted">{prompt.unit}</span> : null}
@@ -57,7 +65,11 @@ export function AnswerInput({
             id={id}
             autoComplete="off"
             disabled={disabled}
-            onChange={(e) => onChange(e.target.value)}
+            value={text}
+            onChange={(e) => {
+              setText(e.target.value);
+              onChange(e.target.value);
+            }}
             className="min-h-11 w-full max-w-sm rounded-md border border-border bg-surface px-3 text-lg"
           />
         </div>
@@ -86,7 +98,11 @@ export function AnswerInput({
                 type="radio"
                 name={`${id}-choice`}
                 value={o.id}
-                onChange={() => onChange(o.id)}
+                checked={single === o.id}
+                onChange={() => {
+                  setSingle(o.id);
+                  onChange(o.id);
+                }}
                 className="size-5 accent-[var(--accent)]"
               />
               <Html html={o.html} />
@@ -106,6 +122,7 @@ export function AnswerInput({
               <input
                 type="checkbox"
                 value={o.id}
+                checked={picked.includes(o.id)}
                 onChange={(e) => {
                   const next = e.target.checked
                     ? [...picked, o.id]
@@ -174,7 +191,7 @@ export function AnswerInput({
               <select
                 id={`${id}-${l.id}`}
                 disabled={disabled}
-                defaultValue=""
+                value={pairs[l.id] ?? ''}
                 onChange={(e) => {
                   const next = { ...pairs, [l.id]: e.target.value };
                   setPairs(next);
