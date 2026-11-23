@@ -2,7 +2,7 @@
 
 import { accelerationByAngle, inclinedPlane, type InclinedPlaneParams } from '@knj/physics';
 import type { Locale } from '@knj/i18n';
-import { Alert } from '@knj/ui';
+import { Alert, CheckboxField } from '@knj/ui';
 import {
   ChoiceControl,
   GameChart,
@@ -24,7 +24,7 @@ import { useModelTime } from './use-model-time';
 
 type Key = keyof InclinedPlaneParams;
 const RANGE_KEYS = ['angle', 'mu', 'm', 'L'] as const;
-const RESULT_KEYS = ['Fg', 'Fpar', 'N', 'Ffr', 'a', 't', 'v', 'critical'] as const;
+const RESULT_KEYS = ['Fg', 'Fpar', 'Fperp', 'N', 'Ffr', 'a', 't', 'v', 'critical'] as const;
 
 export default function InclineLab({
   code,
@@ -47,8 +47,10 @@ export default function InclineLab({
   const m = useTranslations('labs.models.inclinedPlane');
   const view = useViewMode();
   const [params, setParams] = useState(initial);
+  const [decompose, setDecompose] = useState(false);
   const result = inclinedPlane.compute(params);
-  const time = useModelTime(result.t);
+  // At rest the block waits at the top; «Run» slides it down (the forces are seen in full).
+  const time = useModelTime(result.t, 'start');
   const saveStatus = useLabSession(code, params, canSave);
 
   const nf = useMemo(
@@ -74,6 +76,8 @@ export default function InclineLab({
     N: m('forces.N'),
     Ffr: m('forces.Ffr'),
     ma: m('forces.ma'),
+    mgSin: m('forces.mgSin'),
+    mgCos: m('forces.mgCos'),
   };
   const angleLabel = `α = ${format(params.angle)}°`;
   const g = inclinedPlane.params.g;
@@ -114,6 +118,11 @@ export default function InclineLab({
           label: m(`g.${c.key}` as 'g.earth'),
         }))}
       />
+      <CheckboxField
+        label={m('decompose')}
+        checked={decompose}
+        onChange={(e) => setDecompose(e.target.checked)}
+      />
       <p className="text-sm text-text-muted" aria-live="polite" data-testid="save-status">
         {!canSave
           ? t('notSaved')
@@ -138,6 +147,7 @@ export default function InclineLab({
         resetLabel={t('view.resetCamera')}
         angleLabel={angleLabel}
         forceLabels={forceLabels}
+        decompose={decompose}
         onFps={view.reportFps}
         onContextLost={view.lost}
       />
@@ -148,6 +158,7 @@ export default function InclineLab({
         label={m('scene2d')}
         angleLabel={angleLabel}
         forceLabels={forceLabels}
+        decompose={decompose}
       />
     );
 
@@ -222,6 +233,60 @@ export default function InclineLab({
               unit: unit(inclinedPlane.results[k].unit),
             }))}
           />
+          <section
+            aria-labelledby="incline-steps"
+            className="flex flex-col gap-2"
+            data-testid="incline-steps"
+          >
+            <h3 id="incline-steps" className="text-sm font-semibold">
+              {m('stepsTitle')}
+            </h3>
+            <ol className="flex list-decimal flex-col gap-1 pl-5 text-sm">
+              <li>
+                {m('step.gravity', {
+                  m: format(params.m),
+                  g: format(params.g),
+                  Fg: format(result.Fg),
+                })}
+              </li>
+              <li>
+                {m('step.along', {
+                  Fg: format(result.Fg),
+                  angle: format(params.angle),
+                  Fpar: format(result.Fpar),
+                })}
+              </li>
+              <li>
+                {m('step.across', {
+                  Fg: format(result.Fg),
+                  angle: format(params.angle),
+                  N: format(result.N),
+                })}
+              </li>
+              <li>
+                {result.moves
+                  ? m('step.frictionSlides', {
+                      mu: format(params.mu),
+                      N: format(result.N),
+                      Ffr: format(result.Ffr),
+                    })
+                  : m('step.frictionRests', {
+                      Ffr: format(result.Ffr),
+                      fmax: format(params.mu * result.N),
+                    })}
+              </li>
+              <li>
+                {result.moves
+                  ? m('step.accelerationSlides', {
+                      Fpar: format(result.Fpar),
+                      Ffr: format(result.Ffr),
+                      m: format(params.m),
+                      a: format(result.a),
+                    })
+                  : m('step.accelerationRests')}
+              </li>
+            </ol>
+          </section>
           <div className="grid gap-4 md:grid-cols-2">
             <GameChart
               title={m('accelerationTitle')}

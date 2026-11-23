@@ -8,6 +8,8 @@ import type { Scene3DHandlers } from './lab-frame-3d';
 type V3 = [number, number, number];
 const L = 5; // scene units for the string (the numbers show the real length)
 const TOP = 6.5;
+// The rod stands outside the widest swing (θ₀ ≤ 80°: L·sin 80° ≈ 4.9 plus the bob), so they never meet.
+const STAND_X = -6;
 
 function Pendulum({
   params,
@@ -38,13 +40,26 @@ function Pendulum({
   const seg = low ? 12 : 32;
   return (
     <>
-      <mesh position={[0, TOP + 0.15, 0]}>
-        <boxGeometry args={[3, 0.3, 1]} />
+      {/* Lab stand beside the swing: base, rod and a horizontal arm to the pivot. */}
+      <mesh position={[STAND_X, 0.06, 0]} castShadow={!low}>
+        <boxGeometry args={[1.6, 0.12, 1.6]} />
         <meshStandardMaterial color={tk.text} />
       </mesh>
-      <mesh position={[1.3, TOP / 2, 0]}>
-        <boxGeometry args={[0.2, TOP, 0.2]} />
-        <meshStandardMaterial color={tk.muted} />
+      <mesh position={[STAND_X, (TOP + 0.5) / 2, 0]} castShadow={!low}>
+        <cylinderGeometry args={[0.07, 0.07, TOP + 0.5, seg]} />
+        <meshStandardMaterial color={tk.muted} metalness={0.5} roughness={0.4} />
+      </mesh>
+      <mesh position={[STAND_X / 2, TOP, 0]} rotation={[0, 0, Math.PI / 2]}>
+        <cylinderGeometry args={[0.05, 0.05, Math.abs(STAND_X), seg]} />
+        <meshStandardMaterial color={tk.muted} metalness={0.5} roughness={0.4} />
+      </mesh>
+      <mesh position={[STAND_X, TOP, 0]}>
+        <boxGeometry args={[0.25, 0.25, 0.25]} />
+        <meshStandardMaterial color={tk.text} />
+      </mesh>
+      <mesh position={[0, TOP, 0]}>
+        <sphereGeometry args={[0.08, seg, seg]} />
+        <meshStandardMaterial color={tk.text} />
       </mesh>
       <Polyline3D points={[[0, TOP, 0], bob]} color={tk.text} />
       <Polyline3D points={arc} color={tk.accent} dashed />
@@ -86,7 +101,7 @@ export default function PendulumScene3D({
   resetLabel: string;
   vLabel: string;
 }) {
-  const span = 2 * L * Math.sin((Math.max(params.theta0, 20) * Math.PI) / 180) + 2;
+  const span = 2 * Math.abs(STAND_X) + 2;
   return (
     <GameScene3D
       quality={h.quality}
@@ -95,6 +110,7 @@ export default function PendulumScene3D({
       camera={[1.5, 4.5, 11]}
       target={[0, 3.6, 0]}
       fitWidth={span}
+      room={{ width: 18, depth: 9, height: 9.5, center: [0, -2], board: true }}
       onFps={h.onFps}
       onContextLost={h.onContextLost}
     >

@@ -28,8 +28,11 @@ export interface Scenario<P extends Values = Values, R extends Values = Values> 
   layout: Layout;
   /** Seconds of motion after "Run"; 0 — a static scene (no Run button). */
   duration(p: P): number;
-  /** Displacement of the moving body (m) and live readouts at model time τ. */
-  state(p: P, tau: number): { s: number; live: Values };
+  /**
+   * Displacement of the moving body (m) and live readouts at model time τ; `fall` — free fall
+   * of the hanging bodies after the link broke (m).
+   */
+  state(p: P, tau: number): { s: number; fall?: number; live: Values };
   liveSpecs: Record<string, ResultSpec>;
   /** Forces for the free-body diagram (scene coordinates, newtons). */
   forces(p: P): ForceVec[];
@@ -47,6 +50,7 @@ const paramSpec = z
     unit: z.string(),
     symbol: z.string(),
     choices: z.array(z.object({ value: z.number(), key: z.string().min(1) })).optional(),
+    when: z.object({ param: z.string(), value: z.number() }).optional(),
   })
   .refine((s) => s.min < s.max && s.default >= s.min && s.default <= s.max, 'range');
 
@@ -57,7 +61,12 @@ export const scenarioSchema = z.object({
   params: z.record(z.string(), paramSpec),
   results: z.record(
     z.string(),
-    z.object({ unit: z.string(), symbol: z.string(), digits: z.number().int().min(0) }),
+    z.object({
+      unit: z.string(),
+      symbol: z.string(),
+      digits: z.number().int().min(0),
+      when: z.object({ param: z.string(), value: z.number() }).optional(),
+    }),
   ),
   liveSpecs: z.record(
     z.string(),

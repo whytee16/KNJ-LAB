@@ -3,7 +3,8 @@
 import type { ForceVec, Layout, Values } from '@knj/physics';
 import { useMeasuredWidth } from '@knj/ui/game';
 import { forceArrows, FORCE_TONE } from './forces';
-import { frameFor, type Box } from './layout';
+import { frameFor, LINK, type Box, type FrameMotion, type XY } from './layout';
+import type { ScenarioSceneLabels } from './scene3d';
 
 const TONE_CLASS = {
   text: 'text-text',
@@ -13,32 +14,40 @@ const TONE_CLASS = {
   success: 'text-success',
 } as const;
 
+const TABLE_LOOKS = ['block', 'car', 'phone'];
+const HANG_LOOKS = ['weight', 'bucket', 'phone'];
+const ATWOOD_LOOKS = ['weight', 'box', 'bucket'];
+
 /** 2D view of any scenario layout with the same geometry and force arrows as the 3D scene. */
 export function ScenarioSide2D({
   layout,
   params,
   s,
+  motion,
   forces,
   showForces,
   forceLabel,
   reading,
+  labels,
   label,
 }: {
   layout: Layout;
   params: Values;
   s: number;
+  motion: FrameMotion;
   forces: ForceVec[];
   showForces: boolean;
   forceLabel: (f: { kind: ForceVec['kind']; index?: number }) => string;
   reading?: string;
+  labels: ScenarioSceneLabels;
   label: string;
 }) {
   const [ref, W] = useMeasuredWidth<HTMLDivElement>(640);
-  const H = 360;
-  const frame = frameFor(layout, params, s);
+  const H = 380;
+  const frame = frameFor(layout, params, s, motion);
   const L = frame.layout;
-  const span = frame.width + 1;
-  const k = Math.min(W / span, H / 7.5);
+  const link = params.link ?? LINK.rope;
+  const k = Math.min(W / (frame.width + 1), H / (frame.height + 0.5));
   const X = (x: number) => W / 2 + (x - frame.center.x) * k;
   const Y = (y: number) => H / 2 - (y - frame.center.y) * k;
   const rect = (b: Box, cls: string, key?: string) => (
@@ -52,7 +61,7 @@ export function ScenarioSide2D({
       className={cls}
     />
   );
-  const line = (pts: { x: number; y: number }[], cls = 'stroke-text', key?: string) => (
+  const line = (pts: XY[], cls = 'stroke-text', key?: string) => (
     <polyline
       key={key}
       points={pts.map((p) => `${X(p.x)},${Y(p.y)}`).join(' ')}
@@ -61,23 +70,149 @@ export function ScenarioSide2D({
       strokeWidth={2}
     />
   );
-  const arrows = showForces ? forceArrows(forces, frame.anchors, 2.2) : [];
+  /** Rope, chain (thick dashes) or spring (zigzag) between two points. */
+  const linkLine = (a: XY, b: XY, kind: number, key?: string) => {
+    if (kind === LINK.chain)
+      return (
+        <line
+          key={key}
+          x1={X(a.x)}
+          y1={Y(a.y)}
+          x2={X(b.x)}
+          y2={Y(b.y)}
+          className="stroke-text"
+          strokeWidth={4}
+          strokeDasharray="5 2"
+          data-link="chain"
+        />
+      );
+    if (kind === LINK.spring) {
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const len = Math.hypot(dx, dy) || 1;
+      const n = Math.max(6, Math.round((len * k) / 7));
+      const pts = Array.from({ length: n + 1 }, (_, i) => {
+        const t = i / n;
+        const off = i === 0 || i === n ? 0 : (i % 2 ? 1 : -1) * (0.12 * 1);
+        return { x: a.x + dx * t + (-dy / len) * off, y: a.y + dy * t + (dx / len) * off };
+      });
+      return (
+        <polyline
+          key={key}
+          points={pts.map((p) => `${X(p.x)},${Y(p.y)}`).join(' ')}
+          fill="none"
+          className="stroke-text"
+          strokeWidth={1.8}
+          data-link="spring"
+        />
+      );
+    }
+    return line([a, b], 'stroke-text', key);
+  };
+  /** A load drawn by its kind inside the box b. */
+  const load = (b: Box, kind: string, fill: string, key?: string) => {
+    if (kind === 'weight')
+      return (
+        <g key={key} data-load="weight">
+          <polygon
+            points={`${X(b.x - b.w * 0.35)},${Y(b.y + b.h * 0.3)} ${X(b.x + b.w * 0.35)},${Y(b.y + b.h * 0.3)} ${X(b.x + b.w / 2)},${Y(b.y - b.h / 2)} ${X(b.x - b.w / 2)},${Y(b.y - b.h / 2)}`}
+            className="fill-text"
+          />
+          <circle
+            cx={X(b.x)}
+            cy={Y(b.y + b.h * 0.38)}
+            r={b.w * 0.13 * k}
+            className="fill-none stroke-text"
+            strokeWidth={2}
+          />
+        </g>
+      );
+    if (kind === 'bucket')
+      return (
+        <g key={key} data-load="bucket">
+          <polygon
+            points={`${X(b.x - b.w / 2)},${Y(b.y + b.h / 2)} ${X(b.x + b.w / 2)},${Y(b.y + b.h / 2)} ${X(b.x + b.w * 0.38)},${Y(b.y - b.h / 2)} ${X(b.x - b.w * 0.38)},${Y(b.y - b.h / 2)}`}
+            className={fill}
+          />
+        </g>
+      );
+    if (kind === 'phone')
+      return (
+        <rect
+          key={key}
+          x={X(b.x - b.w * 0.3)}
+          y={Y(b.y - b.h / 2 + 0.12)}
+          width={b.w * 0.6 * k}
+          height={0.12 * k}
+          rx={2}
+          className="fill-text"
+          data-load="phone"
+        />
+      );
+    if (kind === 'car')
+      return (
+        <g key={key} data-load="car">
+          {rect({ x: b.x, y: b.y - b.h * 0.15, w: b.w * 1.1, h: b.h * 0.4 }, fill)}
+          {rect({ x: b.x - b.w * 0.1, y: b.y + b.h * 0.2, w: b.w * 0.55, h: b.h * 0.3 }, fill)}
+          {[-1, 1].map((sx) => (
+            <circle
+              key={sx}
+              cx={X(b.x + sx * b.w * 0.35)}
+              cy={Y(b.y - b.h * 0.36)}
+              r={b.h * 0.15 * k}
+              className="fill-text"
+            />
+          ))}
+        </g>
+      );
+    return rect(b, fill, key);
+  };
+  const vArrow = (x: number, y: number, dy: number, cls: string, text: string, key: string) => {
+    const x1 = X(x);
+    const y1 = Y(y);
+    const y2 = Y(y + dy);
+    const sgn = Math.sign(dy) || 1;
+    return (
+      <g key={key} className={cls} data-arrow={key}>
+        <line x1={x1} y1={y1} x2={x1} y2={y2} stroke="currentColor" strokeWidth={3} />
+        <polygon
+          points={`${x1},${y2 - sgn * 0} ${x1 - 6},${y2 + sgn * 10} ${x1 + 6},${y2 + sgn * 10}`}
+          fill="currentColor"
+        />
+        <text x={x1 + 10} y={(y1 + y2) / 2} fill="currentColor" className="text-xs font-semibold">
+          {text}
+        </text>
+      </g>
+    );
+  };
+  const arrows = showForces && !motion.broken ? forceArrows(forces, frame.anchors, 2.2) : [];
+  const floor = frame.floor;
   return (
     <div ref={ref} data-testid="scene-2d">
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label} className="w-full">
+        {floor !== null ? (
+          <line
+            x1={0}
+            x2={W}
+            y1={Y(floor)}
+            y2={Y(floor)}
+            className="stroke-text-muted"
+            strokeWidth={2}
+          />
+        ) : null}
         {L.kind === 'elevator' ? (
           <g>
             {[-1.6, 1.6].map((x) =>
               line(
                 [
-                  { x, y: -2 },
-                  { x, y: 5 },
+                  { x, y: -2.5 },
+                  { x, y: 5.5 },
                 ],
                 'stroke-text-muted',
                 `r${x}`,
               ),
             )}
-            {Array.from({ length: 8 }, (_, i) => -2 + i - L.railOffset).map((y) =>
+            {Array.from({ length: 9 }, (_, i) => -2.5 + i - L.railOffset).map((y) =>
               line(
                 [
                   { x: 1.6, y },
@@ -90,7 +225,7 @@ export function ScenarioSide2D({
             {rect(L.cabin, 'fill-surface-muted stroke-border')}
             {line([
               { x: 0, y: L.cabin.y + L.cabin.h / 2 },
-              { x: 0, y: 5 },
+              { x: 0, y: 5.5 },
             ])}
             {rect({ ...L.scale, y: L.cabin.y - L.cabin.h / 2 + 0.13 }, 'fill-text')}
             {rect({ x: 0, y: L.cabin.y - L.cabin.h / 2 + 1.05, w: 0.45, h: 1.4 }, 'fill-info')}
@@ -109,12 +244,53 @@ export function ScenarioSide2D({
                 {reading}
               </text>
             ) : null}
+            {Math.abs(L.v) > 0.05
+              ? vArrow(
+                  2.4,
+                  L.cabin.y,
+                  Math.sign(L.v) * Math.min(2.2, 0.6 + Math.abs(L.v) * 0.4),
+                  'text-success',
+                  labels.v ?? 'v',
+                  'v',
+                )
+              : null}
+            {Math.abs(L.a) > 0.05
+              ? vArrow(
+                  3.4,
+                  L.cabin.y,
+                  Math.sign(L.a) * Math.min(2.2, 0.6 + Math.abs(L.a) * 0.15),
+                  'text-accent',
+                  labels.a ?? 'a',
+                  'a',
+                )
+              : null}
+            {labels.floor ? (
+              <text
+                x={X(0)}
+                y={Y(L.cabin.y + L.cabin.h / 2 + 0.3)}
+                textAnchor="middle"
+                className="fill-text text-xs font-semibold"
+              >
+                {labels.floor}
+              </text>
+            ) : null}
+            {labels.motion ? (
+              <text
+                x={X(0.6)}
+                y={Y(L.cabin.y - L.cabin.h / 2 - 0.45)}
+                textAnchor="middle"
+                className="fill-text text-sm font-semibold"
+                data-testid="lift-motion"
+              >
+                {labels.motion}
+              </text>
+            ) : null}
           </g>
         ) : null}
         {L.kind === 'lamp' ? (
           <g>
             {[L.left, L.right].map((a, i) =>
-              line([{ x: a.x, y: -2.2 }, a], 'stroke-text-muted', `p${i}`),
+              line([{ x: a.x, y: floor ?? -2.2 }, a], 'stroke-text-muted', `p${i}`),
             )}
             {line([L.left, L.node, L.right])}
             {line([L.node, L.lamp])}
@@ -138,7 +314,7 @@ export function ScenarioSide2D({
               line(
                 [
                   { x, y: 0 },
-                  { x, y: -2.5 },
+                  { x, y: floor ?? -2.5 },
                 ],
                 'stroke-text-muted',
                 `l${x}`,
@@ -151,16 +327,35 @@ export function ScenarioSide2D({
               className="fill-surface stroke-text"
               strokeWidth={2}
             />
-            {line([
+            {linkLine(
               { x: L.block.x + L.block.w / 2, y: L.block.y },
               { x: L.pulley.x, y: L.pulley.y + L.pulley.r },
-            ])}
-            {line([
-              { x: L.pulley.x + L.pulley.r, y: L.pulley.y },
-              { x: L.hang.x, y: L.hang.y + L.hang.h / 2 },
-            ])}
-            {rect(L.block, 'fill-accent')}
-            {rect(L.hang, 'fill-info')}
+              link === LINK.spring ? LINK.rope : link,
+            )}
+            {L.broken
+              ? line(
+                  [
+                    { x: L.pulley.x + L.pulley.r, y: L.pulley.y },
+                    { x: L.pulley.x + L.pulley.r, y: L.pulley.y - 0.4 },
+                  ],
+                  'stroke-danger',
+                )
+              : linkLine(
+                  { x: L.pulley.x + L.pulley.r, y: L.pulley.y },
+                  { x: L.hang.x, y: L.hang.y + L.hang.h / 2 },
+                  link,
+                )}
+            {labels.extension ? (
+              <text
+                x={X(L.hang.x + 0.4)}
+                y={Y((L.pulley.y + L.hang.y) / 2)}
+                className="fill-text text-xs font-semibold"
+              >
+                {labels.extension}
+              </text>
+            ) : null}
+            {load(L.block, TABLE_LOOKS[params.look1 ?? 0] ?? 'block', 'fill-accent')}
+            {load(L.hang, HANG_LOOKS[params.look2 ?? 0] ?? 'weight', 'fill-info')}
           </g>
         ) : null}
         {L.kind === 'atwood' ? (
@@ -183,16 +378,52 @@ export function ScenarioSide2D({
               className="fill-surface stroke-text"
               strokeWidth={2}
             />
-            {line([
-              { x: -L.pulley.r, y: L.pulley.y },
-              { x: L.left.x, y: L.left.y + L.left.h / 2 },
-            ])}
-            {line([
-              { x: L.pulley.r, y: L.pulley.y },
-              { x: L.right.x, y: L.right.y + L.right.h / 2 },
-            ])}
-            {rect(L.left, 'fill-accent')}
-            {rect(L.right, 'fill-info')}
+            {L.broken ? (
+              <>
+                {line(
+                  [
+                    { x: -L.pulley.r, y: L.pulley.y },
+                    { x: -L.pulley.r, y: L.pulley.y - 0.4 },
+                  ],
+                  'stroke-danger',
+                  'bl',
+                )}
+                {line(
+                  [
+                    { x: L.pulley.r, y: L.pulley.y },
+                    { x: L.pulley.r, y: L.pulley.y - 0.4 },
+                  ],
+                  'stroke-danger',
+                  'br',
+                )}
+              </>
+            ) : (
+              <>
+                {linkLine(
+                  { x: -L.pulley.r, y: L.pulley.y },
+                  { x: L.left.x, y: L.left.y + L.left.h / 2 },
+                  link === LINK.spring ? LINK.rope : link,
+                  'll',
+                )}
+                {linkLine(
+                  { x: L.pulley.r, y: L.pulley.y },
+                  { x: L.right.x, y: L.right.y + L.right.h / 2 },
+                  link,
+                  'lr',
+                )}
+              </>
+            )}
+            {labels.extension ? (
+              <text
+                x={X(L.right.x + 0.5)}
+                y={Y((L.pulley.y + L.right.y) / 2)}
+                className="fill-text text-xs font-semibold"
+              >
+                {labels.extension}
+              </text>
+            ) : null}
+            {load(L.left, ATWOOD_LOOKS[params.look1 ?? 0] ?? 'weight', 'fill-accent', 'left')}
+            {load(L.right, ATWOOD_LOOKS[params.look2 ?? 0] ?? 'weight', 'fill-info', 'right')}
           </g>
         ) : null}
         {arrows.map((a) => {

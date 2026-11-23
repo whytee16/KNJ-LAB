@@ -32,9 +32,10 @@ export function ProjectileSide2D({
   const s = Math.min((W - pad.l - pad.r) / xMax, (H - pad.t - pad.b) / yMax);
   const px = (x: number) => pad.l + x * s;
   const py = (y: number) => H - pad.b - y * s;
-  const path = trajectory(params, 61)
-    .map((q, i) => `${i ? 'L' : 'M'}${px(q.x).toFixed(1)},${py(q.y).toFixed(1)}`)
-    .join('');
+  const toPath = (pts: { x: number; y: number }[]) =>
+    pts.map((q, i) => `${i ? 'L' : 'M'}${px(q.x).toFixed(1)},${py(q.y).toFixed(1)}`).join('');
+  const path = toPath(trajectory(params, 61));
+  const idealPath = params.drag ? toPath(trajectory({ ...params, drag: 0 }, 61)) : null;
   const { pos, vel } = throwState(params, tau);
   const k = 70 / Math.max(params.v0, 1); // px per m/s for velocity arrows
   const arrow = (dx: number, dy: number, cls: string, text: string) => {
@@ -103,6 +104,16 @@ export function ProjectileSide2D({
             className="fill-surface-muted stroke-border"
           />
         ) : null}
+        {idealPath ? (
+          <path
+            d={idealPath}
+            fill="none"
+            className="stroke-text-muted/60"
+            strokeWidth={1.5}
+            strokeDasharray="3 5"
+            data-testid="ideal-path"
+          />
+        ) : null}
         <path
           d={path}
           fill="none"
@@ -118,11 +129,25 @@ export function ProjectileSide2D({
           className="stroke-accent"
           strokeWidth={3}
         />
-        <circle cx={px(pos.x)} cy={py(pos.y)} r={7} className="fill-accent" />
+        <ObjectMark object={params.object} x={px(pos.x)} y={py(pos.y)} />
         {arrow(vel.vx * k, 0, 'text-info', vectorLabels.vx)}
         {arrow(0, vel.vy * k, 'text-success', vectorLabels.vy)}
         {arrow(vel.vx * k, vel.vy * k, 'text-accent', vectorLabels.v)}
       </svg>
     </div>
   );
+}
+
+/** The thrown object drawn at its place: ball, box, phone or shot. */
+function ObjectMark({ object, x, y }: { object: number; x: number; y: number }) {
+  if (object === 1)
+    return (
+      <rect x={x - 9} y={y - 7} width={18} height={14} rx={1} className="fill-accent stroke-text" />
+    );
+  if (object === 2)
+    return (
+      <rect x={x - 5} y={y - 9} width={10} height={18} rx={2} className="fill-text stroke-info" />
+    );
+  if (object === 3) return <circle cx={x} cy={y} r={7} className="fill-text" />;
+  return <circle cx={x} cy={y} r={7} className="fill-accent" />;
 }

@@ -97,12 +97,15 @@ function Controls({
   target,
   resetKey,
   fitWidth,
+  fitHeight,
 }: {
   position: [number, number, number];
   target: [number, number, number];
   resetKey: number;
   /** Scene width that must fit the view; the camera moves back on narrow (phone) screens. */
   fitWidth?: number;
+  /** Scene height that must fit the view (tall set-ups: a table with a hanging load). */
+  fitHeight?: number;
 }) {
   const { camera, gl, size } = useThree();
   const aspect = size.width / Math.max(size.height, 1);
@@ -119,15 +122,18 @@ function Controls({
     const [px, py, pz] = posKey.split(',').map(Number) as [number, number, number];
     const [tx, ty, tz] = targetKey.split(',').map(Number) as [number, number, number];
     const offset = new THREE.Vector3(px - tx, py - ty, pz - tz);
-    if (fitWidth && camera instanceof THREE.PerspectiveCamera) {
+    if ((fitWidth || fitHeight) && camera instanceof THREE.PerspectiveCamera) {
       const half = Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2);
-      const need = (fitWidth / 2 / (half * aspect)) * 1.1;
+      const need = Math.max(
+        fitWidth ? (fitWidth / 2 / (half * aspect)) * 1.1 : 0,
+        fitHeight ? (fitHeight / 2 / half) * 1.1 : 0,
+      );
       if (offset.length() < need) offset.setLength(need);
     }
     camera.position.set(tx + offset.x, ty + offset.y, tz + offset.z);
     controls.target.set(tx, ty, tz);
     controls.update();
-  }, [camera, controls, posKey, targetKey, resetKey, fitWidth, aspect]);
+  }, [camera, controls, posKey, targetKey, resetKey, fitWidth, fitHeight, aspect]);
   useFrame(() => controls.update());
   return null;
 }
@@ -348,6 +354,97 @@ export function Polyline3D({
   return <primitive object={line} />;
 }
 
+/** A classroom around the experiment: floor in metre tiles, back and left walls, a board. */
+export interface RoomSpec {
+  /** Centre of the floor (x, z). */
+  center?: [number, number];
+  width: number;
+  depth: number;
+  height: number;
+  /** Draw the classroom board on the back wall. */
+  board?: boolean;
+  /** Height of the floor in scene units (below 0 when the experiment stands on a table). */
+  floorY?: number;
+}
+
+function mix(a: string, b: string, t: number): string {
+  return '#' + new THREE.Color(a).lerp(new THREE.Color(b), t).getHexString();
+}
+
+function FloorGrid({ width, depth, color }: { width: number; depth: number; color: string }) {
+  const lines = useMemo(() => {
+    const pts: number[] = [];
+    for (let x = -width / 2; x <= width / 2 + 1e-6; x += 1)
+      pts.push(x, 0, -depth / 2, x, 0, depth / 2);
+    for (let z = -depth / 2; z <= depth / 2 + 1e-6; z += 1)
+      pts.push(-width / 2, 0, z, width / 2, 0, z);
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
+    return new THREE.LineSegments(
+      g,
+      new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.5 }),
+    );
+  }, [width, depth, color]);
+  useEffect(
+    () => () => {
+      lines.geometry.dispose();
+      (lines.material as THREE.Material).dispose();
+    },
+    [lines],
+  );
+  return <primitive object={lines} />;
+}
+
+/** Walls face the default camera; seen from behind they disappear (back faces are culled). */
+export function Room3D({ spec, shadows }: { spec: RoomSpec; shadows?: boolean }) {
+  const tk = useTokens();
+  const [cx, cz] = spec.center ?? [0, 0];
+  const { width: w, depth: d, height: h } = spec;
+  const floor = mix(tk.surface, tk.muted, 0.12);
+  const wall = mix(tk.bg, tk.surface, 0.55);
+  const side = mix(tk.bg, tk.surface, 0.8);
+  const trim = mix(tk.surface, tk.text, 0.25);
+  return (
+    <group position={[cx, spec.floorY ?? 0, cz]}>
+      <mesh rotation-x={-Math.PI / 2} position={[0, -0.01, 0]} receiveShadow={shadows}>
+        <planeGeometry args={[w, d]} />
+        <meshStandardMaterial color={floor} />
+      </mesh>
+      <group position={[0, 0.001, 0]}>
+        <FloorGrid width={w} depth={d} color={tk.border} />
+      </group>
+      <mesh position={[0, h / 2, -d / 2]} receiveShadow={shadows}>
+        <planeGeometry args={[w, h]} />
+        <meshStandardMaterial color={wall} />
+      </mesh>
+      <mesh position={[-w / 2, h / 2, 0]} rotation-y={Math.PI / 2} receiveShadow={shadows}>
+        <planeGeometry args={[d, h]} />
+        <meshStandardMaterial color={side} />
+      </mesh>
+      <mesh position={[0, 0.08, -d / 2 + 0.03]}>
+        <boxGeometry args={[w, 0.16, 0.06]} />
+        <meshStandardMaterial color={trim} />
+      </mesh>
+      <mesh position={[-w / 2 + 0.03, 0.08, 0]}>
+        <boxGeometry args={[0.06, 0.16, d]} />
+        <meshStandardMaterial color={trim} />
+      </mesh>
+      {spec.board ? (
+        <group position={[0, Math.min(h * 0.55, h - 1.4), -d / 2 + 0.02]}>
+          <mesh>
+            <boxGeometry args={[Math.min(w * 0.45, 7) + 0.2, 2.2, 0.04]} />
+            <meshStandardMaterial color={trim} />
+          </mesh>
+          <mesh position={[0, 0, 0.025]}>
+            <planeGeometry args={[Math.min(w * 0.45, 7), 2]} />
+            <meshStandardMaterial color={mix(tk.success, tk.text, 0.55)} />
+          </mesh>
+        </group>
+      ) : null}
+    </group>
+  );
+}
+
 /**
  * Shared 3D canvas of the lab template: token colours, light, ground grid, orbit controls,
  * a "default view" button and an HTML overlay for labels. Physics stays in the model.
@@ -359,7 +456,10 @@ export function GameScene3D({
   camera,
   target,
   gridSize = 20,
+  room,
+  ground = true,
   fitWidth,
+  fitHeight,
   onFps,
   onContextLost,
   children,
@@ -370,7 +470,12 @@ export function GameScene3D({
   camera: [number, number, number];
   target: [number, number, number];
   gridSize?: number;
+  /** A classroom around the experiment instead of the open grid. */
+  room?: RoomSpec;
+  /** Ground grid when there is no room; off for scenes with their own surroundings (lift shaft). */
+  ground?: boolean;
   fitWidth?: number;
+  fitHeight?: number;
   onFps?: (fps: number) => void;
   onContextLost?: () => void;
   children: ReactNode;
@@ -413,12 +518,24 @@ export function GameScene3D({
               <color attach="background" args={[tokens.bg]} />
               <hemisphereLight args={[tokens.bg, tokens.surface, 1.2]} />
               <directionalLight position={[8, 14, 10]} intensity={1.4} castShadow={high} />
-              <gridHelper args={[gridSize * 2, gridSize * 2, tokens.muted, tokens.border]} />
-              <mesh rotation-x={-Math.PI / 2} position={[0, -0.01, 0]} receiveShadow={high}>
-                <planeGeometry args={[gridSize * 2, gridSize * 2]} />
-                <meshStandardMaterial color={tokens.surface} transparent opacity={0.6} />
-              </mesh>
-              <Controls position={camera} target={target} resetKey={resetKey} fitWidth={fitWidth} />
+              {room ? (
+                <Room3D spec={room} shadows={high} />
+              ) : !ground ? null : (
+                <>
+                  <gridHelper args={[gridSize * 2, gridSize * 2, tokens.muted, tokens.border]} />
+                  <mesh rotation-x={-Math.PI / 2} position={[0, -0.01, 0]} receiveShadow={high}>
+                    <planeGeometry args={[gridSize * 2, gridSize * 2]} />
+                    <meshStandardMaterial color={tokens.surface} transparent opacity={0.6} />
+                  </mesh>
+                </>
+              )}
+              <Controls
+                position={camera}
+                target={target}
+                resetKey={resetKey}
+                fitWidth={fitWidth}
+                fitHeight={fitHeight}
+              />
               {onFps ? <FpsProbe key={quality} onFps={onFps} /> : null}
               {children}
             </OverlayContext.Provider>

@@ -3,6 +3,7 @@ import { z } from 'zod';
 /** SI unit codes; the app translates them (labs.units.*). */
 export type UnitCode =
   | 'm'
+  | 'cm'
   | 's'
   | 'm/s'
   | 'deg'
@@ -28,6 +29,8 @@ export interface ParamSpec {
   symbol: string;
   /** Fixed set of values (e.g. g on the Earth, the Moon, Mars); `key` is an i18n key suffix. */
   choices?: { value: number; key: string }[];
+  /** Shown only when another parameter has this value (e.g. spring stiffness for a spring link). */
+  when?: { param: string; value: number };
 }
 
 export interface ResultSpec {
@@ -35,6 +38,16 @@ export interface ResultSpec {
   symbol: string;
   /** Digits after the decimal point shown in readouts. */
   digits: number;
+  /** Shown only when a parameter has this value. */
+  when?: { param: string; value: number };
+}
+
+/** Whether a parameter or result is relevant for the current parameters. */
+export function isShown(
+  spec: { when?: { param: string; value: number } },
+  values: Values,
+): boolean {
+  return !spec.when || values[spec.when.param] === spec.when.value;
 }
 
 export type Values = Record<string, number>;

@@ -10,15 +10,18 @@ import {
   projectileVelocity,
   speedSeries,
   trajectory,
+  THROWN_OBJECTS,
+  dragFactor,
 } from './index.ts';
 
 const g = 9.8;
+const ideal = { object: 0, drag: 0 };
 
 describe('projectile motion', () => {
   it('matches the textbook formulas from the ground (h0 = 0)', () => {
     const v0 = 20;
     const a = (30 * Math.PI) / 180;
-    const r = projectile.compute({ v0, angle: 30, h0: 0, g });
+    const r = projectile.compute({ v0, angle: 30, h0: 0, g, ...ideal });
     expect(r.T).toBeCloseTo((2 * v0 * Math.sin(a)) / g, 10);
     expect(r.L).toBeCloseTo((v0 * v0 * Math.sin(2 * a)) / g, 10);
     expect(r.H).toBeCloseTo((v0 * v0 * Math.sin(a) ** 2) / (2 * g), 10);
@@ -26,14 +29,14 @@ describe('projectile motion', () => {
   });
 
   it('45° gives the longest range from the ground; complementary angles give equal ranges', () => {
-    const L = (angle: number) => projectile.compute({ v0: 15, angle, h0: 0, g }).L;
+    const L = (angle: number) => projectile.compute({ v0: 15, angle, h0: 0, g, ...ideal }).L;
     expect(L(45)).toBeGreaterThan(L(44));
     expect(L(45)).toBeGreaterThan(L(46));
     expect(L(30)).toBeCloseTo(L(60), 10);
   });
 
   it('handles a throw from a height (h0 > 0)', () => {
-    const p = { v0: 10, angle: 0, h0: 20, g };
+    const p = { v0: 10, angle: 0, h0: 20, g, ...ideal };
     const r = projectile.compute(p);
     expect(r.T).toBeCloseTo(Math.sqrt((2 * 20) / g), 10);
     expect(r.L).toBeCloseTo(10 * r.T, 10);
@@ -43,7 +46,7 @@ describe('projectile motion', () => {
   });
 
   it('vertical throw goes straight up and lands at x = 0', () => {
-    const p = { v0: 9.8, angle: 90, h0: 0, g };
+    const p = { v0: 9.8, angle: 90, h0: 0, g, ...ideal };
     const r = projectile.compute(p);
     expect(r.L).toBe(0);
     expect(r.T).toBeCloseTo(2, 10);
@@ -56,7 +59,7 @@ describe('projectile motion', () => {
   });
 
   it('samples the trajectory and the speed over the flight', () => {
-    const p = { v0: 15, angle: 45, h0: 0, g };
+    const p = { v0: 15, angle: 45, h0: 0, g, ...ideal };
     const tr = trajectory(p, 21);
     expect(tr[0]).toEqual({ x: 0, y: 0 });
     expect(tr[20]!.x).toBeCloseTo(projectile.compute(p).L, 9);
@@ -74,12 +77,14 @@ describe('projectile motion', () => {
       angle: 90,
       h0: 0,
       g: 3.7,
+      object: 0,
+      drag: 0,
     });
     expect(labModel('projectile')).toBe(projectile);
   });
 
   it('model clock lands the body at the same time at any frame rate', () => {
-    const p = { v0: 12, angle: 60, h0: 3, g };
+    const p = { v0: 12, angle: 60, h0: 3, g, ...ideal };
     const T = flightTime(p);
     for (const fps of [30, 60, 144]) {
       const clock = createClock(1 / 120);
@@ -87,5 +92,45 @@ describe('projectile motion', () => {
       expect(projectileAt(p, clock.time).y).toBe(0);
       expect(projectileAt(p, clock.time).x).toBeCloseTo(projectile.compute(p).L, 9);
     }
+  });
+});
+
+describe('projectile with air resistance', () => {
+  const base = { v0: 15, angle: 45, h0: 0, g, object: 0, drag: 0 };
+
+  it('without air resistance every object flies the same way', () => {
+    const L = THROWN_OBJECTS.map((_, object) => projectile.compute({ ...base, object }).L);
+    for (const x of L) expect(x).toBeCloseTo(L[0]!, 12);
+  });
+
+  it('drag shortens the flight; light and broad objects lose more', () => {
+    const loss = (object: number) => {
+      const r = projectile.compute({ ...base, object, drag: 1 });
+      expect(r.L0).toBeCloseTo((15 * 15) / g, 9);
+      expect(r.L).toBeLessThan(r.L0);
+      return 1 - r.L / r.L0;
+    };
+    const [ball, box, phone, shot] = [0, 1, 2, 3].map(loss);
+    expect(shot!).toBeLessThan(0.01); // a heavy shot barely notices the air
+    expect(box!).toBeGreaterThan(ball!);
+    expect(phone!).toBeGreaterThan(ball!);
+  });
+
+  it('numerical flight agrees with the formulas when drag is negligible', () => {
+    const p = { ...base, object: 3, drag: 1 };
+    const r = projectile.compute(p);
+    expect(r.T).toBeCloseTo(projectile.compute(base).T, 1);
+    expect(projectileAt(p, r.T).y).toBe(0);
+    expect(projectileAt(p, r.T).x).toBeCloseTo(r.L, 9);
+    expect(dragFactor(p)).toBeGreaterThan(0);
+    expect(dragFactor(base)).toBe(0);
+  });
+
+  it('the descent is steeper than the ascent with drag', () => {
+    const p = { ...base, object: 1, drag: 1 };
+    const path = trajectory(p, 201);
+    const top = path.reduce((a, q) => (q.y > a.y ? q : a));
+    const end = path.at(-1)!;
+    expect(end.x - top.x).toBeLessThan(top.x);
   });
 });

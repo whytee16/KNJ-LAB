@@ -10,6 +10,32 @@ const Y = 0.25; // wire height above the board
 // Board z up on the diagram = away from the viewer in 3D, so the scene reads like the diagram.
 const on = (p: P2, y = Y): V3 => [p[0], y, -p[1]];
 
+const DESK = 3.2; // the circuit lies on a desk this high above the floor
+
+/** Laboratory desk under the circuit board. */
+function Desk() {
+  const tk = useTokens();
+  return (
+    <group>
+      <mesh position={[0, -0.2, 0.4]} receiveShadow>
+        <boxGeometry args={[13, 0.16, 8.5]} />
+        <meshStandardMaterial color={tk.border} />
+      </mesh>
+      {[
+        [-6.2, -3.6],
+        [6.2, -3.6],
+        [-6.2, 4.4],
+        [6.2, 4.4],
+      ].map(([x, z]) => (
+        <mesh key={`${x},${z}`} position={[x!, -DESK / 2 - 0.14, z!]}>
+          <boxGeometry args={[0.2, DESK - 0.28, 0.2]} />
+          <meshStandardMaterial color={tk.muted} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 export interface CircuitLabels {
   ammeter: string;
   voltmeter: string;
@@ -156,9 +182,11 @@ export default function CircuitScene3D({
       camera={[0, 8, 8.5]}
       target={[0, 0, 0.8]}
       fitWidth={11}
+      room={{ width: 22, depth: 16, height: 9, center: [0, -2], floorY: -DESK, board: true }}
       onFps={h.onFps}
       onContextLost={h.onContextLost}
     >
+      <Desk />
       <Circuit
         params={params}
         tau={tau}

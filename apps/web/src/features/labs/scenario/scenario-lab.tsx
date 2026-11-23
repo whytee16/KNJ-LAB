@@ -1,6 +1,6 @@
 'use client';
 
-import { scenarioFor, type ForceVec, type Scenario, type Values } from '@knj/physics';
+import { isShown, scenarioFor, type ForceVec, type Scenario, type Values } from '@knj/physics';
 import type { Locale } from '@knj/i18n';
 import { CheckboxField } from '@knj/ui';
 import { ChoiceControl, GameChart, GameReadouts, ParamControl } from '@knj/ui/game';
@@ -11,6 +11,8 @@ import { LabFrame3D, SceneLoading } from '../lab-frame-3d';
 import { camelCode, unitText } from '../units';
 import { useLabSession } from '../use-lab-session';
 import { useModelTime } from '../use-model-time';
+import { liftFloor } from './layout';
+import type { ScenarioSceneLabels } from './scene3d';
 import { ScenarioSide2D } from './side2d';
 
 const ScenarioScene3D = dynamic(() => import('./scene3d'), { ssr: false, loading: SceneLoading });
@@ -77,36 +79,38 @@ export default function ScenarioLab({
 
   const controls = (
     <>
-      {Object.entries(scenario.params).map(([k, spec]) =>
-        spec.choices ? (
-          <ChoiceControl
-            key={k}
-            label={m(`params.${k}`)}
-            symbol={spec.symbol}
-            value={params[k]!}
-            onChange={(v) => change(k, v)}
-            options={spec.choices.map((c) => ({
-              value: c.value,
-              label: m(`choices.${k}.${c.key}`),
-            }))}
-          />
-        ) : (
-          <ParamControl
-            key={k}
-            label={m(`params.${k}`)}
-            symbol={spec.symbol}
-            unit={unit(spec.unit)}
-            spec={spec}
-            value={params[k]!}
-            onChange={(v) => change(k, v)}
-            rangeError={t('range', {
-              min: format(spec.min),
-              max: format(spec.max),
-              unit: unit(spec.unit),
-            })}
-          />
-        ),
-      )}
+      {Object.entries(scenario.params)
+        .filter(([, spec]) => isShown(spec, params))
+        .map(([k, spec]) =>
+          spec.choices ? (
+            <ChoiceControl
+              key={k}
+              label={m(`params.${k}`)}
+              symbol={spec.symbol}
+              value={params[k]!}
+              onChange={(v) => change(k, v)}
+              options={spec.choices.map((c) => ({
+                value: c.value,
+                label: m(`choices.${k}.${c.key}`),
+              }))}
+            />
+          ) : (
+            <ParamControl
+              key={k}
+              label={m(`params.${k}`)}
+              symbol={spec.symbol}
+              unit={unit(spec.unit)}
+              spec={spec}
+              value={params[k]!}
+              onChange={(v) => change(k, v)}
+              rangeError={t('range', {
+                min: format(spec.min),
+                max: format(spec.max),
+                unit: unit(spec.unit),
+              })}
+            />
+          ),
+        )}
       <CheckboxField
         label={t('showForces')}
         checked={showForces}
@@ -117,6 +121,41 @@ export default function ScenarioLab({
 
   const reading =
     scenario.layout === 'elevator' ? `${format(results.P ?? 0)} ${unit('N')}` : undefined;
+  // A torn link changes the motion only where bodies hang on it (the lamp is a strength check).
+  const broken =
+    status.key === 'breaks' && (scenario.layout === 'table-pulley' || scenario.layout === 'atwood');
+  const motion = { fall: state.fall ?? 0, v: state.live.v ?? 0, broken };
+  const labels: ScenarioSceneLabels = {};
+  if (scenario.layout === 'elevator') {
+    const v = state.live.v ?? 0;
+    const a = params.a ?? 0;
+    const moving = Math.abs(v) > 1e-6;
+    const dir = moving ? Math.sign(v) : Math.sign(a);
+    const key =
+      !moving && Math.abs(a) < 1e-9
+        ? 'stands'
+        : Math.abs(a) < 1e-9
+          ? dir > 0
+            ? 'upUniform'
+            : 'downUniform'
+          : !moving
+            ? dir > 0
+              ? 'startsUp'
+              : 'startsDown'
+            : Math.sign(a) === dir
+              ? dir > 0
+                ? 'upSpeeding'
+                : 'downSpeeding'
+              : dir > 0
+                ? 'upBraking'
+                : 'downBraking';
+    labels.motion = m(`motion.${key}`);
+    labels.floor = m('floor', { n: String(liftFloor(state.live.h ?? 0)) });
+    labels.v = 'v';
+    labels.a = 'a';
+  }
+  if ((params.link ?? 0) === 2 && !broken && results.x !== undefined)
+    labels.extension = `x = ${format(results.x)} ${unit('cm')}`;
   const statusValues = Object.fromEntries(
     Object.entries(status.values).map(([k, v]) => [k, v === undefined ? '' : format(v)]),
   );
@@ -126,6 +165,11 @@ export default function ScenarioLab({
       <p role="status" data-testid="scenario-status" className="text-sm font-medium">
         {m(`status.${status.key}`, statusValues)}
       </p>
+      {labels.motion ? (
+        <p className="text-sm font-semibold" data-testid="lift-state">
+          {`${labels.motion} · ${labels.floor}`}
+        </p>
+      ) : null}
       {liveEntries.length ? (
         <GameReadouts
           title={t('readouts')}
@@ -140,13 +184,15 @@ export default function ScenarioLab({
       ) : null}
       <GameReadouts
         title={m('resultsTitle')}
-        items={Object.entries(scenario.results).map(([k, spec]) => ({
-          id: k,
-          label: m(`results.${k}`),
-          symbol: spec.symbol,
-          value: format(results[k] ?? 0),
-          unit: unit(spec.unit),
-        }))}
+        items={Object.entries(scenario.results)
+          .filter(([, spec]) => isShown(spec, params))
+          .map(([k, spec]) => ({
+            id: k,
+            label: m(`results.${k}`),
+            symbol: spec.symbol,
+            value: format(results[k] ?? 0),
+            unit: unit(spec.unit),
+          }))}
       />
       <div className="grid gap-4 md:grid-cols-2">
         {charts.map((c) => (
@@ -183,10 +229,12 @@ export default function ScenarioLab({
           layout={scenario.layout}
           params={params}
           s={state.s}
+          motion={motion}
           forces={forces}
           showForces={showForces}
           forceLabel={forceLabel}
           reading={reading}
+          labels={labels}
           label={m('scene')}
           resetLabel={t('view.resetCamera')}
         />
@@ -196,10 +244,12 @@ export default function ScenarioLab({
           layout={scenario.layout}
           params={params}
           s={state.s}
+          motion={motion}
           forces={forces}
           showForces={showForces}
           forceLabel={forceLabel}
           reading={reading}
+          labels={labels}
           label={m('scene')}
         />
       }

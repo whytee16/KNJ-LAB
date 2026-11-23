@@ -33,6 +33,14 @@ function Throw({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [params, scale, low],
   );
+  const idealPoints = useMemo(
+    () =>
+      params.drag
+        ? trajectory({ ...params, drag: 0 }, low ? 31 : 81).map((q) => at(q.x, q.y))
+        : null,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [params, scale, low],
+  );
   const { pos, vel } = throwState(params, tau);
   const body = at(pos.x, pos.y);
   const k = 3 / Math.max(params.v0, 1); // scene units per m/s for velocity arrows
@@ -57,11 +65,9 @@ function Throw({
           <meshStandardMaterial color={tk.text} />
         </mesh>
       </group>
+      {idealPoints ? <Polyline3D points={idealPoints} color={tk.muted} dashed /> : null}
       <Polyline3D points={points} color={tk.accent} dashed />
-      <mesh position={body} castShadow={!low}>
-        <sphereGeometry args={[0.25, seg, seg]} />
-        <meshStandardMaterial color={tk.accent} />
-      </mesh>
+      <ThrownObject object={params.object} position={body} seg={seg} shadows={!low} />
       <Arrow3D from={body} to={[body[0] + vel.vx * k, body[1], 0]} color={tk.info} />
       <Arrow3D from={body} to={[body[0], body[1] + vel.vy * k, 0]} color={tk.success} />
       <Arrow3D from={body} to={[body[0] + vel.vx * k, body[1] + vel.vy * k, 0]} color={tk.accent} />
@@ -91,6 +97,54 @@ function Throw({
         text={`H = ${format(r.H)} ${unit}`}
       />
     </>
+  );
+}
+
+/** The thrown object: football, cardboard box, phone or shot. */
+function ThrownObject({
+  object,
+  position,
+  seg,
+  shadows,
+}: {
+  object: number;
+  position: V3;
+  seg: number;
+  shadows: boolean;
+}) {
+  const tk = useTokens();
+  if (object === 1)
+    return (
+      <mesh position={position} castShadow={shadows} rotation={[0.3, 0.4, 0]}>
+        <boxGeometry args={[0.6, 0.4, 0.4]} />
+        <meshStandardMaterial color={tk.accent} />
+      </mesh>
+    );
+  if (object === 2)
+    return (
+      <group position={position} rotation={[0.2, 0.5, 0.3]}>
+        <mesh castShadow={shadows}>
+          <boxGeometry args={[0.22, 0.44, 0.04]} />
+          <meshStandardMaterial color={tk.text} />
+        </mesh>
+        <mesh position={[0, 0, 0.021]}>
+          <planeGeometry args={[0.18, 0.36]} />
+          <meshBasicMaterial color={tk.info} />
+        </mesh>
+      </group>
+    );
+  if (object === 3)
+    return (
+      <mesh position={position} castShadow={shadows}>
+        <sphereGeometry args={[0.22, seg, seg]} />
+        <meshStandardMaterial color={tk.text} metalness={0.6} roughness={0.4} />
+      </mesh>
+    );
+  return (
+    <mesh position={position} castShadow={shadows}>
+      <sphereGeometry args={[0.25, seg, seg]} />
+      <meshStandardMaterial color={tk.accent} />
+    </mesh>
   );
 }
 

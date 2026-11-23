@@ -121,6 +121,7 @@ test('elevator: heavier going up with acceleration, weightless in free fall', as
   await expect(page.getByTestId('readout-P')).toContainText('588'); // 60 · 9,8
   await setParam(page, /^Ускорение лифта/, '2');
   await expect(page.getByTestId('readout-P')).toContainText('708');
+  await expect(page.getByTestId('lift-state')).toContainText('Трогается вверх');
   await expect(page.getByTestId('scenario-status')).toContainText('перегрузка');
   await setParam(page, /^Ускорение лифта/, '-9,8');
   await expect(page.getByTestId('readout-P')).toContainText('0');
@@ -130,6 +131,20 @@ test('elevator: heavier going up with acceleration, weightless in free fall', as
   await expect(page.getByTestId('readout-live-v')).not.toHaveText(/v\s*0\s*м\/с$/, {
     timeout: 5000,
   });
+
+  // Going up and braking: the weight depends on the acceleration, not on the velocity.
+  await setParam(page, /^Начальная скорость лифта/, '3');
+  await setParam(page, /^Ускорение лифта/, '-2');
+  await expect(page.getByTestId('readout-P')).toContainText('468'); // 60 · (9,8 − 2)
+  await expect(page.getByTestId('lift-state')).toContainText('Едет вверх и тормозит');
+  await page.getByRole('button', { name: 'Запуск' }).click();
+  // v = 3 − 2t changes sign at 1,5 s: the lift stops and starts going down.
+  await expect(page.getByTestId('lift-state')).toContainText('Едет вниз и разгоняется', {
+    timeout: 6000,
+  });
+  await page.getByRole('button', { name: '2D' }).click();
+  await expect(page.getByTestId('scene-2d').locator('[data-arrow="v"]')).toBeVisible();
+  await expect(page.getByTestId('scene-2d').locator('[data-arrow="a"]')).toBeVisible();
 });
 
 test('lamp: flatter ropes pull harder; a weak rope breaks; static scene has no Run', async ({
@@ -169,6 +184,39 @@ test('block and pulley: formula with friction, static friction holds the system'
   await expect(page.getByTestId('scene-2d').locator('[data-force="normal"]')).toHaveCount(1);
 });
 
+test('block and pulley: rope, chain or spring; loads; a weak link breaks', async ({ browser }) => {
+  const page = await newPage(browser);
+  await page.goto('/ru/labs/block-pulley');
+  await page.getByRole('button', { name: '2D' }).click();
+  // Defaults: T = m1·m2·g(1 + μ)/(m1 + m2) = 7,84 N.
+  await expect(page.getByTestId('readout-T')).toContainText('7,84');
+  await expect(page.getByTestId('readout-x')).toHaveCount(0);
+  await expect(page.getByRole('textbox', { name: /^Жёсткость пружины/ })).toHaveCount(0);
+
+  await page.getByRole('radio', { name: 'Цепь' }).check();
+  await expect(page.getByTestId('scene-2d').locator('[data-link="chain"]')).toHaveCount(2);
+  await expect(page.getByTestId('readout-a')).toContainText('1,96');
+
+  await page.getByRole('radio', { name: 'Пружина' }).check();
+  await expect(page.getByTestId('scene-2d').locator('[data-link="spring"]')).toHaveCount(1);
+  await setParam(page, /^Жёсткость пружины/, '200');
+  await expect(page.getByTestId('readout-x')).toContainText('3,9'); // 7,84 / 200 m = 3,92 cm
+  await expect(page.getByTestId('readout-a')).toContainText('1,96');
+
+  await page.getByRole('radio', { name: 'Машинка' }).check();
+  await page.getByRole('radio', { name: 'Ведро' }).check();
+  await expect(page.getByTestId('scene-2d').locator('[data-load="car"]')).toHaveCount(1);
+  await expect(page.getByTestId('scene-2d').locator('[data-load="bucket"]')).toHaveCount(1);
+
+  await setParam(page, /^Прочность связи/, '5');
+  await expect(page.getByTestId('scenario-status')).toContainText('рвётся');
+  await expect(page.getByTestId('scene-2d').locator('[data-force]')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Запуск' }).click();
+  await expect(page.getByTestId('readout-live-v')).not.toHaveText(/v\s*0\s*м\/с$/, {
+    timeout: 5000,
+  });
+});
+
 test('Atwood machine: a = (m1 − m2)g/(m1 + m2), T between the weights; phone and axe', async ({
   browser,
 }) => {
@@ -176,8 +224,13 @@ test('Atwood machine: a = (m1 − m2)g/(m1 + m2), T between the weights; phone a
   await page.goto('/ru/labs/atwood');
   await expect(page.getByTestId('readout-a')).toContainText('4,9');
   await expect(page.getByTestId('readout-T')).toContainText('14,7');
-  await setParam(page, /^Масса правого груза/, '3');
-  await expect(page.getByTestId('scenario-status')).toContainText('равновесии');
+  // On a phone the page may still be hydrating: repeat the input until the status follows it.
+  await expect(async () => {
+    await setParam(page, /^Масса правого груза/, '3');
+    await expect(page.getByTestId('scenario-status')).toContainText('равновесии', {
+      timeout: 1000,
+    });
+  }).toPass({ timeout: 15_000 });
   const overflow = await page.evaluate(
     () => document.documentElement.scrollWidth - window.innerWidth,
   );

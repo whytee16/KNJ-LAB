@@ -103,6 +103,26 @@ test('3D scene renders and follows the parameters; 2D view shows the same number
   await expect(page.getByText('Включён упрощённый вид', { exact: false })).toHaveCount(0);
   await expect(page.getByTestId('readout-T')).toContainText('16,24');
 
+  // Objects: without air every object flies the same way; with air the box loses range.
+  await page.getByRole('radio', { name: 'Земля 9,8' }).check();
+  await angle.fill('45');
+  await angle.press('Enter');
+  await page.getByRole('radio', { name: 'Коробка' }).check();
+  await expect(page.getByTestId('object-info')).toContainText('Масса 1 кг');
+  await expect(page.getByTestId('readout-L')).toContainText('22,96');
+  await expect(page.getByTestId('readout-L0')).toHaveCount(0);
+  await page.getByRole('radio', { name: 'Включено' }).check();
+  await expect(page.getByTestId('readout-L0')).toContainText('22,96');
+  await expect(page.getByTestId('readout-L')).toContainText('14,2');
+  await expect(page.getByTestId('drag-note')).toContainText('38 %');
+  await expect(page.getByTestId('scene-2d').getByTestId('ideal-path')).toBeVisible();
+  await page.getByRole('radio', { name: 'Ядро' }).check();
+  await expect(page.getByTestId('readout-L')).toContainText('22,7');
+  await page.getByRole('radio', { name: 'Выключено' }).check();
+  await page.getByRole('radio', { name: 'Луна 1,6' }).check();
+  await angle.fill('60');
+  await angle.press('Enter');
+
   // The choice is remembered for this browser.
   await page.reload();
   await expect(page.getByTestId('scene-2d')).toBeVisible();
@@ -180,6 +200,15 @@ test('inclined plane: reviewed and published, forces and the rest condition', as
   await guest.getByRole('button', { name: '2D' }).click();
   await expect(guest.getByTestId('scene-2d').locator('[data-force="Ffr"]')).toBeVisible();
   await expect(guest.getByTestId('scene-2d').locator('[data-force="ma"]')).toHaveCount(0);
+
+  // Decomposition of mg and the step-by-step calculation with the current numbers.
+  await expect(guest.getByTestId('scene-2d').getByTestId('decomposition')).toHaveCount(0);
+  await guest.getByLabel('Разложить силу тяжести на составляющие').check();
+  await expect(guest.getByTestId('scene-2d').locator('[data-force="mgSin"]')).toBeVisible();
+  await expect(guest.getByTestId('scene-2d').locator('[data-force="mgCos"]')).toBeVisible();
+  await expect(guest.getByTestId('incline-steps')).toContainText('mg = 9 · 9,8 = 88,2 Н');
+  await expect(guest.getByTestId('incline-steps')).toContainText('Брусок покоится');
+  await expect(guest.getByTestId('readout-Fperp')).toContainText('76,38'); // 88,2 · cos 30°
   const overflow = await guest.evaluate(
     () => document.documentElement.scrollWidth - window.innerWidth,
   );

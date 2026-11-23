@@ -2,7 +2,7 @@ import { elevatorAt, solveSupportedBody } from '../mechanics/index.ts';
 import type { Scenario } from './types.ts';
 import { range } from './motion.ts';
 
-type P = { m: number; a: number };
+type P = { m: number; a: number; v0: number };
 type R = { Fg: number; P: number; overload: number };
 const G = 9.8;
 const DURATION = 3;
@@ -14,6 +14,8 @@ export const elevatorScales: Scenario<P, R> = {
   params: {
     m: { min: 20, max: 120, step: 1, default: 60, unit: 'kg', symbol: 'm' },
     a: { min: -9.8, max: 5, step: 0.1, default: 0, unit: 'm/s2', symbol: 'a' },
+    // Initial velocity (up +): with it the lift can also brake — a < 0 while going up.
+    v0: { min: -4, max: 4, step: 0.5, default: 0, unit: 'm/s', symbol: 'v₀' },
   },
   results: {
     Fg: { unit: 'N', symbol: 'mg', digits: 1 },
@@ -35,8 +37,8 @@ export const elevatorScales: Scenario<P, R> = {
     'labs.assumptions.gEarth',
   ],
   duration: () => DURATION,
-  state: ({ a }, tau) => {
-    const e = elevatorAt(a, tau, DURATION);
+  state: ({ a, v0 }, tau) => {
+    const e = elevatorAt(a, tau, DURATION, v0);
     return { s: e.y, live: { t: Math.min(tau, DURATION), v: e.v, h: e.y } };
   },
   forces: ({ m, a }) => solveSupportedBody({ m, g: G, a }).forces,

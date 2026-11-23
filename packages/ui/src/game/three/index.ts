@@ -1,5 +1,7 @@
 export {
   GameScene3D,
+  Room3D,
+  type RoomSpec,
   Wedge3D,
   Spring3D,
   Tube3D,

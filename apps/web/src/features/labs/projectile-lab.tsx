@@ -5,6 +5,7 @@ import {
   flightTime,
   projectile,
   speedSeries,
+  THROWN_OBJECTS,
   trajectory,
   type ProjectileParams,
 } from '@knj/physics';
@@ -111,6 +112,9 @@ export default function ProjectileLab({
 
   const vectorLabels = { v: m('vectorV'), vx: m('vectorVx'), vy: m('vectorVy') };
   const g = projectile.params.g;
+  const object = THROWN_OBJECTS[params.object] ?? THROWN_OBJECTS[0];
+  const ideal = { ...params, drag: 0 };
+  const withDrag = params.drag === 1;
   const panel = (
     <GameControls
       running={running}
@@ -146,6 +150,33 @@ export default function ProjectileLab({
         options={(g.choices ?? []).map((c) => ({
           value: c.value,
           label: m(`g.${c.key}` as 'g.earth'),
+        }))}
+      />
+      <ChoiceControl
+        label={m('params.object')}
+        symbol=""
+        value={params.object}
+        onChange={(v) => change('object', v)}
+        options={(projectile.params.object.choices ?? []).map((c) => ({
+          value: c.value,
+          label: m(`object.${c.key}` as 'object.ball'),
+        }))}
+      />
+      <p className="text-sm text-text-muted" data-testid="object-info">
+        {m('objectInfo', {
+          m: format(object.m),
+          S: format(Math.round(object.S * 10_000)),
+          Cd: format(object.Cd),
+        })}
+      </p>
+      <ChoiceControl
+        label={m('params.drag')}
+        symbol=""
+        value={params.drag}
+        onChange={(v) => change('drag', v)}
+        options={(projectile.params.drag.choices ?? []).map((c) => ({
+          value: c.value,
+          label: m(`drag.${c.key}` as 'drag.off'),
         }))}
       />
       <p className="text-sm text-text-muted" aria-live="polite" data-testid="save-status">
@@ -245,7 +276,10 @@ export default function ProjectileLab({
           />
           <GameReadouts
             title={m('resultsTitle')}
-            items={(['T', 'L', 'H', 'vEnd'] as const).map((k) => ({
+            items={(withDrag
+              ? (['T', 'L', 'L0', 'H', 'vEnd'] as const)
+              : (['T', 'L', 'H', 'vEnd'] as const)
+            ).map((k) => ({
               id: k,
               label: m(`results.${k}`),
               symbol: projectile.results[k].symbol,
@@ -253,16 +287,33 @@ export default function ProjectileLab({
               unit: unit(projectile.results[k].unit),
             }))}
           />
+          {withDrag ? (
+            <p className="text-sm font-medium" role="status" data-testid="drag-note">
+              {m('dragNote', {
+                d: format(result.L0 - result.L),
+                pct: format(Math.round((100 * (result.L0 - result.L)) / Math.max(result.L0, 1e-9))),
+              })}
+            </p>
+          ) : null}
           <div className="grid gap-4 md:grid-cols-2">
             <GameChart
               title={m('trajectoryTitle')}
               xLabel={`x, ${unit('m')}`}
               yLabel={`y, ${unit('m')}`}
               series={trajectory(params)}
-              xMax={Math.max(result.L, 1)}
-              yMax={Math.max(result.H, 1)}
+              xMax={Math.max(result.L, withDrag ? result.L0 : 0, 1)}
+              yMax={Math.max(result.H, withDrag ? projectile.compute(ideal).H : 0, 1)}
               marker={pos}
-              description={m('trajectoryDescription', { L: format(result.L), H: format(result.H) })}
+              label={withDrag ? m('withAir') : undefined}
+              more={
+                withDrag
+                  ? [{ points: trajectory(ideal), tone: 'muted', label: m('withoutAir') }]
+                  : undefined
+              }
+              description={m(withDrag ? 'trajectoryDragDescription' : 'trajectoryDescription', {
+                L: format(result.L),
+                H: format(result.H),
+              })}
             />
             <GameChart
               title={m('speedTitle')}

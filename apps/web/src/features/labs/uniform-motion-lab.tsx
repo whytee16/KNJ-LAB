@@ -8,20 +8,18 @@ import {
   type UniformMotionParams,
 } from '@knj/physics';
 import type { Locale } from '@knj/i18n';
-import {
-  GameChart,
-  GameControls,
-  GameLayout,
-  GameReadouts,
-  GameWorkspace,
-  ParamControl,
-  ticks,
-  useMeasuredWidth,
-} from '@knj/ui/game';
+import { GameChart, GameReadouts, ParamControl, ticks, useMeasuredWidth } from '@knj/ui/game';
 import { useTranslations } from 'next-intl';
+import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { LabFrame3D, SceneLoading } from './lab-frame-3d';
 import { UNIT_KEY } from './units';
 import { useLabSession } from './use-lab-session';
+
+const UniformMotionScene3D = dynamic(() => import('./uniform-motion-scene3d'), {
+  ssr: false,
+  loading: SceneLoading,
+});
 
 type ParamKey = keyof UniformMotionParams;
 const PARAM_KEYS: ParamKey[] = ['v', 't', 'x0'];
@@ -203,71 +201,65 @@ export default function UniformMotionLab({
   };
 
   const trackMax = Math.max(10, result.x);
-  const panel = (
-    <GameControls
+  const controls = PARAM_KEYS.map((key) => {
+    const spec = uniformMotion.params[key];
+    return (
+      <ParamControl
+        key={key}
+        label={m(`params.${key}`)}
+        symbol={spec.symbol}
+        unit={unit(spec.unit)}
+        spec={spec}
+        value={params[key]}
+        onChange={(v) => change(key, v)}
+        rangeError={t('range', {
+          min: format(spec.min),
+          max: format(spec.max),
+          unit: unit(spec.unit),
+        })}
+      />
+    );
+  });
+
+  return (
+    <LabFrame3D
+      header={header}
+      controls={controls}
       running={running}
       onRun={run}
       onPause={stop}
       onReset={reset}
-      labels={{ run: t('run'), pause: t('pause'), reset: t('reset') }}
-    >
-      {PARAM_KEYS.map((key) => {
-        const spec = uniformMotion.params[key];
-        return (
-          <ParamControl
-            key={key}
-            label={m(`params.${key}`)}
-            symbol={spec.symbol}
-            unit={unit(spec.unit)}
-            spec={spec}
-            value={params[key]}
-            onChange={(v) => change(key, v)}
-            rangeError={t('range', {
-              min: format(spec.min),
-              max: format(spec.max),
-              unit: unit(spec.unit),
-            })}
+      canSave={canSave}
+      saveStatus={saveStatus}
+      scene3d={(h) => (
+        <UniformMotionScene3D
+          {...h}
+          x0={params.x0}
+          x={x}
+          xEnd={result.x}
+          scaleMax={trackMax}
+          v={params.v}
+          format={format}
+          unit={unit('m')}
+          label={m('scene3d')}
+          resetLabel={t('view.resetCamera')}
+        />
+      )}
+      scene2d={
+        <div className="pt-8 sm:pt-6" data-testid="scene-2d">
+          <Track
+            x0={params.x0}
+            x={x}
+            xEnd={result.x}
+            scaleMax={trackMax}
+            label={m('trackLabel')}
+            unit={unit('m')}
+            format={format}
           />
-        );
-      })}
-      <p className="text-sm text-text-muted" aria-live="polite" data-testid="save-status">
-        {!canSave
-          ? t('notSaved')
-          : saveStatus === 'pending'
-            ? t('saving')
-            : saveStatus === 'saved'
-              ? t('savedNow')
-              : saveStatus === 'error'
-                ? t('saveFailed')
-                : t('questions.saved')}
-      </p>
-    </GameControls>
-  );
-
-  return (
-    <GameLayout
-      header={header}
-      panelTitle={t('panelTitle')}
-      showPanelLabel={t('showPanel')}
-      hidePanelLabel={t('hidePanel')}
-      panel={panel}
-      workspace={
-        <GameWorkspace
-          label={t('workspace')}
-          fullscreenLabel={t('fullscreen')}
-          exitFullscreenLabel={t('exitFullscreen')}
-        >
-          <div className="pt-8 sm:pt-6">
-            <Track
-              x0={params.x0}
-              x={x}
-              xEnd={result.x}
-              scaleMax={trackMax}
-              label={m('trackLabel')}
-              unit={unit('m')}
-              format={format}
-            />
-          </div>
+        </div>
+      }
+      below={
+        <>
           <GameReadouts
             title={t('readouts')}
             items={[
@@ -298,10 +290,10 @@ export default function UniformMotionLab({
             marker={{ x: Math.min(tau, params.t), y: S }}
             description={m('chartDescription', { v: format(params.v), S: format(result.S) })}
           />
-        </GameWorkspace>
+        </>
       }
     >
       {children}
-    </GameLayout>
+    </LabFrame3D>
   );
 }

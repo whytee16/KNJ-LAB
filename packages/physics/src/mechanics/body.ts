@@ -42,7 +42,7 @@ export function solveSupportedBody(s: SupportedBodySpec): SupportedBodyResult {
 }
 
 /** Motion of the elevator from rest with constant acceleration a: height and speed at time τ. */
-export function elevatorAt(a: number, tau: number, duration: number) {
+export function elevatorAt(a: number, tau: number, duration: number, v0 = 0) {
   const t = Math.min(Math.max(tau, 0), duration);
-  return { y: (a * t * t) / 2, v: a * t };
+  return { y: v0 * t + (a * t * t) / 2, v: v0 + a * t };
 }

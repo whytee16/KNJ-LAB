@@ -3,6 +3,7 @@ import type { UnitCode } from '@knj/physics';
 /** Message key (labs.units.*) of each SI unit code used by lab models. */
 export const UNIT_KEY = {
   m: 'm',
+  cm: 'cm',
   s: 's',
   'm/s': 'mps',
   deg: 'deg',

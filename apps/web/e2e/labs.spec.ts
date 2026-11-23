@@ -107,6 +107,11 @@ test('visitors use the free demo: slider, number field, range check, reset', asy
   await expect(
     page.getByText('Тело считается материальной точкой', { exact: false }),
   ).toBeVisible();
+  // The road in 3D; the 2D scheme is one click away.
+  await page.getByRole('button', { name: '3D' }).click();
+  await expect(page.getByTestId('scene-3d').locator('canvas')).toBeVisible();
+  await page.getByRole('button', { name: '2D' }).click();
+  await expect(page.getByTestId('scene-2d')).toBeVisible();
 
   const S = page.getByTestId('readout-S');
   await expect(S).toContainText('50');

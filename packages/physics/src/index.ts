@@ -2,6 +2,7 @@ export {
   clampParam,
   defaultParams,
   parseParams,
+  isShown,
   type LabModel,
   type ParamSpec,
   type ResultSpec,
@@ -26,7 +27,11 @@ export {
   speedSeries,
   flightTime,
   PROJECTILE_MAX,
+  THROWN_OBJECTS,
+  AIR_DENSITY,
+  dragFactor,
   type ProjectileParams,
+  type ProjectileInput,
   type ProjectileResults,
 } from './projectile.ts';
 export {

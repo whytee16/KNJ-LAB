@@ -1,7 +1,7 @@
 'use client';
 
 import type { Locale } from '@knj/i18n';
-import { scenarioFor, type Values } from '@knj/physics';
+import { scenarioFor, type ProjectileParams, type Values } from '@knj/physics';
 import dynamic from 'next/dynamic';
 import type { ReactNode } from 'react';
 
@@ -41,8 +41,8 @@ export function LabView(props: LabViewProps) {
       return (
         <ProjectileLab
           {...props}
-          defaults={props.defaults as { v0: number; angle: number; h0: number; g: number }}
-          initial={props.initial as { v0: number; angle: number; h0: number; g: number }}
+          defaults={props.defaults as ProjectileParams}
+          initial={props.initial as ProjectileParams}
         />
       );
     case 'inclined-plane':

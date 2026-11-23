@@ -1,7 +1,7 @@
 'use client';
 
 import type { InclinedPlaneParams } from '@knj/physics';
-import { Arrow3D, GameScene3D, Label3D, useTokens, Wedge3D } from '@knj/ui/game3d';
+import { Arrow3D, GameScene3D, Label3D, Polyline3D, useTokens, Wedge3D } from '@knj/ui/game3d';
 import { inclineFrame } from './incline-geometry';
 import type { ForceLabels } from './incline-side2d';
 
@@ -14,6 +14,7 @@ function Slope({
   low,
   angleLabel,
   forceLabels,
+  decompose,
 }: {
   params: InclinedPlaneParams;
   tau: number;
@@ -21,6 +22,7 @@ function Slope({
   low: boolean;
   angleLabel: string;
   forceLabels: ForceLabels;
+  decompose: boolean;
 }) {
   const tk = useTokens();
   const f = inclineFrame(params, tau);
@@ -41,6 +43,12 @@ function Slope({
   const Ffr = tip(f.up.x * f.r.Ffr, f.up.y * f.r.Ffr);
   const ma = tip(f.down.x * params.m * f.r.a, f.down.y * params.m * f.r.a);
   const label = (p: V3, dx: number, dy: number): V3 => [p[0] + dx, p[1] + dy, 0];
+  const par = tip(f.down.x * f.r.Fpar, f.down.y * f.r.Fpar);
+  const perp = tip(-f.normal.x * f.r.Fperp, -f.normal.y * f.r.Fperp);
+  const axis = (d: { x: number; y: number }, a: number, b: number): V3[] => [
+    [centre[0] + d.x * a, centre[1] + d.y * a, 0],
+    [centre[0] + d.x * b, centre[1] + d.y * b, 0],
+  ];
   return (
     <>
       <Wedge3D
@@ -55,6 +63,17 @@ function Slope({
         <boxGeometry args={[size, size, size * 1.4]} />
         <meshStandardMaterial color={tk.accent} />
       </mesh>
+      {decompose ? (
+        <>
+          <Polyline3D points={axis(f.down, -3.5, 3.5)} color={tk.border} dashed />
+          <Polyline3D points={axis(f.normal, -3.2, 1.5)} color={tk.border} dashed />
+          <Polyline3D points={[par, mg, perp]} color={tk.muted} dashed />
+          <Arrow3D from={centre} to={par} color={tk.muted} radius={0.03} />
+          <Arrow3D from={centre} to={perp} color={tk.muted} radius={0.03} />
+          <Label3D position={label(par, -0.2, -0.35)} text={forceLabels.mgSin} />
+          <Label3D position={label(perp, 0.5, -0.1)} text={forceLabels.mgCos} />
+        </>
+      ) : null}
       <Arrow3D from={centre} to={mg} color={tk.text} />
       <Arrow3D from={centre} to={N} color={tk.info} />
       <Arrow3D from={centre} to={Ffr} color={tk.danger} />
@@ -100,6 +119,7 @@ export default function InclineScene3D(props: {
   resetLabel: string;
   angleLabel: string;
   forceLabels: ForceLabels;
+  decompose: boolean;
   onFps: (fps: number) => void;
   onContextLost: () => void;
 }) {
@@ -114,6 +134,7 @@ export default function InclineScene3D(props: {
       camera={[-2, cy + 3.5, 11]}
       target={[0, cy, 0]}
       fitWidth={f.b * scale + 4}
+      room={{ width: 20, depth: 10, height: 9, center: [0, -2.5], board: true }}
       onFps={props.onFps}
       onContextLost={props.onContextLost}
     >
@@ -124,6 +145,7 @@ export default function InclineScene3D(props: {
         low={props.quality === 'low'}
         angleLabel={props.angleLabel}
         forceLabels={props.forceLabels}
+        decompose={props.decompose}
       />
     </GameScene3D>
   );

@@ -105,6 +105,7 @@ export default function SpringScene3D({
       camera={[-1, 4, 10]}
       target={[-1, 0.8, 0]}
       fitWidth={11}
+      room={{ width: 18, depth: 9, height: 7, center: [0, -2], board: true }}
       onFps={h.onFps}
       onContextLost={h.onContextLost}
     >

@@ -5,6 +5,7 @@ export type InclinedPlaneResults = {
   /** Gravity mg, its components along and across the slope, normal force, friction. */
   Fg: number;
   Fpar: number;
+  Fperp: number;
   N: number;
   Ffr: number;
   /** Acceleration down the slope (0 when the block stays at rest). */
@@ -57,6 +58,7 @@ export const inclinedPlane: LabModel<InclinedPlaneParams, InclinedPlaneResults> 
   results: {
     Fg: { unit: 'N', symbol: 'mg', digits: 2 },
     Fpar: { unit: 'N', symbol: 'mg sin α', digits: 2 },
+    Fperp: { unit: 'N', symbol: 'mg cos α', digits: 2 },
     N: { unit: 'N', symbol: 'N', digits: 2 },
     Ffr: { unit: 'N', symbol: 'Fтр', digits: 2 },
     a: { unit: 'm/s2', symbol: 'a', digits: 2 },
@@ -77,6 +79,8 @@ export const inclinedPlane: LabModel<InclinedPlaneParams, InclinedPlaneResults> 
     return {
       Fg,
       Fpar,
+      // The plane pushes back exactly as hard as gravity presses across it: N = mg cos α.
+      Fperp: N,
       N,
       Ffr,
       a,
