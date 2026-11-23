@@ -20,7 +20,13 @@ let reviewerPage: Page;
 
 test.beforeAll(async ({}, testInfo) => {
   use = testInfo.project.use;
-  await resetDraftLabsAndImport();
+  await resetDraftLabsAndImport([
+    { code: 'projectile', topic: 'projectile-motion' },
+    { code: 'inclined-plane', topic: 'inclined-plane-motion' },
+    { code: 'math-pendulum', topic: 'pendulums' },
+    { code: 'spring-pendulum', topic: 'pendulums' },
+    { code: 'circuit', topic: 'ohms-law-connections' },
+  ]);
   await createStaff(reviewer, password, 'reviewer', 'Методист');
 });
 test.afterAll(async () => {
@@ -48,7 +54,7 @@ test('imported AI draft cannot be published until a reviewer confirms the check'
     ),
   ).toBeVisible();
 
-  await page.getByRole('button', { name: 'Проверено учителем' }).click();
+  await page.getByRole('button', { name: 'Проверено учителем', exact: true }).click();
   await expect(page.getByTestId('ai-reviewed')).toBeVisible();
   await expect(page.getByTestId('ai-draft')).toHaveCount(0);
   await page.getByLabel('Бесплатное демо').check();
@@ -143,7 +149,7 @@ test('inclined plane: reviewed and published, forces and the rest condition', as
   const page = reviewerPage;
   await page.goto('/ru/studio/labs');
   await page.getByRole('link', { name: 'Брусок на наклонной плоскости' }).click();
-  await page.getByRole('button', { name: 'Проверено учителем' }).click();
+  await page.getByRole('button', { name: 'Проверено учителем', exact: true }).click();
   await expect(page.getByTestId('ai-reviewed')).toBeVisible();
   await page.getByLabel('Бесплатное демо').check();
   await page.getByRole('button', { name: 'Сохранить' }).click();
@@ -185,7 +191,7 @@ test('inclined plane: reviewed and published, forces and the rest condition', as
 async function reviewAndPublish(page: Page, title: string) {
   await page.goto('/ru/studio/labs');
   await page.getByRole('link', { name: title }).click();
-  await page.getByRole('button', { name: 'Проверено учителем' }).click();
+  await page.getByRole('button', { name: 'Проверено учителем', exact: true }).click();
   await expect(page.getByTestId('ai-reviewed')).toBeVisible();
   await page.getByLabel('Бесплатное демо').check();
   await page.getByRole('button', { name: 'Сохранить' }).click();

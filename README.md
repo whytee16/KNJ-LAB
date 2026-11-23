@@ -69,3 +69,7 @@ DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:54322/postgres pnpm conten
 ```
 
 Загружает `content/drafts/**` в базу как черновики `ai_draft`. Опубликовать их можно только после «Проверено учителем» в студии.
+
+## Живой демо-сайт на своём компьютере
+
+Одна команда `pnpm demo` — см. [docs/demo.md](docs/demo.md).

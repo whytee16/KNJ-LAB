@@ -119,6 +119,8 @@ export async function resetLab(code: string) {
   try {
     await sql`delete from public.lab_tasks where lab_id = (select id from public.labs where code = ${code})`;
     await sql`delete from public.lab_topics where lab_id = (select id from public.labs where code = ${code})`;
+    // The spec writes this lab's texts itself (the draft importer is limited to other bundles).
+    await sql`delete from public.lab_translations where lab_id = (select id from public.labs where code = ${code})`;
     await sql`update public.labs set status = 'draft', is_free_demo = true, published_at = null
               where code = ${code}`;
   } finally {
@@ -158,20 +160,9 @@ export async function grantPass(studentId: string) {
   }
 }
 
-/** Clean slate for the labs whose texts come as AI drafts, then the real draft importer runs. */
-export async function resetDraftLabsAndImport() {
+/** Clean slate for the given AI-draft labs (each spec resets only its own), then the importer runs. */
+export async function resetDraftLabsAndImport(labs: { code: string; topic: string }[]) {
   const sql = postgres(DB, { max: 1, onnotice: () => undefined });
-  const labs = [
-    { code: 'projectile', topic: 'projectile-motion' },
-    { code: 'inclined-plane', topic: 'inclined-plane-motion' },
-    { code: 'math-pendulum', topic: 'pendulums' },
-    { code: 'spring-pendulum', topic: 'pendulums' },
-    { code: 'circuit', topic: 'ohms-law-connections' },
-    { code: 'elevator-scales', topic: 'weight-weightlessness' },
-    { code: 'lamp-two-ropes', topic: 'equilibrium-forces' },
-    { code: 'block-pulley', topic: 'connected-bodies' },
-    { code: 'atwood', topic: 'connected-bodies' },
-  ];
   try {
     // Links first (several labs can share a topic), then the topics and their templates.
     for (const { code } of labs) {
@@ -193,7 +184,11 @@ export async function resetDraftLabsAndImport() {
     ['--experimental-strip-types', '--no-warnings', 'scripts/import-drafts.ts'],
     {
       cwd: new URL('../../../', import.meta.url).pathname,
-      env: { ...process.env, DATABASE_URL: DB },
+      env: {
+        ...process.env,
+        DATABASE_URL: DB,
+        DRAFT_BUNDLES: labs.map((l) => `physics/${l.code}`).join(','),
+      },
     },
   );
 }

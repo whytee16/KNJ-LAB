@@ -1,6 +1,13 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Browser, type BrowserContext, type Page } from '@playwright/test';
-import { createStaff, enrollTotp, resetDraftLabsAndImport, signIn } from './staff';
+import {
+  createFamily,
+  createStaff,
+  enrollTotp,
+  grantPass,
+  resetDraftLabsAndImport,
+  signIn,
+} from './staff';
 
 // Mechanics constructor (ADR-0010): four scenarios on shared solvers and one generic view.
 test.describe.configure({ mode: 'serial' });
@@ -19,7 +26,12 @@ let reviewerPage: Page;
 
 test.beforeAll(async ({}, testInfo) => {
   use = testInfo.project.use;
-  await resetDraftLabsAndImport();
+  await resetDraftLabsAndImport([
+    { code: 'elevator-scales', topic: 'weight-weightlessness' },
+    { code: 'lamp-two-ropes', topic: 'equilibrium-forces' },
+    { code: 'block-pulley', topic: 'connected-bodies' },
+    { code: 'atwood', topic: 'connected-bodies' },
+  ]);
   await createStaff(reviewer, password, 'reviewer', 'Методист');
 });
 test.afterAll(async () => {
@@ -30,7 +42,7 @@ async function publish(title: string) {
   const page = reviewerPage;
   await page.goto('/ru/studio/labs');
   await page.getByRole('link', { name: title }).click();
-  await page.getByRole('button', { name: 'Проверено учителем' }).click();
+  await page.getByRole('button', { name: 'Проверено учителем', exact: true }).click();
   await expect(page.getByTestId('ai-reviewed')).toBeVisible();
   await page.getByLabel('Бесплатное демо').check();
   await page.getByRole('button', { name: 'Сохранить' }).click();
@@ -45,7 +57,7 @@ async function setParam(page: Page, label: RegExp, value: string) {
   await field.press('Enter');
 }
 
-test('the reviewer confirms and publishes the four scenarios', async ({ browser }) => {
+test('the reviewer confirms and publishes three scenarios one by one', async ({ browser }) => {
   reviewerPage = await newPage(browser);
   await signIn(reviewerPage, reviewer, password);
   await enrollTotp(reviewerPage);
@@ -53,9 +65,50 @@ test('the reviewer confirms and publishes the four scenarios', async ({ browser 
     'Человек на весах в лифте',
     'Лампа на двух тросах',
     'Брусок на столе и груз через блок',
-    'Машина Атвуда',
   ])
     await publish(title);
+});
+
+test('bundle review: one click confirms the lab texts and all questions, the next publishes them', async ({
+  browser,
+}) => {
+  const page = reviewerPage;
+  await page.goto('/ru/studio/labs');
+  await page.getByRole('link', { name: 'Машина Атвуда' }).click();
+  // Publishing before the check is refused by the database.
+  await page.getByRole('button', { name: 'Опубликовать', exact: true }).click();
+  await expect(
+    page.getByText(
+      'Сначала подтвердите, что автоматически подготовленный текст проверен учителем.',
+    ),
+  ).toBeVisible();
+  await page.getByLabel('Бесплатное демо').check();
+  await page.getByRole('button', { name: 'Сохранить' }).click();
+  await expect(page.getByText('Сохранено.')).toBeVisible();
+  // Lab texts + 3 questions = 4 confirmations; 3 questions + the lab = 4 publications.
+  await page
+    .getByTestId('lab-bundle')
+    .getByRole('button', { name: /Проверено учителем: тексты и все вопросы \(4\)/ })
+    .click();
+  await expect(
+    page.getByText('Проверка подтверждена для текстов и всех вопросов', { exact: false }),
+  ).toBeVisible();
+  await page
+    .getByTestId('lab-bundle')
+    .getByRole('button', { name: /Опубликовать лабораторию с вопросами \(4\)/ })
+    .click();
+  await expect(page.getByText('Лаборатория и её вопросы опубликованы.')).toBeVisible();
+
+  // A student with a pass gets a question of the lab.
+  const family = await createFamily(`bundle${run}`, password);
+  await grantPass(family.studentId);
+  const student = await newPage(browser);
+  await signIn(student, family.username, password);
+  await expect(student).toHaveURL(/\/ru\/app$/);
+  await student.goto('/ru/labs/atwood');
+  await student.getByRole('button', { name: 'Начать' }).click();
+  await expect(student.getByRole('progressbar', { name: 'Ответы на вопросы' })).toBeVisible();
+  await expect(student.getByRole('button', { name: 'Проверить' })).toBeVisible();
 });
 
 test('elevator: heavier going up with acceleration, weightless in free fall', async ({

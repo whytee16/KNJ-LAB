@@ -3,7 +3,7 @@ import { buttonVariants, Card, Container } from '@knj/ui';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { camelCode as camel, UNIT_KEY } from '@/features/labs/units';
-import { AiDraftNotice, AiReviewedNote } from '@/features/studio/ai-draft-notice';
+import { AiDraftNotice, AiReviewedNote, LabBundlePanel } from '@/features/studio/ai-draft-notice';
 import { LabEditor, LabLinks, LabStatusPanel } from '@/features/studio/lab-editor';
 import { allTopicOptions } from '@/features/studio/queries';
 import { StatusBadge } from '@/features/studio/status-badge';
@@ -21,7 +21,7 @@ export default async function EditLabPage({ params }: PageProps<'/[locale]/studi
   const { data: lab } = await supabase
     .from('labs')
     .select(
-      'id, code, status, is_free_demo, grade_from, default_params, lab_translations(*), lab_topics(topic_id), lab_tasks(template_id, position)',
+      'id, code, status, is_free_demo, grade_from, default_params, lab_translations(*), lab_topics(topic_id), lab_tasks(template_id, position, task_templates(status, content_origin))',
     )
     .eq('id', id)
     .maybeSingle();
@@ -135,6 +135,22 @@ export default async function EditLabPage({ params }: PageProps<'/[locale]/studi
             <AiDraftNotice locale={locale} kind="lab" id={lab.id} canReview={canReview} />
           ) : ru?.content_origin === 'ai_reviewed' ? (
             <AiReviewedNote />
+          ) : null}
+          {canReview &&
+          (lab.lab_translations.some((x) => x.content_origin !== 'human') ||
+            lab.lab_tasks.some((x) => x.task_templates?.content_origin !== 'human')) ? (
+            <LabBundlePanel
+              locale={locale}
+              labId={lab.id}
+              pendingReview={
+                lab.lab_translations.filter((x) => x.content_origin === 'ai_draft').length +
+                lab.lab_tasks.filter((x) => x.task_templates?.content_origin === 'ai_draft').length
+              }
+              pendingPublish={
+                lab.lab_tasks.filter((x) => x.task_templates?.status !== 'published').length +
+                (lab.status === 'published' ? 0 : 1)
+              }
+            />
           ) : null}
           <LabStatusPanel
             locale={locale}

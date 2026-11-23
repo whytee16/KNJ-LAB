@@ -1,0 +1,53 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "int",
+          "min": 2,
+          "max": 9
+        },
+        {
+          "name": "t",
+          "kind": "int",
+          "min": 3,
+          "max": 10
+        }
+      ],
+      "constraints": [],
+      "answer": "v*t",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело движется равномерно со скоростью {{v}} м/с. Какой путь оно пройдёт за {{t}} с? Поставь эти значения в лаборатории и проверь себя.",
+        "hints": ["$S = v t$"],
+        "solution": "$S = v t = {{v}} \\cdot {{t}}$ м."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость увеличили вдвое, а время не изменили. Как изменится наклон графика $S(t)$?",
+        "options": ["Станет круче", "Станет положе", "Не изменится"],
+        "solution": "Наклон графика равен скорости, поэтому график станет круче."
+      }
+    }
+  }
+]

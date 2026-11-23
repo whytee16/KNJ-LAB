@@ -3,7 +3,8 @@ import { Alert, Card, Container, cn } from '@knj/ui';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { TopicContent } from '@/features/content/topic-content';
-import { AiDraftNotice, AiReviewedNote } from '@/features/studio/ai-draft-notice';
+import { AiDraftNotice, AiReviewedNote, TopicBundlePanel } from '@/features/studio/ai-draft-notice';
+import { createUserClient } from '@/lib/supabase/server';
 import { StatusBadge } from '@/features/studio/status-badge';
 import { TopicEditor } from '@/features/studio/topic-editor';
 import { TopicWorkflow } from '@/features/studio/topic-workflow';
@@ -34,6 +35,15 @@ export default async function TopicEditorPage({
   const published = topic.topic_contents.find((c) => c.locale === lang);
   const ruTitle = topic.topic_drafts.find((d) => d.locale === 'ru')?.title ?? topic.slug;
   const preview = draft ? await renderMarkdown(draft.theory) : null;
+  const canReview = user ? REVIEW_ROLES.includes(user.role) : false;
+  const { data: templates } = await (
+    await createUserClient()
+  )
+    .from('task_templates')
+    .select('status, content_origin')
+    .eq('topic_id', id);
+  const ruDraft = topic.topic_drafts.find((d) => d.locale === 'ru');
+  const ruPublished = topic.topic_contents.some((c) => c.locale === 'ru');
 
   return (
     <Container className="flex flex-col gap-8 py-10">
@@ -107,6 +117,22 @@ export default async function TopicEditorPage({
               <Alert tone="info">
                 <span className="font-medium">{t('reviewNote')}:</span> {draft.review_note}
               </Alert>
+            ) : null}
+            {canReview &&
+            (ruDraft?.content_origin !== 'human' ||
+              (templates ?? []).some((x) => x.content_origin !== 'human')) ? (
+              <TopicBundlePanel
+                locale={locale}
+                topicId={id}
+                pendingReview={
+                  (ruDraft?.content_origin === 'ai_draft' ? 1 : 0) +
+                  (templates ?? []).filter((x) => x.content_origin === 'ai_draft').length
+                }
+                pendingPublish={
+                  (templates ?? []).filter((x) => x.status !== 'published').length +
+                  (ruDraft && (ruDraft.status !== 'approved' || !ruPublished) ? 1 : 0)
+                }
+              />
             ) : null}
             <TopicWorkflow
               locale={locale}

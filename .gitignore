@@ -24,3 +24,6 @@ playwright-report/
 blob-report/
 *.tsbuildinfo
 next-env.d.ts
+
+# local demo accounts (pnpm demo)
+DEMO-ACCOUNTS.md

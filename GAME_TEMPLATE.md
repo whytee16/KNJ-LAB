@@ -73,7 +73,7 @@ export const ohmLab: LabModel<{ U: number; R: number }, { I: number; P: number }
 
 1. Файл в `packages/physics/src/scenarios/`: параметры, результаты, `layout`, `duration`, `state`, `forces`, `status`, `charts` поверх решателя `chain`, `equilibrium` или `supported body`; добавить его в `SCENARIOS`.
 2. Тесты: сценарий проходит `scenarioSchema`, на углах области параметров нет NaN, результат совпадает с формулой учебника.
-3. Сообщения `labs.models.<code>.*` (RU/KK), миграция регистрации, черновики в `content/drafts/physics/<code>/`.
+3. Сообщения `labs.models.<code>.*` (RU/KK), миграция регистрации, черновики в `content/drafts/physics/<code>/`. Методист проверяет и публикует их «проверкой комплекта» на странице лаборатории.
 4. Если нужной раскладки сцены нет, добавить её в `apps/web/src/features/labs/scenario/layout.ts` и в оба вида (3D и 2D).
 
 ## 5. Чек-лист приёмки лаборатории

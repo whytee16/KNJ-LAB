@@ -1,0 +1,129 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "int",
+          "min": 2,
+          "max": 9
+        },
+        {
+          "name": "x",
+          "kind": "int",
+          "min": 1,
+          "max": 9
+        }
+      ],
+      "constraints": [],
+      "answer": "x",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $ {{a}}x - {{a}} \\cdot {{x}} = 0 $.",
+        "hints": ["Перенесите свободный член вправо и разделите на коэффициент при $x$."],
+        "solution": "$ {{a}}x = {{a}} \\cdot {{x}} $, значит $ x = {{x}} $."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "int",
+          "min": 2,
+          "max": 6
+        },
+        {
+          "name": "x",
+          "kind": "int",
+          "min": 1,
+          "max": 9
+        },
+        {
+          "name": "b",
+          "kind": "int",
+          "min": 1,
+          "max": 20
+        }
+      ],
+      "constraints": [],
+      "answer": "x",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $ {{a}}x + {{b}} = {{a}} \\cdot {{x}} + {{b}} $.",
+        "hints": ["Перенесите ${{b}}$ в правую часть и упростите."],
+        "solution": "$ {{a}}x = {{a}} \\cdot {{x}} $, $ x = {{x}} $."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 1
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько корней имеет уравнение $0 \\cdot x = 5$?",
+        "options": ["Один", "Ни одного", "Бесконечно много"],
+        "solution": "При $a = 0$ и $b \\ne 0$ корней нет: $0 \\cdot x$ всегда равно $0$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [
+        {
+          "name": "k",
+          "kind": "int",
+          "min": 2,
+          "max": 6
+        }
+      ],
+      "constraints": [],
+      "answer": "k*(x + 1)",
+      "variables": ["x"],
+      "range": [-10, 10]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте скобки: $ {{k}}(x + 1) $.",
+        "solution": "$ {{k}}(x+1) = {{k}}x + {{k}} $."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сопоставьте уравнение и его корень.",
+        "options": ["$2x = 6$", "$x + 4 = 1$", "$5x = 0$"],
+        "matches": ["$3$", "$-3$", "$0$"],
+        "solution": "$2x = 6 \\Rightarrow x = 3$; $x + 4 = 1 \\Rightarrow x = -3$; $5x = 0 \\Rightarrow x = 0$."
+      }
+    }
+  }
+]

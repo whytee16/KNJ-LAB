@@ -47,6 +47,13 @@ const bundles = readdirSync(root)
   .filter((s) => statSync(join(root, s)).isDirectory())
   .flatMap((s) => readdirSync(join(root, s)).map((b) => join(root, s, b)))
   .filter((d) => statSync(d).isDirectory())
+  // DRAFT_BUNDLES=physics/projectile,physics/atwood — import only these (tests, partial updates).
+  .filter((d) => {
+    const only = process.env.DRAFT_BUNDLES?.split(',')
+      .map((x) => x.trim())
+      .filter(Boolean);
+    return !only?.length || only.includes(d.slice(root.length + 1).replaceAll('\\', '/'));
+  })
   // Bundles that create a topic go first: other bundles may link their labs to that topic.
   .sort(
     (a, b) => Number(existsSync(join(b, 'topic.json'))) - Number(existsSync(join(a, 'topic.json'))),
@@ -74,6 +81,8 @@ for (const dir of bundles) {
 const sql = postgres(url, { max: 1, onnotice: () => {} });
 try {
   await sql.begin(async (tx) => {
+    // One importer at a time (parallel test runs, two terminals).
+    await tx`select pg_advisory_xact_lock(724501)`;
     for (const dir of bundles) {
       const name = dir.slice(root.length + 1);
       const topic = read<TopicDraft>(join(dir, 'topic.json'));
