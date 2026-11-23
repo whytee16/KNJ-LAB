@@ -57,3 +57,17 @@ export {
   type CircuitParams,
   type CircuitResults,
 } from './circuit.ts';
+export * from './mechanics/index.ts';
+export {
+  SCENARIOS,
+  scenarioFor,
+  scenarioSchema,
+  LAYOUTS,
+  atwood,
+  blockPulley,
+  elevatorScales,
+  lampTwoRopes,
+  type Layout,
+  type Scenario,
+  type ScenarioChart,
+} from './scenarios/index.ts';

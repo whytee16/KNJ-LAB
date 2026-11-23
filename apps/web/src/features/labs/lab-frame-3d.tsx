@@ -29,6 +29,7 @@ export function LabFrame3D({
   scene3d,
   scene2d,
   below,
+  runnable = true,
   children,
 }: {
   header: ReactNode;
@@ -42,6 +43,8 @@ export function LabFrame3D({
   scene3d: (h: Scene3DHandlers) => ReactNode;
   scene2d: ReactNode;
   below: ReactNode;
+  /** Static scenes (equilibrium) have no Run/Pause. */
+  runnable?: boolean;
   children?: ReactNode;
 }) {
   const t = useTranslations('labs');
@@ -52,6 +55,7 @@ export function LabFrame3D({
       onRun={onRun}
       onPause={onPause}
       onReset={onReset}
+      runnable={runnable}
       labels={{ run: t('run'), pause: t('pause'), reset: t('reset') }}
     >
       {controls}

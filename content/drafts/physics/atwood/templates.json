@@ -1,0 +1,57 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "a", "kind": "choice", "values": [2, 3, 4] }],
+      "constraints": [],
+      "answer": "(a - 1) * 9.8 / (a + 1)",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Грузы массой {{a}} кг и 1 кг подвешены на нити, перекинутой через неподвижный блок. Найди ускорение грузов ($g = 9{,}8$ м/с²). Ответ округли до сотых.",
+        "hints": ["$a = \\dfrac{m_1 - m_2}{m_1 + m_2}\\, g$."],
+        "solution": "$a = \\dfrac{ {{a}} - 1}{ {{a}} + 1} \\cdot 9{,}8$ м/с²."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "a", "kind": "choice", "values": [2, 3] }],
+      "constraints": [],
+      "answer": "2 * a * 1 * 9.8 / (a + 1)",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В машине Атвуда грузы массой {{a}} кг и 1 кг. Найди силу натяжения нити ($g = 9{,}8$ м/с²). Ответ округли до десятых и проверь в лаборатории.",
+        "hints": ["$T = \\dfrac{2 m_1 m_2}{m_1 + m_2}\\, g$."],
+        "solution": "$T = \\dfrac{2 \\cdot {{a}} \\cdot 1}{ {{a}} + 1} \\cdot 9{,}8$ Н."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 2 },
+    "texts": {
+      "ru": {
+        "statement": "Как соотносится сила натяжения нити в машине Атвуда ($m_1 > m_2$) с весами грузов?",
+        "options": ["$T = m_1 g$", "$T = m_2 g$", "$m_2 g < T < m_1 g$", "$T > m_1 g$"],
+        "solution": "Лёгкий груз ускоряется вверх, значит $T > m_2 g$; тяжёлый — вниз, значит $T < m_1 g$."
+      }
+    }
+  }
+]

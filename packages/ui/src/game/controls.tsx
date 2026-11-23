@@ -135,8 +135,11 @@ export function GameControls({
   onPause,
   onReset,
   labels,
+  runnable = true,
 }: {
   children: ReactNode;
+  /** Without motion (a static scene) only Reset is shown. */
+  runnable?: boolean;
   running: boolean;
   onRun: () => void;
   onPause: () => void;
@@ -147,7 +150,7 @@ export function GameControls({
     <div className="flex flex-col gap-5">
       <div className="flex flex-col gap-4">{children}</div>
       <div className="flex flex-wrap gap-2">
-        {running ? (
+        {!runnable ? null : running ? (
           <Button onClick={onPause}>{labels.pause}</Button>
         ) : (
           <Button onClick={onRun}>{labels.run}</Button>

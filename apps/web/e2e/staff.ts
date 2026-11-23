@@ -167,6 +167,10 @@ export async function resetDraftLabsAndImport() {
     { code: 'math-pendulum', topic: 'pendulums' },
     { code: 'spring-pendulum', topic: 'pendulums' },
     { code: 'circuit', topic: 'ohms-law-connections' },
+    { code: 'elevator-scales', topic: 'weight-weightlessness' },
+    { code: 'lamp-two-ropes', topic: 'equilibrium-forces' },
+    { code: 'block-pulley', topic: 'connected-bodies' },
+    { code: 'atwood', topic: 'connected-bodies' },
   ];
   try {
     // Links first (several labs can share a topic), then the topics and their templates.

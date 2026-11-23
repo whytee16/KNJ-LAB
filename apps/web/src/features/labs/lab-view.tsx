@@ -1,7 +1,7 @@
 'use client';
 
 import type { Locale } from '@knj/i18n';
-import type { Values } from '@knj/physics';
+import { scenarioFor, type Values } from '@knj/physics';
 import dynamic from 'next/dynamic';
 import type { ReactNode } from 'react';
 
@@ -12,6 +12,7 @@ const InclineLab = dynamic(() => import('./incline-lab'));
 const PendulumLab = dynamic(() => import('./pendulum-lab'));
 const SpringLab = dynamic(() => import('./spring-lab'));
 const CircuitLab = dynamic(() => import('./circuit-lab'));
+const ScenarioLab = dynamic(() => import('./scenario/scenario-lab'));
 
 export interface LabViewProps {
   code: string;
@@ -25,6 +26,8 @@ export interface LabViewProps {
 
 /** Picks the view for a lab code (models and views live in code, see ADR-0008). */
 export function LabView(props: LabViewProps) {
+  // Mechanics scenarios share one generic view (ADR-0010).
+  if (scenarioFor(props.code)) return <ScenarioLab {...props} />;
   switch (props.code) {
     case 'uniform-motion':
       return (

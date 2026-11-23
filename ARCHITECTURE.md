@@ -77,7 +77,7 @@ packages/
   i18n/                   messages/ru.json, kk.json, проверка полноты, глоссарий
   content-schema/         Zod-схемы: Topic, TaskTemplate, Test, Lab, Formula
   task-engine/            генерация по seed, проверяющие (number, units, formula, choice, match, order, cloze)
-  physics/                модели лабораторий (LabModel): uniform-motion (5a); ohm, circuits, lens (5b) …
+  physics/                модели лабораторий (LabModel); mechanics/ — решатели (chain, equilibrium, supported body); scenarios/ — сценарии-данные (ADR-0010)
   geometry/               планиметрия, стереометрия, сечения
   reports/                агрегаты прогресса, mastery, тексты отчётов
   payments/               интерфейс PaymentProvider + адаптеры

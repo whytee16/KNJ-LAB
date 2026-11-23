@@ -67,6 +67,15 @@ export const ohmLab: LabModel<{ U: number; R: number }, { I: number; P: number }
 - Лаборатории без движущихся тел анимируют процесс: в цепи заряды бегут по проводам со скоростью, пропорциональной току, «Запуск» и «Пауза» замыкают и размыкают ключ.
 - Эталон 3D: «Бросок под углом» (`packages/physics/src/projectile.ts`, `apps/web/src/features/labs/projectile-*.tsx`).
 
+## 7. Конструктор механики ([ADR-0010](docs/adr/0010-mechanics-constructor.md))
+
+Новая лаборатория механики — по возможности **сценарий**, а не ручная модель:
+
+1. Файл в `packages/physics/src/scenarios/`: параметры, результаты, `layout`, `duration`, `state`, `forces`, `status`, `charts` поверх решателя `chain`, `equilibrium` или `supported body`; добавить его в `SCENARIOS`.
+2. Тесты: сценарий проходит `scenarioSchema`, на углах области параметров нет NaN, результат совпадает с формулой учебника.
+3. Сообщения `labs.models.<code>.*` (RU/KK), миграция регистрации, черновики в `content/drafts/physics/<code>/`.
+4. Если нужной раскладки сцены нет, добавить её в `apps/web/src/features/labs/scenario/layout.ts` и в оба вида (3D и 2D).
+
 ## 5. Чек-лист приёмки лаборатории
 
 - [ ] Использует только компоненты `packages/ui/game` и токены

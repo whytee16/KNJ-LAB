@@ -1,0 +1,62 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "a", "kind": "choice", "values": [1, 3] }],
+      "constraints": [],
+      "answer": "1 * 9.8 / (a + 1)",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{a}} кг лежит на гладком (без трения) столе и связан нитью через блок с висящим грузом массой 1 кг. Найди ускорение системы ($g = 9{,}8$ м/с²). Ответ округли до сотых.",
+        "hints": ["$a = \\dfrac{m_2 g}{m_1 + m_2}$."],
+        "solution": "$a = \\dfrac{1 \\cdot 9{,}8}{ {{a}} + 1}$ м/с²."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [{ "name": "mu", "kind": "choice", "values": [0.1, 0.2] }],
+      "constraints": [],
+      "answer": "(1 - mu * 2) * 9.8 / 3",
+      "decimals": 2,
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой 2 кг на столе (коэффициент трения {{mu}}) связан нитью через блок с грузом массой 1 кг. Найди ускорение системы. $g = 9{,}8$ м/с². Ответ округли до сотых и проверь в лаборатории.",
+        "hints": ["$a = \\dfrac{m_2 - \\mu m_1}{m_1 + m_2}\\, g$."],
+        "solution": "$a = \\dfrac{1 - {{mu}} \\cdot 2}{3} \\cdot 9{,}8$ м/с²."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": { "type": "single_choice", "params": [], "constraints": [], "correct": 3 },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой 4 кг на столе с коэффициентом трения 0,5 связан нитью через блок с грузом 1 кг. Чему равна сила трения, действующая на брусок?",
+        "options": [
+          "$\\mu m_1 g \\approx 19{,}6$ Н",
+          "$\\mu m_2 g \\approx 4{,}9$ Н",
+          "Нулю",
+          "$m_2 g \\approx 9{,}8$ Н"
+        ],
+        "solution": "Наибольшая сила трения покоя $\\mu m_1 g = 19{,}6$ Н больше веса груза 9,8 Н, поэтому система покоится, и сила трения покоя уравновешивает натяжение: $F_{\\text{тр}} = m_2 g = 9{,}8$ Н."
+      }
+    }
+  }
+]

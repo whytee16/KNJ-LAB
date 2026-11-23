@@ -46,9 +46,21 @@ const read = <T>(file: string): T | null =>
 const bundles = readdirSync(root)
   .filter((s) => statSync(join(root, s)).isDirectory())
   .flatMap((s) => readdirSync(join(root, s)).map((b) => join(root, s, b)))
-  .filter((d) => statSync(d).isDirectory());
+  .filter((d) => statSync(d).isDirectory())
+  // Bundles that create a topic go first: other bundles may link their labs to that topic.
+  .sort(
+    (a, b) => Number(existsSync(join(b, 'topic.json'))) - Number(existsSync(join(a, 'topic.json'))),
+  );
 
-// Validate everything before touching the database.
+// Validate everything before touching the database: every JSON parses, every template passes.
+for (const dir of bundles)
+  for (const f of ['topic.json', 'lab.json', 'templates.json'])
+    try {
+      read(join(dir, f));
+    } catch (e) {
+      console.error(`${dir}/${f}: ${(e as Error).message}`);
+      process.exit(1);
+    }
 for (const dir of bundles) {
   for (const [i, t] of (read<TemplateDraft[]>(join(dir, 'templates.json')) ?? []).entries()) {
     const report = validateTemplate(t.spec, t.texts as never);
