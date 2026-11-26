@@ -1,4 +1,4 @@
-import { evalCondition, evalNumber } from './expr.ts';
+import { evalCondition, evalNumber, tryEvalReal } from './expr.ts';
 import { buildFigure, FigureError, type FigureScene } from './figure.ts';
 import { substitute, type EngineLocale } from './format.ts';
 import { mulberry32, randomInt, shuffle } from './prng.ts';
@@ -65,7 +65,16 @@ export function drawParams(spec: TaskSpec, rand: () => number): Record<string, n
   for (let attempt = 0; attempt < MAX_TRIES; attempt++) {
     const params: Record<string, number> = {};
     for (const p of spec.params) params[p.name] = drawParam(p, rand);
-    if (spec.constraints.every((c) => evalCondition(c, params))) return params;
+    let ok = true;
+    for (const d of spec.derived) {
+      const v = tryEvalReal(d.expr, params);
+      if (v === null) {
+        ok = false;
+        break;
+      }
+      params[d.name] = Math.round(v * 1e12) / 1e12;
+    }
+    if (ok && spec.constraints.every((c) => evalCondition(c, params))) return params;
   }
   throw new GenerationError(`constraints not satisfiable in ${MAX_TRIES} tries`);
 }

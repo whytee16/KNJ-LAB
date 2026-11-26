@@ -84,6 +84,46 @@ describe('figures', () => {
         voltmeter: 'total',
       },
       { kind: 'circuit', mode: 'series', resistors: ['R₁', 'R₂', 'R₃'], voltmeter: 'first' },
+      {
+        kind: 'scale',
+        instrument: 'beaker',
+        min: 0,
+        max: 100,
+        step: 2,
+        label: 20,
+        value: 64,
+        unit: 'мл',
+      },
+      {
+        kind: 'scale',
+        instrument: 'ruler',
+        min: 0,
+        max: 10,
+        step: 0.5,
+        label: 1,
+        value: 7.5,
+        unit: 'см',
+      },
+      {
+        kind: 'scale',
+        instrument: 'thermometer',
+        min: -20,
+        max: 40,
+        step: 2,
+        label: 10,
+        value: 24,
+        unit: '°C',
+      },
+      {
+        kind: 'scale',
+        instrument: 'dynamometer',
+        min: 0,
+        max: 5,
+        step: 0.1,
+        label: 1,
+        value: 2.3,
+        unit: 'Н',
+      },
     ];
     for (const s of specs) {
       const scene = buildFigure(figureSchema.parse(s), { c: 100, k: 2, b: 1, l1: 3 }, 'ru');
@@ -99,6 +139,28 @@ describe('figures', () => {
     expect(hyper.length).toBe(2);
     for (const h of hyper as { pts: [number, number][] }[])
       for (const [, y] of h.pts) expect(y >= -1e-9 && y <= 7 + 1e-9).toBe(true);
+  });
+
+  it('a scale needs a whole number of divisions and a value inside the range', () => {
+    const scale = (o: object) =>
+      buildFigure(
+        figureSchema.parse({
+          kind: 'scale',
+          instrument: 'beaker',
+          min: 0,
+          max: 100,
+          step: 2,
+          label: 20,
+          value: 64,
+          ...o,
+        }),
+        {},
+        'ru',
+      );
+    expect(texts(scale({}).prims)).toEqual(['0', '20', '40', '60', '80', '100']);
+    expect(() => scale({ step: 3 })).toThrow(FigureError);
+    expect(() => scale({ label: 5 })).toThrow(FigureError);
+    expect(() => scale({ value: 120 })).toThrow(FigureError);
   });
 
   it('a body that does not fit the vessel is refused', () => {
@@ -155,5 +217,35 @@ describe('figures', () => {
       { ru: { statement: 'Стороны {{a}}, {{b}}, {{c}}.', hints: [], solution: 'P' } },
     );
     expect(bad.ok).toBe(false);
+  });
+
+  it('derived values feed constraints, answers and texts', () => {
+    const spec = taskSpecSchema.parse({
+      type: 'number',
+      params: [
+        { name: 'v', kind: 'int', min: 2, max: 9 },
+        { name: 't', kind: 'int', min: 2, max: 9 },
+      ],
+      derived: [{ name: 's', expr: 'v * t' }],
+      constraints: ['s >= 10'],
+      answer: 's / t',
+    });
+    for (let seed = 1; seed < 30; seed++) {
+      const task = generateTask(
+        spec,
+        {
+          statement: 'Путь {{s}} м за {{t}} с.',
+          hints: [],
+          options: [],
+          solution: '$v = {{s}} / {{t}}$',
+        } as never,
+        seed,
+        'ru',
+      );
+      expect(task.params.s).toBe(task.params.v! * task.params.t!);
+      expect(task.params.s).toBeGreaterThanOrEqual(10);
+      expect(task.prompt.statement).toBe(`Путь ${task.params.s} м за ${task.params.t} с.`);
+      expect(task.expected).toMatchObject({ value: task.params.v });
+    }
   });
 });

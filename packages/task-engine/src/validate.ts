@@ -30,7 +30,10 @@ export function validateTemplate(
       samples,
     };
 
-  const names = new Set(spec.data.params.map((p) => p.name));
+  const names = new Set([
+    ...spec.data.params.map((p) => p.name),
+    ...spec.data.derived.map((d) => d.name),
+  ]);
   const locales = (Object.keys(textsInput) as EngineLocale[]).filter((l) => textsInput[l]);
   if (!locales.includes('ru')) problems.push({ code: 'ru_missing' });
 

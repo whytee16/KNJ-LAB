@@ -114,6 +114,20 @@ export const figureSchema = z.discriminatedUnion('kind', [
     labels: labels(['h', 'liquid', 'body'] as const),
   }),
   z.object({
+    kind: z.literal('scale'),
+    /** Instrument: a ruler with a bar, a measuring cylinder with liquid, a thermometer, a spring scale. */
+    instrument: z.enum(['ruler', 'beaker', 'thermometer', 'dynamometer']),
+    min: num,
+    max: num,
+    /** Value of one division. */
+    step: num,
+    /** Numbers are written every `label` units (a multiple of the step). */
+    label: num,
+    /** What the instrument shows. */
+    value: num,
+    unit: label.optional(),
+  }),
+  z.object({
     kind: z.literal('circuit'),
     mode: z.enum(['series', 'parallel']),
     resistors: z.array(label).min(1).max(3),
@@ -509,6 +523,9 @@ export function buildFigure(
     case 'circuit':
       prims.push(...circuitPrims(spec, L));
       break;
+    case 'scale':
+      prims.push(...scalePrims(spec, n, L));
+      break;
   }
   return { kind: spec.kind, prims };
 }
@@ -725,4 +742,107 @@ function circuitPrims(
     }
   }
   return out.map((p) => (p.t === 'line' && !p.tone ? { ...p, tone: 'ink' as const } : p));
+}
+
+function scalePrims(
+  spec: Extract<FigureSpec, { kind: 'scale' }>,
+  n: (v: string | number) => number,
+  L: (s: string | undefined) => string | undefined,
+): Prim[] {
+  const min = n(spec.min);
+  const max = n(spec.max);
+  const step = n(spec.step);
+  const every = n(spec.label);
+  const value = n(spec.value);
+  const divisions = (max - min) / step;
+  if (!(max > min) || !(step > 0) || Math.abs(divisions - Math.round(divisions)) > 1e-6)
+    throw new FigureError('the range must hold a whole number of divisions');
+  if (Math.round(divisions) > 120) throw new FigureError('too many divisions');
+  const perLabel = every / step;
+  if (!(every > 0) || Math.abs(perLabel - Math.round(perLabel)) > 1e-6)
+    throw new FigureError('labels must fall on divisions');
+  if (value < min - 1e-9 || value > max + 1e-9) throw new FigureError('value out of range');
+  const LEN = 7;
+  const at = (v: number) => ((v - min) / (max - min)) * LEN;
+  const out: Prim[] = [];
+  const horizontal = spec.instrument === 'ruler';
+  const P = (along: number, across: number): Pt => (horizontal ? [along, across] : [across, along]);
+  // Body of the instrument.
+  if (spec.instrument === 'ruler') {
+    out.push({
+      t: 'poly',
+      pts: [P(-0.4, -0.2), P(LEN + 0.4, -0.2), P(LEN + 0.4, 1.3), P(-0.4, 1.3)],
+      closed: true,
+      tone: 'ink',
+    });
+    out.push({
+      t: 'poly',
+      pts: [P(0, 1.55), P(at(value), 1.55), P(at(value), 2.05), P(0, 2.05)],
+      closed: true,
+      fill: 'accent',
+      tone: 'ink',
+    });
+  } else if (spec.instrument === 'beaker') {
+    out.push({
+      t: 'poly',
+      pts: [P(0, 0), P(at(value), 0), P(at(value), 1.6), P(0, 1.6)],
+      closed: true,
+      fill: 'liquid',
+    });
+    out.push({
+      t: 'poly',
+      pts: [P(LEN + 0.6, 0), P(-0.2, 0), P(-0.2, 1.6), P(LEN + 0.6, 1.6)],
+      closed: false,
+      tone: 'ink',
+    });
+  } else if (spec.instrument === 'thermometer') {
+    out.push({
+      t: 'poly',
+      pts: [P(-0.3, 0.55), P(LEN + 0.3, 0.55), P(LEN + 0.3, 1.05), P(-0.3, 1.05)],
+      closed: true,
+      tone: 'ink',
+    });
+    out.push({ t: 'circle', c: P(-0.75, 0.8), r: 0.5, fill: 'accent', tone: 'ink' });
+    out.push({ t: 'line', a: P(-0.3, 0.8), b: P(at(value), 0.8), tone: 'accent', width: 5 });
+  } else {
+    out.push({
+      t: 'poly',
+      pts: [P(-0.4, 0), P(LEN + 0.4, 0), P(LEN + 0.4, 1.6), P(-0.4, 1.6)],
+      closed: true,
+      tone: 'ink',
+    });
+    // A spring scale has zero at the top: the pointer goes down as the force grows.
+    const pos = LEN - at(value);
+    out.push({ t: 'arrow', a: P(pos, 2.3), b: P(pos, 1.55), tone: 'accent' });
+  }
+  // Divisions: every one short, labelled ones long with a number.
+  const flip = spec.instrument === 'dynamometer';
+  for (let i = 0; i <= Math.round(divisions); i++) {
+    const v = min + i * step;
+    const pos = flip ? LEN - at(v) : at(v);
+    const major = Math.abs(i / perLabel - Math.round(i / perLabel)) < 1e-6;
+    // Ticks grow from the wall into the free side; a cylinder has them on its wall, numbers outside.
+    const base = spec.instrument === 'thermometer' ? 1.05 : spec.instrument === 'beaker' ? 1.6 : 0;
+    const dir = spec.instrument === 'beaker' ? -1 : 1;
+    out.push({
+      t: 'line',
+      a: P(pos, base),
+      b: P(pos, base + dir * (major ? 0.5 : 0.25)),
+      tone: 'ink',
+      width: major ? 1.4 : 0.9,
+    });
+    if (major)
+      out.push({
+        t: 'text',
+        at: P(pos, spec.instrument === 'beaker' ? base + 0.35 : base + 0.85),
+        s: String(Math.round(v * 1000) / 1000)
+          .replace('.', ',')
+          .replace('-', '−'),
+        anchor: horizontal ? 'middle' : 'start',
+      });
+  }
+  const u = L(spec.unit);
+  if (u)
+    out.push({ t: 'text', at: P(LEN + 0.9, 0.6), s: u, anchor: horizontal ? 'start' : 'middle' });
+  return out;
 }

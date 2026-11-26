@@ -34,6 +34,15 @@ const base = {
   params: z.array(paramSchema).max(10).default([]),
   /** mathjs boolean expressions over the params, e.g. "a != 0", "b > a". */
   constraints: z.array(z.string().min(1).max(200)).max(10).default([]),
+  /**
+   * Values computed from the params in order (mathjs), usable in constraints, answers, figures
+   * and texts — e.g. a given quantity made from nicer ones, or intermediate results for the
+   * step-by-step solution.
+   */
+  derived: z
+    .array(z.object({ name, expr: z.string().min(1).max(300) }))
+    .max(10)
+    .default([]),
   /** A drawing built from the params (ADR-0012); never shows the answer. */
   figure: figureSchema.optional(),
 };

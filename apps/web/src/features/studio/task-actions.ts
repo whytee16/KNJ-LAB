@@ -136,15 +136,16 @@ export async function saveTaskTemplate(
   const { spec, texts } = parsed as Required<typeof parsed>;
 
   const supabase = await createUserClient();
-  // The form does not edit figures (ADR-0012): an edited template keeps the one it had.
-  if (id && !spec.figure) {
+  // The form edits neither figures (ADR-0012) nor derived values: an edited template keeps them.
+  if (id) {
     const { data: current } = await supabase
       .from('task_templates')
       .select('spec')
       .eq('id', id)
       .maybeSingle();
-    const figure = (current?.spec as { figure?: typeof spec.figure } | null)?.figure;
-    if (figure) spec.figure = figure;
+    const prev = current?.spec as Pick<typeof spec, 'figure' | 'derived'> | null;
+    if (prev?.figure && !spec.figure) spec.figure = prev.figure;
+    if (prev?.derived?.length && !spec.derived?.length) spec.derived = prev.derived;
   }
   let templateId = id;
   if (!templateId) {

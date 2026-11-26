@@ -4,7 +4,7 @@
 // until a reviewer confirms in the studio that a teacher checked the text (mark_content_reviewed).
 //   DATABASE_URL=postgresql://... node --experimental-strip-types scripts/import-drafts.ts
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, sep } from 'node:path';
 import postgres from 'postgres';
 import { validateTemplate } from '../packages/task-engine/src/validate.ts';
 
@@ -27,6 +27,7 @@ type LabDraft = {
   hints: string[];
   topics: string[];
 };
+type BankDraft = { topic: string };
 type TemplateDraft = {
   lab?: boolean;
   type: string;
@@ -43,10 +44,13 @@ if (!url) {
 }
 const read = <T>(file: string): T | null =>
   existsSync(file) ? (JSON.parse(readFileSync(file, 'utf8')) as T) : null;
-const bundles = readdirSync(root)
-  .filter((s) => statSync(join(root, s)).isDirectory())
-  .flatMap((s) => readdirSync(join(root, s)).map((b) => join(root, s, b)))
-  .filter((d) => statSync(d).isDirectory())
+// Bundles: content/drafts/<subject>/<name> and the task bank content/drafts/bank/<subject>/<name>.
+const subdirs = (d: string) =>
+  readdirSync(d)
+    .map((x) => join(d, x))
+    .filter((x) => statSync(x).isDirectory());
+const bundles = subdirs(root)
+  .flatMap((s) => (s.endsWith(`${sep}bank`) ? subdirs(s).flatMap(subdirs) : subdirs(s)))
   // DRAFT_BUNDLES=physics/projectile,physics/atwood — import only these (tests, partial updates).
   .filter((d) => {
     const only = process.env.DRAFT_BUNDLES?.split(',')
@@ -87,7 +91,6 @@ try {
       const name = dir.slice(root.length + 1);
       const topic = read<TopicDraft>(join(dir, 'topic.json'));
       let topicId: string | null = null;
-      let topicCreated = false;
       if (topic) {
         const [existing] = await tx<
           { id: string }[]
@@ -99,7 +102,6 @@ try {
           const [row] = await tx<{ id: string }[]>`
             insert into public.topics (slug, subject_code) values (${topic.slug}, ${topic.subject}) returning id`;
           topicId = row!.id;
-          topicCreated = true;
           await tx`insert into public.topic_drafts (topic_id, locale, title, summary, objectives, theory, mistakes, content_origin)
                    values (${topicId}, ${topic.locale}, ${topic.title}, ${topic.summary}, ${topic.objectives},
                            ${topic.theory}, ${topic.mistakes}, 'ai_draft')`;
@@ -131,34 +133,50 @@ try {
       }
 
       const templates = read<TemplateDraft[]>(join(dir, 'templates.json')) ?? [];
-      // A bundle without its own topic attaches templates to the lab's first topic — once, while
-      // the lab has no questions yet (so a second run never duplicates them).
-      if (!topic && lab && labId && templates.length) {
-        const [hasTasks] = await tx`select 1 from public.lab_tasks where lab_id = ${labId} limit 1`;
+      // Task bank bundle: templates for an existing topic named in bank.json.
+      const bank = read<BankDraft>(join(dir, 'bank.json'));
+      if (bank) {
+        const [row] = await tx<
+          { id: string }[]
+        >`select id from public.topics where slug = ${bank.topic}`;
+        if (!row) throw new Error(`${name}: topic ${bank.topic} does not exist`);
+        topicId = row.id;
+      }
+      // A bundle without its own topic attaches templates to the lab's first topic.
+      if (!topicId && lab) {
         const [first] = await tx<
           { id: string }[]
         >`select id from public.topics where slug = ${lab.topics[0] ?? ''}`;
-        if (!hasTasks && first) {
-          topicId = first.id;
-          topicCreated = true;
-        }
+        topicId = first?.id ?? null;
       }
-      if (templates.length && topicId && topicCreated) {
-        let position = 0;
-        for (const t of templates) {
+      if (templates.length && topicId) {
+        // Every template has a stable key: a second run adds only templates that are new.
+        let created = 0;
+        const [maxPos] = labId
+          ? await tx<
+              { p: number }[]
+            >`select coalesce(max(position), 0) as p from public.lab_tasks where lab_id = ${labId}`
+          : [{ p: 0 }];
+        let position = Number(maxPos?.p ?? 0);
+        for (const [i, t] of templates.entries()) {
+          const key = `${name.replaceAll('\\', '/')}#${i + 1}`;
           const [tpl] = await tx<{ id: string }[]>`
-            insert into public.task_templates (topic_id, type, difficulty, spec, content_origin)
-            values (${topicId}, ${t.type}::public.task_type, ${t.difficulty}::public.difficulty, ${tx.json(t.spec as never)}, 'ai_draft')
+            insert into public.task_templates (topic_id, type, difficulty, spec, content_origin, draft_key)
+            values (${topicId}, ${t.type}::public.task_type, ${t.difficulty}::public.difficulty, ${tx.json(t.spec as never)}, 'ai_draft', ${key})
+            on conflict (draft_key) do nothing
             returning id`;
+          if (!tpl) continue;
+          created++;
           for (const [locale, texts] of Object.entries(t.texts))
             await tx`insert into public.task_template_texts (template_id, locale, texts)
-                     values (${tpl!.id}, ${locale}::public.app_locale, ${tx.json(texts as never)})`;
+                     values (${tpl.id}, ${locale}::public.app_locale, ${tx.json(texts as never)})`;
           if (t.lab && labId)
-            await tx`insert into public.lab_tasks (lab_id, template_id, position) values (${labId}, ${tpl!.id}, ${++position})`;
+            await tx`insert into public.lab_tasks (lab_id, template_id, position) values (${labId}, ${tpl.id}, ${++position})`;
         }
-        console.log(`${name}: ${templates.length} templates created (ai_draft, draft)`);
-      } else if (templates.length)
-        console.log(`${name}: templates skipped (topic already existed)`);
+        console.log(
+          `${name}: ${created} templates created (ai_draft, draft), ${templates.length - created} already there`,
+        );
+      } else if (templates.length) console.log(`${name}: templates skipped (no topic)`);
     }
   });
 } finally {

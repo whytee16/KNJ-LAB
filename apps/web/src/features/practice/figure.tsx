@@ -65,7 +65,7 @@ export function TaskFigure({ figure, label }: { figure: FigureScene; label: stri
         viewBox={`0 0 ${w.toFixed(0)} ${h.toFixed(0)}`}
         role="img"
         aria-label={label}
-        className="h-auto w-full max-w-[420px]"
+        className="h-auto max-h-[320px] w-full max-w-[420px]"
       >
         {figure.prims.map((p, i) => {
           const tone = ('tone' in p && p.tone) || 'ink';
