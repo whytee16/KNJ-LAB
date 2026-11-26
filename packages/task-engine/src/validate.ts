@@ -61,6 +61,12 @@ export function validateTemplate(
     for (let seed = 1; seed <= runs; seed++) {
       try {
         const task = generateTask(spec.data, texts, seed, locale);
+        // With numbers in the options two of them can coincide: then the choice is ambiguous.
+        const shown = (task.prompt.options ?? []).map((o) => o.text.trim());
+        if (new Set(shown).size !== shown.length) {
+          problems.push({ code: 'duplicate_options', locale, seed });
+          break;
+        }
         if (seed <= 3)
           samples.push({
             locale,

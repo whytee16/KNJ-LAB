@@ -1,0 +1,1853 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "int",
+          "min": 60,
+          "max": 180
+        }
+      ],
+      "constraints": [],
+      "answer": "l / 100",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длина парты {{l}} см. Выразите её в метрах.",
+        "hints": ["В одном метре 100 сантиметров."],
+        "solution": "$1\\ \\text{м} = 100\\ \\text{см}$, поэтому $l = {{l}} : 100$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "int",
+          "min": 2,
+          "max": 48
+        }
+      ],
+      "constraints": [],
+      "answer": "s * 1000",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расстояние между сёлами {{s}} км. Сколько это метров?",
+        "hints": ["Приставка «кило» означает 1000."],
+        "solution": "$1\\ \\text{км} = 1000\\ \\text{м}$: $s = {{s}} \\cdot 1000$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [15, 20, 25, 30, 40, 45]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * 60",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Урок длится {{t}} мин. Выразите это время в секундах.",
+        "hints": [],
+        "solution": "$1\\ \\text{мин} = 60\\ \\text{с}$: $t = {{t}} \\cdot 60$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "int",
+          "min": 2,
+          "max": 9
+        }
+      ],
+      "constraints": [],
+      "answer": "t * 3600",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд был в пути {{t}} ч. Сколько это секунд?",
+        "hints": ["В часе 60 минут, в минуте 60 секунд."],
+        "solution": "$1\\ \\text{ч} = 3600\\ \\text{с}$: $t = {{t}} \\cdot 3600$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "int",
+          "min": 120,
+          "max": 380
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 1000",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса яблока {{m}} г. Выразите её в килограммах.",
+        "hints": [],
+        "solution": "$1\\ \\text{кг} = 1000\\ \\text{г}$: $m = {{m}} : 1000$ кг."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "int",
+          "min": 12,
+          "max": 65
+        }
+      ],
+      "constraints": [],
+      "answer": "d / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Толщина книги {{d}} мм. Выразите её в сантиметрах.",
+        "hints": [],
+        "solution": "$1\\ \\text{см} = 10\\ \\text{мм}$: $d = {{d}} : 10$ см."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "int",
+          "min": 2,
+          "max": 20
+        }
+      ],
+      "constraints": [],
+      "answer": "v",
+      "tolerance": {},
+      "unit": "см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В шприце {{v}} мл лекарства. Сколько это кубических сантиметров?",
+        "hints": [],
+        "solution": "$1\\ \\text{мл} = 1\\ \\text{см}^3$, значит, $V = {{v}}\\ \\text{см}^3$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "int",
+          "min": 5,
+          "max": 15
+        }
+      ],
+      "constraints": [],
+      "answer": "v / 1000",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Объём ведра {{v}} л. Выразите его в кубических метрах.",
+        "hints": [],
+        "solution": "$1\\ \\text{м}^3 = 1000\\ \\text{л}$: $V = {{v}} : 1000\\ \\text{м}^3$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что из перечисленного является физической величиной?",
+        "hints": [],
+        "solution": "Физическая величина — это характеристика тела или явления, которую можно измерить: масса. Железо — вещество, линейка — прибор, килограмм — единица.",
+        "options": ["Масса", "Железо", "Линейка", "Килограмм"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая единица длины является основной в СИ?",
+        "hints": [],
+        "solution": "Основная единица длины в Международной системе единиц (СИ) — метр.",
+        "options": ["Метр", "Сантиметр", "Километр", "Миллиметр"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Каким прибором измеряют температуру?",
+        "hints": [],
+        "solution": "Температуру измеряют термометром; мензурка — объём, динамометр — силу, секундомер — время.",
+        "options": ["Термометром", "Мензуркой", "Динамометром", "Секундомером"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [14, 26, 38, 44, 52, 66, 74, 86]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "beaker",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "label": 20,
+        "value": "v",
+        "unit": "мл"
+      },
+      "answer": "v",
+      "tolerance": {},
+      "unit": "мл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой объём жидкости налит в мензурку (см. рисунок)?",
+        "hints": ["Найдите цену деления: между соседними числами 20 мл и 10 делений."],
+        "solution": "Цена деления мензурки 2 мл; уровень жидкости — на отметке {{v}} мл."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [3.5, 4, 5.5, 6, 6.5, 7.5, 8, 9.5]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "ruler",
+        "min": 0,
+        "max": 10,
+        "step": 0.5,
+        "label": 1,
+        "value": "l",
+        "unit": "см"
+      },
+      "answer": "l",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Определите длину бруска по линейке (см. рисунок).",
+        "hints": [],
+        "solution": "Цена деления линейки 0,5 см; правый край бруска — на отметке {{l}} см."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между физической величиной и её единицей в СИ.",
+        "hints": [],
+        "solution": "Основные единицы СИ: метр, килограмм, секунда; объём измеряют в кубических метрах.",
+        "options": ["Длина", "Масса", "Время", "Объём"],
+        "matches": ["метр (м)", "килограмм (кг)", "секунда (с)", "кубический метр (м³)"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица массы в СИ — ___.",
+        "hints": [],
+        "solution": "Основная единица массы в СИ — килограмм (кг).",
+        "accepted": ["килограмм", "кг", "килограмма"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "k",
+          "expr": "c == 5 ? 50 : 10 * c"
+        },
+        {
+          "name": "n",
+          "expr": "k / c"
+        },
+        {
+          "name": "v",
+          "expr": "c * 7"
+        }
+      ],
+      "figure": {
+        "kind": "scale",
+        "instrument": "beaker",
+        "min": 0,
+        "max": "c * 50",
+        "step": "c",
+        "label": "k",
+        "value": "v",
+        "unit": "мл"
+      },
+      "answer": "c",
+      "tolerance": {},
+      "unit": "мл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Определите цену деления мензурки (см. рисунок).",
+        "hints": [
+          "Возьмите два соседних штриха с числами, найдите разность чисел и разделите на число делений между ними."
+        ],
+        "solution": "Между соседними числами {{k}} мл и {{n}} делений: цена деления $\\dfrac{ {{k}} }{ {{n}} } = {{c}}$ мл."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [-16, -8, -4, 6, 14, 22, 28, 36]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "thermometer",
+        "min": -20,
+        "max": 40,
+        "step": 2,
+        "label": 10,
+        "value": "t",
+        "unit": "°C"
+      },
+      "answer": "t",
+      "tolerance": {},
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую температуру показывает термометр (см. рисунок)?",
+        "hints": ["Ниже нуля показания отрицательные."],
+        "solution": "Цена деления 2 °C; столбик доходит до отметки {{t}} °C."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [0.7, 1.3, 1.8, 2.4, 3.6, 4.2]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "dynamometer",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "label": 1,
+        "value": "f",
+        "unit": "Н"
+      },
+      "answer": "f",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую силу показывает динамометр (см. рисунок)?",
+        "hints": [],
+        "solution": "Цена деления динамометра 0,1 Н; указатель — на отметке {{f}} Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0, 10, 20, 40]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [4, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "b",
+          "expr": "a + c * n"
+        }
+      ],
+      "answer": "c",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Между штрихами шкалы с числами {{a}} и {{b}} находится {{n}} делений. Найдите цену деления.",
+        "hints": [],
+        "solution": "Цена деления $c = \\dfrac{ {{b}} - {{a}} }{ {{n}} } = {{c}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [1, 2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "c / 2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Цена деления линейки {{c}} мм. Чему равна погрешность измерения этой линейкой?",
+        "hints": [],
+        "solution": "Погрешность прибора принимают равной половине цены деления: $\\Delta = {{c}} : 2$ мм."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "l",
+          "kind": "int",
+          "min": 92,
+          "max": 178
+        }
+      ],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длину карандаша измерили линейкой с ценой деления 1 мм; край карандаша — на отметке {{l}} мм. Как правильно записать результат?",
+        "hints": [],
+        "solution": "Погрешность равна половине цены деления, $0{,}5$ мм: $L = ({{l}} \\pm 0{,}5)$ мм.",
+        "options": [
+          "$({{l}} \\pm 0{,}5)$ мм",
+          "$({{l}} \\pm 1)$ мм",
+          "$({{l}} \\pm 0{,}1)$ мм",
+          "${{l}}$ мм ровно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "int",
+          "min": 20,
+          "max": 120
+        }
+      ],
+      "constraints": [],
+      "answer": "v",
+      "tolerance": {},
+      "unit": "л"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Объём аквариума {{v}} дм³. Сколько литров воды в него помещается?",
+        "hints": [],
+        "solution": "$1\\ \\text{дм}^3 = 1\\ \\text{л}$: аквариум вмещает {{v}} л."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [600, 624, 1250, 2500, 4800]
+        }
+      ],
+      "constraints": [],
+      "answer": "s / 10000",
+      "tolerance": {},
+      "decimals": 4,
+      "unit": "м²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Площадь листа бумаги {{s}} см². Выразите её в квадратных метрах.",
+        "hints": ["В 1 м по 100 см, в 1 м² — $100 \\cdot 100$ см²."],
+        "solution": "$1\\ \\text{м}^2 = 100 \\cdot 100 = 10\\,000\\ \\text{см}^2$: $S = {{s}} : 10\\,000$ м²."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.2, 0.25, 0.4, 0.5, 1.2]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * 1000",
+      "tolerance": {},
+      "unit": "л"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В бочку налили {{v}} м³ воды. Сколько это литров?",
+        "hints": [],
+        "solution": "$1\\ \\text{м}^3 = 1000\\ \\text{л}$: $V = {{v}} \\cdot 1000$ л."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите длины в порядке возрастания.",
+        "hints": [],
+        "solution": "Переведём в метры: 2 500 мм = 2,5 м, 30 дм = 3 м, 320 см = 3,2 м, 0,5 км = 500 м.",
+        "options": ["2 500 мм", "30 дм", "320 см", "0,5 км"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какие из перечисленных единиц — основные единицы СИ?",
+        "hints": [],
+        "solution": "Основные единицы СИ: метр, килограмм, секунда. Километр, грамм и час — кратные или дольные единицы.",
+        "options": ["метр", "килограмм", "секунда", "километр", "грамм", "час"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "int",
+          "min": 1,
+          "max": 2
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 15, 20, 35, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "h * 3600 + m * 60",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Фильм длится {{h}} ч {{m}} мин. Сколько это секунд?",
+        "hints": [],
+        "solution": "$t = {{h}} \\cdot 3600 + {{m}} \\cdot 60$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1.5, 2.4, 3.2, 4.5, 7.8]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000",
+      "tolerance": {},
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Грузовик перевёз {{m}} т зерна. Выразите массу в килограммах.",
+        "hints": [],
+        "solution": "$1\\ \\text{т} = 1000\\ \\text{кг}$: $m = {{m}} \\cdot 1000$ кг."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что означает приставка «милли»?",
+        "hints": [],
+        "solution": "«Милли» — одна тысячная: 1 мм = 0,001 м.",
+        "options": [
+          "одна тысячная, $10^{-3}$",
+          "тысяча, $10^{3}$",
+          "одна сотая, $10^{-2}$",
+          "одна миллионная, $10^{-6}$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "int",
+          "min": 4,
+          "max": 12
+        },
+        {
+          "name": "b",
+          "kind": "int",
+          "min": 3,
+          "max": 8
+        },
+        {
+          "name": "c",
+          "kind": "int",
+          "min": 2,
+          "max": 6
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b * c",
+      "tolerance": {},
+      "unit": "см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длина бруска {{a}} см, ширина {{b}} см, высота {{c}} см. Найдите его объём.",
+        "hints": [],
+        "solution": "$V = a b c = {{a}} \\cdot {{b}} \\cdot {{c}}$ см³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 50, 60, 70]
+        },
+        {
+          "name": "dv",
+          "kind": "choice",
+          "values": [8, 12, 16, 24]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v2",
+          "expr": "v1 + dv"
+        }
+      ],
+      "figure": {
+        "kind": "scale",
+        "instrument": "beaker",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "label": 20,
+        "value": "v2",
+        "unit": "мл"
+      },
+      "answer": "v2 - v1",
+      "tolerance": {},
+      "unit": "см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В мензурке было {{v1}} мл воды. Когда в неё опустили камень, уровень поднялся до {{v2}} мл. Каков объём камня?",
+        "hints": ["Объём погружённого тела равен объёму вытесненной воды."],
+        "solution": "$V = V_2 - V_1 = {{v2}} - {{v1}} = {{dv}}$ см³ ($1$ мл $= 1$ см³)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 8, 10, 20]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        },
+        {
+          "name": "one",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v2",
+          "expr": "v1 + n * one"
+        }
+      ],
+      "answer": "(v2 - v1) / n",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В мензурку с водой опустили {{n}} одинаковых шариков, и уровень воды поднялся с {{v1}} мл до {{v2}} мл. Найдите объём одного шарика.",
+        "hints": [],
+        "solution": "$V_1 = \\dfrac{V_2 - V_1}{n} = \\dfrac{ {{v2}} - {{v1}} }{ {{n}} }$ см³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [100, 200, 250, 500]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [0.08, 0.1, 0.12]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "h",
+          "expr": "n * d"
+        }
+      ],
+      "answer": "h / n",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стопка из {{n}} листов бумаги имеет толщину {{h}} мм. Найдите толщину одного листа.",
+        "hints": ["Измерить один лист трудно — измеряют много листов и делят."],
+        "solution": "Метод рядов: $d = \\dfrac{h}{n} = \\dfrac{ {{h}} }{ {{n}} }$ мм."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [20, 25, 40, 50]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [0.4, 0.5, 0.8, 1]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "l",
+          "expr": "n * d / 10"
+        }
+      ],
+      "answer": "10 * l / n",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проволоку плотно намотали на карандаш: {{n}} витков заняли {{l}} см. Найдите диаметр проволоки в миллиметрах.",
+        "hints": [],
+        "solution": "$d = \\dfrac{l}{n} = \\dfrac{ {{l}} }{ {{n}} }$ см $= \\dfrac{10 \\cdot {{l}} }{ {{n}} }$ мм."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [35, 65, 115, 145, 170, 185]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "beaker",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "label": 50,
+        "value": "v",
+        "unit": "мл"
+      },
+      "answer": "v",
+      "tolerance": {},
+      "unit": "мл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой объём жидкости в мензурке (см. рисунок)?",
+        "hints": ["Сначала найдите цену деления."],
+        "solution": "Между числами 50 и 100 мл 10 делений: цена деления 5 мл. Уровень — на отметке {{v}} мл."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "int",
+          "min": 80,
+          "max": 160
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 * d / l",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длину стола измерили: $L = ({{l}} \\pm {{d}})$ см. Найдите относительную погрешность измерения в процентах.",
+        "hints": [],
+        "solution": "$\\varepsilon = \\dfrac{\\Delta L}{L} \\cdot 100\\% = \\dfrac{ {{d}} }{ {{l}} } \\cdot 100\\%$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "c1",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "c2",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две линейки: у первой цена деления {{c1}} мм, у второй — {{c2}} мм. Какой линейкой длину можно измерить точнее?",
+        "hints": [],
+        "solution": "Погрешность равна половине цены деления: у первой линейки $\\Delta = {{c1}}/2$ мм — меньше, значит, она точнее.",
+        "options": [
+          "Первой — у неё меньше цена деления",
+          "Второй — у неё больше цена деления",
+          "Одинаково",
+          "Точность от цены деления не зависит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "n",
+          "kind": "int",
+          "min": 40,
+          "max": 90
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [20, 24, 30, 36, 42]
+        }
+      ],
+      "constraints": [],
+      "answer": "(n + k / 2) * a^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "см²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы найти площадь листа клёна, его обвели на клетчатой бумаге со стороной клетки {{a}} см. Внутри контура {{n}} целых клеток и {{k}} неполных. Оцените площадь листа (неполную клетку считайте за половину).",
+        "hints": [],
+        "solution": "$S \\approx \\left(n + \\dfrac{k}{2}\\right) a^2 = \\left({{n}} + \\dfrac{ {{k}} }{2}\\right) \\cdot {{a}}^2$ см²."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 1.2, 2, 3.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "s * 10000",
+      "tolerance": {},
+      "unit": "см²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Площадь участка {{s}} м². Выразите её в квадратных сантиметрах.",
+        "hints": [],
+        "solution": "$1\\ \\text{м}^2 = 10\\,000\\ \\text{см}^2$: $S = {{s}} \\cdot 10\\,000$ см²."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [0.8, 1.2, 1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "t",
+          "expr": "n * p"
+        }
+      ],
+      "answer": "t / n",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Маятник совершил {{n}} колебаний за {{t}} с. Найдите время одного колебания.",
+        "hints": [],
+        "solution": "Метод рядов: $T = \\dfrac{t}{n} = \\dfrac{ {{t}} }{ {{n}} }$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "decimal",
+          "min": 54,
+          "max": 56,
+          "step": 0.1
+        },
+        {
+          "name": "b",
+          "kind": "decimal",
+          "min": 54,
+          "max": 56,
+          "step": 0.1
+        },
+        {
+          "name": "c",
+          "kind": "decimal",
+          "min": 54,
+          "max": 56,
+          "step": 0.1
+        }
+      ],
+      "constraints": [],
+      "answer": "(a + b + c) / 3",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длину шнура измерили трижды: {{a}} см, {{b}} см и {{c}} см. Найдите среднее значение.",
+        "hints": [],
+        "solution": "$\\bar L = \\dfrac{ {{a}} + {{b}} + {{c}} }{3}$ см."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "int",
+          "min": 1,
+          "max": 3
+        },
+        {
+          "name": "q",
+          "kind": "int",
+          "min": 1,
+          "max": 2
+        },
+        {
+          "name": "r",
+          "kind": "int",
+          "min": 1,
+          "max": 3
+        }
+      ],
+      "constraints": [],
+      "answer": "50 * p + 20 * q + 5 * r",
+      "tolerance": {},
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На чашку весов положили гири: {{p}} по 50 г, {{q}} по 20 г и {{r}} по 5 г. Весы уравновешены. Какова масса тела в граммах?",
+        "hints": [],
+        "solution": "$m = {{p}} \\cdot 50 + {{q}} \\cdot 20 + {{r}} \\cdot 5$ г."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "int",
+          "min": 4,
+          "max": 8
+        },
+        {
+          "name": "b",
+          "kind": "int",
+          "min": 2,
+          "max": 4
+        },
+        {
+          "name": "c",
+          "kind": "int",
+          "min": 3,
+          "max": 5
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b * c",
+      "tolerance": {},
+      "unit": "л"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Аквариум имеет форму прямоугольного параллелепипеда: {{a}} дм × {{b}} дм × {{c}} дм. Сколько литров воды в нём помещается?",
+        "hints": [],
+        "solution": "$V = {{a}} \\cdot {{b}} \\cdot {{c}}\\ \\text{дм}^3$, а $1\\ \\text{дм}^3 = 1$ л."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "int",
+          "min": 1,
+          "max": 3
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 15, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "h * 60 + 30 + m",
+      "tolerance": {},
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велопрогулка длилась {{h}},5 ч и ещё {{m}} мин. Сколько это минут?",
+        "hints": [],
+        "solution": "${{h}}{,}5$ ч $= {{h}} \\cdot 60 + 30$ мин; прибавляем {{m}} мин."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Погрешность измерения прибором обычно принимают равной ___ цены деления.",
+        "hints": [],
+        "solution": "Погрешность прибора равна половине цены деления шкалы.",
+        "accepted": ["половине", "половину", "половина"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "vm",
+          "kind": "choice",
+          "values": [100, 150, 200]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [60, 70, 85]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [3, 4, 6, 7]
+        }
+      ],
+      "constraints": ["vm > v0 + 10"],
+      "answer": "floor((vm - v0) / v)",
+      "tolerance": {},
+      "unit": "шт."
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мензурка вмещает {{vm}} мл, в ней {{v0}} мл воды. Сколько одинаковых гаек объёмом {{v}} см³ можно опустить в мензурку, чтобы вода не перелилась?",
+        "hints": ["Ответ — целое число: неполную гайку опустить нельзя."],
+        "solution": "Свободный объём ${{vm}} - {{v0}}$ мл; число гаек — целая часть от $\\dfrac{ {{vm}} - {{v0}} }{ {{v}} }$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [20, 25, 40, 50]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 2.5, 3, 4]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "e / n",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "{{n}} витков проволоки занимают {{l}} см; линейка измеряет длину с погрешностью {{e}} мм. С какой погрешностью найден диаметр проволоки (в мм)?",
+        "hints": [],
+        "solution": "Погрешность длины делится между всеми витками: $\\Delta d = \\dfrac{\\Delta l}{n} = \\dfrac{ {{e}} }{ {{n}} }$ мм."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [5000, 10000, 25000]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1.5, 2, 2.5, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b * (k / 100)^2 / 10000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "га"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На карте масштаба 1 : {{k}} прямоугольное поле имеет размеры {{a}} см × {{b}} см. Найдите площадь поля в гектарах (1 га = 10 000 м²).",
+        "hints": [],
+        "solution": "В натуре стороны ${{a}} \\cdot {{k}}$ см и ${{b}} \\cdot {{k}}$ см; переводим в метры (делим на 100), перемножаем и делим на 10 000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100000, 500000, 1000000, 2500000]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [3.2, 4.5, 6, 7.8]
+        }
+      ],
+      "constraints": [],
+      "answer": "d * k / 100000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расстояние между городами на карте масштаба 1 : {{k}} равно {{d}} см. Каково расстояние на местности в километрах?",
+        "hints": [],
+        "solution": "$s = {{d}} \\cdot {{k}}$ см; в 1 км $100\\,000$ см."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1.5, 1.8, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "h",
+          "expr": "n * d"
+        },
+        {
+          "name": "h2",
+          "expr": "(n + m) * d"
+        }
+      ],
+      "answer": "(h2 - h) / m",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стопка из {{n}} одинаковых монет имеет высоту {{h}} мм, а с ещё {{m}} такими же монетами — {{h2}} мм. Найдите толщину монеты.",
+        "hints": [],
+        "solution": "Добавленные монеты увеличили высоту на ${{h2}} - {{h}}$ мм: $d = \\dfrac{ {{h2}} - {{h}} }{ {{m}} }$ мм."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "int",
+          "min": 10,
+          "max": 30
+        },
+        {
+          "name": "b",
+          "kind": "int",
+          "min": 5,
+          "max": 20
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a + e) * (b + e)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "см²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стороны прямоугольника измерили: $a = ({{a}} \\pm {{e}})$ см, $b = ({{b}} \\pm {{e}})$ см. Какова наибольшая возможная площадь?",
+        "hints": [],
+        "solution": "Наибольшая площадь — при наибольших сторонах: $({{a}} + {{e}})({{b}} + {{e}})$ см²."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "l",
+          "kind": "int",
+          "min": 12,
+          "max": 48
+        }
+      ],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длину бруска измерили линейкой с ценой деления 1 см и получили {{l}} см. Какая запись результата верна?",
+        "hints": [],
+        "solution": "Погрешность — половина цены деления, $0{,}5$ см. Записывать больше знаков, чем позволяет прибор, нельзя.",
+        "options": [
+          "$({{l}} \\pm 0{,}5)$ см",
+          "$({{l}} \\pm 0{,}05)$ см",
+          "$({{l}} \\pm 1)$ мм",
+          "$({{l}}{,}0 \\pm 0{,}1)$ см"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [40, 50, 80, 100]
+        },
+        {
+          "name": "dv",
+          "kind": "choice",
+          "values": [1, 2, 2.5, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "dv * 1000 / n",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из бюретки вытекло {{n}} капель, и объём воды в ней уменьшился на {{dv}} мл. Найдите объём одной капли в кубических миллиметрах.",
+        "hints": [],
+        "solution": "$1\\ \\text{мл} = 1\\ \\text{см}^3 = 1000\\ \\text{мм}^3$: $V_1 = \\dfrac{ {{dv}} \\cdot 1000}{ {{n}} }$ мм³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1.4, 2.2, 3.6, 4.8, 6.4, 8.2]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "dynamometer",
+        "min": 0,
+        "max": 10,
+        "step": 0.2,
+        "label": 1,
+        "value": "f",
+        "unit": "Н"
+      },
+      "answer": "f",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую силу показывает динамометр (см. рисунок)? Обратите внимание на цену деления.",
+        "hints": [],
+        "solution": "Между соседними числами 1 Н и 5 делений: цена деления 0,2 Н. Указатель — на {{f}} Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [15, 25, 40, 75, 120]
+        }
+      ],
+      "constraints": [],
+      "answer": "q * 60 / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Насос перекачивает {{q}} л воды в минуту. Сколько кубических метров он перекачает за час?",
+        "hints": [],
+        "solution": "За час ${{q}} \\cdot 60$ л; $1\\ \\text{м}^3 = 1000$ л."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [0.3, 0.35, 0.4, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "x * 365 / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Волос растёт на {{x}} мм в сутки. На сколько сантиметров он вырастет за год (365 суток)?",
+        "hints": [],
+        "solution": "$l = {{x}} \\cdot 365$ мм $= \\dfrac{ {{x}} \\cdot 365}{10}$ см."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0, 10, 20]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "b",
+          "expr": "a + c * n"
+        }
+      ],
+      "answer": "(b - a) / c",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шкала прибора начинается с {{a}} и заканчивается на {{b}}, цена деления {{c}}. Сколько делений на шкале?",
+        "hints": [],
+        "solution": "$n = \\dfrac{b - a}{c} = \\dfrac{ {{b}} - {{a}} }{ {{c}} }$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги измерения объёма камня неправильной формы в правильном порядке.",
+        "hints": [],
+        "solution": "Сначала цена деления, затем начальный объём, погружение, новый объём и разность.",
+        "options": [
+          "Определить цену деления мензурки",
+          "Налить воду и записать её объём $V_1$",
+          "Опустить камень на нитке в воду",
+          "Записать новый уровень воды $V_2$",
+          "Вычислить объём камня $V = V_2 - V_1$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения об измерениях.",
+        "hints": [],
+        "solution": "Любое измерение имеет погрешность; цена деления — свойство конкретной шкалы.",
+        "options": [
+          "Чем меньше цена деления, тем точнее прибор",
+          "Погрешность прибора равна половине цены деления",
+          "Результат измерения записывают с погрешностью",
+          "Точное значение величины всегда можно измерить",
+          "Цена деления не зависит от прибора"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "one",
+          "kind": "choice",
+          "values": [0.4, 0.5, 0.8]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 150, 200]
+        },
+        {
+          "name": "mb",
+          "kind": "choice",
+          "values": [12, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "n * one"
+        },
+        {
+          "name": "mm",
+          "expr": "mb + k * one"
+        }
+      ],
+      "answer": "(mm - mb) / (m / n)",
+      "tolerance": {},
+      "unit": "шт."
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса {{n}} одинаковых скрепок {{m}} г. Сколько скрепок в коробке массой {{mm}} г (масса пустой коробки {{mb}} г)?",
+        "hints": [],
+        "solution": "Масса одной скрепки $\\dfrac{ {{m}} }{ {{n}} }$ г; скрепок в коробке $\\dfrac{ {{mm}} - {{mb}} }{ {{m}} / {{n}} }$."
+      }
+    }
+  }
+]

@@ -248,4 +248,16 @@ describe('figures', () => {
       expect(task.expected).toMatchObject({ value: task.params.v });
     }
   });
+
+  it('options that coincide for some numbers fail validation', () => {
+    const r = validateTemplate(
+      {
+        type: 'single_choice',
+        params: [{ name: 'a', kind: 'int', min: 1, max: 3 }],
+        correct: 0,
+      },
+      { ru: { statement: 'Сколько?', options: ['{{a}}', '2'], hints: [], solution: '' } },
+    );
+    expect(r.problems.map((p) => p.code)).toContain('duplicate_options');
+  });
 });

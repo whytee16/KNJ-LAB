@@ -5,6 +5,8 @@
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { validateTemplate } from '../packages/task-engine/src/validate.ts';
+import { generateTask } from '../packages/task-engine/src/generate.ts';
+import { taskSpecSchema, taskTextsSchema } from '../packages/task-engine/src/spec.ts';
 
 const RUNS = Number(process.env.CHECK_RUNS ?? 200);
 const root = join(import.meta.dirname, '..', 'content', 'drafts');
@@ -62,6 +64,22 @@ for (const bundle of bundles.sort()) {
       console.error(
         `${relative(root, file)} #${i + 1}: ${JSON.stringify(report.problems.slice(0, 3))}`,
       );
+      return;
+    }
+    // Numbers a student reads must be short: a derived value like 55,384615385 is a defect.
+    const spec = taskSpecSchema.parse(t.spec);
+    const texts = taskTextsSchema.parse(t.texts.ru);
+    for (let seed = 1; seed <= 60; seed++) {
+      const task = generateTask(spec, texts, seed, 'ru');
+      const shown = [task.prompt.statement, ...(task.prompt.options ?? []).map((o) => o.text)];
+      const long = shown.join(' ').match(/\d+[,.{}]+\d{4,}/);
+      if (long) {
+        errors++;
+        console.error(
+          `${relative(root, file)} #${i + 1}: long number «${long[0]}» in the statement (seed ${seed})`,
+        );
+        break;
+      }
     }
   });
 }

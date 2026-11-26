@@ -1,0 +1,2339 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [40, 45, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v * t"
+        }
+      ],
+      "answer": "s / t",
+      "tolerance": {},
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автобус проехал {{s}} км за {{t}} ч. Найдите его среднюю скорость.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{s}{t} = \\dfrac{ {{s}} }{ {{t}} }$ км/ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [8, 10, 12]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [4, 6, 9]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "(s1 + s2) / (t1 + t2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Турист прошёл {{s1}} км за {{t1}} ч, а затем {{s2}} км за {{t2}} ч. Найдите среднюю скорость на всём пути.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{s_1 + s_2}{t_1 + t_2} = \\dfrac{ {{s1}} + {{s2}} }{ {{t1}} + {{t2}} }$ км/ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [18, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v1 * t1 + v2 * t2) / (t1 + t2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипедист ехал {{t1}} ч со скоростью {{v1}} км/ч и {{t2}} ч со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "Весь путь $v_1 t_1 + v_2 t_2$, всё время $t_1 + t_2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что такое средняя скорость неравномерного движения?",
+        "hints": [],
+        "solution": "По определению $v_{ср} = \\dfrac{s}{t}$ — весь путь, делённый на всё время.",
+        "options": [
+          "Отношение всего пути ко всему времени движения",
+          "Среднее арифметическое скоростей на участках",
+          "Наибольшая скорость на пути",
+          "Скорость в конце пути"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ученик утверждает: «Средняя скорость всегда равна среднему арифметическому скоростей на участках». Прав ли он?",
+        "hints": [],
+        "solution": "Среднее арифметическое получается только при равных промежутках времени.",
+        "options": [
+          "Нет, это верно только если участки проходятся за равное время",
+          "Да, всегда",
+          "Да, если участки равны по длине",
+          "Нет, средняя скорость всегда больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [60, 70, 80, 90]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [3, 4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * t",
+      "tolerance": {},
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Средняя скорость поезда {{v}} км/ч. Какой путь он пройдёт за {{t}} ч?",
+        "hints": [],
+        "solution": "$s = v_{ср} t = {{v}} \\cdot {{t}}$ км."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20, 25, 30]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v * t"
+        }
+      ],
+      "answer": "s / v",
+      "tolerance": {},
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "За сколько часов пройдёт {{s}} км теплоход со средней скоростью {{v}} км/ч?",
+        "hints": [],
+        "solution": "$t = \\dfrac{s}{v_{ср}} = \\dfrac{ {{s}} }{ {{v}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 30, 40, 45]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [60, 72, 90]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v * t / 60"
+        }
+      ],
+      "answer": "s * 60 / t",
+      "tolerance": {},
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль проехал {{s}} км за {{t}} мин. Найдите среднюю скорость в км/ч.",
+        "hints": [],
+        "solution": "$t = \\dfrac{ {{t}} }{60}$ ч, $v_{ср} = \\dfrac{ {{s}} \\cdot 60}{ {{t}} }$ км/ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "va",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "vb",
+          "kind": "choice",
+          "values": [6, 8]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s1",
+          "expr": "va * t1"
+        },
+        {
+          "name": "t2",
+          "expr": "t1 + dt"
+        },
+        {
+          "name": "s2",
+          "expr": "s1 + vb * dt"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t2"],
+        "y": [0, "s2 * 1.15"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t1", "s1"],
+              ["t2", "s2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "s2 / t2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику пути (см. рисунок) найдите среднюю скорость за всё время движения.",
+        "hints": [],
+        "solution": "Весь путь {{s2}} м за {{t2}} с: $v_{ср} = \\dfrac{ {{s2}} }{ {{t2}} }$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Средняя скорость равна отношению всего пути ко всему ___ движения.",
+        "hints": [],
+        "solution": "$v_{ср} = s/t$: весь путь делят на всё время.",
+        "accepted": ["времени"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [10, 15]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "15 * t1 + s2"
+        }
+      ],
+      "answer": "s / (t1 + t0 + t2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипедист ехал {{t1}} ч, затем отдыхал {{t0}} ч и проехал ещё {{s2}} км за {{t2}} ч. Всего он проехал {{s}} км. Найдите среднюю скорость с учётом отдыха.",
+        "hints": [],
+        "solution": "Время остановки входит во всё время: $v_{ср} = \\dfrac{ {{s}} }{ {{t1}} + {{t0}} + {{t2}} }$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [600, 800, 900, 1200]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [15, 18, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * d / (t1 + t2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "До школы {{d}} м. Утром Аня шла {{t1}} мин, а обратно — {{t2}} мин. Найдите её среднюю скорость за дорогу туда и обратно (в м/мин).",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{2d}{t_1 + t_2} = \\dfrac{2 \\cdot {{d}} }{ {{t1}} + {{t2}} }$ м/мин."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между искомой величиной и формулой.",
+        "hints": [],
+        "solution": "Все три формулы — из определения средней скорости.",
+        "options": ["Средняя скорость", "Весь путь", "Всё время"],
+        "matches": ["$v_{ср} = s/t$", "$s = v_{ср} t$", "$t = s / v_{ср}$"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что влияет на среднюю скорость автобуса на маршруте?",
+        "hints": [],
+        "solution": "Средняя скорость — весь путь, делённый на всё время, включая стоянки.",
+        "options": [
+          "Время стоянок на остановках",
+          "Скорость движения между остановками",
+          "Длина маршрута",
+          "Цвет автобуса",
+          "Число пассажиров, если оно не меняет скорость и время"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [400]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "t",
+          "expr": "round(n * l / v, 1)"
+        }
+      ],
+      "answer": "n * l / t",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Бегун пробежал {{n}} кругов по стадиону длиной {{l}} м за {{t}} с. Найдите его среднюю скорость.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{n l}{t} = \\dfrac{ {{n}} \\cdot {{l}} }{ {{t}} }$ м/с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 60, 80]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [60, 90, 120]
+        }
+      ],
+      "constraints": ["v1 != v2"],
+      "answer": "2 * v1 * v2 / (v1 + v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Первую половину пути автомобиль ехал со скоростью {{v1}} км/ч, вторую — со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": ["Обозначьте половину пути буквой $s$ — она сократится."],
+        "solution": "Пусть весь путь $2s$: $t = \\dfrac{s}{v_1} + \\dfrac{s}{v_2}$, $v_{ср} = \\dfrac{2 v_1 v_2}{v_1 + v_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [50, 60, 70]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [80, 90, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v1 + v2) / 2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Первую половину времени поезд ехал со скоростью {{v1}} км/ч, вторую — со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "При равных промежутках времени $v_{ср} = \\dfrac{v_1 + v_2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [10, 12]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [15, 20]
+        },
+        {
+          "name": "v3",
+          "kind": "choice",
+          "values": [30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 / (1 / v1 + 1 / v2 + 1 / v3)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Три равных участка пути пройдены со скоростями {{v1}}, {{v2}} и {{v3}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{3s}{s/v_1 + s/v_2 + s/v_3} = \\dfrac{3}{1/v_1 + 1/v_2 + 1/v_3}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [40, 120]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "round(2 * v1 * v2 / (v1 + v2), 1)"
+        }
+      ],
+      "answer": "v * v1 / (2 * v1 - v)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Средняя скорость на всём пути {{v}} км/ч. Первую половину пути автомобиль ехал со скоростью {{v1}} км/ч. С какой скоростью он ехал вторую половину?",
+        "hints": [],
+        "solution": "Из $v = \\dfrac{2 v_1 v_2}{v_1 + v_2}$: $v_2 = \\dfrac{v v_1}{2 v_1 - v}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [120, 150, 180]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [60, 75, 90]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [0.75, 0.8]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "va",
+          "expr": "v * k"
+        }
+      ],
+      "answer": "60 * (s / va - s / v)",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль проехал {{s}} км, двигаясь со скоростью {{v}} км/ч, но из-за остановки его средняя скорость оказалась {{va}} км/ч. Сколько минут длилась остановка?",
+        "hints": [],
+        "solution": "Всё время $\\dfrac{s}{v_{ср}}$, время движения $\\dfrac{s}{v}$; остановка — разность."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "ts",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [5, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s1",
+          "expr": "v1 * t1"
+        },
+        {
+          "name": "t2",
+          "expr": "t1 + ts"
+        },
+        {
+          "name": "t3",
+          "expr": "t2 + dt"
+        },
+        {
+          "name": "s2",
+          "expr": "s1 + v2 * dt"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t3"],
+        "y": [0, "s2 * 1.15"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t1", "s1"],
+              ["t2", "s1"],
+              ["t3", "s2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "s2 / t3",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику пути (см. рисунок) найдите среднюю скорость за всё время, включая остановку.",
+        "hints": [],
+        "solution": "Весь путь {{s2}} м за {{t3}} с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [12, 15, 18]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [9, 10, 20]
+        }
+      ],
+      "constraints": ["v1 != v2"],
+      "answer": "2 * v1 * v2 / (v1 + v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из дома до озера велосипедист ехал со скоростью {{v1}} км/ч, а обратно — со скоростью {{v2}} км/ч. Найдите среднюю скорость за поездку туда и обратно.",
+        "hints": [],
+        "solution": "Пути туда и обратно равны: $v_{ср} = \\dfrac{2 v_1 v_2}{v_1 + v_2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [80, 100]
+        }
+      ],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два автомобиля проехали одинаковый путь. Первый половину ВРЕМЕНИ ехал со скоростью {{v1}} км/ч, половину — {{v2}} км/ч. Второй половину ПУТИ ехал со скоростью {{v1}} км/ч, половину — {{v2}} км/ч. Чья средняя скорость больше?",
+        "hints": [],
+        "solution": "У первого $\\dfrac{v_1 + v_2}{2}$, у второго $\\dfrac{2 v_1 v_2}{v_1 + v_2}$; при $v_1 \\ne v_2$ первое больше.",
+        "options": [
+          "Первого автомобиля",
+          "Второго автомобиля",
+          "Одинаковы",
+          "Зависит от длины пути"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [12, 18, 24]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [36, 54, 72]
+        },
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [600, 900, 1200]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 90, 120]
+        }
+      ],
+      "constraints": [],
+      "answer": "(s1 + s2 / 1000) / (s1 / v1 + t2 / 3600)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мотоциклист проехал {{s1}} км со скоростью {{v1}} км/ч, а затем {{s2}} м за {{t2}} с. Найдите среднюю скорость на всём пути в км/ч.",
+        "hints": [],
+        "solution": "Переводим второй участок: ${{s2}}$ м $= {{s2}}/1000$ км, ${{t2}}$ с $= {{t2}}/3600$ ч; делим весь путь на всё время."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h1",
+          "kind": "choice",
+          "values": [7, 8, 9]
+        },
+        {
+          "name": "dh",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "mm",
+          "kind": "choice",
+          "values": [30]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [60, 70, 80]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "h2",
+          "expr": "h1 + dh"
+        },
+        {
+          "name": "s",
+          "expr": "v * (dh + 0.5)"
+        }
+      ],
+      "answer": "s / (h2 - h1 + mm / 60)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд отправился в {{h1}}:00 и прибыл в {{h2}}:{{mm}}. Расстояние {{s}} км. Найдите среднюю скорость поезда.",
+        "hints": [],
+        "solution": "Время в пути ${{h2}} - {{h1}}$ ч и ${{mm}}$ мин $= ({{h2}} - {{h1}} + {{mm}}/60)$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [10, 15, 40]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v1 * t1 + v2 * t2) / (t1 + t2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пешеход шёл {{t1}} мин со скоростью {{v1}} км/ч, а затем {{t2}} мин со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "Пути $v_1 t_1$ и $v_2 t_2$ (время можно оставить в минутах — оно сократится)."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобили проехали по 120 км. Расположите их по возрастанию средней скорости.",
+        "hints": [],
+        "solution": "Чем меньше время на тот же путь, тем больше средняя скорость: 40, 48, 60, 80 км/ч.",
+        "options": ["за 3 ч", "за 2 ч 30 мин", "за 2 ч", "за 1 ч 30 мин"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о средней скорости.",
+        "hints": [],
+        "solution": "Средняя скорость — весь путь за всё время; она лежит между наименьшей и наибольшей скоростью.",
+        "options": [
+          "Остановки уменьшают среднюю скорость",
+          "Средняя скорость не может быть больше наибольшей скорости на пути",
+          "Средняя скорость всегда равна среднему арифметическому скоростей",
+          "При равномерном движении средняя скорость равна скорости движения",
+          "Средняя скорость не зависит от времени стоянок"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [5, 6]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t1 + t2"],
+        "y": [0, "v2 * 1.3"],
+        "lines": [
+          {
+            "points": [
+              [0, "v1"],
+              ["t1", "v1"],
+              ["t1", "v2"],
+              ["t1 + t2", "v2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "v, м/с"
+        }
+      },
+      "answer": "(v1 * t1 + v2 * t2) / (t1 + t2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость первые {{t1}} с была {{v1}} м/с, затем {{t2}} с — {{v2}} м/с (см. график скорости). Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "Путь — площадь под графиком скорости: $s = v_1 t_1 + v_2 t_2$; $v_{ср} = \\dfrac{s}{t_1 + t_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [48, 60, 72, 90]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [24, 30, 36, 45]
+        }
+      ],
+      "constraints": [],
+      "answer": "60 * s / v",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Средняя скорость автомобиля на пути из A в B {{v}} км/ч, расстояние {{s}} км. Сколько минут занял путь?",
+        "hints": [],
+        "solution": "$t = \\dfrac{s}{v_{ср}} = \\dfrac{ {{s}} }{ {{v}} }$ ч $= \\dfrac{60 \\cdot {{s}} }{ {{v}} }$ мин."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [30, 45, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [60, 75, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "v1 / 3 + 2 * v2 / 3",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Первую треть времени автомобиль ехал со скоростью {{v1}} км/ч, а остальное время — со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{v_1 t/3 + v_2 \\cdot 2t/3}{t} = \\dfrac{v_1 + 2 v_2}{3}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [80, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / (0.25 / v1 + 0.75 / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Первую четверть пути автомобиль ехал со скоростью {{v1}} км/ч, остальной путь — со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{s}{\\frac{s/4}{v_1} + \\frac{3s/4}{v_2}} = \\dfrac{1}{\\frac{1}{4 v_1} + \\frac{3}{4 v_2}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [50, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [90, 100]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [70, 75, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 * (v - v1) / (v2 - v)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд шёл {{t1}} ч со скоростью {{v1}} км/ч. Сколько часов ему нужно ехать со скоростью {{v2}} км/ч, чтобы средняя скорость на всём пути стала {{v}} км/ч?",
+        "hints": [],
+        "solution": "$\\dfrac{v_1 t_1 + v_2 t_2}{t_1 + t_2} = v$, откуда $t_2 = \\dfrac{t_1 (v - v_1)}{v_2 - v}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        },
+        {
+          "name": "l2",
+          "kind": "choice",
+          "values": [3, 4, 6]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [24, 30, 36]
+        }
+      ],
+      "constraints": [],
+      "answer": "(l1 + l2) / (l1 / v1 + l2 / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подъём на гору длиной {{l1}} км велосипедист проехал со скоростью {{v1}} км/ч, а спуск длиной {{l2}} км — со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{l_1 + l_2}{l_1/v_1 + l_2/v_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [60, 90, 120]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "round(2 * v1 * v2 / (v1 + v2), 1)"
+        }
+      ],
+      "answer": "v * v1 / (2 * v1 - v)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Туда автомобиль ехал со скоростью {{v1}} км/ч. С какой скоростью он должен ехать обратно, чтобы средняя скорость на всём пути туда и обратно была {{v}} км/ч?",
+        "hints": [],
+        "solution": "$v = \\dfrac{2 v_1 v_2}{v_1 + v_2}$, $v_2 = \\dfrac{v v_1}{2 v_1 - v}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [12, 15, 18]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [30, 36, 40]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "s / (s / v + n * t0 / 60)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автобус проходит маршрут {{s}} км со скоростью {{v}} км/ч между остановками и делает {{n}} остановок по {{t0}} мин. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "Время движения $\\dfrac{s}{v}$, стоянки ${{n}} \\cdot {{t0}}$ мин; делим путь на всё время."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [80, 100]
+        },
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [80, 120, 160]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "round((v1 * t1 + s2) / (t1 + s2 / v2), 1)"
+        }
+      ],
+      "answer": "(v - v1) * t1 / (1 - v / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль ехал {{t1}} ч со скоростью {{v1}} км/ч, а затем проехал некоторый путь со скоростью {{v2}} км/ч. Средняя скорость на всём пути {{v}} км/ч. Найдите длину второго участка.",
+        "hints": [],
+        "solution": "$\\dfrac{v_1 t_1 + s_2}{t_1 + s_2/v_2} = v$, откуда $s_2 = \\dfrac{(v - v_1) t_1}{1 - v/v_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "va",
+          "kind": "choice",
+          "values": [4, 6]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "vb",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s1",
+          "expr": "va * t1"
+        },
+        {
+          "name": "t2",
+          "expr": "t1 + dt"
+        },
+        {
+          "name": "s2",
+          "expr": "s1 + vb * dt"
+        },
+        {
+          "name": "tq",
+          "expr": "t2"
+        },
+        {
+          "name": "sq",
+          "expr": "s2"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t2 + 3"],
+        "y": [0, "(s2 + 3 * va) * 1.1"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t1", "s1"],
+              ["t2", "s2"],
+              ["t2 + 3", "s2 + 3 * va"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "sq / tq",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику пути (см. рисунок) найдите среднюю скорость за первые {{tq}} с.",
+        "hints": [],
+        "solution": "По графику за {{tq}} с пройдено {{sq}} м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [6, 10, 15]
+        },
+        {
+          "name": "d2",
+          "kind": "choice",
+          "values": [8, 10, 12]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [30, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "(d1 + d2) / (d1 / v1 + t0 / 60 + d2 / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мужчина прошёл {{d1}} км пешком со скоростью {{v1}} км/ч, ждал автобус {{t0}} мин и проехал на нём {{d2}} км со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "Всё время: ходьба, ожидание и поездка."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Может ли средняя скорость на пути быть больше наибольшей скорости на этом пути?",
+        "hints": [],
+        "solution": "Путь не больше $v_{max} t$, значит $v_{ср} = s/t \\le v_{max}$.",
+        "options": [
+          "Нет, она лежит между наименьшей и наибольшей скоростью",
+          "Да, если путь длинный",
+          "Да, при остановках",
+          "Может, если скорость менялась"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [100]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [12, 13]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [12, 14]
+        },
+        {
+          "name": "t3",
+          "kind": "choice",
+          "values": [13, 14]
+        },
+        {
+          "name": "t4",
+          "kind": "choice",
+          "values": [11, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "4 * l / (t1 + t2 + t3 + t4)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Эстафету 4 × {{l}} м пробежали за {{t1}} с, {{t2}} с, {{t3}} с и {{t4}} с. Найдите среднюю скорость команды.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{4 \\cdot {{l}} }{ {{t1}} + {{t2}} + {{t3}} + {{t4}} }$ м/с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [60, 90, 120]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [60, 72]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [80, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "60 * (s / v1 - s / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Водитель увеличил скорость на трассе длиной {{s}} км с {{v1}} до {{v2}} км/ч. Сколько минут он сэкономил?",
+        "hints": [],
+        "solution": "$\\Delta t = \\dfrac{s}{v_1} - \\dfrac{s}{v_2}$ ч; умножаем на 60."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [300, 600]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [60, 120]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [12, 18]
+        }
+      ],
+      "constraints": [],
+      "answer": "(s1 + v2 / 3.6 * t2 * 60) / (t1 + t2 * 60)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самокатчик проехал {{s1}} м за {{t1}} с, затем {{t2}} мин ехал со скоростью {{v2}} км/ч. Найдите среднюю скорость в м/с.",
+        "hints": [],
+        "solution": "Второй участок: скорость $\\dfrac{ {{v2}} }{3{,}6}$ м/с, время ${{t2}} \\cdot 60$ с."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между условием и средней скоростью ($v_1 = 30$ км/ч, $v_2 = 60$ км/ч).",
+        "hints": [],
+        "solution": "$\\frac{30 + 60}{2} = 45$; $\\frac{2 \\cdot 30 \\cdot 60}{90} = 40$.",
+        "options": [
+          "Половина времени с $v_1$, половина — с $v_2$",
+          "Половина пути с $v_1$, половина — с $v_2$",
+          "Весь путь со скоростью $v_1$",
+          "Весь путь со скоростью $v_2$"
+        ],
+        "matches": ["45 км/ч", "40 км/ч", "30 км/ч", "60 км/ч"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипедист ехал туда со скоростью 10 км/ч, обратно — 15 км/ч. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "$v_{ср} = \\frac{2 \\cdot 10 \\cdot 15}{25} = 12$ км/ч — меньше среднего арифметического 12,5.",
+        "options": [
+          "Средняя скорость 12 км/ч",
+          "Средняя скорость меньше 12,5 км/ч",
+          "Обратно он ехал меньше времени, чем туда",
+          "Средняя скорость 12,5 км/ч",
+          "Время туда и обратно одинаково"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "v3",
+          "kind": "choice",
+          "values": [70, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v1 * (v2 + v3) / (2 * v1 + v2 + v3)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Половину пути автомобиль ехал со скоростью {{v1}} км/ч. Половину оставшегося ВРЕМЕНИ — со скоростью {{v2}} км/ч, вторую половину — со скоростью {{v3}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "На второй половине пути средняя скорость $\\dfrac{v_2 + v_3}{2}$; дальше как для двух половин пути: $v_{ср} = \\dfrac{2 v_1 (v_2 + v_3)}{2 v_1 + v_2 + v_3}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "2 * v1"
+        }
+      ],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Туда автомобиль ехал со скоростью {{v1}} км/ч. Может ли он, вернувшись по той же дороге, получить среднюю скорость за поездку {{v}} км/ч?",
+        "hints": [],
+        "solution": "При $v = 2 v_1$ из $v_2 = \\dfrac{v v_1}{2 v_1 - v}$ знаменатель равен нулю: на путь туда уже ушло всё «допустимое» время.",
+        "options": [
+          "Нет: для этого обратно пришлось бы ехать бесконечно быстро",
+          "Да, если обратно ехать со скоростью {{v}} км/ч",
+          "Да, если обратно ехать вдвое быстрее",
+          "Да, при любой скорости больше {{v1}} км/ч"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1.5, 2, 3]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "round(2 * k * v2 / (k + 1), 1)"
+        }
+      ],
+      "answer": "v * (k + 1) / (2 * k)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль ехал по трассе, причём на первой половине пути его скорость была в {{k}} раза больше, чем на второй. Средняя скорость на всём пути {{v}} км/ч. Найдите скорость на второй половине пути.",
+        "hints": [],
+        "solution": "$v = \\dfrac{2 \\cdot k v_2 \\cdot v_2}{k v_2 + v_2} = \\dfrac{2k v_2}{k + 1}$, $v_2 = \\dfrac{v (k + 1)}{2k}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "dv",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [60, 120]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "t0",
+          "expr": "round(60 * (s / v - s / (v + dv)), 1)"
+        }
+      ],
+      "answer": "(-dv + sqrt(dv^2 + 4 * s * dv / (t0 / 60))) / 2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд вышел с опозданием на {{t0}} мин и, чтобы прийти вовремя, на перегоне {{s}} км увеличил скорость на {{dv}} км/ч. С какой скоростью он должен был ехать по расписанию?",
+        "hints": ["Составьте уравнение по разнице времени и решите квадратное уравнение."],
+        "solution": "$\\dfrac{s}{v} - \\dfrac{s}{v + \\Delta v} = t_0$, отсюда $v^2 + \\Delta v\\, v - \\dfrac{s \\Delta v}{t_0} = 0$ и положительный корень $v = \\dfrac{-\\Delta v + \\sqrt{\\Delta v^2 + 4 s \\Delta v / t_0}}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s1",
+          "expr": "v1 * t1"
+        },
+        {
+          "name": "t2",
+          "expr": "t1 + dt"
+        },
+        {
+          "name": "s2",
+          "expr": "s1 + v2 * dt"
+        },
+        {
+          "name": "ta",
+          "expr": "t1 / 2"
+        },
+        {
+          "name": "sa",
+          "expr": "v1 * ta"
+        },
+        {
+          "name": "tb",
+          "expr": "t2"
+        },
+        {
+          "name": "sb",
+          "expr": "s2"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t2"],
+        "y": [0, "s2 * 1.15"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t1", "s1"],
+              ["t2", "s2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "(sb - sa) / (tb - ta)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику пути (см. рисунок) найдите среднюю скорость на интервале от {{ta}} с до {{tb}} с.",
+        "hints": [],
+        "solution": "Путь за интервал ${{sb}} - {{sa}}$ м, время ${{tb}} - {{ta}}$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [60, 90]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [90, 100]
+        },
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "(s1 + s2) / (s1 / v1 + s2 / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Путь из A в B по шоссе {{s1}} км автомобиль проехал со скоростью {{v1}} км/ч, а вернулся по просёлочной дороге длиной {{s2}} км со скоростью {{v2}} км/ч. Найдите среднюю скорость за всю поездку.",
+        "hints": [],
+        "solution": "Весь путь $s_1 + s_2$, всё время $\\dfrac{s_1}{v_1} + \\dfrac{s_2}{v_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [5, 6, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v1 + v2)^2 / (4 * v1 * v2)",
+      "tolerance": {},
+      "decimals": 3
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два туриста проходят одинаковый путь: первый половину времени идёт со скоростью {{v1}} км/ч и половину — {{v2}} км/ч, второй половину пути с {{v1}} км/ч и половину — с {{v2}} км/ч. Во сколько раз средняя скорость первого больше?",
+        "hints": [],
+        "solution": "$\\dfrac{(v_1 + v_2)/2}{2 v_1 v_2/(v_1 + v_2)} = \\dfrac{(v_1 + v_2)^2}{4 v_1 v_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [80, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / (p / 100 / v1 + (1 - p / 100) / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "{{p}} % пути автомобиль ехал со скоростью {{v1}} км/ч, остальной путь — со скоростью {{v2}} км/ч. Найдите среднюю скорость.",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{1}{\\frac{p}{v_1} + \\frac{1 - p}{v_2}}$ (доля $p$ — в долях единицы)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [60, 75, 80]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [60, 90, 120]
+        }
+      ],
+      "constraints": ["v2 > v1"],
+      "derived": [
+        {
+          "name": "dt1",
+          "expr": "30 * (s / v1 - s / v2)"
+        },
+        {
+          "name": "dt2",
+          "expr": "30 * (s / v1 - s / v2)"
+        }
+      ],
+      "answer": "(dt1 + dt2) / 60 / (1 / v1 - 1 / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Если автомобиль едет со скоростью {{v1}} км/ч, он прибывает на {{dt1}} мин позже срока, а если со скоростью {{v2}} км/ч — на {{dt2}} мин раньше. Найдите расстояние.",
+        "hints": [],
+        "solution": "$\\dfrac{s}{v_1} - \\dfrac{s}{v_2} = \\dfrac{\\Delta t_1 + \\Delta t_2}{60}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сравните среднюю скорость на всём пути $\\bar v$ и среднее арифметическое скоростей двух равных по длине участков $\\dfrac{v_1 + v_2}{2}$ при $v_1 \\ne v_2$.",
+        "hints": [],
+        "solution": "$\\dfrac{2 v_1 v_2}{v_1 + v_2} < \\dfrac{v_1 + v_2}{2}$, так как $(v_1 - v_2)^2 > 0$: на медленном участке тело проводит больше времени.",
+        "options": [
+          "$\\bar v < \\dfrac{v_1 + v_2}{2}$",
+          "$\\bar v > \\dfrac{v_1 + v_2}{2}$",
+          "$\\bar v = \\dfrac{v_1 + v_2}{2}$",
+          "Зависит от длины пути"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи «половина пути с $v_1$, половина — с $v_2$».",
+        "hints": [],
+        "solution": "Средняя скорость — весь путь за всё время.",
+        "options": [
+          "Обозначить половину пути $s$",
+          "Найти время на каждой половине: $s/v_1$ и $s/v_2$",
+          "Найти всё время $t = s/v_1 + s/v_2$",
+          "Разделить весь путь $2s$ на всё время",
+          "Сократить $s$ и получить $\\frac{2 v_1 v_2}{v_1 + v_2}$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "ts",
+          "kind": "choice",
+          "values": [2]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [5, 6]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [3]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t1 + ts + t2"],
+        "y": [0, "(v1 * t1 + v2 * t2) * 1.15"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t1", "v1 * t1"],
+              ["t1 + ts", "v1 * t1"],
+              ["t1 + ts + t2", "v1 * t1 + v2 * t2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело прошло путь по графику (см. рисунок): участок 1 — {{v1}} м/с за {{t1}} с, остановка {{ts}} с, участок 2 — {{v2}} м/с за {{t2}} с. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Средняя скорость с учётом остановки меньше наибольшей скорости.",
+        "options": [
+          "Средняя скорость меньше {{v2}} м/с",
+          "На остановке путь не меняется",
+          "Средняя скорость равна среднему арифметическому скоростей",
+          "График на остановке горизонтален",
+          "Средняя скорость больше {{v2}} м/с"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "tp",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [10, 12]
+        }
+      ],
+      "constraints": ["tp > s1 / v1 + 0.5"],
+      "answer": "(s - s1) / (tp - s1 / v1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипедист должен был проехать {{s}} км за {{tp}} ч. Первые {{s1}} км он ехал со скоростью {{v1}} км/ч. С какой скоростью ему нужно ехать оставшийся путь, чтобы успеть?",
+        "hints": [],
+        "solution": "Осталось ${{s}} - {{s1}}$ км и ${{tp}} - \\dfrac{ {{s1}} }{ {{v1}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 60]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [80, 120]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "round(3 / (1 / v1 + 1 / v2 + 1 / w), 1)"
+        }
+      ],
+      "answer": "1 / (3 / v - 1 / v1 - 1 / v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль проехал первую треть пути со скоростью {{v1}} км/ч, вторую — со скоростью {{v2}} км/ч. Средняя скорость на всём пути оказалась {{v}} км/ч. С какой скоростью он проехал последнюю треть пути?",
+        "hints": [],
+        "solution": "$\\dfrac{3}{v} = \\dfrac{1}{v_1} + \\dfrac{1}{v_2} + \\dfrac{1}{v_3}$, отсюда $v_3 = \\dfrac{1}{3/v - 1/v_1 - 1/v_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [12, 15, 20]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [12, 15]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5, 2.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "abs((s / v2 + t0) - s / v1)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пешеход и велосипедист одновременно выехали из A в B ({{s}} км). Велосипедист ехал со скоростью {{v2}} км/ч, но по пути простоял {{t0}} ч; пешеход шёл без остановок со скоростью {{v1}} км/ч. На сколько часов раньше прибыл в B тот, кто прибыл первым?",
+        "hints": [],
+        "solution": "Время велосипедиста $\\dfrac{s}{v_2} + t_0$, пешехода $\\dfrac{s}{v_1}$; разность по модулю."
+      }
+    }
+  }
+]

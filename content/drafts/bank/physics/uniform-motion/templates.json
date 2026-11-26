@@ -1,0 +1,2113 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [40, 50, 60, 70, 80, 90]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * t",
+      "tolerance": {},
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль едет со скоростью {{v}} км/ч. Какой путь он проедет за {{t}} ч?",
+        "hints": [],
+        "solution": "$s = v t = {{v}} \\cdot {{t}}$ км."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [100, 200, 300, 400]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 1.2, 1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v * t"
+        }
+      ],
+      "answer": "s / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пешеход прошёл {{s}} м за {{t}} с. Найдите его скорость.",
+        "hints": [],
+        "solution": "$v = \\dfrac{s}{t} = \\dfrac{ {{s}} }{ {{t}} }$ м/с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 12, 15, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1.5, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v * t"
+        }
+      ],
+      "answer": "s / v",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "За какое время велосипедист, едущий со скоростью {{v}} км/ч, проедет {{s}} км?",
+        "hints": [],
+        "solution": "$t = \\dfrac{s}{v} = \\dfrac{ {{s}} }{ {{v}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [18, 36, 54, 72, 90, 108]
+        }
+      ],
+      "constraints": [],
+      "answer": "v / 3.6",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите скорость {{v}} км/ч в метрах в секунду.",
+        "hints": ["Чтобы перевести км/ч в м/с, разделите на 3,6."],
+        "solution": "$1\\ \\text{км/ч} = \\dfrac{1000\\ \\text{м}}{3600\\ \\text{с}} = \\dfrac{1}{3{,}6}$ м/с: $v = {{v}} : 3{,}6$ м/с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10, 15, 20, 25, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * 3.6",
+      "tolerance": {},
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите скорость {{v}} м/с в километрах в час.",
+        "hints": [],
+        "solution": "$v = {{v}} \\cdot 3{,}6$ км/ч."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое из движений можно считать равномерным?",
+        "hints": [],
+        "solution": "Равномерное движение — тело за любые равные промежутки времени проходит равные пути: так движется эскалатор.",
+        "options": [
+          "Эскалатор метро движется на прямом участке",
+          "Автобус отъезжает от остановки",
+          "Мяч падает с крыши",
+          "Машина тормозит перед светофором"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как называется линия, по которой движется тело?",
+        "hints": [],
+        "solution": "Линия движения — траектория; путь — её длина.",
+        "options": ["Траектория", "Путь", "Перемещение", "Координата"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v * t"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t"],
+        "y": [0, "s * 1.2"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t", "s"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "v",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику пути (см. рисунок) найдите скорость тела.",
+        "hints": ["Возьмите любую точку графика и разделите путь на время."],
+        "solution": "За {{t}} с тело прошло {{s}} м: $v = \\dfrac{ {{s}} }{ {{t}} } = {{v}}$ м/с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [6, 8]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v * t"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t"],
+        "y": [0, "s * 1.2"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t", "s"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "v * t1",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику (см. рисунок) определите путь, пройденный телом за {{t1}} с.",
+        "hints": [],
+        "solution": "Скорость $v = \\dfrac{ {{s}} }{ {{t}} } = {{v}}$ м/с, путь $s_1 = {{v}} \\cdot {{t1}}$ м."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Линия, по которой движется тело, называется ___.",
+        "hints": [],
+        "solution": "Траектория — линия движения тела.",
+        "accepted": ["траектория", "траекторией"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и её единицей в СИ.",
+        "hints": [],
+        "solution": "Путь — в метрах, время — в секундах, скорость — в метрах в секунду.",
+        "options": ["Путь", "Время", "Скорость"],
+        "matches": ["м", "с", "м/с"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пассажир сидит в едущем автобусе. Относительно чего он покоится?",
+        "hints": [],
+        "solution": "Покой и движение относительны: пассажир неподвижен относительно автобуса и движется относительно дороги.",
+        "options": [
+          "Относительно сиденья автобуса",
+          "Относительно дороги",
+          "Относительно встречной машины",
+          "Относительно дома у дороги"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [54, 72, 90]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        }
+      ],
+      "constraints": ["v1 / 3.6 > v2 + 1"],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль едет со скоростью {{v1}} км/ч, а велосипедист — {{v2}} м/с. Кто движется быстрее?",
+        "hints": [],
+        "solution": "Переведём скорость автомобиля: ${{v1}} : 3{,}6$ м/с — это больше, чем {{v2}} м/с.",
+        "options": ["Автомобиль", "Велосипедист", "Их скорости равны", "Сравнить нельзя"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 1.2, 1.5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * t * 60",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мальчик идёт со скоростью {{v}} м/с. Какой путь он пройдёт за {{t}} мин?",
+        "hints": ["Сначала переведите минуты в секунды."],
+        "solution": "$t = {{t}} \\cdot 60$ с, $s = v t = {{v}} \\cdot {{t}} \\cdot 60$ м."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какие из величин зависят от выбора тела отсчёта?",
+        "hints": [],
+        "solution": "Траектория, путь и скорость относительны; масса и время в школьной механике от тела отсчёта не зависят.",
+        "options": ["Траектория", "Скорость", "Путь", "Масса тела", "Время по часам"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [50, 60, 70]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [40, 50, 80]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1.5, 2, 2.5, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "d",
+          "expr": "(v1 + v2) * t"
+        }
+      ],
+      "answer": "d / (v1 + v2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расстояние между городами {{d}} км. Навстречу друг другу одновременно выехали два автомобиля со скоростями {{v1}} км/ч и {{v2}} км/ч. Через сколько часов они встретятся?",
+        "hints": ["При движении навстречу скорости складываются."],
+        "solution": "Скорость сближения $v_1 + v_2 = {{v1}} + {{v2}}$ км/ч; $t = \\dfrac{ {{d}} }{ {{v1}} + {{v2}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [12, 15, 18]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "d",
+          "expr": "(v1 - v2) * t"
+        }
+      ],
+      "answer": "d / (v1 - v2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипедист догоняет пешехода. Сейчас между ними {{d}} км; скорость велосипедиста {{v1}} км/ч, пешехода — {{v2}} км/ч. Через сколько часов велосипедист догонит пешехода?",
+        "hints": [],
+        "solution": "Скорость сближения $v_1 - v_2$; $t = \\dfrac{ {{d}} }{ {{v1}} - {{v2}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "x0",
+          "kind": "int",
+          "min": -20,
+          "max": 30
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 4, -2, -3]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "x0 + v * t",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Координата тела меняется по закону $x = {{x0}} + {{v}}t$ (м). Найдите координату через {{t}} с.",
+        "hints": [],
+        "solution": "$x = {{x0}} + {{v}} \\cdot {{t}}$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "x0",
+          "kind": "int",
+          "min": -10,
+          "max": 40
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 4, 5, -3, -6]
+        }
+      ],
+      "constraints": [],
+      "answer": "v",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Движение тела задано уравнением $x = {{x0}} + ({{v}})t$ (м). Чему равна скорость тела (с учётом знака)?",
+        "hints": [],
+        "solution": "В уравнении $x = x_0 + v t$ коэффициент при $t$ — скорость: $v = {{v}}$ м/с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0, 10]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "tm",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "b",
+          "expr": "a + (v1 + v2) * tm"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "tm * 1.5"],
+        "lines": [
+          {
+            "points": [
+              [0, "a"],
+              ["tm * 1.5", "a + v1 * tm * 1.5"]
+            ],
+            "label": "x₁"
+          },
+          {
+            "points": [
+              [0, "b"],
+              ["tm * 1.5", "b - v2 * tm * 1.5"]
+            ],
+            "label": "x₂"
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "x, м"
+        }
+      },
+      "answer": "(b - a) / (v1 + v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Графики движения двух тел показаны на рисунке: $x_1 = {{a}} + {{v1}}t$, $x_2 = {{b}} - {{v2}}t$ (м). Через сколько секунд тела встретятся?",
+        "hints": [],
+        "solution": "Встреча: $x_1 = x_2$: ${{a}} + {{v1}}t = {{b}} - {{v2}}t$, $t = \\dfrac{ {{b}} - {{a}} }{ {{v1}} + {{v2}} }$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [0.5, 0.75, 1]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [30, 45, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "l / (v1 + v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек идёт вверх по движущемуся эскалатору со скоростью {{v1}} м/с относительно ступенек; эскалатор движется со скоростью {{v2}} м/с. Длина эскалатора {{l}} м. За какое время человек поднимется?",
+        "hints": [],
+        "solution": "Скорости складываются: $t = \\dfrac{ {{l}} }{ {{v1}} + {{v2}} }$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 12, 15, 20]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "l",
+          "expr": "v * t"
+        }
+      ],
+      "answer": "3.6 * l / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд длиной {{l}} м проходит мимо столба за {{t}} с. Найдите скорость поезда в км/ч.",
+        "hints": [],
+        "solution": "Мимо столба поезд проходит свою длину: $v = \\dfrac{ {{l}} }{ {{t}} }$ м/с $= 3{,}6 \\cdot \\dfrac{ {{l}} }{ {{t}} }$ км/ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [120, 150, 200]
+        },
+        {
+          "name": "lt",
+          "kind": "choice",
+          "values": [300, 450, 600]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [15, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "(lt + l) / v",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд длиной {{l}} м едет со скоростью {{v}} м/с. За какое время он полностью пройдёт тоннель длиной {{lt}} м?",
+        "hints": ["Тоннель пройден, когда из него вышел последний вагон."],
+        "solution": "Поезд должен пройти длину тоннеля и свою длину: $t = \\dfrac{ {{lt}} + {{l}} }{ {{v}} }$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [15, 18, 20]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "(v + u) * t"
+        }
+      ],
+      "answer": "s / (v + u)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Катер плывёт по течению реки. Его скорость в стоячей воде {{v}} км/ч, скорость течения {{u}} км/ч. За какое время он пройдёт {{s}} км?",
+        "hints": [],
+        "solution": "По течению скорость $v + u$: $t = \\dfrac{ {{s}} }{ {{v}} + {{u}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [3, 5, 6, 9]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [15, 20, 25, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "s * 1000 / (t * 60)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лыжник прошёл {{s}} км за {{t}} мин. Найдите его скорость в м/с.",
+        "hints": [],
+        "solution": "$v = \\dfrac{ {{s}} \\cdot 1000\\ \\text{м} }{ {{t}} \\cdot 60\\ \\text{с} }$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "(x - a) / v",
+      "variables": ["x", "a", "v"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите время $t$ из уравнения движения $x = a + v t$ (запишите выражение через $x$, $a$, $v$).",
+        "hints": [],
+        "solution": "$v t = x - a$, отсюда $t = \\dfrac{x - a}{v}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "x0",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "x1",
+          "expr": "x0 + v * t1"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t1"],
+        "y": [0, "x1 * 1.15"],
+        "lines": [
+          {
+            "points": [
+              [0, "x0"],
+              ["t1", "x1"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "x, м"
+        }
+      },
+      "answer": "(x1 - x0) / t1",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику координаты (см. рисунок) найдите скорость тела.",
+        "hints": [],
+        "solution": "$v = \\dfrac{x_1 - x_0}{t_1} = \\dfrac{ {{x1}} - {{x0}} }{ {{t1}} }$ м/с."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите в порядке возрастания скорости.",
+        "hints": [],
+        "solution": "5 км/ч ≈ 1,4 м/с; 90 км/ч = 25 м/с.",
+        "options": ["улитка 1 мм/с", "пешеход 5 км/ч", "велосипедист 6 м/с", "автомобиль 90 км/ч"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 1.5, 2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "340 * t / 2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Эхо от скалы вернулось через {{t}} с после крика. Скорость звука 340 м/с. Каково расстояние до скалы?",
+        "hints": ["Звук идёт до скалы и обратно."],
+        "solution": "Звук прошёл путь туда и обратно: $s = \\dfrac{340 \\cdot {{t}} }{2}$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [3, 5, 6, 8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.34 * t",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Гром услышали через {{t}} с после вспышки молнии. Скорость звука 340 м/с. На каком расстоянии ударила молния (в км)?",
+        "hints": [],
+        "solution": "Свет приходит почти мгновенно; $s = 340 \\cdot {{t}}$ м $= 0{,}34 \\cdot {{t}}$ км."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [90, 108, 126]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [54, 72]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v1 - v2) / 3.6",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два автомобиля едут в одном направлении со скоростями {{v1}} км/ч и {{v2}} км/ч. Найдите скорость первого относительно второго в м/с.",
+        "hints": [],
+        "solution": "$v_{отн} = v_1 - v_2 = {{v1}} - {{v2}}$ км/ч; делим на 3,6."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [54, 72]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [36, 54, 72]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v1 + v2) / 3.6 * t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пассажир поезда, идущего со скоростью {{v1}} км/ч, видит, что встречный поезд, идущий со скоростью {{v2}} км/ч, проходит мимо него за {{t}} с. Какова длина встречного поезда?",
+        "hints": [],
+        "solution": "Скорость встречного поезда относительно пассажира $\\dfrac{ {{v1}} + {{v2}} }{3{,}6}$ м/с; $l = v_{отн} t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [60, 80, 120]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "u * d / v",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лодка переплывает реку шириной {{d}} м, держа курс перпендикулярно берегу. Скорость лодки относительно воды {{v}} м/с, скорость течения {{u}} м/с. На сколько метров её снесёт вниз по течению?",
+        "hints": [],
+        "solution": "Время переправы $t = \\dfrac{ {{d}} }{ {{v}} }$; снос $s = u t = \\dfrac{ {{u}} \\cdot {{d}} }{ {{v}} }$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0, 20]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "tm",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "b",
+          "expr": "a + (v1 + v2) * tm"
+        }
+      ],
+      "answer": "a + v1 * (b - a) / (v1 + v2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Движение двух тел: $x_1 = {{a}} + {{v1}}t$, $x_2 = {{b}} - {{v2}}t$ (м). Найдите координату места встречи.",
+        "hints": [],
+        "solution": "Время встречи $t = \\dfrac{ {{b}} - {{a}} }{ {{v1}} + {{v2}} }$, координата $x = {{a}} + {{v1}} t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [12, 15, 18]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [36, 45, 54]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "v1 * t0 / (v2 - v1)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из пункта А выехал велосипедист со скоростью {{v1}} км/ч. Через {{t0}} ч вслед за ним выехал мотоциклист со скоростью {{v2}} км/ч. Через сколько часов после своего выезда мотоциклист догонит велосипедиста?",
+        "hints": [],
+        "solution": "К выезду мотоциклиста отставание ${{v1}} \\cdot {{t0}}$ км; скорость сближения ${{v2}} - {{v1}}$; $t = \\dfrac{ {{v1}} {{t0}} }{ {{v2}} - {{v1}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "va",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "vb",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s1",
+          "expr": "va * t1"
+        },
+        {
+          "name": "t2",
+          "expr": "t1 + dt"
+        },
+        {
+          "name": "s2",
+          "expr": "s1 + vb * dt"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t2"],
+        "y": [0, "s2 * 1.15"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t1", "s1"],
+              ["t2", "s2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "(s2 - s1) / (t2 - t1)",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику (см. рисунок) найдите скорость тела на втором участке движения.",
+        "hints": [],
+        "solution": "На втором участке путь ${{s2}} - {{s1}}$ м за ${{t2}} - {{t1}}$ с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [8, 10, 12]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t"],
+        "y": [0, "v * (t - t0) * 1.2"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["t0", 0],
+              ["t", "v * (t - t0)"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "s, м"
+        }
+      },
+      "answer": "v * (t - t0)",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело стояло {{t0}} с, а затем двигалось равномерно со скоростью {{v}} м/с. Какой путь оно прошло за первые {{t}} с от начала наблюдения?",
+        "hints": [],
+        "solution": "Двигалось тело только ${{t}} - {{t0}}$ с: $s = {{v}} \\cdot ({{t}} - {{t0}})$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [8, 10, 12]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [15, 20]
+        },
+        {
+          "name": "lp",
+          "kind": "choice",
+          "values": [150, 200, 300]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "l",
+          "expr": "v * t2"
+        },
+        {
+          "name": "t1",
+          "expr": "round((l + lp) / v, 1)"
+        }
+      ],
+      "answer": "lp * t2 / (t1 - t2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд проходит мимо столба за {{t2}} с, а мимо платформы длиной {{lp}} м — за {{t1}} с. Найдите длину поезда.",
+        "hints": [],
+        "solution": "$v = \\dfrac{l}{t_2}$ и $l + l_p = v t_1$, откуда $l = \\dfrac{l_p t_2}{t_1 - t_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [60, 90, 120]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [90, 120, 180]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 * t2 / (t1 + t2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стоя на эскалаторе, человек поднимается за {{t1}} с, а поднимаясь пешком по неподвижному эскалатору — за {{t2}} с. За какое время он поднимется, идя по движущемуся эскалатору?",
+        "hints": ["Обозначьте длину эскалатора буквой — она сократится."],
+        "solution": "Скорости $\\dfrac{l}{t_1}$ и $\\dfrac{l}{t_2}$ складываются: $t = \\dfrac{t_1 t_2}{t_1 + t_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [16, 18, 20]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "(v + u) * t1"
+        },
+        {
+          "name": "t2",
+          "expr": "round(s / (v - u), 1)"
+        }
+      ],
+      "answer": "(s / t1 - s / t2) / 2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Катер проходит расстояние между пристанями по течению за {{t1}} ч, а против течения — за {{t2}} ч. Расстояние между пристанями {{s}} км. Найдите скорость течения.",
+        "hints": [],
+        "solution": "$v + u = \\dfrac{s}{t_1}$, $v - u = \\dfrac{s}{t_2}$; $u = \\dfrac{1}{2}\\left(\\dfrac{s}{t_1} - \\dfrac{s}{t_2}\\right)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [100, 200, 300]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [5, 6, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "l / (u - v) + l / (u + v)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Колонна солдат длиной {{l}} м идёт со скоростью {{v}} м/с. Связной едет на велосипеде из конца колонны в начало и обратно со скоростью {{u}} м/с. Сколько времени он затратит?",
+        "hints": [],
+        "solution": "Вперёд скорость сближения $u - v$, назад $u + v$: $t = \\dfrac{l}{u - v} + \\dfrac{l}{u + v}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1.5, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v1 + v2) * t",
+      "tolerance": {},
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из одной точки в противоположные стороны одновременно вышли два пешехода со скоростями {{v1}} км/ч и {{v2}} км/ч. Каким будет расстояние между ними через {{t}} ч?",
+        "hints": [],
+        "solution": "$s = (v_1 + v_2) t = ({{v1}} + {{v2}}) \\cdot {{t}}$ км."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "x0",
+          "kind": "int",
+          "min": 5,
+          "max": 50
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Движение тела описывается уравнением $x = {{x0}} - {{v}}t$ (м). Как движется тело?",
+        "hints": [],
+        "solution": "Коэффициент при $t$ отрицательный: скорость направлена против оси, движение равномерное.",
+        "options": [
+          "Равномерно, против направления оси $Ox$",
+          "Равномерно, по направлению оси $Ox$",
+          "Тело покоится",
+          "Ускоренно, против оси $Ox$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между уравнением движения (м) и описанием.",
+        "hints": [],
+        "solution": "Свободный член — начальная координата, коэффициент при $t$ — скорость.",
+        "options": ["$x = 5 + 2t$", "$x = 5 - 2t$", "$x = 2t$", "$x = 5$"],
+        "matches": [
+          "начинает из точки 5 м, движется по оси",
+          "начинает из точки 5 м, движется против оси",
+          "начинает из начала координат",
+          "покоится в точке 5 м"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [100, 200, 400, 600]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.15 * t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Радиолокатор принял отражённый сигнал через {{t}} мкс после отправки. Скорость радиоволн $3 \\cdot 10^8$ м/с. На каком расстоянии находится самолёт (в км)?",
+        "hints": [],
+        "solution": "Сигнал прошёл путь туда и обратно: $s = \\dfrac{3 \\cdot 10^8 \\cdot {{t}} \\cdot 10^{-6} }{2}$ м $= 0{,}15 \\cdot {{t}}$ км."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [12, 15, 24]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "s / (v + u) + s / (v - u)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лодка проплывает {{s}} км по течению и возвращается обратно. Скорость лодки в стоячей воде {{v}} км/ч, течения — {{u}} км/ч. Сколько часов займёт путь туда и обратно?",
+        "hints": [],
+        "solution": "$t = \\dfrac{s}{v + u} + \\dfrac{s}{v - u}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [4, 8, 9]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(t1 * t2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два автомобиля одновременно выехали навстречу друг другу из пунктов A и B. После встречи первому понадобилось {{t1}} ч, чтобы доехать до B, второму — {{t2}} ч до A. Через сколько часов после выезда они встретились?",
+        "hints": [],
+        "solution": "До встречи время $t$: $v_1 t = v_2 t_2$ и $v_2 t = v_1 t_1$. Перемножив, получаем $t^2 = t_1 t_2$, $t = \\sqrt{ {{t1}} \\cdot {{t2}} }$ ч."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "u * d / (2 * v)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два велосипедиста, находясь на расстоянии {{d}} км, едут навстречу друг другу, каждый со скоростью {{v}} км/ч. Муха летает между ними со скоростью {{u}} км/ч, пока они не встретятся. Какой путь пролетит муха?",
+        "hints": ["Не считайте полёты по отдельности — найдите общее время."],
+        "solution": "Время до встречи $t = \\dfrac{d}{2v}$; путь мухи $u t = \\dfrac{ {{u}} \\cdot {{d}} }{2 \\cdot {{v}} }$ км."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [200, 250, 300]
+        },
+        {
+          "name": "l2",
+          "kind": "choice",
+          "values": [400, 500, 600]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [90, 108]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [54, 72]
+        }
+      ],
+      "constraints": [],
+      "answer": "(l1 + l2) / ((v1 - v2) / 3.6)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорый поезд длиной {{l1}} м, идущий со скоростью {{v1}} км/ч, обгоняет товарный поезд длиной {{l2}} м, идущий со скоростью {{v2}} км/ч. Сколько секунд длится обгон?",
+        "hints": [],
+        "solution": "Относительная скорость $\\dfrac{ {{v1}} - {{v2}} }{3{,}6}$ м/с, относительный путь $l_1 + l_2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [3, 4, 6]
+        }
+      ],
+      "constraints": ["t2 > t1"],
+      "answer": "2 * t1 * t2 / (t2 - t1)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Катер проходит путь между пристанями по течению за {{t1}} ч, а против течения — за {{t2}} ч. За сколько часов этот путь проплывёт плот?",
+        "hints": [],
+        "solution": "$\\dfrac{s}{t_1} - \\dfrac{s}{t_2} = 2u$, время плота $\\dfrac{s}{u} = \\dfrac{2 t_1 t_2}{t_2 - t_1}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [90, 120, 150]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 * t2 / (t1 - t2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек поднимается пешком по неподвижному эскалатору за {{t2}} с, а стоя на движущемся вверх эскалаторе — за {{t1}} с. За какое время он спустится вниз по движущемуся вверх эскалатору, идя с той же скоростью относительно ступенек?",
+        "hints": [],
+        "solution": "Скорость человека $\\dfrac{l}{t_2}$, эскалатора $\\dfrac{l}{t_1}$; против движения $\\dfrac{l}{t_2} - \\dfrac{l}{t_1}$, время $\\dfrac{t_1 t_2}{t_1 - t_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0, 10]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [40, 60]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [5, 6]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "tt",
+          "kind": "choice",
+          "values": [4, 6, 8, 15]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, 16],
+        "lines": [
+          {
+            "points": [
+              [0, "a"],
+              [16, "a + v1 * 16"]
+            ],
+            "label": "x₁"
+          },
+          {
+            "points": [
+              [0, "b"],
+              [16, "b + v2 * 16"]
+            ],
+            "label": "x₂"
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "x, м"
+        }
+      },
+      "answer": "abs((b + v2 * tt) - (a + v1 * tt))",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графикам (см. рисунок) найдите расстояние между телами через {{tt}} с: $x_1 = {{a}} + {{v1}}t$, $x_2 = {{b}} + {{v2}}t$ (м).",
+        "hints": [],
+        "solution": "$|x_2 - x_1| = |({{b}} + {{v2}} \\cdot {{tt}}) - ({{a}} + {{v1}} \\cdot {{tt}})|$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [600, 800, 1200]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [500, 600, 800]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "s / (v + u) + s / (v - u)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самолёт летит из A в B и обратно; расстояние между городами {{s}} км, скорость самолёта относительно воздуха {{v}} км/ч. Ветер всё время дует от A к B со скоростью {{u}} км/ч. Сколько часов длится полёт туда и обратно?",
+        "hints": [],
+        "solution": "Туда скорость $v + u$, обратно $v - u$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [36, 54, 72]
+        }
+      ],
+      "constraints": [],
+      "answer": "atan(v / 3.6 / u) * 180 / pi",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "°"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Капли дождя падают вертикально со скоростью {{u}} м/с. Автомобиль едет со скоростью {{v}} км/ч. Под каким углом к вертикали видны следы капель на боковом стекле (в градусах)?",
+        "hints": [],
+        "solution": "Относительно машины капля имеет горизонтальную скорость $\\dfrac{ {{v}} }{3{,}6}$ м/с и вертикальную {{u}} м/с: $\\operatorname{tg}\\alpha = \\dfrac{v}{u}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [0.5, 1, 1.4, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "dt / (1 / 340 - 1 / 5100)",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По стальному рельсу ударили молотком. Человек у другого конца рельса услышал два звука с промежутком {{dt}} с. Скорость звука в воздухе 340 м/с, в стали 5100 м/с. Какова длина рельса?",
+        "hints": [],
+        "solution": "$\\dfrac{L}{340} - \\dfrac{L}{5100} = \\Delta t$, $L = \\dfrac{\\Delta t}{1/340 - 1/5100}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [12, 15, 16]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [9, 12, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "right_triangle",
+        "a": "v1 * t",
+        "b": "v2 * t",
+        "labels": {
+          "a": "{{v1}}·t",
+          "b": "{{v2}}·t",
+          "c": "?"
+        }
+      },
+      "answer": "sqrt((v1 * t)^2 + (v2 * t)^2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из одной точки одновременно выехали два велосипедиста: один на север со скоростью {{v1}} км/ч, другой на восток со скоростью {{v2}} км/ч. Каким будет расстояние между ними через {{t}} ч?",
+        "hints": [],
+        "solution": "Пути перпендикулярны: $d = \\sqrt{(v_1 t)^2 + (v_2 t)^2}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи о встрече двух тел в правильном порядке.",
+        "hints": [],
+        "solution": "Сначала система отсчёта, потом уравнения, условие встречи, время и координата.",
+        "options": [
+          "Выбрать ось и начало отсчёта",
+          "Записать уравнения $x_1(t)$ и $x_2(t)$",
+          "Приравнять координаты: $x_1 = x_2$",
+          "Найти время встречи",
+          "Подставить время в любое уравнение и найти место встречи"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело 1 движется по закону $x_1 = 10 + 2t$, тело 2 — $x_2 = 40 - 3t$ (м). Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Скорости разных знаков — навстречу; $10 + 2t = 40 - 3t$, $t = 6$ с, $x = 22$ м.",
+        "options": [
+          "Тела движутся навстречу друг другу",
+          "Тела встретятся через 6 с",
+          "Место встречи — координата 22 м",
+          "Скорость второго тела 40 м/с",
+          "Тела движутся в одну сторону"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [30, 40, 60]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [10, 12]
+        },
+        {
+          "name": "tp",
+          "kind": "choice",
+          "values": [2, 2.5, 3]
+        }
+      ],
+      "constraints": ["tp > s / 2 / v1 + 0.2"],
+      "answer": "(s / 2) / (tp - s / 2 / v1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипедист проехал первую половину пути со скоростью {{v1}} км/ч. С какой скоростью ему нужно ехать вторую половину, чтобы прибыть к сроку, если весь путь {{s}} км он планировал проехать за {{tp}} ч?",
+        "hints": [],
+        "solution": "На первую половину ушло $\\dfrac{ {{s}}/2 }{ {{v1}} }$ ч; оставшееся время $t_p - \\dfrac{s}{2 v_1}$, скорость $\\dfrac{s/2}{t_p - s/(2 v_1)}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [60, 80, 120]
+        },
+        {
+          "name": "t3",
+          "kind": "choice",
+          "values": [30, 40, 45]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 * t3 / (t1 - t3)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Эскалатор поднимает стоящего человека за {{t1}} с. Человек, идущий по эскалатору вверх, поднимается за {{t3}} с. За какое время он поднимется по неподвижному эскалатору?",
+        "hints": [],
+        "solution": "$\\dfrac{l}{t_3} = \\dfrac{l}{t_1} + \\dfrac{l}{t_2}$, откуда $t_2 = \\dfrac{t_1 t_3}{t_1 - t_3}$."
+      }
+    }
+  }
+]

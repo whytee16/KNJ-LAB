@@ -1,0 +1,1788 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 25, 40]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2.7, 7.8, 8.9, 11.3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "r * v"
+        }
+      ],
+      "answer": "m / v",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса бруска {{m}} г, объём {{v}} см³. Найдите плотность вещества.",
+        "hints": [],
+        "solution": "$\\rho = \\dfrac{m}{V} = \\dfrac{ {{m}} }{ {{v}} }$ г/см³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.002, 0.005, 0.01, 0.02, 0.1]
+        }
+      ],
+      "constraints": [],
+      "answer": "2700 * v",
+      "tolerance": {},
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Плотность алюминия 2700 кг/м³. Какова масса алюминиевой детали объёмом {{v}} м³?",
+        "hints": [],
+        "solution": "$m = \\rho V = 2700 \\cdot {{v}}$ кг."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [17.8, 44.5, 89, 178]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 8900",
+      "tolerance": {},
+      "decimals": 4,
+      "unit": "м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса медного слитка {{m}} кг, плотность меди 8900 кг/м³. Найдите объём слитка.",
+        "hints": [],
+        "solution": "$V = \\dfrac{m}{\\rho} = \\dfrac{ {{m}} }{8900}$ м³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.8, 1, 2.7, 7.8, 13.6]
+        }
+      ],
+      "constraints": [],
+      "answer": "r * 1000",
+      "tolerance": {},
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите плотность {{r}} г/см³ в кг/м³.",
+        "hints": [],
+        "solution": "$1\\ \\text{г/см}^3 = \\dfrac{0{,}001\\ \\text{кг}}{0{,}000001\\ \\text{м}^3} = 1000$ кг/м³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [900, 1000, 2700, 7800, 19300]
+        }
+      ],
+      "constraints": [],
+      "answer": "r / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите плотность {{r}} кг/м³ в г/см³.",
+        "hints": [],
+        "solution": "Делим на 1000: $\\rho = {{r}} : 1000$ г/см³."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких единицах измеряется плотность в СИ?",
+        "hints": [],
+        "solution": "В СИ масса — в килограммах, объём — в кубических метрах: кг/м³. г/см³ — внесистемная единица.",
+        "options": ["кг/м³", "г/см³", "кг·м³", "м³/кг"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "У какого из веществ плотность больше (по таблице плотностей)?",
+        "hints": [],
+        "solution": "Свинец ≈ 11 300 кг/м³, алюминий 2700, вода 1000, лёд 900 кг/м³.",
+        "options": ["Свинец", "Алюминий", "Вода", "Лёд"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1.5, 5, 10, 19]
+        }
+      ],
+      "constraints": [],
+      "answer": "v",
+      "tolerance": {},
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какова масса воды в бутыли объёмом {{v}} л? Плотность воды 1000 кг/м³.",
+        "hints": ["1 л воды имеет массу 1 кг."],
+        "solution": "$V = {{v}}$ л $= {{v}} \\cdot 0{,}001$ м³, $m = \\rho V = 1000 \\cdot {{v}} \\cdot 0{,}001 = {{v}}$ кг."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Плотность показывает, какова масса вещества в единице ___.",
+        "hints": [],
+        "solution": "Плотность — масса единицы объёма вещества: $\\rho = m/V$.",
+        "accepted": ["объёма", "объема"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между веществом и его плотностью (по таблице).",
+        "hints": [],
+        "solution": "Значения взяты из таблицы плотностей школьного справочника.",
+        "options": ["Вода", "Лёд", "Алюминий", "Железо"],
+        "matches": ["1000 кг/м³", "900 кг/м³", "2700 кг/м³", "7800 кг/м³"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "int",
+          "min": 2,
+          "max": 6
+        },
+        {
+          "name": "b",
+          "kind": "int",
+          "min": 2,
+          "max": 5
+        },
+        {
+          "name": "c",
+          "kind": "int",
+          "min": 1,
+          "max": 4
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2.7, 7.8, 8.9]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b * c * r",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок размерами {{a}} × {{b}} × {{c}} см изготовлен из вещества плотностью {{r}} г/см³. Найдите его массу.",
+        "hints": [],
+        "solution": "$V = {{a}} \\cdot {{b}} \\cdot {{c}}$ см³, $m = \\rho V$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Изменится ли масса гири, если её перенести с Земли на Луну?",
+        "hints": [],
+        "solution": "Масса — мера инертности тела, она не зависит от того, где тело находится.",
+        "options": [
+          "Нет, масса тела не зависит от места",
+          "Уменьшится в 6 раз",
+          "Увеличится",
+          "Станет равной нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [800, 900, 1000, 1250, 2000]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 / r",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "л"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой объём (в литрах) занимает 1 кг вещества плотностью {{r}} кг/м³?",
+        "hints": [],
+        "solution": "$V = \\dfrac{m}{\\rho} = \\dfrac{1}{ {{r}} }$ м³ $= \\dfrac{1000}{ {{r}} }$ л."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "7800 / 2700",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз масса кубика из железа (7800 кг/м³) больше массы такого же кубика из алюминия (2700 кг/м³)?",
+        "hints": [],
+        "solution": "При равных объёмах массы относятся как плотности: $\\dfrac{7800}{2700}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о плотности.",
+        "hints": [],
+        "solution": "Плотность не зависит от размеров куска — это свойство вещества.",
+        "options": [
+          "Плотность — характеристика вещества",
+          "При равных объёмах тело с большей плотностью тяжелее",
+          "Плотность зависит от массы куска вещества",
+          "Единица плотности в СИ — кг/м³",
+          "Плотность всех жидкостей одинакова"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [40, 50, 60, 80]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.8, 1, 1.2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "r * v"
+        }
+      ],
+      "figure": {
+        "kind": "scale",
+        "instrument": "beaker",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "label": 20,
+        "value": "v",
+        "unit": "мл"
+      },
+      "answer": "m / v",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса жидкости в мензурке {{m}} г (см. рисунок). Найдите её плотность.",
+        "hints": [],
+        "solution": "По мензурке $V = {{v}}$ мл $= {{v}}$ см³; $\\rho = \\dfrac{ {{m}} }{ {{v}} }$ г/см³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "dv",
+          "kind": "choice",
+          "values": [4, 5, 8, 10]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [7.8, 8.9, 11.3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v2",
+          "expr": "v1 + dv"
+        },
+        {
+          "name": "m",
+          "expr": "r * dv"
+        }
+      ],
+      "answer": "m / (v2 - v1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Уровень воды в мензурке поднялся с {{v1}} мл до {{v2}} мл, когда в неё опустили металлический шарик массой {{m}} г. Найдите плотность металла.",
+        "hints": [],
+        "solution": "$V = V_2 - V_1 = {{v2}} - {{v1}}$ см³, $\\rho = \\dfrac{m}{V}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "round(8.9 * v * 0.6, 1)"
+        }
+      ],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медный шар (8900 кг/м³) массой {{m}} кг имеет объём {{v}} дм³. Сплошной он или полый?",
+        "hints": [],
+        "solution": "Сплошной шар объёмом {{v}} дм³ имел бы массу $8{,}9 \\cdot {{v}}$ кг — больше {{m}} кг, значит, внутри полость.",
+        "options": [
+          "Полый: сплошной шар такого объёма был бы тяжелее",
+          "Сплошной",
+          "Определить нельзя",
+          "Сплошной, но сделан не из меди"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20, 40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.71 * v",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В бак объёмом {{v}} л налили бензин (710 кг/м³). Найдите массу бензина.",
+        "hints": [],
+        "solution": "$m = \\rho V = 710 \\cdot {{v}} \\cdot 0{,}001$ кг."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [6, 8, 9]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, 6, 7]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [3, 3.2]
+        }
+      ],
+      "constraints": [],
+      "answer": "1.29 * a * b * h",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите массу воздуха в классе размером {{a}} × {{b}} × {{h}} м. Плотность воздуха 1,29 кг/м³.",
+        "hints": [],
+        "solution": "$V = {{a}} \\cdot {{b}} \\cdot {{h}}$ м³, $m = 1{,}29\\, V$ кг."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [50, 80, 100]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b * c / 1000 * 7.8",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стальная пластина имеет размеры {{a}} мм × {{b}} мм × {{c}} мм. Плотность стали 7800 кг/м³ = 7,8 г/см³. Найдите массу пластины в граммах.",
+        "hints": ["$1\\ \\text{см}^3 = 1000\\ \\text{мм}^3$."],
+        "solution": "$V = \\dfrac{ {{a}} \\cdot {{b}} \\cdot {{c}} }{1000}$ см³, $m = 7{,}8\\, V$ г."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "0.93",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Плотность подсолнечного масла 930 кг/м³. Выразите её в г/см³.",
+        "hints": [],
+        "solution": "$930 : 1000 = 0{,}93$ г/см³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [52, 78, 104, 156]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * 2.7 / 7.8",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса железного бруска такая же, как у алюминиевого объёмом {{v}} см³. Найдите объём железного бруска. Плотности: алюминий 2,7 г/см³, железо 7,8 г/см³.",
+        "hints": [],
+        "solution": "Равные массы: $\\rho_1 V_1 = \\rho_2 V_2$, $V_2 = V_1 \\dfrac{2{,}7}{7{,}8}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5]
+        },
+        {
+          "name": "mm",
+          "kind": "choice",
+          "values": [10, 18, 25, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "ceil(mm / (0.9 * v))",
+      "tolerance": {},
+      "unit": "шт."
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько бутылок объёмом {{v}} л нужно, чтобы разлить {{mm}} кг масла (900 кг/м³)?",
+        "hints": ["Неполную бутылку тоже нужно взять."],
+        "solution": "Объём масла $\\dfrac{ {{mm}} }{900}$ м³ $= \\dfrac{ {{mm}} }{0{,}9}$ л; делим на {{v}} л и округляем вверх."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [9, 18, 36, 45]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m / 900 - m / 1000) * 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "л"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лёд массой {{m}} кг растаял. На сколько литров уменьшился объём? Плотность льда 900 кг/м³, воды 1000 кг/м³.",
+        "hints": [],
+        "solution": "$V_л = \\dfrac{m}{900}$, $V_в = \\dfrac{m}{1000}$; разность в м³ умножаем на 1000."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Три кубика одинакового объёма сделаны из льда, алюминия и свинца. У какого масса больше?",
+        "hints": [],
+        "solution": "При равном объёме масса тем больше, чем больше плотность; у свинца она наибольшая.",
+        "options": ["Свинцового", "Алюминиевого", "Ледяного", "Массы равны"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [89, 178, 445]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 8.9 / (s / 100) / 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медная проволока массой {{m}} г имеет площадь сечения {{s}} мм². Плотность меди 8,9 г/см³. Найдите длину проволоки в метрах.",
+        "hints": [],
+        "solution": "$V = \\dfrac{m}{\\rho}$ см³, сечение $S = {{s}}$ мм² $= {{s}}/100$ см², длина $l = V/S$ см; делим на 100."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите вещества в порядке возрастания плотности.",
+        "hints": [],
+        "solution": "Пробка ≈ 240, лёд 900, вода 1000, алюминий 2700, свинец 11 300 кг/м³.",
+        "options": ["Пробка", "Лёд", "Вода", "Алюминий", "Свинец"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Массу тела измеряют с помощью ___.",
+        "hints": [],
+        "solution": "Массу измеряют взвешиванием на весах.",
+        "accepted": ["весов", "весы"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m0",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m1",
+          "expr": "m0 + 0.8 * v"
+        }
+      ],
+      "answer": "(m1 - m0) / (v / 1000)",
+      "tolerance": {},
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса пустой канистры {{m0}} кг, канистры с керосином — {{m1}} кг. Объём канистры {{v}} л. Найдите плотность керосина.",
+        "hints": [],
+        "solution": "Масса керосина $m_1 - m_0$, объём $\\dfrac{ {{v}} }{1000}$ м³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [0.5, 0.6, 0.7]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "round(7 * v * f, 1)"
+        }
+      ],
+      "answer": "v - m / 7",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "дм³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чугунный шар массой {{m}} кг имеет объём {{v}} дм³. Плотность чугуна 7000 кг/м³. Найдите объём полости внутри шара.",
+        "hints": [],
+        "solution": "Объём чугуна $\\dfrac{m}{\\rho} = \\dfrac{ {{m}} }{7}$ дм³ ($\\rho = 7$ кг/дм³); полость ${{v}} - \\dfrac{ {{m}} }{7}$ дм³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "(8900 + 2700) / 2",
+      "tolerance": {},
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сплав получен из равных объёмов меди (8900 кг/м³) и алюминия (2700 кг/м³). Найдите плотность сплава (объём при сплавлении не меняется).",
+        "hints": [],
+        "solution": "При равных объёмах $\\rho = \\dfrac{\\rho_1 V + \\rho_2 V}{2V} = \\dfrac{\\rho_1 + \\rho_2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r1",
+          "kind": "choice",
+          "values": [7.8, 8.9]
+        },
+        {
+          "name": "r2",
+          "kind": "choice",
+          "values": [2.7, 4.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * r1 * r2 / (r1 + r2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сплав получен из равных масс двух металлов плотностью {{r1}} и {{r2}} г/см³. Найдите плотность сплава.",
+        "hints": [],
+        "solution": "$\\rho = \\dfrac{2m}{m/\\rho_1 + m/\\rho_2} = \\dfrac{2\\rho_1\\rho_2}{\\rho_1 + \\rho_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [100, 200, 300]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [80, 160, 240]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m1 + m2) / (m1 / 1 + m2 / 0.8)",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали {{m1}} г воды и {{m2}} г спирта (800 кг/м³). Найдите плотность смеси, считая, что объём смеси равен сумме объёмов.",
+        "hints": [],
+        "solution": "$V = \\dfrac{m_1}{1} + \\dfrac{m_2}{0{,}8}$ см³, $\\rho = \\dfrac{m_1 + m_2}{V}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m0",
+          "kind": "choice",
+          "values": [200, 250, 300]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [400, 500]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.8, 0.9, 0.93]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m1",
+          "expr": "m0 + v"
+        },
+        {
+          "name": "m2",
+          "expr": "m0 + r * v"
+        }
+      ],
+      "answer": "1000 * (m2 - m0) / (m1 - m0)",
+      "tolerance": {},
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса пустой бутылки {{m0}} г, с водой — {{m1}} г, с маслом — {{m2}} г. Найдите плотность масла.",
+        "hints": [],
+        "solution": "Объём бутылки $V = \\dfrac{m_1 - m_0}{\\rho_в}$; $\\rho_м = \\rho_в \\dfrac{m_2 - m_0}{m_1 - m_0}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dm",
+          "kind": "choice",
+          "values": [10, 20, 25, 40]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2.7, 7.8, 11.3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "r * dm"
+        }
+      ],
+      "answer": "1000 * m / dm",
+      "tolerance": {},
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сосуд, доверху наполненный водой, опустили металлическую деталь массой {{m}} г, и вылилось {{dm}} г воды. Найдите плотность металла.",
+        "hints": [],
+        "solution": "Объём детали равен объёму вылитой воды $V = \\dfrac{ {{dm}} }{1}$ см³; $\\rho = \\dfrac{m}{V}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dv",
+          "kind": "choice",
+          "values": [0.5, 0.8, 1]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [10.5, 19.3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "round(r * dv, 2)"
+        }
+      ],
+      "answer": "m / dv",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кольцо массой {{m}} г при погружении в мензурку подняло уровень воды на {{dv}} мл. Найдите плотность металла кольца в г/см³.",
+        "hints": [],
+        "solution": "$\\rho = \\dfrac{m}{V} = \\dfrac{ {{m}} }{ {{dv}} }$ г/см³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20, 30, 50]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [60, 75, 80, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.8 * v * p / 100",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "т"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Цистерна объёмом {{v}} м³ заполнена нефтью (800 кг/м³) на {{p}} %. Найдите массу нефти в тоннах.",
+        "hints": [],
+        "solution": "$m = \\rho V \\cdot \\dfrac{p}{100} = 800 \\cdot {{v}} \\cdot {{p}}/100$ кг; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "r2",
+          "kind": "choice",
+          "values": [5, 6]
+        },
+        {
+          "name": "r1",
+          "kind": "choice",
+          "values": [4, 4.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "7800 * pi * ((r2 / 100)^2 - (r1 / 100)^2) * l",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стальная труба длиной {{l}} м имеет внешний радиус {{r2}} см и внутренний {{r1}} см. Плотность стали 7800 кг/м³. Найдите массу трубы.",
+        "hints": [],
+        "solution": "$V = \\pi (R^2 - r^2) l$ (радиусы в метрах), $m = \\rho V$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "k2",
+          "expr": "k^2"
+        },
+        {
+          "name": "k3",
+          "expr": "k^3"
+        }
+      ],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ребро кубика увеличили в {{k}} раза, не меняя вещество. Во сколько раз увеличилась его масса?",
+        "hints": [],
+        "solution": "Объём куба пропорционален кубу ребра: $V \\propto a^3$, масса растёт в ${{k}}^3$ раз.",
+        "options": ["В {{k3}} раз", "В {{k}} раз", "В {{k2}} раз", "Не изменилась"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 8900 / (pi * (d / 1000)^2 / 4)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Моток медной проволоки диаметром {{d}} мм имеет массу {{m}} кг. Плотность меди 8900 кг/м³. Найдите длину проволоки.",
+        "hints": [],
+        "solution": "$S = \\dfrac{\\pi d^2}{4}$ (в м²), $V = \\dfrac{m}{\\rho}$, $l = \\dfrac{V}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "cap",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20, 35, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "ceil(1.5 * v / cap)",
+      "tolerance": {},
+      "unit": "рейс(ов)"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самосвал вмещает {{cap}} т груза. Сколько рейсов нужно, чтобы перевезти {{v}} м³ песка (1500 кг/м³)?",
+        "hints": [],
+        "solution": "Масса песка $1500 \\cdot {{v}}$ кг $= 1{,}5 \\cdot {{v}}$ т; делим на {{cap}} т и округляем вверх."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [500, 1000, 2000]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 0.25 * 0.12 * 0.065 * 1800 / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "т"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стену сложили из {{n}} кирпичей размером 25 × 12 × 6,5 см. Плотность кирпича 1800 кг/м³. Найдите массу стены в тоннах.",
+        "hints": [],
+        "solution": "Объём кирпича $0{,}25 \\cdot 0{,}12 \\cdot 0{,}065$ м³, масса кирпича $\\rho V$, всех — в {{n}} раз больше."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между задачей и формулой ответа.",
+        "hints": [],
+        "solution": "Все формулы следуют из определения плотности и способа измерения объёма.",
+        "options": [
+          "Плотность по массе и объёму",
+          "Масса по плотности и объёму",
+          "Объём по массе и плотности",
+          "Объём тела по мензурке"
+        ],
+        "matches": ["$\\rho = m/V$", "$m = \\rho V$", "$V = m/\\rho$", "$V = V_2 - V_1$"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Металлическую деталь распилили пополам. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Плотность — свойство вещества, а масса и объём делятся пополам.",
+        "options": [
+          "Плотность каждой половины та же",
+          "Масса каждой половины вдвое меньше",
+          "Объём каждой половины вдвое меньше",
+          "Плотность уменьшилась вдвое",
+          "Масса не изменилась"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "8.9 * v1 + 7.1 * v2"
+        },
+        {
+          "name": "v",
+          "expr": "v1 + v2"
+        }
+      ],
+      "answer": "8.9 * (m - 7.1 * v) / (8.9 - 7.1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сплав меди (8,9 г/см³) и цинка (7,1 г/см³) имеет массу {{m}} г и объём {{v}} см³. Найдите массу меди в сплаве.",
+        "hints": ["Составьте систему уравнений для масс и объёмов."],
+        "solution": "$m_1 + m_2 = m$, $\\dfrac{m_1}{\\rho_1} + \\dfrac{m_2}{\\rho_2} = V$, откуда $m_1 = \\dfrac{\\rho_1 (m - \\rho_2 V)}{\\rho_1 - \\rho_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [7.8, 8.9]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [0.5, 0.6, 0.75]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "round(r * v * f, 1)"
+        }
+      ],
+      "answer": "100 * (1 - m / (r * v))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шар объёмом {{v}} см³ из вещества плотностью {{r}} г/см³ имеет массу {{m}} г. Какую долю объёма шара (в %) занимает полость?",
+        "hints": [],
+        "solution": "Объём вещества $\\dfrac{m}{\\rho}$; доля полости $1 - \\dfrac{m}{\\rho V}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "vg",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        },
+        {
+          "name": "vs",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "round(19.3 * vg + 10.5 * vs, 1)"
+        },
+        {
+          "name": "dm",
+          "expr": "vg + vs"
+        }
+      ],
+      "answer": "19.3 * (m - 10.5 * dm) / (19.3 - 10.5)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Корона массой {{m}} г вытесняет {{dm}} г воды. Считая, что она из сплава золота (19,3 г/см³) и серебра (10,5 г/см³), найдите массу золота.",
+        "hints": [],
+        "solution": "Объём короны $V = {{dm}}$ см³; $m_з = \\dfrac{\\rho_з (m - \\rho_с V)}{\\rho_з - \\rho_с}$ — задача Архимеда."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [600, 700]
+        },
+        {
+          "name": "ms",
+          "kind": "choice",
+          "values": [50, 100, 150]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2.5, 2.6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m2",
+          "expr": "round(m1 + ms - ms / r, 1)"
+        }
+      ],
+      "answer": "1000 * ms / (m1 + ms - m2)",
+      "tolerance": {
+        "abs": 10
+      },
+      "decimals": 0,
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Бутылка с водой имеет массу {{m1}} г. В неё бросили {{ms}} г песка и долили воду доверху; масса стала {{m2}} г. Найдите плотность песчинок.",
+        "hints": [],
+        "solution": "Песок вытеснил воду массой $m_1 + m_s - m_2$; её объём равен объёму песка."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "r1",
+          "kind": "choice",
+          "values": [0.8, 0.9]
+        },
+        {
+          "name": "r2",
+          "kind": "choice",
+          "values": [1, 1.2]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 100 * r1 + (1 - p / 100) * r2",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали жидкости: {{p}} % объёма — плотностью {{r1}} г/см³, остальное — плотностью {{r2}} г/см³. Найдите плотность смеси.",
+        "hints": [],
+        "solution": "$\\rho = \\dfrac{\\rho_1 pV + \\rho_2 (1 - p)V}{V} = p\\rho_1 + (1 - p)\\rho_2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        },
+        {
+          "name": "vc",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2.7 * (a^3 - vc) + vc",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В алюминиевом кубике с ребром {{a}} см есть полость объёмом {{vc}} см³, заполненная водой. Плотность алюминия 2,7 г/см³. Найдите массу кубика с водой.",
+        "hints": [],
+        "solution": "Алюминий занимает ${{a}}^3 - {{vc}}$ см³, вода — {{vc}} см³."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "cbrt(8.9 / 2.7)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два кубика одинаковой массы сделаны из меди (8,9 г/см³) и алюминия (2,7 г/см³). Во сколько раз ребро алюминиевого кубика больше?",
+        "hints": [],
+        "solution": "$\\rho_1 a_1^3 = \\rho_2 a_2^3$, $\\dfrac{a_2}{a_1} = \\sqrt[3]{\\dfrac{8{,}9}{2{,}7}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "r2",
+          "kind": "choice",
+          "values": [1.2, 1.4]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [7.8, 15.6, 39]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * m * r2 / 7.8 / k^3",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Модель детали уменьшена в {{k}} раз по каждому размеру и сделана из пластмассы плотностью {{r2}} г/см³. Настоящая деталь стальная (7,8 г/см³) и имеет массу {{m}} кг. Найдите массу модели в граммах.",
+        "hints": [],
+        "solution": "Объём уменьшается в $k^3$ раз; $m_м = m \\dfrac{\\rho_2}{\\rho_1} \\cdot \\dfrac{1}{k^3}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "7.8 * (a^3 - (a - 2 * b)^3)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Полый стальной куб имеет внешнее ребро {{a}} см и толщину стенок {{b}} см. Плотность стали 7,8 г/см³. Найдите массу куба.",
+        "hints": [],
+        "solution": "Объём стали $a^3 - (a - 2b)^3$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [100, 150, 200]
+        },
+        {
+          "name": "vc",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2.7, 7.8]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m1",
+          "expr": "round(r * (v - vc), 1)"
+        },
+        {
+          "name": "m2",
+          "expr": "m1 + vc"
+        }
+      ],
+      "answer": "m1 / (v - (m2 - m1))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "г/см³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пустое тело весит {{m1}} г, а заполненное водой — {{m2}} г. Внешний объём тела {{v}} см³. Найдите плотность материала тела.",
+        "hints": [],
+        "solution": "Объём полости $m_2 - m_1$ см³; объём материала $V - (m_2 - m_1)$; $\\rho = \\dfrac{m_1}{V - (m_2 - m_1)}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги опыта по измерению плотности камня в правильном порядке.",
+        "hints": [],
+        "solution": "Масса, затем объём методом погружения, затем плотность.",
+        "options": [
+          "Взвесить камень и записать массу $m$",
+          "Налить воду в мензурку, записать $V_1$",
+          "Опустить камень, записать $V_2$",
+          "Найти объём $V = V_2 - V_1$",
+          "Вычислить плотность $\\rho = m/V$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали равные массы воды (1 г/см³) и спирта (0,8 г/см³). Выберите верные утверждения (сжатием смеси пренебречь).",
+        "hints": [],
+        "solution": "При равных массах $\\rho = \\frac{2 \\cdot 1 \\cdot 0{,}8}{1{,}8} \\approx 0{,}89$ г/см³ — меньше среднего арифметического.",
+        "options": [
+          "Плотность смеси меньше 0,9 г/см³",
+          "Объём спирта больше объёма воды",
+          "Плотность смеси 0,9 г/см³",
+          "Плотность смеси между 0,8 и 1 г/см³",
+          "Плотность смеси больше 1 г/см³"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        },
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [500, 800]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [200, 300]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m1 - m2) / v",
+      "tolerance": {},
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Баллон объёмом {{v}} л содержал газ массой {{m1}} г; после использования масса газа стала {{m2}} г. На сколько уменьшилась плотность газа (кг/м³)?",
+        "hints": [],
+        "solution": "Газ занимает весь баллон: $\\Delta\\rho = \\dfrac{m_1 - m_2}{V}$; г/л = кг/м³."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок распилили на две части: масса первой в {{k}} раза больше массы второй. Как соотносятся их плотности?",
+        "hints": [],
+        "solution": "Плотность — свойство вещества; от размеров части она не зависит.",
+        "options": [
+          "Плотности одинаковы",
+          "Плотность первой в {{k}} раза больше",
+          "Плотность первой в {{k}} раза меньше",
+          "Не хватает данных"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m / p",
+      "variables": ["m", "p"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите объём $V$ из формулы плотности $\\rho = \\dfrac{m}{V}$ (запишите через $m$ и $p$, где $p$ — плотность).",
+        "hints": [],
+        "solution": "$V = \\dfrac{m}{\\rho}$."
+      }
+    }
+  }
+]
