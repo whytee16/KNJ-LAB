@@ -14,3 +14,13 @@ export { parseNumberInput } from './check/number.ts';
 export { validateTemplate, type ValidationReport } from './validate.ts';
 export { expressionToTex } from './expr.ts';
 export * from './editor.ts';
+export {
+  figureSchema,
+  buildFigure,
+  FigureError,
+  type FigureSpec,
+  type FigureScene,
+  type Prim,
+  type Pt,
+  type Tone,
+} from './figure.ts';

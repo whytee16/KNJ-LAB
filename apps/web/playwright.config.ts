@@ -24,13 +24,13 @@ export default defineConfig({
   projects: [
     ...viewports.map((v) => ({
       name: v.name,
-      testIgnore: /(auth|content|practice|labs|labs3d|labs-scenarios|labs-optics)\.spec\.ts/,
+      testIgnore: /(auth|content|practice|labs|labs3d|labs-scenarios|labs-optics|figures)\.spec\.ts/,
       use: { ...devices['Desktop Chrome'], viewport: { width: v.width, height: v.height } },
     })),
     // Account and content lifecycles need the local Supabase stack (pnpm db:start); one viewport is enough.
     {
       name: 'accounts',
-      testMatch: /(auth|content|practice|labs|labs3d|labs-scenarios|labs-optics)\.spec\.ts/,
+      testMatch: /(auth|content|practice|labs|labs3d|labs-scenarios|labs-optics|figures)\.spec\.ts/,
       use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 900 } },
     },
   ],

@@ -8,6 +8,7 @@ import { useActionState, useId, useState } from 'react';
 import { FormAlert } from '@/features/forms/form-alert';
 import { idle } from '@/features/forms/form-state';
 import { SubmitButton } from '@/features/forms/submit-button';
+import { TaskFigure } from '@/features/practice/figure';
 import { useMessage } from '@/features/forms/use-message';
 import { saveTaskTemplate, type TaskEditorState } from './task-actions';
 
@@ -84,6 +85,7 @@ export function ValidationReportView({
               <li key={i} className="rounded-md border border-border bg-surface p-3 text-sm">
                 <span className="text-xs text-text-muted">{s.locale.toUpperCase()}</span>
                 <div className="prose-topic" dangerouslySetInnerHTML={{ __html: s.html }} />
+                {s.figure ? <TaskFigure figure={s.figure} label={t('samples')} /> : null}
               </li>
             ))}
           </ul>

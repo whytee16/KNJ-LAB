@@ -2,6 +2,7 @@ import type { Expected, TaskPrompt } from '@knj/task-engine';
 import { Badge, Card, Container, cn } from '@knj/ui';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { TaskFigure } from '@/features/practice/figure';
 import { notFound } from 'next/navigation';
 import { pickLocale } from '@/features/content/queries';
 import { expectedHtml, givenAnswerHtml } from '@/features/practice/engine-server';
@@ -59,6 +60,7 @@ export default async function ResultPage({
       return {
         id: item.id,
         statementHtml: (await renderMarkdown(prompt.statement)).html,
+        figure: prompt.figure,
         givenHtml: await givenAnswerHtml(answer?.answer, prompt),
         correct: answer?.status === 'correct',
         score: Number(answer?.score ?? 0),
@@ -148,6 +150,7 @@ export default async function ResultPage({
               </Badge>
             </div>
             <div className="prose-topic" dangerouslySetInnerHTML={{ __html: r.statementHtml }} />
+            {r.figure ? <TaskFigure figure={r.figure} label={t('figure')} /> : null}
             <div className="grid gap-3 sm:grid-cols-2">
               <div>
                 <p className="text-sm font-medium">{t('yourAnswer')}</p>

@@ -1,4 +1,5 @@
 import { evalCondition, evalNumber } from './expr.ts';
+import { buildFigure, FigureError, type FigureScene } from './figure.ts';
 import { substitute, type EngineLocale } from './format.ts';
 import { mulberry32, randomInt, shuffle } from './prng.ts';
 import type { ParamDef, TaskSpec, TaskTexts, TaskType } from './spec.ts';
@@ -15,6 +16,8 @@ export interface TaskPrompt {
   unit?: string;
   variables?: string[];
   hints: string[];
+  /** Laid-out drawing (plain primitives) when the template has a figure. */
+  figure?: FigureScene;
 }
 
 /** Stored server-side only (task_instance_keys). */
@@ -88,6 +91,14 @@ export function generateTask(
     statement: sub(texts.statement),
     hints: texts.hints.map(sub),
   };
+  if (spec.figure) {
+    try {
+      prompt.figure = buildFigure(spec.figure, params, locale);
+    } catch (e) {
+      if (e instanceof FigureError) throw new GenerationError(`figure: ${e.message}`);
+      throw e;
+    }
+  }
   let expected: Expected;
 
   switch (spec.type) {

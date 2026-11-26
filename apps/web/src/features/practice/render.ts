@@ -37,5 +37,6 @@ export async function renderPrompt(
     unit: prompt.unit,
     variables: prompt.variables,
     hintsHtml: await Promise.all(prompt.hints.map(md)),
+    figure: prompt.figure,
   };
 }

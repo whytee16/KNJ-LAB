@@ -4,6 +4,7 @@ import type { Answer } from '@knj/task-engine';
 import type { Locale } from '@knj/i18n';
 import { Button, Card } from '@knj/ui';
 import { useTranslations } from 'next-intl';
+import { TaskFigure } from '@/features/practice/figure';
 import { useEffect, useRef, useState } from 'react';
 import { AnswerInput } from '@/features/practice/answer-input';
 import type { RenderedPrompt } from '@/features/practice/types';
@@ -93,6 +94,7 @@ export function TestRunner({
                 className="prose-topic"
                 dangerouslySetInnerHTML={{ __html: item.statementHtml }}
               />
+              {item.figure ? <TaskFigure figure={item.figure} label={t('figure')} /> : null}
               <AnswerInput
                 prompt={item}
                 disabled={false}

@@ -1,6 +1,7 @@
 'use server';
 
 import {
+  type FigureScene,
   DIFFICULTIES,
   EditorError,
   specFromForm,
@@ -46,7 +47,7 @@ export interface TaskEditorState extends FormState {
   report?: {
     ok: boolean;
     problems: ValidationReport['problems'];
-    samplesHtml: { locale: string; html: string }[];
+    samplesHtml: { locale: string; html: string; figure?: FigureScene }[];
   };
 }
 
@@ -75,6 +76,7 @@ async function withReport(
     r.samples.map(async (s) => ({
       locale: s.locale,
       html: (await renderMarkdown(s.statement)).html,
+      figure: s.figure,
     })),
   );
   return { ok: r.ok, problems: r.problems, samplesHtml };
@@ -134,6 +136,16 @@ export async function saveTaskTemplate(
   const { spec, texts } = parsed as Required<typeof parsed>;
 
   const supabase = await createUserClient();
+  // The form does not edit figures (ADR-0012): an edited template keeps the one it had.
+  if (id && !spec.figure) {
+    const { data: current } = await supabase
+      .from('task_templates')
+      .select('spec')
+      .eq('id', id)
+      .maybeSingle();
+    const figure = (current?.spec as { figure?: typeof spec.figure } | null)?.figure;
+    if (figure) spec.figure = figure;
+  }
   let templateId = id;
   if (!templateId) {
     const { data, error } = await supabase

@@ -133,10 +133,19 @@ export async function createPublishedNumberTemplate(
   topicId: string,
   statement: string,
   answer: string,
+  extra: { figure?: unknown; unit?: string } = {},
 ): Promise<string> {
   const sql = postgres(DB, { max: 1, onnotice: () => undefined });
   try {
-    const spec = { type: 'number', params: [], constraints: [], answer, tolerance: {}, unit: 'м' };
+    const spec = {
+      type: 'number',
+      params: [],
+      constraints: [],
+      answer,
+      tolerance: {},
+      unit: extra.unit ?? 'м',
+      ...(extra.figure ? { figure: extra.figure } : {}),
+    };
     const [t] = await sql<{ id: string }[]>`
       insert into public.task_templates (topic_id, type, difficulty, spec, status, published_at)
       values (${topicId}, 'number', 'easy', ${sql.json(spec)}, 'published', now()) returning id`;

@@ -1,3 +1,4 @@
+import type { FigureScene } from './figure.ts';
 import { placeholders, type EngineLocale } from './format.ts';
 import { generateTask } from './generate.ts';
 import { taskSpecSchema, taskTextsSchema, type TaskSpec, type TaskTexts } from './spec.ts';
@@ -7,7 +8,7 @@ export interface ValidationReport {
   /** Machine-readable problem codes with context, shown in the studio. */
   problems: { code: string; detail?: string; locale?: EngineLocale; seed?: number }[];
   /** A few sample statements for the preview. */
-  samples: { locale: EngineLocale; seed: number; statement: string }[];
+  samples: { locale: EngineLocale; seed: number; statement: string; figure?: FigureScene }[];
 }
 
 /**
@@ -57,7 +58,13 @@ export function validateTemplate(
     for (let seed = 1; seed <= runs; seed++) {
       try {
         const task = generateTask(spec.data, texts, seed, locale);
-        if (seed <= 3) samples.push({ locale, seed, statement: task.prompt.statement });
+        if (seed <= 3)
+          samples.push({
+            locale,
+            seed,
+            statement: task.prompt.statement,
+            figure: task.prompt.figure,
+          });
       } catch (e) {
         problems.push({
           code: 'generation_failed',

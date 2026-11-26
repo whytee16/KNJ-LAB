@@ -4,6 +4,7 @@ import type { Answer } from '@knj/task-engine';
 import type { Locale } from '@knj/i18n';
 import { Button, cn } from '@knj/ui';
 import { useTranslations } from 'next-intl';
+import { TaskFigure } from './figure';
 import { useRouter } from 'next/navigation';
 import {
   startTransition,
@@ -90,6 +91,7 @@ export function TaskView({
   return (
     <div className="flex flex-col gap-6">
       <div className="prose-topic" dangerouslySetInnerHTML={{ __html: prompt.statementHtml }} />
+      {prompt.figure ? <TaskFigure figure={prompt.figure} label={t('figure')} /> : null}
 
       <form
         // Submitted manually (not via `action`): React would reset the form after the action and

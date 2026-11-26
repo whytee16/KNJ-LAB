@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { figureSchema } from './figure.ts';
 
 export const TASK_TYPES = [
   'single_choice',
@@ -33,6 +34,8 @@ const base = {
   params: z.array(paramSchema).max(10).default([]),
   /** mathjs boolean expressions over the params, e.g. "a != 0", "b > a". */
   constraints: z.array(z.string().min(1).max(200)).max(10).default([]),
+  /** A drawing built from the params (ADR-0012); never shows the answer. */
+  figure: figureSchema.optional(),
 };
 
 /** `spec` column of task_templates, per type. Texts (statement, options…) live per locale. */

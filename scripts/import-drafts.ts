@@ -70,7 +70,7 @@ for (const dir of bundles)
     }
 for (const dir of bundles) {
   for (const [i, t] of (read<TemplateDraft[]>(join(dir, 'templates.json')) ?? []).entries()) {
-    const report = validateTemplate(t.spec, t.texts as never);
+    const report = validateTemplate(t.spec, t.texts as never, 200);
     if (!report.ok) {
       console.error(`${dir}/templates.json #${i + 1}:`, JSON.stringify(report.problems));
       process.exit(1);

@@ -1,4 +1,4 @@
-import type { TaskType } from '@knj/task-engine';
+import type { FigureScene, TaskType } from '@knj/task-engine';
 
 /** Prompt prepared on the server for rendering: all HTML comes from our sanitizing renderers. */
 export interface RenderedPrompt {
@@ -11,4 +11,6 @@ export interface RenderedPrompt {
   unit?: string;
   variables?: string[];
   hintsHtml: string[];
+  /** Drawing laid out by the engine (plain data, no HTML). */
+  figure?: FigureScene;
 }
