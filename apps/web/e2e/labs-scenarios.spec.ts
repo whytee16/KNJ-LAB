@@ -52,6 +52,8 @@ async function publish(title: string) {
 }
 
 async function setParam(page: Page, label: RegExp, value: string) {
+  // The 3D switch turns on only after hydration: typing earlier would be lost.
+  await expect(page.getByRole('button', { name: '3D' })).toBeEnabled();
   const field = page.getByRole('textbox', { name: label });
   await field.fill(value);
   await field.press('Enter');

@@ -18,6 +18,7 @@ export const UNIT_KEY = {
   A: 'A',
   Ohm: 'Ohm',
   W: 'W',
+  dpt: 'dpt',
 } as const satisfies Record<UnitCode, string>;
 
 export const camelCode = (code: string) =>

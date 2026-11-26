@@ -1,5 +1,6 @@
 import type { LabModel } from './lab-model.ts';
 import { circuit } from './circuit.ts';
+import { reflection, refraction, thinLens } from './optics/index.ts';
 import { SCENARIOS } from './scenarios/index.ts';
 import { inclinedPlane } from './inclined-plane.ts';
 import { pendulum } from './pendulum.ts';
@@ -15,6 +16,9 @@ export const LAB_MODELS: Record<string, LabModel> = {
   [pendulum.code]: pendulum as unknown as LabModel,
   [springPendulum.code]: springPendulum as unknown as LabModel,
   [circuit.code]: circuit as unknown as LabModel,
+  [reflection.code]: reflection as unknown as LabModel,
+  [refraction.code]: refraction as unknown as LabModel,
+  [thinLens.code]: thinLens as unknown as LabModel,
   ...Object.fromEntries(SCENARIOS.map((s) => [s.code, s as unknown as LabModel])),
 };
 

@@ -17,7 +17,8 @@ export type UnitCode =
   | 'V'
   | 'A'
   | 'Ohm'
-  | 'W';
+  | 'W'
+  | 'dpt';
 
 export interface ParamSpec {
   min: number;

@@ -1,7 +1,14 @@
 'use client';
 
 import type { Locale } from '@knj/i18n';
-import { scenarioFor, type ProjectileParams, type Values } from '@knj/physics';
+import {
+  scenarioFor,
+  type ProjectileParams,
+  type ReflectionParams,
+  type RefractionParams,
+  type ThinLensParams,
+  type Values,
+} from '@knj/physics';
 import dynamic from 'next/dynamic';
 import type { ReactNode } from 'react';
 
@@ -13,6 +20,9 @@ const PendulumLab = dynamic(() => import('./pendulum-lab'));
 const SpringLab = dynamic(() => import('./spring-lab'));
 const CircuitLab = dynamic(() => import('./circuit-lab'));
 const ScenarioLab = dynamic(() => import('./scenario/scenario-lab'));
+const ReflectionLab = dynamic(() => import('./optics/reflection-lab'));
+const RefractionLab = dynamic(() => import('./optics/refraction-lab'));
+const LensLab = dynamic(() => import('./optics/lens-lab'));
 
 export interface LabViewProps {
   code: string;
@@ -81,6 +91,30 @@ export function LabView(props: LabViewProps) {
           initial={
             props.initial as { emf: number; r: number; R1: number; R2: number; mode: number }
           }
+        />
+      );
+    case 'reflection':
+      return (
+        <ReflectionLab
+          {...props}
+          defaults={props.defaults as ReflectionParams}
+          initial={props.initial as ReflectionParams}
+        />
+      );
+    case 'refraction':
+      return (
+        <RefractionLab
+          {...props}
+          defaults={props.defaults as RefractionParams}
+          initial={props.initial as RefractionParams}
+        />
+      );
+    case 'thin-lens':
+      return (
+        <LensLab
+          {...props}
+          defaults={props.defaults as ThinLensParams}
+          initial={props.initial as ThinLensParams}
         />
       );
     default:

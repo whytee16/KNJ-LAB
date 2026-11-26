@@ -6,6 +6,7 @@ export {
   Spring3D,
   Tube3D,
   Arrow3D,
+  Beam3D,
   Polyline3D,
   Label3D,
   useTokens,

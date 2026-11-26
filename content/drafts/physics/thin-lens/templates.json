@@ -1,0 +1,120 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "d * c / (d - c)",
+      "decimals": 1,
+      "tolerance": {
+        "abs": 0.1
+      },
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свеча находится на расстоянии {{d}} см от собирающей линзы с фокусным расстоянием {{c}} см. На каком расстоянии от линзы получится изображение? Ответ округли до десятых и проверь экраном в лаборатории.",
+        "hints": [
+          "Из формулы $\\dfrac{1}{F} = \\dfrac{1}{d} + \\dfrac{1}{f}$ выражается $f = \\dfrac{dF}{d - F}$."
+        ],
+        "solution": "$f = \\dfrac{ {{d}} \\cdot {{c}} }{ {{d}} - {{c}} }$ см."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [10, 20, 25, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 / c",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": "дптр"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Фокусное расстояние линзы {{c}} см. Найди её оптическую силу.",
+        "hints": ["$D = \\dfrac{1}{F}$, фокусное расстояние — в метрах."],
+        "solution": "$D = \\dfrac{1}{ {{c}} \\cdot 0{,}01 \\text{ м} }$."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [15, 20]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "f / d",
+      "decimals": 1,
+      "tolerance": {},
+      "unit": ""
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет стоит на расстоянии {{d}} см от собирающей линзы, изображение получилось на расстоянии {{f}} см. Во сколько раз изображение больше предмета?",
+        "hints": ["Увеличение $\\Gamma = \\dfrac{f}{d}$."],
+        "solution": "$\\Gamma = \\dfrac{ {{f}} }{ {{d}} }$."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет поставили между собирающей линзой и её фокусом. Какое получится изображение?",
+        "options": [
+          "Действительное, перевёрнутое, уменьшенное",
+          "Действительное, перевёрнутое, увеличенное",
+          "Мнимое, прямое, увеличенное",
+          "Изображения не будет"
+        ],
+        "solution": "При $d < F$ лучи после линзы расходятся, сходятся их продолжения: изображение мнимое, прямое, увеличенное — так работает лупа."
+      }
+    }
+  }
+]

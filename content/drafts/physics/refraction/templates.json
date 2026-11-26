@@ -1,0 +1,106 @@
+[
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [30, 40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "asin(sin(a * pi / 180) / 1.33) * 180 / pi",
+      "decimals": 0,
+      "tolerance": {
+        "abs": 1
+      },
+      "unit": "°"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч переходит из воздуха в воду ($n = 1{,}33$) под углом падения {{a}}°. Найди угол преломления. Ответ округли до целых и проверь в лаборатории.",
+        "hints": ["$\\sin\\gamma = \\dfrac{\\sin\\alpha}{n}$."],
+        "solution": "$\\sin\\gamma = \\dfrac{\\sin {{a}}^\\circ}{1{,}33}$, затем $\\gamma = \\arcsin(\\sin\\gamma)$."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.5, 1.6, 2.42]
+        }
+      ],
+      "constraints": [],
+      "answer": "asin(1 / n) * 180 / pi",
+      "decimals": 0,
+      "tolerance": {
+        "abs": 1
+      },
+      "unit": "°"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найди предельный угол полного отражения для стекла с показателем преломления {{n}} на границе с воздухом. Ответ округли до целых.",
+        "hints": ["$\\sin\\alpha_0 = \\dfrac{1}{n}$."],
+        "solution": "$\\alpha_0 = \\arcsin\\dfrac{1}{ {{n}} }$."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свет переходит из воздуха в стекло. Как направлен преломлённый луч?",
+        "options": [
+          "Ближе к перпендикуляру, чем падающий",
+          "Дальше от перпендикуляра, чем падающий",
+          "Под тем же углом, что и падающий",
+          "Вдоль границы сред"
+        ],
+        "solution": "Стекло оптически плотнее воздуха, поэтому $\\gamma < \\alpha$: луч приближается к перпендикуляру."
+      }
+    }
+  },
+  {
+    "lab": true,
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 1
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каком случае возможно полное отражение света?",
+        "options": [
+          "Свет идёт из воздуха в воду",
+          "Свет идёт из воды в воздух при угле падения больше предельного",
+          "Свет падает на границу перпендикулярно",
+          "Свет идёт из воздуха в стекло при большом угле падения"
+        ],
+        "solution": "Полное отражение бывает только при переходе в менее плотную среду и при угле падения больше предельного."
+      }
+    }
+  }
+]

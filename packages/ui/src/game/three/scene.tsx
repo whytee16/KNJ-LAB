@@ -217,6 +217,34 @@ export function Arrow3D({
   );
 }
 
+/** A light beam: a thin bright cylinder between two points (drawn over nothing, lit by nothing). */
+export function Beam3D({
+  from,
+  to,
+  color,
+  radius = 0.035,
+  opacity = 1,
+}: {
+  from: [number, number, number];
+  to: [number, number, number];
+  color: string;
+  radius?: number;
+  opacity?: number;
+}) {
+  const a = new THREE.Vector3(...from);
+  const dir = new THREE.Vector3(...to).sub(a);
+  const len = dir.length();
+  if (len < 1e-3) return null;
+  const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir.normalize());
+  const mid = new THREE.Vector3(...from).add(new THREE.Vector3(...to)).multiplyScalar(0.5);
+  return (
+    <mesh position={mid} quaternion={q}>
+      <cylinderGeometry args={[radius, radius, len, 8]} />
+      <meshBasicMaterial color={color} transparent={opacity < 1} opacity={opacity} />
+    </mesh>
+  );
+}
+
 /** Right-angled wedge (inclined plane): legs `base` along x and `height` along y, centred in z. */
 export function Wedge3D({
   base,

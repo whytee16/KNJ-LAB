@@ -76,3 +76,4 @@ export {
   type Scenario,
   type ScenarioChart,
 } from './scenarios/index.ts';
+export * from './optics/index.ts';
