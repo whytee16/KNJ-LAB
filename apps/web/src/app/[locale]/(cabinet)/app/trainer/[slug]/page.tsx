@@ -54,7 +54,7 @@ export default async function TrainerPage({
       >
         {title}
       </Link>
-      <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
+      <h1 className="type-h2">
         {t('trainerTitle')} · {t(`levels.${level}`)}
       </h1>
     </div>

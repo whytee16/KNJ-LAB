@@ -15,7 +15,7 @@ export default async function UsersPage({ params }: PageProps<'/[locale]/studio/
   const t = await getTranslations('studio.users');
   return (
     <Container className="py-10">
-      <h1 className="mb-2 text-3xl font-semibold tracking-tight">{t('title')}</h1>
+      <h1 className="mb-2 type-h1">{t('title')}</h1>
       <p className="mb-6 max-w-2xl text-text-muted">{t('subtitle')}</p>
       <UserRoles locale={locale} />
     </Container>

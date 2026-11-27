@@ -46,7 +46,7 @@ export default async function EditTaskPage({ params }: PageProps<'/[locale]/stud
   return (
     <Container className="grid gap-8 py-10 lg:grid-cols-[1fr_320px]">
       <section className="min-w-0">
-        <h1 className="mb-6 text-3xl font-semibold tracking-tight">{t('edit')}</h1>
+        <h1 className="mb-6 type-h1">{t('edit')}</h1>
         {locked ? <p className="mb-4 text-text-muted">{t('lockedNote')}</p> : null}
         <TaskTemplateEditor
           locale={locale}

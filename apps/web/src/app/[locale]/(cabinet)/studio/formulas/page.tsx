@@ -20,7 +20,7 @@ export default async function StudioFormulasPage({
   return (
     <Container className="grid gap-10 py-10 lg:grid-cols-[1fr_360px]">
       <section aria-labelledby="formulas" className="min-w-0">
-        <h1 id="formulas" className="mb-6 text-3xl font-semibold tracking-tight">
+        <h1 id="formulas" className="mb-6 type-h1">
           {t('title')}
         </h1>
         {formulas.length ? (

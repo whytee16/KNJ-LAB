@@ -24,7 +24,7 @@ export default async function LabsPage({ params }: PageProps<'/[locale]/labs'>) 
   return (
     <PublicShell>
       <Container className="py-10 md:py-14">
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{t('catalogTitle')}</h1>
+        <h1 className="type-h1">{t('catalogTitle')}</h1>
         <p className="mt-2 max-w-2xl text-text-muted">{t('catalogSubtitle')}</p>
         {groups.length ? (
           groups.map((g) => (

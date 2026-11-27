@@ -2,7 +2,7 @@
 
 ## Перед началом задачи
 
-1. Прочитай [PRD.md](PRD.md), [ARCHITECTURE.md](ARCHITECTURE.md), [ROADMAP.md](ROADMAP.md) и документ своей области (DATABASE / API / DESIGN_SYSTEM / GAME_TEMPLATE / I18N / SECURITY).
+1. Прочитай [PRD.md](PRD.md), [ARCHITECTURE.md](ARCHITECTURE.md), [ROADMAP.md](ROADMAP.md) и документ своей области (DATABASE / API / DESIGN_SYSTEM + [DESIGN.md](DESIGN.md) / GAME_TEMPLATE / I18N / SECURITY).
 2. Определи текущий этап по ROADMAP. Не реализуй функциональность следующих этапов без согласования.
 3. Сообщи, какие модули и файлы затрагиваются.
 

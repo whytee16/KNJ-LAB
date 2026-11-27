@@ -95,7 +95,7 @@ export default async function ResultPage({
     <Container className="flex max-w-3xl flex-col gap-8 py-10">
       <div>
         <p className="text-sm text-text-muted">{t('title')}</p>
-        <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">{title}</h1>
+        <h1 className="type-h2">{title}</h1>
       </div>
       <Card className="flex flex-wrap items-baseline gap-x-6 gap-y-2" data-testid="result-score">
         <span className="text-4xl font-semibold tabular-nums">{percent}%</span>

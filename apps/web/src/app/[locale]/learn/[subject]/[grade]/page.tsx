@@ -47,7 +47,7 @@ export default async function SubjectGradePage({
             {t('title')}
           </Link>
         </nav>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+        <h1 className="mt-2 type-h1">
           {s(subject)} · {t('grade', { grade })}
         </h1>
         {empty ? (

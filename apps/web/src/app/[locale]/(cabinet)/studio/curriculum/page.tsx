@@ -41,7 +41,7 @@ export default async function CurriculumEditorPage({
   return (
     <Container className="flex flex-col gap-8 py-10">
       <div>
-        <h1 className="text-3xl font-semibold tracking-tight">{t('title')}</h1>
+        <h1 className="type-h1">{t('title')}</h1>
         <p className="mt-2 max-w-2xl text-text-muted">{t('subtitle')}</p>
       </div>
       <div className="flex flex-col gap-3">

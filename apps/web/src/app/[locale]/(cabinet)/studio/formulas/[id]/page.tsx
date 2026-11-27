@@ -48,7 +48,7 @@ export default async function StudioFormulaPage({
   return (
     <Container className="grid gap-10 py-10 lg:grid-cols-[1fr_320px]">
       <section className="min-w-0">
-        <h1 className="mb-2 text-3xl font-semibold tracking-tight">{text('ru')?.name ?? f.code}</h1>
+        <h1 className="mb-2 type-h1">{text('ru')?.name ?? f.code}</h1>
         <div className="mb-6 overflow-x-auto text-xl">
           <Formula latex={f.latex} display />
         </div>

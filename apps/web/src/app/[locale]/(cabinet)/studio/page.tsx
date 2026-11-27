@@ -33,7 +33,7 @@ export default async function StudioHome({ params }: PageProps<'/[locale]/studio
   return (
     <Container className="flex flex-col gap-10 py-10">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight">{t('topics.title')}</h1>
+        <h1 className="type-h1">{t('topics.title')}</h1>
         <Link href="/studio/topics/new" className={buttonVariants()}>
           {t('topics.new')}
         </Link>

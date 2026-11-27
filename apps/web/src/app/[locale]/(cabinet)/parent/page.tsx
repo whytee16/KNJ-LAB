@@ -25,7 +25,7 @@ export default async function ParentPage({ params }: PageProps<'/[locale]/parent
   return (
     <Container className="py-10 md:py-14">
       <p className="text-sm text-text-muted">{t('title')}</p>
-      <h1 className="mt-1 text-3xl font-semibold tracking-tight">
+      <h1 className="mt-1 type-h1">
         {t('greeting', { name: user.displayName })}
       </h1>
 

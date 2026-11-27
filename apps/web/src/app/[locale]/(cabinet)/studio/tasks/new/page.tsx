@@ -15,7 +15,7 @@ export default async function NewTaskPage({
   const topic = (await searchParams).topic;
   return (
     <Container className="flex max-w-4xl flex-col gap-6 py-10">
-      <h1 className="text-3xl font-semibold tracking-tight">{t('new')}</h1>
+      <h1 className="type-h1">{t('new')}</h1>
       <TaskTemplateEditor
         locale={locale}
         topics={await allTopicOptions()}

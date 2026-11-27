@@ -8,7 +8,7 @@ export default function NotFound() {
     <main id="main">
       <Container className="flex min-h-dvh flex-col items-start justify-center gap-4 py-16">
         <p className="text-sm font-medium text-accent">404</p>
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{t('title')}</h1>
+        <h1 className="type-h1">{t('title')}</h1>
         <p className="max-w-md text-text-muted">{t('description')}</p>
         <Link href="/" className={buttonVariants()}>
           {t('back')}

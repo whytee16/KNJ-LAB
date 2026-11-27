@@ -36,3 +36,20 @@ describe('TextField', async () => {
     expect(screen.getByRole('alert').textContent).toBe('Ошибка');
   });
 });
+
+describe('SubjectTile and Progress', async () => {
+  const { SubjectTile, Progress } = await import('./index.ts');
+  it('renders a subject tile as a link with the subject tint', () => {
+    render(<SubjectTile subject="physics" title="Физика" meta="Лаборатории" href="#physics" />);
+    const link = screen.getByRole('link', { name: /Физика/ });
+    expect(link.getAttribute('href')).toBe('#physics');
+    expect(link.className).toContain('text-physics');
+  });
+
+  it('exposes progress to assistive tech and clamps the bar', () => {
+    render(<Progress label="Плотность" value={7} max={5} tone="geometry" />);
+    const bar = screen.getByRole('progressbar', { name: 'Плотность' });
+    expect(bar.getAttribute('aria-valuenow')).toBe('7');
+    expect((bar.firstChild as HTMLElement).style.width).toBe('100%');
+  });
+});

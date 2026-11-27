@@ -1,4 +1,4 @@
-import { Badge, Card, Container } from '@knj/ui';
+import { Badge, Container, Progress, SubjectTile } from '@knj/ui';
 import { pickLocale, SUBJECTS } from '@/features/content/queries';
 import { recentResults } from '@/features/tests/queries';
 import { Link } from '@/i18n/navigation';
@@ -68,9 +68,7 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
   return (
     <Container className="py-10 md:py-14">
       <p className="text-sm text-text-muted">{t('title')}</p>
-      <h1 className="mt-1 text-3xl font-semibold tracking-tight">
-        {t('greeting', { name: user.displayName })}
-      </h1>
+      <h1 className="mt-1 type-h1">{t('greeting', { name: user.displayName })}</h1>
       {student ? (
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <Badge tone="accent">{t('grade', { grade: student.grade })}</Badge>
@@ -88,10 +86,16 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
           <ul className="mt-4 grid gap-4 sm:grid-cols-3">
             {SUBJECTS.map((subject) => (
               <li key={subject}>
-                <Link href={`/learn/${subject}/${student.grade}`} className="block">
-                  <Card className="hover:border-accent">
-                    <span className="text-lg font-semibold">{s(subject)}</span>
-                  </Card>
+                <Link
+                  href={`/learn/${subject}/${student.grade}`}
+                  className="block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                  <SubjectTile
+                    subject={subject}
+                    title={s(subject)}
+                    meta={t('grade', { grade: student.grade })}
+                    className="hover:border-current"
+                  />
                 </Link>
               </li>
             ))}
@@ -105,7 +109,7 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
             {t('runs')}
           </h2>
           {runs.length ? (
-            <ul className="mt-3 flex flex-col gap-2">
+            <ul className="mt-3 flex flex-col gap-3">
               {runs.map((r) => (
                 <li key={r.id}>
                   <Link
@@ -117,6 +121,7 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
                   <span className="text-sm text-text-muted">
                     {t('runProgress', { solved: r.solved, target: r.target })}
                   </span>
+                  <Progress className="mt-1.5" label={r.title} value={r.solved} max={r.target} />
                 </li>
               ))}
             </ul>

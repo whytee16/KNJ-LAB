@@ -14,7 +14,7 @@ export default async function StudioTestsPage({ params }: PageProps<'/[locale]/s
   return (
     <Container className="flex flex-col gap-6 py-10">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight">{t('title')}</h1>
+        <h1 className="type-h1">{t('title')}</h1>
         <Link href="/studio/tests/new" className={buttonVariants()}>
           {t('new')}
         </Link>

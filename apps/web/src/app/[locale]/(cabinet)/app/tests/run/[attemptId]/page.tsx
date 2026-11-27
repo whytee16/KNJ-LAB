@@ -42,7 +42,7 @@ export default async function TestRunPage({
   const title = pickLocale(attempt.tests?.test_texts, locale)?.title ?? t('title');
   return (
     <Container className="flex max-w-3xl flex-col gap-6 py-10">
-      <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">{title}</h1>
+      <h1 className="type-h2">{title}</h1>
       <TestRunner
         locale={locale}
         attemptId={attemptId}

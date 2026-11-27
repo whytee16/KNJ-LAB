@@ -13,3 +13,5 @@ export {
   type CheckboxFieldProps,
 } from './components/field.tsx';
 export { Alert, alertVariants, type AlertProps } from './components/alert.tsx';
+export { SubjectTile, type Subject, type SubjectTileProps } from './components/subject-tile.tsx';
+export { Progress, type ProgressProps } from './components/progress.tsx';

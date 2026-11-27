@@ -50,7 +50,7 @@ export default async function ReferencePage({
   return (
     <PublicShell>
       <Container className="py-10 md:py-14">
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{t('title')}</h1>
+        <h1 className="type-h1">{t('title')}</h1>
         <p className="mt-2 max-w-2xl text-text-muted">{t('subtitle')}</p>
 
         <form

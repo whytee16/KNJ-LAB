@@ -21,7 +21,7 @@ export default async function AccountPage({ params }: PageProps<'/[locale]/accou
   const t = await getTranslations('account');
   return (
     <Container className="py-10 md:py-14">
-      <h1 className="text-3xl font-semibold tracking-tight">{t('title')}</h1>
+      <h1 className="type-h1">{t('title')}</h1>
       <Card className="mt-8 max-w-xl">
         <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2">
           <dt className="text-text-muted">{t('role')}</dt>

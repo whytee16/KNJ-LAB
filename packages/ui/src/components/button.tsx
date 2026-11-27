@@ -4,7 +4,7 @@ import { cn } from '../cn.ts';
 
 /** Shared button styles; apply to <a>/<Link> via `buttonVariants()` when navigation is needed. */
 export const buttonVariants = cva(
-  'inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 text-base font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 text-base font-semibold transition-[color,background-color,transform] duration-150 active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {

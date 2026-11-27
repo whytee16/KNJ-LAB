@@ -12,7 +12,7 @@ export default async function NewTopicPage({ params }: PageProps<'/[locale]/stud
   const t = await getTranslations('studio.newTopic');
   return (
     <Container className="py-10">
-      <h1 className="mb-6 text-3xl font-semibold tracking-tight">{t('heading')}</h1>
+      <h1 className="mb-6 type-h1">{t('heading')}</h1>
       <NewTopicForm locale={locale} subjects={await subjectOptions(locale)} />
     </Container>
   );

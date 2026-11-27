@@ -141,8 +141,8 @@ export function TaskView({
           className={cn(
             'flex flex-col gap-3 rounded-lg border p-4',
             feedback.status === 'correct'
-              ? 'border-success/40 bg-success/5'
-              : 'border-danger/40 bg-danger/5',
+              ? 'border-success/30 bg-success/10'
+              : 'border-danger/30 bg-danger/10',
           )}
         >
           <p

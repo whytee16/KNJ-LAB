@@ -93,7 +93,7 @@ export default async function EditLabPage({ params }: PageProps<'/[locale]/studi
           <p className="text-sm text-text-muted">
             <code>{lab.code}</code>
           </p>
-          <h1 className="mt-1 text-3xl font-semibold tracking-tight">{ru?.title ?? lab.code}</h1>
+          <h1 className="mt-1 type-h1">{ru?.title ?? lab.code}</h1>
         </div>
         <LabEditor
           locale={locale}

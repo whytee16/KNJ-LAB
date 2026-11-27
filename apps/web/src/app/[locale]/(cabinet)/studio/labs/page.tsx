@@ -19,7 +19,7 @@ export default async function StudioLabsPage({ params }: PageProps<'/[locale]/st
   return (
     <Container className="flex flex-col gap-6 py-10">
       <div>
-        <h1 className="text-3xl font-semibold tracking-tight">{t('listTitle')}</h1>
+        <h1 className="type-h1">{t('listTitle')}</h1>
         <p className="mt-2 max-w-2xl text-text-muted">{t('listHint')}</p>
       </div>
       <ul className="flex flex-col divide-y divide-border">

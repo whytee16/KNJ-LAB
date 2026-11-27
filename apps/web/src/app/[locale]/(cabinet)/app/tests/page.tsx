@@ -24,7 +24,7 @@ export default async function TestsPage({
   const locked = (await searchParams).locked === '1';
   return (
     <Container className="flex flex-col gap-6 py-10">
-      <h1 className="text-3xl font-semibold tracking-tight">{t('title')}</h1>
+      <h1 className="type-h1">{t('title')}</h1>
       {locked ? <Alert tone="info">{t('locked')}</Alert> : null}
       <TestList
         tests={await listPublishedTests(locale)}

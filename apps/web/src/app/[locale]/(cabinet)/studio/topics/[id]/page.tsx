@@ -49,7 +49,7 @@ export default async function TopicEditorPage({
     <Container className="flex flex-col gap-8 py-10">
       <div>
         <p className="font-mono text-sm text-text-muted">{topic.slug}</p>
-        <h1 className="text-3xl font-semibold tracking-tight">{ruTitle}</h1>
+        <h1 className="type-h1">{ruTitle}</h1>
       </div>
 
       <nav aria-label={t('languages')} className="flex gap-2">
