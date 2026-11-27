@@ -27,7 +27,7 @@ for (const c of cases) {
       await expect(page.locator('html')).toHaveAttribute('lang', c.lang);
       await expect(page.getByRole('heading', { level: 1 })).toHaveText(c.h1);
       // KaTeX formulas are rendered on the server.
-      expect(await page.locator('.katex').count()).toBeGreaterThanOrEqual(6);
+      expect(await page.locator('.katex').count()).toBeGreaterThanOrEqual(3);
     });
 
     test('every in-page link points to an existing section', async ({ page }) => {

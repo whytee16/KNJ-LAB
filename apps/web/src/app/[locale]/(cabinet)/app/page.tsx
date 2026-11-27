@@ -93,7 +93,6 @@ export default async function StudentPage({ params }: PageProps<'/[locale]/app'>
                   <SubjectTile
                     subject={subject}
                     title={s(subject)}
-                    meta={t('grade', { grade: student.grade })}
                     className="hover:border-current"
                   />
                 </Link>
