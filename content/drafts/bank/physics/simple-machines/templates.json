@@ -1,0 +1,1709 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "l2",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        },
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [6, 12, 30]
+        }
+      ],
+      "constraints": ["l1 != l2"],
+      "figure": {
+        "kind": "lever",
+        "left": "l1",
+        "right": "l2",
+        "labels": {
+          "left": "{{l1}} см",
+          "right": "{{l2}} см",
+          "f1": "F₁ = {{f1}} Н",
+          "f2": "F₂ = ?"
+        }
+      },
+      "answer": "f1 * l1 / l2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычаг в равновесии (см. рисунок). На левое плечо {{l1}} см действует сила {{f1}} Н. Плечо правой силы {{l2}} см. Найдите правую силу.",
+        "hints": [],
+        "solution": "Правило рычага: $F_1 l_1 = F_2 l_2$, $F_2 = \\dfrac{F_1 l_1}{l_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [5, 10, 20, 50]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.2, 0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * l",
+      "tolerance": {},
+      "unit": "Н·м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите момент силы {{f}} Н, плечо которой {{l}} м.",
+        "hints": [],
+        "solution": "$M = Fl = {{f}} \\cdot {{l}}$ Н·м."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой выигрыш в силе даёт неподвижный блок?",
+        "hints": [],
+        "solution": "Плечи сил у неподвижного блока равны радиусу.",
+        "options": [
+          "Никакого: он меняет только направление силы",
+          "В 2 раза",
+          "В 4 раза",
+          "Зависит от массы груза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой выигрыш в силе даёт подвижный блок (трение и массу блока не учитываем)?",
+        "hints": [],
+        "solution": "Груз держат две ветви верёвки, каждая натянута силой $P/2$.",
+        "options": ["В 2 раза", "Никакого", "В 4 раза", "В 3 раза"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [100, 200, 300, 500]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 2",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз весом {{p}} Н поднимают подвижным блоком. Какую силу прикладывают к верёвке (массой блока и трением пренебречь)?",
+        "hints": [],
+        "solution": "Подвижный блок даёт выигрыш в силе в 2 раза: $F = P/2$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расстояние от оси вращения до линии действия силы называется ___ силы.",
+        "hints": [],
+        "solution": "Плечо — кратчайшее расстояние от оси до линии действия силы.",
+        "accepted": ["плечом", "плечо"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой простой механизм — ножницы?",
+        "hints": [],
+        "solution": "Лезвия поворачиваются вокруг оси — это рычаги.",
+        "options": ["Рычаг", "Блок", "Наклонная плоскость", "Ворот"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите рычаги.",
+        "hints": [],
+        "solution": "Пандус — наклонная плоскость; неподвижный блок формально тоже рычаг, но с равными плечами — его называют блоком.",
+        "options": ["Ножницы", "Лом", "Весло", "Пандус", "Неподвижный блок на флагштоке"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f2",
+          "expr": "f1 * k"
+        },
+        {
+          "name": "f_small",
+          "expr": "f1"
+        },
+        {
+          "name": "f_big",
+          "expr": "f2"
+        }
+      ],
+      "answer": "f_small * l1 / f_big",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На рычаг действуют силы {{f1}} Н и {{f2}} Н. Плечо меньшей силы {{l1}} см. Каким должно быть плечо большей силы для равновесия?",
+        "hints": [],
+        "solution": "$F_м l_м = F_б l_б$, $l_б = \\dfrac{F_м l_м}{F_б}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между механизмом и выигрышем в силе (идеальный случай).",
+        "hints": [],
+        "solution": "Для рычага — отношение плеч, для наклонной плоскости — $l/h$.",
+        "options": [
+          "Неподвижный блок",
+          "Подвижный блок",
+          "Рычаг с плечами 10 и 50 см",
+          "Наклонная плоскость длиной 4 м и высотой 1 м"
+        ],
+        "matches": ["1 (нет выигрыша)", "2", "5", "4"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое из правил верно для всех простых механизмов?",
+        "hints": [],
+        "solution": "«Золотое правило механики»: выигрыша в работе нет.",
+        "options": [
+          "Во сколько раз выигрываем в силе, во столько проигрываем в расстоянии",
+          "Механизм всегда даёт выигрыш в работе",
+          "Механизм даёт выигрыш и в силе, и в расстоянии",
+          "Механизм уменьшает массу груза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.2, 0.5, 2]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "m",
+          "expr": "f * l"
+        }
+      ],
+      "answer": "m / l",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Момент силы {{m}} Н·м, плечо {{l}} м. Найдите силу.",
+        "hints": [],
+        "solution": "$F = \\dfrac{M}{l}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги проверки правила рычага в лабораторной работе.",
+        "hints": [],
+        "solution": "Рычаг в равновесии, если моменты сил равны.",
+        "options": [
+          "Уравновесить рычаг без грузов",
+          "Подвесить грузы по обе стороны от оси",
+          "Перемещая грузы, добиться равновесия",
+          "Измерить плечи и сравнить $F_1 l_1$ и $F_2 l_2$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Где нужно взяться за гаечный ключ, чтобы легче открутить гайку?",
+        "hints": [],
+        "solution": "Чем больше плечо, тем меньше нужна сила для того же момента.",
+        "options": ["За дальний конец ручки", "Около гайки", "За середину", "Без разницы"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица момента силы в СИ:",
+        "hints": [],
+        "solution": "$M = Fl$: ньютон на метр.",
+        "options": ["Н·м", "Н/м", "Дж/с", "кг·м"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [60, 80, 100]
+        },
+        {
+          "name": "p1",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "p2",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": ["p1 != p2"],
+      "answer": "l * p2 / (p1 + p2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На концах рычага длиной {{l}} см висят грузы {{p1}} Н и {{p2}} Н. На каком расстоянии от груза {{p1}} Н нужно поставить опору, чтобы рычаг был в равновесии (массой рычага пренебречь)?",
+        "hints": [],
+        "solution": "$P_1 x = P_2 (L - x)$, $x = \\dfrac{P_2 L}{P_1 + P_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [600, 900, 1200]
+        },
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [1, 1.2, 1.5]
+        },
+        {
+          "name": "l2",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * l2 / 100 / l1",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рабочий поднимает ломом камень весом {{p}} Н. Плечо силы рабочего {{l1}} м, плечо камня {{l2}} см. Какую силу прикладывает рабочий?",
+        "hints": [],
+        "solution": "$F l_1 = P l_2$ (плечи в одних единицах)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 30, 50, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / 2",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг поднимают с помощью подвижного и неподвижного блоков. Какую силу нужно приложить ($g = 10$ Н/кг, массой блоков и трением пренебречь)?",
+        "hints": [],
+        "solution": "Подвижный блок даёт выигрыш в 2 раза, неподвижный меняет направление: $F = mg/2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 1.5, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * h",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подвижным блоком подняли груз на {{h}} м. На какую длину вытянули свободный конец верёвки?",
+        "hints": [],
+        "solution": "Выигрыш в силе в 2 раза — проигрыш в расстоянии в 2 раза."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [4, 6, 8]
+        },
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [15, 30, 45]
+        },
+        {
+          "name": "f2",
+          "kind": "choice",
+          "values": [3, 12, 18]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "lever",
+        "left": "l1",
+        "right": "f1 * l1 / f2",
+        "labels": {
+          "left": "{{l1}} см",
+          "right": "?",
+          "f1": "F₁ = {{f1}} Н",
+          "f2": "F₂ = {{f2}} Н"
+        }
+      },
+      "answer": "f1 * l1 / f2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычаг уравновешен (см. рисунок). Левая сила {{f1}} Н на плече {{l1}} см, правая — {{f2}} Н. Найдите правое плечо.",
+        "hints": [],
+        "solution": "$l_2 = \\dfrac{F_1 l_1}{F_2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему дверную ручку делают дальше от петель?",
+        "hints": [],
+        "solution": "Момент $M = Fl$: при большом плече нужна меньшая сила.",
+        "options": [
+          "Чтобы увеличить плечо силы и легче открывать дверь",
+          "Так красивее",
+          "Чтобы уменьшить массу двери",
+          "Чтобы дверь не скрипела"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [200, 400, 600]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * h / l",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По наклонной плоскости длиной {{l}} м и высотой {{h}} м равномерно втаскивают груз весом {{p}} Н без трения. Какую силу прикладывают вдоль плоскости?",
+        "hints": [],
+        "solution": "Без трения $Fl = Ph$, $F = P\\dfrac{h}{l}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о моменте силы.",
+        "hints": [],
+        "solution": "Правило моментов — условие равновесия рычага.",
+        "options": [
+          "$M = Fl$",
+          "Рычаг в равновесии, если моменты, вращающие его в разные стороны, равны",
+          "Момент не зависит от плеча",
+          "Чем больше плечо, тем больше момент при той же силе",
+          "Момент измеряется в Н/м"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "l2",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * l1 / l2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "К левому плечу рычага {{l1}} см подвешен груз {{m}} кг. Какую силу нужно приложить к правому концу на расстоянии {{l2}} см от оси, чтобы удержать рычаг ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$mg l_1 = F l_2$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Простой механизм в виде колеса с жёлобом, через который перекинута верёвка, называется ___.",
+        "hints": [],
+        "solution": "Блоки бывают подвижные и неподвижные.",
+        "accepted": ["блоком", "блок"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 60, 80]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * (l / 2 - d) / (l - d)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двое несут бревно массой {{m}} кг на плечах. Один держит его за конец, другой — на расстоянии {{d}} м от другого конца. Длина бревна {{l}} м, бревно однородное. Какую силу прикладывает первый ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "Ось вращения — точка опоры второго. Центр масс на расстоянии $L/2 - d$ от неё, первый — на $L - d$: $F_1 (L - d) = mg(L/2 - d)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычаг в равновесии. Одну из сил увеличили в 2 раза, не меняя плеч. Что нужно сделать, чтобы восстановить равновесие?",
+        "hints": [],
+        "solution": "Момент $Fl$ должен остаться прежним.",
+        "options": [
+          "Уменьшить плечо этой силы в 2 раза",
+          "Увеличить плечо этой силы в 2 раза",
+          "Ничего",
+          "Уменьшить вторую силу в 2 раза и её плечо в 2 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите механизмы по возрастанию выигрыша в силе (идеальный случай).",
+        "hints": [],
+        "solution": "1 < 2 < 3 < 5.",
+        "options": [
+          "Неподвижный блок",
+          "Подвижный блок",
+          "Наклонная плоскость $l/h = 3$",
+          "Рычаг с отношением плеч 1 : 5"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между инструментом и простым механизмом.",
+        "hints": [],
+        "solution": "Ворот и клин — разновидности рычага и наклонной плоскости.",
+        "options": ["Колодезный ворот", "Клин топора", "Пандус", "Гвоздодёр"],
+        "matches": ["Ворот (рычаг)", "Наклонная плоскость (клин)", "Наклонная плоскость", "Рычаг"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * x / b",
+      "variables": ["a", "b", "x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычаг в равновесии: сила $a$ на плече $x$ и сила $b$ на плече $y$. Выразите $y$.",
+        "hints": [],
+        "solution": "$F_1 l_1 = F_2 l_2$, $l_2 = \\dfrac{F_1 l_1}{F_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [100, 120]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * (l / 2 - a) / a",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Однородный рычаг массой {{m}} кг и длиной {{l}} см опирается на ось в {{a}} см от левого конца. Какую силу нужно приложить к левому концу вниз, чтобы удержать рычаг горизонтально ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "Сила тяжести рычага приложена в его середине, на $L/2 - a$ правее оси: $F a = mg(L/2 - a)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [800, 1600, 2400]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 2^n",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Система из {{n}} подвижных блоков (каждый следующий держит предыдущий, полиспаст «в степени двойки»). Какую силу нужно приложить, чтобы поднять груз {{p}} Н (массой блоков и трением пренебречь)?",
+        "hints": [],
+        "solution": "Каждый подвижный блок даёт выигрыш в 2 раза: $F = \\dfrac{P}{2^n}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [30, 40]
+        },
+        {
+          "name": "p1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "p2",
+          "kind": "choice",
+          "values": [1, 3]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [20, 25, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "(p1 * a + p2 * b) / c",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "К рычагу слева на расстоянии {{a}} см от оси подвешен груз {{p1}} Н и на расстоянии {{b}} см — груз {{p2}} Н. Справа на расстоянии {{c}} см подвешен груз. Какого веса он должен быть для равновесия?",
+        "hints": [],
+        "solution": "Сумма моментов слева равна моменту справа: $P_1 a + P_2 b = P_3 c$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "qr",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * r / qr",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ворот колодца: радиус барабана {{r}} см, длина рукоятки {{qr}} см. Какую силу нужно приложить к рукоятке, чтобы поднимать ведро с водой массой {{m}} кг ($g = 10$ Н/кг, без трения)?",
+        "hints": [],
+        "solution": "Ворот — рычаг: $F R = mg\\,r$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему подъёмный кран не опрокидывается, поднимая тяжёлый груз?",
+        "hints": [],
+        "solution": "Моменты сил относительно опоры уравновешены.",
+        "options": [
+          "Противовес создаёт момент, уравновешивающий момент груза",
+          "Кран очень тяжёлый в стреле",
+          "Груз поднимают медленно",
+          "Кран закреплён тросами"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        },
+        {
+          "name": "mb",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m + mb) * 10 / 2",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг подвешен к подвижному блоку массой {{mb}} кг. Какую силу нужно приложить к свободному концу верёвки, чтобы поднимать груз равномерно ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "Блок поднимается вместе с грузом: $F = \\dfrac{(m + m_б) g}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [60, 90, 120]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f2",
+          "expr": "f1 * k"
+        }
+      ],
+      "answer": "l * f2 / (f1 + f2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычаг уравновешен силами {{f1}} Н и {{f2}} Н. Длина рычага {{l}} см (силы на концах). Найдите плечо меньшей силы.",
+        "hints": [],
+        "solution": "$l_1 + l_2 = L$, $F_1 l_1 = F_2 l_2$. Плечо меньшей силы $F_1$: $l_1 = \\dfrac{F_2 L}{F_1 + F_2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз поднимают подвижным блоком на высоту 2 м. Выберите верные утверждения (идеальный блок).",
+        "hints": [],
+        "solution": "Золотое правило механики.",
+        "options": [
+          "Сила вдвое меньше веса груза",
+          "Верёвку вытягивают на 4 м",
+          "Работа силы равна работе по подъёму груза",
+          "Работа силы вдвое меньше",
+          "Верёвку вытягивают на 1 м"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [30, 40]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * l / 2 / m2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек массой {{m}} кг стоит на одном конце доски-качели длиной {{l}} м, опора посередине. Где должен встать мальчик массой {{m2}} кг, чтобы уравновесить качели? Найдите расстояние от опоры.",
+        "hints": [],
+        "solution": "$m \\dfrac{L}{2} = m_2 x$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между ситуацией и моментом силы относительно оси (F = 10 Н).",
+        "hints": [],
+        "solution": "$M = Fl$; если линия действия проходит через ось, плечо равно 0.",
+        "options": ["Плечо 0,5 м", "Плечо 2 м", "Сила направлена через ось", "Плечо 10 см"],
+        "matches": ["5 Н·м", "20 Н·м", "0", "1 Н·м"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [300, 600]
+        },
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [0.2, 0.25, 0.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "p * q"
+        }
+      ],
+      "answer": "f * l / p",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Наклонная плоскость имеет длину {{l}} м. Груз весом {{p}} Н втаскивают силой {{f}} Н (трением пренебречь). Найдите высоту плоскости.",
+        "hints": [],
+        "solution": "$Fl = Ph$, $h = \\dfrac{Fl}{P}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему длинным веслом труднее грести, держа его за середину, чем за конец?",
+        "hints": [],
+        "solution": "Плечо силы гребца относительно уключины меньше — нужна большая сила.",
+        "options": [
+          "Уменьшается плечо силы гребца",
+          "Увеличивается масса весла",
+          "Вода плотнее",
+          "Весло гнётся"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи о равновесии рычага с несколькими силами.",
+        "hints": [],
+        "solution": "Правило моментов.",
+        "options": [
+          "Выбрать ось вращения",
+          "Найти плечо каждой силы",
+          "Записать моменты, вращающие по и против часовой стрелки",
+          "Приравнять суммы моментов"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Полиспаст — это система из нескольких подвижных и неподвижных ___.",
+        "hints": [],
+        "solution": "Полиспаст даёт большой выигрыш в силе.",
+        "accepted": ["блоков"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "(m + b) * g / 2",
+      "variables": ["m", "b", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подвижный блок массой $b$ поднимает груз массой $m$ равномерно. Запишите силу $f$, приложенную к верёвке (ускорение свободного падения $g$).",
+        "hints": [],
+        "solution": "$F = \\dfrac{(m + m_б)g}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "mp",
+          "kind": "choice",
+          "values": [60, 70, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * (m * l / 2 + mp * (l - a)) / l",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Однородная балка массой {{m}} кг и длиной {{l}} м лежит на двух опорах по концам. На расстоянии {{a}} м от левого конца стоит человек массой {{mp}} кг. Найдите силу давления балки на левую опору ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Моменты относительно правой опоры: $N_л L = mg\\dfrac{L}{2} + m_ч g (L - a)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * a / q",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычаг весов-безмена: груз {{p}} Н висит в {{a}} см от оси, гиря {{q}} Н. На каком расстоянии от оси нужно повесить гирю для равновесия? Масса рычага уравновешена.",
+        "hints": [],
+        "solution": "$P a = Q x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [1.2, 1.5, 2]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1000, 1500, 3000]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * a / 100 / (l - a / 100)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лом длиной {{l}} м подложили под камень так, что опора на {{a}} см от конца под камнем. С какой наименьшей силой надо давить на другой конец, чтобы приподнять край камня, если на лом со стороны камня действует сила {{p}} Н?",
+        "hints": [],
+        "solution": "Плечи: $a$ и $L - a$: $F (L - a) = P a$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [60, 100]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 200, 300]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [10, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (l / 2 - a) / a",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Однородный стержень длиной {{l}} см и массой {{m}} г подвешен на нити за точку в {{a}} см от левого конца. Какой груз (в граммах) нужно подвесить к левому концу, чтобы стержень висел горизонтально?",
+        "hints": [],
+        "solution": "Центр масс стержня правее точки подвеса на $L/2 - a$: $m_г a = m(L/2 - a)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычаг весов с неравными плечами. Взвесили тело на левой чаше — 100 г, на правой — 121 г. Какова истинная масса тела?",
+        "hints": [],
+        "solution": "$m l_1 = 100 l_2$, $121 l_1 = m l_2$; перемножая, $m^2 = 100 \\cdot 121$, $m = 110$ г.",
+        "options": ["110 г", "110,5 г", "100 г", "121 г"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [120, 240, 360]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "k",
+          "expr": "2 * n"
+        }
+      ],
+      "answer": "m * 10 / k",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Полиспаст из {{n}} подвижных и {{n}} неподвижных блоков (груз держат {{k}} ветвей верёвки). Груз массой {{m}} кг. Какую силу нужно приложить ($g = 10$ Н/кг, блоки идеальные)?",
+        "hints": [],
+        "solution": "Каждая ветвь натянута силой $F$; $kF = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [4, 6, 10]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [0.4, 0.5, 0.6]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (l / 2 - d) / d",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Доска массой {{m}} кг и длиной {{l}} м выступает за край стола на {{d}} м. Груз какой наибольшей массы можно положить на выступающий конец, чтобы доска не опрокинулась?",
+        "hints": [],
+        "solution": "Ось — край стола. Центр масс доски на $L/2 - d$ внутри стола: $M d \\le m(L/2 - d)$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о простых механизмах.",
+        "hints": [],
+        "solution": "Золотое правило механики; неподвижный блок выигрыша в силе не даёт.",
+        "options": [
+          "Ни один простой механизм не даёт выигрыша в работе",
+          "Ворот — разновидность рычага",
+          "Наклонная плоскость даёт выигрыш в силе $l/h$",
+          "Неподвижный блок даёт выигрыш в силе в 2 раза",
+          "Подвижный блок даёт выигрыш в расстоянии"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [30, 40]
+        },
+        {
+          "name": "f2",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "l2",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "l3",
+          "kind": "choice",
+          "values": [10, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "(f1 * l1 - f2 * l2) / l3",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На рычаг действуют силы: слева {{f1}} Н на плече {{l1}} см, справа {{f2}} Н на плече {{l2}} см. Какую силу нужно приложить справа на плече {{l3}} см, чтобы рычаг был в равновесии? Если сила должна быть направлена вверх, ответ запишите со знаком «−».",
+        "hints": [],
+        "solution": "Недостающий момент $F_1 l_1 - F_2 l_2$ делим на плечо $l_3$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r1",
+          "kind": "choice",
+          "values": [16, 17, 18]
+        },
+        {
+          "name": "r2",
+          "kind": "choice",
+          "values": [8, 9, 10]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [200, 300, 400]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * r1 / r2",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипед: педаль на шатуне длиной {{r1}} см, ведущая звёздочка радиусом {{r2}} см. Велосипедист давит на педаль силой {{f}} Н перпендикулярно шатуну. Найдите силу натяжения цепи.",
+        "hints": [],
+        "solution": "Шатун и звёздочка — один рычаг (ворот): $F r_1 = T r_2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кусачки: расстояние от оси до режущей кромки 2 см, до места, где сжимают ручки, 16 см. Какую силу развивает кромка при сжатии ручек силой 100 Н?",
+        "hints": [],
+        "solution": "$F \\cdot 2 = 100 \\cdot 16$, $F = 800$ Н.",
+        "options": ["800 Н", "200 Н", "12,5 Н", "1600 Н"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * m2",
+      "tolerance": {},
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз висит на подвижном блоке, свободный конец верёвки перекинут через неподвижный блок и привязан к грузу массой {{m2}} кг, висящему по другую сторону. Какой массы груз на подвижном блоке уравновесит систему (блоки идеальные)?",
+        "hints": [],
+        "solution": "Натяжение верёвки $m_2 g$; подвижный блок держат две ветви: $Mg = 2 m_2 g$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию силу, нужную для подъёма груза 1200 Н (идеальные механизмы):",
+        "hints": [],
+        "solution": "200 Н < 300 Н < 600 Н < 1200 Н.",
+        "options": [
+          "Полиспаст с 6 ветвями",
+          "Наклонная плоскость $l/h = 4$",
+          "Подвижный блок",
+          "Неподвижный блок"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между механизмом и проигрышем в расстоянии при подъёме груза на 1 м.",
+        "hints": [],
+        "solution": "Выигрыш в силе равен проигрышу в расстоянии.",
+        "options": [
+          "Подвижный блок",
+          "Неподвижный блок",
+          "Полиспаст с 4 ветвями",
+          "Наклонная плоскость длиной 5 м, высотой 1 м"
+        ],
+        "matches": ["2 м верёвки", "1 м верёвки", "4 м верёвки", "5 м пути вдоль плоскости"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "10 * m * (l / 2 - a) / a",
+      "variables": ["m", "l", "a"],
+      "range": [1, 4]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Однородный рычаг массой $m$ и длиной $l$ опирается на ось на расстоянии $a$ от левого конца. Запишите силу $f$, которую нужно приложить к левому концу, чтобы удержать рычаг горизонтально. Примите $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$F a = mg\\left(\\dfrac{l}{2} - a\\right)$, $F = \\dfrac{10m(l/2 - a)}{a}$."
+      }
+    }
+  }
+]

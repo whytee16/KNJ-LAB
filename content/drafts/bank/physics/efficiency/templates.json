@@ -1,0 +1,1778 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "az",
+          "kind": "choice",
+          "values": [100, 200, 500, 1000]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 60, 75, 80]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "ap",
+          "expr": "az * e / 100"
+        }
+      ],
+      "answer": "ap / az * 100",
+      "tolerance": {},
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Полезная работа {{ap}} Дж, затраченная {{az}} Дж. Найдите КПД в процентах.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{A_п}{A_з} \\cdot 100\\%$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [40, 50, 75, 80]
+        },
+        {
+          "name": "az",
+          "kind": "choice",
+          "values": [200, 400, 1000]
+        }
+      ],
+      "constraints": [],
+      "answer": "az * e / 100",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД механизма {{e}} %, затраченная работа {{az}} Дж. Найдите полезную работу.",
+        "hints": [],
+        "solution": "$A_п = \\eta A_з$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Может ли КПД механизма быть больше 100 %?",
+        "hints": [],
+        "solution": "Часть работы всегда идёт на трение и подъём частей механизма.",
+        "options": [
+          "Нет: полезная работа не больше затраченной",
+          "Да, у хороших механизмов",
+          "Да, у подвижного блока",
+          "Да, если нет трения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отношение полезной работы к затраченной называется коэффициентом полезного ___.",
+        "hints": [],
+        "solution": "КПД: $\\eta = A_п/A_з$.",
+        "accepted": ["действия"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * h",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз весом {{p}} Н подняли на {{h}} м. Найдите полезную работу.",
+        "hints": [],
+        "solution": "Полезная работа — подъём груза: $A_п = Ph$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему КПД реального механизма меньше 100 %?",
+        "hints": [],
+        "solution": "Затраченная работа = полезная + потери.",
+        "options": [
+          "Часть работы тратится на трение и на подъём частей механизма",
+          "Механизм уменьшает массу груза",
+          "Работа исчезает",
+          "Из-за выигрыша в силе"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как можно увеличить КПД наклонной плоскости?",
+        "hints": [],
+        "solution": "Нужно уменьшить трение.",
+        "options": [
+          "Смазать поверхность",
+          "Сделать поверхность глаже",
+          "Поставить груз на колёса",
+          "Насыпать песок",
+          "Сделать плоскость шероховатой"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "az",
+          "kind": "choice",
+          "values": [500, 800, 1000]
+        },
+        {
+          "name": "ap",
+          "kind": "choice",
+          "values": [300, 400, 450]
+        }
+      ],
+      "constraints": [],
+      "answer": "az - ap",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Затраченная работа {{az}} Дж, полезная {{ap}} Дж. Сколько джоулей ушло на потери?",
+        "hints": [],
+        "solution": "Потери $A_з - A_п$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и формулой.",
+        "hints": [],
+        "solution": "Основные формулы темы.",
+        "options": [
+          "КПД",
+          "Полезная работа при подъёме",
+          "Затраченная работа на наклонной плоскости",
+          "Потери работы"
+        ],
+        "matches": ["$A_п/A_з$", "$Ph$", "$Fl$", "$A_з - A_п$"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите КПД по возрастанию.",
+        "hints": [],
+        "solution": "30 % < 45 % < 60 % < 90 %.",
+        "options": ["0,3", "45 %", "0,6", "90 %"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [0.4, 0.65, 0.8, 0.95]
+        }
+      ],
+      "constraints": [],
+      "answer": "e * 100",
+      "tolerance": {},
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите КПД {{e}} в процентах.",
+        "hints": [],
+        "solution": "Умножаем на 100 %."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что считают полезной работой при подъёме груза по наклонной плоскости?",
+        "hints": [],
+        "solution": "Цель — поднять груз, полезная работа $Ph$.",
+        "options": [
+          "Работу по подъёму груза на высоту $h$: $Ph$",
+          "Работу силы тяги вдоль плоскости: $Fl$",
+          "Работу силы трения",
+          "Сумму всех работ"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что считают затраченной работой при подъёме груза по наклонной плоскости?",
+        "hints": [],
+        "solution": "Затраченная — работа, которую совершает приложенная сила.",
+        "options": [
+          "Работу силы тяги вдоль плоскости: $Fl$",
+          "Работу по подъёму груза $Ph$",
+          "Работу силы тяжести",
+          "Нуль"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "az",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [60, 70, 80]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "ap",
+          "expr": "az * e / 100"
+        }
+      ],
+      "answer": "ap / az * 100",
+      "tolerance": {},
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Насос совершил работу {{az}} кДж, подняв воду и выполнив полезную работу {{ap}} кДж. Найдите КПД насоса в процентах.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{A_п}{A_з} \\cdot 100\\%$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой механизм обычно имеет больший КПД?",
+        "hints": [],
+        "solution": "Чем меньше трения и подвижных частей, тем больше КПД.",
+        "options": [
+          "Неподвижный блок со смазанной осью",
+          "Полиспаст из многих блоков",
+          "Ржавый ворот",
+          "Шероховатая наклонная плоскость"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [60, 75, 80]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "round(m * 10 * h / l / (e / 100))"
+        }
+      ],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "incline",
+        "incline": 30,
+        "forces": [
+          {
+            "angle": 30,
+            "size": 1,
+            "label": "F"
+          },
+          {
+            "angle": -90,
+            "size": 1.2,
+            "label": "mg"
+          }
+        ]
+      },
+      "answer": "m * 10 * h / (f * l) * 100",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По наклонной плоскости длиной {{l}} м и высотой {{h}} м втащили груз массой {{m}} кг силой {{f}} Н (см. рисунок). Найдите КПД ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$A_п = mgh$, $A_з = Fl$, $\\eta = \\dfrac{A_п}{A_з} \\cdot 100\\%$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90, 95]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "round(m * 10 / 2 / (e / 100))"
+        }
+      ],
+      "answer": "m * 10 / (2 * f) * 100",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С помощью подвижного блока груз массой {{m}} кг подняли, приложив к верёвке силу {{f}} Н. Найдите КПД блока ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Верёвку вытянули на $2h$: $\\eta = \\dfrac{mgh}{F \\cdot 2h} = \\dfrac{mg}{2F}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [4, 5, 8]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / (l * e / 100)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД наклонной плоскости {{e}} %. Высота {{h}} м, длина {{l}} м. Какую силу нужно приложить, чтобы втащить груз массой {{m}} кг ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$F = \\dfrac{mgh}{\\eta l}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90, 95]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [200, 400, 900]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * h / 100 / (e / 100)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рычагом с КПД {{e}} % подняли груз весом {{p}} Н на {{h}} см. Какую работу совершили?",
+        "hints": [],
+        "solution": "$A_з = \\dfrac{A_п}{\\eta} = \\dfrac{Ph}{\\eta}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "При подъёме груза подвижным блоком КПД 80 %. Что это значит?",
+        "hints": [],
+        "solution": "$\\eta = A_п/A_з$.",
+        "options": [
+          "80 % затраченной работы идёт на подъём груза",
+          "Блок поднимает 80 % груза",
+          "Сила равна 80 % веса",
+          "Блок даёт выигрыш в силе в 80 раз"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "az",
+          "expr": "round(m * 1000 * 10 * h / (e / 100) / 1000)"
+        }
+      ],
+      "answer": "m * 1000 * 10 * h / (az * 1000) * 100",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кран поднял груз массой {{m}} т на высоту {{h}} м, двигатель совершил работу {{az}} кДж. Найдите КПД крана ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$A_п = mgh$; $\\eta = A_п/A_з$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [36, 72, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / (2 * e / 100)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД подвижного блока {{e}} %. Какую силу нужно приложить к верёвке, чтобы поднять груз массой {{m}} кг ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{mg}{2F}$, $F = \\dfrac{mg}{2\\eta}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Золотое правило: выигрыша в работе нет; КПД снижают потери.",
+        "options": [
+          "КПД не может превышать 100 %",
+          "Чем больше трение, тем меньше КПД",
+          "КПД безразмерен",
+          "Простые механизмы дают выигрыш в работе",
+          "КПД всегда равен 100 % для блоков"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 40]
+        },
+        {
+          "name": "df",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "m * 10 * h / l + df"
+        }
+      ],
+      "answer": "f - m * 10 * h / l",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Наклонная плоскость длиной {{l}} м, высотой {{h}} м. Груз массой {{m}} кг втаскивают силой {{f}} Н. Найдите силу трения ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$A_з = A_п + A_тр$: $Fl = mgh + F_{тр} l$, $F_{тр} = F - \\dfrac{mgh}{l}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Затраченная работа равна полезной работе плюс работа против сил ___.",
+        "hints": [],
+        "solution": "$A_з = A_п + A_{пот}$.",
+        "accepted": ["трения", "сопротивления"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * v * 10 * h / (e / 100) / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Насос с КПД {{e}} % поднимает {{v}} м³ воды на высоту {{h}} м. Какую работу совершает двигатель насоса (в кДж, $g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$A_п = \\rho V g h$, $A_з = A_п/\\eta$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД какого из механизмов при прочих равных выше?",
+        "hints": [],
+        "solution": "Чем больше блоков, тем больше потерь на трение и подъём блоков.",
+        "options": [
+          "Неподвижный блок",
+          "Система из подвижного и неподвижного блоков",
+          "Полиспаст из 6 блоков",
+          "Все одинаковы"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги определения КПД наклонной плоскости.",
+        "hints": [],
+        "solution": "Лабораторная работа по определению КПД.",
+        "options": [
+          "Измерить вес груза $P$ и высоту плоскости $h$",
+          "Измерить силу тяги динамометром при равномерном движении",
+          "Измерить длину плоскости $l$",
+          "Вычислить $\\eta = \\dfrac{Ph}{Fl}$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между механизмом и затраченной работой при подъёме груза на высоту $h$ силой $F$.",
+        "hints": [],
+        "solution": "Затраченная работа — сила на путь точки её приложения.",
+        "options": [
+          "Неподвижный блок",
+          "Подвижный блок",
+          "Наклонная плоскость длиной $l$",
+          "Полиспаст с 4 ветвями"
+        ],
+        "matches": ["$Fh$", "$F \\cdot 2h$", "$Fl$", "$F \\cdot 4h$"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "10 * m / (2 * f)",
+      "variables": ["m", "f"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подвижным блоком поднимают груз массой $m$, прикладывая силу $f$. Запишите КПД $e$ (в долях единицы), $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{mgh}{F \\cdot 2h} = \\dfrac{mg}{2F}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [18, 38, 48]
+        },
+        {
+          "name": "mb",
+          "kind": "choice",
+          "values": [2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / (m + mb) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг подняли подвижным блоком массой {{mb}} кг. Трения нет. Найдите КПД ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Полезная работа $mgh$, затраченная $(m + m_б)gh$: $\\eta = \\dfrac{m}{m + m_б}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 40]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1]
+        },
+        {
+          "name": "ft",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / (m * 10 * h + ft * l) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг поднимают по наклонной плоскости длиной {{l}} м и высотой {{h}} м. Коэффициент трения такой, что сила трения {{ft}} Н. Найдите КПД ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$A_п = mgh$, $A_з = mgh + F_{тр} l$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 200, 400]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1000 * e / 100 / (m * 10)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подъёмник мощностью {{n}} кВт с КПД {{e}} % поднимает груз массой {{m}} кг. С какой скоростью он поднимает груз ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "Полезная мощность $\\eta N = mgv$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [300, 600]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "h * k"
+        },
+        {
+          "name": "f",
+          "expr": "round(p / k / (e / 100))"
+        }
+      ],
+      "answer": "p * h / (f * s) * 100",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С помощью рычага подняли груз {{p}} Н на {{h}} см, при этом точка приложения силы {{f}} Н опустилась на {{s}} см. Найдите КПД.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{Ph}{Fs}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится КПД наклонной плоскости, если её сделать круче (трение то же)?",
+        "hints": [],
+        "solution": "Путь короче — работа силы трения меньше, а полезная работа $mgh$ та же. (Сила трения при этом тоже уменьшается.)",
+        "options": ["Увеличится", "Уменьшится", "Не изменится", "Станет 100 %"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 12]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [60, 75, 80]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "round(m * 10 * h / (e / 100))"
+        }
+      ],
+      "answer": "m * 10 * h / a * 100",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ведро с водой массой {{m}} кг поднимают из колодца глубиной {{h}} м воротом, совершая работу {{a}} Дж. Найдите КПД ворота ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{mgh}{A}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [720, 1440]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / k / (e / 100)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Система блоков даёт выигрыш в силе в {{k}} раза, КПД {{e}} %. Какую силу нужно приложить, чтобы поднять груз {{p}} Н?",
+        "hints": [],
+        "solution": "Идеальная сила $P/k$; с учётом КПД $F = \\dfrac{P}{k\\eta}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2, 4]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз поднимают по наклонной плоскости. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Полезная работа $mgh$, затраченная $Fl$.",
+        "options": [
+          "При трении сила тяги больше, чем $mg\\,h/l$",
+          "Затраченная работа больше полезной",
+          "КПД зависит от трения",
+          "Полезная работа равна $Fl$",
+          "Без трения КПД был бы 100 %"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [12, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * 10 * h / (e / 100) / (t * 60) / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подъёмный кран с КПД {{e}} % за {{t}} мин поднял груз массой {{m}} т на высоту {{h}} м. Найдите мощность двигателя в кВт ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$N = \\dfrac{mgh}{\\eta t}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: полезная и затраченная работа → КПД.",
+        "hints": [],
+        "solution": "$\\eta = A_п/A_з$.",
+        "options": ["300 и 400 Дж", "450 и 500 Дж", "1 и 2 кДж", "180 и 300 Дж"],
+        "matches": ["75 %", "90 %", "50 %", "60 %"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две наклонные плоскости одинаковой высоты: первая длиннее. Трение одинаковое (то же μ). У какой КПД больше?",
+        "hints": [],
+        "solution": "На длинной плоскости больше путь и больше работа против трения.",
+        "options": [
+          "У короткой (более крутой)",
+          "У длинной",
+          "Одинаковые",
+          "Зависит от массы груза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию КПД (полезная работа 600 Дж):",
+        "hints": [],
+        "solution": "50 % < 60 % < 75 % < 92 %.",
+        "options": [
+          "Затрачено 1200 Дж",
+          "Затрачено 1000 Дж",
+          "Затрачено 800 Дж",
+          "Затрачено 650 Дж"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Работа на подъём самого блока и на преодоление трения — это ___ работы.",
+        "hints": [],
+        "solution": "$A_з = A_п + A_{пот}$.",
+        "accepted": ["потери", "потеря"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 40]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h * (100 / e - 1)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Наклонная плоскость имеет КПД {{e}} %. Груз массой {{m}} кг втаскивают на высоту {{h}} м. Сколько работы уходит на трение ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$A_з = A_п/\\eta$, $A_{тр} = A_з - A_п$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m / (m + b)",
+      "variables": ["m", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подвижный блок массой $b$ поднимает груз массой $m$ (трения нет). Запишите КПД $e$.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{m}{m + m_б}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.5 / (0.5 + mu * 0.87) * 100",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг равномерно втаскивают по наклонной плоскости с углом 30° (высота равна половине длины). Коэффициент трения {{mu}}. Найдите КПД, если сила трения $\\mu mg\\cos 30°$, $\\cos 30° \\approx 0{,}87$.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{mg\\,h}{mg\\,h + \\mu mg\\cos 30° \\cdot l} = \\dfrac{\\sin 30°}{\\sin 30° + \\mu\\cos 30°}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [46, 96]
+        },
+        {
+          "name": "mb",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / (m + 2 * mb) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Полиспаст из двух подвижных блоков массой {{mb}} кг каждый (груз держат 4 ветви) поднимает груз массой {{m}} кг. Трения нет. Найдите КПД.",
+        "hints": [],
+        "solution": "Поднимаются груз и два блока: $\\eta = \\dfrac{m}{m + 2m_б}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1000 * e / 100 * 3600 / (1000 * 10 * h)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Насос с КПД {{e}} % откачивает воду из шахты глубиной {{h}} м. Мощность двигателя {{n}} кВт. Сколько кубометров воды он откачает за час ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$\\eta N t = \\rho V g h$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [500, 1000]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "e1",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "e2",
+          "kind": "choice",
+          "values": [50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "abs(p * h / (e1 / 100) - p * h / (e2 / 100))",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Для подъёма груза {{p}} Н на высоту {{h}} м использовали рычаг с КПД {{e1}} %, затем — наклонную плоскость с КПД {{e2}} %. На сколько джоулей меньше работы затрачено на более эффективном механизме?",
+        "hints": [],
+        "solution": "$A_з = \\dfrac{Ph}{\\eta}$ для каждого; разность."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Можно ли с помощью наклонной плоскости с КПД 60 % поднять груз, совершив работу меньше $mgh$?",
+        "hints": [],
+        "solution": "$A_з = A_п/\\eta \\ge A_п$.",
+        "options": [
+          "Нет: затраченная работа всегда не меньше $mgh$",
+          "Да, если плоскость длинная",
+          "Да, если груз лёгкий",
+          "Да, если тянуть быстро"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e1",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "e2",
+          "kind": "choice",
+          "values": [50, 70, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "e1 * e2 / 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз поднимают двумя последовательно соединёнными механизмами с КПД {{e1}} % и {{e2}} %. Найдите общий КПД.",
+        "hints": [],
+        "solution": "Общий КПД — произведение: $\\eta = \\eta_1\\eta_2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [3]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.25]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "m * 10 * (0.6 + mu * 0.8)"
+        }
+      ],
+      "answer": "(f - m * 10 * h / l) / (m * 10 * sqrt(l^2 - h^2) / l)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг втаскивают на высоту {{h}} м по плоскости длиной {{l}} м силой {{f}} Н. Найдите коэффициент трения, считая силу трения $\\mu mg \\cdot \\dfrac{\\sqrt{l^2 - h^2}}{l}$ ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$F = mg\\dfrac{h}{l} + \\mu mg\\dfrac{\\sqrt{l^2 - h^2}}{l}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД подвижного блока 90 %. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "$F = \\dfrac{P}{2\\eta} > \\dfrac{P}{2}$.",
+        "options": [
+          "Сила больше половины веса груза",
+          "Верёвку вытягивают на двойную высоту подъёма",
+          "10 % затраченной работы — потери",
+          "Сила равна половине веса",
+          "Выигрыш в работе 10 %"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [200, 400, 500]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "m * 10 * v / (e / 100) / 1000"
+        }
+      ],
+      "answer": "m * 10 * v / (n * 1000) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лебёдка поднимает груз массой {{m}} кг со скоростью {{v}} м/с, потребляя мощность {{n}} кВт. Найдите КПД ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Полезная мощность $mgv$; $\\eta = \\dfrac{mgv}{N}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию КПД подвижного блока массой 2 кг (трения нет) для грузов:",
+        "hints": [],
+        "solution": "50 % < 80 % < 90 % < 98 %.",
+        "options": ["2 кг", "8 кг", "18 кг", "98 кг"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [50, 80]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [500, 800]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / t / (e / 100) / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель подъёмника с КПД {{e}} % поднимает лифт массой {{m}} кг на {{h}} м за {{t}} с. Найдите потребляемую мощность в кВт ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$N = \\dfrac{mgh}{\\eta t}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему КПД подвижного блока растёт с увеличением массы груза?",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{m}{m + m_б}$ стремится к 1 при больших $m$.",
+        "options": [
+          "Доля работы на подъём блока становится меньше",
+          "Трение исчезает",
+          "Блок становится легче",
+          "Это неверно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между КПД двух последовательных механизмов и общим КПД.",
+        "hints": [],
+        "solution": "Общий КПД — произведение.",
+        "options": ["90 % и 80 %", "50 % и 50 %", "100 % и 40 %", "80 % и 75 %"],
+        "matches": ["72 %", "25 %", "40 %", "60 %"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Общий КПД нескольких механизмов, работающих последовательно, равен ___ их КПД.",
+        "hints": [],
+        "solution": "$\\eta = \\eta_1 \\eta_2 \\dots$",
+        "accepted": ["произведению", "произведение"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "p * h / e",
+      "variables": ["p", "h", "e"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Механизм с КПД $e$ (в долях единицы) поднимает груз весом $p$ на высоту $h$. Запишите затраченную работу $a$.",
+        "hints": [],
+        "solution": "$A_з = \\dfrac{Ph}{\\eta}$."
+      }
+    }
+  }
+]
