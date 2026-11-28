@@ -1,0 +1,1442 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.25, 0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / f",
+      "tolerance": {},
+      "unit": "дптр"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Фокусное расстояние линзы {{f}} м. Найдите её оптическую силу.",
+        "hints": [],
+        "solution": "$D = \\dfrac{1}{F}$ (F в метрах)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [2, 4, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 / d",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Оптическая сила линзы {{d}} дптр. Найдите фокусное расстояние в сантиметрах.",
+        "hints": [],
+        "solution": "$F = \\dfrac{1}{D}$ м."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая линза собирающая?",
+        "hints": [],
+        "solution": "Выпуклые линзы собирают параллельные лучи.",
+        "options": ["Выпуклая (в середине толще, чем по краям)", "Вогнутая", "Плоская", "Любая"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Оптическая сила рассеивающей линзы…",
+        "hints": [],
+        "solution": "Фокус рассеивающей линзы мнимый.",
+        "options": ["Отрицательна", "Положительна", "Равна нулю", "Всегда больше 10 дптр"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Точка, в которой собираются после линзы лучи, параллельные главной оптической оси, называется ___ линзы.",
+        "hints": [],
+        "solution": "Расстояние до неё — фокусное расстояние.",
+        "accepted": ["фокусом", "главным фокусом", "фокус"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между оптической силой и линзой.",
+        "hints": [],
+        "solution": "$F = 1/D$.",
+        "options": ["+5 дптр", "−2 дптр", "+10 дптр", "−4 дптр"],
+        "matches": [
+          "Собирающая, F = 20 см",
+          "Рассеивающая, F = −50 см",
+          "Собирающая, F = 10 см",
+          "Рассеивающая, F = −25 см"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о собирающей линзе.",
+        "hints": [],
+        "solution": "Свойства собирающей линзы.",
+        "options": [
+          "Она даёт действительное изображение, если предмет дальше фокуса",
+          "Луч через оптический центр не преломляется",
+          "Лучи, параллельные оси, собираются в фокусе",
+          "Она всегда даёт мнимое изображение",
+          "Её оптическая сила отрицательна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое изображение даёт лупа?",
+        "hints": [],
+        "solution": "Предмет помещают между линзой и фокусом.",
+        "options": [
+          "Мнимое, прямое, увеличенное",
+          "Действительное, перевёрнутое, уменьшенное",
+          "Мнимое, уменьшенное",
+          "Действительное, равное"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите линзы по возрастанию оптической силы.",
+        "hints": [],
+        "solution": "Сравниваем числа со знаком.",
+        "options": ["−4 дптр", "−1 дптр", "+2 дптр", "+10 дптр"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что такое дальнозоркость и как её исправляют?",
+        "hints": [],
+        "solution": "Очки с положительными диоптриями.",
+        "options": [
+          "Изображение за сетчаткой; исправляют собирающими линзами",
+          "Изображение перед сетчаткой; рассеивающими",
+          "Цветовая слепота",
+          "Исправляют тёмными очками"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чем исправляют близорукость?",
+        "hints": [],
+        "solution": "Изображение формируется перед сетчаткой.",
+        "options": ["Рассеивающими линзами", "Собирающими линзами", "Призмами", "Зеркалами"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица оптической силы — ___.",
+        "hints": [],
+        "solution": "1 дптр = 1/м.",
+        "accepted": ["диоптрия", "дптр", "диоптрий"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d1",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "d2",
+          "kind": "choice",
+          "values": [-2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "d1 + d2",
+      "tolerance": {},
+      "unit": "дптр"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две тонкие линзы {{d1}} и {{d2}} дптр сложены вплотную. Найдите оптическую силу системы.",
+        "hints": [],
+        "solution": "Оптические силы складываются."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой луч проходит через линзу без преломления?",
+        "hints": [],
+        "solution": "В центре тонкая линза подобна пластинке.",
+        "options": ["Через оптический центр", "Параллельный оси", "Через фокус", "Никакой"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую линзу используют в фотоаппарате для получения изображения на матрице?",
+        "hints": [],
+        "solution": "Нужно действительное изображение.",
+        "options": ["Собирающую", "Рассеивающую", "Плоскую", "Никакую"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1.5, 2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "d",
+          "expr": "f * k"
+        }
+      ],
+      "answer": "d * f / (d - f)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Формула тонкой линзы: $\\dfrac{1}{F} = \\dfrac{1}{d} + \\dfrac{1}{f}$. Предмет на расстоянии {{d}} см от собирающей линзы с фокусным расстоянием {{f}} см. Найдите расстояние до изображения.",
+        "hints": [],
+        "solution": "$f = \\dfrac{dF}{d - F}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [20, 30, 60]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "d * f / (d + f)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Формула тонкой линзы: $\\dfrac{1}{F} = \\dfrac{1}{d} + \\dfrac{1}{f}$. Изображение получено на расстоянии {{f}} см, предмет — на {{d}} см. Найдите фокусное расстояние.",
+        "hints": [],
+        "solution": "$F = \\dfrac{df}{d + f}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "f / d",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет на расстоянии {{d}} см, изображение на {{f}} см. Найдите увеличение линзы.",
+        "hints": [],
+        "solution": "$\\Gamma = \\dfrac{f}{d}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет находится на двойном фокусном расстоянии от собирающей линзы. Каким будет изображение?",
+        "hints": [],
+        "solution": "При $d = 2F$ и $f = 2F$, $\\Gamma = 1$.",
+        "options": [
+          "Действительным, перевёрнутым, равным",
+          "Мнимым, увеличенным",
+          "Действительным, уменьшенным",
+          "Изображения нет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет в фокусе собирающей линзы. Что с изображением?",
+        "hints": [],
+        "solution": "При $d = F$: $f \\to \\infty$.",
+        "options": [
+          "Изображения нет (лучи идут параллельно)",
+          "Изображение в фокусе",
+          "Мнимое уменьшенное",
+          "Равное"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между положением предмета (собирающая линза) и изображением.",
+        "hints": [],
+        "solution": "Построения для собирающей линзы.",
+        "options": ["$d > 2F$", "$d = 2F$", "$F < d < 2F$", "$d < F$"],
+        "matches": [
+          "Действительное, уменьшенное",
+          "Действительное, равное",
+          "Действительное, увеличенное",
+          "Мнимое, увеличенное"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "qd",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / (qd - 100 / d) * 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Оптическая сила линзы {{qd}} дптр. Предмет на расстоянии {{d}} см. Где изображение (см)?",
+        "hints": [],
+        "solution": "$\\dfrac{1}{f} = D - \\dfrac{1}{d}$ (в метрах)."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о рассеивающей линзе.",
+        "hints": [],
+        "solution": "Свойства рассеивающей линзы.",
+        "options": [
+          "Она даёт мнимое, прямое, уменьшенное изображение",
+          "Её фокус мнимый",
+          "Её оптическая сила отрицательна",
+          "Она даёт действительное изображение",
+          "Она увеличивает предметы"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отношение высоты изображения к высоте предмета называется линейным ___.",
+        "hints": [],
+        "solution": "$\\Gamma = H/h = f/d$.",
+        "accepted": ["увеличением", "увеличение"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "g",
+          "kind": "choice",
+          "values": [0.5, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "h * g",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Высота предмета {{h}} см, увеличение линзы {{g}}. Найдите высоту изображения.",
+        "hints": [],
+        "solution": "$H = \\Gamma h$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги построения изображения в собирающей линзе.",
+        "hints": [],
+        "solution": "Построение двумя лучами.",
+        "options": [
+          "Провести луч, параллельный оси, — после линзы через фокус",
+          "Провести луч через оптический центр без преломления",
+          "Найти точку пересечения лучей",
+          "Это изображение вершины предмета"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится изображение, если закрыть половину собирающей линзы?",
+        "hints": [],
+        "solution": "Каждая часть линзы строит всё изображение.",
+        "options": [
+          "Станет менее ярким, но останется целым",
+          "Исчезнет половина изображения",
+          "Исчезнет полностью",
+          "Станет вдвое меньше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [5, 10, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "f",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Фокусное расстояние объектива {{f}} см. На каком расстоянии от объектива получится изображение очень далёкого предмета?",
+        "hints": [],
+        "solution": "Для далёкого предмета $d \\to \\infty$, $f = F$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "d * c / (d - c)",
+      "variables": ["d", "c"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите расстояние до изображения $f$ через расстояние до предмета $d$ и фокусное расстояние $c$ собирающей линзы.",
+        "hints": [],
+        "solution": "$\\dfrac{1}{c} = \\dfrac{1}{d} + \\dfrac{1}{f}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1, 2, 2.5, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 / d",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Очки «−{{d}}» — какова оптическая сила и фокусное расстояние этих линз (по модулю, см)?",
+        "hints": [],
+        "solution": "$|F| = 1/|D|$; линза рассеивающая."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [15, 20, 30]
+        },
+        {
+          "name": "g",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "d * g / (1 + g)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Изображение предмета, поставленного на {{d}} см от собирающей линзы, получилось в {{g}} раза больше предмета (действительное). Найдите фокусное расстояние.",
+        "hints": [],
+        "solution": "$f = \\Gamma d$, $F = \\dfrac{df}{d + f} = \\dfrac{\\Gamma d}{1 + \\Gamma}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [40, 80, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "l / 4",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расстояние между предметом и его действительным изображением {{l}} см, увеличение 1. Найдите фокусное расстояние.",
+        "hints": [],
+        "solution": "$d = f = 2F$, $L = 4F$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "d * f / (d + f)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Формула тонкой линзы: $\\dfrac{1}{F} = \\dfrac{1}{d} + \\dfrac{1}{f}$. Рассеивающая линза ($F = -{{f}}$ см), предмет на {{d}} см. Найдите расстояние до мнимого изображения (по модулю).",
+        "hints": [],
+        "solution": "$\\dfrac{1}{f} = -\\dfrac{1}{F} - \\dfrac{1}{d}$, $|f| = \\dfrac{dF}{d + F}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет приближают к собирающей линзе от $3F$ до $1{,}5F$. Как меняется изображение?",
+        "hints": [],
+        "solution": "При уменьшении $d$ (при $d > F$) $f$ растёт, растёт и $\\Gamma$.",
+        "options": [
+          "Удаляется от линзы и увеличивается",
+          "Приближается и уменьшается",
+          "Не меняется",
+          "Становится мнимым"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "g",
+          "kind": "choice",
+          "values": [20, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "l * 100 / (1 + g)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проекционный аппарат даёт на экране в {{l}} м от объектива изображение, увеличенное в {{g}} раз. Найдите фокусное расстояние (см).",
+        "hints": [],
+        "solution": "$f = L$, $d = f/\\Gamma$, $F = \\dfrac{df}{d + f} = \\dfrac{f}{1 + \\Gamma}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о глазе.",
+        "hints": [],
+        "solution": "Оптика глаза.",
+        "options": [
+          "Хрусталик — собирающая линза",
+          "Изображение на сетчатке действительное, перевёрнутое, уменьшенное",
+          "Аккомодация — изменение кривизны хрусталика",
+          "Изображение на сетчатке мнимое",
+          "Хрусталик — рассеивающая линза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "4 - 100 / d",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "дптр"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек читает без очков на расстоянии {{d}} см, а норма — 25 см. Какие очки ему нужны (оптическая сила)?",
+        "hints": [],
+        "solution": "Линза должна дать мнимое изображение текста с 25 см на расстоянии $d$: $D = \\dfrac{1}{0{,}25} - \\dfrac{1}{d}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между прибором и изображением.",
+        "hints": [],
+        "solution": "Оптические приборы.",
+        "options": ["Фотоаппарат", "Проектор", "Лупа", "Глаз"],
+        "matches": [
+          "Действительное, уменьшенное, перевёрнутое",
+          "Действительное, увеличенное, перевёрнутое",
+          "Мнимое, увеличенное, прямое",
+          "Действительное, уменьшенное, перевёрнутое (на сетчатке)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Способность глаза давать резкое изображение предметов на разных расстояниях называется ___.",
+        "hints": [],
+        "solution": "Изменение кривизны хрусталика.",
+        "accepted": ["аккомодацией", "аккомодация"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию расстояние до изображения (собирающая линза F = 10 см), предмет на:",
+        "hints": [],
+        "solution": "≈11,1; 15; 20; 30 см.",
+        "options": ["100 см", "30 см", "20 см", "15 см"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d1",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        },
+        {
+          "name": "d2",
+          "kind": "choice",
+          "values": [-2, -3, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 / (d1 + d2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две линзы {{d1}} и {{d2}} дптр вплотную. Найдите фокусное расстояние системы (см).",
+        "hints": [],
+        "solution": "$D = D_1 + D_2$, $F = 1/D$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему фотограф, снимая далёкие горы, а затем близкий цветок, перемещает объектив?",
+        "hints": [],
+        "solution": "Фокусировка: $f$ зависит от $d$.",
+        "options": [
+          "Для близкого предмета изображение дальше от линзы",
+          "Чтобы изменить яркость",
+          "Чтобы изменить цвет",
+          "Объектив перегревается"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [8, 10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.25 * d",
+      "tolerance": {},
+      "decimals": 1
+    },
+    "texts": {
+      "ru": {
+        "statement": "Увеличение лупы примерно $\\Gamma = \\dfrac{25\\ \\text{см}}{F}$. Найдите увеличение лупы с оптической силой {{d}} дптр.",
+        "hints": [],
+        "solution": "$F = 1/D$, $\\Gamma = 0{,}25 D$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет на расстоянии $d < F$ от собирающей линзы. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Принцип лупы.",
+        "options": [
+          "Изображение мнимое",
+          "Изображение прямое",
+          "Изображение увеличенное",
+          "Изображение на экране",
+          "Изображение перевёрнутое"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "d * g / (1 + g)",
+      "variables": ["d", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Действительное изображение в $g$ раз больше предмета, предмет на расстоянии $d$. Запишите фокусное расстояние.",
+        "hints": [],
+        "solution": "$F = \\dfrac{\\Gamma d}{1 + \\Gamma}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [90, 100, 125]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 16, 20]
+        }
+      ],
+      "constraints": ["l > 4 * f"],
+      "answer": "sqrt(l^2 - 4 * l * f)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расстояние от предмета до экрана {{l}} см. Собирающая линза с фокусным расстоянием {{f}} см даёт чёткое изображение при двух положениях. Найдите расстояние между этими положениями.",
+        "hints": [],
+        "solution": "$d + f = L$, $\\dfrac{1}{d} + \\dfrac{1}{f} = \\dfrac{1}{F}$ ⇒ $d^2 - Ld + LF = 0$; разность корней $\\sqrt{L^2 - 4LF}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [35, 50]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "1800 * f / (d * 1000 - f)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Объектив фотоаппарата $F = {{f}}$ мм. Человек ростом 1,8 м стоит на {{d}} м. Найдите высоту изображения (мм).",
+        "hints": [],
+        "solution": "$\\Gamma = \\dfrac{f}{d} = \\dfrac{F}{d - F}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10]
+        },
+        {
+          "name": "d1",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "d2",
+          "kind": "choice",
+          "values": [15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "d2 * f / (d2 - f) - d1 * f / (d1 - f)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предмет движется вдоль оси к собирающей линзе ($F = {{f}}$ см) и переходит с $d_1 = {{d1}}$ см на $d_2 = {{d2}}$ см. На сколько сантиметров сместилось изображение?",
+        "hints": [],
+        "solution": "$f = \\dfrac{dF}{d - F}$ для обоих положений."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Изображение предмета в собирающей линзе мнимое и увеличенное в 2 раза. Где предмет?",
+        "hints": [],
+        "solution": "Для мнимого: $\\dfrac{1}{F} = \\dfrac{1}{d} - \\dfrac{1}{f}$, $f = 2d$ ⇒ $d = F/2$.",
+        "options": ["На расстоянии $F/2$ от линзы", "На $2F$", "На $3F$", "В фокусе"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [20, 25, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "-100 / d",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "дптр"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Близорукий человек ясно видит предметы на расстоянии не дальше {{d}} см. Какие очки нужны, чтобы видеть далёкие предметы (дптр)?",
+        "hints": [],
+        "solution": "Линза должна давать изображение бесконечно далёкого предмета на расстоянии $d$: $D = -1/d$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о системе двух линз вплотную.",
+        "hints": [],
+        "solution": "$D = D_1 + D_2$.",
+        "options": [
+          "Оптические силы складываются",
+          "Собирающая + рассеивающая равной силы дают $D = 0$",
+          "Система может быть рассеивающей",
+          "Фокусные расстояния складываются",
+          "Система всегда собирающая"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "g1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "g2",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "x / (1 / g2 - 1 / g1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Линза даёт действительное изображение с увеличением {{g1}}. Предмет передвинули на {{x}} см, и увеличение стало {{g2}} (тоже действительное). Найдите фокусное расстояние, если предмет отодвинули от линзы.",
+        "hints": [],
+        "solution": "$d = F\\left(1 + \\dfrac{1}{\\Gamma}\\right)$: $\\Delta d = F\\left(\\dfrac{1}{\\Gamma_2} - \\dfrac{1}{\\Gamma_1}\\right)$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию увеличение (собирающая линза F = 20 см), предмет на:",
+        "hints": [],
+        "solution": "0,25; 0,5; 1; 2.",
+        "options": ["100 см", "60 см", "40 см", "30 см"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: собирающая линза F = 10 см, предмет на d.",
+        "hints": [],
+        "solution": "Формула линзы.",
+        "options": ["d = 15 см", "d = 20 см", "d = 30 см", "d = 5 см"],
+        "matches": ["f = 30 см, Γ = 2", "f = 20 см, Γ = 1", "f = 15 см, Γ = 0,5", "мнимое, Γ = 2"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Минимальное расстояние между предметом и его действительным изображением в собирающей линзе равно ___ фокусным расстояниям.",
+        "hints": [],
+        "solution": "При $d = f = 2F$.",
+        "accepted": ["четырём", "4", "четыре"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [0.93, 1.86, 4.65]
+        }
+      ],
+      "constraints": [],
+      "answer": "d / 0.0093 / 10",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С помощью линзы на экране получили изображение Солнца диаметром {{d}} мм. Угловой диаметр Солнца ≈ $9{,}3 \\cdot 10^{-3}$ рад. Найдите фокусное расстояние (см).",
+        "hints": [],
+        "solution": "Изображение далёкого объекта в фокальной плоскости: $D_{изобр} = F\\theta$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему для фокусировки глаза ныряльщику под водой нужна маска?",
+        "hints": [],
+        "solution": "Маска возвращает воздушный слой перед глазом.",
+        "options": [
+          "Показатель преломления воды близок к показателю роговицы — глаз почти теряет оптическую силу",
+          "Вода мутная",
+          "Вода давит на глаз",
+          "Под водой темно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [5, 10, 12.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "25 * f / (25 + f)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лупа с F = {{f}} см. На каком расстоянии от лупы (см) поместить предмет, чтобы мнимое изображение было на 25 см от неё?",
+        "hints": [],
+        "solution": "$\\dfrac{1}{F} = \\dfrac{1}{d} - \\dfrac{1}{25}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Действительное изображение на экране. Экран отодвинули, изображение размылось. Что можно сделать, чтобы снова получить резкое изображение (линза та же)?",
+        "hints": [],
+        "solution": "Нужно согласовать $d$ и $f$.",
+        "options": [
+          "Приблизить предмет к линзе",
+          "Вернуть экран",
+          "Передвинуть линзу",
+          "Закрыть половину линзы",
+          "Ничего нельзя"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "1 / a + 1 / b",
+      "variables": ["a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две тонкие линзы с фокусными расстояниями $a$ и $b$ сложены вплотную. Запишите оптическую силу системы.",
+        "hints": [],
+        "solution": "$D = D_1 + D_2 = \\dfrac{1}{a} + \\dfrac{1}{b}$."
+      }
+    }
+  }
+]

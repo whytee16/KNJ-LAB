@@ -1,0 +1,32 @@
+{
+  "subject": "physics",
+  "grade": 8,
+  "note": "Предложение раскладки тем банка по четвертям (порядок утверждённого списка Ф8.1–Ф8.14). Владелец правит в студии. Уже стоящие в КТП темы не переносятся.",
+  "sections": [
+    {
+      "quarter": 1,
+      "title": "Тепловые явления",
+      "topics": ["internal-energy", "heat-quantity", "heat-balance"]
+    },
+    {
+      "quarter": 2,
+      "title": "Изменение агрегатных состояний. Тепловые двигатели",
+      "topics": ["melting", "vaporization", "fuel-heat-engines"]
+    },
+    {
+      "quarter": 3,
+      "title": "Электрические явления",
+      "topics": [
+        "electric-charge",
+        "current-resistance",
+        "ohms-law-connections",
+        "current-work-power"
+      ]
+    },
+    {
+      "quarter": 4,
+      "title": "Электромагнитные и световые явления",
+      "topics": ["magnetic-field-current", "light-reflection", "light-refraction", "thin-lens"]
+    }
+  ]
+}

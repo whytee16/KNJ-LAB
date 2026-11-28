@@ -1,0 +1,1370 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.5, 1.6, 2, 2.4]
+        }
+      ],
+      "constraints": [],
+      "answer": "300 / n",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "тыс. км/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Показатель преломления стекла {{n}}. Найдите скорость света в стекле (в тыс. км/с). $c = 3 \\cdot 10^8$ м/с.",
+        "hints": [],
+        "solution": "$v = \\dfrac{c}{n}$; $c = 300$ тыс. км/с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.25, 1.5, 2, 2.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "300 / n"
+        }
+      ],
+      "answer": "300 / v",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость света в веществе {{v}} тыс. км/с. Найдите показатель преломления. $c = 3 \\cdot 10^8$ м/с.",
+        "hints": [],
+        "solution": "$n = \\dfrac{c}{v}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что происходит со светом на границе двух сред?",
+        "hints": [],
+        "solution": "Явления отражения и преломления.",
+        "options": [
+          "Он частично отражается и частично преломляется",
+          "Только отражается",
+          "Только поглощается",
+          "Ничего"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч переходит из воздуха в воду. Как соотносятся угол преломления и угол падения?",
+        "hints": [],
+        "solution": "Вода оптически плотнее воздуха.",
+        "options": [
+          "Угол преломления меньше угла падения",
+          "Больше",
+          "Равны",
+          "Угол преломления всегда 90°"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Изменение направления луча при переходе из одной среды в другую называется ___ света.",
+        "hints": [],
+        "solution": "Причина — разная скорость света в средах.",
+        "accepted": ["преломлением", "преломление"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ложка в стакане с водой кажется «сломанной»?",
+        "hints": [],
+        "solution": "Лучи от погружённой части преломляются.",
+        "options": [
+          "Из-за преломления света на границе вода — воздух",
+          "Ложка гнётся",
+          "Из-за отражения",
+          "Из-за тени"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о преломлении.",
+        "hints": [],
+        "solution": "Законы преломления.",
+        "options": [
+          "Падающий и преломлённый лучи и перпендикуляр лежат в одной плоскости",
+          "Луч, падающий перпендикулярно границе, не преломляется",
+          "При переходе в оптически более плотную среду луч приближается к перпендикуляру",
+          "Угол преломления всегда равен углу падения",
+          "Свет не преломляется в стекле"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между средой и показателем преломления (примерно).",
+        "hints": [],
+        "solution": "Табличные значения.",
+        "options": ["Воздух", "Вода", "Стекло", "Алмаз"],
+        "matches": ["1,00", "1,33", "1,5", "2,42"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему водоём кажется мельче, чем на самом деле?",
+        "hints": [],
+        "solution": "Кажущаяся глубина меньше действительной.",
+        "options": [
+          "Лучи от дна преломляются на поверхности воды",
+          "Вода отражает дно",
+          "Дно поднимается",
+          "Вода поглощает свет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите среды по возрастанию показателя преломления.",
+        "hints": [],
+        "solution": "1 < 1,33 < 1,5 < 2,42.",
+        "options": ["Воздух", "Вода", "Стекло", "Алмаз"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Среда, в которой скорость света меньше, называется оптически более ___.",
+        "hints": [],
+        "solution": "В ней показатель преломления больше.",
+        "accepted": ["плотной"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч падает на стеклянную пластинку перпендикулярно. Каков угол преломления?",
+        "hints": [],
+        "solution": "Перпендикулярный луч проходит без преломления.",
+        "options": ["0°", "90°", "45°", "Зависит от стекла"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.33, 1.5, 2.42]
+        }
+      ],
+      "constraints": [],
+      "answer": "n",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз скорость света в вакууме больше, чем в веществе с показателем преломления {{n}}?",
+        "hints": [],
+        "solution": "$n = c/v$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое явление объясняет радугу?",
+        "hints": [],
+        "solution": "Разные цвета преломляются по-разному.",
+        "options": [
+          "Преломление и дисперсия света в каплях",
+          "Отражение от облаков",
+          "Поглощение света",
+          "Тень от туч"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложение белого света в спектр при преломлении называется ___.",
+        "hints": [],
+        "solution": "Опыт Ньютона с призмой.",
+        "accepted": ["дисперсией", "дисперсия"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.25, 0.33, 0.4]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.5 / s",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч падает из воздуха на стекло под углом 30°, угол преломления таков, что $\\sin\\gamma = {{s}}$. Найдите показатель преломления. Считайте $\\sin 30° = 0{,}5$, $\\sin 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\sin 90° = 1$.",
+        "hints": [],
+        "solution": "$n = \\dfrac{\\sin\\alpha}{\\sin\\gamma}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.25, 1.33, 1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.5 / n",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Показатель преломления {{n}}, угол падения из воздуха 30°. Найдите синус угла преломления. Считайте $\\sin 30° = 0{,}5$, $\\sin 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\sin 90° = 1$.",
+        "hints": [],
+        "solution": "$\\sin\\gamma = \\dfrac{\\sin\\alpha}{n}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.25, 1.5, 2, 2.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / n",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите синус предельного угла полного отражения для среды с показателем {{n}} на границе с воздухом.",
+        "hints": [],
+        "solution": "$\\sin\\alpha_0 = \\dfrac{1}{n}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "При каком условии возможно полное внутреннее отражение?",
+        "hints": [],
+        "solution": "Условие полного отражения.",
+        "options": [
+          "Свет идёт из оптически более плотной среды в менее плотную при угле падения больше предельного",
+          "Свет идёт из воздуха в воду",
+          "Угол падения равен 0°",
+          "Всегда на границе двух сред"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Где используется полное внутреннее отражение?",
+        "hints": [],
+        "solution": "Применения.",
+        "options": [
+          "Оптоволоконная связь",
+          "Блеск алмазов",
+          "Призменные бинокли",
+          "Плоское зеркало",
+          "Тень от предмета"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [300, 225]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [200, 150, 125]
+        }
+      ],
+      "constraints": [],
+      "answer": "v1 / v2",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость света в первой среде {{v1}} тыс. км/с, во второй — {{v2}} тыс. км/с. Найдите относительный показатель преломления второй среды относительно первой.",
+        "hints": [],
+        "solution": "$n_{21} = \\dfrac{v_1}{v_2}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отношение синуса угла падения к синусу угла преломления для двух сред постоянно — это закон ___.",
+        "hints": [],
+        "solution": "Закон Снеллиуса.",
+        "accepted": ["преломления", "Снеллиуса", "Снелла"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между показателем преломления и синусом предельного угла.",
+        "hints": [],
+        "solution": "$\\sin\\alpha_0 = 1/n$.",
+        "options": ["1,25", "1,5", "2", "2,5"],
+        "matches": ["0,8", "≈ 0,67", "0,5", "0,4"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч переходит из стекла в воздух под углом падения 30° (n = 1,5). Что верно?",
+        "hints": [],
+        "solution": "$\\sin\\gamma = 1{,}5 \\cdot 0{,}5 = 0{,}75$ — угол ≈ 49°; полного отражения нет, так как 0,75 < 1.",
+        "options": [
+          "Угол преломления больше 30°",
+          "Угол преломления меньше 30°",
+          "Происходит полное отражение",
+          "Луч не преломляется"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [3, 6, 30]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "d * n / 300000000 * 1e9",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "нс"
+    },
+    "texts": {
+      "ru": {
+        "statement": "За какое время свет проходит {{d}} м в стекле с показателем {{n}}? Ответ в наносекундах. $c = 3 \\cdot 10^8$ м/с.",
+        "hints": [],
+        "solution": "$t = \\dfrac{d}{v} = \\dfrac{dn}{c}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите среды по убыванию скорости света.",
+        "hints": [],
+        "solution": "Чем больше $n$, тем меньше скорость.",
+        "options": ["Вакуум", "Вода", "Стекло", "Алмаз"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему алмаз так ярко «играет»?",
+        "hints": [],
+        "solution": "$n = 2{,}42$, предельный угол ≈ 24°.",
+        "options": [
+          "Большой показатель преломления: малый предельный угол, свет многократно полностью отражается",
+          "Алмаз светится",
+          "Алмаз поглощает свет",
+          "У алмаза нет граней"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "1 / 0.5",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите показатель преломления среды, если предельный угол полного отражения 30°. Считайте $\\sin 30° = 0{,}5$, $\\sin 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\sin 90° = 1$.",
+        "hints": [],
+        "solution": "$n = \\dfrac{1}{\\sin\\alpha_0}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч идёт из воды в воздух. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Переход в оптически менее плотную среду.",
+        "options": [
+          "Угол преломления больше угла падения",
+          "При большом угле падения возможно полное отражение",
+          "Скорость света увеличивается",
+          "Угол преломления меньше угла падения",
+          "Скорость света уменьшается"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a / b",
+      "variables": ["a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите показатель преломления $n$ через синусы углов падения $a$ и преломления $b$ (свет из воздуха).",
+        "hints": [],
+        "solution": "$n = \\dfrac{\\sin\\alpha}{\\sin\\gamma}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 0.6, 0.8]
+        }
+      ],
+      "constraints": [],
+      "answer": "s / 1.33",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч падает из воздуха на воду ($n = 1{,}33$) под углом с синусом {{s}}. Найдите синус угла преломления.",
+        "hints": [],
+        "solution": "$\\sin\\gamma = \\dfrac{\\sin\\alpha}{n}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n1",
+          "kind": "choice",
+          "values": [1.5, 1.6]
+        }
+      ],
+      "constraints": [],
+      "answer": "n1 * 0.5 / 1.33",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч переходит из стекла ($n_1 = {{n1}}$) в воду ($n_2 = 1{,}33$). Угол падения 30°. Найдите синус угла преломления. Считайте $\\sin 30° = 0{,}5$, $\\sin 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\sin 90° = 1$.",
+        "hints": [],
+        "solution": "$n_1\\sin\\alpha = n_2\\sin\\gamma$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч идёт из стекла ($n = 1{,}5$) в воздух под углом падения 45°. Что произойдёт?",
+        "hints": [],
+        "solution": "Предельный угол для стекла ≈ 42°.",
+        "options": [
+          "Полное отражение: $\\sin\\gamma = 1{,}5 \\cdot 0{,}71 > 1$",
+          "Преломление под углом 30°",
+          "Луч пройдёт без изменения",
+          "Луч поглотится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "h / 1.33",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кажущаяся глубина водоёма при взгляде сверху вертикально примерно в $n$ раз меньше действительной. Глубина {{h}} м, $n = 1{,}33$. Какой кажется глубина?",
+        "hints": [],
+        "solution": "$h_к \\approx h/n$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [1, 10, 100]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "l * 1000 * n / 300000000 * 1000000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "мкс"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свет проходит в оптоволокне длиной {{l}} км (n = {{n}}). Сколько микросекунд он идёт (по прямой)? $c = 3 \\cdot 10^8$ м/с.",
+        "hints": [],
+        "solution": "$t = \\dfrac{ln}{c}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о дисперсии.",
+        "hints": [],
+        "solution": "Опыт Ньютона.",
+        "options": [
+          "Показатель преломления зависит от цвета (длины волны)",
+          "Фиолетовые лучи преломляются сильнее красных",
+          "Белый свет — смесь цветов",
+          "Красные лучи преломляются сильнее",
+          "Дисперсии в стекле нет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между явлением и примером.",
+        "hints": [],
+        "solution": "Оптические явления.",
+        "options": ["Преломление", "Полное отражение", "Дисперсия", "Отражение"],
+        "matches": [
+          "Кажущийся излом весла в воде",
+          "Свечение оптоволокна",
+          "Радуга",
+          "Изображение в зеркале"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [30, 45, 60]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "a == 30 ? 0.5 : (a == 45 ? 0.71 : 0.87)"
+        }
+      ],
+      "answer": "1 / s",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Предельный угол полного отражения на границе вещества с воздухом {{a}}°. Найдите показатель преломления, считая $\\sin {{a}}° = {{s}}$.",
+        "hints": [],
+        "solution": "$n = 1/\\sin\\alpha_0$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч, проходя через плоскопараллельную стеклянную пластинку, смещается, но остаётся ___ падающему лучу.",
+        "hints": [],
+        "solution": "Направление сохраняется.",
+        "accepted": ["параллельным"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию предельный угол полного отражения на границе с воздухом:",
+        "hints": [],
+        "solution": "Чем больше $n$, тем меньше предельный угол.",
+        "options": ["Алмаз (2,42)", "Стекло (1,5)", "Вода (1,33)", "Лёд (1,31)"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему днём небо голубое?",
+        "hints": [],
+        "solution": "Рэлеевское рассеяние.",
+        "options": [
+          "Синий свет рассеивается в атмосфере сильнее красного",
+          "Атмосфера голубого цвета",
+          "Отражение океана",
+          "Преломление в облаках"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [400, 532, 665]
+        }
+      ],
+      "constraints": [],
+      "answer": "l / 1.33",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "нм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длина волны света в вакууме {{l}} нм. Какова она в воде ($n = 1{,}33$)?",
+        "hints": [],
+        "solution": "Частота не меняется, скорость уменьшается в $n$ раз: $\\lambda = \\lambda_0/n$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свет переходит из воздуха в стекло. Что изменяется?",
+        "hints": [],
+        "solution": "Частота и цвет сохраняются.",
+        "options": [
+          "Скорость",
+          "Длина волны",
+          "Направление (при наклонном падении)",
+          "Частота",
+          "Цвет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "b / a",
+      "variables": ["a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите синус предельного угла полного отражения при переходе из среды с показателем $a$ в среду с показателем $b$ ($a > b$).",
+        "hints": [],
+        "solution": "$\\sin\\alpha_0 = \\dfrac{n_2}{n_1}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рыба смотрит из воды вверх. Почему она видит весь надводный мир в конусе?",
+        "hints": [],
+        "solution": "«Окно Снеллиуса» ≈ 97°.",
+        "options": [
+          "Лучи со всех сторон над водой преломляются в конус с углом, равным удвоенному предельному",
+          "Глаза рыбы так устроены",
+          "Вода отражает небо",
+          "Это иллюзия"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.5, 1.6, 1.73]
+        }
+      ],
+      "constraints": [],
+      "answer": "n",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч падает из воздуха на стекло ($n = {{n}}$). Угол между отражённым и преломлённым лучами 90°. Найдите тангенс угла падения (угол Брюстера).",
+        "hints": [],
+        "solution": "Отражённый и преломлённый перпендикулярны при $\\operatorname{tg}\\alpha = n$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / 1.33",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "На дне водоёма глубиной {{h}} м лежит камень. Под каким наибольшим углом (синус) к вертикали могут выходить из воды лучи от камня, если $n = 1{,}33$? Запишите синус угла внутри воды.",
+        "hints": [],
+        "solution": "Предельный угол: $\\sin\\alpha_0 = 1/n$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "h * (1 / 1.33) / sqrt(1 - (1 / 1.33)^2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Источник на глубине {{h}} м под водой ($n = 1{,}33$). Найдите радиус светлого круга на поверхности, через который выходит свет (м).",
+        "hints": [],
+        "solution": "$R = h\\operatorname{tg}\\alpha_0$, $\\sin\\alpha_0 = 1/n$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему оптоволокно передаёт свет даже при изгибе?",
+        "hints": [],
+        "solution": "Полное внутреннее отражение.",
+        "options": [
+          "Свет многократно полностью отражается от стенок сердцевины",
+          "Волокно прозрачное",
+          "Свет идёт по прямой",
+          "Волокно светится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "d / sqrt(1 - (0.87 / 1.5)^2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луч проходит через стеклянную пластинку толщиной {{d}} см ($n = 1{,}5$) под углом падения 60°. Найдите путь луча в стекле (см). Считайте $\\sin 60° \\approx 0{,}87$.",
+        "hints": [],
+        "solution": "$\\sin\\gamma = 0{,}87/1{,}5$, путь $\\dfrac{d}{\\cos\\gamma}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о миражах.",
+        "hints": [],
+        "solution": "Рефракция в атмосфере.",
+        "options": [
+          "Они возникают из-за преломления в слоях воздуха разной температуры",
+          "Показатель преломления воздуха зависит от температуры",
+          "Лучи искривляются в неоднородной среде",
+          "Мираж — отражение от облаков",
+          "Мираж — явление дисперсии"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "1.33 * 0.87 / 1.5",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свет идёт из воды ($n_1 = 1{,}33$) в стекло ($n_2 = 1{,}5$) под углом падения 60°. Найдите синус угла преломления. Считайте $\\sin 30° = 0{,}5$, $\\sin 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\sin 90° = 1$.",
+        "hints": [],
+        "solution": "$n_1\\sin\\alpha = n_2\\sin\\gamma$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию угол преломления при падении из воздуха под углом 45° на:",
+        "hints": [],
+        "solution": "Чем больше $n$, тем меньше угол преломления.",
+        "options": ["Алмаз (2,42)", "Стекло (1,5)", "Воду (1,33)", "Лёд (1,31)"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между переходом и возможностью полного отражения.",
+        "hints": [],
+        "solution": "Только из более плотной среды в менее плотную.",
+        "options": ["Воздух → вода", "Вода → воздух", "Стекло → вода", "Вода → стекло"],
+        "matches": ["Невозможно", "Возможно", "Возможно", "Невозможно"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Угол падения, при котором угол преломления равен 90°, называется ___ углом полного отражения.",
+        "hints": [],
+        "solution": "$\\sin\\alpha_0 = n_2/n_1$.",
+        "accepted": ["предельным"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [650, 700]
+        }
+      ],
+      "constraints": [],
+      "answer": "1.5",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз длина волны красного света ({{l}} нм в вакууме) в стекле ($n = 1{,}5$) меньше, чем в вакууме?",
+        "hints": [],
+        "solution": "Длина волны уменьшается в $n$ раз; частота та же."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему Солнце на закате кажется сплюснутым?",
+        "hints": [],
+        "solution": "Рефракция у горизонта.",
+        "options": [
+          "Лучи от нижнего края преломляются в атмосфере сильнее",
+          "Солнце действительно сплюснуто",
+          "Облака закрывают",
+          "Отражение от океана"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.5, 1.6]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [4, 6, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "(n - 1) * f",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Призма с преломляющим углом мала, $n = {{n}}$. Угол отклонения луча примерно $\\delta \\approx (n - 1)\\varphi$. Найдите отклонение при $\\varphi = {{f}}°$.",
+        "hints": [],
+        "solution": "Формула тонкой призмы."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свет проходит через стеклянную призму. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Преломление и дисперсия в призме.",
+        "options": [
+          "Луч отклоняется к основанию призмы",
+          "Белый свет разлагается в спектр",
+          "Фиолетовые лучи отклоняются сильнее",
+          "Луч отклоняется к вершине",
+          "Красные отклоняются сильнее всего"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "h * s / sqrt(1 - s^2)",
+      "variables": ["h", "s"],
+      "range": [0.1, 0.9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Источник на глубине $h$ под водой; $s$ — синус предельного угла. Запишите радиус светового круга на поверхности.",
+        "hints": [],
+        "solution": "$R = h\\operatorname{tg}\\alpha_0$."
+      }
+    }
+  }
+]
