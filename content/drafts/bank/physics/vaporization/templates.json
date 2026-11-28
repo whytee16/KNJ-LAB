@@ -1,0 +1,1591 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "2300 * m",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты нужно, чтобы превратить в пар {{m}} кг воды при 100 °C? Удельная теплота парообразования воды 2,3 мдж/кг = 2300 кдж/кг.",
+        "hints": [],
+        "solution": "$Q = Lm = 2300 \\cdot {{m}}$ кДж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "2300 * m",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты выделится при конденсации {{m}} кг пара при 100 °C? Удельная теплота парообразования воды 2,3 мдж/кг = 2300 кдж/кг.",
+        "hints": [],
+        "solution": "При конденсации выделяется $Lm$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что такое испарение?",
+        "hints": [],
+        "solution": "Испарение идёт при любой температуре.",
+        "options": [
+          "Парообразование с поверхности жидкости при любой температуре",
+          "Кипение при 100 °C",
+          "Переход пара в жидкость",
+          "Плавление"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что происходит с температурой воды во время кипения при постоянном давлении?",
+        "hints": [],
+        "solution": "Подводимая энергия идёт на парообразование.",
+        "options": ["Остаётся постоянной", "Растёт", "Падает", "Колеблется"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Переход вещества из газообразного состояния в жидкое называется ___.",
+        "hints": [],
+        "solution": "При конденсации выделяется теплота.",
+        "accepted": ["конденсацией", "конденсация"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "От чего зависит скорость испарения жидкости?",
+        "hints": [],
+        "solution": "Все факторы, кроме формы сосуда ниже поверхности.",
+        "options": [
+          "От температуры",
+          "От площади поверхности",
+          "От ветра над поверхностью",
+          "От рода жидкости",
+          "От формы сосуда под поверхностью"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему после купания на ветру становится холодно?",
+        "hints": [],
+        "solution": "Испарение охлаждает.",
+        "options": [
+          "Вода испаряется с кожи, забирая теплоту",
+          "Ветер холодный всегда",
+          "Вода нагревает кожу",
+          "Кожа излучает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между процессом и направлением теплоты.",
+        "hints": [],
+        "solution": "Парообразование поглощает теплоту, конденсация выделяет.",
+        "options": ["Испарение", "Конденсация", "Кипение", "Выпадение росы"],
+        "matches": [
+          "Поглощается",
+          "Выделяется",
+          "Поглощается (при постоянной температуре)",
+          "Выделяется (пар конденсируется)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [840, 900, 2300]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "l * m"
+        }
+      ],
+      "answer": "q / m",
+      "tolerance": {},
+      "unit": "кДж/кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Для превращения в пар {{m}} кг жидкости при температуре кипения потребовалось {{q}} кДж. Найдите удельную теплоту парообразования в кДж/кг.",
+        "hints": [],
+        "solution": "$L = Q/m$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите жидкости по возрастанию температуры кипения при нормальном давлении.",
+        "hints": [],
+        "solution": "Табличные значения.",
+        "options": ["Эфир (35 °C)", "Спирт (78 °C)", "Вода (100 °C)", "Ртуть (357 °C)"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, 6]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "a + b + 2"],
+        "y": [0, 120],
+        "lines": [
+          {
+            "points": [
+              [0, "t0"],
+              ["a", 100],
+              ["a + b", 100]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "τ, мин",
+          "y": "t, °C"
+        }
+      },
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику (см. рисунок): что происходит на горизонтальном участке при 100 °C?",
+        "hints": [],
+        "solution": "Температура постоянна — кипение.",
+        "options": ["Вода кипит", "Вода нагревается", "Вода замерзает", "Пар нагревается"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Количество теплоты для превращения 1 кг жидкости в пар при температуре кипения называют удельной теплотой ___.",
+        "hints": [],
+        "solution": "Обозначается $L$.",
+        "accepted": ["парообразования"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему мокрое бельё сохнет быстрее в ветреную погоду?",
+        "hints": [],
+        "solution": "Над поверхностью уменьшается концентрация пара.",
+        "options": [
+          "Ветер уносит пар, ускоряя испарение",
+          "Ветер нагревает бельё",
+          "Ветер холодный",
+          "Белье не сохнет на ветру"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.4, 0.9, 2.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "l * 1000",
+      "tolerance": {},
+      "unit": "кДж/кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите удельную теплоту парообразования {{l}} МДж/кг в кДж/кг.",
+        "hints": [],
+        "solution": "1 МДж = 1000 кДж."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ожог паром при 100 °C опаснее, чем ожог водой при 100 °C?",
+        "hints": [],
+        "solution": "$L = 2300$ кДж/кг — очень большая величина.",
+        "options": [
+          "Пар, конденсируясь на коже, выделяет большое количество теплоты",
+          "Пар горячее воды",
+          "Вода не обжигает",
+          "Пар легче"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * m * (100 - t) + 2300 * m",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты нужно, чтобы нагреть {{m}} кг воды от {{t}} °C до кипения и полностью испарить? $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "$Q = cm(100 - t) + Lm$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "2300 * m + 4.2 * m * (100 - t)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты выделится при конденсации {{m}} кг пара при 100 °C и остывании получившейся воды до {{t}} °C? $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "$Q = Lm + cm(100 - t)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "2.3 * m"
+        }
+      ],
+      "answer": "q * 1000 / 2300",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую массу воды при 100 °C можно испарить, сообщив {{q}} МДж? Удельная теплота парообразования воды 2,3 мдж/кг = 2300 кдж/кг.",
+        "hints": [],
+        "solution": "$m = Q/L$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 100, 200, 500]
+        }
+      ],
+      "constraints": [],
+      "answer": "900 * m / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удельная теплота парообразования спирта 900 кДж/кг. Сколько теплоты нужно, чтобы испарить {{m}} г спирта при температуре кипения?",
+        "hints": [],
+        "solution": "Масса в кг: $Q = Lm$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как зависит температура кипения от давления?",
+        "hints": [],
+        "solution": "В скороварке вода кипит выше 100 °C, в горах — ниже.",
+        "options": [
+          "Чем выше давление, тем выше температура кипения",
+          "Чем выше давление, тем ниже",
+          "Не зависит",
+          "Только для воды зависит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему в горах трудно сварить мясо?",
+        "hints": [],
+        "solution": "Низкая температура кипения — медленная варка.",
+        "options": [
+          "Атмосферное давление меньше, вода кипит при температуре ниже 100 °C",
+          "В горах нет воды",
+          "В горах холоднее",
+          "Мясо в горах твёрже"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о кипении.",
+        "hints": [],
+        "solution": "Испарение — с поверхности при любой температуре; кипение — по объёму при температуре кипения.",
+        "options": [
+          "Пузыри пара образуются по всему объёму жидкости",
+          "Кипение идёт при определённой температуре",
+          "Во время кипения жидкость получает теплоту",
+          "Кипение идёт при любой температуре",
+          "При кипении температура растёт"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1000, 1500, 2000]
+        }
+      ],
+      "constraints": [],
+      "answer": "2300000 * m / p / 60",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чайник с {{m}} кг воды кипит, нагреватель передаёт воде {{p}} Вт. За сколько минут выкипит вся вода? Удельная теплота парообразования воды 2,3 мдж/кг = 2300 кдж/кг.",
+        "hints": [],
+        "solution": "$Pt = Lm$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пар, находящийся в динамическом равновесии со своей жидкостью, называют ___.",
+        "hints": [],
+        "solution": "Число вылетающих и возвращающихся молекул одинаково.",
+        "accepted": ["насыщенным", "насыщенный"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между веществом и удельной теплотой парообразования (по таблице).",
+        "hints": [],
+        "solution": "Табличные значения.",
+        "options": ["Вода", "Спирт", "Эфир", "Ртуть"],
+        "matches": ["2300 кДж/кг", "900 кДж/кг", "400 кДж/кг", "300 кДж/кг"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, 6]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "a + b + 2"],
+        "y": [0, 120],
+        "lines": [
+          {
+            "points": [
+              [0, "t0"],
+              ["a", 100],
+              ["a + b", 100]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "τ, мин",
+          "y": "t, °C"
+        }
+      },
+      "answer": "4.2 * m * (100 - t0)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику (см. рисунок) вода нагревалась {{a}} мин от {{t0}} до 100 °C, затем кипела {{b}} мин. Масса воды {{m}} кг. Найдите количество теплоты, полученное за время нагревания, в кДж. $c = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = cm(100 - t_0)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему кипящая вода в открытой кастрюле не нагревается выше 100 °C при сильном огне?",
+        "hints": [],
+        "solution": "При постоянном давлении температура кипения постоянна.",
+        "options": [
+          "Вся избыточная энергия идёт на парообразование",
+          "Огонь холодный",
+          "Кастрюля отражает тепло",
+          "Вода не может быть горячее"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию количество теплоты (1 кг воды):",
+        "hints": [],
+        "solution": "42 < 340 < 420 < 2300 кДж.",
+        "options": [
+          "Нагреть на 10 °C",
+          "Растопить лёд при 0 °C",
+          "Нагреть от 0 до 100 °C",
+          "Испарить при 100 °C"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * mw * (th - t1) / (2300 + 4.2 * (100 - th))",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько пара при 100 °C нужно, чтобы нагреть {{mw}} кг воды от {{t1}} до {{th}} °C (пар конденсируется, а вода из него остывает до {{th}} °C)? $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "$m_п (L + c(100 - \\theta)) = c m_в (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m * (4.2 * (100 - x) + 2300)",
+      "variables": ["m", "x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите количество теплоты $q$ для нагрева воды массой $m$ от температуры $x$ до кипения и полного испарения ($c = 4,2$, $L = 2300$ кДж).",
+        "hints": [],
+        "solution": "$Q = cm(100 - x) + Lm$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1500, 2000]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2300000 * m / (p * e / 100) / 60",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электрочайник мощностью {{p}} Вт с КПД {{e}} %. За сколько минут из него выкипит {{m}} кг воды, уже доведённой до кипения? Удельная теплота парообразования воды 2,3 мдж/кг = 2300 кдж/кг.",
+        "hints": [],
+        "solution": "$\\eta P t = Lm$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "mp",
+          "kind": "choice",
+          "values": [0.02, 0.05]
+        }
+      ],
+      "constraints": [],
+      "answer": "(4.2 * mw * t1 + mp * (2300 + 4.2 * 100)) / (4.2 * (mw + mp))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В калориметр с {{mw}} кг воды при {{t1}} °C впустили {{mp}} кг пара при 100 °C. Найдите установившуюся температуру. $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "$m_п L + c m_п (100 - \\theta) = c m_в (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему испарение охлаждает жидкость?",
+        "hints": [],
+        "solution": "Молекулярное объяснение испарения.",
+        "options": [
+          "Вылетают самые быстрые молекулы",
+          "Средняя кинетическая энергия оставшихся молекул уменьшается",
+          "Если нет притока теплоты, температура жидкости падает",
+          "Испаряются самые медленные молекулы",
+          "Пар нагревает жидкость"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (340 + 420 + 2300)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты нужно, чтобы лёд массой {{m}} кг при 0 °C превратить в пар при 100 °C? $\\lambda = 340$ кДж/кг, $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "Плавление, нагрев воды до 100 °C, испарение."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему в скороварке еда готовится быстрее?",
+        "hints": [],
+        "solution": "Температура кипения растёт с давлением.",
+        "options": [
+          "Давление выше, вода кипит при температуре выше 100 °C",
+          "Скороварка греет сильнее",
+          "Пар холоднее",
+          "Вода не кипит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [5, 6, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 * 2300 / (4.2 * (100 - t))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель довёл {{m}} кг воды от {{t}} °C до кипения за {{t1}} мин. За сколько минут вода полностью выкипит при той же мощности? $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "Мощность $P = \\dfrac{cm(100 - t)}{t_1}$; время $\\dfrac{Lm}{P} = t_1 \\dfrac{L}{c(100 - t)}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между явлением и процессом.",
+        "hints": [],
+        "solution": "Видимое «облачко» — это уже капли воды.",
+        "options": [
+          "Роса утром",
+          "Туман над рекой вечером",
+          "Высыхание лужи",
+          "Пар из носика чайника становится видимым"
+        ],
+        "matches": [
+          "Конденсация водяного пара на холодной траве",
+          "Конденсация пара в охлаждающемся воздухе",
+          "Испарение",
+          "Конденсация пара в мелкие капли"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [500, 700, 900]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.5 * m * (t - 100) / 2300",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько кипятка испарится, если в него бросить нагретую до {{t}} °C стальную деталь массой {{m}} кг, остывающую до 100 °C? $c_{ст} = 0,5$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "$c m (t - 100) = L m_п$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Относительная влажность воздуха измеряется прибором ___.",
+        "hints": [],
+        "solution": "Психрометр — два термометра, сухой и влажный.",
+        "accepted": ["психрометром", "гигрометром", "психрометр", "гигрометр"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по порядку участки графика нагревания льда от −10 °C до пара при 110 °C.",
+        "hints": [],
+        "solution": "Пять участков: три наклонных, два горизонтальных.",
+        "options": ["Нагрев льда", "Плавление", "Нагрев воды", "Кипение", "Нагрев пара"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой участок графика нагревания 1 кг льда от 0 °C до пара самый длинный при постоянной мощности?",
+        "hints": [],
+        "solution": "Время пропорционально теплоте.",
+        "options": [
+          "Кипение (2300 кДж)",
+          "Плавление (340 кДж)",
+          "Нагрев воды 0→100 °C (420 кДж)",
+          "Все одинаковые"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.3, 0.9]
+        }
+      ],
+      "constraints": [],
+      "answer": "2300 * m / 900",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько спирта при температуре кипения можно испарить за счёт теплоты, выделившейся при конденсации {{m}} кг водяного пара при 100 °C? $L_с = 900$ кДж/кг, удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "$L_в m = L_с m_с$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о графике нагревания и кипения воды.",
+        "hints": [],
+        "solution": "Чем больше мощность, тем круче участок нагрева.",
+        "options": [
+          "Горизонтальный участок при 100 °C — кипение",
+          "Во время кипения вода получает теплоту",
+          "Наклон участка нагрева зависит от мощности нагревателя и массы воды",
+          "Во время кипения температура растёт",
+          "Горизонтальный участок — нагрев пара"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "p * (2300 + 420)",
+      "variables": ["p"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пар массой $p$ при 100 °C конденсируется и остывает до 0 °C. Запишите выделившуюся теплоту в кДж ($L = 2300$, $c = 4,2$).",
+        "hints": [],
+        "solution": "$Q = Lp + c p \\cdot 100$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 250, 500]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "2400 * m / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В комнате испарилось {{m}} г воды при {{t}} °C. Сколько теплоты при этом забрано из комнаты (считайте $L = 2400$ кДж/кг при комнатной температуре)?",
+        "hints": [],
+        "solution": "$Q = Lm$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "mp",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.5]
+        }
+      ],
+      "constraints": ["mp * (2300 + 420) > mi * 340 + 5", "mp * 2300 < mi * (340 + 420)"],
+      "answer": "(mp * (2300 + 420) - mi * 340) / (4.2 * (mi + mp))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сосуд с {{mi}} кг льда при 0 °C впустили {{mp}} кг пара при 100 °C. Найдите конечную температуру (весь лёд растаял, весь пар сконденсировался). $\\lambda = 340$, $c = 4,2$, $L = 2300$ (кДж).",
+        "hints": [],
+        "solution": "$m_п(L + c(100 - \\theta)) = m_л(\\lambda + c\\theta)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "ti",
+          "kind": "choice",
+          "values": [-10, -20]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "mi * (2.1 * (-ti) + 340 + 4.2 * th) / (2300 + 4.2 * (100 - th))",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько пара при 100 °C нужно впустить в {{mi}} кг льда при {{ti}} °C, чтобы получить воду при {{th}} °C? $c_л = 2,1$, $\\lambda = 340$, $c_в = 4,2$, $L = 2300$ (кДж).",
+        "hints": [],
+        "solution": "Теплота пара (конденсация и остывание) идёт на нагрев льда, плавление и нагрев воды."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2000]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m - (t2 / t1) * 4.2 * m * (100 - t) / 2300",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электрочайник мощностью {{p}} Вт нагревает {{m}} кг воды от {{t}} °C до кипения за {{t1}} мин. Его забыли выключить. Сколько воды останется через {{t2}} мин после начала кипения (потери одинаковы)?",
+        "hints": [],
+        "solution": "Полезная мощность $\\dfrac{cm(100 - t)}{t_1}$; за $t_2$ испарится $\\dfrac{t_2}{t_1}\\cdot\\dfrac{cm(100 - t)}{L}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при откачке воздуха из сосуда с водой при комнатной температуре вода закипает и охлаждается?",
+        "hints": [],
+        "solution": "Кипение при пониженном давлении.",
+        "options": [
+          "Давление падает ниже давления насыщенного пара; энергия на парообразование берётся из воды",
+          "Воздух охлаждает воду",
+          "Вода нагревается насосом",
+          "Это невозможно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (4.2 * t + 340) * 1000 / p / 60",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Холодильник отводит из камеры {{p}} Вт. Сколько минут нужно, чтобы {{m}} кг воды при {{t}} °C превратить в лёд при 0 °C? $c = 4,2$ кДж/(кг·°C), $\\lambda = 340$ кДж/кг.",
+        "hints": [],
+        "solution": "$Pt = m(ct + \\lambda)$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о влажности воздуха.",
+        "hints": [],
+        "solution": "Влажный термометр охлаждается испарением.",
+        "options": [
+          "При понижении температуры относительная влажность растёт",
+          "Точка росы — температура, при которой пар становится насыщенным",
+          "Психрометр показывает разность температур сухого и влажного термометров",
+          "При 100 % влажности испарение быстрее всего",
+          "Влажный термометр показывает больше сухого"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "2300 / (4.2 * (100 - t) + 2300) * 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая доля (в %) теплоты, затраченной на превращение 1 кг воды при {{t}} °C в пар при 100 °C, приходится на парообразование? $c = 4,2$, $L = 2300$ кДж.",
+        "hints": [],
+        "solution": "$\\dfrac{L}{c(100 - t) + L}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему вода в глиняном неглазурованном кувшине летом прохладнее воздуха?",
+        "hints": [],
+        "solution": "Испарение отбирает теплоту.",
+        "options": [
+          "Вода просачивается через стенки и испаряется, охлаждая кувшин",
+          "Глина холодная",
+          "Кувшин отражает солнце",
+          "Вода в нём не нагревается"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * (4.2 * (100 - t) + 2300) / 3600 / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "МВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Котёл производит {{m}} т пара в час, получая воду при {{t}} °C. Какая полезная тепловая мощность котла (в МВт)? $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "Теплота на 1 кг: $c(100 - t) + L$; делим на 3600 с."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию время, за которое плитка 1 кВт (без потерь) превратит 0,5 кг воды при 20 °C в:",
+        "hints": [],
+        "solution": "63 с, 168 с, ≈743 с, ≈1318 с.",
+        "options": ["Воду при 50 °C", "Воду при 100 °C", "Пар, испарив половину", "Пар полностью"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между давлением и температурой кипения воды (примерно).",
+        "hints": [],
+        "solution": "Температура кипения растёт с давлением.",
+        "options": [
+          "Нормальное (101 кПа)",
+          "Вершина 5 км (≈54 кПа)",
+          "Скороварка (≈200 кПа)",
+          "Вакуумный аппарат (≈2,3 кПа)"
+        ],
+        "matches": ["100 °C", "≈83 °C", "≈120 °C", "≈20 °C"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Температура, при которой водяной пар в воздухе становится насыщенным, называется точкой ___.",
+        "hints": [],
+        "solution": "При охлаждении ниже точки росы выпадает роса.",
+        "accepted": ["росы"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * mw * (100 - t1) / 2300",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Струю пара при 100 °C пропускают в {{mw}} кг воды при {{t1}} °C до тех пор, пока вода не закипит. На сколько увеличится масса воды? $c = 4,2$ кДж/(кг·°C), удельная теплота парообразования воды 2,3 МДж/кг = 2300 кДж/кг.",
+        "hints": [],
+        "solution": "$L m_п = c m_в (100 - t_1)$ — пар конденсируется и не остывает."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при одинаковой температуре 30 °C в сухом климате жару переносят легче, чем во влажном?",
+        "hints": [],
+        "solution": "Высокая влажность замедляет испарение.",
+        "options": [
+          "В сухом воздухе пот быстро испаряется и охлаждает тело",
+          "Сухой воздух холоднее",
+          "Во влажном воздухе меньше кислорода",
+          "Влага нагревает кожу"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * 2300 / (4.2 * d)",
+      "variables": ["a", "d"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель довёл воду до кипения за время $a$ (нагрев на $d$ градусов). Запишите время $t$ полного выкипания при той же полезной мощности ($c = 4,2$, $L = 2300$).",
+        "hints": [],
+        "solution": "$\\dfrac{t}{a} = \\dfrac{L}{c d}$."
+      }
+    }
+  }
+]

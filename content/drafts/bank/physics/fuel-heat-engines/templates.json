@@ -1,0 +1,1622 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "46 * m",
+      "tolerance": {},
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты выделится при полном сгорании {{m}} кг бензина? Удельная теплота сгорания бензина 46 МДж/кг.",
+        "hints": [],
+        "solution": "$Q = qm = 46 \\cdot {{m}}$ МДж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * m",
+      "tolerance": {},
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты выделится при сгорании {{m}} кг сухих дров? $q = 10$ МДж/кг.",
+        "hints": [],
+        "solution": "$Q = qm$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [10, 27, 44, 46]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "qq",
+          "expr": "q * m"
+        }
+      ],
+      "answer": "qq / m",
+      "tolerance": {},
+      "unit": "МДж/кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "При сгорании {{m}} кг топлива выделилось {{qq}} МДж. Найдите удельную теплоту сгорания.",
+        "hints": [],
+        "solution": "$q = Q/m$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что показывает удельная теплота сгорания топлива?",
+        "hints": [],
+        "solution": "Единица — Дж/кг.",
+        "options": [
+          "Сколько теплоты выделяется при полном сгорании 1 кг топлива",
+          "Температуру горения",
+          "Сколько топлива сгорает за секунду",
+          "Сколько теплоты нужно, чтобы поджечь топливо"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель, в котором внутренняя энергия топлива превращается в механическую, называется ___ двигателем.",
+        "hints": [],
+        "solution": "Двигатель внутреннего сгорания, паровая турбина.",
+        "accepted": ["тепловым"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите топливо по возрастанию удельной теплоты сгорания.",
+        "hints": [],
+        "solution": "Табличные значения.",
+        "options": [
+          "Дрова сухие (10 МДж/кг)",
+          "Каменный уголь (27 МДж/кг)",
+          "Природный газ (44 МДж/кг)",
+          "Бензин (46 МДж/кг)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "qq",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [20, 25, 30, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "qq * e / 100"
+        }
+      ],
+      "answer": "a / qq * 100",
+      "tolerance": {},
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Полезная работа двигателя {{a}} МДж, затраченная энергия топлива {{qq}} МДж. Найдите КПД в процентах.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{A_п}{Q} \\cdot 100\\%$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Может ли КПД теплового двигателя быть 100 %?",
+        "hints": [],
+        "solution": "Тепловой двигатель всегда отдаёт часть теплоты холодильнику.",
+        "options": [
+          "Нет: часть энергии обязательно передаётся холодильнику (окружающей среде)",
+          "Да, у хороших двигателей",
+          "Да, у электродвигателя",
+          "Да, если нет трения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между частью теплового двигателя и её ролью.",
+        "hints": [],
+        "solution": "Основные части теплового двигателя.",
+        "options": ["Нагреватель", "Рабочее тело", "Холодильник", "Поршень"],
+        "matches": [
+          "Сообщает теплоту рабочему телу",
+          "Газ или пар, совершающий работу",
+          "Получает часть теплоты от рабочего тела",
+          "Передаёт работу газа механизму"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите тепловые двигатели.",
+        "hints": [],
+        "solution": "Электродвигатель и мельница не используют сгорание топлива.",
+        "options": [
+          "Двигатель внутреннего сгорания",
+          "Паровая турбина",
+          "Реактивный двигатель",
+          "Электродвигатель",
+          "Ветряная мельница"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [10, 27, 46]
+        }
+      ],
+      "constraints": [],
+      "answer": "q * 1000000",
+      "tolerance": {},
+      "unit": "Дж/кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите {{q}} МДж/кг в Дж/кг.",
+        "hints": [],
+        "solution": "1 МДж = 10⁶ Дж."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое топливо выделит больше теплоты при сгорании 1 кг?",
+        "hints": [],
+        "solution": "Сравниваем удельные теплоты сгорания.",
+        "options": [
+          "Керосин (46 МДж/кг)",
+          "Спирт (27 МДж/кг)",
+          "Торф (14 МДж/кг)",
+          "Дрова (10 МДж/кг)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [20, 25, 30, 35]
+        },
+        {
+          "name": "qq",
+          "kind": "choice",
+          "values": [40, 100, 200]
+        }
+      ],
+      "constraints": [],
+      "answer": "qq * e / 100",
+      "tolerance": {},
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД двигателя {{e}} %. Топливо выделило {{qq}} МДж. Какую полезную работу совершил двигатель?",
+        "hints": [],
+        "solution": "$A = \\eta Q$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отношение полезной работы двигателя к энергии, выделившейся при сгорании топлива, называется ___ двигателя.",
+        "hints": [],
+        "solution": "$\\eta = A_п/Q$.",
+        "accepted": ["КПД", "кпд", "коэффициентом полезного действия"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чем вредны тепловые двигатели для окружающей среды?",
+        "hints": [],
+        "solution": "Экологические проблемы тепловых двигателей.",
+        "options": [
+          "Выбрасывают продукты сгорания и нагревают атмосферу",
+          "Ничем",
+          "Охлаждают воздух",
+          "Выделяют чистый кислород"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "qq",
+          "expr": "44 * m"
+        }
+      ],
+      "answer": "qq / 44",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько природного газа нужно сжечь, чтобы получить {{qq}} МДж теплоты? $q = 44$ МДж/кг.",
+        "hints": [],
+        "solution": "$m = Q/q$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "27000000 * m / 1000 / (4200 * (t2 - t1))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько воды можно нагреть от {{t1}} до {{t2}} °C, сжигая {{m}} г спирта, если вся теплота идёт на нагрев? $q_{сп} = 27$ МДж/кг, $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$qm = cm_в\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [25, 30, 35]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "46 * m * e / 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель автомобиля с КПД {{e}} % израсходовал {{m}} кг бензина. Какую полезную работу он совершил (в МДж)? $q = 46$ МДж/кг.",
+        "hints": [],
+        "solution": "$A = \\eta q m$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * mw * dt / (27000000 * m / 1000) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Спиртовка нагрела {{mw}} кг воды на {{dt}} °C, израсходовав {{m}} г спирта. Найдите КПД спиртовки. $q = 27$ МДж/кг, $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{c m_в \\Delta t}{q m}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при одинаковой массе бензин даёт больше теплоты, чем дрова?",
+        "hints": [],
+        "solution": "46 МДж/кг против 10 МДж/кг.",
+        "options": [
+          "У бензина больше удельная теплота сгорания",
+          "Бензин горячее",
+          "Бензин тяжелее",
+          "Дрова не горят полностью никогда"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "340000 * m / (27000000 * e / 100)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько каменного угля нужно сжечь, чтобы расплавить {{m}} кг льда при 0 °C, если КПД печи {{e}} %? $q = 27$ МДж/кг, $\\lambda = 340$ кДж/кг.",
+        "hints": [],
+        "solution": "$\\eta q m_у = \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о КПД тепловых двигателей.",
+        "hints": [],
+        "solution": "КПД паровоза около 10 %.",
+        "options": [
+          "КПД всегда меньше 100 %",
+          "Часть энергии уходит в холодильник",
+          "КПД дизельных двигателей обычно выше бензиновых",
+          "КПД паровоза около 90 %",
+          "КПД не зависит от температуры нагревателя"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [50, 75, 100]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [25, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000 * 3600 / (e / 100) / 46000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность двигателя {{p}} кВт, КПД {{e}} %. Сколько бензина он расходует за час (в кг)? $q = 46$ МДж/кг.",
+        "hints": [],
+        "solution": "$\\eta q m = Pt$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель, в котором топливо сгорает прямо в цилиндре, называется двигателем ___ сгорания.",
+        "hints": [],
+        "solution": "ДВС.",
+        "accepted": ["внутреннего"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите такты четырёхтактного двигателя внутреннего сгорания.",
+        "hints": [],
+        "solution": "Четыре такта.",
+        "options": ["Впуск", "Сжатие", "Рабочий ход", "Выпуск"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "q1 * e / 100"
+        }
+      ],
+      "answer": "q1 - a",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты получает холодильник двигателя, если от нагревателя получено {{q1}} кДж, а совершена работа {{a}} кДж?",
+        "hints": [],
+        "solution": "$Q_2 = Q_1 - A$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между двигателем и типичным КПД.",
+        "hints": [],
+        "solution": "Порядок величин КПД.",
+        "options": [
+          "Паровоз",
+          "Бензиновый двигатель",
+          "Дизельный двигатель",
+          "Паровая турбина ТЭС"
+        ],
+        "matches": ["≈ 10 %", "≈ 25–30 %", "≈ 35–40 %", "≈ 40 %"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во время какого такта ДВС совершается полезная работа?",
+        "hints": [],
+        "solution": "Горящая смесь толкает поршень.",
+        "options": ["Рабочий ход", "Впуск", "Сжатие", "Выпуск"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [42, 46]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [25, 35]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "qq",
+          "expr": "q * m"
+        },
+        {
+          "name": "a",
+          "expr": "qq * e / 100"
+        }
+      ],
+      "answer": "a / qq * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "При сгорании {{m}} кг топлива выделилось {{qq}} МДж, двигатель совершил работу {{a}} МДж. Найдите удельную теплоту сгорания и КПД; в ответ запишите КПД в процентах.",
+        "hints": [],
+        "solution": "$\\eta = A/Q$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a / (q * m)",
+      "variables": ["a", "q", "m"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите КПД $e$ двигателя, совершившего работу $a$ при сгорании топлива массой $m$ с удельной теплотой сгорания $q$.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{A}{qm}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [600, 800]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * s * 1000 / (46000000 * 0.71 * v) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль проехал {{s}} км, двигатель развивал силу тяги {{f}} Н. Израсходовано {{v}} л бензина (плотность 710 кг/м³, $q = 46$ МДж/кг). Найдите КПД двигателя.",
+        "hints": [],
+        "solution": "$A = Fs$, $m = \\rho V$, $\\eta = \\dfrac{Fs}{qm}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [30, 40]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "mp",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "(4200 * mw * (100 - t1) + 2300000 * mp) / (10000000 * e / 100)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько дров нужно сжечь в печи с КПД {{e}} %, чтобы нагреть {{mw}} кг воды от {{t1}} до 100 °C и превратить {{mp}} кг её в пар? $q = 10$ МДж/кг, $c = 4200$ Дж/(кг·°C), $L = 2,3$ МДж/кг.",
+        "hints": [],
+        "solution": "$\\eta q m = c m_в (100 - t_1) + L m_п$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [20, 25]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [60, 90]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [8, 10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000 * (100 / v * 3600) / (e / 100) / 46000000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мотоцикл с КПД {{e}} % едет со скоростью {{v}} км/ч, мощность двигателя {{p}} кВт. Сколько бензина он расходует на 100 км (в кг)? $q = 46$ МДж/кг.",
+        "hints": [],
+        "solution": "Время на 100 км $t = 100/v$ ч; $\\eta q m = Pt$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему КПД теплового двигателя тем выше, чем больше разница температур нагревателя и холодильника?",
+        "hints": [],
+        "solution": "Максимальный КПД $1 - T_х/T_н$.",
+        "options": [
+          "Больше доля теплоты превращается в работу",
+          "Двигатель меньше нагревается",
+          "Топливо горит лучше",
+          "Это неверно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "tn",
+          "kind": "choice",
+          "values": [227, 327, 527]
+        },
+        {
+          "name": "tx",
+          "kind": "choice",
+          "values": [27, 77]
+        }
+      ],
+      "constraints": [],
+      "answer": "(1 - (tx + 273) / (tn + 273)) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Максимально возможный КПД идеального теплового двигателя $\\eta = 1 - \\dfrac{T_х}{T_н}$. Найдите его (в %) при $t_н$ = {{tn}} °C и $t_х$ = {{tx}} °C.",
+        "hints": [],
+        "solution": "Температуры в кельвинах."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как уменьшить вредное влияние тепловых двигателей?",
+        "hints": [],
+        "solution": "Экологические меры.",
+        "options": [
+          "Повышать их КПД",
+          "Использовать очистку выхлопных газов",
+          "Переходить на электротранспорт",
+          "Увеличивать расход топлива",
+          "Сжигать больше угля"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1000, 2000]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [30, 35]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000 * t * 3600 / (e / 100) / 42000000 / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "т"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тепловоз мощностью {{p}} кВт с КПД {{e}} % работает {{t}} ч. Сколько дизельного топлива он израсходует (в тоннах)? $q = 42$ МДж/кг.",
+        "hints": [],
+        "solution": "$m = \\dfrac{Pt}{\\eta q}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между топливом и массой, дающей 46 МДж при полном сгорании.",
+        "hints": [],
+        "solution": "$m = Q/q$.",
+        "options": [
+          "Бензин (46 МДж/кг)",
+          "Спирт (27 МДж/кг)",
+          "Дрова (10 МДж/кг)",
+          "Природный газ (44 МДж/кг)"
+        ],
+        "matches": ["1 кг", "≈ 1,7 кг", "4,6 кг", "≈ 1,05 кг"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удельная теплота сгорания измеряется в джоулях на ___.",
+        "hints": [],
+        "solution": "Дж/кг.",
+        "accepted": ["килограмм", "кг"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи «найти КПД нагревателя на топливе».",
+        "hints": [],
+        "solution": "Алгоритм.",
+        "options": [
+          "Найти полезную теплоту (нагрев, плавление, испарение)",
+          "Найти теплоту сгорания топлива $qm$",
+          "Разделить полезную теплоту на теплоту сгорания",
+          "Выразить в процентах"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тепловой двигатель получил 100 кДж и отдал холодильнику 75 кДж. Каков КПД?",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{100 - 75}{100}$.",
+        "options": ["25 %", "75 %", "57 %", "100 %"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * mw * (100 - t1) / (44000000 * e / 100) * 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Газовая плита с КПД {{e}} % нагрела {{mw}} кг воды от {{t1}} °C до кипения. Сколько граммов газа сгорело? $q = 44$ МДж/кг, $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$\\eta q m = c m_в (100 - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель внутреннего сгорания: выберите верные утверждения.",
+        "hints": [],
+        "solution": "Работу совершает только рабочий ход.",
+        "options": [
+          "Во время сжатия оба клапана закрыты",
+          "Во время впуска открыт впускной клапан",
+          "Рабочий ход один из четырёх тактов",
+          "Рабочий ход каждый такт",
+          "Выпуск — при закрытых клапанах"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "p * t / (e * 46000000)",
+      "variables": ["p", "t", "e"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель мощностью $p$ с КПД $e$ работает время $t$. Запишите массу израсходованного топлива при $q = 46 \\cdot 10^6$ Дж/кг.",
+        "hints": [],
+        "solution": "$m = \\dfrac{Pt}{\\eta q}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [500, 700]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [25, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "46000000 * 0.71 * v * e / 100 / f / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько километров проедет автомобиль на {{v}} л бензина, если сила сопротивления {{f}} Н, КПД {{e}} %? Плотность бензина 710 кг/м³, $q = 46$ МДж/кг.",
+        "hints": [],
+        "solution": "$\\eta q \\rho V = Fs$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "tn",
+          "kind": "choice",
+          "values": [227, 327, 527]
+        },
+        {
+          "name": "tx",
+          "kind": "choice",
+          "values": [27, 77]
+        },
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [100, 200, 600]
+        }
+      ],
+      "constraints": [],
+      "answer": "q1 * (1 - (tx + 273) / (tn + 273))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Идеальный тепловой двигатель с температурами нагревателя {{tn}} °C и холодильника {{tx}} °C получил {{q1}} кДж. Какую работу он совершил?",
+        "hints": [],
+        "solution": "$A = Q_1\\left(1 - \\dfrac{T_х}{T_н}\\right)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [720, 900]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 40]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [25, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * 1000 * v * 1000 / (46000000 * e / 100) / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "т"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самолёт летит со скоростью {{v}} км/ч, сила тяги {{f}} кН, КПД двигателей {{e}} %. Расход керосина за час (в тоннах)? $q = 46$ МДж/кг.",
+        "hints": [],
+        "solution": "За час $A = F s = F v t$, $m = \\dfrac{A}{\\eta q}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [-10, -20]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [30, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "27000 * m * e / 100 / (2.1 * (-t0) + 340 + 420 + 2300)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую массу льда при {{t0}} °C можно превратить в пар при 100 °C, сжигая {{m}} кг каменного угля в печи с КПД {{e}} %? $q = 27$ МДж/кг; $c_л = 2,1$, $\\lambda = 340$, $c_в = 4,2$, $L = 2300$ (кДж).",
+        "hints": [],
+        "solution": "$\\eta q m = m_л(c_л(-t_0) + \\lambda + c_в \\cdot 100 + L)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Можно ли построить тепловой двигатель, который превращает в работу всю теплоту, полученную от нагревателя?",
+        "hints": [],
+        "solution": "Это следует из второго начала термодинамики.",
+        "options": [
+          "Нет: часть теплоты обязательно передаётся холодильнику",
+          "Да, если нет трения",
+          "Да, если использовать водород",
+          "Да, при высокой температуре"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [20, 25, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "(100 - e) / e",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД двигателя {{e}} %. Во сколько раз теплота, отданная холодильнику, больше полезной работы?",
+        "hints": [],
+        "solution": "$\\dfrac{Q_2}{A} = \\dfrac{1 - \\eta}{\\eta}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения об идеальном тепловом двигателе.",
+        "hints": [],
+        "solution": "$\\eta = 1 - T_х/T_н$; абсолютный нуль недостижим.",
+        "options": [
+          "Его КПД зависит только от температур нагревателя и холодильника",
+          "КПД растёт при понижении температуры холодильника",
+          "КПД равен 100 % при $T_х = 0$ К",
+          "КПД не зависит от температур",
+          "Реальный двигатель может иметь КПД выше идеального"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [35, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000000 * 86400 / (27000000 * e / 100) / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "т"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электростанция мощностью {{p}} МВт на угле ($q = 27$ МДж/кг) с КПД {{e}} %. Сколько угля сжигают за сутки (в тоннах)?",
+        "hints": [],
+        "solution": "$m = \\dfrac{Pt}{\\eta q}$, $t = 86\\,400$ с."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию КПД идеального двигателя с холодильником 27 °C и нагревателем:",
+        "hints": [],
+        "solution": "25 % < 40 % < 50 % < 62,5 %.",
+        "options": ["127 °C", "227 °C", "327 °C", "527 °C"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между параметрами идеального двигателя и КПД.",
+        "hints": [],
+        "solution": "$\\eta = 1 - T_х/T_н$.",
+        "options": [
+          "$T_н = 400$ К, $T_х = 300$ К",
+          "$T_н = 600$ К, $T_х = 300$ К",
+          "$T_н = 500$ К, $T_х = 400$ К",
+          "$T_н = 800$ К, $T_х = 200$ К"
+        ],
+        "matches": ["25 %", "50 %", "20 %", "75 %"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Теплота, отданная холодильнику, равна теплоте от нагревателя минус совершённая ___.",
+        "hints": [],
+        "solution": "$Q_2 = Q_1 - A$.",
+        "accepted": ["работа"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 6]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [100]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [500, 700]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * s * 1000 / (46000000 * 0.71 * v) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Каким должен быть минимальный КПД двигателя автомобиля, чтобы на {{v}} л бензина проехать {{s}} км при силе сопротивления {{f}} Н? Плотность 710 кг/м³, $q = 46$ МДж/кг.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{Fs}{q\\rho V}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему на ТЭС стремятся повышать температуру пара перед турбиной?",
+        "hints": [],
+        "solution": "КПД растёт с температурой нагревателя.",
+        "options": [
+          "Это повышает КПД установки",
+          "Чтобы пар быстрее остывал",
+          "Для безопасности",
+          "Чтобы снизить давление"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [20, 25, 30]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * 10 * h / (46000000 * e / 100) * 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель с КПД {{e}} % поднял груз массой {{m}} т на высоту {{h}} м. Сколько граммов бензина израсходовано? $q = 46$ МДж/кг, $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$\\eta q m_т = mgh$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему электромобиль экологичнее автомобиля с ДВС в городе?",
+        "hints": [],
+        "solution": "Электроэнергию часто вырабатывают на ТЭС — проблема переносится на станцию.",
+        "options": [
+          "Нет выхлопных газов на улицах",
+          "КПД электродвигателя выше",
+          "Меньше шума",
+          "Электричество всегда получают без сжигания топлива",
+          "У него нет потерь энергии"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "1 - b / a",
+      "variables": ["a", "b"],
+      "range": [2, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите КПД идеального теплового двигателя через абсолютные температуры нагревателя $a$ и холодильника $b$.",
+        "hints": [],
+        "solution": "$\\eta = 1 - \\dfrac{T_х}{T_н}$."
+      }
+    }
+  }
+]
