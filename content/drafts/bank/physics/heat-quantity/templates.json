@@ -1,0 +1,1739 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 3]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * m * dt",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое количество теплоты нужно, чтобы нагреть {{m}} кг воды на {{dt}} °C? Удельная теплоёмкость воды 4200 Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = cm\\Delta t = 4200 \\cdot {{m}} \\cdot {{dt}}$ Дж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [20, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "400 * m * dt",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое количество теплоты отдаёт медная деталь массой {{m}} кг, остывая на {{dt}} °C? Удельная теплоёмкость меди 400 Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = cm\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что показывает удельная теплоёмкость вещества?",
+        "hints": [],
+        "solution": "Единица — Дж/(кг·°C).",
+        "options": [
+          "Сколько теплоты нужно, чтобы нагреть 1 кг вещества на 1 °C",
+          "Сколько теплоты есть в теле",
+          "Температуру плавления",
+          "Сколько теплоты выделяется при сгорании"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Количество теплоты измеряют в ___.",
+        "hints": [],
+        "solution": "Единица энергии — джоуль.",
+        "accepted": ["джоулях", "Дж", "джоуль"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [4.2, 42, 84, 168]
+        }
+      ],
+      "constraints": [],
+      "answer": "q * 1000",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите {{q}} кДж в джоулях.",
+        "hints": [],
+        "solution": "1 кДж = 1000 Дж."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое вещество нагреется сильнее, если 1 кг каждого получит одинаковое количество теплоты?",
+        "hints": [],
+        "solution": "Чем меньше удельная теплоёмкость, тем больше $\\Delta t = Q/(cm)$.",
+        "options": ["Свинец (140 Дж/(кг·°C))", "Вода (4200)", "Алюминий (920)", "Медь (400)"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [400, 460, 920, 2100]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "c * m * dt"
+        }
+      ],
+      "answer": "q / (m * dt)",
+      "tolerance": {},
+      "unit": "Дж/(кг·°C)"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите удельную теплоёмкость вещества, если для нагревания {{m}} кг на {{dt}} °C потребовалось {{q}} Дж.",
+        "hints": [],
+        "solution": "$c = \\dfrac{Q}{m\\Delta t}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между веществом и удельной теплоёмкостью (по таблице).",
+        "hints": [],
+        "solution": "Значения из школьной таблицы.",
+        "options": ["Вода", "Лёд", "Алюминий", "Медь"],
+        "matches": ["4200 Дж/(кг·°C)", "2100 Дж/(кг·°C)", "920 Дж/(кг·°C)", "400 Дж/(кг·°C)"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "k",
+      "tolerance": {},
+      "unit": "раз(а)"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится количество теплоты для нагревания воды, если массу увеличить в {{k}} раза, а изменение температуры оставить прежним?",
+        "hints": [],
+        "solution": "$Q \\sim m$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "От чего НЕ зависит количество теплоты, нужное для нагревания тела?",
+        "hints": [],
+        "solution": "$Q = cm\\Delta t$.",
+        "options": ["От формы тела", "От массы", "От рода вещества", "От изменения температуры"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * m * (100 - t1) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чайник с водой ({{m}} кг) нагрели от {{t1}} °C до 100 °C. Сколько теплоты получила вода (в кДж)? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = cm(t_2 - t_1)$; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите вещества по возрастанию удельной теплоёмкости.",
+        "hints": [],
+        "solution": "140 < 400 < 920 < 4200 Дж/(кг·°C).",
+        "options": ["Свинец", "Медь", "Алюминий", "Вода"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Удельная теплоёмкость — свойство вещества.",
+        "options": [
+          "Вода нагревается медленнее песка при одинаковом подводе тепла",
+          "Удельная теплоёмкость воды очень велика",
+          "Чем больше масса, тем больше нужно теплоты",
+          "Удельная теплоёмкость зависит от массы тела",
+          "Количество теплоты измеряется в °C"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "tau",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "tau * 1.25"],
+        "y": [0, "t2 * 1.2"],
+        "lines": [
+          {
+            "points": [
+              [0, "t1"],
+              ["tau", "t2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "τ, мин",
+          "y": "t, °C"
+        }
+      },
+      "answer": "t2 - t1",
+      "tolerance": {},
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику нагревания (см. рисунок) найдите, на сколько градусов нагрелась жидкость за {{tau}} мин.",
+        "hints": [],
+        "solution": "По графику: от {{t1}} °C до {{t2}} °C."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему климат у моря мягче, чем в глубине материка?",
+        "hints": [],
+        "solution": "Вода сглаживает перепады температуры.",
+        "options": [
+          "У воды большая теплоёмкость: она медленно нагревается и медленно остывает",
+          "Над морем дует ветер",
+          "Море отражает солнце",
+          "Вода солёная"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "4.2 * m * dt"
+        }
+      ],
+      "answer": "q * 1000 / (4200 * m)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На сколько градусов нагреется {{m}} кг воды, получив {{q}} кДж теплоты? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$\\Delta t = \\dfrac{Q}{cm}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "4.2 * m * dt"
+        }
+      ],
+      "answer": "q * 1000 / (4200 * dt)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую массу воды можно нагреть на {{dt}} °C, сообщив ей {{q}} кДж? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$m = \\dfrac{Q}{c\\Delta t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mk",
+          "kind": "choice",
+          "values": [0.3, 0.5]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(920 * mk + 4200 * mw) * (100 - t1) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Алюминиевую кастрюлю массой {{mk}} кг с {{mw}} кг воды нагрели от {{t1}} до 100 °C. Сколько теплоты затрачено (в кДж)? $c_{ал} = 920$, $c_в = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "Нагреваются и кастрюля, и вода: $Q = (c_1 m_1 + c_2 m_2)\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [220, 520, 820]
+        }
+      ],
+      "constraints": [],
+      "answer": "500 * m * (t2 - t1) / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стальную деталь массой {{m}} кг нагрели от {{t1}} °C до {{t2}} °C. Найдите количество теплоты в кДж ($c = 500$ Дж/(кг·°C)).",
+        "hints": [],
+        "solution": "$Q = cm(t_2 - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "tau",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "tau * 1.25"],
+        "y": [0, "t2 * 1.2"],
+        "lines": [
+          {
+            "points": [
+              [0, "t1"],
+              ["tau", "t2"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "τ, мин",
+          "y": "t, °C"
+        }
+      },
+      "answer": "4.2 * m * (t2 - t1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику нагревания (см. рисунок) {{m}} кг воды найдите полученное количество теплоты в кДж. $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "По графику $\\Delta t = {{t2}} - {{t1}}$ °C; $Q = cm\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Одинаковые массы воды и масла получили одинаковое количество теплоты. Что нагреется сильнее?",
+        "hints": [],
+        "solution": "$c_{масла} \\approx 1700 < 4200$.",
+        "options": [
+          "Масло: у него меньше удельная теплоёмкость",
+          "Вода",
+          "Одинаково",
+          "Зависит от сосуда"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [20, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "880 * m * 1000 * dt / 1000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кирпичная печь массой {{m}} т остывает на {{dt}} °C. Сколько теплоты она отдаёт (в МДж)? $c = 880$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = cm\\Delta t$, масса в кг."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы нагреть 1 кг воды на 1 °C, нужно 4200 Дж. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Единица $c$ — Дж/(кг·°C), а не Дж.",
+        "options": [
+          "Для 2 кг на 1 °C нужно 8400 Дж",
+          "Для 1 кг на 10 °C нужно 42 000 Дж",
+          "Остывая на 1 °C, 1 кг воды отдаёт 4200 Дж",
+          "Для 1 кг на 2 °C нужно 2100 Дж",
+          "Удельная теплоёмкость воды 4200 Дж"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [140, 380, 460, 920]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.5, 2]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [10, 25, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "c * m * dt",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удельная теплоёмкость вещества {{c}} Дж/(кг·°C). Тело массой {{m}} кг остыло на {{dt}} °C. Сколько теплоты выделилось?",
+        "hints": [],
+        "solution": "$Q = cm\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удельная теплоёмкость измеряется в Дж/(кг·___).",
+        "hints": [],
+        "solution": "Дж/(кг·°C) или Дж/(кг·К) — то же самое.",
+        "accepted": ["°C", "К", "°С"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему воду используют в системах отопления?",
+        "hints": [],
+        "solution": "Остывая на несколько градусов, вода отдаёт много теплоты.",
+        "options": [
+          "У неё большая удельная теплоёмкость: она переносит много теплоты",
+          "Она дешёвая и холодная",
+          "Она плохо проводит тепло",
+          "Она быстро остывает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [15, 30, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "4.2 * m * dt"
+        }
+      ],
+      "answer": "t1 + q * 1000 / (4200 * m)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "До какой температуры нагреется {{m}} кг воды при {{t1}} °C, получив {{q}} кДж? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$t_2 = t_1 + \\dfrac{Q}{cm}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию теплоту, нужную для нагревания на 10 °C:",
+        "hints": [],
+        "solution": "Сравниваем $c$: 140, 400, 920, 4200.",
+        "options": ["1 кг свинца", "1 кг меди", "1 кг алюминия", "1 кг воды"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: тело (1 кг) нагрели на 10 °C. Сколько теплоты получено?",
+        "hints": [],
+        "solution": "$Q = c \\cdot 1 \\cdot 10$.",
+        "options": ["Вода", "Алюминий", "Медь", "Свинец"],
+        "matches": ["42 кДж", "9,2 кДж", "4 кДж", "1,4 кДж"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "q / (c * m)",
+      "variables": ["q", "c", "m"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите изменение температуры $d$ из формулы $q = c m d$.",
+        "hints": [],
+        "solution": "$\\Delta t = \\dfrac{Q}{cm}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [500, 1000, 2000]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [20, 50, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * m * dt / p / 60",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель передаёт воде {{p}} Вт. За сколько минут {{m}} кг воды нагреются на {{dt}} °C (потерь нет)? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$Pt = cm\\Delta t$, $t = \\dfrac{cm\\Delta t}{P}$; делим на 60."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [380, 460, 500, 920]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 2]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [20, 50]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "c * m * dt / 1000"
+        }
+      ],
+      "answer": "q * 1000 / (m * dt)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Дж/(кг·°C)"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Металлическая деталь массой {{m}} кг, получив {{q}} кДж, нагрелась на {{dt}} °C. Найдите удельную теплоёмкость.",
+        "hints": [],
+        "solution": "$c = \\dfrac{Q}{m\\Delta t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "tau",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "d2",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 2.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "d1",
+          "expr": "d2 * k"
+        }
+      ],
+      "answer": "d1 / d2",
+      "tolerance": {},
+      "decimals": 1
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графикам нагревания двух жидкостей одинаковой массы на одинаковых горелках: первая за {{tau}} мин нагрелась на {{d1}} °C, вторая — на {{d2}} °C. Во сколько раз удельная теплоёмкость второй больше?",
+        "hints": [],
+        "solution": "Одинаковое $Q$: $c_1 \\Delta t_1 = c_2 \\Delta t_2$, $\\dfrac{c_2}{c_1} = \\dfrac{\\Delta t_1}{\\Delta t_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 70, 80]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "round(4200 * m * (t2 - t1) / 1000000, 2)"
+        }
+      ],
+      "answer": "q * 1000000 / (4200 * (t2 - t1))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько воды можно нагреть от {{t1}} до {{t2}} °C, затратив {{q}} МДж? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$m = \\dfrac{Q}{c(t_2 - t_1)}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Одинаковые по массе алюминиевый и медный бруски, нагретые до 100 °C, положили на лёд. Под каким растает больше льда?",
+        "hints": [],
+        "solution": "При одинаковых $m$ и $\\Delta t$ теплота пропорциональна $c$: 920 > 400.",
+        "options": [
+          "Под алюминиевым: он отдаст больше теплоты",
+          "Под медным",
+          "Одинаково",
+          "Лёд не растает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [200, 400, 500]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [800, 900]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "500 * m / 1000 * (t1 - t2) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стальной резец массой {{m}} г при закалке нагрели до {{t1}} °C и опустили в масло, где он остыл до {{t2}} °C. Сколько теплоты он отдал (в кДж, $c = 500$ Дж/(кг·°C))?",
+        "hints": [],
+        "solution": "$Q = cm(t_1 - t_2)$, масса в кг."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Песок и вода одинаковой массы нагревали одинаковое время на одинаковых горелках. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Одинаковые горелки и время — одинаковое $Q$.",
+        "options": [
+          "Песок нагрелся сильнее",
+          "Оба получили одинаковое количество теплоты",
+          "У воды удельная теплоёмкость больше",
+          "Вода нагрелась сильнее",
+          "Песок получил больше теплоты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "mo",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [100, 150, 180]
+        }
+      ],
+      "constraints": [],
+      "answer": "(540 * m + 1700 * mo) * dt / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чугунную сковороду массой {{m}} кг и налитое в неё масло массой {{mo}} кг нагрели на {{dt}} °C. Удельные теплоёмкости: чугун 540, масло 1700 Дж/(кг·°C). Сколько теплоты нужно (в кДж)?",
+        "hints": [],
+        "solution": "$Q = (c_ч m + c_м m_м)\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между данными и искомой величиной.",
+        "hints": [],
+        "solution": "Выражаем величины из одной формулы.",
+        "options": [
+          "$Q$, $c$, $m$",
+          "$Q$, $m$, $\\Delta t$",
+          "$Q$, $c$, $\\Delta t$",
+          "$c$, $m$, $\\Delta t$"
+        ],
+        "matches": [
+          "$\\Delta t = Q/(cm)$",
+          "$c = Q/(m\\Delta t)$",
+          "$m = Q/(c\\Delta t)$",
+          "$Q = cm\\Delta t$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ночью вода в озере теплее воздуха, а днём — холоднее?",
+        "hints": [],
+        "solution": "Вода сглаживает суточные колебания температуры.",
+        "options": [
+          "У воды большая удельная теплоёмкость, её температура меняется медленно",
+          "Вода излучает тепло днём",
+          "Воздух плотнее воды",
+          "Из-за конвекции в воздухе"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1.5, 2]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "tm",
+          "kind": "choice",
+          "values": [5, 6, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * m * (100 - t1) / (p * 1000 * tm * 60) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электрический чайник мощностью {{p}} кВт нагрел {{m}} кг воды от {{t1}} до 100 °C за {{tm}} мин. Найдите КПД чайника в процентах. $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{cm\\Delta t}{Pt}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги определения удельной теплоёмкости металла (калориметр, вода).",
+        "hints": [],
+        "solution": "Метод смешивания.",
+        "options": [
+          "Взвесить металлический цилиндр и воду",
+          "Нагреть цилиндр в кипятке до 100 °C",
+          "Опустить цилиндр в калориметр с водой и дождаться равновесия",
+          "Составить уравнение теплового баланса и найти $c$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Прибор для измерения количества теплоты, состоящий из двух сосудов с воздушной прослойкой, называется ___.",
+        "hints": [],
+        "solution": "Калориметр уменьшает теплообмен с окружающей средой.",
+        "accepted": ["калориметр", "калориметром"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * m * (t1 - t2)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вода массой {{m}} кг остыла с {{t1}} °C до {{t2}} °C. Сколько теплоты выделилось (в кДж)? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = cm(t_1 - t_2)$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "4200 * m * d / p",
+      "variables": ["m", "d", "p"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель мощностью $p$ без потерь нагревает воду массой $m$ на $d$ градусов. Удельная теплоёмкость воды 4200 Дж/(кг·°C). Запишите время нагрева $t$.",
+        "hints": [],
+        "solution": "$Pt = cm\\Delta t$, $t = \\dfrac{4200\\,m\\,d}{P}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1000, 1500, 2000]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [70, 80, 90]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [80, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * v * (t2 - t1) / (p * e / 100) / 60",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель мощностью {{p}} Вт с КПД {{e}} % нагревает {{v}} л воды от {{t1}} до {{t2}} °C. Сколько минут потребуется? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$\\eta P t = cm\\Delta t$, $m = {{v}}$ кг."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [200, 300, 400]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 100 * v^2 / 2 / 140",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля из свинца ($c = 140$ Дж/(кг·°C)) летит со скоростью {{v}} м/с и застревает в доске. На сколько градусов нагреется пуля, если на её нагрев идёт {{p}} % кинетической энергии?",
+        "hints": [],
+        "solution": "$\\dfrac{p}{100}\\cdot\\dfrac{mv^2}{2} = cm\\Delta t$ — масса сокращается."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * dt / 10",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой высоты должна упасть вода водопада, чтобы нагреться на {{dt}} °C, если вся механическая энергия переходит во внутреннюю? $c = 4200$ Дж/(кг·°C), $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$mgh = cm\\Delta t$, $h = \\dfrac{c\\Delta t}{g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [23, 46, 92]
+        }
+      ],
+      "constraints": [],
+      "answer": "dt * 400 / 920",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медный ($c = 400$) и алюминиевый ($c = 920$ Дж/(кг·°C)) бруски равной массы получили одинаковое количество теплоты. Медный нагрелся на {{dt}} °C. На сколько нагрелся алюминиевый?",
+        "hints": [],
+        "solution": "$c_1 \\Delta t_1 = c_2 \\Delta t_2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Одинаковое количество теплоты сообщили 1 кг воды и 2 кг льда (лёд не тает, $c_л = 2100$). Сравните изменения температуры.",
+        "hints": [],
+        "solution": "$c_в m_в = 4200 \\cdot 1 = c_л m_л = 2100 \\cdot 2$ — произведения равны, значит, $\\Delta t$ одинаковы.",
+        "options": [
+          "Одинаковые",
+          "У льда в 2 раза больше",
+          "У воды в 2 раза больше",
+          "У льда в 4 раза больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * 1000 * v * dt / (p * 1000) / 86400",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "сут"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В бассейн объёмом {{v}} м³ налита вода. Сколько дней работы нагревателя мощностью {{p}} кВт (без потерь) нужно, чтобы нагреть её на {{dt}} °C? Ответ округлите до десятых.",
+        "hints": [],
+        "solution": "$Pt = c\\rho V\\Delta t$; время в сутках — делим на 86 400 с."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [140, 380, 920]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [70, 120]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "c * m * (t2 - t1) / 1000"
+        }
+      ],
+      "answer": "q * 1000 / (m * (t2 - t1))",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Дж/(кг·°C)"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг нагрели, затратив {{q}} кДж, при этом температура выросла от {{t1}} до {{t2}} °C. Найдите удельную теплоёмкость вещества.",
+        "hints": [],
+        "solution": "$c = \\dfrac{Q}{m(t_2 - t_1)}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о калориметрических измерениях.",
+        "hints": [],
+        "solution": "Потери уменьшаются, но не исчезают полностью.",
+        "options": [
+          "Калориметр уменьшает теплообмен с окружающей средой",
+          "Теплоёмкость самого калориметра нужно учитывать для точности",
+          "Внутренний сосуд делают из металла с известной теплоёмкостью",
+          "Калориметр полностью исключает потери",
+          "В калориметре нельзя смешивать жидкости"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [14, 28, 70]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * h / 140",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кусок свинца массой {{m}} кг падает с высоты {{h}} м на камень и останавливается. На сколько градусов он нагреется, если вся энергия идёт на нагрев свинца ($c = 140$ Дж/(кг·°C), $g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$mgh = cm\\Delta t$, масса сокращается."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию время нагрева на 50 °C на плитке 1 кВт (без потерь):",
+        "hints": [],
+        "solution": "20 с, 46 с, 105 с, 210 с.",
+        "options": ["1 кг меди", "1 кг алюминия", "0,5 кг воды", "1 кг воды"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между процессом и количеством теплоты (вода 1 кг, $c = 4200$).",
+        "hints": [],
+        "solution": "Знак «+» — получено, «−» — отдано.",
+        "options": [
+          "Нагрели на 1 °C",
+          "Остыла на 5 °C",
+          "Нагрели от 20 до 100 °C",
+          "Остыла от 100 до 0 °C"
+        ],
+        "matches": ["+4,2 кДж", "−21 кДж", "+336 кДж", "−420 кДж"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Произведение удельной теплоёмкости на массу тела называют ___ тела.",
+        "hints": [],
+        "solution": "$C = cm$, единица — Дж/°C.",
+        "accepted": ["теплоёмкостью", "теплоёмкость"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "ck",
+          "kind": "choice",
+          "values": [100, 200, 400]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "(ck + 4200 * m) * dt / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Теплоёмкость калориметра {{ck}} Дж/°C, в нём {{m}} кг воды. Сколько теплоты нужно, чтобы нагреть калориметр с водой на {{dt}} °C (в кДж)?",
+        "hints": [],
+        "solution": "$Q = (C_к + c_в m)\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему в морозы лучше заполнять систему отопления водой, а не маслом, если циркуляция одинакова?",
+        "hints": [],
+        "solution": "$c_в = 4200 > c_м \\approx 1700$.",
+        "options": [
+          "Вода переносит больше теплоты при том же охлаждении",
+          "Масло замерзает",
+          "Масло нагревается быстрее и это плохо",
+          "Вода легче масла"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "g * h / c",
+      "variables": ["g", "h", "c"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело падает с высоты $h$ и нагревается за счёт всей своей механической энергии. Запишите $\\Delta t$ (обозначьте $d$) через $h$, $g$ и удельную теплоёмкость $c$.",
+        "hints": [],
+        "solution": "$mgh = cm\\Delta t$."
+      }
+    }
+  }
+]
