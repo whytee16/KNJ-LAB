@@ -1,0 +1,1508 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 4]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [4, -1, 6]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "a + c",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Приведите подобные в $({{a}}x + {{b}}) + ({{c}}x - {{d}})$. Найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "Складываем коэффициенты при $x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 4, 7]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [4, -1]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [2, 3, 9]
+        }
+      ],
+      "constraints": [],
+      "answer": "b - d",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Приведите подобные в $({{a}}x + {{b}}) + ({{c}}x - {{d}})$. Найдите свободный член.",
+        "hints": [],
+        "solution": "Складываем числа."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 4, 6]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [-2, 1, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "x^2 - a * x + b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение многочлена $x^2 - {{a}}x + {{b}}$ при $x = {{x}}$.",
+        "hints": [],
+        "solution": "Подставляем."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, -4]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [3, 5, -2]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте скобки ${{a}}(x + {{b}})$ и найдите свободный член.",
+        "hints": [],
+        "solution": "${{a}}x + {{a}} \\cdot {{b}}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое выражение — многочлен?",
+        "hints": [],
+        "solution": "Многочлен — сумма одночленов.",
+        "options": ["$x^2 + 3x - 1$", "$\\dfrac{1}{x}$", "$\\sqrt{x}$", "$\\dfrac{x + 1}{x - 1}$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Многочлен, состоящий из двух одночленов, называется ___.",
+        "hints": [],
+        "solution": "Из трёх — трёхчлен.",
+        "accepted": ["двучленом", "двучлен"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "max(m, 2)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите степень многочлена $x^{ {{m}} } + {{a}}x^{2} - 1$.",
+        "hints": [],
+        "solution": "Наибольшая из степеней членов."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между многочленом и его степенью.",
+        "hints": [],
+        "solution": "Степень — наибольшая степень члена.",
+        "options": ["$3x - 1$", "$x^2 + x$", "$x^3 - 2x^2 + 1$", "$x^2y^2 + 1$"],
+        "matches": ["1", "2", "3", "4"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные результаты.",
+        "hints": [],
+        "solution": "Знак минус перед скобкой меняет знаки всех членов.",
+        "options": [
+          "$(2x + 1) + (3x - 4) = 5x - 3$",
+          "$(5x + 2) - (2x + 1) = 3x + 1$",
+          "$2(x - 3) = 2x - 6$",
+          "$-(x - 2) = -x - 2$",
+          "$3(x + 1) = 3x + 1$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию значения многочлена $x^2 - 2x$ при:",
+        "hints": [],
+        "solution": "−1 < 0 < 3 < 8.",
+        "options": ["$x = 1$", "$x = 0$", "$x = 3$", "$x = -2$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "b + d",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выполните вычитание $({{a}}x^2 + {{b}}x) - ({{c}}x^2 - {{d}}x)$ и найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "${{b}} - (-{{d}}) = {{b}} + {{d}}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чему равно $-(a - b + c)$?",
+        "hints": [],
+        "solution": "Меняем знаки всех слагаемых.",
+        "options": ["$-a + b - c$", "$-a - b - c$", "$a - b + c$", "$-a + b + c$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Если перед скобками стоит знак «минус», то при раскрытии скобок знаки слагаемых ___.",
+        "hints": [],
+        "solution": "Правило раскрытия скобок.",
+        "accepted": ["меняют", "меняются", "меняются на противоположные"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 7]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте скобки $x({{a}}x - {{b}})$. Найдите коэффициент при $x^2$.",
+        "hints": [],
+        "solution": "${{a}}x^2 - {{b}}x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, -1]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [-4, 5]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [1, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "a + b + c",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите сумму коэффициентов многочлена ${{a}}x^2 + {{b}}x + {{c}}$.",
+        "hints": [],
+        "solution": "Сумма коэффициентов — значение при $x = 1$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, -4]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, -1, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "a + b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Перемножьте $(x + {{a}})(x + {{b}})$. Найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "$x^2 + ({{a}} + {{b}})x + {{a}}{{b}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, -4]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, -1, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Перемножьте $(x + {{a}})(x + {{b}})$. Найдите свободный член.",
+        "hints": [],
+        "solution": "Произведение свободных членов."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Перемножьте $({{a}}x - 1)({{b}}x + 2)$. Найдите коэффициент при $x^2$.",
+        "hints": [],
+        "solution": "Произведение старших коэффициентов."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * a - b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Перемножьте $({{a}}x - 1)({{b}}x + 2)$. Найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "${{a}}x \\cdot 2 + (-1) \\cdot {{b}}x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "-a^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение выражения $(x - {{a}})(x + {{a}}) - x^2$.",
+        "hints": [],
+        "solution": "После раскрытия остаётся $-{{a}}^2$ при любом $x$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные равенства.",
+        "hints": [],
+        "solution": "Умножение многочленов.",
+        "options": [
+          "$(x + 2)(x + 3) = x^2 + 5x + 6$",
+          "$(x - 1)(x + 4) = x^2 + 3x - 4$",
+          "$2x(x - 5) = 2x^2 - 10x$",
+          "$(x + 1)(x + 1) = x^2 + 1$",
+          "$(x - 2)(x - 3) = x^2 - 6$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какова степень произведения многочленов степеней 2 и 3?",
+        "hints": [],
+        "solution": "Старшие степени складываются.",
+        "options": ["5", "6", "3", "1"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [7, 9, 13]
+        }
+      ],
+      "constraints": [],
+      "answer": "(c + a * b) / (a - b)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x + {{a}})(x - {{b}}) - x^2 = {{c}}$.",
+        "hints": [],
+        "solution": "Раскрываем: $(a - b)x - ab = c$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы умножить многочлен на многочлен, нужно каждый член одного умножить на ___ член другого.",
+        "hints": [],
+        "solution": "И сложить результаты.",
+        "accepted": ["каждый"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: коэффициент при $x$ в произведении.",
+        "hints": [],
+        "solution": "Перемножаем.",
+        "options": [
+          "$(x + 1)(x + 2)$",
+          "$(x - 3)(x + 5)$",
+          "$(2x + 1)(x - 1)$",
+          "$(x - 4)^2$ как $(x - 4)(x - 4)$"
+        ],
+        "matches": ["3", "2", "−1", "−8"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию значение $(x + 1)(x - 2)$ при:",
+        "hints": [],
+        "solution": "−2 < 0 < 4 < 10.",
+        "options": ["$x = 0$", "$x = 2$", "$x = 3$", "$x = 4$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [-3, 4, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * x",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Упростите ${{a}}x(x + 1) - {{a}}x^2$ и найдите значение при $x = {{x}}$.",
+        "hints": [],
+        "solution": "Остаётся ${{a}}x$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чему равна сумма коэффициентов многочлена $(2x - 1)^3$?",
+        "hints": [],
+        "solution": "Подставим $x = 1$: $(2 - 1)^3 = 1$.",
+        "options": ["1", "8", "−1", "0"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [-1, 3]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [2, -4]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * b * c",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите свободный член многочлена $(x + {{a}})(x + {{b}})(x + {{c}})$.",
+        "hints": [],
+        "solution": "Произведение свободных членов."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "x^2 + 6",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте скобки и упростите $(x + 2)(x + 3) - 5x$.",
+        "hints": [],
+        "solution": "$x^2 + 5x + 6 - 5x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, 6]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": ["b - a - c + d != 0"],
+      "answer": "(a * b - c * d) / (b - a - c + d)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x - {{a}})(x + {{b}}) = (x + {{c}})(x - {{d}})$.",
+        "hints": [],
+        "solution": "Квадраты сокращаются, получаем линейное уравнение."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, -1]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 4, -2]
+        }
+      ],
+      "constraints": [],
+      "answer": "a + b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите коэффициент при $x^2$ в произведении $(x^2 + {{a}}x + 1)(x + {{b}})$.",
+        "hints": [],
+        "solution": "$x^2 \\cdot {{b}} + {{a}}x \\cdot x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "-16",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Докажите, что значение $(x + 3)(x - 5) - (x - 1)^2$ не зависит от $x$, и найдите его.",
+        "hints": [],
+        "solution": "$(x + 3)(x - 5) = x^2 - 2x - 15$, $(x - 1)^2 = x^2 - 2x + 1$; разность равна $-16$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое число нужно вписать вместо *, чтобы $(x + 3)(x + *) = x^2 + 7x + 12$?",
+        "hints": [],
+        "solution": "$3 + 4 = 7$, $3 \\cdot 4 = 12$.",
+        "options": ["4", "3", "7", "12"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "b * (a + b)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ширина прямоугольника $x$, длина на {{a}} больше. Найдите свободный член многочлена, выражающего площадь после увеличения обеих сторон на {{b}}.",
+        "hints": [],
+        "solution": "$(x + {{b}})(x + {{a}} + {{b}}) = x^2 + \\ldots + {{b}}({{a}} + {{b}})$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите выражения, значение которых не зависит от $x$.",
+        "hints": [],
+        "solution": "Упростите каждое.",
+        "options": [
+          "$(x + 2)(x - 2) - x^2$",
+          "$x(x + 1) - x^2 - x$",
+          "$(x - 1)(x + 3) - x^2 - 2x$",
+          "$(x + 1)^2 - x^2$",
+          "$x(x - 3) - x^2$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "При каком $a$ многочлен $(x + a)(x - 2) - x^2$ не содержит $x$?",
+        "hints": [],
+        "solution": "Коэффициент при $x$: $a - 2 = 0$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между произведением и свободным членом.",
+        "hints": [],
+        "solution": "Свободный член — значение при $x = 0$.",
+        "options": ["$(x - 1)(x - 2)(x - 3)$", "$(x + 1)^3$", "$(2x + 1)(x - 5)$", "$x(x - 4)$"],
+        "matches": ["−6", "1", "−5", "0"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Значение многочлена при $x = 0$ равно его свободному ___.",
+        "hints": [],
+        "solution": "Удобно для проверки.",
+        "accepted": ["члену"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию степень многочлена.",
+        "hints": [],
+        "solution": "2, 3, 4, 6.",
+        "options": ["$(x + 1)(x - 1)$", "$x(x^2 + 1)$", "$(x^2 + 1)(x^2 - 1)$", "$(x^2 + x)^3$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * a * x - 2 * a^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $(x + {{a}})(x - {{a}}) - (x - {{a}})^2$ при $x = {{x}}$.",
+        "hints": [],
+        "solution": "Упростим: $2{{a}}x - 2{{a}}^2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Может ли произведение двух многочленов первой степени быть многочленом второй степени?",
+        "hints": [],
+        "solution": "$\\deg = 1 + 1$.",
+        "options": [
+          "Да, всегда (если старшие коэффициенты не нули)",
+          "Нет",
+          "Только если они равны",
+          "Только при положительных коэффициентах"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [9, 11, 21]
+        }
+      ],
+      "constraints": [],
+      "answer": "(b - 1) / a",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x(x + {{a}}) - (x + 1)(x - 1) = {{b}}$.",
+        "hints": [],
+        "solution": "$ax + 1 = b$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о многочленах.",
+        "hints": [],
+        "solution": "Степень произведения — сумма степеней.",
+        "options": [
+          "Сумма многочленов — многочлен",
+          "Произведение многочленов — многочлен",
+          "Степень суммы не больше наибольшей из степеней",
+          "Степень произведения — произведение степеней",
+          "Частное многочленов всегда многочлен"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * x - 1",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Упростите $(x - 1)(x + 1) - x(x - 2)$.",
+        "hints": [],
+        "solution": "$x^2 - 1 - x^2 + 2x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3, -2]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 * a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите коэффициент при $x^2$ в разложении $(x + {{a}})^3$ (перемножьте $(x + {{a}})(x + {{a}})(x + {{a}})$).",
+        "hints": [],
+        "solution": "$x^3 + 3ax^2 + 3a^2x + a^3$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "(1 - a + b)^n",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите сумму коэффициентов многочлена $(x^2 - {{a}}x + {{b}})^{ {{n}} }$.",
+        "hints": [],
+        "solution": "Сумма коэффициентов — значение при $x = 1$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [-1, 2]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "b^n",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите свободный член многочлена $(x^2 - {{a}}x + {{b}})^{ {{n}} }$.",
+        "hints": [],
+        "solution": "Значение при $x = 0$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Произведение трёх последовательных натуральных чисел $n(n + 1)(n + 2)$ всегда делится на…",
+        "hints": [],
+        "solution": "Среди них есть чётное и кратное 3.",
+        "options": ["6", "5", "4", "9"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [6, 7]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": ["a + b - c - d != 0"],
+      "answer": "(c * d - a * b) / (a + b - c - d)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x + {{a}})(x + {{b}}) - (x + {{c}})(x + {{d}}) = 0$.",
+        "hints": [],
+        "solution": "Квадраты сокращаются."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите тождества.",
+        "hints": [],
+        "solution": "Проверка раскрытием скобок.",
+        "options": [
+          "$(a + b)(a - b) = a^2 - b^2$",
+          "$(a - b)(b - a) = -(a - b)^2$",
+          "$a(b - c) + b(c - a) + c(a - b) = 0$",
+          "$(a + b)^2 = a^2 + b^2$",
+          "$(a - b)^2 = a^2 - b^2$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "8",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько членов будет в многочлене $(x + 1)(x^2 + 1)(x^4 + 1)$ после раскрытия скобок?",
+        "hints": [],
+        "solution": "Получается $1 + x + x^2 + \\dots + x^7$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию коэффициент при $x$ в произведении.",
+        "hints": [],
+        "solution": "−5 < −3 < 1 < 5.",
+        "options": ["$(x - 3)(x - 2)$", "$(x + 1)(x - 4)$", "$(x + 2)(x - 1)$", "$(x + 3)(x + 2)$"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: значение выражения при любом $x$.",
+        "hints": [],
+        "solution": "Упрощение.",
+        "options": [
+          "$(x + 1)(x - 1) - x^2$",
+          "$(x + 2)^2 - x^2 - 4x$",
+          "$x(x + 3) - (x + 1)(x + 2)$",
+          "$(x - 3)(x + 3) - (x^2 - 10)$"
+        ],
+        "matches": ["−1", "4", "−2", "1"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Многочлен, у которого все члены одной и той же степени, называется ___.",
+        "hints": [],
+        "solution": "Например, $x^2 + xy + y^2$.",
+        "accepted": ["однородным", "однородный"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 3, -1]
+        }
+      ],
+      "constraints": [],
+      "answer": "a^3 + b^3",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $(a + b)(a^2 - ab + b^2)$ при $a = {{a}}$, $b = {{b}}$.",
+        "hints": [],
+        "solution": "Это сумма кубов $a^3 + b^3$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Докажите, что $(n + 1)^2 - (n - 1)^2$ делится на 4 при любом целом $n$. Чему равно это выражение?",
+        "hints": [],
+        "solution": "$(n + 1)^2 - (n - 1)^2 = 4n$.",
+        "options": ["$4n$", "$2n$", "$4$", "$n^2$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, -3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 4]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [2, -1, 5]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [3, -2]
+        }
+      ],
+      "constraints": [],
+      "answer": "a + c",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите коэффициент при $x^3$ в произведении $(x^2 + {{a}}x + {{b}})(x^2 + {{c}}x + {{d}})$.",
+        "hints": [],
+        "solution": "$x^2 \\cdot cx + ax \\cdot x^2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о сумме коэффициентов многочлена $P(x)$.",
+        "hints": [],
+        "solution": "Подстановка.",
+        "options": [
+          "Она равна $P(1)$",
+          "Свободный член равен $P(0)$",
+          "Сумма коэффициентов $(x - 1)^{10}$ равна 0",
+          "Она равна $P(0)$",
+          "Она всегда положительна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "x^3 + 1",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте скобки $(x + 1)(x^2 - x + 1)$.",
+        "hints": [],
+        "solution": "Сумма кубов."
+      }
+    }
+  }
+]

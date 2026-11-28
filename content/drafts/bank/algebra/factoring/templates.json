@@ -1,0 +1,1533 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 5, 7]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "a + b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вынесите общий множитель: ${{a}}x + {{b}}x = x(\\ldots)$. Чему равно выражение в скобках при $x = 1$?",
+        "hints": [],
+        "solution": "$x({{a}} + {{b}})$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "g",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [1, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "k",
+          "expr": "g * u"
+        },
+        {
+          "name": "m",
+          "expr": "g * w"
+        }
+      ],
+      "answer": "k / g",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите ${{k}}x + {{m}}$ как ${{g}}(\\ldots)$. Найдите коэффициент при $x$ в скобках.",
+        "hints": [],
+        "solution": "Делим каждый член на ${{g}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 7, 9]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a^2"
+        }
+      ],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите $x^2 - {{n}}$ на множители $(x - a)(x + a)$, $a > 0$. Найдите $a$.",
+        "hints": [],
+        "solution": "Разность квадратов: ${{n}} = {{a}}^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "b",
+          "expr": "2 * a"
+        },
+        {
+          "name": "c",
+          "expr": "a^2"
+        }
+      ],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите $x^2 + {{b}}x + {{c}}$ как $(x + a)^2$. Найдите $a$.",
+        "hints": [],
+        "solution": "$2a = {{b}}$, $a^2 = {{c}}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое разложение верно?",
+        "hints": [],
+        "solution": "Общий множитель 3.",
+        "options": [
+          "$3x + 6 = 3(x + 2)$",
+          "$3x + 6 = 3(x + 6)$",
+          "$3x + 6 = 3x(1 + 2)$",
+          "$3x + 6 = 6(x + 1)$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите $x^2 - 25$.",
+        "hints": [],
+        "solution": "Разность квадратов.",
+        "options": ["$(x - 5)(x + 5)$", "$(x - 5)^2$", "$(x - 25)(x + 1)$", "$x(x - 25)$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Представление многочлена в виде произведения называется разложением на ___.",
+        "hints": [],
+        "solution": "Разложение на множители.",
+        "accepted": ["множители"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие.",
+        "hints": [],
+        "solution": "Способы разложения.",
+        "options": ["$x^2 - 4x$", "$x^2 - 4$", "$x^2 - 4x + 4$", "$4x + 4$"],
+        "matches": ["$x(x - 4)$", "$(x - 2)(x + 2)$", "$(x - 2)^2$", "$4(x + 1)$"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные разложения.",
+        "hints": [],
+        "solution": "Проверка перемножением.",
+        "options": [
+          "$x^2 + x = x(x + 1)$",
+          "$a^2 - 9 = (a - 3)(a + 3)$",
+          "$5a - 10 = 5(a - 2)$",
+          "$x^2 - 1 = (x - 1)^2$",
+          "$2x + 4 = 2(x + 4)$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x(x - {{a}}) = 0$. Укажите ненулевой корень.",
+        "hints": [],
+        "solution": "Произведение равно нулю, если один из множителей равен нулю."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги разложения $2x^2 - 8$ в правильном порядке.",
+        "hints": [],
+        "solution": "Сначала общий множитель, затем ФСУ.",
+        "options": [
+          "Выносим общий множитель 2",
+          "Получаем $2(x^2 - 4)$",
+          "Применяем разность квадратов",
+          "Ответ $2(x - 2)(x + 2)$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [53, 64, 87]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [47, 36, 13]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a - b) * (a + b)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение ${{a}}^2 - {{b}}^2$, разложив на множители.",
+        "hints": [],
+        "solution": "$({{a}} - {{b}})({{a}} + {{b}})$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой общий множитель у $6x^2$ и $9x$?",
+        "hints": [],
+        "solution": "НОД коэффициентов и наименьшая степень $x$.",
+        "options": ["$3x$", "$3$", "$x$", "$6x$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вынесение общего множителя за скобки — это действие, обратное раскрытию ___.",
+        "hints": [],
+        "solution": "Распределительный закон.",
+        "accepted": ["скобок"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [37, 63]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [63, 37, 13]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [7, 9, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a + b) * x",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение ${{a}} \\cdot {{x}} + {{b}} \\cdot {{x}}$, вынеся общий множитель.",
+        "hints": [],
+        "solution": "$({{a}} + {{b}}) \\cdot {{x}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 4, 6, -5]
+        }
+      ],
+      "constraints": [],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^2 = {{a}}x$. Укажите ненулевой корень.",
+        "hints": [],
+        "solution": "$x(x - {{a}}) = 0$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 4, 6, 8, 11]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a^2"
+        }
+      ],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^2 - {{n}} = 0$. Укажите положительный корень.",
+        "hints": [],
+        "solution": "$(x - {{a}})(x + {{a}}) = 0$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 4, 6, 7]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "b",
+          "expr": "2 * a"
+        },
+        {
+          "name": "c",
+          "expr": "a^2"
+        }
+      ],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите $x^2 - {{b}}x + {{c}}$ как $(x - a)^2$. Найдите $a$.",
+        "hints": [],
+        "solution": "Квадрат разности."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "a * b"
+        }
+      ],
+      "answer": "a + b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Группировкой разложите $xy + {{a}}x + {{b}}y + {{p}}$ в вид $(x + m)(y + n)$. Найдите $m + n$.",
+        "hints": [],
+        "solution": "$x(y + {{a}}) + {{b}}(y + {{a}}) = (x + {{b}})(y + {{a}})$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [73, 85, 126]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [63, 75, 26]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a - b)^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите ${{a}}^2 - 2 \\cdot {{a}} \\cdot {{b}} + {{b}}^2$.",
+        "hints": [],
+        "solution": "Свернём: $({{a}} - {{b}})^2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные разложения.",
+        "hints": [],
+        "solution": "Сумма квадратов не раскладывается так.",
+        "options": [
+          "$x^3 - x = x(x - 1)(x + 1)$",
+          "$4a^2 - 1 = (2a - 1)(2a + 1)$",
+          "$x^2 - 6x + 9 = (x - 3)^2$",
+          "$x^2 + 9 = (x + 3)^2$",
+          "$x^2 + 4 = (x - 2)(x + 2)$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите $ax + ay + bx + by$.",
+        "hints": [],
+        "solution": "Группировка.",
+        "options": ["$(a + b)(x + y)$", "$(a + x)(b + y)$", "$ab(x + y)$", "$(a + y)(b + x)$"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие.",
+        "hints": [],
+        "solution": "Комбинация способов.",
+        "options": ["$3x^2 - 12$", "$x^3 - 4x^2$", "$x^2 + 10x + 25$", "$9x^2 - 4$"],
+        "matches": ["$3(x - 2)(x + 2)$", "$x^2(x - 4)$", "$(x + 5)^2$", "$(3x - 2)(3x + 2)$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Способ разложения, при котором члены объединяют в группы с общим множителем, называется способом ___.",
+        "hints": [],
+        "solution": "Группировка.",
+        "accepted": ["группировки"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию корни уравнения $x(x - 3)(x + 2) = 0$.",
+        "hints": [],
+        "solution": "Каждый множитель приравниваем к нулю.",
+        "options": ["$-2$", "$0$", "$3$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5, 7]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "a - b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x - {{a}})(x + {{b}}) = 0$. Найдите сумму корней.",
+        "hints": [],
+        "solution": "Корни ${{a}}$ и $-{{b}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5, 7]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "-a * b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x - {{a}})(x + {{b}}) = 0$. Найдите произведение корней.",
+        "hints": [],
+        "solution": "Корни ${{a}}$ и $-{{b}}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое выражение нельзя разложить на множители с целыми коэффициентами?",
+        "hints": [],
+        "solution": "Сумма квадратов.",
+        "options": ["$x^2 + 1$", "$x^2 - 1$", "$x^2 + 2x + 1$", "$x^2 + x$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [7, 12, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "d * s",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $x^2 - y^2$, если $x - y = {{d}}$, $x + y = {{s}}$.",
+        "hints": [],
+        "solution": "$(x - y)(x + y)$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "x * (x - 5)",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите и запишите произведение: $x^2 - 5x$.",
+        "hints": [],
+        "solution": "Общий множитель $x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a^2"
+        }
+      ],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^3 - {{n}}x = 0$. Укажите наибольший корень.",
+        "hints": [],
+        "solution": "$x(x - {{a}})(x + {{a}}) = 0$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a^2"
+        }
+      ],
+      "answer": "3",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько корней у уравнения $x^3 - {{n}}x = 0$?",
+        "hints": [],
+        "solution": "$0$, $\\pm{{a}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "a + b"
+        },
+        {
+          "name": "q",
+          "expr": "a * b"
+        }
+      ],
+      "answer": "max(a, b)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите $x^2 + {{p}}x + {{q}} = (x + m)(x + n)$ подбором. Укажите большее из чисел $m$, $n$.",
+        "hints": [],
+        "solution": "$m + n = {{p}}$, $mn = {{q}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "a + b"
+        },
+        {
+          "name": "q",
+          "expr": "a * b"
+        }
+      ],
+      "answer": "max(a, b)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^2 - {{p}}x + {{q}} = 0$, разложив левую часть на множители. Укажите больший корень.",
+        "hints": [],
+        "solution": "$(x - {{a}})(x - {{b}}) = 0$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "a + b"
+        },
+        {
+          "name": "q",
+          "expr": "a * b"
+        }
+      ],
+      "answer": "min(a, b)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^2 - {{p}}x + {{q}} = 0$, разложив левую часть на множители. Укажите меньший корень.",
+        "hints": [],
+        "solution": "$(x - {{a}})(x - {{b}}) = 0$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные разложения.",
+        "hints": [],
+        "solution": "Формулы кубов и разность квадратов дважды.",
+        "options": [
+          "$x^3 - 8 = (x - 2)(x^2 + 2x + 4)$",
+          "$x^3 + 1 = (x + 1)(x^2 - x + 1)$",
+          "$x^4 - 1 = (x - 1)(x + 1)(x^2 + 1)$",
+          "$x^3 + 8 = (x + 2)^3$",
+          "$x^4 - 16 = (x - 2)^4$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите $x^2 - 2xy + y^2 - 9$.",
+        "hints": [],
+        "solution": "Квадрат разности, затем разность квадратов.",
+        "options": [
+          "$(x - y - 3)(x - y + 3)$",
+          "$(x - y - 9)(x - y + 1)$",
+          "$(x - y)^2 - 3$",
+          "$(x + y - 3)(x + y + 3)$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие.",
+        "hints": [],
+        "solution": "Подбор чисел по сумме и произведению.",
+        "options": ["$x^2 + 5x + 6$", "$x^2 - x - 6$", "$x^2 + x - 6$", "$x^2 - 5x + 6$"],
+        "matches": ["$(x + 2)(x + 3)$", "$(x - 3)(x + 2)$", "$(x + 3)(x - 2)$", "$(x - 2)(x - 3)$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы разложить $x^2 + px + q$ подбором, ищут два числа, сумма которых равна $p$, а ___ равно $q$.",
+        "hints": [],
+        "solution": "Подбор.",
+        "accepted": ["произведение"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию корни уравнения $x^3 - 4x^2 - 5x = 0$.",
+        "hints": [],
+        "solution": "$x(x - 5)(x + 1) = 0$.",
+        "options": ["$-1$", "$0$", "$5$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [15, 25, 35]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a + b) / (a - b)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите $\\dfrac{ {{a}}^2 - {{b}}^2 }{ {{a}}^2 - 2 \\cdot {{a}} \\cdot {{b}} + {{b}}^2 }$.",
+        "hints": [],
+        "solution": "$\\dfrac{(a - b)(a + b)}{(a - b)^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [10, 17, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a^2"
+        }
+      ],
+      "answer": "x + a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сократите и вычислите $\\dfrac{x^2 - {{n}}}{x - {{a}}}$ при $x = {{x}}$.",
+        "hints": [],
+        "solution": "$\\dfrac{(x - {{a}})(x + {{a}})}{x - {{a}}} = x + {{a}}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Докажите, что $n^3 - n$ делится на 6 при любом натуральном $n$. Какое разложение помогает?",
+        "hints": [],
+        "solution": "Произведение трёх последовательных чисел.",
+        "options": ["$(n - 1)n(n + 1)$", "$n(n^2 + 1)$", "$(n - 1)^2 n$", "$n^2(n - 1)$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [3, 5, 7]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * s",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $ab^2 + a^2b$, если $a + b = {{s}}$, $ab = {{p}}$.",
+        "hints": [],
+        "solution": "$ab(a + b)$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "x * (x - 3) * (x + 3)",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите на множители: $x^3 - 9x$ (запишите произведение).",
+        "hints": [],
+        "solution": "$x(x^2 - 9)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "max(a, 1)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^3 - {{a}}x^2 - x + {{a}} = 0$. Укажите наибольший корень.",
+        "hints": [],
+        "solution": "$x^2(x - {{a}}) - (x - {{a}}) = (x - {{a}})(x - 1)(x + 1)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^3 - {{a}}x^2 - x + {{a}} = 0$. Найдите сумму корней.",
+        "hints": [],
+        "solution": "Корни ${{a}}$, $1$, $-1$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "b^2"
+        },
+        {
+          "name": "m",
+          "expr": "a * b^2"
+        }
+      ],
+      "answer": "b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $x^3 + {{a}}x^2 - {{n}}x - {{m}} = 0$. Укажите наибольший корень.",
+        "hints": [],
+        "solution": "Группировка: $(x + {{a}})(x^2 - {{n}})$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [17, 26, 39]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [7, 16, 9]
+        }
+      ],
+      "constraints": [],
+      "answer": "a - b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите $\\dfrac{ {{a}}^3 - {{b}}^3 }{ {{a}}^2 + {{a}} \\cdot {{b}} + {{b}}^2 }$.",
+        "hints": [],
+        "solution": "Разность кубов, сокращаем."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [15, 21, 45]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "k",
+          "expr": "n == 15 ? 2 : (n == 21 ? 2 : 3)"
+        }
+      ],
+      "answer": "k",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько решений в целых числах имеет уравнение $x^2 - y^2 = {{n}}$ с $x > y > 0$?",
+        "hints": [],
+        "solution": "$(x - y)(x + y) = {{n}}$, множители одной чётности."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные разложения.",
+        "hints": [],
+        "solution": "Группировка и выделение квадрата.",
+        "options": [
+          "$a^4 + 4 = (a^2 - 2a + 2)(a^2 + 2a + 2)$",
+          "$x^2 - y^2 + x - y = (x - y)(x + y + 1)$",
+          "$a^2 - b^2 - 2b - 1 = (a - b - 1)(a + b + 1)$",
+          "$x^4 + 1 = (x^2 + 1)^2$",
+          "$x^2 + y^2 = (x + y)^2$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "При каком натуральном $n$ число $n^2 + n$ нечётно?",
+        "hints": [],
+        "solution": "$n(n + 1)$ — произведение соседних чисел, оно чётно.",
+        "options": ["Ни при каком", "При нечётных", "При чётных", "При всех"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие.",
+        "hints": [],
+        "solution": "Группировка.",
+        "options": [
+          "$x^3 + x^2 - x - 1$",
+          "$x^3 - x^2 - x + 1$",
+          "$x^4 - x^2$",
+          "$x^3 - 3x^2 + 3x - 1$"
+        ],
+        "matches": [
+          "$(x - 1)(x + 1)^2$",
+          "$(x - 1)^2(x + 1)$",
+          "$x^2(x - 1)(x + 1)$",
+          "$(x - 1)^3$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Если произведение нескольких множителей равно нулю, то хотя бы один из множителей равен ___.",
+        "hints": [],
+        "solution": "Основа решения уравнений разложением.",
+        "accepted": ["нулю", "0"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию корни уравнения $x^4 - 5x^2 + 4 = 0$.",
+        "hints": [],
+        "solution": "$(x^2 - 1)(x^2 - 4) = 0$.",
+        "options": ["$-2$", "$-1$", "$1$", "$2$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите наибольший общий делитель чисел $n^2 + n$ при всех натуральных $n$ (наибольшее число, на которое делится каждое такое число).",
+        "hints": [],
+        "solution": "$n(n + 1)$ всегда чётно; при $n = 1$ получаем 2."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [7, 12, 15]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [3, 8, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a - b) * (a + b)^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $a^3 + a^2b - ab^2 - b^3$ при $a = {{a}}$, $b = {{b}}$.",
+        "hints": [],
+        "solution": "$(a - b)(a + b)^2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "На что делится $27^5 - 9^7$?",
+        "hints": [],
+        "solution": "$3^{15} - 3^{14} = 3^{14} \\cdot 2$.",
+        "options": ["На 2", "На 5", "На 7", "Ни на одно из чисел"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a^2"
+        },
+        {
+          "name": "k",
+          "expr": "a == b ? 2 : 3"
+        }
+      ],
+      "answer": "k",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x^2 - {{n}})(x + {{b}}) = 0$. Сколько различных корней?",
+        "hints": [],
+        "solution": "Корни $\\pm{{a}}$ и $-{{b}}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "(x + 1) * (x - 2) * (x + 2)",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Разложите на множители: $x^3 + x^2 - 4x - 4$.",
+        "hints": [],
+        "solution": "$x^2(x + 1) - 4(x + 1)$."
+      }
+    }
+  }
+]

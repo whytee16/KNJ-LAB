@@ -1,0 +1,1437 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $(x + {{a}})^2$. Найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "$(x + a)^2 = x^2 + 2ax + a^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "a^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $(x - {{a}})^2$. Найдите свободный член.",
+        "hints": [],
+        "solution": "$(x - a)^2 = x^2 - 2ax + a^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "-2 * a",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $(x - {{a}})^2$. Найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "Удвоенное произведение со знаком минус."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 9]
+        }
+      ],
+      "constraints": [],
+      "answer": "-a^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $(x - {{a}})(x + {{a}})$. Найдите свободный член.",
+        "hints": [],
+        "solution": "$x^2 - {{a}}^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [51, 63, 75]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [49, 37, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "n^2 - m^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите удобным способом ${{n}}^2 - {{m}}^2$.",
+        "hints": [],
+        "solution": "$(n - m)(n + m)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чему равно $(a + b)^2$?",
+        "hints": [],
+        "solution": "Квадрат суммы.",
+        "options": ["$a^2 + 2ab + b^2$", "$a^2 + b^2$", "$a^2 + ab + b^2$", "$2a + 2b$"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чему равно $(a - b)(a + b)$?",
+        "hints": [],
+        "solution": "Разность квадратов.",
+        "options": ["$a^2 - b^2$", "$a^2 + b^2$", "$(a - b)^2$", "$a^2 - 2ab + b^2$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "$(a - b)^2 = a^2 - 2ab + b^2$ — формула квадрата ___.",
+        "hints": [],
+        "solution": "Квадрат разности.",
+        "accepted": ["разности"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие.",
+        "hints": [],
+        "solution": "ФСУ.",
+        "options": ["$(x + 1)^2$", "$(x - 1)^2$", "$(x - 1)(x + 1)$", "$(x + 2)^2$"],
+        "matches": ["$x^2 + 2x + 1$", "$x^2 - 2x + 1$", "$x^2 - 1$", "$x^2 + 4x + 4$"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные равенства.",
+        "hints": [],
+        "solution": "Не забывайте удвоенное произведение.",
+        "options": [
+          "$(x + 3)^2 = x^2 + 6x + 9$",
+          "$(x - 5)^2 = x^2 - 10x + 25$",
+          "$(x - 4)(x + 4) = x^2 - 16$",
+          "$(x + 2)^2 = x^2 + 4$",
+          "$(x - 3)^2 = x^2 - 9$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a + b"
+        }
+      ],
+      "answer": "(a + b)^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите ${{n}}^2$ по формуле $(a + b)^2$, где $a = {{a}}$, $b = {{b}}$.",
+        "hints": [],
+        "solution": "${{a}}^2 + 2 \\cdot {{a}} \\cdot {{b}} + {{b}}^2$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию значения при $x = 2$.",
+        "hints": [],
+        "solution": "1 < 3 < 9 < 16.",
+        "options": ["$(x - 1)^2$", "$x^2 - 1$", "$(x + 1)^2$", "$(x + 2)^2$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "a^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $({{a}}x + 1)^2$. Найдите коэффициент при $x^2$.",
+        "hints": [],
+        "solution": "$({{a}}x)^2$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Произведение суммы двух выражений на их разность равно ___ их квадратов.",
+        "hints": [],
+        "solution": "$(a + b)(a - b) = a^2 - b^2$.",
+        "accepted": ["разности"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое слагаемое пропущено: $(x + 5)^2 = x^2 + \\square + 25$?",
+        "hints": [],
+        "solution": "$2 \\cdot x \\cdot 5$.",
+        "options": ["$10x$", "$5x$", "$25x$", "$x$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 5, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "-2 * a * b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $({{a}}x - {{b}})^2$. Найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "$-2 \\cdot {{a}}x \\cdot {{b}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [50, 70, 100]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a - b"
+        }
+      ],
+      "answer": "(a - b)^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите ${{n}}^2$, представив число как $({{a}} - {{b}})$.",
+        "hints": [],
+        "solution": "Квадрат разности."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "n",
+          "expr": "a - b"
+        },
+        {
+          "name": "m",
+          "expr": "a + b"
+        }
+      ],
+      "answer": "n * m",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите ${{n}} \\cdot {{m}}$ с помощью разности квадратов.",
+        "hints": [],
+        "solution": "$({{a}} - {{b}})({{a}} + {{b}}) = {{a}}^2 - {{b}}^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3, 5]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [21, 41, 61]
+        }
+      ],
+      "constraints": [],
+      "answer": "(c - a^2) / (2 * a)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x + {{a}})^2 - x^2 = {{c}}$.",
+        "hints": [],
+        "solution": "$2{{a}}x + {{a}}^2 = {{c}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [5, -2, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "-4 * a * x",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $(x - {{a}})^2 - (x + {{a}})^2$ при $x = {{x}}$.",
+        "hints": [],
+        "solution": "Упростим: $-4{{a}}x$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные равенства.",
+        "hints": [],
+        "solution": "ФСУ.",
+        "options": [
+          "$(2x - 3)^2 = 4x^2 - 12x + 9$",
+          "$(3a + b)(3a - b) = 9a^2 - b^2$",
+          "$(-x - 1)^2 = x^2 + 2x + 1$",
+          "$(2x + 1)^2 = 4x^2 + 1$",
+          "$(x - 2y)^2 = x^2 - 4y^2$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое число надо прибавить к $x^2 + 8x$, чтобы получить полный квадрат?",
+        "hints": [],
+        "solution": "$(x + 4)^2 = x^2 + 8x + 16$.",
+        "options": ["16", "8", "4", "64"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие.",
+        "hints": [],
+        "solution": "ФСУ.",
+        "options": ["$(2x - 1)^2$", "$(3x + 2)^2$", "$(2x - 3)(2x + 3)$", "$(x - 3)^2$"],
+        "matches": ["$4x^2 - 4x + 1$", "$9x^2 + 12x + 4$", "$4x^2 - 9$", "$x^2 - 6x + 9$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Формула $(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$ называется кубом ___.",
+        "hints": [],
+        "solution": "Куб суммы.",
+        "accepted": ["суммы"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию значения выражений.",
+        "hints": [],
+        "solution": "121 < 200 < 361 < 400.",
+        "options": ["$(10 + 1)^2$", "$51^2 - 49^2$", "$(20 - 1)^2$", "$101^2 - 99^2$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [37, 48, 76]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [63, 52, 24]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a + b)^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $a^2 + 2ab + b^2$ при $a = {{a}}$, $b = {{b}}$.",
+        "hints": [],
+        "solution": "Свернём: $(a + b)^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [7.5, 8.5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2.5, 1.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "a^2 - b^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $a^2 - b^2$ при $a = {{a}}$, $b = {{b}}$.",
+        "hints": [],
+        "solution": "$(a - b)(a + b)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое выражение равно $(a - b)^2$?",
+        "hints": [],
+        "solution": "Квадраты противоположных чисел равны.",
+        "options": ["$(b - a)^2$", "$-(a + b)^2$", "$a^2 - b^2$", "$(a + b)^2$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [6, 11, 16]
+        }
+      ],
+      "constraints": [],
+      "answer": "(c + a^2) / b",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x - {{a}})(x + {{a}}) - x(x - {{b}}) = {{c}}$.",
+        "hints": [],
+        "solution": "$bx - a^2 = c$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "x^2 + 6 * x",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте скобки: $(x + 3)^2 - 9$.",
+        "hints": [],
+        "solution": "$x^2 + 6x + 9 - 9$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 * a^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $(x + {{a}})^3$. Найдите коэффициент при $x$.",
+        "hints": [],
+        "solution": "$(x + a)^3 = x^3 + 3ax^2 + 3a^2x + a^3$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "-a^3",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Раскройте $(x - {{a}})^3$. Найдите свободный член.",
+        "hints": [],
+        "solution": "Куб разности."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 4, 6, 8]
+        },
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "q - (p / 2)^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите наименьшее значение выражения $x^2 - {{p}}x + {{q}}$.",
+        "hints": [],
+        "solution": "$(x - {{p}}/2)^2 + {{q}} - ({{p}}/2)^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 4, 6, 10]
+        },
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [3, 7]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "При каком $x$ выражение $x^2 - {{p}}x + {{q}}$ принимает наименьшее значение?",
+        "hints": [],
+        "solution": "Выделим полный квадрат."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [5, 7, 9]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [3, 6, 10]
+        }
+      ],
+      "constraints": ["s^2 >= 4 * p"],
+      "answer": "s^2 - 2 * p",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Известно $a + b = {{s}}$, $ab = {{p}}$. Найдите $a^2 + b^2$.",
+        "hints": [],
+        "solution": "$a^2 + b^2 = (a + b)^2 - 2ab$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [5, 8, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "d^2 + 2 * p",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Известно $a - b = {{d}}$, $ab = {{p}}$. Найдите $a^2 + b^2$.",
+        "hints": [],
+        "solution": "$a^2 + b^2 = (a - b)^2 + 2ab$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные равенства.",
+        "hints": [],
+        "solution": "Формулы кубов.",
+        "options": [
+          "$(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$",
+          "$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$",
+          "$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$",
+          "$(a + b)^3 = a^3 + b^3$",
+          "$a^3 - b^3 = (a - b)^3$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое наименьшее значение может принимать $(x - 3)^2 + 5$?",
+        "hints": [],
+        "solution": "Квадрат не меньше нуля.",
+        "options": ["5", "3", "0", "−3"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: выделите полный квадрат.",
+        "hints": [],
+        "solution": "Выделение полного квадрата.",
+        "options": ["$x^2 + 6x + 10$", "$x^2 - 4x + 7$", "$x^2 + 2x$", "$x^2 - 10x + 20$"],
+        "matches": ["$(x + 3)^2 + 1$", "$(x - 2)^2 + 3$", "$(x + 1)^2 - 1$", "$(x - 5)^2 - 5$"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выражение $(x - 2)^2 + 1$ при любом $x$ принимает значения не меньше ___.",
+        "hints": [],
+        "solution": "Квадрат неотрицателен.",
+        "accepted": ["1", "единицы"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию наименьшие значения выражений.",
+        "hints": [],
+        "solution": "−4 < −1 < 2 < 5.",
+        "options": ["$(x + 1)^2 - 4$", "$x^2 - 2x$", "$x^2 + 2$", "$(x - 7)^2 + 5$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [127, 248, 365]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [27, 48, 65]
+        }
+      ],
+      "constraints": [],
+      "answer": "a - b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите $\\dfrac{ {{a}}^2 - {{b}}^2 }{ {{a}} + {{b}} }$.",
+        "hints": [],
+        "solution": "Сократим: $a - b$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чему равно $x^3 - 8$?",
+        "hints": [],
+        "solution": "Разность кубов.",
+        "options": [
+          "$(x - 2)(x^2 + 2x + 4)$",
+          "$(x - 2)^3$",
+          "$(x - 2)(x^2 - 2x + 4)$",
+          "$(x + 2)(x^2 - 2x + 4)$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "c / (4 * a)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x + {{a}})^2 - (x - {{a}})^2 = {{c}}$.",
+        "hints": [],
+        "solution": "$4{{a}}x = {{c}}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "8 * x",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Упростите $(x + 2)^2 - (x - 2)^2$.",
+        "hints": [],
+        "solution": "$8x$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": ["s^2 >= 4 * p"],
+      "answer": "s^3 - 3 * p * s",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Известно $a + b = {{s}}$, $ab = {{p}}$. Найдите $a^3 + b^3$.",
+        "hints": [],
+        "solution": "$a^3 + b^3 = (a + b)^3 - 3ab(a + b)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1, 3, 5]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 6, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "d^2 + 4 * p",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Известно $a - b = {{d}}$, $ab = {{p}}$. Найдите $(a + b)^2$.",
+        "hints": [],
+        "solution": "$(a + b)^2 = (a - b)^2 + 4ab$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        },
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [1, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "q + (p / 2)^2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите наибольшее значение выражения ${{q}} + {{p}}x - x^2$.",
+        "hints": [],
+        "solution": "$-(x - {{p}}/2)^2 + {{q}} + ({{p}}/2)^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [3, 4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "s^2 - 2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите значение $x^2 + \\dfrac{1}{x^2}$, если $x + \\dfrac{1}{x} = {{s}}$.",
+        "hints": [],
+        "solution": "Возводим в квадрат: $x^2 + 2 + 1/x^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [17, 23, 31]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [13, 7, 9]
+        }
+      ],
+      "constraints": [],
+      "answer": "a + b",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вычислите $\\dfrac{ {{a}}^3 + {{b}}^3 }{ {{a}}^2 - {{a}} \\cdot {{b}} + {{b}}^2 }$.",
+        "hints": [],
+        "solution": "Сумма кубов, сокращаем."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите выражения, которые принимают только неотрицательные значения.",
+        "hints": [],
+        "solution": "Выделите полный квадрат.",
+        "options": [
+          "$x^2 - 6x + 9$",
+          "$x^2 + 4x + 5$",
+          "$(x - y)^2 + y^2$",
+          "$x^2 - 2x$",
+          "$-x^2 + 1$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "При каком $c$ выражение $9x^2 - 12x + c$ является полным квадратом?",
+        "hints": [],
+        "solution": "$(3x - 2)^2 = 9x^2 - 12x + 4$.",
+        "options": ["4", "2", "12", "9"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие.",
+        "hints": [],
+        "solution": "Формулы кубов.",
+        "options": ["$x^3 + 27$", "$x^3 - 1$", "$(x + 1)^3$", "$8x^3 - 1$"],
+        "matches": [
+          "$(x + 3)(x^2 - 3x + 9)$",
+          "$(x - 1)(x^2 + x + 1)$",
+          "$x^3 + 3x^2 + 3x + 1$",
+          "$(2x - 1)(4x^2 + 2x + 1)$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Неполный квадрат разности $a^2 + ab + b^2$ встречается в формуле разности ___.",
+        "hints": [],
+        "solution": "$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$.",
+        "accepted": ["кубов"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию.",
+        "hints": [],
+        "solution": "199 < 1997 < 2001 < 2048.",
+        "options": ["$100^2 - 99^2$", "$999^2 - 998^2$", "$1001^2 - 1000^2$", "$2^{11}$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 7, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "4 * k * n",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Упростите $(n + {{k}})^2 - (n - {{k}})^2$ и найдите его значение при $n = {{n}}$.",
+        "hints": [],
+        "solution": "Выражение равно $4{{k}}n$ — оно делится на $4{{k}}$ при любом целом $n$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [5, 6, 7]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [4, 8, 11]
+        }
+      ],
+      "constraints": ["s^2 >= 3 * p"],
+      "answer": "s^2 - 2 * p",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите $a^2 + b^2 + c^2$, если $a + b + c = {{s}}$, $ab + bc + ca = {{p}}$.",
+        "hints": [],
+        "solution": "$(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое наименьшее значение $x^2 + y^2 - 2x + 4y + 10$?",
+        "hints": [],
+        "solution": "$(x - 1)^2 + (y + 2)^2 + 5$.",
+        "options": ["5", "10", "0", "1"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [7, 10, 13, 16]
+        }
+      ],
+      "constraints": [],
+      "answer": "(c - 1) / 3",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Решите уравнение $(x + 1)^3 - x^3 - 3x^2 = {{c}}$.",
+        "hints": [],
+        "solution": "$3x + 1 = {{c}}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "x^3 - 1",
+      "variables": ["x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Упростите $(x - 1)(x^2 + x + 1)$.",
+        "hints": [],
+        "solution": "Разность кубов."
+      }
+    }
+  }
+]
