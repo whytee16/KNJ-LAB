@@ -1,0 +1,1583 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [12, 120, 220]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [0.5, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "u * i",
+      "tolerance": {},
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите мощность прибора, если при напряжении {{u}} В сила тока {{i}} А.",
+        "hints": [],
+        "solution": "$P = UI$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [6, 12, 220]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 60, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "u * i * t",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую работу совершает ток за {{t}} с при напряжении {{u}} В и силе тока {{i}} А?",
+        "hints": [],
+        "solution": "$A = UIt$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [40, 60, 100]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 24]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * h / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кВт·ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лампа мощностью {{p}} Вт горит {{h}} ч. Сколько энергии она израсходует (в кВт·ч)?",
+        "hints": [],
+        "solution": "$W = Pt$, в кВт·ч: $\\dfrac{P}{1000} \\cdot t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "i^2 * r * t",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое количество теплоты выделит резистор {{r}} Ом при токе {{i}} А за {{t}} с?",
+        "hints": [],
+        "solution": "Закон Джоуля — Ленца: $Q = I^2Rt$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких единицах измеряется мощность тока?",
+        "hints": [],
+        "solution": "1 Вт = 1 В · 1 А.",
+        "options": ["Ватт (Вт)", "Джоуль (Дж)", "Вольт (В)", "Ампер (А)"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что учитывает электрический счётчик в квартире?",
+        "hints": [],
+        "solution": "Счётчик считает работу тока.",
+        "options": [
+          "Израсходованную электроэнергию (кВт·ч)",
+          "Силу тока",
+          "Напряжение сети",
+          "Мощность приборов"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Количество теплоты, выделяемое проводником с током, равно произведению квадрата силы тока, сопротивления и времени — это закон Джоуля — ___.",
+        "hints": [],
+        "solution": "$Q = I^2Rt$.",
+        "accepted": ["Ленца"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и формулой.",
+        "hints": [],
+        "solution": "Формулы темы.",
+        "options": [
+          "Мощность",
+          "Работа тока",
+          "Теплота (закон Джоуля — Ленца)",
+          "Мощность через сопротивление и ток"
+        ],
+        "matches": ["$UI$", "$UIt$", "$I^2Rt$", "$I^2R$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [1, 2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "w * 3.6",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите {{w}} кВт·ч в мегаджоулях.",
+        "hints": [],
+        "solution": "1 кВт·ч = 3,6 МДж."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите приборы, в которых используется тепловое действие тока.",
+        "hints": [],
+        "solution": "Нагревательные приборы.",
+        "options": [
+          "Электрочайник",
+          "Утюг",
+          "Лампа накаливания",
+          "Электродвигатель вентилятора",
+          "Компас"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1100, 2200]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 220",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность чайника {{p}} Вт, напряжение 220 В. Найдите силу тока.",
+        "hints": [],
+        "solution": "$I = P/U$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию мощность приборов.",
+        "hints": [],
+        "solution": "10 < 100 < 1000 < 3000 Вт.",
+        "options": [
+          "Светодиодная лампа 10 Вт",
+          "Телевизор 100 Вт",
+          "Утюг 1000 Вт",
+          "Электроплита 3 кВт"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему спираль электроплитки раскаляется, а подводящие провода почти не нагреваются?",
+        "hints": [],
+        "solution": "При одинаковом токе $Q \\sim R$.",
+        "options": [
+          "Сопротивление спирали гораздо больше сопротивления проводов",
+          "Ток в проводах меньше",
+          "Провода охлаждаются воздухом",
+          "Спираль из меди"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [20, 25, 30]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "c * p * h",
+      "tolerance": {},
+      "unit": "тг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стоимость 1 кВт·ч — {{c}} тг. Сколько стоит работа прибора мощностью {{p}} кВт в течение {{h}} ч?",
+        "hints": [],
+        "solution": "$W = Pt$, стоимость $= W \\cdot$ тариф."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица работы тока, используемая в быту: 1 ___ = 3,6 МДж.",
+        "hints": [],
+        "solution": "Киловатт-час.",
+        "accepted": ["кВт·ч", "киловатт-час", "кВт ч"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "u^2 / r",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите мощность, выделяющуюся в резисторе {{r}} Ом при напряжении {{u}} В.",
+        "hints": [],
+        "solution": "$P = \\dfrac{U^2}{R}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [484, 968, 1100, 2200]
+        }
+      ],
+      "constraints": [],
+      "answer": "220^2 / p",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите сопротивление нагревателя мощностью {{p}} Вт, рассчитанного на 220 В.",
+        "hints": [],
+        "solution": "$R = \\dfrac{U^2}{P}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1000, 1500, 2000]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * t * 60 / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты выделит электрочайник мощностью {{p}} Вт за {{t}} мин (в кДж)?",
+        "hints": [],
+        "solution": "$Q = Pt$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "r2",
+          "kind": "choice",
+          "values": [10, 30]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "(u / (r1 + r2))^2 * r1",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две лампы {{r1}} и {{r2}} Ом соединены последовательно к {{u}} В. Найдите мощность первой лампы.",
+        "hints": [],
+        "solution": "$I = U/(R_1 + R_2)$, $P_1 = I^2R_1$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две лампы соединены последовательно: 100 Ом и 200 Ом. Какая горит ярче?",
+        "hints": [],
+        "solution": "Ток одинаков, $P = I^2R$ больше у большего $R$.",
+        "options": ["200 Ом", "100 Ом", "Одинаково", "Ни одна не горит"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Те же лампы 100 Ом и 200 Ом соединены параллельно. Какая горит ярче?",
+        "hints": [],
+        "solution": "Напряжение одинаково, $P = U^2/R$ больше у меньшего $R$.",
+        "options": ["100 Ом", "200 Ом", "Одинаково", "Ни одна"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1500, 2000]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * m * (100 - t1) / (p * e / 100) / 60",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чайник с КПД {{e}} % и мощностью {{p}} Вт нагревает {{m}} кг воды от {{t1}} до 100 °C. За сколько минут? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$\\eta P t = cm\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные формулы мощности тока.",
+        "hints": [],
+        "solution": "Из закона Ома.",
+        "options": ["$P = UI$", "$P = I^2R$", "$P = U^2/R$", "$P = U/I$", "$P = IR$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [150, 200, 300]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [20, 25, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "w * c",
+      "tolerance": {},
+      "unit": "тг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Семья за месяц потребила {{w}} кВт·ч при тарифе {{c}} тг/кВт·ч. Сколько нужно заплатить?",
+        "hints": [],
+        "solution": "Стоимость = энергия × тариф."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Устройство, которое размыкает цепь при слишком большом токе, называется ___ (предохранителем).",
+        "hints": [],
+        "solution": "Защита от короткого замыкания и перегрузки.",
+        "accepted": ["плавким предохранителем", "предохранителем", "автоматом"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: лампа 220 В, 100 Вт.",
+        "hints": [],
+        "solution": "$I = P/U$, $R = U^2/P$.",
+        "options": ["Ток", "Сопротивление", "Энергия за 10 ч", "Энергия за 1 ч в кДж"],
+        "matches": ["≈ 0,45 А", "484 Ом", "1 кВт·ч", "360 кДж"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [44, 55, 110]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [220]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "u^2 / r * t * 60 / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое количество теплоты выделит спираль сопротивлением {{r}} Ом, включённая в сеть {{u}} В, за {{t}} мин (в кДж)?",
+        "hints": [],
+        "solution": "$Q = \\dfrac{U^2}{R}t$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию стоимость работы (тариф 25 тг/кВт·ч):",
+        "hints": [],
+        "solution": "15 тг, 25 тг, 37,5 тг, 150 тг.",
+        "options": ["Лампа 60 Вт 10 ч", "Утюг 1 кВт 1 ч", "Чайник 2 кВт 45 мин", "Плита 3 кВт 2 ч"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при коротком замыкании плавится предохранитель?",
+        "hints": [],
+        "solution": "Тепловое действие тока.",
+        "options": [
+          "Резко растёт ток и выделяемая теплота $I^2Rt$",
+          "Падает напряжение",
+          "Остывают провода",
+          "Растёт сопротивление"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "u^2 * t / r",
+      "variables": ["u", "t", "r"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите количество теплоты $q$, выделяемое резистором $r$ под напряжением $u$ за время $t$.",
+        "hints": [],
+        "solution": "$Q = \\dfrac{U^2}{R}t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "4",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель из двух спиралей по {{r}} Ом. Во сколько раз мощность при параллельном соединении больше, чем при последовательном (то же напряжение)?",
+        "hints": [],
+        "solution": "$R_п = r/2$, $R_{посл} = 2r$; $P \\sim 1/R$: $\\dfrac{2r}{r/2} = 4$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [60, 100]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [110, 127, 198]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * (u / 220)^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лампа 220 В {{p}} Вт включена в сеть {{u}} В. Какую мощность она потребляет (сопротивление считать постоянным)?",
+        "hints": [],
+        "solution": "$R = \\dfrac{220^2}{P}$, $P' = \\dfrac{U^2}{R} = P\\left(\\dfrac{U}{220}\\right)^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p1",
+          "kind": "choice",
+          "values": [40, 60, 100]
+        },
+        {
+          "name": "p2",
+          "kind": "choice",
+          "values": [60, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "p1 * p2^2 / (p1 + p2)^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две лампы 220 В: {{p1}} Вт и {{p2}} Вт соединили последовательно в сеть 220 В. Найдите мощность первой (сопротивления постоянны).",
+        "hints": [],
+        "solution": "$R_i = U^2/P_i$; ток $I = \\dfrac{U}{R_1 + R_2}$; $P_1' = I^2 R_1 = \\dfrac{P_1P_2^2}{(P_1 + P_2)^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [20, 40]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * 10 * h / (380 * i * e / 100)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электродвигатель подъёмного крана работает при 380 В и {{i}} А, КПД {{e}} %. За какое время он поднимет груз {{m}} т на {{h}} м ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$\\eta UIt = mgh$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему электропровода в квартире рассчитаны на определённый максимальный ток?",
+        "hints": [],
+        "solution": "$Q = I^2Rt$.",
+        "options": [
+          "При большем токе провода сильно нагреваются, изоляция может загореться",
+          "Иначе упадёт напряжение",
+          "Чтобы экономить медь",
+          "Это требование счётчика"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [22, 44]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [220]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "tm",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "u^2 / r * tm * 60 / (4200 * (100 - t1))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель сопротивлением {{r}} Ом подключён к {{u}} В. Сколько воды можно нагреть от {{t1}} до 100 °C за {{tm}} мин без потерь? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$\\dfrac{U^2}{R}t = cm\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два резистора 2 Ом и 4 Ом соединены последовательно к 12 В. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "$P = I^2R$.",
+        "options": [
+          "Ток 2 А",
+          "Мощность на 4 Ом — 16 Вт",
+          "Мощность на 2 Ом — 8 Вт",
+          "Общая мощность 36 Вт",
+          "Мощность на 2 Ом больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [10, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 / (100 - p)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Спираль электроплитки укоротили на {{p}} %. Во сколько раз изменилась мощность (напряжение то же)?",
+        "hints": [],
+        "solution": "$R \\sim l$, $P \\sim 1/R$: увеличилась в $\\dfrac{100}{100 - p}$ раз."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между способом соединения двух одинаковых спиралей и временем закипания воды (одна спираль — 12 мин).",
+        "hints": [],
+        "solution": "$t \\sim R$ при неизменном $U$.",
+        "options": ["Одна спираль", "Две последовательно", "Две параллельно", "Три параллельно"],
+        "matches": ["12 мин", "24 мин", "6 мин", "4 мин"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "При последовательном соединении больше теплоты выделяется на проводнике с ___ сопротивлением.",
+        "hints": [],
+        "solution": "$Q = I^2Rt$, ток одинаков.",
+        "accepted": ["большим", "бо́льшим", "большем"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию мощность двух резисторов по 10 Ом при 20 В:",
+        "hints": [],
+        "solution": "20 Вт < 40 Вт < 80 Вт.",
+        "options": ["Последовательно", "Один резистор", "Параллельно"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "4200 * m * (100 - t1) / (e / 100) / 3600000 * c",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "тг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько стоит кипячение {{m}} кг воды от {{t1}} °C в чайнике с КПД {{e}} % при тарифе {{c}} тг/кВт·ч? $c_в = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "Энергия $\\dfrac{cm\\Delta t}{\\eta}$ в кВт·ч умножить на тариф."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая лампа (220 В) имеет большее сопротивление нити: 40 Вт или 100 Вт?",
+        "hints": [],
+        "solution": "$R = U^2/P$.",
+        "options": ["40 Вт", "100 Вт", "Одинаковое", "Зависит от цвета"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * u^2 / r",
+      "variables": ["u", "r"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две одинаковые спирали $r$ включают в сеть $u$ параллельно. Запишите общую мощность.",
+        "hints": [],
+        "solution": "$R = r/2$, $P = U^2/R$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [20, 25]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [100, 150]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 1000 * h * 30 * c",
+      "tolerance": {},
+      "unit": "тг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удельная стоимость: тариф {{c}} тг/кВт·ч. Сколько тенге стоит месяц (30 дней) работы холодильника мощностью {{p}} Вт, если он работает {{h}} ч в сутки?",
+        "hints": [],
+        "solution": "$W = Pt$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [15, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 * t2 / (t1 + t2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель из двух спиралей: с первой вода закипает за {{t1}} мин, со второй — за {{t2}} мин. За сколько минут закипит вода при параллельном соединении спиралей?",
+        "hints": [],
+        "solution": "$t \\sim R$; параллельно: $\\dfrac{1}{t} = \\dfrac{1}{t_1} + \\dfrac{1}{t_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [15, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 + t2",
+      "tolerance": {},
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "То же: спирали включены последовательно. За сколько минут закипит вода?",
+        "hints": [],
+        "solution": "$t \\sim R$; последовательно: $t = t_1 + t_2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [220]
+        },
+        {
+          "name": "rw",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [20, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "rw / (rw + r) * 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Источник {{u}} В питает нагрузку через провода сопротивлением {{rw}} Ом. Сопротивление нагрузки {{r}} Ом. Какая доля (%) мощности теряется в проводах?",
+        "hints": [],
+        "solution": "Ток общий: доля $\\dfrac{R_п}{R_п + R}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему электроэнергию передают на большие расстояния при высоком напряжении?",
+        "hints": [],
+        "solution": "$P = UI$: больше $U$ — меньше $I$.",
+        "options": [
+          "При той же мощности меньше ток и потери $I^2R$ в проводах",
+          "Так провода дешевле",
+          "Высокое напряжение безопаснее",
+          "Ток не теряется вообще"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [100, 500]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [1, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "(p * 1000 / (u * 1000))^2 * r / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электростанция передаёт мощность {{p}} кВт по линии сопротивлением {{r}} Ом при напряжении {{u}} кВ. Найдите потери в линии (кВт).",
+        "hints": [],
+        "solution": "$I = P/U$, $P_п = I^2R$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "k^2",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз уменьшатся потери в линии, если напряжение передачи увеличить в {{k}} раз (мощность та же)?",
+        "hints": [],
+        "solution": "$P_п = \\dfrac{P^2 R}{U^2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о лампах 220 В: 40 Вт и 100 Вт.",
+        "hints": [],
+        "solution": "$P = I^2R$ при общем токе, $P = U^2/R$ при общем напряжении.",
+        "options": [
+          "В параллельном включении ярче 100 Вт",
+          "В последовательном включении ярче 40 Вт",
+          "Сопротивление 40-ваттной больше",
+          "В последовательном включении ярче 100 Вт",
+          "Сопротивления равны"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [60, 75, 100]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [6, 10, 16]
+        }
+      ],
+      "constraints": [],
+      "answer": "floor(220 * i / p)",
+      "tolerance": {},
+      "unit": "шт."
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько ламп по {{p}} Вт можно одновременно включить параллельно в сеть 220 В, если предохранитель рассчитан на {{i}} А?",
+        "hints": [],
+        "solution": "Общая мощность не больше $UI_{max}$: $n \\le \\dfrac{220 \\cdot I}{P}$, берём целую часть."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию время закипания воды в чайнике со спиралями 20 и 30 Ом (сеть та же):",
+        "hints": [],
+        "solution": "$t \\sim R$: 12 < 20 < 30 < 50.",
+        "options": ["Обе параллельно", "Только 20 Ом", "Только 30 Ом", "Обе последовательно"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: мощность $P$ при $U = 220$ В и сопротивлении.",
+        "hints": [],
+        "solution": "$P = U^2/R$.",
+        "options": ["22 Ом", "44 Ом", "110 Ом", "484 Ом"],
+        "matches": ["2,2 кВт", "1,1 кВт", "440 Вт", "100 Вт"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "При параллельном соединении больше теплоты выделяется на проводнике с ___ сопротивлением.",
+        "hints": [],
+        "solution": "$Q = \\dfrac{U^2}{R}t$.",
+        "accepted": ["меньшим"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [40, 60]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [15, 20]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [60, 90]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [85, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "w * e / 100 / p * v",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электромобиль: аккумулятор {{w}} кВт·ч, средняя мощность двигателя {{p}} кВт при скорости {{v}} км/ч, КПД {{e}} %. Какой запас хода (км)?",
+        "hints": [],
+        "solution": "Время работы $\\dfrac{\\eta W}{P}$ ч; путь $= v t$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится мощность нагревателя, если напряжение уменьшится на 10 % (сопротивление то же)?",
+        "hints": [],
+        "solution": "$P \\sim U^2$: $0{,}9^2 = 0{,}81$.",
+        "options": [
+          "Уменьшится на 19 %",
+          "Уменьшится на 10 %",
+          "Уменьшится на 20 %",
+          "Не изменится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "i^2 * r * t / (400 * m / 1000)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проводник сопротивлением {{r}} Ом и массой {{m}} г из меди ($c = 400$ Дж/(кг·°C)) нагревается током {{i}} А. На сколько градусов он нагреется за {{t}} с без теплоотдачи?",
+        "hints": [],
+        "solution": "$I^2Rt = cm\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * b / (a + b)",
+      "variables": ["a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Спирали отдельно доводят воду до кипения за $a$ и $b$ минут. Запишите время при параллельном соединении.",
+        "hints": [],
+        "solution": "$\\dfrac{1}{t} = \\dfrac{1}{a} + \\dfrac{1}{b}$."
+      }
+    }
+  }
+]
