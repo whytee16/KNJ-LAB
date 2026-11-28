@@ -1,0 +1,1755 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20, 50, 100]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [2, 3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * s",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила {{f}} Н перемещает тело на {{s}} м в направлении действия силы. Найдите работу силы.",
+        "hints": [],
+        "solution": "$A = Fs = {{f}} \\cdot {{s}}$ Дж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10, 20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую работу совершают, поднимая груз массой {{m}} кг на высоту {{h}} м ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$A = mgh = {{m}} \\cdot 10 \\cdot {{h}}$ Дж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10, 20, 50]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 20, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "n * t"
+        }
+      ],
+      "answer": "a / t",
+      "tolerance": {},
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "За {{t}} с совершена работа {{a}} Дж. Найдите мощность.",
+        "hints": [],
+        "solution": "$N = \\dfrac{A}{t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [50, 100, 200, 500]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * t",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель мощностью {{n}} Вт работал {{t}} с. Какую работу он совершил?",
+        "hints": [],
+        "solution": "$A = Nt$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких единицах измеряется работа в СИ?",
+        "hints": [],
+        "solution": "$1\\ \\text{Дж} = 1\\ \\text{Н} \\cdot 1\\ \\text{м}$.",
+        "options": ["Джоуль (Дж)", "Ватт (Вт)", "Ньютон (Н)", "Паскаль (Па)"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких единицах измеряется мощность в СИ?",
+        "hints": [],
+        "solution": "$1\\ \\text{Вт} = 1\\ \\text{Дж/с}$.",
+        "options": ["Ватт (Вт)", "Джоуль (Дж)", "Ньютон (Н)", "Килограмм (кг)"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каком случае механическая работа НЕ совершается?",
+        "hints": [],
+        "solution": "Работа совершается, только если тело перемещается под действием силы.",
+        "options": [
+          "Человек держит сумку, стоя на месте",
+          "Кран поднимает плиту",
+          "Лошадь тянет телегу",
+          "Мальчик толкает санки, и они едут"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность показывает, какая работа совершается за единицу ___.",
+        "hints": [],
+        "solution": "$N = A/t$.",
+        "accepted": ["времени"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.5, 2, 5, 75]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1000",
+      "tolerance": {},
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите мощность {{n}} кВт в ваттах.",
+        "hints": [],
+        "solution": "1 кВт = 1000 Вт."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0.5, 2, 3.6, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * 1000",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите работу {{a}} кДж в джоулях.",
+        "hints": [],
+        "solution": "1 кДж = 1000 Дж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [3, 5, 8]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": 0,
+            "size": "f",
+            "label": "F = {{f}} Н"
+          },
+          {
+            "angle": 180,
+            "size": "f",
+            "label": "F тр"
+          }
+        ]
+      },
+      "answer": "f * s",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик равномерно тянут по полу силой {{f}} Н (см. рисунок) на расстояние {{s}} м. Найдите работу силы тяги.",
+        "hints": [],
+        "solution": "Сила направлена вдоль перемещения: $A = Fs$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и единицей.",
+        "hints": [],
+        "solution": "$A = Fs$, $N = A/t$.",
+        "options": ["Работа", "Мощность", "Сила", "Путь"],
+        "matches": ["Дж", "Вт", "Н", "м"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 4]
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких случаях совершается механическая работа?",
+        "hints": [],
+        "solution": "Работа есть, когда сила вызывает перемещение.",
+        "options": [
+          "Штангист поднимает штангу",
+          "Вода падает с плотины",
+          "Спортсмен держит штангу над головой",
+          "Книга лежит на столе",
+          "Трактор пашет поле"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два мальчика подняли одинаковые вёдра на один этаж: один за 20 с, другой за 40 с. Сравните мощности.",
+        "hints": [],
+        "solution": "Работа одинакова, а время у первого вдвое меньше: $N = A/t$.",
+        "options": [
+          "У первого мощность в 2 раза больше",
+          "У второго в 2 раза больше",
+          "Мощности равны",
+          "Работы разные"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите мощности по возрастанию.",
+        "hints": [],
+        "solution": "500 Вт < 2000 Вт < 5000 Вт < 10 000 Вт.",
+        "options": ["500 Вт", "2 кВт", "5000 Вт", "0,01 МВт"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 3]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 12, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * 9.8 * h / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кран поднял плиту массой {{m}} т на высоту {{h}} м ($g = 9{,}8$ Н/кг). Найдите работу в кДж.",
+        "hints": [],
+        "solution": "$A = mgh$, масса в кг; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / (n * 1000)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подъёмник мощностью {{n}} кВт поднимает груз массой {{m}} кг на высоту {{h}} м. За какое время ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$A = mgh$, $t = \\dfrac{A}{N}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20, 25]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1000, 1500, 2000]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * v / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль едет равномерно со скоростью {{v}} м/с, сила тяги {{f}} Н. Найдите мощность двигателя в кВт.",
+        "hints": [],
+        "solution": "$N = Fv$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [6, 9, 12]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / t",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Школьник массой {{m}} кг поднялся по лестнице на высоту {{h}} м за {{t}} с. Найдите его мощность ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$N = \\dfrac{mgh}{t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * v * 10 * h / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую работу совершает насос, поднимая {{v}} м³ воды на высоту {{h}} м ($g = 10$ Н/кг)? Ответ в кДж.",
+        "hints": [],
+        "solution": "$m = \\rho V$, $A = mgh$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится работа по подъёму груза, если высоту подъёма увеличить в 2 раза, а массу уменьшить в 2 раза?",
+        "hints": [],
+        "solution": "$A = mgh$: множители 2 и 1/2 компенсируются.",
+        "options": [
+          "Не изменится",
+          "Увеличится в 2 раза",
+          "Уменьшится в 2 раза",
+          "Увеличится в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 25, 50]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "f * s"
+        }
+      ],
+      "answer": "a / f",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На тело действует сила {{f}} Н. Совершена работа {{a}} Дж. На какое расстояние переместилось тело (по направлению силы)?",
+        "hints": [],
+        "solution": "$s = \\dfrac{A}{F}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 10, 50]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1000 * t * 60 / 1000000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность двигателя {{n}} кВт. Какую работу он совершает за {{t}} мин? Ответ в МДж.",
+        "hints": [],
+        "solution": "$A = Nt$, время в секундах; делим на $10^6$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные формулы.",
+        "hints": [],
+        "solution": "$N = Fv$ следует из $N = Fs/t$.",
+        "options": [
+          "$A = Fs$ (сила вдоль перемещения)",
+          "$N = A/t$",
+          "$N = Fv$ (равномерное движение, сила вдоль скорости)",
+          "$A = F/s$",
+          "$N = At$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [3, 5, 9]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * 3 * (n - 1)",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек массой {{m}} кг поднимается по лестнице на {{n}}-й этаж (высота этажа 3 м, с первого этажа). Найдите работу ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Высота подъёма $3({{n}} - 1)$ м, $A = mgh$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица мощности ватт названа в честь изобретателя паровой машины Джеймса ___.",
+        "hints": [],
+        "solution": "1 Вт = 1 Дж/с.",
+        "accepted": ["Уатта", "Ватта"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Спутник движется по круговой орбите. Совершает ли работу сила тяжести?",
+        "hints": [],
+        "solution": "Если сила перпендикулярна перемещению, работа равна нулю.",
+        "options": [
+          "Нет: сила перпендикулярна перемещению",
+          "Да, всегда",
+          "Да, если орбита высокая",
+          "Только на половине орбиты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [300, 400, 500]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [3.6, 7.2, 10.8]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * v / 3.6",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лошадь тянет телегу силой {{f}} Н со скоростью {{v}} км/ч. Найдите мощность лошади.",
+        "hints": [],
+        "solution": "$v = {{v}} : 3{,}6$ м/с; $N = Fv$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги расчёта мощности человека, взбегающего по лестнице.",
+        "hints": [],
+        "solution": "Мощность — работа за единицу времени.",
+        "options": [
+          "Измерить массу человека и высоту лестницы",
+          "Найти работу $A = mgh$",
+          "Измерить время подъёма",
+          "Найти мощность $N = A/t$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a / n",
+      "variables": ["a", "n"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите время $t$ из формулы мощности $n = a/t$ ($a$ — работа).",
+        "hints": [],
+        "solution": "$t = \\dfrac{A}{N}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * s * 0.5",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Санки тянут за верёвку силой {{f}} Н под углом 60° к горизонту на расстояние {{s}} м. Найдите работу силы натяжения верёвки.",
+        "hints": [],
+        "solution": "$A = Fs\\cos\\alpha = {{f}} \\cdot {{s}} \\cdot \\cos 60° = {{f}} \\cdot {{s}} \\cdot 0{,}5$ Дж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "-f * s",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила трения {{f}} Н действует на скользящий брусок на пути {{s}} м. Найдите работу силы трения.",
+        "hints": [],
+        "solution": "Сила трения направлена против перемещения ($\\alpha = 180°$): $A = -Fs$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.5]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "w",
+          "expr": "m * 10"
+        },
+        {
+          "name": "ft",
+          "expr": "mu * m * 10"
+        }
+      ],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": 0,
+            "size": "ft",
+            "label": "F"
+          },
+          {
+            "angle": 180,
+            "size": "ft",
+            "label": "F тр"
+          },
+          {
+            "angle": 90,
+            "size": "w",
+            "label": "N"
+          },
+          {
+            "angle": -90,
+            "size": "w",
+            "label": "mg"
+          }
+        ]
+      },
+      "answer": "mu * m * 10 * s",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик массой {{m}} кг равномерно тянут по полу на {{s}} м, коэффициент трения {{mu}} (см. рисунок). Найдите работу силы тяги ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Равномерно: $F = \\mu mg$; $A = Fs$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "s * 1.25"],
+        "y": [0, "f * 1.4"],
+        "lines": [
+          {
+            "points": [
+              [0, "f"],
+              ["s", "f"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "s, м",
+          "y": "F, Н"
+        }
+      },
+      "answer": "f * s",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику зависимости силы от пути (см. рисунок) найдите работу силы на пути {{s}} м. Сила постоянна и направлена вдоль перемещения.",
+        "hints": [],
+        "solution": "Работа равна площади под графиком $F(s)$: прямоугольник ${{f}} \\cdot {{s}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1000 * t / (10 * h)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность двигателя подъёмного крана {{n}} кВт. Груз какой массы он поднимет на {{h}} м за {{t}} с ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$Nt = mgh$, $m = \\dfrac{Nt}{gh}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [4, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1000 / v",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Двигатель моторной лодки развивает мощность {{n}} кВт при скорости {{v}} м/с. Найдите силу сопротивления воды (движение равномерное).",
+        "hints": [],
+        "solution": "$N = Fv$, $F = N/v$; при равномерном движении $F_{сопр} = F$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело подняли на высоту h сначала вертикально, затем по наклонной плоскости без трения. Сравните работу силы тяжести.",
+        "hints": [],
+        "solution": "Работа силы тяжести зависит только от изменения высоты.",
+        "options": [
+          "Одинакова и равна $-mgh$",
+          "По наклонной больше",
+          "По наклонной меньше",
+          "При вертикальном подъёме равна нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 120, 150]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 2.2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "9.8 * m * h / t",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую мощность развивает спортсмен, поднимая штангу массой {{m}} кг на высоту {{h}} м за {{t}} с ($g = 9{,}8$ Н/кг)?",
+        "hints": [],
+        "solution": "$N = \\dfrac{mgh}{t}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите случаи, где работа силы отрицательна.",
+        "hints": [],
+        "solution": "Работа отрицательна, если сила направлена против перемещения.",
+        "options": [
+          "Работа силы трения при скольжении",
+          "Работа силы тяжести при подъёме тела",
+          "Работа силы тяги автомобиля при разгоне",
+          "Работа силы сопротивления воздуха при падении",
+          "Работа силы тяжести при падении"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [75, 100, 150, 200]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 0.736",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность двигателя {{n}} л. с. Выразите её в киловаттах, считая 1 л. с. ≈ 736 Вт.",
+        "hints": [],
+        "solution": "${{n}} \\cdot 736$ Вт; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между углом между силой $F = 10$ Н и перемещением $s = 2$ м и работой.",
+        "hints": [],
+        "solution": "$A = Fs\\cos\\alpha$.",
+        "options": ["0°", "60°", "90°", "180°"],
+        "matches": ["20 Дж", "10 Дж", "0 Дж", "−20 Дж"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [8, 10, 12]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ведро воды массой {{m}} кг поднимают из колодца глубиной {{h}} м равномерно за {{t}} с ($g = 10$ Н/кг). Найдите мощность.",
+        "hints": [],
+        "solution": "$N = \\dfrac{mgh}{t}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему автомобиль на подъёме переходит на низкую передачу?",
+        "hints": [],
+        "solution": "Мощность ограничена, поэтому сила тяги растёт при уменьшении скорости.",
+        "options": [
+          "При той же мощности $N = Fv$ меньшая скорость даёт большую силу тяги",
+          "Чтобы ехать быстрее",
+          "Чтобы уменьшить работу",
+          "Чтобы увеличить мощность двигателя"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию работу силы тяжести при перемещении тела массой 1 кг ($g = 10$ Н/кг):",
+        "hints": [],
+        "solution": "−20 Дж < 0 Дж < 10 Дж < 30 Дж.",
+        "options": [
+          "Подъём на 2 м",
+          "Горизонтальное перемещение на 5 м",
+          "Спуск на 1 м",
+          "Спуск на 3 м"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Работа равна нулю, если сила ___ перемещению.",
+        "hints": [],
+        "solution": "$\\cos 90° = 0$.",
+        "accepted": ["перпендикулярна"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [6, 10, 12]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "mc",
+          "kind": "choice",
+          "values": [4, 6, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * (m * h + mc * h / 2)",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из колодца глубиной {{h}} м равномерно поднимают ведро с водой массой {{m}} кг на цепи массой {{mc}} кг (длина цепи равна глубине). Найдите работу ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Работа по подъёму ведра $mgh$; центр масс цепи поднимается на $h/2$, работа $m_ц g h/2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * l / 2",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую работу нужно совершить, чтобы поставить вертикально лежащий на земле однородный столб массой {{m}} кг и длиной {{l}} м ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "Центр масс поднимается на $l/2$: $A = mg\\,l/2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [3, 6, 12]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * v * 10 * h / (n * 1000) / 60",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Насос мощностью {{n}} кВт наполняет бак объёмом {{v}} м³ водой, поднимая её на высоту {{h}} м. За сколько минут наполнится бак ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$A = \\rho V g h$, $t = A/N$; делим на 60."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "s * 1.25"],
+        "y": [0, "f * 1.25"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["s", "f"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "s, м",
+          "y": "F, Н"
+        }
+      },
+      "answer": "f * s / 2",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила изменяется линейно от 0 до {{f}} Н на пути {{s}} м (см. рисунок), направлена вдоль перемещения. Найдите работу.",
+        "hints": [],
+        "solution": "Работа — площадь треугольника под графиком: $\\dfrac{1}{2} F s$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        },
+        {
+          "name": "fr",
+          "kind": "choice",
+          "values": [400, 500, 800]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m * 1000 * 10 * d / 100 + fr) * v / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль массой {{m}} т едет в гору с уклоном: на каждые 100 м пути подъём {{d}} м. Скорость {{v}} м/с постоянна, сила сопротивления {{fr}} Н. Найдите мощность двигателя в кВт ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Сила тяги уравновешивает «скатывающую» составляющую $mg \\cdot \\dfrac{d}{100}$ и сопротивление; $N = Fv$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [1.8, 3.6, 9]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [360, 540, 720]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1000000 / (v / 3.6) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность двигателя самолёта {{n}} МВт при скорости {{v}} км/ч. Найдите силу тяги в кН.",
+        "hints": [],
+        "solution": "$F = \\dfrac{N}{v}$, скорость в м/с."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два крана подняли одинаковые грузы на одну высоту. Первый — за 30 с, второй — за 1 мин. Что верно?",
+        "hints": [],
+        "solution": "Работа зависит от $mgh$, мощность — от времени.",
+        "options": [
+          "Работы равны, мощность первого вдвое больше",
+          "Работа первого вдвое больше",
+          "Мощности равны",
+          "Работа второго вдвое больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [4, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / l",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг втаскивают равномерно по наклонной плоскости высотой {{h}} м и длиной {{l}} м без трения. Найдите силу тяги вдоль плоскости ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Без трения работа силы тяги равна $mgh$: $Fl = mgh$, $F = mg\\dfrac{h}{l}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / 100 * n / t",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мальчик массой {{m}} кг подтянулся {{n}} раз, поднимаясь каждый раз на {{h}} см, за {{t}} с. Найдите среднюю мощность ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Работа за одно подтягивание $mgh$; всего $n$ раз; $N = A/t$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз поднимают равномерно двумя способами: краном быстро и лебёдкой медленно на ту же высоту. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "При равномерном подъёме сила равна $mg$, работа $mgh$, а мощность — $A/t$.",
+        "options": [
+          "Работа одинакова",
+          "Мощность крана больше",
+          "Работа крана больше",
+          "Сила, поднимающая груз, в обоих случаях равна $mg$",
+          "Мощность лебёдки больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * v * 10 * h / 1000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "МВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Водопад высотой {{h}} м: каждую секунду падает {{v}} м³ воды. Найдите мощность потока воды в МВт ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Работа силы тяжести за 1 с $\\rho V g h$ — это и есть мощность."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [20, 50, 100]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 30, 50]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * m * 10 * h / (t * 60) / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подъёмник поднимает {{n}} ящиков по {{m}} кг на высоту {{h}} м за {{t}} мин. Найдите мощность в кВт ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$A = n\\,mgh$, $N = A/t$, время в секундах."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию мощность: (масса 50 кг, $g = 10$ Н/кг)",
+        "hints": [],
+        "solution": "150 Вт < 300 Вт < 750 Вт < 2250 Вт.",
+        "options": [
+          "Подняться на 3 м за 10 с",
+          "Подняться на 6 м за 10 с",
+          "Подняться на 3 м за 2 с",
+          "Подняться на 9 м за 2 с"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между ситуацией и знаком работы силы тяжести.",
+        "hints": [],
+        "solution": "Работа силы тяжести $-mg\\Delta h$.",
+        "options": [
+          "Мяч летит вверх",
+          "Мяч падает вниз",
+          "Шар катится по горизонтали",
+          "Спутник на круговой орбите"
+        ],
+        "matches": ["Отрицательна", "Положительна", "Равна нулю", "Равна нулю (сила ⟂ скорости)"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m * g * v",
+      "variables": ["m", "g", "v"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите мощность $n$ двигателя, который равномерно поднимает груз массой $m$ со скоростью $v$ (ускорение свободного падения $g$).",
+        "hints": [],
+        "solution": "Сила тяги $F = mg$, $N = Fv = mgv$."
+      }
+    }
+  }
+]

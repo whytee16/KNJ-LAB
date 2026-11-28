@@ -1,0 +1,1665 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [0.5, 2, 3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * 10 * h",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите давление воды на глубине {{h}} м. Плотность воды 1000 кг/м³, $g = 10$ Н/кг. Атмосферное давление не учитывайте.",
+        "hints": [],
+        "solution": "$p = \\rho g h = 1000 \\cdot 10 \\cdot {{h}}$ Па."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 20, 30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "vessel",
+        "h": "h",
+        "labels": {
+          "h": "{{h}} см",
+          "liquid": "вода"
+        }
+      },
+      "answer": "1000 * 10 * h / 100",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление воды на дно сосуда (см. рисунок). Высота столба воды {{h}} см. Найдите давление, $g = 10$ Н/кг, плотность воды 1000 кг/м³.",
+        "hints": [],
+        "solution": "$h = {{h}}$ см $= {{h}}/100$ м; $p = \\rho g h$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 2.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "800 * 10 * h",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите давление керосина (800 кг/м³) на глубине {{h}} м, $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$p = \\rho g h = 800 \\cdot 10 \\cdot {{h}}$ Па."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [20, 50, 100, 150, 300]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000 / (1000 * 10)",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На какой глубине давление воды равно {{p}} кПа? $g = 10$ Н/кг, плотность воды 1000 кг/м³.",
+        "hints": [],
+        "solution": "$h = \\dfrac{p}{\\rho g} = \\dfrac{ {{p}} \\cdot 1000}{10\\,000}$ м."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "От чего зависит давление жидкости на дно сосуда?",
+        "hints": [],
+        "solution": "$p = \\rho g h$: площадь и форма сосуда в формулу не входят.",
+        "options": [
+          "От плотности жидкости и высоты её столба",
+          "От площади дна",
+          "От формы сосуда",
+          "Только от массы жидкости"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится давление воды при погружении на вдвое большую глубину?",
+        "hints": [],
+        "solution": "$p = \\rho g h$ пропорционально глубине.",
+        "options": [
+          "Увеличится в 2 раза",
+          "Не изменится",
+          "Увеличится в 4 раза",
+          "Уменьшится в 2 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление внутри жидкости на одной глубине одинаково по всем направлениям — это закон ___.",
+        "hints": [],
+        "solution": "Закон Паскаля: жидкости и газы передают давление по всем направлениям одинаково.",
+        "accepted": ["Паскаля"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сообщающиеся сосуды налита вода. Как расположены уровни воды?",
+        "hints": [],
+        "solution": "В сообщающихся сосудах однородная жидкость устанавливается на одном уровне.",
+        "options": [
+          "На одной высоте",
+          "Выше в широком сосуде",
+          "Выше в узком сосуде",
+          "Зависит от формы сосудов"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры сообщающихся сосудов.",
+        "hints": [],
+        "solution": "Сообщающиеся сосуды соединены между собой ниже уровня жидкости.",
+        "options": [
+          "Чайник и его носик",
+          "Шлюз",
+          "Водомерное стекло котла",
+          "Закрытая банка",
+          "Мензурка"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s2",
+          "expr": "s1 * k"
+        }
+      ],
+      "answer": "f1 * s2 / s1",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Малый поршень гидравлического пресса имеет площадь {{s1}} см², большой — {{s2}} см². На малый поршень действует сила {{f1}} Н. Какая сила действует на большой поршень?",
+        "hints": [],
+        "solution": "$\\dfrac{F_2}{F_1} = \\dfrac{S_2}{S_1}$, $F_2 = F_1 \\dfrac{S_2}{S_1}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "k2",
+          "expr": "k * k"
+        }
+      ],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой выигрыш в силе даёт гидравлический пресс, если площадь большого поршня в {{k}} раз больше площади малого?",
+        "hints": [],
+        "solution": "$F_2/F_1 = S_2/S_1 = {{k}}$.",
+        "options": ["В {{k}} раз", "В {{k2}} раз", "Выигрыша нет", "В 2 раза"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и формулой.",
+        "hints": [],
+        "solution": "Формулы давления и гидравлического пресса.",
+        "options": [
+          "Давление жидкости",
+          "Давление твёрдого тела",
+          "Сила на большом поршне пресса",
+          "Глубина по давлению"
+        ],
+        "matches": ["$\\rho g h$", "$F/S$", "$F_1 S_2 / S_1$", "$p/(\\rho g)$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 50, 100, 760]
+        }
+      ],
+      "constraints": [],
+      "answer": "13600 * 10 * h / 1000",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое давление создаёт столб ртути высотой {{h}} мм? Плотность ртути 13 600 кг/м³, $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$h = {{h}}$ мм $= {{h}}/1000$ м; $p = \\rho g h$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите жидкости по возрастанию давления столба одинаковой высоты.",
+        "hints": [],
+        "solution": "При одинаковой высоте давление пропорционально плотности.",
+        "options": [
+          "Бензин (710 кг/м³)",
+          "Керосин (800 кг/м³)",
+          "Вода (1000 кг/м³)",
+          "Ртуть (13 600 кг/м³)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему плотины делают шире у основания?",
+        "hints": [],
+        "solution": "$p = \\rho g h$ максимально у дна, туда приходится наибольшая нагрузка.",
+        "options": [
+          "Давление воды растёт с глубиной",
+          "Так красивее",
+          "Внизу вода холоднее",
+          "Чтобы уменьшить массу плотины"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "1030 * 9.8 * h / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Аквалангист погрузился в море на глубину {{h}} м. Плотность морской воды 1030 кг/м³, $g = 9{,}8$ Н/кг. Найдите давление воды в кПа (без учёта атмосферного).",
+        "hints": [],
+        "solution": "$p = \\rho g h$; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [800, 1000, 1260]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 25, 40]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "vessel",
+        "h": "h",
+        "labels": {
+          "h": "{{h}} см"
+        }
+      },
+      "answer": "r * 9.8 * h / 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сосуд (см. рисунок) налита жидкость плотностью {{r}} кг/м³. Высота столба {{h}} см. Найдите давление на дно ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$p = \\rho g h$, высоту переводим в метры."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [710, 800, 900, 1000]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "r * 10 * h / 100"
+        }
+      ],
+      "answer": "p / (10 * h / 100)",
+      "tolerance": {},
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление на дно сосуда {{p}} Па, высота столба жидкости {{h}} см. Найдите плотность жидкости ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$\\rho = \\dfrac{p}{gh}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [30, 40]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * 10 * h / 100 * a / 100 * b / 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Аквариум длиной {{a}} см и шириной {{b}} см заполнен водой до высоты {{h}} см. Найдите силу давления воды на дно ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$p = \\rho g h$, $S = ab$ (в м²), $F = pS$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [4, 5, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [20, 40, 100]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [200, 500, 1000]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s2",
+          "expr": "s1 * k"
+        }
+      ],
+      "answer": "m * 10 * s1 / s2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Площадь малого поршня пресса {{s1}} см², большого — {{s2}} см². Какую силу надо приложить к малому поршню, чтобы поднять груз массой {{m}} кг на большом ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$F_2 = mg$, $F_1 = F_2 \\dfrac{S_1}{S_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "hm",
+          "kind": "choice",
+          "values": [10, 20, 30, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.9 * hm",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сообщающихся сосудах вода и масло (900 кг/м³) не смешиваются. Высота столба масла над границей раздела {{hm}} см. Найдите высоту столба воды над этой границей.",
+        "hints": [],
+        "solution": "На уровне границы раздела давления равны: $\\rho_м h_м = \\rho_в h_в$, $h_в = 0{,}9\\,h_м$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В три сосуда разной формы с одинаковой площадью дна налита вода до одного уровня. Где давление на дно больше?",
+        "hints": [],
+        "solution": "Давление зависит только от высоты столба и плотности — это гидростатический парадокс.",
+        "options": ["Везде одинаковое", "В самом широком", "В самом узком", "Где больше воды"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h1",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s2",
+          "expr": "s1 * k"
+        }
+      ],
+      "answer": "h1 * s1 / s2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На какую высоту поднимется большой поршень пресса, если малый опустился на {{h1}} см? Площади поршней {{s1}} см² и {{s2}} см².",
+        "hints": [],
+        "solution": "Объём жидкости сохраняется: $S_1 h_1 = S_2 h_2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о давлении жидкости.",
+        "hints": [],
+        "solution": "Это следует из закона Паскаля и формулы $p = \\rho g h$.",
+        "options": [
+          "Давление растёт с глубиной",
+          "На одной глубине давление одинаково по всем направлениям",
+          "Давление на дно не зависит от формы сосуда",
+          "Давление на дно зависит от площади дна",
+          "Давление жидкости одинаково на любой глубине"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1.5, 2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * 9.8 * h",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите разность давлений воды на дно и на поверхность бассейна глубиной {{h}} м ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "Разность давлений равна давлению столба воды: $\\rho g h$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Устройство для подъёма тяжёлых грузов с помощью жидкости и двух поршней разной площади называется гидравлическим ___.",
+        "hints": [],
+        "solution": "Гидравлический пресс (домкрат) даёт выигрыш в силе $S_2/S_1$.",
+        "accepted": ["прессом", "пресс", "домкратом"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 2.5, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "800 * 9.8 * h / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Высота уровня нефти в цистерне {{h}} м. Найдите давление на дно в кПа (плотность нефти 800 кг/м³, $g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$p = \\rho g h$, делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при погружении на большую глубину водолазы надевают жёсткие скафандры?",
+        "hints": [],
+        "solution": "Давление растёт на $\\rho g \\cdot 10\\ \\text{м} \\approx 100$ кПа каждые 10 м.",
+        "options": [
+          "На большой глубине очень велико давление воды",
+          "Чтобы было теплее",
+          "Чтобы легче было плыть",
+          "Чтобы не всплыть"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги расчёта силы давления воды на дно аквариума.",
+        "hints": [],
+        "solution": "Сила давления — произведение давления на площадь.",
+        "options": [
+          "Перевести высоту и размеры дна в метры",
+          "Найти давление $p = \\rho g h$",
+          "Найти площадь дна $S$",
+          "Найти силу $F = pS$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "p / (d * g)",
+      "variables": ["p", "d", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите глубину $h$ из формулы давления $p = d g h$ ($d$ — плотность жидкости).",
+        "hints": [],
+        "solution": "$h = \\dfrac{p}{\\rho g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "hk",
+          "kind": "choice",
+          "values": [10, 15, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "hk - 0.8 * hk",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В U-образную трубку налили воду, затем в одно колено — керосин (800 кг/м³) высотой {{hk}} см. На сколько сантиметров уровень керосина выше уровня воды в другом колене?",
+        "hints": [],
+        "solution": "Над границей раздела: $\\rho_к h_к = \\rho_в h_в$, $h_в = 0{,}8\\,h_к$. Разница уровней $h_к - h_в$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "hw",
+          "kind": "choice",
+          "values": [13.6, 27.2, 40.8, 68]
+        }
+      ],
+      "constraints": [],
+      "answer": "hw * 10 / 13.6 / 2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сообщающихся сосудах ртуть (13 600 кг/м³). В одно колено налили воду высотой {{hw}} см. На сколько миллиметров поднимется ртуть в другом колене относительно её первоначального уровня? Сечения колен одинаковы.",
+        "hints": [],
+        "solution": "Разность уровней ртути $\\Delta h = \\dfrac{\\rho_в h_в}{\\rho_{рт}}$; в одном колене ртуть опустится, в другом поднимется на $\\Delta h/2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "vessel",
+        "h": "h",
+        "labels": {
+          "h": "{{h}} см",
+          "liquid": "вода"
+        }
+      },
+      "answer": "1000 * 10 * d / 100",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сосуд с водой (см. рисунок) имеет высоту столба {{h}} см. На стенку сосуда на глубине {{d}} см действует давление. Найдите это давление ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Давление на глубине $d$: $p = \\rho g d$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 20, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * 9.8 * h / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Плотину высотой {{h}} м заполняют водой доверху. Найдите давление у основания плотины в кПа ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$p = \\rho g h$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [800, 1000, 1200]
+        },
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [200, 400]
+        }
+      ],
+      "constraints": [],
+      "answer": "9.8 * m * s1 / s2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Гидравлический домкрат поднимает автомобиль массой {{m}} кг. Площадь большого поршня {{s2}} см², малого — {{s1}} см². Какую силу прикладывают к малому поршню ($g = 9{,}8$ Н/кг)?",
+        "hints": [],
+        "solution": "$F_1 = mg \\dfrac{S_1}{S_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "f2",
+          "kind": "choice",
+          "values": [1000, 2000, 5000]
+        }
+      ],
+      "constraints": [],
+      "answer": "f2 / (s2 / 10000) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На большой поршень пресса площадью {{s2}} см² положили груз {{f2}} Н. Малый поршень площадью {{s1}} см² удерживают в равновесии. Найдите давление в жидкости в кПа.",
+        "hints": [],
+        "solution": "$p = \\dfrac{F_2}{S_2}$ (площадь в м²); по закону Паскаля оно одинаково в жидкости."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сосуд в форме конуса, расширяющегося вниз, налит водой. Сравните силу давления воды на дно с весом воды.",
+        "hints": [],
+        "solution": "Сила давления $\\rho g h S_{дна}$ — это вес цилиндра воды высотой $h$ над дном; он больше объёма конуса, сужающегося вверх.",
+        "options": [
+          "Сила давления на дно больше веса воды",
+          "Равна весу воды",
+          "Меньше веса воды",
+          "Равна нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * 10 * h * s / 10000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите силу давления воды на пробку площадью {{s}} см², закрывающую отверстие на глубине {{h}} м ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$F = \\rho g h S$, площадь в м²."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Гидравлический пресс даёт выигрыш в силе {{k}} раз. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Давление одинаково (закон Паскаля), выигрыш в силе сопровождается проигрышем в перемещении.",
+        "options": [
+          "Площадь большого поршня в {{k}} раз больше площади малого",
+          "Большой поршень перемещается в {{k}} раз меньше малого",
+          "Давление под поршнями одинаково",
+          "Пресс даёт выигрыш и в силе, и в перемещении",
+          "Давление под большим поршнем в {{k}} раз больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * 10 * h * k / 100",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вода в стакане имеет высоту {{h}} см. Воду перелили в узкий цилиндрический сосуд с площадью дна в {{k}} раза меньше. Каким стало давление на дно ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "Объём сохраняется: высота стала в {{k}} раза больше; $p = \\rho g h k$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между устройством и принципом его действия.",
+        "hints": [],
+        "solution": "Все эти устройства основаны на свойствах жидкостей передавать давление.",
+        "options": ["Гидравлический пресс", "Шлюз", "Водомерное стекло", "Фонтан"],
+        "matches": [
+          "Закон Паскаля, $F_2/F_1 = S_2/S_1$",
+          "Сообщающиеся сосуды, выравнивание уровней",
+          "Уровень в трубке равен уровню в котле",
+          "Вода стремится к уровню источника"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h1",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "h2",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * (1000 * h1 + 900 * h2) / 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сосуд налиты вода высотой {{h1}} см и поверх неё масло (900 кг/м³) высотой {{h2}} см. Найдите давление на дно сосуда ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Давления слоёв складываются: $p = g(\\rho_в h_1 + \\rho_м h_2)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится давление на дно ведра, если в него опустить руку, не касаясь дна (вода не переливается)?",
+        "hints": [],
+        "solution": "Уровень воды поднимется, значит, $h$ и $p = \\rho g h$ вырастут.",
+        "options": [
+          "Увеличится: поднимется уровень воды",
+          "Не изменится",
+          "Уменьшится",
+          "Станет равным атмосферному"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию давление на дно сосудов (жидкость, высота столба):",
+        "hints": [],
+        "solution": "Сравниваем $\\rho h$ (кг/м³ · м): вода 10 см — 100, бензин 20 см — 142, вода 20 см — 200, ртуть 2 см — 272.",
+        "options": [
+          "Вода, 10 см",
+          "Бензин (710 кг/м³), 20 см",
+          "Вода, 20 см",
+          "Ртуть (13 600 кг/м³), 2 см"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.3, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "1030 * 9.8 * h * s / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Подводная лодка находится на глубине {{h}} м. Площадь люка {{s}} м². С какой силой вода давит на люк (в кН, $g = 9{,}8$ Н/кг, плотность морской воды 1030 кг/м³)?",
+        "hints": [],
+        "solution": "$F = \\rho g h S$, делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "hm",
+          "kind": "choice",
+          "values": [8, 16, 24, 32]
+        }
+      ],
+      "constraints": [],
+      "answer": "hm * 900 / 800",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В U-образную трубку с водой в одно колено налили масло (900 кг/м³), в другое — керосин (800 кг/м³). Высота столба масла {{hm}} см. Какой высоты должен быть столб керосина, чтобы уровни воды в коленах совпали?",
+        "hints": [],
+        "solution": "Уровни воды равны, если давления добавленных столбов равны: $\\rho_м h_м = \\rho_к h_к$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [14.6, 29.2, 43.8]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * 2 * 1000 * (h / 100) * 13600 / (13600 + 1000)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В цилиндрический сосуд налили равные массы воды и ртути (13 600 кг/м³). Общая высота жидкостей {{h}} см. Найдите давление на дно ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Равные массы: $\\rho_в h_в = \\rho_р h_р$, $h_в + h_р = h$. Давление $p = g(\\rho_в h_в + \\rho_р h_р) = 2g\\rho_в h_в$, $h_в = h\\dfrac{\\rho_р}{\\rho_р + \\rho_в}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "h2",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "ceil(h2 * s2 / (h1 * s1))",
+      "tolerance": {},
+      "unit": "ход(ов)"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Малый поршень пресса за один ход опускается на {{h1}} см под силой {{f1}} Н. Площади поршней {{s1}} и {{s2}} см². Сколько ходов нужно, чтобы поднять большой поршень на {{h2}} см?",
+        "hints": [],
+        "solution": "За ход большой поршень поднимается на $h_1 \\dfrac{S_1}{S_2}$; число ходов — $\\dfrac{h_2 S_2}{h_1 S_1}$, округляем вверх."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [20, 30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * 10 * (a / 100) / 2 * (a / 100)^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Аквариум в форме куба с ребром {{a}} см доверху заполнен водой. Найдите силу давления воды на одну боковую стенку ($g = 10$ Н/кг).",
+        "hints": ["Используйте среднее давление на стенку."],
+        "solution": "Давление на стенку растёт от 0 до $\\rho g a$ линейно, среднее $\\rho g a/2$; $F = \\dfrac{\\rho g a}{2} \\cdot a^2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сообщающихся сосудах разного сечения вода. В широкий сосуд опустили деревянный брусок, он плавает. Что произойдёт с уровнями?",
+        "hints": [],
+        "solution": "Брусок вытесняет воду; уровни в сообщающихся сосудах остаются одинаковыми и поднимаются вместе.",
+        "options": [
+          "Оба уровня поднимутся одинаково",
+          "Поднимется только уровень в широком сосуде",
+          "Уровни не изменятся",
+          "Поднимется только уровень в узком"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s2",
+          "kind": "choice",
+          "values": [200, 500, 1000]
+        },
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * s2 / s1",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Площадь большого поршня пресса {{s2}} см². Когда на малый поршень площадью {{s1}} см² положили гирю {{m}} кг, большой поршень с грузом остался в равновесии. Найдите массу груза на большом поршне (массы поршней не учитывайте).",
+        "hints": [],
+        "solution": "Давление одинаково: $\\dfrac{m g}{S_1} = \\dfrac{M g}{S_2}$, $M = m\\dfrac{S_2}{S_1}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "vessel",
+        "h": "h",
+        "labels": {
+          "h": "{{h}} м",
+          "liquid": "нефть"
+        }
+      },
+      "answer": "800 * 9.8 * h * s / 10000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Высота столба нефти в баке (см. рисунок) {{h}} м, плотность нефти 800 кг/м³. На дне есть кран площадью {{s}} см². С какой силой нефть давит на кран ($g = 9{,}8$ Н/кг)?",
+        "hints": [],
+        "solution": "$F = \\rho g h S$, площадь в м²."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "hw",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        },
+        {
+          "name": "hk",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "abs(1000 * hw - 800 * hk) / 13600 * 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В U-образную трубку с ртутью в левое колено налили воду высотой {{hw}} см, в правое — керосин (800 кг/м³) высотой {{hk}} см. Найдите разность уровней ртути в миллиметрах.",
+        "hints": [],
+        "solution": "Разность давлений столбов $|\\rho_в h_в - \\rho_к h_к| g$ уравновешивается ртутью: $\\Delta h = \\dfrac{|\\rho_в h_в - \\rho_к h_к|}{\\rho_р}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о сообщающихся сосудах с разными жидкостями.",
+        "hints": [],
+        "solution": "$\\rho_1 h_1 = \\rho_2 h_2$ на уровне границы раздела.",
+        "options": [
+          "Уровень более лёгкой жидкости выше",
+          "Высоты столбов над границей раздела обратно пропорциональны плотностям",
+          "Уровни всегда одинаковы",
+          "На уровне границы раздела давления в коленах равны",
+          "Тяжёлая жидкость стоит выше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "1030 * 9.8 * h * 1000 / 1000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "МПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Батискаф опустился на глубину {{h}} км. Найдите давление морской воды (1030 кг/м³) в МПа ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$p = \\rho g h$, глубина в метрах; делим на $10^6$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [8, 10]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "900 * 10 * d / 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В стакан с водой высотой {{h}} см налили сверху масло (900 кг/м³) слоем {{d}} см. На сколько паскалей увеличилось давление на дно ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "Добавился столб масла: $\\Delta p = \\rho_м g d$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сосуд с водой стоит на весах. В воду опустили на нити металлический шарик (не касаясь дна). Как изменятся показания весов?",
+        "hints": [],
+        "solution": "Уровень воды поднялся, давление и сила давления на дно выросли (вода действует на шарик силой Архимеда, шарик на воду — равной силой вниз).",
+        "options": ["Увеличатся", "Не изменятся", "Уменьшатся", "Станут равными весу шарика"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f2",
+          "kind": "choice",
+          "values": [10, 40, 90]
+        },
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [100, 250]
+        },
+        {
+          "name": "d1",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "d1 * sqrt(f2 * 1000 / f1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пресс должен развивать силу {{f2}} кН при силе на малом поршне не более {{f1}} Н. Диаметр малого поршня {{d1}} см. Каким должен быть наименьший диаметр большого поршня?",
+        "hints": [],
+        "solution": "$\\dfrac{F_2}{F_1} = \\dfrac{S_2}{S_1} = \\dfrac{d_2^2}{d_1^2}$, $d_2 = d_1\\sqrt{F_2/F_1}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи о сообщающихся сосудах с двумя жидкостями.",
+        "hints": [],
+        "solution": "Ниже границы раздела в обоих коленах одна и та же жидкость, поэтому давления на её уровне равны.",
+        "options": [
+          "Отметить уровень границы раздела жидкостей",
+          "Записать давления столбов над этим уровнем в обоих коленах",
+          "Приравнять давления",
+          "Выразить искомую высоту"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * b / s",
+      "variables": ["a", "b", "s"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите силу $f$ на большом поршне пресса через силу $a$ на малом поршне и площади поршней $s$ (малого) и $b$ (большого).",
+        "hints": [],
+        "solution": "$F_2 = F_1 \\dfrac{S_2}{S_1}$."
+      }
+    }
+  }
+]

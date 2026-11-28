@@ -1,7 +1,7 @@
 {
   "subject": "physics",
   "grade": 7,
-  "note": "Раскладка тем банка по четвертям, утверждена владельцем 28.11.2026. Уже стоящие в КТП темы не переносятся.",
+  "note": "Раскладка тем банка по четвертям, утверждена владельцем 28.11.2026 (Ф7.1–Ф7.12). Уже стоящие в КТП темы не переносятся.",
   "sections": [
     {
       "quarter": 1,
@@ -16,7 +16,12 @@
     {
       "quarter": 3,
       "title": "Давление",
-      "topics": ["solid-pressure"]
+      "topics": ["solid-pressure", "liquid-pressure", "atmospheric-pressure", "archimedes-force"]
+    },
+    {
+      "quarter": 4,
+      "title": "Работа, мощность, энергия",
+      "topics": ["work-power"]
     }
   ]
 }
