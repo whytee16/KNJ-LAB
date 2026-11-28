@@ -1,0 +1,1644 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "340 * m",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое количество теплоты нужно, чтобы расплавить {{m}} кг льда при 0 °C? Удельная теплота плавления льда 340 кдж/кг.",
+        "hints": [],
+        "solution": "$Q = \\lambda m = 340 \\cdot {{m}}$ кДж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 1, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "340 * m",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты выделится при кристаллизации {{m}} кг воды при 0 °C? Удельная теплота плавления льда 340 кдж/кг.",
+        "hints": [],
+        "solution": "При кристаллизации выделяется столько же, сколько поглощается при плавлении: $Q = \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что происходит с температурой льда во время плавления при нормальном давлении?",
+        "hints": [],
+        "solution": "Энергия идёт на разрушение кристаллической решётки.",
+        "options": ["Остаётся 0 °C, пока весь лёд не растает", "Растёт", "Падает", "Скачет"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Переход вещества из твёрдого состояния в жидкое называется ___.",
+        "hints": [],
+        "solution": "Обратный процесс — кристаллизация (отвердевание).",
+        "accepted": ["плавлением", "плавление"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что показывает удельная теплота плавления?",
+        "hints": [],
+        "solution": "Единица — Дж/кг.",
+        "options": [
+          "Сколько теплоты нужно, чтобы расплавить 1 кг вещества при температуре плавления",
+          "Температуру плавления",
+          "Сколько теплоты нужно, чтобы нагреть 1 кг на 1 °C",
+          "Скорость плавления"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между веществом и температурой плавления (по таблице).",
+        "hints": [],
+        "solution": "Табличные значения.",
+        "options": ["Лёд", "Олово", "Свинец", "Алюминий"],
+        "matches": ["0 °C", "232 °C", "327 °C", "660 °C"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "lam",
+          "kind": "choice",
+          "values": [25, 59, 340]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "lam * m"
+        }
+      ],
+      "answer": "q / m",
+      "tolerance": {},
+      "unit": "кДж/кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Для плавления {{m}} кг вещества при температуре плавления потребовалось {{q}} кДж. Найдите удельную теплоту плавления в кДж/кг.",
+        "hints": [],
+        "solution": "$\\lambda = \\dfrac{Q}{m}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о кристаллизации.",
+        "hints": [],
+        "solution": "Кристаллизация — процесс, обратный плавлению.",
+        "options": [
+          "Это переход из жидкого состояния в твёрдое",
+          "При кристаллизации выделяется теплота",
+          "Температура кристаллизации равна температуре плавления",
+          "При кристаллизации тело поглощает теплоту",
+          "Температура при кристаллизации растёт"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Можно ли расплавить олово в алюминиевой ложке?",
+        "hints": [],
+        "solution": "Температура плавления алюминия выше.",
+        "options": [
+          "Да: олово плавится при 232 °C, алюминий — при 660 °C",
+          "Нет, ложка расплавится раньше",
+          "Нет, олово не плавится",
+          "Только в вакууме"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите вещества по возрастанию температуры плавления.",
+        "hints": [],
+        "solution": "0 < 232 < 327 < 1085 °C.",
+        "options": ["Лёд", "Олово", "Свинец", "Медь"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "25 * m",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удельная теплота плавления свинца 25 кДж/кг. Сколько теплоты нужно, чтобы расплавить {{m}} кг свинца при 327 °C?",
+        "hints": [],
+        "solution": "$Q = \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [-20, -10]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "c2",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "t3",
+          "kind": "choice",
+          "values": [20, 30]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "a + b + c2 + 2"],
+        "y": ["t0 - 5", "t3 + 10"],
+        "lines": [
+          {
+            "points": [
+              [0, "t0"],
+              ["a", 0],
+              ["a + b", 0],
+              ["a + b + c2", "t3"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "τ, мин",
+          "y": "t, °C"
+        }
+      },
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику нагревания льда (см. рисунок): что происходит на горизонтальном участке?",
+        "hints": [],
+        "solution": "Горизонтальный участок при 0 °C — плавление.",
+        "options": [
+          "Лёд плавится, температура не меняется",
+          "Лёд нагревается",
+          "Вода нагревается",
+          "Вода кипит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Переход вещества из жидкого состояния в твёрдое называется ___ или отвердеванием.",
+        "hints": [],
+        "solution": "При этом выделяется теплота.",
+        "accepted": ["кристаллизацией", "кристаллизация"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему лёд на реке тает медленно, даже когда тепло?",
+        "hints": [],
+        "solution": "У льда большая удельная теплота плавления — 340 кДж/кг.",
+        "options": [
+          "Для плавления льда нужно много теплоты",
+          "Лёд не проводит тепло",
+          "Река холодная",
+          "Лёд не может растаять"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [25, 59, 210, 340]
+        }
+      ],
+      "constraints": [],
+      "answer": "l * 1000",
+      "tolerance": {},
+      "unit": "Дж/кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите удельную теплоту плавления {{l}} кДж/кг в Дж/кг.",
+        "hints": [],
+        "solution": "1 кДж = 1000 Дж."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [-5, -10, -20]
+        }
+      ],
+      "constraints": [],
+      "answer": "2.1 * m * (-t0) + 340 * m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты нужно, чтобы лёд массой {{m}} кг, взятый при {{t0}} °C, нагреть до 0 °C и расплавить? $c_л = 2,1$ кДж/(кг·°C), удельная теплота плавления льда 340 кДж/кг.",
+        "hints": [],
+        "solution": "$Q = c_л m (0 - t_0) + \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "340 * m + 4.2 * m * t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты нужно, чтобы {{m}} кг льда при 0 °C превратить в воду при {{t}} °C? Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "Плавление и нагрев воды: $\\lambda m + c_в m t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * m * t + 340 * m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты выделится, если {{m}} кг воды при {{t}} °C охладить до 0 °C и превратить в лёд? Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = c_в m t + \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "340 * m"
+        }
+      ],
+      "answer": "q / 340",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую массу льда при 0 °C можно расплавить, сообщив {{q}} кДж? Удельная теплота плавления льда 340 кдж/кг.",
+        "hints": [],
+        "solution": "$m = \\dfrac{Q}{\\lambda}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [-20, -10]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "c2",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "t3",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [34, 68]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "a + b + c2 + 2"],
+        "y": ["t0 - 5", "t3 + 10"],
+        "lines": [
+          {
+            "points": [
+              [0, "t0"],
+              ["a", 0],
+              ["a + b", 0],
+              ["a + b + c2", "t3"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "τ, мин",
+          "y": "t, °C"
+        }
+      },
+      "answer": "p * b / 340",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику (см. рисунок) плавление льда длилось {{b}} мин, нагреватель отдаёт льду {{p}} кДж в минуту. Найдите массу льда. Удельная теплота плавления льда 340 кдж/кг.",
+        "hints": [],
+        "solution": "За время плавления лёд получил $Pt = \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему в морозы бочки с водой ставят в погреб?",
+        "hints": [],
+        "solution": "При кристаллизации выделяется $\\lambda m$.",
+        "options": [
+          "Вода, замерзая, выделяет теплоту и не даёт температуре в погребе сильно упасть",
+          "Вода нагревает погреб, потому что она горячая",
+          "Лёд согревает воздух",
+          "Чтобы вода не испарилась"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [27, 127]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.14 * m * (327 - t0) + 25 * m",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько теплоты нужно, чтобы расплавить {{m}} кг свинца, взятого при {{t0}} °C? $c = 0,14$ кДж/(кг·°C), $t_{пл} = 327$ °C, $\\lambda = 25$ кДж/кг.",
+        "hints": [],
+        "solution": "Нагреть до 327 °C, затем расплавить."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о плавлении кристаллических тел.",
+        "hints": [],
+        "solution": "Внутренняя энергия при плавлении растёт.",
+        "options": [
+          "Плавление идёт при постоянной температуре",
+          "На плавление нужна энергия",
+          "Каждое вещество имеет свою температуру плавления",
+          "Аморфные тела имеют точную температуру плавления",
+          "При плавлении внутренняя энергия не меняется"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тела, у которых нет определённой температуры плавления (стекло, воск, смола), называют ___.",
+        "hints": [],
+        "solution": "Они размягчаются постепенно.",
+        "accepted": ["аморфными", "аморфные"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "390 * m / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удельная теплота плавления алюминия 390 кДж/кг. Сколько теплоты нужно, чтобы расплавить {{m}} кг алюминия при температуре плавления (в МДж)?",
+        "hints": [],
+        "solution": "$Q = \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Внутренняя энергия 1 кг воды при 0 °C больше или меньше внутренней энергии 1 кг льда при 0 °C?",
+        "hints": [],
+        "solution": "Чтобы растопить лёд, нужно сообщить $\\lambda m$.",
+        "options": ["Больше на 340 кДж", "Меньше на 340 кДж", "Одинакова", "Больше на 4,2 кДж"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите участки графика нагревания льда от −20 °C до 50 °C по порядку.",
+        "hints": [],
+        "solution": "Последовательность процессов.",
+        "options": [
+          "Нагревание льда до 0 °C",
+          "Плавление льда при 0 °C",
+          "Нагревание воды от 0 °C",
+          "Вода при 50 °C"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между процессом и формулой количества теплоты.",
+        "hints": [],
+        "solution": "Знак показывает, получено или отдано.",
+        "options": ["Нагревание", "Плавление", "Кристаллизация", "Охлаждение"],
+        "matches": ["$cm\\Delta t > 0$", "$+\\lambda m$", "$-\\lambda m$", "$cm\\Delta t < 0$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "210 * m",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медь массой {{m}} кг при температуре плавления (1085 °C) кристаллизуется. Сколько теплоты выделится? $\\lambda = 210$ кДж/кг.",
+        "hints": [],
+        "solution": "$Q = \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m * (2.1 * x + 340)",
+      "variables": ["m", "x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите количество теплоты $q$ для нагревания льда массой $m$ от температуры $-x$ до 0 °C и его плавления, если $c_л = 2,1$ и $\\lambda = 340$ (кДж).",
+        "hints": [],
+        "solution": "$Q = c_л m x + \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "(4.2 * mw * t - 340 * mi) / (4.2 * (mw + mi))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В {{mw}} кг воды при {{t}} °C бросили {{mi}} кг льда при 0 °C. Весь лёд растаял. Найдите конечную температуру. Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "$c m_в (t - \\theta) = \\lambda m_л + c m_л \\theta$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 40, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * mw * t / 340",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая наибольшая масса льда при 0 °C может растаять в {{mw}} кг воды при {{t}} °C? Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "Вода остывает до 0 °C: $c m_в t = \\lambda m_л$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [500, 1000]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "tm",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "340000 * m / (p * tm * 60) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель мощностью {{p}} Вт расплавил лёд массой {{m}} кг при 0 °C за {{tm}} мин. Найдите КПД нагревателя. Удельная теплота плавления льда 340 кдж/кг.",
+        "hints": [],
+        "solution": "$\\eta = \\dfrac{\\lambda m}{Pt}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В воду при 0 °C опустили лёд при 0 °C в теплоизолированном сосуде. Что произойдёт?",
+        "hints": [],
+        "solution": "Температуры равны — теплообмена нет.",
+        "options": [
+          "Ничего не изменится: теплообмена нет",
+          "Лёд растает",
+          "Вода замёрзнет",
+          "Температура поднимется"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [22, 32]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.23 * m * (232 - t0) + 59 * m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Олово массой {{m}} кг при {{t0}} °C нагрели и расплавили. Сколько нужно теплоты? $c = 0,23$ кДж/(кг·°C), $t_{пл} = 232$ °C, $\\lambda = 59$ кДж/кг.",
+        "hints": [],
+        "solution": "Нагрев до 232 °C и плавление."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лёд при −10 °C нагревают до получения воды при 20 °C. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "$\\lambda = 340$ кДж/кг > $c_в \\cdot 20 = 84$ кДж/кг.",
+        "options": [
+          "Сначала лёд нагревается до 0 °C",
+          "Во время плавления температура 0 °C",
+          "Плавление требует больше теплоты, чем нагрев воды на 20 °C (той же массы)",
+          "Лёд начинает плавиться при −10 °C",
+          "Во время плавления температура растёт"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "340 * mi / (4.2 * 100)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько кипятка (100 °C) нужно влить в сосуд с {{mi}} кг льда при 0 °C, чтобы весь лёд растаял и получилась вода при 0 °C? Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "$c m_к \\cdot 100 = \\lambda m_л$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между участком графика нагревания льда и формулой теплоты.",
+        "hints": [],
+        "solution": "Количества теплоты складываются.",
+        "options": ["Лёд −20 → 0 °C", "Плавление", "Вода 0 → 100 °C", "Весь процесс"],
+        "matches": [
+          "$c_л m \\cdot 20$",
+          "$\\lambda m$",
+          "$c_в m \\cdot 100$",
+          "$c_л m \\cdot 20 + \\lambda m + c_в m \\cdot 100$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему сосульки чаще образуются в солнечные морозные дни?",
+        "hints": [],
+        "solution": "Плавление на солнце, кристаллизация в тени.",
+        "options": [
+          "Снег на крыше тает на солнце, вода стекает и замерзает в тени при морозе",
+          "Солнце замораживает воду",
+          "Мороз сильнее днём",
+          "Сосульки растут ночью"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [50, 70]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * mw * (t - th) / (340 + 4.2 * th)",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В калориметре {{mw}} кг воды при {{t}} °C. Сколько льда при 0 °C надо бросить, чтобы установилась температура {{th}} °C? Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "$c m_в (t - \\theta) = m_л (\\lambda + c\\theta)$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию количество теплоты:",
+        "hints": [],
+        "solution": "42 кДж < 210 кДж < 336 кДж < 340 кДж.",
+        "options": [
+          "Нагреть 1 кг воды на 10 °C",
+          "Нагреть 1 кг воды на 50 °C",
+          "Нагреть 1 кг воды на 80 °C",
+          "Расплавить 1 кг льда"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "При кристаллизации внутренняя энергия вещества ___.",
+        "hints": [],
+        "solution": "Вещество отдаёт теплоту.",
+        "accepted": ["уменьшается"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [17, 34, 68]
+        }
+      ],
+      "constraints": [],
+      "answer": "340 * m / q",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько времени будет таять {{m}} кг льда при 0 °C, если в минуту он получает {{q}} кДж? Удельная теплота плавления льда 340 кдж/кг.",
+        "hints": [],
+        "solution": "$t = \\dfrac{\\lambda m}{q}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при закалке металла его опускают в воду?",
+        "hints": [],
+        "solution": "Быстрое охлаждение меняет структуру металла.",
+        "options": [
+          "Металл быстро отдаёт теплоту воде и быстро остывает",
+          "Вода охлаждает медленно",
+          "Вода плавит металл",
+          "Для чистоты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "4.2 * a * x / 340",
+      "variables": ["a", "x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вода массой $a$ при температуре $x$ растапливает лёд при 0 °C, остывая до 0 °C. Запишите массу растаявшего льда ($c_в = 4,2$, $\\lambda = 340$ кДж).",
+        "hints": [],
+        "solution": "$c a x = \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [0.2, 0.5, 1]
+        }
+      ],
+      "constraints": ["abs(4.2 * mw * t - 340 * mi) > 5"],
+      "answer": "max(0, (4.2 * mw * t - 340 * mi) / (4.2 * (mw + mi)))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В {{mw}} кг воды при {{t}} °C бросили {{mi}} кг льда при 0 °C. Найдите конечную температуру (если лёд растает не весь, ответ 0). Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "Сначала проверьте, хватит ли теплоты воды ($c m_в t$) на плавление ($\\lambda m_л$). Если нет — установится 0 °C."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 40, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "min(mi, 4.2 * mw * t / 340)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько льда растает, если в {{mi}} кг льда при 0 °C влить {{mw}} кг воды при {{t}} °C? Если растает весь лёд, ответ — {{mi}}. Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C).",
+        "hints": [],
+        "solution": "Теплоты воды $c m_в t$ хватает на плавление $c m_в t / \\lambda$ льда."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [-10, -20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [20, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (2.1 * (-t0) + 340 + 4.2 * t)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лёд массой {{m}} кг при {{t0}} °C превратили в воду при {{t}} °C. Сколько теплоты потребовалось (в кДж)? $c_л = 2,1$, $c_в = 4,2$ кДж/(кг·°C), удельная теплота плавления льда 340 кДж/кг.",
+        "hints": [],
+        "solution": "Три этапа: нагрев льда, плавление, нагрев воды."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [27, 127]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(2 * (140 * (327 - t0) + 25000))",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля из свинца при {{t0}} °C ударяется о стальную плиту и полностью плавится. С какой наименьшей скоростью она должна лететь, если вся энергия идёт на её нагрев и плавление? $c = 140$ Дж/(кг·°C), $t_{пл} = 327$ °C, $\\lambda = 25\\,000$ Дж/кг.",
+        "hints": [],
+        "solution": "$\\dfrac{mv^2}{2} = cm(t_{пл} - t_0) + \\lambda m$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему переохлаждённая чистая вода может оставаться жидкой ниже 0 °C, а при встряхивании мгновенно замерзает?",
+        "hints": [],
+        "solution": "Пылинки и пузырьки — центры кристаллизации.",
+        "options": [
+          "Для начала кристаллизации нужны центры кристаллизации",
+          "При встряхивании вода охлаждается",
+          "Вода при встряхивании теряет массу",
+          "Это невозможно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        },
+        {
+          "name": "ti",
+          "kind": "choice",
+          "values": [-10, -20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(4.2 * mw * t - 2.1 * mi * (-ti) - 340 * mi) / (4.2 * (mw + mi))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В калориметр с {{mw}} кг воды при {{t}} °C положили {{mi}} кг льда при {{ti}} °C. Найдите конечную температуру, если весь лёд растаял. $c_л = 2,1$, $c_в = 4,2$ кДж/(кг·°C), удельная теплота плавления льда 340 кДж/кг.",
+        "hints": [],
+        "solution": "$c_в m_в (t - \\theta) = c_л m_л (0 - t_л) + \\lambda m_л + c_в m_л \\theta$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сосуде смесь воды и льда при 0 °C. Сосуд поставили в комнату при 20 °C. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Вся получаемая энергия идёт на плавление.",
+        "options": [
+          "Пока лёд не растает, температура смеси 0 °C",
+          "Смесь получает теплоту из комнаты",
+          "Масса льда уменьшается",
+          "Температура смеси сразу растёт",
+          "Лёд нарастает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [500, 1000]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t0",
+          "kind": "choice",
+          "values": [-10, -20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [16, 32]
+        }
+      ],
+      "constraints": [],
+      "answer": "(-t0) * t2 / t1",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель мощностью {{p}} Вт за {{t1}} мин нагрел лёд от {{t0}} до 0 °C, а затем расплавил его за {{t2}} мин. Найдите отношение $\\lambda / c_л$ (в °C).",
+        "hints": [],
+        "solution": "$P t_1 = c_л m (0 - t_0)$, $P t_2 = \\lambda m$; $\\dfrac{\\lambda}{c_л} = \\dfrac{t_2 \\cdot (0 - t_0)}{t_1}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию теплоту, нужную для превращения 1 кг вещества при 20 °C в жидкость при температуре плавления:",
+        "hints": [],
+        "solution": "Свинец ≈ 68 кДж < олово ≈ 108 кДж < лёд 340 кДж < алюминий ≈ 979 кДж.",
+        "options": [
+          "Свинец ($c = 140$, $t = 327$, $\\lambda = 25$ кДж/кг)",
+          "Олово ($c = 230$, $t = 232$, $\\lambda = 59$ кДж/кг)",
+          "Лёд при 0 °C (без нагрева, $\\lambda = 340$)",
+          "Алюминий ($c = 920$, $t = 660$, $\\lambda = 390$ кДж/кг)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между ситуацией и результатом (1 кг льда при 0 °C, вода при 80 °C).",
+        "hints": [],
+        "solution": "Сравните $c m_в \\cdot 80$ с $\\lambda m_л = 340$ кДж.",
+        "options": ["Воды 1 кг", "Воды 2 кг", "Воды 0,5 кг", "Воды 4 кг"],
+        "matches": [
+          "Растает ≈ 0,99 кг льда, 0 °C",
+          "Растает весь, ≈ 26 °C",
+          "Растает ≈ 0,49 кг, 0 °C",
+          "Растает весь, ≈ 48 °C"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Температура, при которой вещество плавится, называется температурой ___.",
+        "hints": [],
+        "solution": "Для льда при нормальном давлении — 0 °C.",
+        "accepted": ["плавления"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [40, 60, 80]
+        },
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "ti",
+          "kind": "choice",
+          "values": [-10, -20]
+        }
+      ],
+      "constraints": [],
+      "answer": "mi * (2.1 * (-ti) + 340) / (4.2 * t)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую массу воды при {{t}} °C нужно, чтобы растопить {{mi}} кг льда при {{ti}} °C и получить воду при 0 °C? $c_л = 2,1$, $c_в = 4,2$ кДж/(кг·°C), удельная теплота плавления льда 340 кДж/кг.",
+        "hints": [],
+        "solution": "$c_в m_в t = c_л m_л (0 - t_л) + \\lambda m_л$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при одинаковой температуре 0 °C ожог водой при 0 °C невозможен, а обморожение от льда при 0 °C сильнее, чем от воды при 0 °C?",
+        "hints": [],
+        "solution": "На плавление уходит $\\lambda m$ — много теплоты.",
+        "options": [
+          "Лёд, тая, забирает много теплоты от кожи",
+          "Лёд холоднее воды",
+          "Вода теплее льда",
+          "Это неверно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [70, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (340 + 4.2 * t) / (e / 100) / 3600",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кВт·ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько электроэнергии (кВт·ч) нужно, чтобы растопить {{m}} кг льда при 0 °C и нагреть воду до {{t}} °C, если КПД нагревателя {{e}} %? Удельная теплота плавления льда 340 кдж/кг, $c_в = 4,2$ кДж/(кг·°C). 1 кВт·ч = 3600 кДж.",
+        "hints": [],
+        "solution": "$Q = m(\\lambda + c t)$, $W = Q/\\eta$; делим на 3600."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "p * t / m",
+      "variables": ["p", "t", "m"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель передаёт льду за единицу времени теплоту $p$. Лёд массой $m$ при 0 °C тает за время $t$. Запишите удельную теплоту плавления.",
+        "hints": [],
+        "solution": "$pt = \\lambda m$."
+      }
+    }
+  }
+]

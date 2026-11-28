@@ -1,0 +1,1821 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 80, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m1 * t1 + m2 * t2) / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали {{m1}} кг воды при {{t1}} °C и {{m2}} кг воды при {{t2}} °C. Найдите температуру смеси (потерь нет).",
+        "hints": [],
+        "solution": "Отданное горячей водой равно полученному холодной: $c m_1 (\\theta - t_1) = c m_2 (t_2 - \\theta)$, $\\theta = \\dfrac{m_1 t_1 + m_2 t_2}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [50, 70, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "(t1 + t2) / 2",
+      "tolerance": {},
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали равные массы воды при {{t1}} °C и {{t2}} °C. Найдите температуру смеси.",
+        "hints": [],
+        "solution": "При равных массах $\\theta = \\dfrac{t_1 + t_2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что утверждает уравнение теплового баланса?",
+        "hints": [],
+        "solution": "$Q_{отд} = Q_{пол}$.",
+        "options": [
+          "Количество теплоты, отданное горячими телами, равно полученному холодными (если нет потерь)",
+          "Все тела имеют одинаковую теплоёмкость",
+          "Теплота не передаётся",
+          "Температура всегда растёт"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Когда теплообмен прекращается, температуры тел становятся ___.",
+        "hints": [],
+        "solution": "Наступает тепловое равновесие.",
+        "accepted": ["одинаковыми", "равными"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Горячую воду смешали с холодной. Какой может быть температура смеси?",
+        "hints": [],
+        "solution": "Горячая остывает, холодная нагревается.",
+        "options": [
+          "Между начальными температурами",
+          "Выше температуры горячей воды",
+          "Ниже температуры холодной",
+          "Равна сумме температур"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [42, 84, 126, 210]
+        }
+      ],
+      "constraints": [],
+      "answer": "q",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Горячая вода отдала {{q}} кДж теплоты. Сколько получила холодная вода, если потерь нет?",
+        "hints": [],
+        "solution": "$Q_{пол} = Q_{отд}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о тепловом равновесии.",
+        "hints": [],
+        "solution": "Равны температуры, а не энергии.",
+        "options": [
+          "Температуры тел выравниваются",
+          "Теплообмен прекращается",
+          "Тела имеют одинаковую внутреннюю энергию",
+          "Горячее тело остывает, холодное нагревается до равновесия",
+          "Равновесие наступает мгновенно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между количеством теплоты и знаком в балансе.",
+        "hints": [],
+        "solution": "Уравнение баланса: $Q_1 + Q_2 + \\dots = 0$.",
+        "options": [
+          "Тело нагревается",
+          "Тело остывает",
+          "Теплообмена нет",
+          "Сумма всех $Q$ в изолированной системе"
+        ],
+        "matches": ["$Q > 0$", "$Q < 0$", "$Q = 0$", "$\\sum Q = 0$"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 70]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m1 * t1 + m2 * t2) / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В ванну налили {{m1}} кг воды при {{t1}} °C и {{m2}} кг при {{t2}} °C. Найдите температуру воды в ванне.",
+        "hints": [],
+        "solution": "$\\theta = \\dfrac{m_1 t_1 + m_2 t_2}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему калориметр делают из двух сосудов с воздухом между ними?",
+        "hints": [],
+        "solution": "Воздух — плохой проводник тепла.",
+        "options": [
+          "Чтобы уменьшить теплообмен с окружающей средой",
+          "Чтобы быстрее нагреть воду",
+          "Для красоты",
+          "Чтобы вода не испарялась"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи на тепловой баланс.",
+        "hints": [],
+        "solution": "Алгоритм решения.",
+        "options": [
+          "Определить, какие тела отдают и какие получают теплоту",
+          "Записать $Q$ для каждого тела",
+          "Приравнять отданное и полученное",
+          "Найти неизвестное"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "4.2 * m * dt",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Холодная вода массой {{m}} кг нагрелась на {{dt}} °C. Сколько теплоты отдала горячая вода? $c = 4200$ Дж/(кг·°C). Ответ в кДж.",
+        "hints": [],
+        "solution": "Отданное равно полученному: $cm\\Delta t$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В стакан с горячим чаем опустили холодную ложку. Что произойдёт?",
+        "hints": [],
+        "solution": "Теплота переходит от чая к ложке.",
+        "options": [
+          "Ложка нагреется, чай немного остынет",
+          "Чай нагреется",
+          "Ложка остынет",
+          "Ничего"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m1 * t1 + m2 * 100) / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали {{m1}} л воды при {{t1}} °C и {{m2}} л при 100 °C. Найдите температуру смеси.",
+        "hints": [],
+        "solution": "1 л воды — 1 кг; $\\theta = \\dfrac{m_1 t_1 + m_2 \\cdot 100}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Уравнение теплового баланса: сумма количеств теплоты всех тел замкнутой системы равна ___.",
+        "hints": [],
+        "solution": "$Q_1 + Q_2 + \\dots = 0$.",
+        "accepted": ["нулю", "0", "ноль"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (th - t1) / (100 - th)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько кипятка (100 °C) нужно добавить к {{m}} кг воды при {{t1}} °C, чтобы получить воду при {{th}} °C?",
+        "hints": [],
+        "solution": "$c m_2 (100 - \\theta) = c m (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(400 * m * 100 + 4200 * mw * t1) / (400 * m + 4200 * mw)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медный брусок массой {{m}} кг при 100 °C опустили в {{mw}} кг воды при {{t1}} °C. Найдите установившуюся температуру. $c_м = 400$, $c_в = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$c_м m (100 - \\theta) = c_в m_в (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m1 * (t1 - th) / (th - t2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Горячая вода массой {{m1}} кг остыла от {{t1}} °C до {{th}} °C, нагревая холодную воду, начальная температура которой {{t2}} °C. Найдите массу холодной воды.",
+        "hints": [],
+        "solution": "$m_1 (t_1 - \\theta) = m_2 (\\theta - t_2)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [400, 460, 920]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "th",
+          "expr": "round((c * m * 100 + 4200 * mw * t1) / (c * m + 4200 * mw), 1)"
+        }
+      ],
+      "answer": "4200 * mw * (th - t1) / (m * (100 - th))",
+      "tolerance": {
+        "abs": 20
+      },
+      "decimals": 0,
+      "unit": "Дж/(кг·°C)"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Металлический цилиндр массой {{m}} кг, нагретый до 100 °C, опустили в {{mw}} кг воды при {{t1}} °C. Установилась температура {{th}} °C. Найдите удельную теплоёмкость металла.",
+        "hints": [],
+        "solution": "$c m (100 - \\theta) = c_в m_в (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В холодную воду опустили горячие тела одинаковой массы и температуры: алюминиевое и свинцовое (в разные стаканы с одинаковой водой). Где вода нагреется сильнее?",
+        "hints": [],
+        "solution": "Алюминий ($c = 920$) отдаст больше теплоты, чем свинец ($c = 140$).",
+        "options": ["С алюминиевым телом", "Со свинцовым", "Одинаково", "Вода не нагреется"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 3]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "m3",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t3",
+          "kind": "choice",
+          "values": [80, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m1 * t1 + m2 * t2 + m3 * t3) / (m1 + m2 + m3)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали три порции воды: {{m1}} кг при {{t1}} °C, {{m2}} кг при {{t2}} °C и {{m3}} кг при {{t3}} °C. Найдите температуру смеси.",
+        "hints": [],
+        "solution": "$\\theta = \\dfrac{\\sum m_i t_i}{\\sum m_i}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Горячий железный шарик опустили в холодную воду. Выберите верные утверждения (потерь нет).",
+        "hints": [],
+        "solution": "У железа $c$ меньше, его $\\Delta t$ больше.",
+        "options": [
+          "Шарик отдал столько теплоты, сколько получила вода",
+          "Конечные температуры шарика и воды равны",
+          "Изменения температур шарика и воды равны",
+          "Температура шарика понизилась сильнее, чем повысилась у воды (если массы близки)",
+          "Вода нагрелась до температуры шарика"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [90, 100]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [60, 70]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (t1 - th) / (th - t2)",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы охладить {{m}} кг чая от {{t1}} до {{th}} °C, добавили холодную воду при {{t2}} °C. Сколько воды добавили? ($c$ чая и воды одинаковые.)",
+        "hints": [],
+        "solution": "$m (t_1 - \\theta) = m_х (\\theta - t_2)$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Если теплообмен идёт без потерь, отданное количество теплоты ___ полученному.",
+        "hints": [],
+        "solution": "$Q_{отд} = Q_{пол}$.",
+        "accepted": ["равно"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию температуру смеси 1 кг воды при 20 °C с:",
+        "hints": [],
+        "solution": "30, 40, ≈46,7, 60 °C.",
+        "options": ["1 кг при 40 °C", "1 кг при 60 °C", "2 кг при 60 °C", "1 кг при 100 °C"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [400, 600]
+        },
+        {
+          "name": "mo",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(500 * m * t1 + 1700 * mo * t2) / (500 * m + 1700 * mo)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стальную деталь массой {{m}} кг при {{t1}} °C опустили в масло массой {{mo}} кг при {{t2}} °C. Найдите конечную температуру. $c_{ст} = 500$, $c_м = 1700$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$c_1 m_1 (t_1 - \\theta) = c_2 m_2 (\\theta - t_2)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при расчётах калориметра часто учитывают нагрев самого сосуда?",
+        "hints": [],
+        "solution": "Сосуд — участник теплообмена.",
+        "options": [
+          "Сосуд тоже получает теплоту, и без учёта ответ будет неточным",
+          "Сосуд не нагревается",
+          "Это традиция",
+          "Сосуд отдаёт теплоту"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между случаем и формулой температуры смеси воды.",
+        "hints": [],
+        "solution": "Частные случаи уравнения баланса.",
+        "options": [
+          "Равные массы",
+          "Массы $m_1$ и $m_2$",
+          "Добавили кипяток к воде 0 °C поровну",
+          "Смешали одинаковую воду"
+        ],
+        "matches": [
+          "$(t_1 + t_2)/2$",
+          "$(m_1 t_1 + m_2 t_2)/(m_1 + m_2)$",
+          "50 °C",
+          "Та же температура"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [80]
+        },
+        {
+          "name": "dd",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "th",
+          "expr": "(mw * t1 + m2 * t2) / (mw + m2) - dd"
+        }
+      ],
+      "answer": "4200 * m2 * (t2 - th) - 4200 * mw * (th - t1)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В калориметре {{mw}} кг воды при {{t1}} °C. В неё налили {{m2}} кг воды при {{t2}} °C, и установилась температура {{th}} °C. Сколько теплоты получил сам калориметр (в Дж)? $c = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "Отдала горячая вода $c m_2 (t_2 - \\theta)$, получила холодная $c m_в (\\theta - t_1)$; разность — калориметру."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "(a * x + b * 100) / (a + b)",
+      "variables": ["a", "b", "x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали воду массой $a$ при температуре $x$ и воду массой $b$ при температуре $y$. Запишите температуру смеси — через $a$, $b$ и $x$ при $y = 100$.",
+        "hints": [],
+        "solution": "$\\theta = \\dfrac{a x + 100 b}{a + b}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mk",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.3, 0.5]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [15, 20]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "(400 * m * 100 + (920 * mk + 4200 * mw) * t1) / (400 * m + 920 * mk + 4200 * mw)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В алюминиевый калориметр массой {{mk}} кг с {{mw}} кг воды при {{t1}} °C опустили медную гирю массой {{m}} кг при 100 °C. Найдите конечную температуру. $c_{ал} = 920$, $c_в = 4200$, $c_м = 400$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "Гиря отдаёт теплоту воде и калориметру: $c_м m (100 - \\theta) = (c_{ал} m_к + c_в m_в)(\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 150, 200]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [36, 38, 40]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 70]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (th - t1) / (t2 - t1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Для ванны нужно {{m}} кг воды при {{th}} °C. Есть горячая вода при {{t2}} °C и холодная при {{t1}} °C. Сколько нужно горячей воды?",
+        "hints": [],
+        "solution": "$m_г + m_х = m$, $m_г (t_2 - \\theta) = m_х (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [200, 300]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [15, 20]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [30, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "th + 4200 * mw * (th - t1) / (500 * m)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стальной шарик массой {{m}} г, нагретый в пламени, опустили в {{mw}} г воды при {{t1}} °C; вода нагрелась до {{th}} °C. Найдите температуру пламени (потерь нет). $c_{ст} = 500$, $c_в = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$c_{ст} m (t - \\theta) = c_в m_в (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешали 1 кг воды при 20 °C и 1 кг спирта при 20 °C. Какова температура смеси?",
+        "hints": [],
+        "solution": "Температуры равны — теплообмена нет. (Тепловыделение при растворении не учитываем.)",
+        "options": [
+          "20 °C",
+          "Выше 20 °C из-за большей теплоёмкости воды",
+          "Ниже 20 °C",
+          "Нельзя определить"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [100]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [30, 40]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "r",
+          "expr": "(th - t1) / (t - th)"
+        }
+      ],
+      "answer": "(r * t + (1 + r) * th) / (1 + 2 * r)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело при {{t}} °C опустили в воду при {{t1}} °C, установилась температура {{th}} °C. Затем в ту же воду (вместе с первым телом) опустили второе такое же тело при {{t}} °C. Какая установится температура?",
+        "hints": [],
+        "solution": "Пусть $r = C_т/C_в = \\dfrac{\\theta - t_1}{t - \\theta}$ (из первого опыта). Во втором: $C_т(t - \\theta_2) = (C_в + C_т)(\\theta_2 - \\theta)$, $\\theta_2 = \\dfrac{rt + (1 + r)\\theta}{1 + 2r}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "mi",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "ti",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "2.1 * mi * ti",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В воду массой {{mw}} кг при 20 °C положили лёд массой {{mi}} кг при −{{ti}} °C. Лёд нагревается, но не тает (конечная температура не выше 0 °C). Сколько теплоты получит лёд до 0 °C (в кДж)? $c_л = 2100$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "$Q = c_л m_л (0 - (-t_л))$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Горячую воду (2 кг, 80 °C) смешали с холодной (3 кг, 20 °C). Выберите верные утверждения.",
+        "hints": [],
+        "solution": "$\\theta = \\dfrac{2 \\cdot 80 + 3 \\cdot 20}{5} = 44$ °C.",
+        "options": [
+          "Температура смеси 44 °C",
+          "Горячая вода остыла на 36 °C",
+          "Холодная нагрелась на 24 °C",
+          "Температура смеси 50 °C",
+          "Холодная вода нагрелась на 36 °C"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m * 100 + m2 * t1) / (m + m2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нагреватель довёл {{m}} кг воды от {{t1}} °C до кипения. Затем в неё добавили {{m2}} кг воды при {{t1}} °C. Какая установилась температура?",
+        "hints": [],
+        "solution": "$\\theta = \\dfrac{100 m + t_1 m_2}{m + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между ситуацией и выводом.",
+        "hints": [],
+        "solution": "Температура смеси ближе к телу с большей теплоёмкостью.",
+        "options": [
+          "$\\theta$ ближе к $t_1$",
+          "$\\theta$ ровно посередине",
+          "$\\theta$ ближе к $t_2$",
+          "$\\theta$ вне интервала"
+        ],
+        "matches": [
+          "$c_1 m_1 > c_2 m_2$",
+          "$c_1 m_1 = c_2 m_2$",
+          "$c_1 m_1 < c_2 m_2$",
+          "Есть источник или потери теплоты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему горячую сковороду, опущенную в холодную воду, нельзя считать замкнутой системой со стаканом воды, если пошёл пар?",
+        "hints": [],
+        "solution": "При парообразовании уходит энергия.",
+        "options": [
+          "Часть теплоты уходит с паром — появляются потери",
+          "Пар не уносит теплоту",
+          "Сковорода холодная",
+          "Вода не нагревается"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [70, 80, 90]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [35, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * (th - t1) / (t2 - th)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "л"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько горячей воды при {{t2}} °C надо добавить к {{v}} л воды при {{t1}} °C, чтобы получить {{th}} °C? Ответ в литрах.",
+        "hints": [],
+        "solution": "$m_г (t_2 - \\theta) = m (\\theta - t_1)$; 1 л воды — 1 кг."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию конечную температуру, когда 1 кг тела при 100 °C опускают в 1 кг воды при 20 °C:",
+        "hints": [],
+        "solution": "Чем больше $c$ тела, тем выше конечная температура: ≈22,6; ≈27,0; ≈34,4; 60 °C.",
+        "options": [
+          "Свинец ($c = 140$)",
+          "Медь ($c = 400$)",
+          "Алюминий ($c = 920$)",
+          "Вода ($c = 4200$)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Теплоёмкость тела $C = cm$; в задачах на баланс тело с большей теплоёмкостью меньше меняет свою ___.",
+        "hints": [],
+        "solution": "$\\Delta t = Q/C$.",
+        "accepted": ["температуру", "температура"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "100 * a / (a + b)",
+      "variables": ["a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Горячая вода массой $a$ при 100 °C и холодная массой $b$ при 0 °C. Запишите температуру смеси.",
+        "hints": [],
+        "solution": "$\\theta = \\dfrac{100 a}{a + b}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каком случае конечная температура в калориметре ниже, чем рассчитанная без учёта потерь?",
+        "hints": [],
+        "solution": "Потери уменьшают энергию системы.",
+        "options": [
+          "Если система отдаёт теплоту в окружающую среду",
+          "Если калориметр идеальный",
+          "Если нагрели калориметр заранее",
+          "Никогда"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [100]
+        },
+        {
+          "name": "ck",
+          "kind": "choice",
+          "values": [100, 200]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "th",
+          "expr": "round((460 * m * t2 + (4200 * mw + ck) * t1) / (460 * m + 4200 * mw + ck), 1)"
+        }
+      ],
+      "answer": "(460 * m * (t2 - th) - 4200 * mw * (th - t1)) / (th - t1)",
+      "tolerance": {
+        "abs": 30
+      },
+      "decimals": 0,
+      "unit": "Дж/°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В калориметре {{mw}} кг воды при {{t1}} °C. Опустили железную деталь массой {{m}} кг при {{t2}} °C; конечная температура {{th}} °C. Найдите теплоёмкость калориметра в Дж/°C. $c_ж = 460$, $c_в = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "Деталь отдала $c_ж m (t_2 - \\theta)$, вода и калориметр получили $(c_в m_в + C_к)(\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [60, 70]
+        },
+        {
+          "name": "q2",
+          "kind": "choice",
+          "values": [4, 6]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "(q1 * t1 + q2 * t2) / (q1 + q2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из крана течёт горячая вода при {{t2}} °C со скоростью {{q2}} л/мин и холодная при {{t1}} °C со скоростью {{q1}} л/мин. Какая температура воды в ванне?",
+        "hints": [],
+        "solution": "За минуту смешиваются $q_1$ кг и $q_2$ кг воды."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1000, 2000]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [30, 35]
+        },
+        {
+          "name": "mr",
+          "kind": "choice",
+          "values": [50000, 100000]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m * t2 + mr * t1) / (m + mr) - t1",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Теплоэлектростанция сбрасывает в реку {{m}} т воды в час при {{t2}} °C. В реке за час протекает {{mr}} т воды при {{t1}} °C. На сколько градусов нагреется река (полное перемешивание)?",
+        "hints": [],
+        "solution": "Температура смеси минус исходная температура реки."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В воду при 20 °C опустили два одинаковых тела: одно при 100 °C, другое при 0 °C. Какая установится температура (масса воды равна массе каждого тела, $c$ тел вдвое меньше $c$ воды)?",
+        "hints": [],
+        "solution": "Теплоёмкости: вода $2C$, каждое тело $C$. $\\theta = \\dfrac{2C \\cdot 20 + C \\cdot 100 + C \\cdot 0}{4C} = 35$ °C.",
+        "options": ["35 °C", "30 °C", "50 °C", "40 °C"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "t3",
+          "kind": "choice",
+          "values": [70, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "(t1 + t2 + t3) / 3",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Три порции воды одинаковой массы при {{t1}}, {{t2}} и {{t3}} °C смешали. Найдите температуру смеси.",
+        "hints": [],
+        "solution": "Среднее арифметическое при равных массах."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [200, 300]
+        },
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(140 * m * t + 4200 * mw * t1) / (140 * m + 4200 * mw) - t1",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свинцовая пуля ($c = 140$) массой {{m}} г при {{t}} °C попала в {{mw}} г воды при {{t1}} °C и остыла. На сколько градусов нагрелась вода? $c_в = 4200$ Дж/(кг·°C).",
+        "hints": [],
+        "solution": "Баланс: $c_с m (t - \\theta) = c_в m_в (\\theta - t_1)$; ответ $\\theta - t_1$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите условия, при которых уравнение теплового баланса $\\sum Q = 0$ выполняется точно.",
+        "hints": [],
+        "solution": "Иначе нужно учитывать дополнительные слагаемые.",
+        "options": [
+          "Система теплоизолирована",
+          "Нет фазовых переходов, не учтённых в уравнении",
+          "Не совершается работа над системой",
+          "Стаканы открыты и вода испаряется",
+          "Есть нагреватель внутри"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m2 * t2 * (1 - p / 100) + m * t1) / (m2 * (1 - p / 100) + m)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "°C"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В сосуд с {{m}} кг воды при {{t1}} °C влили {{m2}} кг воды при {{t2}} °C, потеряв {{p}} % отданной горячей водой теплоты в окружающую среду. Найдите конечную температуру.",
+        "hints": [],
+        "solution": "Холодная вода получает $(1 - p)$ долю отданного: $(1 - p) m_2 (t_2 - \\theta) = m (\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи на тепловой баланс с калориметром.",
+        "hints": [],
+        "solution": "Не забудьте калориметр.",
+        "options": [
+          "Перечислить тела, отдающие теплоту",
+          "Перечислить тела, получающие теплоту (в том числе калориметр)",
+          "Записать уравнение баланса",
+          "Решить относительно неизвестной"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: масса воды при 0 °C, добавленная к 1 кг воды при 100 °C, и температура смеси.",
+        "hints": [],
+        "solution": "$\\theta = \\dfrac{100}{1 + m}$.",
+        "options": ["1 кг", "3 кг", "0,25 кг", "4 кг"],
+        "matches": ["50 °C", "25 °C", "80 °C", "20 °C"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mw",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "ck",
+          "kind": "choice",
+          "values": [200, 420]
+        }
+      ],
+      "constraints": [],
+      "answer": "(4200 * mw + ck) * (th - t1) / (4200 * (100 - th))",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько кипятка (100 °C) нужно влить в {{mw}} кг воды при {{t1}} °C, чтобы получить {{th}} °C, если калориметр с теплоёмкостью {{ck}} Дж/°C тоже нагревается.",
+        "hints": [],
+        "solution": "$c m_к (100 - \\theta) = (c m_в + C_к)(\\theta - t_1)$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Если в калориметре идёт химическая реакция с выделением теплоты, в уравнение баланса добавляют ___ теплоты.",
+        "hints": [],
+        "solution": "Учитывается любое выделение или поглощение теплоты.",
+        "accepted": ["источник", "выделение", "выделившееся количество"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Смешивая воду при 10 °C и 90 °C, нужно получить 50 °C. Каким должно быть отношение масс горячей и холодной воды?",
+        "hints": [],
+        "solution": "$m_г \\cdot 40 = m_х \\cdot 40$.",
+        "options": ["1 : 1", "1 : 2", "2 : 1", "9 : 1"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [80, 90]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "th",
+          "kind": "choice",
+          "values": [40, 50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "(th - t1) / (t2 - th)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отношение масс горячей (при {{t2}} °C) и холодной (при {{t1}} °C) воды, нужное для получения {{th}} °C?",
+        "hints": [],
+        "solution": "$\\dfrac{m_г}{m_х} = \\dfrac{\\theta - t_1}{t_2 - \\theta}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * x / (a + b)",
+      "variables": ["a", "b", "x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело с теплоёмкостью $a$ при температуре $x$ опустили в воду с теплоёмкостью $b$ при 0 °C. Запишите конечную температуру.",
+        "hints": [],
+        "solution": "$a(x - \\theta) = b\\theta$."
+      }
+    }
+  }
+]
