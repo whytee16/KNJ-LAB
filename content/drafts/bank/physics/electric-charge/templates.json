@@ -1,0 +1,1463 @@
+[
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько видов электрических зарядов существует?",
+        "hints": [],
+        "solution": "Разноимённые заряды притягиваются, одноимённые отталкиваются.",
+        "options": ["Два: положительные и отрицательные", "Один", "Три", "Бесконечно много"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как взаимодействуют одноимённо заряженные тела?",
+        "hints": [],
+        "solution": "Одноимённые заряды отталкиваются.",
+        "options": [
+          "Отталкиваются",
+          "Притягиваются",
+          "Не взаимодействуют",
+          "Сначала притягиваются, затем отталкиваются"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Прибор для обнаружения электрического заряда называется ___.",
+        "hints": [],
+        "solution": "Листочки электроскопа расходятся при сообщении заряда.",
+        "accepted": ["электроскопом", "электроскоп", "электрометр", "электрометром"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой заряд имеет электрон?",
+        "hints": [],
+        "solution": "Заряд электрона $-e$, $e = 1{,}6 \\cdot 10^{-19}$ Кл.",
+        "options": ["Отрицательный", "Положительный", "Нулевой", "Зависит от атома"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при натирании эбонитовой палочки шерстью палочка заряжается отрицательно?",
+        "hints": [],
+        "solution": "При электризации переходят электроны.",
+        "options": [
+          "Электроны переходят с шерсти на палочку",
+          "Протоны уходят с палочки",
+          "Палочка нагревается",
+          "Шерсть отдаёт протоны"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите проводники электричества.",
+        "hints": [],
+        "solution": "Стекло и резина — диэлектрики.",
+        "options": ["Медь", "Раствор соли в воде", "Графит", "Стекло", "Резина"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между частицей и её зарядом.",
+        "hints": [],
+        "solution": "Атом нейтрален: число протонов равно числу электронов.",
+        "options": ["Электрон", "Протон", "Нейтрон", "Атом в нормальном состоянии"],
+        "matches": ["$-e$", "$+e$", "0", "0 (нейтрален)"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 5, 10, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "-n",
+      "tolerance": {},
+      "unit": "e"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело получило {{n}} лишних электронов. Каков его заряд в единицах $e$ (со знаком)?",
+        "hints": [],
+        "solution": "Каждый электрон несёт заряд $-e$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица электрического заряда в СИ:",
+        "hints": [],
+        "solution": "1 Кл = 1 А · 1 с.",
+        "options": ["Кулон (Кл)", "Ампер (А)", "Вольт (В)", "Ньютон (Н)"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Заряженная палочка притягивает мелкие кусочки бумаги. Почему?",
+        "hints": [],
+        "solution": "Электризация через влияние (поляризация).",
+        "options": [
+          "В бумаге происходит разделение зарядов, ближайшая сторона заряжается противоположно",
+          "Бумага всегда заряжена",
+          "Палочка магнитная",
+          "Бумага лёгкая"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию: заряд, переданный 1, 10, 100, 1000 электронами.",
+        "hints": [],
+        "solution": "Заряд пропорционален числу электронов.",
+        "options": ["1 электрон", "10 электронов", "100 электронов", "1000 электронов"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Наименьший заряд в природе (заряд электрона по модулю) называется ___ зарядом.",
+        "hints": [],
+        "solution": "$e = 1{,}6 \\cdot 10^{-19}$ Кл.",
+        "accepted": ["элементарным", "элементарный"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два одинаковых шарика с зарядами +4 нКл и −2 нКл соприкоснулись и разошлись. Какой заряд у каждого?",
+        "hints": [],
+        "solution": "Заряд делится поровну: $(4 - 2)/2 = 1$ нКл.",
+        "options": ["+1 нКл", "+2 нКл", "+3 нКл", "−1 нКл"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [2, 6, 10]
+        },
+        {
+          "name": "q2",
+          "kind": "choice",
+          "values": [-4, -2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "(q1 + q2) / 2",
+      "tolerance": {},
+      "unit": "нКл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Одинаковые металлические шарики с зарядами {{q1}} нКл и {{q2}} нКл привели в соприкосновение и развели. Найдите заряд каждого (нКл).",
+        "hints": [],
+        "solution": "Закон сохранения заряда: заряд делится поровну между одинаковыми шариками."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как называется закон взаимодействия неподвижных точечных зарядов?",
+        "hints": [],
+        "solution": "$F = k\\dfrac{|q_1 q_2|}{r^2}$.",
+        "options": ["Закон Кулона", "Закон Ома", "Закон Гука", "Закон Паскаля"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.1, 0.3, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "9000000000 * (q / 1000000)^2 / r^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два точечных заряда по {{q}} мкКл находятся на расстоянии {{r}} м. Найдите силу взаимодействия. $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "$F = k\\dfrac{q^2}{r^2}$, заряды в кулонах."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится сила взаимодействия двух зарядов, если расстояние между ними увеличить в 2 раза?",
+        "hints": [],
+        "solution": "$F \\sim 1/r^2$.",
+        "options": [
+          "Уменьшится в 4 раза",
+          "Уменьшится в 2 раза",
+          "Увеличится в 4 раза",
+          "Не изменится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится сила взаимодействия, если каждый заряд увеличить в 2 раза?",
+        "hints": [],
+        "solution": "$F \\sim q_1 q_2$.",
+        "options": [
+          "Увеличится в 4 раза",
+          "Увеличится в 2 раза",
+          "Не изменится",
+          "Уменьшится в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [36, 72, 144]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "f / k^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила взаимодействия двух зарядов {{f}} мН. Какой станет сила, если расстояние увеличить в {{k}} раза?",
+        "hints": [],
+        "solution": "$F \\sim 1/r^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [1.6, 3.2, 8, 16]
+        }
+      ],
+      "constraints": [],
+      "answer": "q * 1e-9 / 1.6e-19 / 1e9",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "млрд"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько электронов составляет заряд −{{q}} нКл? $e = 1{,}6 \\cdot 10^{-19}$ Кл. Ответ в миллиардах.",
+        "hints": [],
+        "solution": "$N = \\dfrac{|q|}{e}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о законе сохранения заряда.",
+        "hints": [],
+        "solution": "Закон сохранения электрического заряда.",
+        "options": [
+          "В замкнутой системе алгебраическая сумма зарядов постоянна",
+          "Заряд не создаётся и не исчезает, а перераспределяется",
+          "При электризации трением оба тела заряжаются разноимённо и равными по модулю зарядами",
+          "При трении заряд создаётся",
+          "Заряд одного тела всегда равен нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "round(9000000000 * (q / 1000000)^2 / r^2, 2)"
+        }
+      ],
+      "answer": "sqrt(9000000000 * (q / 1000000)^2 / f)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На каком расстоянии два заряда по {{q}} мкКл отталкиваются с силой {{f}} Н? $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "$r = q\\sqrt{k/F}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тела, по которым заряды не могут перемещаться, называются ___ (изоляторами).",
+        "hints": [],
+        "solution": "Стекло, резина, пластмасса.",
+        "accepted": ["диэлектриками", "диэлектрики"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отрицательно заряженной палочкой коснулись незаряженного электроскопа. Какой заряд получит электроскоп?",
+        "hints": [],
+        "solution": "Часть электронов перейдёт на электроскоп.",
+        "options": ["Отрицательный", "Положительный", "Никакого", "Сначала положительный"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: во сколько раз изменилась сила Кулона.",
+        "hints": [],
+        "solution": "$F = kq_1q_2/r^2$.",
+        "options": [
+          "Расстояние уменьшили в 3 раза",
+          "Один заряд увеличили в 3 раза",
+          "Оба заряда увеличили в 2 раза, расстояние тоже в 2 раза",
+          "Расстояние увеличили в 2 раза"
+        ],
+        "matches": [
+          "Увеличилась в 9 раз",
+          "Увеличилась в 3 раза",
+          "Не изменилась",
+          "Уменьшилась в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "q2",
+          "kind": "choice",
+          "values": [2, 3, 10]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "9000000000 * q1 * q2 * 1e-18 / (r / 100)^2 * 1000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мкН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите силу взаимодействия зарядов {{q1}} нКл и {{q2}} нКл на расстоянии {{r}} см (в мкН). $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "$F = k\\dfrac{q_1 q_2}{r^2}$, нКл $= 10^{-9}$ Кл."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию силу взаимодействия двух зарядов по 1 мкКл на расстояниях:",
+        "hints": [],
+        "solution": "Сила растёт при уменьшении расстояния: 9 мН, 36 мН, 100 мН, 900 мН.",
+        "options": ["1 м", "50 см", "30 см", "10 см"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при снятии шерстяного свитера слышен треск?",
+        "hints": [],
+        "solution": "Электризация трением.",
+        "options": [
+          "При трении ткани электризуются, возникают маленькие искры",
+          "Нитки рвутся",
+          "Свитер сухой",
+          "Шерсть магнитится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [8, 16, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "q / 4",
+      "tolerance": {},
+      "unit": "нКл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик с зарядом {{q}} нКл коснулся такого же незаряженного шарика, затем — второго такого же незаряженного. Какой заряд остался на первом (нКл)?",
+        "hints": [],
+        "solution": "Каждое касание делит заряд пополам: $q/2$, затем $q/4$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "k * q^2 / r^2",
+      "variables": ["k", "q", "r"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите силу $f$ взаимодействия двух одинаковых зарядов $q$ на расстоянии $r$ (коэффициент $k$).",
+        "hints": [],
+        "solution": "$F = \\dfrac{kq^2}{r^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "q2",
+          "kind": "choice",
+          "values": [5, 6, 9]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "((q1 + q2) / 2)^2 / abs(q1 * q2)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два одинаковых шарика с зарядами {{q1}} и {{q2}} нКл находятся на расстоянии {{r}} см. Их привели в соприкосновение и вернули на место. Во сколько раз изменилась сила взаимодействия (новая / старая)?",
+        "hints": [],
+        "solution": "После касания заряды по $\\dfrac{q_1 + q_2}{2}$; $F \\sim |q_1 q_2|$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "round(log10(9e9 * (1.6e-19)^2 / (6.67e-11 * (1.67e-27)^2)))",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз электрическая сила отталкивания двух протонов больше их гравитационного притяжения? $k = 9 \\cdot 10^9$, $G = 6{,}67 \\cdot 10^{-11}$, $e = 1{,}6 \\cdot 10^{-19}$ Кл, $m_p = 1{,}67 \\cdot 10^{-27}$ кг. Ответ в виде степени: запишите $\\lg(F_э/F_г)$, округлив до целого.",
+        "hints": [],
+        "solution": "Расстояние сокращается: $\\dfrac{ke^2}{Gm_p^2} \\approx 1{,}2 \\cdot 10^{36}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "q2",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "9000000000 * q1 * q2 * 1e-12 / (r / 100)^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой силой взаимодействуют заряды {{q1}} мкКл и {{q2}} мкКл в вакууме на расстоянии {{r}} см (в Н)? $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "$F = k\\dfrac{q_1 q_2}{r^2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Точечные заряды +q и +4q закреплены на расстоянии L. Где нужно поместить третий заряд, чтобы он был в равновесии?",
+        "hints": [],
+        "solution": "$\\dfrac{q}{x^2} = \\dfrac{4q}{(L - x)^2}$, $L - x = 2x$, $x = L/3$.",
+        "options": [
+          "На отрезке, на расстоянии L/3 от заряда +q",
+          "Посередине",
+          "На расстоянии L/3 от заряда +4q",
+          "Вне отрезка за зарядом +q"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * a / b * c^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила взаимодействия двух зарядов {{f}} мН. Один заряд увеличили в {{a}} раза, другой уменьшили в {{b}} раза, расстояние уменьшили в {{c}} раза. Найдите новую силу (мН).",
+        "hints": [],
+        "solution": "$F \\sim \\dfrac{q_1 q_2}{r^2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 4]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Металлический шар зарядили. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "В проводнике заряды отталкиваются и уходят на поверхность.",
+        "options": [
+          "Заряд распределяется по поверхности",
+          "Внутри проводника избыточного заряда нет",
+          "Заряд распределяется равномерно по объёму",
+          "Шар может зарядиться только положительно",
+          "Заряд кратен элементарному"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.001, 0.002, 0.005]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 1000000 * 10 * 1000000",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "мкН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Капля масла массой {{m}} мг висит неподвижно: сила со стороны электрического поля уравновешивает силу тяжести. Найдите эту силу в мкН ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$F = mg$, масса в кг, сила в мкН."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электризация тела без соприкосновения, под действием заряженного тела поблизости, называется электризацией через ___.",
+        "hints": [],
+        "solution": "Электростатическая индукция.",
+        "accepted": ["влияние", "индукцию"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между действием и результатом для электроскопа.",
+        "hints": [],
+        "solution": "Электризация через влияние и касание, заземление.",
+        "options": [
+          "Поднесли заряженную палочку, не касаясь",
+          "Коснулись заряженной палочкой",
+          "Коснулись рукой заряженного электроскопа",
+          "Поднесли незаряженную палочку"
+        ],
+        "matches": [
+          "Листочки расходятся, пока палочка рядом",
+          "Листочки расходятся и остаются разведёнными",
+          "Листочки опадают (заряд уходит в землю)",
+          "Ничего не происходит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию заряды.",
+        "hints": [],
+        "solution": "$1{,}6 \\cdot 10^{-19} < 10^{-9} < 10^{-6} < 10^{-3}$ Кл.",
+        "options": ["1 элементарный заряд", "1 нКл", "1 мкКл", "1 мКл"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [3, 6]
+        },
+        {
+          "name": "q2",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2, 3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "9000000000 * q1 * q2 * 1e-18 / (r / 100)^2 * 1000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мкН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два заряда {{q1}} и {{q2}} нКл на расстоянии {{r}} см. Какую силу (в мкН) нужно приложить к первому заряду, чтобы удержать его? $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "Сила равна кулоновской: $F = k\\dfrac{q_1 q_2}{r^2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему бензовозы возят с цепью, касающейся земли?",
+        "hints": [],
+        "solution": "Заземление предотвращает искру.",
+        "options": [
+          "Чтобы отводить в землю заряды, возникающие при трении бензина о стенки",
+          "Для торможения",
+          "Для красоты",
+          "Чтобы цистерна не качалась"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [5, 10, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1e9 * 1.6e-19 * 1e9",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "нКл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой заряд (в нКл) у тела, потерявшего {{n}} млрд электронов? $e = 1{,}6 \\cdot 10^{-19}$ Кл.",
+        "hints": [],
+        "solution": "Тело заряжено положительно: $q = Ne$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о силе Кулона.",
+        "hints": [],
+        "solution": "В среде сила уменьшается в ε раз.",
+        "options": [
+          "Она направлена вдоль прямой, соединяющей заряды",
+          "Она обратно пропорциональна квадрату расстояния",
+          "Для разноимённых зарядов — притяжение",
+          "Она не зависит от среды",
+          "Она пропорциональна сумме зарядов"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "9 * a * b / r^2",
+      "variables": ["a", "b", "r"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила взаимодействия зарядов $a$ и $b$ на расстоянии $r$ при $k = 9$ (в условных единицах). Запишите силу $f$.",
+        "hints": [],
+        "solution": "$F = k\\dfrac{q_1 q_2}{r^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "k2",
+          "kind": "choice",
+          "values": [4, 9]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [12, 30, 60]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q4",
+          "expr": "q * k2"
+        }
+      ],
+      "answer": "l / (1 + sqrt(q4 / q))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Заряды +{{q}} нКл и +{{q4}} нКл закреплены на расстоянии {{l}} см. На каком расстоянии от заряда +{{q}} нКл находится точка, где сила на пробный заряд равна нулю (в см)?",
+        "hints": [],
+        "solution": "$\\dfrac{q}{x^2} = \\dfrac{q_2}{(L - x)^2}$, $x = \\dfrac{L}{1 + \\sqrt{q_2/q}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.4, 0.9]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [3, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(m / 1000 * 10 * (r / 100)^2 / 9000000000) * 1e9",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "нКл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два шарика массой {{m}} г каждый висят на нитях. Их зарядили одинаково, и они разошлись на {{r}} см; нити отклонились на 45°. Найдите заряд каждого шарика (в нКл), $g = 10$ Н/кг. $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "При угле 45° сила Кулона равна $mg$: $k\\dfrac{q^2}{r^2} = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 6, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "9000000000 * (q * 1e-9)^2 * (1 / (a / 100)^2 + 1 / (2 * a / 100)^2) * 1000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мкН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Три одинаковых заряда по {{q}} нКл расположены на одной прямой на расстоянии {{a}} см друг от друга. Найдите силу, действующую на крайний заряд (в мкН). $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "Соседний на $a$, дальний на $2a$, обе силы в одну сторону."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Одинаковые шарики с зарядами $q$ и $-3q$ на расстоянии $r$ притягиваются с силой F. Их соединили и вернули на прежнее расстояние. Какой стала сила?",
+        "hints": [],
+        "solution": "После касания по $-q$: $F' = kq^2/r^2 = F/3$, заряды одноимённые.",
+        "options": ["F/3, отталкивание", "F, притяжение", "F/3, притяжение", "3F, отталкивание"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 10, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * sqrt(6.67e-11 / 9000000000) * 1e12",
+      "tolerance": {
+        "rel": 0.01
+      },
+      "decimals": 0,
+      "unit": "пКл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой заряд (в пКл) нужно сообщить каждому из двух одинаковых шаров массой {{m}} кг, чтобы электрическое отталкивание уравновесило их гравитационное притяжение? $G = 6{,}67 \\cdot 10^{-11}$, $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "$\\dfrac{kq^2}{r^2} = \\dfrac{Gm^2}{r^2}$, $q = m\\sqrt{G/k}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о точечных зарядах.",
+        "hints": [],
+        "solution": "Силы взаимодействия равны по модулю.",
+        "options": [
+          "Закон Кулона точен для точечных зарядов и равномерно заряженных шаров",
+          "Сила взаимодействия шаров зависит от расстояния между центрами",
+          "Две силы Кулона в паре равны по модулю (третий закон Ньютона)",
+          "Больший заряд действует с большей силой на меньший",
+          "Сила зависит только от большего заряда"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "q2",
+          "kind": "choice",
+          "values": [1, 3]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "q3",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "9000000000 * q3 * 1e-9 * (q1 + q2) * 1e-9 / (l / 200)^2 * 1000000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мкН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Заряды {{q1}} нКл и −{{q2}} нКл находятся на расстоянии {{l}} см. Найдите силу (в мкН), действующую на заряд {{q3}} нКл, помещённый посередине. $k = 9 \\cdot 10^9$ Н·м²/Кл².",
+        "hints": [],
+        "solution": "Обе силы направлены к отрицательному заряду и складываются: $F = k q_3 \\dfrac{q_1 + q_2}{(L/2)^2}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "В среде с диэлектрической проницаемостью $\\varepsilon$ сила взаимодействия зарядов уменьшается в ___ раз.",
+        "hints": [],
+        "solution": "$F = \\dfrac{k q_1 q_2}{\\varepsilon r^2}$.",
+        "accepted": ["ε", "эпсилон", "epsilon"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию силу взаимодействия зарядов 1 нКл и 4 нКл на расстоянии:",
+        "hints": [],
+        "solution": "10, 40, 90, 360 мкН.",
+        "options": ["6 см", "3 см", "2 см", "1 см"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между исходными зарядами одинаковых шариков и зарядом каждого после касания.",
+        "hints": [],
+        "solution": "Заряд делится поровну.",
+        "options": ["+6 и −2 нКл", "+3 и +5 нКл", "−8 и +2 нКл", "+4 и −4 нКл"],
+        "matches": ["+2 нКл", "+4 нКл", "−3 нКл", "0"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [4, 9, 16, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(k)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз нужно изменить расстояние между зарядами, чтобы при уменьшении одного заряда в {{k}} раз сила осталась прежней? Ответ — во сколько раз уменьшить расстояние.",
+        "hints": [],
+        "solution": "$\\dfrac{q}{k r_2^2} = \\dfrac{q}{r^2}$, $r_2 = r/\\sqrt{k}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему для опытов по электризации в сырую погоду результаты хуже?",
+        "hints": [],
+        "solution": "Влага на поверхности делает её проводящей.",
+        "options": [
+          "Влажный воздух и поверхности проводят заряд, он стекает",
+          "Влага нейтрализует электроны",
+          "Влажный воздух не пропускает электроны",
+          "Эбонит размокает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [16, 32, 64]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "q / 2^n",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "нКл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик с зарядом {{q}} нКл последовательно касается {{n}} таких же незаряженных шариков. Какой заряд у него останется (нКл)?",
+        "hints": [],
+        "solution": "Каждое касание уменьшает заряд вдвое."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры полезного использования электризации.",
+        "hints": [],
+        "solution": "Опасные случаи — искры при работе с топливом.",
+        "options": [
+          "Электростатическая окраска",
+          "Электрофильтры для очистки дыма",
+          "Ксерокопирование",
+          "Искра на бензоколонке",
+          "Удар током от ковра"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "l / (1 + sqrt(n))",
+      "variables": ["l", "n"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Заряды $a$ и $b$ закреплены на расстоянии $l$. Запишите расстояние $x$ от заряда $a$ до точки равновесия пробного заряда между ними — через $l$ и отношение $n = b/a$.",
+        "hints": [],
+        "solution": "$\\dfrac{1}{x^2} = \\dfrac{n}{(l - x)^2}$."
+      }
+    }
+  }
+]

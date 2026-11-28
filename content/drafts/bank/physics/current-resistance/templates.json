@@ -1,0 +1,1532 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 5, 10, 20]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [0.2, 0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "q",
+          "expr": "i * t"
+        }
+      ],
+      "answer": "q / t",
+      "tolerance": {},
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через проводник за {{t}} с прошёл заряд {{q}} Кл. Найдите силу тока.",
+        "hints": [],
+        "solution": "$I = \\dfrac{q}{t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [0.5, 2, 3]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "i * t",
+      "tolerance": {},
+      "unit": "Кл"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила тока {{i}} А. Какой заряд пройдёт через проводник за {{t}} с?",
+        "hints": [],
+        "solution": "$q = It$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [4.5, 12, 220]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "u * q"
+        }
+      ],
+      "answer": "a / q",
+      "tolerance": {},
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "При перемещении заряда {{q}} Кл электрическое поле совершило работу {{a}} Дж. Найдите напряжение.",
+        "hints": [],
+        "solution": "$U = \\dfrac{A}{q}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [4, 6, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "u",
+          "expr": "i * r"
+        }
+      ],
+      "answer": "u / i",
+      "tolerance": {},
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите сопротивление проводника, если при напряжении {{u}} В сила тока {{i}} А.",
+        "hints": [],
+        "solution": "$R = \\dfrac{U}{I}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Каким прибором измеряют силу тока и как его включают?",
+        "hints": [],
+        "solution": "Амперметр включают в разрыв цепи.",
+        "options": [
+          "Амперметром, последовательно",
+          "Вольтметром, параллельно",
+          "Амперметром, параллельно",
+          "Вольтметром, последовательно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Каким прибором измеряют напряжение и как его включают?",
+        "hints": [],
+        "solution": "Вольтметр подключают к концам участка.",
+        "options": [
+          "Вольтметром, параллельно участку",
+          "Амперметром, последовательно",
+          "Вольтметром, последовательно",
+          "Омметром, последовательно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и единицей.",
+        "hints": [],
+        "solution": "Единицы СИ.",
+        "options": ["Сила тока", "Напряжение", "Сопротивление", "Заряд"],
+        "matches": ["А", "В", "Ом", "Кл"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Упорядоченное движение заряженных частиц называется электрическим ___.",
+        "hints": [],
+        "solution": "За направление тока принято направление движения положительных зарядов.",
+        "accepted": ["током", "ток"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [200, 500, 1500, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "i / 1000",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите {{i}} мА в амперах.",
+        "hints": [],
+        "solution": "1 мА = 0,001 А."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что нужно для существования электрического тока?",
+        "hints": [],
+        "solution": "Условия существования тока.",
+        "options": [
+          "Свободные заряженные частицы",
+          "Электрическое поле (источник тока)",
+          "Замкнутая цепь",
+          "Магнит",
+          "Диэлектрик"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [5, 8, 12]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "u",
+          "expr": "i * r"
+        }
+      ],
+      "figure": {
+        "kind": "circuit",
+        "mode": "series",
+        "resistors": ["R"],
+        "source": "U",
+        "ammeter": true,
+        "voltmeter": "first"
+      },
+      "answer": "u / i",
+      "tolerance": {},
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Амперметр в цепи (см. рисунок) показывает {{i}} А, вольтметр на резисторе — {{u}} В. Найдите сопротивление резистора.",
+        "hints": [],
+        "solution": "$R = U/I$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию силу тока.",
+        "hints": [],
+        "solution": "0,02 < 0,1 < 0,5 < 2 А.",
+        "options": ["20 мА", "0,1 А", "500 мА", "2 А"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой металл лучше всего проводит ток (наименьшее удельное сопротивление) из перечисленных?",
+        "hints": [],
+        "solution": "Медь — 0,017 Ом·мм²/м.",
+        "options": ["Медь", "Железо", "Никелин", "Нихром"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему провода делают из меди или алюминия?",
+        "hints": [],
+        "solution": "Меньше потери энергии.",
+        "options": [
+          "У них малое удельное сопротивление",
+          "Они дешёвые всегда",
+          "Они не нагреваются",
+          "Они магнитные"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сопротивление проводника прямо пропорционально его ___ и обратно пропорционально площади сечения.",
+        "hints": [],
+        "solution": "$R = \\rho \\dfrac{l}{S}$.",
+        "accepted": ["длине", "длина"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [10, 50, 100, 200]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.017 * l / s",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите сопротивление медного провода длиной {{l}} м и площадью сечения {{s}} мм². $\\rho = 0{,}017$ Ом·мм²/м.",
+        "hints": [],
+        "solution": "$R = \\rho \\dfrac{l}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "1.1 * l / s",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нихромовая спираль ($\\rho = 1{,}1$ Ом·мм²/м) длиной {{l}} м и сечением {{s}} мм². Найдите сопротивление.",
+        "hints": [],
+        "solution": "$R = \\rho \\dfrac{l}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.2, 0.5, 1]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [4, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "r * s / 0.4",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой длины нужен никелиновый провод ($\\rho = 0{,}4$ Ом·мм²/м) сечением {{s}} мм², чтобы его сопротивление было {{r}} Ом?",
+        "hints": [],
+        "solution": "$l = \\dfrac{RS}{\\rho}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [0.16, 0.32, 0.8]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "i * t / 1.6e-19 / 1e18",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "·10¹⁸"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через лампу проходит ток {{i}} А. Сколько электронов проходит через нить за {{t}} с? Ответ — в $10^{18}$ штук ($e = 1{,}6 \\cdot 10^{-19}$ Кл).",
+        "hints": [],
+        "solution": "$N = \\dfrac{It}{e}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится сопротивление проводника, если его длину увеличить в 2 раза?",
+        "hints": [],
+        "solution": "$R \\sim l$.",
+        "options": [
+          "Увеличится в 2 раза",
+          "Уменьшится в 2 раза",
+          "Не изменится",
+          "Увеличится в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится сопротивление, если площадь сечения увеличить в 3 раза?",
+        "hints": [],
+        "solution": "$R \\sim 1/S$.",
+        "options": [
+          "Уменьшится в 3 раза",
+          "Увеличится в 3 раза",
+          "Не изменится",
+          "Уменьшится в 9 раз"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "rho",
+          "kind": "choice",
+          "values": [0.017, 0.028, 0.1, 0.4]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [10, 100]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "r",
+          "expr": "round(rho * l / s, 3)"
+        }
+      ],
+      "answer": "r * s / l",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "Ом·мм²/м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите удельное сопротивление материала провода длиной {{l}} м и сечением {{s}} мм², если его сопротивление {{r}} Ом.",
+        "hints": [],
+        "solution": "$\\rho = \\dfrac{RS}{l}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о сопротивлении проводника.",
+        "hints": [],
+        "solution": "Сопротивление — свойство проводника, а не тока.",
+        "options": [
+          "Оно зависит от материала",
+          "Оно зависит от длины и площади сечения",
+          "Оно зависит от температуры",
+          "Оно зависит от силы тока",
+          "Оно зависит от напряжения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между материалом и удельным сопротивлением (Ом·мм²/м).",
+        "hints": [],
+        "solution": "Табличные значения.",
+        "options": ["Медь", "Алюминий", "Железо", "Нихром"],
+        "matches": ["0,017", "0,028", "0,10", "1,1"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "q",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [4.5, 12, 220]
+        }
+      ],
+      "constraints": [],
+      "answer": "q * u",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую работу совершает поле, перемещая {{q}} Кл заряда при напряжении {{u}} В?",
+        "hints": [],
+        "solution": "$A = qU$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Величина, обратная сопротивлению, называется ___ (единица — сименс).",
+        "hints": [],
+        "solution": "$G = 1/R$.",
+        "accepted": ["проводимостью", "проводимость"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "4",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сечение провода {{d}} мм² увеличили, взяв провод вдвое большего диаметра того же материала и длины. Во сколько раз уменьшилось сопротивление?",
+        "hints": [],
+        "solution": "Площадь круга $\\sim d^2$: в 4 раза больше, сопротивление в 4 раза меньше."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию сопротивление проводов длиной 1 м и сечением 1 мм² из:",
+        "hints": [],
+        "solution": "0,017 < 0,028 < 0,10 < 1,1 Ом.",
+        "options": ["Меди", "Алюминия", "Железа", "Нихрома"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "figure": {
+        "kind": "circuit",
+        "mode": "series",
+        "resistors": ["R"],
+        "source": "U",
+        "ammeter": true,
+        "voltmeter": "first"
+      },
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "На схеме (см. рисунок) вольтметр подключён к резистору. Что он показывает?",
+        "hints": [],
+        "solution": "Вольтметр измеряет напряжение на участке, к которому подключён.",
+        "options": [
+          "Напряжение на резисторе",
+          "Силу тока в цепи",
+          "Сопротивление резистора",
+          "Мощность"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "p * l / s",
+      "variables": ["p", "l", "s"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите сопротивление $r$ провода через удельное сопротивление $p$, длину $l$ и площадь сечения $s$.",
+        "hints": [],
+        "solution": "$R = \\rho \\dfrac{l}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [36, 64, 100]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "r / n^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Провод сопротивлением {{r}} Ом разрезали на {{n}} равных частей и соединили их параллельно (пучком). Каким стало сопротивление?",
+        "hints": [],
+        "solution": "Каждая часть $R/n$; параллельно $n$ одинаковых: $\\dfrac{R/n}{n}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "k^2",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медную проволоку длиной {{l}} м и сечением {{s}} мм² протянули так, что длина увеличилась в {{k}} раза (объём тот же). Во сколько раз выросло сопротивление?",
+        "hints": [],
+        "solution": "Длина в $k$ раз больше, сечение в $k$ раз меньше: $R \\sim l/S$ растёт в $k^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.89, 1.78, 8.9]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "0.017 * (m / (8900 * s * 1e-6)) / s",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса медного провода {{m}} кг, сечение {{s}} мм². Найдите его сопротивление. $\\rho_{эл} = 0{,}017$ Ом·мм²/м, плотность меди 8900 кг/м³.",
+        "hints": [],
+        "solution": "Длина $l = \\dfrac{m}{\\rho_м S}$ (S в м²), затем $R = \\rho \\dfrac{l}{S}$ (S в мм²)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "0.028 / 0.017",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Алюминиевый и медный провода одинаковой длины и сопротивления. Во сколько раз сечение алюминиевого больше? ($0{,}028$ и $0{,}017$ Ом·мм²/м)",
+        "hints": [],
+        "solution": "$\\dfrac{S_а}{S_м} = \\dfrac{\\rho_а}{\\rho_м}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как меняется сопротивление металлического проводника при нагревании?",
+        "hints": [],
+        "solution": "Колебания ионов решётки мешают движению электронов.",
+        "options": ["Увеличивается", "Уменьшается", "Не меняется", "Становится равным нулю"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Амперметр и вольтметр: выберите верные утверждения.",
+        "hints": [],
+        "solution": "Иначе приборы искажают цепь (амперметр напрямую к источнику — короткое замыкание).",
+        "options": [
+          "Сопротивление амперметра должно быть малым",
+          "Сопротивление вольтметра должно быть большим",
+          "Амперметр включают последовательно",
+          "Вольтметр включают последовательно",
+          "Амперметр можно подключить прямо к источнику"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "r * (pi * d^2 / 4) / 0.4",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Для реостата нужно {{r}} Ом. Сколько метров никелиновой проволоки ($\\rho = 0{,}4$ Ом·мм²/м) диаметром {{d}} мм потребуется?",
+        "hints": [],
+        "solution": "$S = \\dfrac{\\pi d^2}{4}$, $l = \\dfrac{RS}{\\rho}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: как изменится сопротивление провода.",
+        "hints": [],
+        "solution": "$R = \\rho l/S$.",
+        "options": [
+          "Длину удвоили",
+          "Сечение удвоили",
+          "Длину и сечение удвоили",
+          "Длину удвоили, сечение уменьшили вдвое"
+        ],
+        "matches": ["×2", "÷2", "Не изменится", "×4"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Переменный резистор, позволяющий плавно менять сопротивление, называется ___.",
+        "hints": [],
+        "solution": "Реостаты регулируют силу тока.",
+        "accepted": ["реостатом", "реостат"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [3, 6, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * 1e20 * 1.6e-19 / (t * 60)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через поперечное сечение проводника за {{t}} мин прошло {{n}} ·10²⁰ электронов. Найдите силу тока ($e = 1{,}6 \\cdot 10^{-19}$ Кл).",
+        "hints": [],
+        "solution": "$q = Ne$, $I = q/t$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию сопротивление медного провода сечением 1 мм² длиной:",
+        "hints": [],
+        "solution": "Сопротивление пропорционально длине.",
+        "options": ["50 см", "2 м", "10 м", "1 км"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему амперметр нельзя подключать параллельно лампе?",
+        "hints": [],
+        "solution": "Почти весь ток пойдёт через амперметр.",
+        "options": [
+          "Его малое сопротивление шунтирует лампу, ток резко возрастёт",
+          "Он покажет напряжение",
+          "Он сгорит от напряжения 0",
+          "Ничего не случится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1.7, 3.4, 8.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "r * 0.028 / 0.017",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сопротивление медного провода {{r}} Ом. Каким будет сопротивление алюминиевого провода той же длины и сечения? ($0{,}017$ и $0{,}028$ Ом·мм²/м)",
+        "hints": [],
+        "solution": "$R \\sim \\rho$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о единицах.",
+        "hints": [],
+        "solution": "Определения единиц.",
+        "options": [
+          "1 Ом = 1 В / 1 А",
+          "1 А = 1 Кл / 1 с",
+          "1 В = 1 Дж / 1 Кл",
+          "1 Ом = 1 А / 1 В",
+          "1 Кл = 1 А / 1 с"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "r / n^2",
+      "variables": ["r", "n"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Провод сопротивлением $r$ разрезали на $n$ равных частей и соединили параллельно. Запишите новое сопротивление.",
+        "hints": [],
+        "solution": "Каждая часть $r/n$, параллельно: $r/n^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.89, 8.9]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1.7, 17]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(m * r / (8900 * 1.7e-8))",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медный провод массой {{m}} кг имеет сопротивление {{r}} Ом. Найдите его длину. $\\rho_{эл} = 1{,}7 \\cdot 10^{-8}$ Ом·м, плотность 8900 кг/м³.",
+        "hints": [],
+        "solution": "$R = \\rho_{эл}\\dfrac{l}{S}$, $m = \\rho_м l S$ ⇒ $l^2 = \\dfrac{mR}{\\rho_м \\rho_{эл}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [8, 16, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "r / 4",
+      "tolerance": {},
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проволоку сопротивлением {{r}} Ом согнули в кольцо. Каково сопротивление между двумя диаметрально противоположными точками кольца?",
+        "hints": [],
+        "solution": "Две половины по $R/2$ параллельно: $R/4$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [16, 32, 64]
+        }
+      ],
+      "constraints": [],
+      "answer": "r / 4 * 3 / 4",
+      "tolerance": {},
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проволоку сопротивлением {{r}} Ом согнули в кольцо. Каково сопротивление между точками, делящими кольцо в отношении 1 : 3?",
+        "hints": [],
+        "solution": "Части $R/4$ и $3R/4$ параллельно: $\\dfrac{R/4 \\cdot 3R/4}{R} = \\dfrac{3R}{16}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медный и алюминиевый провода одинаковой длины и массы. У какого сопротивление больше? (ρ: медь 0,017, Al 0,028 Ом·мм²/м; плотности 8900 и 2700 кг/м³)",
+        "hints": [],
+        "solution": "$R = \\dfrac{\\rho_{эл} \\rho_м l^2}{m}$: медь $0{,}017 \\cdot 8900 = 151$, алюминий $0{,}028 \\cdot 2700 = 76$.",
+        "options": ["У медного", "У алюминиевого", "Одинаковы", "Нельзя определить"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r0",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [220]
+        }
+      ],
+      "constraints": [],
+      "answer": "k",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сопротивление вольфрамовой нити лампы при 20 °C {{r0}} Ом, а в горящем состоянии в {{k}} раз больше. Какой ток идёт в первый момент включения и в рабочем режиме при {{u}} В? Найдите отношение (пусковой ток / рабочий).",
+        "hints": [],
+        "solution": "$I \\sim 1/R$: холодная нить имеет в $k$ раз меньшее сопротивление."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о сверхпроводимости.",
+        "hints": [],
+        "solution": "Явление открыто Камерлинг-Оннесом (ртуть, 4,2 К).",
+        "options": [
+          "Сопротивление некоторых веществ при очень низкой температуре становится равным нулю",
+          "Ток в сверхпроводящем кольце может течь без источника",
+          "Сверхпроводники используют в мощных электромагнитах",
+          "Сверхпроводимость наблюдается у всех металлов при 0 °C",
+          "Сверхпроводник сильно нагревается током"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [10, 100, 1000]
+        }
+      ],
+      "constraints": [],
+      "answer": "u",
+      "tolerance": {},
+      "unit": "эВ"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Электрон движется под действием поля, пройдя разность потенциалов {{u}} В. Какую энергию (в эВ) он приобрёл?",
+        "hints": [],
+        "solution": "$W = eU$; 1 эВ — энергия электрона, прошедшего 1 В."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "s * 0.017 / 1.1",
+      "tolerance": {},
+      "decimals": 4,
+      "unit": "мм²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Провод из нихрома сечением {{s}} мм² нужно заменить медным той же длины и сопротивления. Какое сечение должен иметь медный провод (мм²)? ($1{,}1$ и $0{,}017$ Ом·мм²/м)",
+        "hints": [],
+        "solution": "$\\dfrac{\\rho_1}{S_1} = \\dfrac{\\rho_2}{S_2}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию сопротивление (одинаковый материал):",
+        "hints": [],
+        "solution": "0,25 < 1 < 2 < 8 (в единицах ρ).",
+        "options": [
+          "l = 1 м, S = 4 мм²",
+          "l = 1 м, S = 1 мм²",
+          "l = 4 м, S = 2 мм²",
+          "l = 8 м, S = 1 мм²"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между прибором и его правильным сопротивлением.",
+        "hints": [],
+        "solution": "Свойства приборов и материалов.",
+        "options": ["Амперметр", "Вольтметр", "Изолятор", "Сверхпроводник"],
+        "matches": ["Очень малое", "Очень большое", "Практически бесконечное", "Равно нулю"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы амперметром с пределом 1 А измерять большие токи, параллельно ему подключают ___.",
+        "hints": [],
+        "solution": "Шунт — резистор малого сопротивления.",
+        "accepted": ["шунт"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "ra",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        },
+        {
+          "name": "ia",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "ra * ia / (i - ia)",
+      "tolerance": {},
+      "decimals": 4,
+      "unit": "Ом"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Амперметр сопротивлением {{ra}} Ом рассчитан на {{ia}} А. Какое сопротивление шунта нужно, чтобы измерять токи до {{i}} А?",
+        "hints": [],
+        "solution": "Напряжения равны: $I_а R_а = (I - I_а) R_ш$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "rv",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "uv",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "rv * (u / uv - 1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кОм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вольтметр сопротивлением {{rv}} кОм рассчитан на {{uv}} В. Какое добавочное сопротивление (кОм) нужно включить последовательно, чтобы измерять до {{u}} В?",
+        "hints": [],
+        "solution": "Ток прибора $U_в/R_в$ тот же: $R_д = R_в\\left(\\dfrac{U}{U_в} - 1\\right)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему лампы накаливания чаще перегорают в момент включения?",
+        "hints": [],
+        "solution": "Сопротивление металла растёт с температурой.",
+        "options": [
+          "Холодная нить имеет малое сопротивление, пусковой ток велик",
+          "Напряжение в момент включения выше",
+          "Нить холодная и хрупкая",
+          "Из-за магнитного поля"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * x / (y - x)",
+      "variables": ["a", "x", "y"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Амперметр сопротивлением $a$ с пределом $x$ ампер шунтируют для предела $y$ ампер. Запишите сопротивление шунта.",
+        "hints": [],
+        "solution": "$R_ш = \\dfrac{R_а I_а}{I - I_а}$."
+      }
+    }
+  }
+]
