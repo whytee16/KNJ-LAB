@@ -1,0 +1,1432 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(h / 5)",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили горизонтально с высоты {{h}} м. Сколько секунд он летит? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "По вертикали — свободное падение: $t = \\sqrt{2h/g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * t",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен горизонтально со скоростью {{v}} м/с и летел {{t}} с. Найдите дальность полёта.",
+        "hints": [],
+        "solution": "По горизонтали движение равномерное: $L = v_0 t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "v * sqrt(h / 5) * 1.2"],
+        "y": [0, "h * 1.2"],
+        "functions": [
+          {
+            "expr": "h - 5 * x^2 / v^2"
+          }
+        ],
+        "axes": {
+          "x": "x, м",
+          "y": "y, м"
+        }
+      },
+      "answer": "v * sqrt(h / 5)",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень брошен горизонтально со скоростью {{v}} м/с с высоты {{h}} м (см. рисунок). Найдите дальность полёта. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$t = \\sqrt{2h/g}$, $L = v_0 t$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое движение совершает тело, брошенное горизонтально, вдоль горизонтали (без сопротивления)?",
+        "hints": [],
+        "solution": "По горизонтали сил нет.",
+        "options": ["Равномерное", "Равноускоренное", "Покой", "Колебательное"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое движение по вертикали совершает тело, брошенное горизонтально?",
+        "hints": [],
+        "solution": "По вертикали действует только сила тяжести.",
+        "options": ["Свободное падение", "Равномерное", "Покой", "Движение вверх"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Траектория тела, брошенного горизонтально, — ___.",
+        "hints": [],
+        "solution": "Сочетание равномерного и равноускоренного движений.",
+        "accepted": ["парабола", "ветвь параболы", "параболой"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен горизонтально. Выберите верные утверждения (без сопротивления).",
+        "hints": [],
+        "solution": "Независимость движений.",
+        "options": [
+          "Горизонтальная скорость постоянна",
+          "Вертикальная скорость растёт",
+          "Время полёта зависит только от высоты",
+          "Время полёта зависит от начальной скорости",
+          "Траектория — прямая"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Одновременно с одной высоты один шарик бросили горизонтально, другой уронили. Какой упадёт раньше?",
+        "hints": [],
+        "solution": "Вертикальные движения одинаковы.",
+        "options": ["Одновременно", "Брошенный", "Уроненный", "Зависит от массы"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие (бросок горизонтально с высоты 20 м, $v_0 = 10$ м/с, $g = 10$).",
+        "hints": [],
+        "solution": "Расчёт по формулам.",
+        "options": [
+          "Время полёта",
+          "Дальность",
+          "Горизонтальная скорость при падении",
+          "Вертикальная скорость при падении"
+        ],
+        "matches": ["2 с", "20 м", "10 м/с", "20 м/с"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию время полёта при горизонтальном броске с высоты:",
+        "hints": [],
+        "solution": "1, 2, 3, 5 с.",
+        "options": ["5 м", "20 м", "45 м", "125 м"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * t",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую вертикальную скорость приобретёт тело, брошенное горизонтально, через {{t}} с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v_y = gt$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится дальность горизонтального броска, если начальную скорость удвоить (высота та же)?",
+        "hints": [],
+        "solution": "Время то же, $L = v_0t$.",
+        "options": ["Удвоится", "Увеличится в 4 раза", "Не изменится", "Уменьшится"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Движение тела, брошенного горизонтально, раскладывают на горизонтальное ___ и вертикальное равноускоренное.",
+        "hints": [],
+        "solution": "Принцип независимости движений.",
+        "accepted": ["равномерное"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 1.5, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * t^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой высоты брошен горизонтально мяч, если он летел {{t}} с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = gt^2/2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему струя воды из шланга изгибается вниз?",
+        "hints": [],
+        "solution": "Траектория — парабола.",
+        "options": [
+          "Каждая капля движется как тело, брошенное горизонтально",
+          "Шланг изогнут",
+          "Вода тяжелее воздуха",
+          "Ветер давит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "l / sqrt(h / 5)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой скоростью нужно бросить горизонтально камень с высоты {{h}} м, чтобы он упал на расстоянии {{l}} м? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$t = \\sqrt{2h/g}$, $v_0 = L/t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(v^2 + 20 * h)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен горизонтально со скоростью {{v}} м/с с высоты {{h}} м. Найдите модуль скорости при падении. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v = \\sqrt{v_0^2 + v_y^2}$, $v_y^2 = 2gh$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * 0.87",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен под углом 30° к горизонту со скоростью {{v}} м/с. Найдите горизонтальную составляющую скорости. Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$.",
+        "hints": [],
+        "solution": "$v_x = v_0\\cos\\alpha$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * 0.5 / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено под углом 30° со скоростью {{v}} м/с. Найдите время подъёма до наивысшей точки. Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$t = \\dfrac{v_0\\sin\\alpha}{g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v * 0.5)^2 / 20",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено под углом 30° со скоростью {{v}} м/с. Найдите наибольшую высоту. Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$H = \\dfrac{v_0^2\\sin^2\\alpha}{2g}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "При каком угле броска дальность полёта (на ровной площадке, без сопротивления) максимальна?",
+        "hints": [],
+        "solution": "$L = \\dfrac{v_0^2\\sin 2\\alpha}{g}$, максимум при $2\\alpha = 90°$.",
+        "options": ["45°", "30°", "60°", "90°"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите дальность полёта тела, брошенного под углом 45° со скоростью {{v}} м/с. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$L = \\dfrac{v_0^2\\sin 90°}{g}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено под углом к горизонту. Выберите верные утверждения (без сопротивления).",
+        "hints": [],
+        "solution": "Свойства движения под углом.",
+        "options": [
+          "В верхней точке скорость горизонтальна",
+          "Горизонтальная составляющая скорости постоянна",
+          "Ускорение всё время $g$ вниз",
+          "В верхней точке скорость равна нулю",
+          "Ускорение меняется по направлению"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v * 0.87 / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите время полёта тела, брошенного под углом 60° со скоростью {{v}} м/с (до возвращения на ту же высоту). Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$T = \\dfrac{2v_0\\sin\\alpha}{g}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Углы броска 30° и 60° дают ___ дальность полёта при одинаковой начальной скорости.",
+        "hints": [],
+        "solution": "$\\sin 60° = \\sin 120°$.",
+        "accepted": ["одинаковую", "равную"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие ($v_0 = 20$ м/с, угол 30°, $g = 10$).",
+        "hints": [],
+        "solution": "Расчёт составляющих.",
+        "options": ["$v_x$", "$v_y$ в начале", "Время подъёма", "Наибольшая высота"],
+        "matches": ["≈ 17,4 м/с", "10 м/с", "1 с", "5 м"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию наибольшую высоту при $v_0 = 20$ м/с и угле:",
+        "hints": [],
+        "solution": "Высота растёт с $\\sin^2\\alpha$.",
+        "options": ["15°", "30°", "45°", "60°"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится дальность полёта при броске под углом, если начальную скорость удвоить?",
+        "hints": [],
+        "solution": "$L \\sim v_0^2$.",
+        "options": ["Увеличится в 4 раза", "В 2 раза", "Не изменится", "В 8 раз"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "v / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через какое время скорость горизонтально брошенного со скоростью {{v}} м/с тела будет направлена под углом 45° к горизонту? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "При 45° $v_y = v_x$: $gt = v_0$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "v * sqrt(2 * h / g)",
+      "variables": ["v", "h", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите дальность горизонтального броска со скоростью $v$ с высоты $h$ ($g$).",
+        "hints": [],
+        "solution": "$L = v_0\\sqrt{2h/g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "h / sqrt(h / 5)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено горизонтально с высоты {{h}} м и упало на расстоянии, равном высоте. Найдите начальную скорость. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$L = h$: $v_0 = h/\\sqrt{2h/g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * t / v",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Под каким углом к горизонту (тангенс) направлена скорость тела, брошенного горизонтально со скоростью {{v}} м/с, через {{t}} с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$\\operatorname{tg}\\varphi = \\dfrac{v_y}{v_x} = \\dfrac{gt}{v_0}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 * 0.87 / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите дальность полёта мяча, брошенного под углом 30° со скоростью {{v}} м/с. Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$L = \\dfrac{v_0^2\\sin 60°}{g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [10, 40, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(10 * l)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен под углом 45° и упал на расстоянии {{l}} м. Найдите начальную скорость. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$L = v_0^2/g$ при 45°."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как соотносятся дальность и наибольшая высота при броске под углом 45°?",
+        "hints": [],
+        "solution": "$L = v_0^2/g$, $H = v_0^2/(4g)$.",
+        "options": [
+          "Дальность в 4 раза больше высоты",
+          "Равны",
+          "Дальность вдвое больше",
+          "Высота больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [20, 45]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(h^2 + (v * sqrt(h / 5))^2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень бросили горизонтально с обрыва высотой {{h}} м со скоростью {{v}} м/с. На каком расстоянии от точки броска (по прямой) он упадёт? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Перемещение — гипотенуза: $\\sqrt{h^2 + L^2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два тела брошены с одинаковой скоростью под углами 30° и 60°. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Анализ формул.",
+        "options": [
+          "Дальности равны",
+          "Высота при 60° больше",
+          "Время полёта при 60° больше",
+          "Время полёта одинаково",
+          "Дальность при 60° вдвое больше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [500, 720, 2000]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * sqrt(h / 5)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самолёт летит горизонтально на высоте {{h}} м со скоростью {{v}} м/с. За сколько метров до цели нужно сбросить груз? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Груз сохраняет скорость самолёта по горизонтали."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: угол броска → дальность при $v_0 = 10$ м/с ($g = 10$).",
+        "hints": [],
+        "solution": "$L = v_0^2\\sin 2\\alpha/g$.",
+        "options": ["15°", "30°", "45°", "75°"],
+        "matches": ["5 м", "≈ 8,7 м", "10 м", "5 м (как при 15°)"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Наибольшая дальность полёта при броске с земли достигается при угле ___°.",
+        "hints": [],
+        "solution": "Без сопротивления воздуха.",
+        "accepted": ["45"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию время полёта при $v_0 = 20$ м/с и угле:",
+        "hints": [],
+        "solution": "$T \\sim \\sin\\alpha$.",
+        "options": ["15°", "30°", "45°", "60°"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему реальная дальность полёта ядра меньше расчётной?",
+        "hints": [],
+        "solution": "Сопротивление уменьшает дальность; оптимальный угол становится меньше 45°.",
+        "options": [
+          "Мешает сопротивление воздуха",
+          "Ядро тяжелее",
+          "Неверна формула",
+          "Ветер всегда встречный"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * sqrt(k^2 - 1) / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен горизонтально со скоростью {{v}} м/с. Через сколько секунд его скорость станет {{k}} раза больше начальной? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v^2 = v_0^2 + (gt)^2 = k^2v_0^2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о траектории под углом к горизонту.",
+        "hints": [],
+        "solution": "Без сопротивления траектория — симметричная парабола.",
+        "options": [
+          "Она симметрична относительно вертикали через вершину",
+          "Скорости в симметричных точках равны по модулю",
+          "Время подъёма равно времени спуска",
+          "Ветвь спуска круче ветви подъёма без сопротивления",
+          "Скорость в вершине максимальна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "v^2 / g",
+      "variables": ["v", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите дальность полёта тела, брошенного под углом 45° со скоростью $v$ ($g$).",
+        "hints": [],
+        "solution": "$L = v^2\\sin 90°/g$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v * 0.5 + sqrt((v * 0.5)^2 + 20 * h)) / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен со скоростью {{v}} м/с под углом 30° к горизонту с высоты {{h}} м. Найдите время полёта до земли. Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$-h = v_0\\sin\\alpha\\, t - \\dfrac{gt^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "v * 0.87 * (v * 0.5 + sqrt((v * 0.5)^2 + 20 * h)) / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен со скоростью {{v}} м/с под углом 30° с высоты {{h}} м. Найдите дальность полёта. Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$L = v_0\\cos\\alpha \\cdot t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1.25, 5, 7.2]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(20 * h)",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой наименьшей скоростью нужно бросить камень с земли, чтобы он перелетел через забор высотой {{h}} м? Ответ — вертикальная составляющая (м/с). $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v_y^2 \\ge 2gh$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость тела в верхней точке траектории вдвое меньше начальной. Под каким углом его бросили?",
+        "hints": [],
+        "solution": "$\\cos\\alpha = 0{,}5$.",
+        "options": ["60°", "30°", "45°", "75°"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "4",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено под углом, его дальность равна наибольшей высоте. Найдите тангенс угла броска.",
+        "hints": [],
+        "solution": "$L = H$: $\\dfrac{v_0^2 \\cdot 2\\sin\\alpha\\cos\\alpha}{g} = \\dfrac{v_0^2\\sin^2\\alpha}{2g}$ ⇒ $\\operatorname{tg}\\alpha = 4$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о кинетической энергии тела, брошенного под углом (без сопротивления).",
+        "hints": [],
+        "solution": "В вершине остаётся $mv_x^2/2$.",
+        "options": [
+          "Она минимальна в верхней точке",
+          "В верхней точке она не равна нулю",
+          "При падении на ту же высоту она равна начальной",
+          "В верхней точке она равна нулю",
+          "Она постоянна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [20, 45]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v2 - v1) * sqrt(h / 5)",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С башни высотой {{h}} м бросили горизонтально два камня со скоростями {{v1}} и {{v2}} м/с. Найдите расстояние между точками падения. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Время одинаково: $\\Delta L = (v_2 - v_1)t$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи о броске под углом с высоты.",
+        "hints": [],
+        "solution": "Метод координат.",
+        "options": [
+          "Разложить скорость на $v_x$ и $v_y$",
+          "Записать уравнение для $y(t)$ и найти время полёта",
+          "Найти дальность $x = v_x t$",
+          "Найти скорость при падении по составляющим"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: горизонтальный бросок с высоты 45 м, $v_0 = 20$ м/с, $g = 10$.",
+        "hints": [],
+        "solution": "$v_y = 30$ м/с.",
+        "options": [
+          "Время",
+          "Дальность",
+          "Скорость при падении",
+          "Тангенс угла падения к горизонту"
+        ],
+        "matches": ["3 с", "60 м", "≈ 36 м/с", "1,5"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "При броске под углом $\\alpha$ уравнение траектории: $y = x\\operatorname{tg}\\alpha - \\dfrac{g x^2}{2v_0^2\\cos^2\\alpha}$ — это ___.",
+        "hints": [],
+        "solution": "Квадратичная зависимость $y(x)$.",
+        "accepted": ["парабола", "параболой"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [15, 20]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": ["h - 5 * (d / v)^2 > 0"],
+      "answer": "h - 5 * (d / v)^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен горизонтально со скоростью {{v}} м/с из окна на высоте {{h}} м и попал в стену дома напротив на расстоянии {{d}} м. На какой высоте от земли он ударился о стену? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Время до стены $d/v$; снижение $g t^2/2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две пушки стреляют под углами 30° и 60° с одинаковой скоростью. Какой снаряд дольше в полёте?",
+        "hints": [],
+        "solution": "$T = 2v_0\\sin\\alpha/g$.",
+        "options": ["Под 60°", "Под 30°", "Одинаково", "Зависит от массы"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt((v * 0.5)^2 + (v * 0.87 - 10 * t)^2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено под углом 60° со скоростью {{v}} м/с. Найдите его скорость через {{t}} с. Считайте $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$, $\\sin 45° = \\cos 45° \\approx 0{,}71$, $\\sin 60° \\approx 0{,}87$, $\\cos 60° = 0{,}5$. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v_x = v_0\\cos\\alpha$, $v_y = v_0\\sin\\alpha - gt$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите факторы, увеличивающие дальность горизонтального броска.",
+        "hints": [],
+        "solution": "$L = v_0\\sqrt{2h/g}$.",
+        "options": [
+          "Большая высота",
+          "Большая начальная скорость",
+          "Меньшее ускорение свободного падения (на Луне)",
+          "Большая масса тела",
+          "Меньшая высота"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "u^2 / (2 * g)",
+      "variables": ["u", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите наибольшую высоту подъёма тела, брошенного под углом с вертикальной составляющей скорости $u$ ($g$).",
+        "hints": [],
+        "solution": "$H = \\dfrac{v_y^2}{2g}$."
+      }
+    }
+  }
+]

@@ -1,0 +1,1413 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * t",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень падает без начальной скорости. Какую скорость он наберёт за {{t}} с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v = gt$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * t^2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой путь пролетит тело за {{t}} с свободного падения из покоя? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = \\dfrac{gt^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * t^2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой высоты упало тело, если падение длилось {{t}} с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = \\dfrac{gt^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "v / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили вертикально вверх со скоростью {{v}} м/с. Через сколько секунд он достигнет верхней точки? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$t = \\dfrac{v_0}{g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / 20",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На какую высоту поднимется мяч, брошенный вверх со скоростью {{v}} м/с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = \\dfrac{v_0^2}{2g}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что называют свободным падением?",
+        "hints": [],
+        "solution": "Сопротивление воздуха не учитывают.",
+        "options": [
+          "Движение только под действием силы тяжести",
+          "Любое падение",
+          "Падение в воде",
+          "Движение с постоянной скоростью"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как падают в вакуумной трубке перо и монета?",
+        "hints": [],
+        "solution": "В вакууме все тела падают с одинаковым ускорением.",
+        "options": ["Одновременно", "Монета быстрее", "Перо быстрее", "Перо не падает"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение свободного падения у поверхности Земли примерно равно ___ м/с².",
+        "hints": [],
+        "solution": "Обозначается $g$.",
+        "accepted": ["9,8", "9.8", "10"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о свободном падении.",
+        "hints": [],
+        "solution": "Свойства свободного падения.",
+        "options": [
+          "Ускорение одинаково для всех тел",
+          "Ускорение направлено вниз",
+          "Скорость растёт на ≈ 10 м/с каждую секунду",
+          "Тяжёлые тела падают быстрее в вакууме",
+          "Ускорение равно нулю в верхней точке"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие (падение из покоя, $g = 10$ м/с²).",
+        "hints": [],
+        "solution": "$v = gt$, $h = gt^2/2$.",
+        "options": ["Через 1 с: скорость", "Через 2 с: скорость", "За 1 с: путь", "За 2 с: путь"],
+        "matches": ["10 м/с", "20 м/с", "5 м", "20 м"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию высоту падения за время:",
+        "hints": [],
+        "solution": "5, 20, 45, 80 м.",
+        "options": ["1 с", "2 с", "3 с", "4 с"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему лист бумаги падает медленнее камня в воздухе?",
+        "hints": [],
+        "solution": "В воздухе мешает сопротивление.",
+        "options": [
+          "На лист сильнее действует сопротивление воздуха",
+          "Лист легче притягивается Землёй всегда",
+          "Камень притягивается сильнее",
+          "Лист не падает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1.5, 2.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * t",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело падало {{t}} с. Найдите его скорость при ударе о землю. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v = gt$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чему равна скорость тела, брошенного вверх, в верхней точке?",
+        "hints": [],
+        "solution": "Тело на мгновение останавливается.",
+        "options": ["Нулю", "Начальной скорости", "g", "Бесконечности"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение свободного падения на Луне примерно в ___ раз меньше, чем на Земле.",
+        "hints": [],
+        "solution": "$g_Л \\approx 1{,}6$ м/с².",
+        "accepted": ["6", "шесть"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(20 * h)",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой скоростью тело упадёт на землю с высоты {{h}} м? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v = \\sqrt{2gh}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45, 125]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(h / 5)",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько времени падает тело с высоты {{h}} м? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$t = \\sqrt{2h/g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v / 10",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили вверх со скоростью {{v}} м/с. Через сколько секунд он вернётся в точку броска? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Время подъёма $v_0/g$, полное — вдвое больше."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [15, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(v0^2 + 20 * h)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело бросили вниз со скоростью {{v0}} м/с с высоты {{h}} м. Какую скорость оно будет иметь у земли? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v^2 = v_0^2 + 2gh$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * (2 * n - 1)",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой путь пролетит падающее тело за {{n}}-ю секунду падения? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h_n = \\dfrac{g(2n - 1)}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится время падения, если высоту увеличить в 4 раза?",
+        "hints": [],
+        "solution": "$t \\sim \\sqrt{h}$.",
+        "options": ["Увеличится в 2 раза", "В 4 раза", "В 16 раз", "Не изменится"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 * v^2 / 80",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен вверх со скоростью {{v}} м/с. На какой высоте его скорость уменьшится вдвое? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = \\dfrac{v_0^2 - (v_0/2)^2}{2g} = \\dfrac{3v_0^2}{8g}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен вверх со скоростью 20 м/с ($g = 10$ м/с²). Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Расчёт по формулам.",
+        "options": [
+          "Он поднимется на 20 м",
+          "Время подъёма 2 с",
+          "Он вернётся через 4 с",
+          "Через 3 с он будет двигаться вверх",
+          "В верхней точке ускорение равно нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20, 25, 30]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": ["v * t - 5 * t^2 > 0"],
+      "answer": "v * t - 5 * t^2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На какой высоте окажется мяч, брошенный вверх со скоростью {{v}} м/с, через {{t}} с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = v_0t - \\dfrac{gt^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Время подъёма тела, брошенного вертикально вверх, равно времени ___ до точки броска.",
+        "hints": [],
+        "solution": "Движение симметрично.",
+        "accepted": ["падения"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: мяч брошен вверх со скоростью 30 м/с ($g = 10$).",
+        "hints": [],
+        "solution": "Формулы вертикального броска.",
+        "options": ["Время подъёма", "Наибольшая высота", "Время полёта", "Скорость через 1 с"],
+        "matches": ["3 с", "45 м", "6 с", "20 м/с вверх"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию время падения с высоты:",
+        "hints": [],
+        "solution": "1, 2, 3, 4 с.",
+        "options": ["5 м", "20 м", "45 м", "80 м"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень бросили вверх и одновременно другой — вниз с той же скоростью с той же высоты. Сравните их скорости у земли.",
+        "hints": [],
+        "solution": "Закон сохранения энергии: $v^2 = v_0^2 + 2gh$ для обоих.",
+        "options": [
+          "Одинаковы",
+          "Больше у брошенного вверх",
+          "Больше у брошенного вниз",
+          "Зависит от массы"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(h / 5) - sqrt((h - 1) / 5)",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Капля упала с крыши высотой {{h}} м. За какое время она пролетела последний метр? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Разность времён падения с $h$ и с $h - 1$ м."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "v^2 / (2 * g)",
+      "variables": ["v", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите наибольшую высоту подъёма тела, брошенного вверх со скоростью $v$ ($g$ — ускорение свободного падения).",
+        "hints": [],
+        "solution": "$h = v^2/(2g)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [45, 80, 125, 180]
+        }
+      ],
+      "constraints": [],
+      "answer": "h - 5 * (sqrt(h / 5) - 1)^2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело свободно падает с высоты {{h}} м. Какой путь оно проходит за последнюю секунду? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Всё время $t = \\sqrt{2h/g}$; путь за последнюю секунду $h - \\dfrac{g(t - 1)^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v + sqrt(v^2 + 20 * h)) / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили вверх со скоростью {{v}} м/с с балкона высотой {{h}} м. Через сколько секунд он упадёт на землю? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$-h = v_0t - \\dfrac{gt^2}{2}$, положительный корень."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * t",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой начальной скоростью нужно бросить мяч вверх, чтобы он вернулся через {{t}} с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Подъём занимает $t/2$: $v_0 = g\\dfrac{t}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * ((t + dt)^2 - t^2)",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два тела падают из одной точки, второе начинает падение на {{dt}} с позже. Каким будет расстояние между ними через {{t}} с после начала падения второго? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$\\Delta h = \\dfrac{g(t + \\tau)^2}{2} - \\dfrac{gt^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как зависит расстояние между двумя телами, падающими одно за другим с интервалом в 1 с?",
+        "hints": [],
+        "solution": "Разность скоростей постоянна ($g\\tau$), расстояние растёт линейно.",
+        "options": [
+          "Растёт со временем",
+          "Постоянно",
+          "Уменьшается",
+          "Сначала растёт, потом уменьшается"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * t^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень бросили в колодец, всплеск услышали через {{t}} с. Пренебрегая временем звука, найдите глубину. $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = gt^2/2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено вверх. Выберите верные утверждения (без сопротивления).",
+        "hints": [],
+        "solution": "Симметрия движения.",
+        "options": [
+          "На одной высоте при подъёме и спуске скорость по модулю одинакова",
+          "Время подъёма до максимальной высоты равно $v_0/g$",
+          "В верхней точке ускорение $g$",
+          "Время спуска больше времени подъёма",
+          "Скорость при возвращении больше начальной"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45]
+        }
+      ],
+      "constraints": [],
+      "answer": "h * 1.6 / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение свободного падения на Луне 1,6 м/с². С какой высоты нужно уронить тело на Луне, чтобы оно падало столько же времени, сколько с {{h}} м на Земле ($g = 10$)?",
+        "hints": [],
+        "solution": "$t = \\sqrt{2h/g}$ одинаково: $h_Л = h\\dfrac{g_Л}{g}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие для тела, брошенного вверх со скоростью 20 м/с ($g = 10$).",
+        "hints": [],
+        "solution": "$h = v_0t - gt^2/2$, $v = v_0 - gt$.",
+        "options": ["t = 1 с", "t = 2 с", "t = 3 с", "t = 4 с"],
+        "matches": ["15 м, 10 м/с вверх", "20 м, 0", "15 м, 10 м/с вниз", "0 м, 20 м/с вниз"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Галилей показал, что в отсутствие сопротивления тела разной массы падают с ___ ускорением.",
+        "hints": [],
+        "solution": "Опыты Галилея.",
+        "accepted": ["одинаковым", "одним и тем же"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию скорость падения у земли с высоты (без сопротивления):",
+        "hints": [],
+        "solution": "5, 10, 20, 40 м/с.",
+        "options": ["1,25 м", "5 м", "20 м", "80 м"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [15, 25]
+        }
+      ],
+      "constraints": ["v^2 > 20 * h"],
+      "answer": "(v + sqrt(v^2 - 20 * h)) / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен вверх со скоростью {{v}} м/с. Через какое время он будет на высоте {{h}} м при спуске? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$h = v_0t - \\dfrac{gt^2}{2}$, больший корень."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему парашютист сначала разгоняется, а потом падает равномерно?",
+        "hints": [],
+        "solution": "Установившаяся скорость.",
+        "options": [
+          "Сила сопротивления растёт со скоростью и уравновешивает силу тяжести",
+          "Сила тяжести уменьшается",
+          "Воздух становится плотнее",
+          "Парашютист теряет массу"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [20, 40, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 * h / 4",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело падает с высоты {{h}} м. На какой высоте его скорость равна половине конечной? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "$v^2 \\sim$ пройденному пути: половина скорости — четверть пути. Высота $h - h/4$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "sqrt(v^2 + 2 * g * h)",
+      "variables": ["v", "g", "h"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено вверх со скоростью $v$ с высоты $h$. Запишите скорость при ударе о землю ($g$).",
+        "hints": [],
+        "solution": "Закон сохранения энергии."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [20, 45, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(h / 5) + h / 340",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень бросили в колодец глубиной {{h}} м. Через какое время услышат всплеск, если скорость звука 340 м/с? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Время падения $\\sqrt{2h/g}$ плюс время звука $h/v_{зв}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [20, 25]
+        },
+        {
+          "name": "dt",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v2 * dt + 5 * dt^2) / (v2 - v1 + 10 * dt)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч бросили вверх со скоростью {{v1}} м/с, через {{dt}} с из той же точки — второй со скоростью {{v2}} м/с. Через сколько секунд после броска первого они встретятся? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Приравниваем высоты: $v_1t - 5t^2 = v_2(t - \\tau) - 5(t - \\tau)^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [0.75]
+        }
+      ],
+      "constraints": [],
+      "answer": "5 * (t / (1 - sqrt(1 - k)))^2",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело свободно падает. За последние {{t}} с оно прошло {{k}} пути. С какой высоты оно падало ($k$ — доля)? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Пусть всё время $T$: $\\dfrac{(T - t)^2}{T^2} = 1 - k$, $T = \\dfrac{t}{1 - \\sqrt{1 - k}}$, $h = gT^2/2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В лифте, падающем свободно, мяч выпустили из рук. Что увидит человек в лифте?",
+        "hints": [],
+        "solution": "Оба движутся с ускорением $g$ — невесомость.",
+        "options": [
+          "Мяч «повиснет» рядом с рукой",
+          "Мяч упадёт на пол",
+          "Мяч полетит вверх",
+          "Мяч упадёт быстрее обычного"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1.5, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a / t - 5 * t)^2 / 20",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сосулька падает с крыши и пролетает окно высотой {{a}} м за {{t}} с. С какой высоты над верхним краем окна она начала падать? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Скорость у верхнего края $v$: $a = vt + \\dfrac{gt^2}{2}$ ⇒ $v = \\dfrac{a}{t} - \\dfrac{gt}{2}$; $h = \\dfrac{v^2}{2g}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено вверх со скоростью $v_0$. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Путь вдвое больше высоты подъёма.",
+        "options": [
+          "Средняя скорость за время подъёма $v_0/2$",
+          "Перемещение за всё время полёта до точки броска равно нулю",
+          "Путь за время полёта $v_0^2/g$",
+          "Средняя путевая скорость за полёт равна нулю",
+          "Время полёта $v_0/g$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [20, 40]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v / 10",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С высоты {{h}} м одновременно бросили два мяча: один вверх, другой вниз, с одинаковыми скоростями {{v}} м/с. Через сколько секунд после первого упадёт второй (брошенный вверх)? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Мяч, брошенный вверх, возвращается в точку броска через $2v/g$ уже со скоростью $v$ вниз — далее как второй."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию время полёта мяча, брошенного вверх с земли со скоростью:",
+        "hints": [],
+        "solution": "1, 2, 3, 5 с.",
+        "options": ["5 м/с", "10 м/с", "15 м/с", "25 м/с"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между планетой ($g$) и высотой подъёма при $v_0 = 10$ м/с.",
+        "hints": [],
+        "solution": "$h = v_0^2/(2g)$.",
+        "options": ["Земля, 10 м/с²", "Луна, 1,6 м/с²", "Марс, 3,7 м/с²", "Юпитер, 25 м/с²"],
+        "matches": ["5 м", "31,25 м", "≈ 13,5 м", "2 м"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Если тело брошено вниз со скоростью $v_0$, то его путь за время $t$: $h = v_0t + \\dfrac{g t^2}{___}$.",
+        "hints": [],
+        "solution": "Формула пути.",
+        "accepted": ["2"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [30, 60, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "(u + sqrt(u^2 + 20 * h)) / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Аэростат поднимается равномерно со скоростью {{u}} м/с. На высоте {{h}} м из него выпал груз. Через сколько секунд груз упадёт на землю? $g = 10$ м/с², сопротивлением воздуха пренебречь.",
+        "hints": [],
+        "solution": "Груз имеет начальную скорость $u$ вверх: $-h = ut - 5t^2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело падает в воздухе и достигло постоянной скорости. Чему равна равнодействующая?",
+        "hints": [],
+        "solution": "Равномерное движение.",
+        "options": ["Нулю", "Силе тяжести", "Силе сопротивления", "Удвоенной силе тяжести"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [50, 64, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "h * (k / 100)^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч падает с высоты {{h}} м и после каждого удара поднимается на {{k}} % предыдущей высоты. На какую высоту он поднимется после второго удара (м)?",
+        "hints": [],
+        "solution": "Каждый отскок умножает высоту на $k$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения об ускорении свободного падения.",
+        "hints": [],
+        "solution": "$g = GM/R^2$.",
+        "options": [
+          "Оно зависит от высоты над Землёй",
+          "На полюсах оно чуть больше, чем на экваторе",
+          "На Луне оно меньше",
+          "Оно одинаково на всех планетах",
+          "Оно зависит от массы падающего тела"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "h - g * (sqrt(2 * h / g) - 1)^2 / 2",
+      "variables": ["h", "g"],
+      "range": [20, 30]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело падает с высоты $h$ без начальной скорости. Запишите путь, пройденный за последнюю секунду ($g$ — ускорение).",
+        "hints": [],
+        "solution": "Вычитаем путь за первые $T - 1$ секунд."
+      }
+    }
+  }
+]
