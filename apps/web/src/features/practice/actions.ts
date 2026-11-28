@@ -58,6 +58,8 @@ export async function startTrainer(form: FormData): Promise<void> {
       .insert({ student_id: user.id, kind: 'trainer', trainer_run_id: run.id });
     if (aErr) throw new Error(`attempt create failed: ${aErr.message}`);
   }
+  // From the topic page the trainer opens right there, under the topic.
+  if (form.get('from') === 'topic') redirect(`/${locale}/topics/${slug}?level=${level}#practice`);
   redirect(`/${locale}/app/trainer/${slug}?level=${level}`);
 }
 

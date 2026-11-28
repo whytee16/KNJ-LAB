@@ -28,9 +28,7 @@ export function TopicContent({
   return (
     <article lang={lang === 'kk' ? 'kk-KZ' : 'ru-KZ'} className="flex max-w-3xl flex-col gap-8">
       <header className="flex flex-col gap-3">
-        <Title className="type-h1">
-          {title}
-        </Title>
+        <Title className="type-h1">{title}</Title>
         {summary ? <p className="text-lg text-text-muted">{summary}</p> : null}
       </header>
       {objectives.length ? (

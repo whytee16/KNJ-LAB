@@ -44,9 +44,7 @@ export default async function LegalPage({ params }: PageProps<'/[locale]/legal/[
             <article className="flex flex-col gap-4" lang={doc.locale === 'kk' ? 'kk-KZ' : 'ru-KZ'}>
               {doc.isDraft ? <Alert tone="warning">{t('draft')}</Alert> : null}
               {doc.locale !== locale ? <Alert tone="info">{t('fallback')}</Alert> : null}
-              <h1 className="type-h2">
-                {doc.title}
-              </h1>
+              <h1 className="type-h2">{doc.title}</h1>
               <p className="text-sm text-text-muted">{t('version', { version: doc.version })}</p>
               {doc.body.split(/\n{2,}/).map((para, i) => (
                 <p key={i} className="whitespace-pre-line">

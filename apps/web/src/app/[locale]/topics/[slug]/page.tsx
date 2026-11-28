@@ -1,9 +1,11 @@
+import { DIFFICULTIES, type Difficulty } from '@knj/task-engine';
 import { Alert, Container } from '@knj/ui';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getTopicPage } from '@/features/content/queries';
 import { TopicContent } from '@/features/content/topic-content';
+import { TopicExamples } from '@/features/content/topic-examples';
 import { TopicLabs } from '@/features/labs/topic-labs';
 import { PracticeBlock } from '@/features/practice/practice-block';
 import { TopicTests } from '@/features/tests/topic-tests';
@@ -20,9 +22,16 @@ export async function generateMetadata({
   return topic ? { title: topic.title, description: topic.summary || undefined } : {};
 }
 
-export default async function TopicPage({ params }: PageProps<'/[locale]/topics/[slug]'>) {
+export default async function TopicPage({
+  params,
+  searchParams,
+}: PageProps<'/[locale]/topics/[slug]'>) {
   const locale = await pageLocale(params);
   const { slug } = await params;
+  const levelParam = String((await searchParams).level ?? '');
+  const level = (DIFFICULTIES as readonly string[]).includes(levelParam)
+    ? (levelParam as Difficulty)
+    : undefined;
   const topic = await getTopicPage(slug, locale);
   if (!topic) notFound();
   const t = await getTranslations('topic');
@@ -72,8 +81,9 @@ export default async function TopicPage({ params }: PageProps<'/[locale]/topics/
           mistakes={topic.mistakes}
           headingLevel={1}
         />
+        <TopicExamples topicId={topic.id} locale={locale} />
         <TopicLabs topicId={topic.id} locale={locale} />
-        <PracticeBlock topicId={topic.id} slug={topic.slug} locale={locale} />
+        <PracticeBlock topicId={topic.id} slug={topic.slug} locale={locale} level={level} />
         <TopicTests topicId={topic.id} locale={locale} />
       </Container>
     </PublicShell>

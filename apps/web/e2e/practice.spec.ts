@@ -117,6 +117,16 @@ test('reviewer publishes the templates', async ({ browser }) => {
   }
 });
 
+test('the topic page shows a worked example from the published templates', async ({ browser }) => {
+  const page = await newPage(browser);
+  await page.goto(`/ru/topics/${topic.slug}`);
+  const examples = page.getByTestId('topic-examples');
+  await expect(examples.getByText('Пример 1')).toBeVisible();
+  await examples.getByText('Показать решение').first().click();
+  await expect(examples.getByText('Сложите:', { exact: false }).first()).toBeVisible();
+  await expect(examples.getByText('Ответ:').first()).toBeVisible();
+});
+
 function numbersIn(text: string): number[] {
   return [...text.matchAll(/\d+/g)].map((m) => Number(m[0]));
 }
@@ -128,9 +138,13 @@ test('student solves the free level: right and wrong answers', async ({ browser 
   await studentPage.goto(`/ru/topics/${topic.slug}`);
   await expect(studentPage.getByTestId('level-medium')).toContainText('Открывается по подписке.');
   await studentPage.getByTestId('level-easy').getByRole('button', { name: 'Решать' }).click();
-  await expect(studentPage).toHaveURL(new RegExp(`/ru/app/trainer/${topic.slug}\\?level=easy$`));
+  // The trainer opens inside the topic page, under the theory.
+  await expect(studentPage).toHaveURL(
+    new RegExp(`/ru/topics/${topic.slug}\\?level=easy#practice$`),
+  );
+  const trainer = studentPage.getByTestId('topic-trainer');
 
-  const statement = await studentPage.locator('.prose-topic').first().innerText();
+  const statement = await trainer.locator('.prose-topic').first().innerText();
   const [a, b] = numbersIn(statement.replace(run, ''));
   await studentPage.getByLabel('Ответ', { exact: true }).fill(String(a! + b!));
   await studentPage.getByRole('button', { name: 'Проверить' }).click();
@@ -143,8 +157,8 @@ test('student solves the free level: right and wrong answers', async ({ browser 
   await studentPage.getByLabel('Ответ', { exact: true }).fill('1');
   await studentPage.getByRole('button', { name: 'Проверить' }).click();
   await expect(studentPage.getByText('✗ Неверно')).toBeVisible();
-  await expect(studentPage.getByText('Правильный ответ:')).toBeVisible();
-  await expect(studentPage.getByText('Сложите:', { exact: false })).toBeVisible();
+  await expect(trainer.getByText('Правильный ответ:')).toBeVisible();
+  await expect(trainer.getByText('Сложите:', { exact: false })).toBeVisible();
   await studentPage.getByRole('button', { name: 'Следующая задача' }).click();
   await expect(studentPage.getByTestId('run-progress')).toHaveText('Решено 2 из 100');
   await expect(studentPage.getByText('Точность 50%')).toBeVisible();
@@ -196,8 +210,12 @@ test('with a pass the student solves a choice task and a formula', async () => {
 
   await studentPage.goto(`/ru/topics/${topic.slug}`);
   await studentPage.getByTestId('level-sufficient').getByRole('button', { name: 'Решать' }).click();
-  await expect(studentPage).toHaveURL(/level=sufficient$/);
-  const statement = await studentPage.locator('.prose-topic').first().innerText();
+  await expect(studentPage).toHaveURL(/level=sufficient#practice$/);
+  const statement = await studentPage
+    .getByTestId('topic-trainer')
+    .locator('.prose-topic')
+    .first()
+    .innerText();
   const k = Number(statement.match(/k\s*=\s*(\d)/)?.[1]);
   expect(k).toBeGreaterThan(1);
   await expect(studentPage.getByTestId('formula-input')).toHaveAttribute('data-ready', 'true');

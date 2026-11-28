@@ -28,6 +28,11 @@ type LabDraft = {
   topics: string[];
 };
 type BankDraft = { topic: string };
+type CurriculumDraft = {
+  subject: string;
+  grade: number;
+  sections: { quarter: number; title: string; topics: string[] }[];
+};
 type TemplateDraft = {
   lab?: boolean;
   type: string;
@@ -177,6 +182,56 @@ try {
           `${name}: ${created} templates created (ai_draft, draft), ${templates.length - created} already there`,
         );
       } else if (templates.length) console.log(`${name}: templates skipped (no topic)`);
+    }
+
+    // Curriculum placement approved by the owner: content/drafts/curriculum/<subject>-<grade>.json.
+    // Creates missing sections of the default curriculum (by quarter and title) and attaches topics
+    // that are not placed yet. Topics already placed somewhere are left where the methodist put them.
+    const curDir = join(root, 'curriculum');
+    const curFiles = existsSync(curDir)
+      ? readdirSync(curDir).filter((f) => f.endsWith('.json') && !process.env.DRAFT_BUNDLES)
+      : [];
+    for (const file of curFiles) {
+      const cur = read<CurriculumDraft>(join(curDir, file))!;
+      const [def] = await tx<{ id: string }[]>`select id from public.curricula where is_default`;
+      if (!def) throw new Error('no default curriculum');
+      let placed = 0;
+      for (const sec of cur.sections) {
+        let [section] = await tx<{ id: string }[]>`
+          select s.id from public.curriculum_sections s
+          join public.curriculum_section_translations tr on tr.section_id = s.id and tr.locale = 'ru'
+          where s.curriculum_id = ${def.id} and s.subject_code = ${cur.subject}
+            and s.grade = ${cur.grade} and s.quarter = ${sec.quarter} and tr.title = ${sec.title}`;
+        if (!section) {
+          [section] = await tx<{ id: string }[]>`
+            insert into public.curriculum_sections (curriculum_id, subject_code, grade, quarter, sort)
+            select ${def.id}, ${cur.subject}, ${cur.grade}, ${sec.quarter}, coalesce(max(sort), 0) + 1
+            from public.curriculum_sections
+            where curriculum_id = ${def.id} and subject_code = ${cur.subject}
+              and grade = ${cur.grade} and quarter = ${sec.quarter}
+            returning id`;
+          await tx`insert into public.curriculum_section_translations (section_id, locale, title)
+                   values (${section!.id}, 'ru', ${sec.title})`;
+        }
+        for (const [i, slug] of sec.topics.entries()) {
+          const [topic] = await tx<
+            { id: string }[]
+          >`select id from public.topics where slug = ${slug}`;
+          if (!topic) {
+            console.log(`curriculum/${file}: topic ${slug} not found, skipped`);
+            continue;
+          }
+          const [already] = await tx<{ n: number }[]>`
+            select count(*)::int as n from public.curriculum_topics ct
+            join public.curriculum_sections s on s.id = ct.section_id
+            where ct.topic_id = ${topic.id} and s.curriculum_id = ${def.id}`;
+          if (already!.n > 0) continue;
+          await tx`insert into public.curriculum_topics (section_id, topic_id, sort)
+                   values (${section!.id}, ${topic.id}, ${i + 1})`;
+          placed++;
+        }
+      }
+      console.log(`curriculum/${file}: ${placed} topics placed`);
     }
   });
 } finally {

@@ -1,0 +1,22 @@
+{
+  "subject": "physics",
+  "grade": 7,
+  "note": "Раскладка тем банка по четвертям, утверждена владельцем 28.11.2026. Уже стоящие в КТП темы не переносятся.",
+  "sections": [
+    {
+      "quarter": 1,
+      "title": "Физические величины. Механическое движение",
+      "topics": ["physical-quantities-measurement", "uniform-motion", "average-speed"]
+    },
+    {
+      "quarter": 2,
+      "title": "Масса и плотность. Силы",
+      "topics": ["mass-density", "force-gravity-elasticity", "friction", "resultant-force"]
+    },
+    {
+      "quarter": 3,
+      "title": "Давление",
+      "topics": ["solid-pressure"]
+    }
+  ]
+}
