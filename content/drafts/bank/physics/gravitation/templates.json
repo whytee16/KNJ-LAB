@@ -1,0 +1,1359 @@
+[
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кто открыл закон всемирного тяготения?",
+        "hints": [],
+        "solution": "Исаак Ньютон, 1687 г.",
+        "options": ["Ньютон", "Галилей", "Кеплер", "Архимед"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится сила притяжения двух тел, если расстояние между ними увеличить в 2 раза?",
+        "hints": [],
+        "solution": "$F \\sim 1/r^2$.",
+        "options": [
+          "Уменьшится в 4 раза",
+          "Уменьшится в 2 раза",
+          "Увеличится в 4 раза",
+          "Не изменится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится сила притяжения, если массу одного тела увеличить в 3 раза?",
+        "hints": [],
+        "solution": "$F \\sim m_1 m_2$.",
+        "options": ["Увеличится в 3 раза", "В 9 раз", "Не изменится", "Уменьшится в 3 раза"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила, с которой Земля притягивает тело, называется силой ___.",
+        "hints": [],
+        "solution": "$F = mg$.",
+        "accepted": ["тяжести"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * k^2",
+      "tolerance": {},
+      "unit": "мН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила притяжения двух тел {{f}} мН. Какой она станет, если расстояние уменьшить в {{k}} раза?",
+        "hints": [],
+        "solution": "$F \\sim 1/r^2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о всемирном тяготении.",
+        "hints": [],
+        "solution": "Закон всемирного тяготения.",
+        "options": [
+          "Все тела притягиваются друг к другу",
+          "Сила притяжения пропорциональна произведению масс",
+          "Сила убывает обратно квадрату расстояния",
+          "Притягиваются только планеты",
+          "Сила не зависит от расстояния"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: во сколько раз изменится сила тяготения.",
+        "hints": [],
+        "solution": "$F = Gm_1m_2/r^2$.",
+        "options": ["Расстояние ×2", "Одна масса ×2", "Обе массы ×2", "Расстояние ÷3"],
+        "matches": ["÷4", "×2", "×4", "×9"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему мы не замечаем притяжения между людьми?",
+        "hints": [],
+        "solution": "$G \\approx 6{,}67 \\cdot 10^{-11}$.",
+        "options": [
+          "Сила очень мала из-за малой гравитационной постоянной",
+          "Её нет",
+          "Её компенсирует Земля",
+          "Люди отталкиваются"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию силу притяжения двух тел по 1 т на расстоянии:",
+        "hints": [],
+        "solution": "Сила растёт при уменьшении расстояния.",
+        "options": ["100 м", "10 м", "5 м", "1 м"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что удерживает Луну на орбите вокруг Земли?",
+        "hints": [],
+        "solution": "Тяготение создаёт центростремительное ускорение.",
+        "options": ["Сила всемирного тяготения", "Атмосфера", "Магнитное поле", "Инерция без сил"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Коэффициент $G$ в законе всемирного тяготения называется гравитационной ___.",
+        "hints": [],
+        "solution": "Его измерил Кавендиш.",
+        "accepted": ["постоянной"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Где ускорение свободного падения больше: у поверхности Земли или на высоте 100 км?",
+        "hints": [],
+        "solution": "$g \\sim 1/r^2$.",
+        "options": ["У поверхности", "На высоте", "Одинаково", "Зависит от массы тела"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [600, 800, 1200]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / k",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело весит на Земле {{p}} Н. Каков его вес на планете, где ускорение свободного падения в {{k}} раза меньше?",
+        "hints": [],
+        "solution": "Масса та же, $P = mg$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему приливы в океане связаны с Луной?",
+        "hints": [],
+        "solution": "Гравитационное действие Луны.",
+        "options": [
+          "Луна притягивает воду, сильнее ближнюю сторону Земли",
+          "Луна светит на воду",
+          "Ветер дует от Луны",
+          "Это совпадение"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "От чего зависит ускорение свободного падения на планете?",
+        "hints": [],
+        "solution": "$g = GM/R^2$.",
+        "options": [
+          "От массы планеты",
+          "От радиуса планеты",
+          "От высоты над поверхностью",
+          "От массы падающего тела",
+          "От цвета планеты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 10]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1, 2, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "6.67e-11 * (m * 1000)^2 / r^2 * 1e6",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "мкН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите силу притяжения двух шаров по {{m}} т на расстоянии {{r}} м (в мкН). $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг².",
+        "hints": [],
+        "solution": "$F = G\\dfrac{m_1m_2}{r^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "g0",
+          "kind": "choice",
+          "values": [10, 3.7, 1.6]
+        }
+      ],
+      "constraints": [],
+      "answer": "g0 / 4",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение свободного падения у поверхности {{g0}} м/с². Каким оно будет на высоте, равной радиусу планеты?",
+        "hints": [],
+        "solution": "Расстояние до центра удвоилось: $g$ уменьшилось в 4 раза."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [4, 9, 16]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(k) - 1",
+      "tolerance": {},
+      "unit": "R"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На какой высоте над Землёй (в радиусах Земли) ускорение свободного падения в {{k}} раз меньше, чем у поверхности?",
+        "hints": [],
+        "solution": "$\\dfrac{g}{g_h} = \\left(\\dfrac{R + h}{R}\\right)^2 = k$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Масса Марса примерно в 10 раз меньше массы Земли, радиус — в 2 раза меньше. Во сколько раз $g$ на Марсе меньше?",
+        "hints": [],
+        "solution": "$g \\sim M/R^2$: $\\dfrac{1/10}{1/4} = 0{,}4$.",
+        "options": ["В 2,5 раза", "В 5 раз", "В 10 раз", "В 20 раз"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [6.4, 7.3, 48]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1.7, 3.4, 6.1]
+        }
+      ],
+      "constraints": [],
+      "answer": "6.67e-11 * k * 1e23 / (r * 1e6)^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите ускорение свободного падения на планете массой {{k}}·10²³ кг и радиусом {{r}} тыс. км. $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг².",
+        "hints": [],
+        "solution": "$g = \\dfrac{GM}{R^2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения об искусственных спутниках.",
+        "hints": [],
+        "solution": "Орбитальное движение.",
+        "options": [
+          "Первая космическая скорость ≈ 7,9 км/с",
+          "Спутник на круговой орбите движется с центростремительным ускорением",
+          "Чем выше орбита, тем меньше скорость спутника",
+          "Спутнику нужен двигатель, чтобы не падать",
+          "Чем выше орбита, тем больше скорость"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1700, 3400, 6400]
+        },
+        {
+          "name": "g",
+          "kind": "choice",
+          "values": [1.6, 3.7, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(g * r * 1000) / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите первую космическую скорость для планеты радиусом {{r}} км с $g = {{g}}$ м/с² (км/с).",
+        "hints": [],
+        "solution": "$v = \\sqrt{gR}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Наименьшая скорость, которую нужно сообщить телу, чтобы оно стало спутником Земли, называется первой ___ скоростью.",
+        "hints": [],
+        "solution": "≈ 7,9 км/с.",
+        "accepted": ["космической"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему космонавты на орбите находятся в невесомости?",
+        "hints": [],
+        "solution": "Тяготение есть, но вес равен нулю.",
+        "options": [
+          "Они вместе с кораблём свободно падают на Землю",
+          "На орбите нет тяготения",
+          "Их держит воздух",
+          "Двигатель компенсирует тяжесть"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: высота над Землёй (в радиусах $R$) → $g$ (у поверхности 10 м/с²).",
+        "hints": [],
+        "solution": "$g \\sim 1/(R + h)^2$.",
+        "options": ["0", "$R$", "$2R$", "$3R$"],
+        "matches": ["10 м/с²", "2,5 м/с²", "≈ 1,1 м/с²", "0,625 м/с²"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию ускорение свободного падения:",
+        "hints": [],
+        "solution": "1,6 < 3,7 < 9,8 < ≈ 25 м/с².",
+        "options": ["Луна", "Марс", "Земля", "Юпитер"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [320, 640, 6400]
+        }
+      ],
+      "constraints": [],
+      "answer": "((6400 + h) / 6400)^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз сила притяжения к Земле на высоте {{h}} км меньше, чем у поверхности (R = 6400 км)?",
+        "hints": [],
+        "solution": "$\\left(\\dfrac{R + h}{R}\\right)^2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится сила тяготения между Землёй и Солнцем, если обе массы и расстояние увеличить вдвое?",
+        "hints": [],
+        "solution": "$\\dfrac{2 \\cdot 2}{2^2} = 1$.",
+        "options": ["Не изменится", "Увеличится вдвое", "Уменьшится вдвое", "Увеличится в 4 раза"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры проявления всемирного тяготения.",
+        "hints": [],
+        "solution": "Гравитационные явления.",
+        "options": [
+          "Движение планет вокруг Солнца",
+          "Приливы",
+          "Падение яблока",
+          "Отталкивание магнитов",
+          "Электризация расчёски"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "g * r^2 / (r + h)^2",
+      "variables": ["g", "r", "h"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите ускорение свободного падения на высоте $h$ над планетой радиусом $r$, если у поверхности оно $g$.",
+        "hints": [],
+        "solution": "$g_h = g\\dfrac{R^2}{(R + h)^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [300, 600, 1000]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(10 * 6400000^2 / (6400000 + h * 1000)) / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите скорость спутника на круговой орбите на высоте {{h}} км над Землёй (км/с). $g = 10$ м/с², $R = 6400$ км.",
+        "hints": [],
+        "solution": "$v = \\sqrt{\\dfrac{gR^2}{R + h}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "9.8 * 6400000^2 / 6.67e-11 / 1e24",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "·10²⁴ кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите массу Земли, зная $g = 9{,}8$ м/с², $R = 6400$ км, $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг². Ответ в $10^{24}$ кг.",
+        "hints": [],
+        "solution": "$M = \\dfrac{gR^2}{G}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [6.8, 7, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt((r * 1e6)^3 / (6.67e-11 * 6e24)) / 60",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Период обращения спутника по орбите радиусом {{r}} тыс. км? Масса Земли $6 \\cdot 10^{24}$ кг, радиус 6400 км, $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг². Ответ в минутах, $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{\\dfrac{r^3}{GM}}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему геостационарный спутник «висит» над одной точкой экватора?",
+        "hints": [],
+        "solution": "Период 24 ч, орбита ≈ 42 000 км от центра.",
+        "options": [
+          "Его период обращения равен периоду вращения Земли",
+          "Он неподвижен",
+          "Его держит магнитное поле",
+          "Он на нулевой высоте"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "384 * 9 / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "тыс. км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На каком расстоянии от центра Земли сила притяжения тела к Земле равна силе притяжения к Луне? Масса Земли в 81 раз больше массы Луны, расстояние Земля — Луна 384 тыс. км. Ответ в тыс. км.",
+        "hints": [],
+        "solution": "$\\dfrac{81}{x^2} = \\dfrac{1}{(d - x)^2}$ ⇒ $x = \\dfrac{9d}{10}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о весе и невесомости.",
+        "hints": [],
+        "solution": "Вес зависит от ускорения опоры.",
+        "options": [
+          "В невесомости сила тяжести не равна нулю",
+          "Вес — сила, действующая на опору",
+          "При свободном падении вес равен нулю",
+          "В невесомости масса равна нулю",
+          "Вес всегда равен $mg$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "k / n",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Плотность планеты в {{k}} раза больше, радиус в {{n}} раза меньше земного. Во сколько раз $g$ на ней отличается (отношение $g_п/g_З$)?",
+        "hints": [],
+        "solution": "$g = \\dfrac{G \\cdot \\frac{4}{3}\\pi R^3\\rho}{R^2} \\sim \\rho R$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между космической скоростью и её смыслом.",
+        "hints": [],
+        "solution": "Космические скорости.",
+        "options": ["7,9 км/с", "11,2 км/с", "16,7 км/с", "≈ 3 км/с"],
+        "matches": [
+          "Круговая орбита у Земли",
+          "Уход от Земли",
+          "Уход из Солнечной системы",
+          "Скорость геостационарного спутника"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Величину $G$ впервые измерил в лаборатории английский учёный Генри ___.",
+        "hints": [],
+        "solution": "Крутильные весы, 1798 г.",
+        "accepted": ["Кавендиш", "Кавендишем"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию период обращения спутника на орбите:",
+        "hints": [],
+        "solution": "Чем выше орбита, тем больше период.",
+        "options": ["Низкая орбита 300 км", "Орбита 1000 км", "Орбита 20 000 км", "Геостационарная"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [4, 9]
+        }
+      ],
+      "constraints": [],
+      "answer": "k^1.5",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз изменится период спутника, если радиус круговой орбиты увеличить в {{k}} раза?",
+        "hints": [],
+        "solution": "Третий закон Кеплера: $T^2 \\sim r^3$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему МКС постепенно снижается и её поднимают двигателями?",
+        "hints": [],
+        "solution": "Торможение в верхних слоях атмосферы.",
+        "options": [
+          "На высоте 400 км есть разреженная атмосфера и сопротивление",
+          "Земля притягивает сильнее со временем",
+          "МКС тяжелеет",
+          "Луна её тянет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о третьем законе Кеплера.",
+        "hints": [],
+        "solution": "$T^2/a^3 = \\text{const}$.",
+        "options": [
+          "Квадраты периодов пропорциональны кубам больших полуосей",
+          "Дальние планеты обращаются медленнее",
+          "Он следует из закона тяготения",
+          "Все планеты имеют одинаковый период",
+          "Он не связан с тяготением"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "rho",
+          "kind": "choice",
+          "values": [3900, 5500]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(3 * 3.14 / (6.67e-11 * rho)) / 3600",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "ч"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Средняя плотность планеты {{rho}} кг/м³. Найдите период спутника у самой поверхности (ч). $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг², $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$T = \\sqrt{\\dfrac{3\\pi}{G\\rho}}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "sqrt(g * r)",
+      "variables": ["g", "r"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите первую космическую скорость через $g$ и радиус планеты $r$.",
+        "hints": [],
+        "solution": "$mg = \\dfrac{mv^2}{R}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "(6.67e-11 * 6e24 * (86400)^2 / (4 * 3.14^2))^(1/3) / 1e6",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "тыс. км"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите радиус геостационарной орбиты (тыс. км). Масса Земли $6 \\cdot 10^{24}$ кг, радиус 6400 км, $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг², период 24 ч, $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$r = \\sqrt[3]{\\dfrac{GMT^2}{4\\pi^2}}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [110, 120]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1700, 1740]
+        }
+      ],
+      "constraints": [],
+      "answer": "4 * 3.14^2 * ((r + h) * 1000)^3 / (6.67e-11 * (t * 60)^2) / 1e23",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "·10²³ кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Спутник обращается по круговой орбите на высоте {{h}} км с периодом {{t}} мин. Радиус планеты {{r}} км. Найдите массу планеты (в 10²³ кг). $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг², $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$M = \\dfrac{4\\pi^2(R + h)^3}{GT^2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится вес тела на экваторе, если Земля станет вращаться быстрее?",
+        "hints": [],
+        "solution": "Часть силы тяжести идёт на центростремительное ускорение.",
+        "options": ["Уменьшится", "Увеличится", "Не изменится", "Станет равным нулю"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "sqrt(9.8 / 0.034)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз нужно увеличить угловую скорость Земли, чтобы тела на экваторе стали невесомыми? (Сейчас центростремительное ускорение на экваторе ≈ 0,034 м/с², $g = 9{,}8$ м/с².)",
+        "hints": [],
+        "solution": "$\\omega^2 R = g$: $\\dfrac{\\omega_2}{\\omega_1} = \\sqrt{g/a}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о гравитационном поле.",
+        "hints": [],
+        "solution": "Свойства гравитации.",
+        "options": [
+          "Внутри однородной сферической оболочки сила тяготения равна нулю",
+          "Тяготение действует через вакуум",
+          "Сила тяготения однородного шара снаружи как от точечной массы",
+          "Гравитацию можно экранировать",
+          "Тяготение отталкивает тела"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1000, 1700]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / (2 * h) * (r * 1000)^2 / 6.67e-11 / 1e22",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "·10²² кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Космонавт на планете радиусом {{r}} км бросает мяч вертикально вверх со скоростью {{v}} м/с, и он поднимается на {{h}} м. Найдите массу планеты (10²² кг). $G = 6{,}67 \\cdot 10^{-11}$ Н·м²/кг².",
+        "hints": [],
+        "solution": "$g = \\dfrac{v^2}{2h}$, $M = \\dfrac{gR^2}{G}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги вывода первой космической скорости.",
+        "hints": [],
+        "solution": "Вывод формулы.",
+        "options": [
+          "Записать, что тяготение создаёт центростремительное ускорение",
+          "Приравнять $GMm/R^2 = mv^2/R$",
+          "Выразить $v = \\sqrt{GM/R}$",
+          "Заменить $GM = gR^2$: $v = \\sqrt{gR}$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между планетой и примерным $g$.",
+        "hints": [],
+        "solution": "Справочные значения.",
+        "options": ["Меркурий", "Венера", "Земля", "Юпитер"],
+        "matches": ["3,7 м/с²", "8,9 м/с²", "9,8 м/с²", "24,8 м/с²"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Траектория тела в поле тяготения при скорости между первой и второй космической — ___.",
+        "hints": [],
+        "solution": "Законы Кеплера.",
+        "accepted": ["эллипс", "эллипсом"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1]
+        }
+      ],
+      "constraints": [],
+      "answer": "m1 / m2",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две звезды массами {{m1}} и {{m2}} солнечных масс обращаются вокруг общего центра масс. Во сколько раз радиус орбиты первой меньше радиуса орбиты второй?",
+        "hints": [],
+        "solution": "Центр масс: $m_1 r_1 = m_2 r_2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ракеты запускают на восток и ближе к экватору?",
+        "hints": [],
+        "solution": "На экваторе линейная скорость ≈ 0,46 км/с.",
+        "options": [
+          "Используется скорость вращения Земли",
+          "Там меньше гравитация",
+          "Там меньше ветра",
+          "Так короче путь"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "sqrt(2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Во сколько раз скорость спутника на высоте, равной радиусу Земли, меньше первой космической?",
+        "hints": [],
+        "solution": "$v \\sim 1/\\sqrt{r}$: $r$ удвоился."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о приливах.",
+        "hints": [],
+        "solution": "Гравитационное действие Луны и Солнца.",
+        "options": [
+          "Их два в сутки в одном месте",
+          "Солнце тоже влияет на приливы",
+          "Наибольшие приливы в новолуние и полнолуние",
+          "Приливы вызывает ветер",
+          "Приливов нет в океане"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "(27.3 * 24 * 60 / 84)^(2/3)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "R"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На каком расстоянии от центра Земли (в радиусах Земли) находится Луна, если её период 27,3 сут, а период спутника у поверхности 84 мин?",
+        "hints": [],
+        "solution": "Третий закон Кеплера: $\\dfrac{r_Л}{R} = \\left(\\dfrac{T_Л}{T_с}\\right)^{2/3}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * pi * sqrt(r / g)",
+      "variables": ["r", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите период спутника, обращающегося у поверхности планеты радиусом $r$ с ускорением свободного падения $g$.",
+        "hints": [],
+        "solution": "$T = \\dfrac{2\\pi R}{v} = 2\\pi\\sqrt{R/g}$."
+      }
+    }
+  }
+]

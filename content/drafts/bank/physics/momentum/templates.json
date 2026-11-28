@@ -1,0 +1,1616 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 2, 5, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * v",
+      "tolerance": {},
+      "unit": "кг·м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите импульс тела массой {{m}} кг, движущегося со скоростью {{v}} м/с.",
+        "hints": [],
+        "solution": "$p = mv$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "m * v"
+        }
+      ],
+      "answer": "p / m",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Импульс тела {{p}} кг·м/с, масса {{m}} кг. Найдите скорость.",
+        "hints": [],
+        "solution": "$v = p/m$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [36, 72]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * v / 3.6 / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "тыс. кг·м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите импульс автомобиля массой {{m}} т при скорости {{v}} км/ч (в тыс. кг·м/с).",
+        "hints": [],
+        "solution": "Скорость в м/с, $p = mv$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Импульс — величина…",
+        "hints": [],
+        "solution": "$\\vec{p} = m\\vec{v}$.",
+        "options": [
+          "векторная, направлена как скорость",
+          "скалярная",
+          "векторная, направлена против скорости",
+          "всегда положительная скалярная"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица импульса в СИ — кг · м/___.",
+        "hints": [],
+        "solution": "$p = mv$.",
+        "accepted": ["с"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится импульс, если скорость тела увеличить в 3 раза?",
+        "hints": [],
+        "solution": "$p \\sim v$.",
+        "options": ["Увеличится в 3 раза", "В 9 раз", "Не изменится", "Уменьшится"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры реактивного движения.",
+        "hints": [],
+        "solution": "Тело отталкивается от выбрасываемой массы.",
+        "options": [
+          "Полёт ракеты",
+          "Движение кальмара",
+          "Отдача ружья при выстреле",
+          "Падение камня",
+          "Качение мяча"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: тело массой 2 кг и импульс.",
+        "hints": [],
+        "solution": "$p = mv$.",
+        "options": ["v = 1 м/с", "v = 5 м/с", "v = 10 м/с", "v = 0"],
+        "matches": ["2 кг·м/с", "10 кг·м/с", "20 кг·м/с", "0"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию импульс:",
+        "hints": [],
+        "solution": "7,2; 10; 120; 10 000 кг·м/с.",
+        "options": [
+          "Пуля 9 г, 800 м/с",
+          "Мяч 0,5 кг, 20 м/с",
+          "Человек 60 кг, 2 м/с",
+          "Автомобиль 1 т, 10 м/с"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "В замкнутой системе геометрическая сумма импульсов тел ___.",
+        "hints": [],
+        "solution": "Закон сохранения импульса.",
+        "accepted": ["сохраняется", "постоянна", "не изменяется"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ружьё при выстреле «отдаёт» в плечо?",
+        "hints": [],
+        "solution": "Сумма импульсов была равна нулю.",
+        "options": [
+          "По закону сохранения импульса ружьё получает импульс, противоположный импульсу пули",
+          "Из-за звука",
+          "Из-за нагрева",
+          "Пуля тянет ружьё"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [6, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (v2 - v1)",
+      "tolerance": {},
+      "unit": "кг·м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг изменило скорость с {{v1}} до {{v2}} м/с в том же направлении. Найдите изменение импульса.",
+        "hints": [],
+        "solution": "$\\Delta p = m(v_2 - v_1)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какие тела образуют замкнутую систему?",
+        "hints": [],
+        "solution": "Определение замкнутой системы.",
+        "options": [
+          "Тела, на которые не действуют внешние силы (или они скомпенсированы)",
+          "Любые тела",
+          "Только неподвижные тела",
+          "Только тела на Земле"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "0",
+      "tolerance": {},
+      "unit": "кг·м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две тележки по {{m}} кг движутся навстречу со скоростями {{v}} м/с. Чему равен суммарный импульс?",
+        "hints": [],
+        "solution": "Импульсы равны и противоположны."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему лодка отплывает назад, когда с неё прыгают на берег?",
+        "hints": [],
+        "solution": "Закон сохранения импульса.",
+        "options": [
+          "Человек отталкивается от лодки, лодка получает противоположный импульс",
+          "Лодку сносит течение",
+          "Лодка легче",
+          "Так совпадает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [9, 10]
+        },
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [600, 800]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 1000 * v / qm",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля массой {{m}} г вылетает из ружья массой {{qm}} кг со скоростью {{v}} м/с. Найдите скорость отдачи ружья.",
+        "hints": [],
+        "solution": "$0 = mv - MV$, $V = \\dfrac{mv}{M}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m1 * v / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тележка массой {{m1}} кг со скоростью {{v}} м/с сцепляется с неподвижной тележкой {{m2}} кг. Найдите их общую скорость.",
+        "hints": [],
+        "solution": "Неупругий удар: $m_1v = (m_1 + m_2)u$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [80, 100, 200]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * v / qm",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мальчик массой {{m}} кг прыгает с неподвижной лодки массой {{qm}} кг со скоростью {{v}} м/с. С какой скоростью начнёт двигаться лодка?",
+        "hints": [],
+        "solution": "$mv = MV$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [200, 400, 500]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * m / 1000 * v",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг·м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч массой {{m}} г ударился о стену со скоростью {{v}} м/с и отскочил с той же скоростью. Найдите модуль изменения импульса.",
+        "hints": [],
+        "solution": "Скорость сменила направление: $\\Delta p = 2mv$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пластилиновый и резиновый мячи одинаковой массы с одной скоростью ударяют в стену. Какой передаёт стене больший импульс?",
+        "hints": [],
+        "solution": "Изменение импульса $2mv$ против $mv$.",
+        "options": ["Резиновый (отскакивает)", "Пластилиновый (прилипает)", "Одинаково", "Ни один"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг·м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила {{f}} Н действовала на тело {{t}} с. Найдите изменение импульса.",
+        "hints": [],
+        "solution": "$\\Delta p = Ft$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о законе сохранения импульса.",
+        "hints": [],
+        "solution": "Импульс сохраняется при любых ударах в замкнутой системе.",
+        "options": [
+          "Он выполняется для замкнутых систем",
+          "Импульс — векторная величина",
+          "Он объясняет реактивное движение",
+          "Он выполняется при действии любых внешних сил",
+          "Импульс сохраняется только при упругих ударах"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [1, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "abs(m1 * v1 - m2 * v2) / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две тележки {{m1}} и {{m2}} кг движутся навстречу со скоростями {{v1}} и {{v2}} м/с и сцепляются. Найдите модуль общей скорости.",
+        "hints": [],
+        "solution": "$m_1v_1 - m_2v_2 = (m_1 + m_2)u$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Произведение силы на время её действия называется импульсом ___.",
+        "hints": [],
+        "solution": "$Ft = \\Delta p$.",
+        "accepted": ["силы"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: тележка 2 кг со скоростью 3 м/с сцепляется с неподвижной тележкой массой…",
+        "hints": [],
+        "solution": "$u = m_1v/(m_1 + m_2)$.",
+        "options": ["1 кг", "2 кг", "4 кг", "10 кг"],
+        "matches": ["2 м/с", "1,5 м/с", "1 м/с", "0,5 м/с"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию скорость отдачи ружья 4 кг при выстреле пулей 10 г со скоростью:",
+        "hints": [],
+        "solution": "0,5; 1; 1,5; 2 м/с.",
+        "options": ["200 м/с", "400 м/с", "600 м/с", "800 м/с"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при прыжке с высоты нужно сгибать ноги?",
+        "hints": [],
+        "solution": "$F = \\Delta p/t$.",
+        "options": [
+          "Увеличивается время торможения, уменьшается сила удара",
+          "Уменьшается импульс",
+          "Увеличивается скорость",
+          "Так красивее"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [200, 400, 500]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.01, 0.02, 0.05]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 1000 * v / t",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч массой {{m}} г, летящий со скоростью {{v}} м/с, остановили за {{t}} с. Найдите среднюю силу удара.",
+        "hints": [],
+        "solution": "$F = \\dfrac{\\Delta p}{t}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ракета движется в космосе. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Реактивное движение.",
+        "options": [
+          "Ракета и выброшенные газы — замкнутая система",
+          "Скорость ракеты растёт при выбросе газов",
+          "Ракете не нужна опора",
+          "Ракета отталкивается от воздуха",
+          "Без атмосферы ракета не полетит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * v / (a + b)",
+      "variables": ["a", "v", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тележка массой $a$ со скоростью $v$ сцепляется с неподвижной массой $b$. Запишите общую скорость.",
+        "hints": [],
+        "solution": "$u = \\dfrac{m_1v}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [200, 300]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [500, 700]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v - v1",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Снаряд массой {{m}} кг, летевший горизонтально со скоростью {{v}} м/с, разорвался на две равные части. Одна часть полетела вперёд со скоростью {{v1}} м/с. Найдите скорость второй (со знаком, вперёд «+»).",
+        "hints": [],
+        "solution": "$mv = \\dfrac{m}{2}v_1 + \\dfrac{m}{2}v_2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        },
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * v / (m + qm)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек массой {{m}} кг бежит со скоростью {{v}} м/с и вскакивает на неподвижную тележку массой {{qm}} кг. Найдите скорость тележки с человеком.",
+        "hints": [],
+        "solution": "$mv = (m + M)u$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [9, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [400, 600]
+        },
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 1000 * v / (m / 1000 + qm)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля {{m}} г, летящая {{v}} м/с, застревает в бруске массой {{qm}} кг, лежащем на гладком столе. Найдите скорость бруска с пулей.",
+        "hints": [],
+        "solution": "$mv = (m + M)u$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две одинаковые шайбы: одна покоится, другая налетает на неё и после абсолютно упругого центрального удара…",
+        "hints": [],
+        "solution": "Обмен скоростями при равных массах.",
+        "options": [
+          "останавливается, а первая движется с её скоростью",
+          "отскакивает назад",
+          "движется вместе с первой",
+          "тоже покоится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [1000, 2000]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * u / (qm - m)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ракета массой {{qm}} кг выбрасывает {{m}} кг газа со скоростью {{u}} м/с (одномоментно). Какую скорость приобретёт ракета, если она покоилась?",
+        "hints": [],
+        "solution": "$0 = mu - (M - m)V$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик падает на пол и отскакивает. Выберите верные утверждения о системе «шарик — Земля».",
+        "hints": [],
+        "solution": "Внешних сил нет у системы «шарик — Земля».",
+        "options": [
+          "Импульс системы сохраняется",
+          "Земля получает импульс, но её скорость ничтожна",
+          "Импульс шарика не сохраняется",
+          "Импульс шарика сохраняется",
+          "Земля не получает импульса"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1.25, 5, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * m / 1000 * sqrt(20 * h)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг·м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч массой {{m}} г падает с высоты {{h}} м и упруго отскакивает. Найдите изменение импульса при ударе ($g = 10$).",
+        "hints": [],
+        "solution": "$v = \\sqrt{2gh}$, $\\Delta p = 2mv$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между ударом и тем, что сохраняется.",
+        "hints": [],
+        "solution": "Законы сохранения при ударах.",
+        "options": [
+          "Абсолютно неупругий",
+          "Абсолютно упругий",
+          "Взрыв снаряда",
+          "Выстрел из пушки"
+        ],
+        "matches": [
+          "Только импульс",
+          "Импульс и кинетическая энергия",
+          "Импульс (энергия растёт)",
+          "Импульс (отдача)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Удар, после которого тела движутся вместе, называется абсолютно ___.",
+        "hints": [],
+        "solution": "При нём часть энергии переходит во внутреннюю.",
+        "accepted": ["неупругим"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию скорость лодки 100 кг после прыжка с неё человека 50 кг со скоростью:",
+        "hints": [],
+        "solution": "0,5; 1; 2; 3 м/с.",
+        "options": ["1 м/с", "2 м/с", "4 м/с", "6 м/с"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [10, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "v0 - f * t / m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На тело массой {{m}} кг в течение {{t}} с действовала сила {{f}} Н против движения. Начальная скорость {{v0}} м/с. Найдите конечную скорость.",
+        "hints": [],
+        "solution": "$m v - m v_0 = -Ft$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему пожарный с трудом удерживает брандспойт?",
+        "hints": [],
+        "solution": "Реактивное действие струи.",
+        "options": [
+          "Вырывающаяся вода создаёт реактивную силу",
+          "Шланг тяжёлый",
+          "Вода холодная",
+          "Давление в шланге мало"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * s / 10000 * v^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой импульс передаёт стене за секунду струя воды сечением {{s}} см² со скоростью {{v}} м/с, если вода растекается по стене (не отскакивает)?",
+        "hints": [],
+        "solution": "За 1 с ударяет масса $\\rho S v$, каждая теряет импульс $v$: $F = \\rho S v^2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения об импульсе силы.",
+        "hints": [],
+        "solution": "$Ft = \\Delta p$.",
+        "options": [
+          "Он равен изменению импульса тела",
+          "Его единица Н·с = кг·м/с",
+          "Большая сила за малое время может дать тот же импульс, что малая за большое",
+          "Он всегда равен нулю",
+          "Он не зависит от времени"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m * v / (m + b)",
+      "variables": ["m", "v", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля массой $m$ со скоростью $v$ застревает в бруске массой $b$ на гладком столе. Запишите скорость бруска с пулей.",
+        "hints": [],
+        "solution": "Неупругий удар."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [9, 10]
+        },
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m / 1000 + qm) / (m / 1000) * sqrt(20 * h / 100)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля {{m}} г застревает в бруске {{qm}} кг, подвешенном на нити (баллистический маятник); брусок поднимается на {{h}} см. Найдите скорость пули ($g = 10$).",
+        "hints": [],
+        "solution": "Удар: $mv = (m + M)u$; подъём: $u = \\sqrt{2gh}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * m1 * v / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две тележки {{m1}} и {{m2}} кг сталкиваются абсолютно упруго; первая двигалась со скоростью {{v}} м/с, вторая покоилась. Найдите скорость второй после удара.",
+        "hints": [],
+        "solution": "Законы сохранения импульса и энергии: $u_2 = \\dfrac{2m_1v}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m1 - m2) * v / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В условиях абсолютно упругого удара ({{m1}} кг налетает со скоростью {{v}} м/с на покоящуюся {{m2}} кг) найдите скорость первой после удара (со знаком).",
+        "hints": [],
+        "solution": "$u_1 = \\dfrac{(m_1 - m_2)v}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек стоит на корме неподвижной лодки и переходит на нос. Что происходит с лодкой (сопротивлением воды пренебречь)?",
+        "hints": [],
+        "solution": "Центр масс замкнутой системы неподвижен.",
+        "options": [
+          "Смещается назад; центр масс системы остаётся на месте",
+          "Не движется",
+          "Движется вперёд",
+          "Начинает вращаться"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [100, 120, 200]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * l / (m + qm)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек {{m}} кг переходит с кормы на нос лодки массой {{qm}} кг и длиной {{l}} м. На сколько сместится лодка?",
+        "hints": [],
+        "solution": "Центр масс неподвижен: $m(l - x) = Mx$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о центре масс.",
+        "hints": [],
+        "solution": "Теорема о движении центра масс.",
+        "options": [
+          "Центр масс замкнутой системы движется равномерно прямолинейно или покоится",
+          "Внутренние силы не меняют движения центра масс",
+          "При взрыве снаряда центр масс осколков продолжает движение по параболе (без сопротивления)",
+          "Центр масс всегда внутри тела",
+          "Внутренние силы меняют импульс системы"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [100, 200]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Снаряд массой {{m}} кг в верхней точке траектории (скорость {{v}} м/с, горизонтальная) разорвался на две равные части. Одна упала вертикально вниз (скорость сразу после взрыва нулевая по горизонтали). Найдите горизонтальную скорость второй.",
+        "hints": [],
+        "solution": "$mv = \\dfrac{m}{2} \\cdot 0 + \\dfrac{m}{2}u$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию долю кинетической энергии, перешедшей во внутреннюю при неупругом ударе тела 1 кг о покоящееся тело массой:",
+        "hints": [],
+        "solution": "Доля $\\dfrac{m_2}{m_1 + m_2}$: 0,09; 0,5; 0,8; 0,9.",
+        "options": ["0,1 кг", "1 кг", "4 кг", "9 кг"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: упругий удар шара 1 кг (2 м/с) о покоящийся шар массой…",
+        "hints": [],
+        "solution": "Формулы упругого удара.",
+        "options": ["1 кг", "3 кг", "1/3 кг", "очень большой"],
+        "matches": [
+          "первый останавливается",
+          "первый отскакивает со скоростью 1 м/с",
+          "первый продолжает со скоростью 1 м/с",
+          "первый отскакивает со скоростью 2 м/с"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "При абсолютно неупругом ударе сохраняется импульс, но не сохраняется ___ энергия.",
+        "hints": [],
+        "solution": "Часть переходит во внутреннюю.",
+        "accepted": ["кинетическая", "механическая"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "m2 / (m1 + m2) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая доля (%) кинетической энергии переходит во внутреннюю при неупругом ударе тела {{m1}} кг о покоящееся {{m2}} кг?",
+        "hints": [],
+        "solution": "$\\dfrac{\\Delta E}{E} = \\dfrac{m_2}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему многоступенчатые ракеты эффективнее одноступенчатых?",
+        "hints": [],
+        "solution": "Идея Циолковского.",
+        "options": [
+          "Отработавшие ступени сбрасываются — не нужно разгонять лишнюю массу",
+          "Они легче на старте",
+          "Они быстрее горят",
+          "У них больше топлива всегда"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [100, 150]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "((qm + m) * v + m * u) / qm",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лодка массой {{qm}} кг с человеком {{m}} кг движется со скоростью {{v}} м/с. Человек прыгает с кормы назад со скоростью {{u}} м/с относительно земли. Найдите новую скорость лодки.",
+        "hints": [],
+        "solution": "$(M + m)v = Mv' - mu$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о реактивном движении по Циолковскому.",
+        "hints": [],
+        "solution": "Формула Циолковского $v = u\\ln(M_0/M)$.",
+        "options": [
+          "Конечная скорость зависит от скорости истечения газов",
+          "Она зависит от отношения начальной и конечной масс",
+          "Скорость ракеты может превышать скорость истечения газов",
+          "Ракете нужен воздух",
+          "Ракета отталкивается от Земли"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m * l / (m + b)",
+      "variables": ["m", "l", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек массой $m$ переходит с одного конца на другой лодки массой $b$ и длиной $l$. Запишите смещение лодки.",
+        "hints": [],
+        "solution": "Центр масс неподвижен."
+      }
+    }
+  }
+]
