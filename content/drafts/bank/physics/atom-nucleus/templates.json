@@ -1,0 +1,1386 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [6, 8, 13, 26]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [6, 8, 14, 30]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "z + d"
+        }
+      ],
+      "answer": "a - z",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ядро имеет зарядовое число {{z}} и массовое число {{a}}. Сколько в нём нейтронов?",
+        "hints": [],
+        "solution": "$N = A - Z$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [1, 6, 26, 92]
+        }
+      ],
+      "constraints": [],
+      "answer": "z",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько протонов в ядре с зарядовым числом {{z}}?",
+        "hints": [],
+        "solution": "Зарядовое число равно числу протонов."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [2, 8, 11, 29]
+        }
+      ],
+      "constraints": [],
+      "answer": "z",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько электронов в нейтральном атоме с зарядовым числом {{z}}?",
+        "hints": [],
+        "solution": "В нейтральном атоме электронов столько же, сколько протонов."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Из каких частиц состоит атомное ядро?",
+        "hints": [],
+        "solution": "Протонно-нейтронная модель.",
+        "options": [
+          "Из протонов и нейтронов",
+          "Из электронов и протонов",
+          "Только из протонов",
+          "Из электронов"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кто предложил планетарную модель атома?",
+        "hints": [],
+        "solution": "Опыты по рассеянию α-частиц.",
+        "options": ["Резерфорд", "Томсон", "Ньютон", "Фарадей"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самопроизвольное излучение ядрами некоторых элементов называется ___.",
+        "hints": [],
+        "solution": "Открыта Беккерелем (1896).",
+        "accepted": ["радиоактивностью", "радиоактивность"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между излучением и его природой.",
+        "hints": [],
+        "solution": "Виды излучения.",
+        "options": ["α-излучение", "β-излучение", "γ-излучение", "Нейтронное излучение"],
+        "matches": ["Ядра гелия", "Электроны", "Электромагнитные волны", "Нейтроны"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о строении атома.",
+        "hints": [],
+        "solution": "Планетарная модель.",
+        "options": [
+          "Почти вся масса атома сосредоточена в ядре",
+          "Ядро заряжено положительно",
+          "Размер ядра много меньше размера атома",
+          "Электроны находятся в ядре",
+          "Ядро заряжено отрицательно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите излучения по возрастанию проникающей способности.",
+        "hints": [],
+        "solution": "α задерживается листом бумаги, β — алюминием, γ — толстым свинцом.",
+        "options": ["α", "β", "γ"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое излучение задерживается листом бумаги?",
+        "hints": [],
+        "solution": "α-частицы тяжёлые и сильно ионизируют.",
+        "options": ["α", "β", "γ", "Никакое"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ядра с одинаковым числом протонов, но разным числом нейтронов, называются ___.",
+        "hints": [],
+        "solution": "Например, водород, дейтерий, тритий.",
+        "accepted": ["изотопами", "изотопы"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [6, 8, 20]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [6, 8, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "a",
+          "expr": "z + n"
+        }
+      ],
+      "answer": "a - n",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Массовое число ядра {{a}}, нейтронов {{n}}. Найдите зарядовое число.",
+        "hints": [],
+        "solution": "$Z = A - N$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой прибор регистрирует радиоактивные частицы?",
+        "hints": [],
+        "solution": "Также камера Вильсона.",
+        "options": ["Счётчик Гейгера", "Амперметр", "Термометр", "Барометр"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чем опасна радиация для живых организмов?",
+        "hints": [],
+        "solution": "Нужна защита и дозиметрический контроль.",
+        "options": [
+          "Ионизирует молекулы и разрушает клетки",
+          "Нагревает тело",
+          "Охлаждает",
+          "Безопасна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите изотопы водорода.",
+        "hints": [],
+        "solution": "Изотопы одного элемента имеют одинаковый Z.",
+        "options": ["Протий (A = 1)", "Дейтерий (A = 2)", "Тритий (A = 3)", "Гелий-4", "Литий-7"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [226, 238, 210]
+        },
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [88, 92, 84]
+        }
+      ],
+      "constraints": [],
+      "answer": "a - 4",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ядро с A = {{a}}, Z = {{z}} испытало α-распад. Найдите массовое число нового ядра.",
+        "hints": [],
+        "solution": "α-частица уносит A = 4, Z = 2."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [84, 88, 92]
+        }
+      ],
+      "constraints": [],
+      "answer": "z - 2",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ядро с Z = {{z}} испытало α-распад. Найдите зарядовое число нового ядра.",
+        "hints": [],
+        "solution": "Z уменьшается на 2."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [6, 19, 55, 82]
+        }
+      ],
+      "constraints": [],
+      "answer": "z + 1",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ядро с Z = {{z}} испытало β⁻-распад. Найдите зарядовое число нового ядра.",
+        "hints": [],
+        "solution": "Нейтрон превращается в протон, Z увеличивается на 1, A не меняется."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "qt",
+          "kind": "choice",
+          "values": [2, 5, 8]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "t",
+          "expr": "qt * k"
+        }
+      ],
+      "answer": "100 / 2^(t / qt)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Период полураспада {{qt}} сут. Какая доля (%) ядер останется через {{t}} сут?",
+        "hints": [],
+        "solution": "$N = N_0 \\cdot 2^{-t/T}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n0",
+          "kind": "choice",
+          "values": [800, 1600, 6400]
+        },
+        {
+          "name": "qt",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "t",
+          "expr": "qt * k"
+        }
+      ],
+      "answer": "n0 / 2^(t / qt)",
+      "tolerance": {},
+      "unit": "ядер"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Было {{n0}} ядер, период полураспада {{qt}} ч. Сколько останется через {{t}} ч?",
+        "hints": [],
+        "solution": "$N = N_0 2^{-t/T}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что меняется при γ-излучении ядра?",
+        "hints": [],
+        "solution": "γ-квант — фотон.",
+        "options": [
+          "Энергия ядра, но не Z и A",
+          "Z уменьшается на 2",
+          "A уменьшается на 4",
+          "Z увеличивается на 1"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о законах сохранения в ядерных реакциях.",
+        "hints": [],
+        "solution": "Сохранение зарядового и массового чисел.",
+        "options": [
+          "Сохраняется суммарный электрический заряд",
+          "Сохраняется суммарное массовое число",
+          "Сохраняется энергия",
+          "Сохраняется число протонов всегда",
+          "Масса покоя строго сохраняется"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "27 + 1 - 24",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "В реакции ²⁷₁₃Al + ¹₀n → ²⁴₁₁Na + X найдите массовое число X.",
+        "hints": [],
+        "solution": "Сумма A сохраняется."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "13 + 0 - 11",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "В той же реакции ²⁷₁₃Al + ¹₀n → ²⁴₁₁Na + X найдите зарядовое число X.",
+        "hints": [],
+        "solution": "Сумма Z сохраняется: X — α-частица."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Время, за которое распадается половина радиоактивных ядер, называется периодом ___.",
+        "hints": [],
+        "solution": "Обозначается $T_{1/2}$.",
+        "accepted": ["полураспада"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между распадом и изменением ядра.",
+        "hints": [],
+        "solution": "Правила смещения.",
+        "options": ["α-распад", "β⁻-распад", "γ-излучение", "Захват нейтрона"],
+        "matches": [
+          "A − 4, Z − 2",
+          "A не меняется, Z + 1",
+          "A и Z не меняются",
+          "A + 1, Z не меняется"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию долю оставшихся ядер через время:",
+        "hints": [],
+        "solution": "12,5 % < 25 % < 50 % < 100 %.",
+        "options": ["3 периода", "2 периода", "1 период", "0"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [30, 60, 90]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [25, 12.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "t / log2(100 / p)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "лет"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через {{t}} лет осталось {{p}} % ядер. Найдите период полураспада.",
+        "hints": [],
+        "solution": "$\\dfrac{N}{N_0} = 2^{-t/T}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ядро не разлетается, хотя протоны отталкиваются?",
+        "hints": [],
+        "solution": "Сильное взаимодействие на малых расстояниях.",
+        "options": [
+          "Действуют ядерные силы притяжения",
+          "Нейтроны отталкивают протоны",
+          "Электроны удерживают",
+          "Гравитация"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2^(-t / p)",
+      "variables": ["t", "p"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите долю нераспавшихся ядер через время $t$ при периоде полураспада $p$.",
+        "hints": [],
+        "solution": "$N/N_0 = 2^{-t/T}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "(238 - 206) / 4",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ядро ²³⁸₉₂U после цепочки распадов превратилось в ²⁰⁶₈₂Pb. Сколько произошло α-распадов?",
+        "hints": [],
+        "solution": "Массовое число меняется только при α-распаде: $\\Delta A = 4n_α$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * 8 - (92 - 82)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "В той же цепочке ²³⁸₉₂U → ²⁰⁶₈₂Pb сколько произошло β⁻-распадов?",
+        "hints": [],
+        "solution": "8 α-распадов уменьшили Z на 16, а итог −10: β-распадов $16 - 10 = 6$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n0",
+          "kind": "choice",
+          "values": [1000, 4000, 8000]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "n0 * (1 - 1 / 2^k)",
+      "tolerance": {},
+      "unit": "ядер"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько ядер распадётся из {{n0}} за {{k}} периода полураспада?",
+        "hints": [],
+        "solution": "Распалось $N_0(1 - 2^{-k})$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой изотоп образуется при β⁻-распаде ¹⁴₆C?",
+        "hints": [],
+        "solution": "Z + 1, A не меняется.",
+        "options": ["¹⁴₇N", "¹⁴₅B", "¹⁰₄Be", "¹⁴₆C"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [4, 8, 16]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [12, 24]
+        }
+      ],
+      "constraints": [],
+      "answer": "t / log2(k)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "сут"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Активность препарата уменьшилась в {{k}} раз за {{t}} сут. Найдите период полураспада.",
+        "hints": [],
+        "solution": "$2^{t/T} = k$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о ядерном реакторе.",
+        "hints": [],
+        "solution": "Устройство реактора.",
+        "options": [
+          "В нём идёт управляемая цепная реакция деления",
+          "Замедлитель замедляет нейтроны",
+          "Регулирующие стержни поглощают нейтроны",
+          "Реактор работает на синтезе водорода",
+          "В реакторе нет радиоактивных отходов"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между элементом реактора и функцией.",
+        "hints": [],
+        "solution": "Устройство реактора.",
+        "options": ["Уран-235", "Графит или вода", "Кадмиевые стержни", "Теплоноситель"],
+        "matches": [
+          "Ядерное топливо",
+          "Замедлитель нейтронов",
+          "Поглощение нейтронов, управление",
+          "Отвод теплоты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Реакция, в которой нейтроны, образовавшиеся при делении, вызывают новые деления, называется ___ реакцией.",
+        "hints": [],
+        "solution": "Основа реакторов и ядерного оружия.",
+        "accepted": ["цепной"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [92, 492, 1784]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [12, 56, 238]
+        }
+      ],
+      "constraints": [],
+      "answer": "e / a",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "МэВ"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Энергия связи ядра {{e}} МэВ, массовое число {{a}}. Найдите удельную энергию связи (МэВ на нуклон).",
+        "hints": [],
+        "solution": "$\\varepsilon = E/A$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите в порядке процессы в цепной реакции деления урана.",
+        "hints": [],
+        "solution": "Цепная реакция.",
+        "options": [
+          "Нейтрон поглощается ядром ²³⁵U",
+          "Ядро делится на два осколка",
+          "Вылетают 2–3 нейтрона и выделяется энергия",
+          "Новые нейтроны делят другие ядра"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ядерный синтез в Солнце возможен?",
+        "hints": [],
+        "solution": "Термоядерная реакция.",
+        "options": [
+          "Очень высокая температура позволяет ядрам преодолеть отталкивание",
+          "В Солнце нет протонов",
+          "Там низкое давление",
+          "Синтез идёт при комнатной температуре"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [56, 208, 238]
+        },
+        {
+          "name": "z",
+          "kind": "choice",
+          "values": [26, 82, 92]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a - z) / z",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нуклонов в ядре {{a}}, протонов {{z}}. Каково отношение нейтронов к протонам?",
+        "hints": [],
+        "solution": "$N/Z$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите способы защиты от радиоактивного излучения.",
+        "hints": [],
+        "solution": "Время, расстояние, экранирование.",
+        "options": [
+          "Увеличить расстояние до источника",
+          "Сократить время облучения",
+          "Использовать экраны (свинец, бетон)",
+          "Принимать тёплый душ во время облучения",
+          "Использовать тонкую бумагу от γ-излучения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a - 4 * n",
+      "variables": ["a", "n"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ядро с массовым числом $a$ претерпело $n$ α-распадов. Запишите новое массовое число.",
+        "hints": [],
+        "solution": "α-частица уносит 4 нуклона."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1, 2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "(1 - 1 / 2^k) * 100",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая доля (%) ядер распадётся за {{k}} периода полураспада?",
+        "hints": [],
+        "solution": "$1 - 2^{-k}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "(232 - 208) / 4",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько α- и β⁻-распадов переводят ²³²₉₀Th в ²⁰⁸₈₂Pb? Запишите число α-распадов.",
+        "hints": [],
+        "solution": "$\\Delta A = 24 = 4 \\cdot 6$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * 6 - (90 - 82)",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Для той же цепочки ²³²₉₀Th → ²⁰⁸₈₂Pb найдите число β⁻-распадов.",
+        "hints": [],
+        "solution": "6 α-распадов уменьшают Z на 12, итог −8: β-распадов 4."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "dm",
+          "kind": "choice",
+          "values": [0.03, 0.1, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "dm * 931.5",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "МэВ"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Дефект массы ядра {{dm}} а. е. м. Найдите энергию связи (МэВ), 1 а. е. м. ↔ 931,5 МэВ.",
+        "hints": [],
+        "solution": "$E = \\Delta m \\cdot 931{,}5$ МэВ."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при делении тяжёлых ядер выделяется энергия?",
+        "hints": [],
+        "solution": "Максимум удельной энергии связи у ядер с A ≈ 56.",
+        "options": [
+          "Удельная энергия связи осколков больше, чем у тяжёлого ядра",
+          "Нейтроны несут энергию",
+          "Ядра нагреваются",
+          "Масса возрастает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 235 * 6e23 * 200 * 1.6e-13 / 1e9",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "ГДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "При делении одного ядра ²³⁵U выделяется ≈ 200 МэВ. Сколько энергии (ГДж) выделится при делении всех ядер в {{m}} г урана-235? 1 МэВ = 1,6·10⁻¹³ Дж, $N_A = 6 \\cdot 10^{23}$ моль⁻¹.",
+        "hints": [],
+        "solution": "$N = \\dfrac{m}{M}N_A$, $E = N \\cdot 200$ МэВ."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о термоядерном синтезе.",
+        "hints": [],
+        "solution": "Синтез.",
+        "options": [
+          "Лёгкие ядра сливаются в более тяжёлые",
+          "Источник энергии Солнца",
+          "Нужны температуры порядка миллионов кельвинов",
+          "Идёт при комнатной температуре",
+          "Это деление тяжёлых ядер"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5730, 30]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [25, 12.5, 6.25]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * log2(100 / p)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "лет"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Образец содержит изотоп с периодом полураспада {{t}} лет. Через какое время останется {{p}} % ядер?",
+        "hints": [],
+        "solution": "$t = T\\log_2\\dfrac{N_0}{N}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию удельную энергию связи (МэВ/нуклон):",
+        "hints": [],
+        "solution": "Максимум у железа.",
+        "options": ["Дейтерий ≈ 1,1", "Гелий-4 ≈ 7,1", "Уран-238 ≈ 7,6", "Железо-56 ≈ 8,8"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: недостающая частица в реакции.",
+        "hints": [],
+        "solution": "Сохранение Z и A.",
+        "options": [
+          "⁹₄Be + ⁴₂He → ¹²₆C + ?",
+          "¹⁴₇N + ⁴₂He → ¹⁷₈O + ?",
+          "²H + ³H → ⁴He + ?",
+          "²³⁸₉₂U → ²³⁴₉₀Th + ?"
+        ],
+        "matches": ["нейтрон", "протон", "нейтрон (синтез)", "α-частица"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Метод определения возраста органических остатков по распаду изотопа углерода-14 называется ___ методом.",
+        "hints": [],
+        "solution": "Период полураспада ≈ 5730 лет.",
+        "accepted": ["радиоуглеродным"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [50, 25, 12.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "5730 * log2(100 / p)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "лет"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В древесине осталось {{p}} % углерода-14 от исходного (T = 5730 лет). Каков её возраст?",
+        "hints": [],
+        "solution": "$t = T\\log_2(N_0/N)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что называют критической массой?",
+        "hints": [],
+        "solution": "Определение.",
+        "options": [
+          "Наименьшую массу делящегося вещества, при которой идёт цепная реакция",
+          "Массу реактора",
+          "Массу одного ядра",
+          "Массу осколков"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "235 + 1 - 141 - 92",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько нейтронов выделится в реакции ²³⁵₉₂U + ¹₀n → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + x·¹₀n? Найдите x.",
+        "hints": [],
+        "solution": "Сумма массовых чисел сохраняется."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о дефекте массы.",
+        "hints": [],
+        "solution": "Энергия связи.",
+        "options": [
+          "Масса ядра меньше суммы масс свободных нуклонов",
+          "Разность масс связана с энергией связи $E = \\Delta m c^2$",
+          "Чем больше удельная энергия связи, тем ядро устойчивее",
+          "Масса ядра больше суммы масс нуклонов",
+          "Дефект массы равен нулю у всех ядер"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "t / log2(1 / q)",
+      "variables": ["t", "q"],
+      "range": [0.1, 0.9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через время $t$ осталась доля $q$ ядер. Запишите период полураспада.",
+        "hints": [],
+        "solution": "$q = 2^{-t/T}$."
+      }
+    }
+  }
+]

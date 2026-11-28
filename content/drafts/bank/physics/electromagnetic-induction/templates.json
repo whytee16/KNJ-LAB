@@ -1,0 +1,1524 @@
+[
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кто открыл явление электромагнитной индукции?",
+        "hints": [],
+        "solution": "Майкл Фарадей, 1831 г.",
+        "options": ["Фарадей", "Ампер", "Эрстед", "Ом"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Когда в замкнутой катушке возникает индукционный ток?",
+        "hints": [],
+        "solution": "Нужно изменение магнитного поля.",
+        "options": [
+          "Когда меняется магнитный поток через неё",
+          "Когда рядом лежит неподвижный магнит",
+          "Всегда",
+          "Когда катушка нагрета"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ток, возникающий в замкнутом контуре при изменении магнитного потока, называется ___.",
+        "hints": [],
+        "solution": "Явление электромагнитной индукции.",
+        "accepted": ["индукционным", "индукционный"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких случаях в катушке, соединённой с гальванометром, возникнет ток?",
+        "hints": [],
+        "solution": "Ток есть только при изменении потока.",
+        "options": [
+          "Вдвигаем магнит в катушку",
+          "Выдвигаем магнит",
+          "Вращаем катушку рядом с магнитом",
+          "Магнит неподвижно лежит в катушке",
+          "Катушку и магнит не трогают"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое устройство работает на явлении электромагнитной индукции?",
+        "hints": [],
+        "solution": "Генератор превращает механическую энергию в электрическую.",
+        "options": [
+          "Генератор переменного тока",
+          "Электрическая лампа",
+          "Аккумулятор",
+          "Нагреватель"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между устройством и физическим явлением.",
+        "hints": [],
+        "solution": "Принципы работы.",
+        "options": ["Генератор", "Электродвигатель", "Трансформатор", "Электромагнит"],
+        "matches": [
+          "Электромагнитная индукция",
+          "Действие магнитного поля на ток",
+          "Электромагнитная индукция (переменный ток)",
+          "Магнитное действие тока"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как зависит сила индукционного тока от скорости движения магнита?",
+        "hints": [],
+        "solution": "Быстрее меняется поток.",
+        "options": [
+          "Чем быстрее движется магнит, тем больше ток",
+          "Не зависит",
+          "Чем медленнее, тем больше",
+          "Ток есть только у неподвижного магнита"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите в порядке превращения энергии на ГЭС.",
+        "hints": [],
+        "solution": "Энергетическая цепочка ГЭС.",
+        "options": [
+          "Потенциальная энергия воды",
+          "Кинетическая энергия воды",
+          "Вращение турбины и генератора",
+          "Электрическая энергия"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Устройство для повышения или понижения переменного напряжения называется ___.",
+        "hints": [],
+        "solution": "Работает на электромагнитной индукции.",
+        "accepted": ["трансформатором", "трансформатор"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему трансформатор не работает на постоянном токе?",
+        "hints": [],
+        "solution": "Индукция требует изменения потока.",
+        "options": [
+          "Постоянный ток не создаёт изменяющегося магнитного потока",
+          "Постоянный ток слишком слаб",
+          "Трансформатор сгорит мгновенно",
+          "Работает одинаково"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите источники электроэнергии, использующие генераторы.",
+        "hints": [],
+        "solution": "Солнечные батареи и батарейки генераторов не используют.",
+        "options": ["ГЭС", "ТЭС", "Ветровая электростанция", "Солнечная батарея", "Батарейка"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [50, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * n",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Частота переменного тока в сети {{n}} Гц. Сколько раз за секунду ток меняет направление?",
+        "hints": [],
+        "solution": "За один период — два изменения направления."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой ток в бытовой электросети Казахстана?",
+        "hints": [],
+        "solution": "Параметры сети.",
+        "options": [
+          "Переменный, 50 Гц, 220 В",
+          "Постоянный 12 В",
+          "Переменный 1000 Гц",
+          "Постоянный 220 В"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.02, 0.01, 0.005]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / t",
+      "tolerance": {},
+      "unit": "Гц"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Период переменного тока {{t}} с. Найдите частоту.",
+        "hints": [],
+        "solution": "$\\nu = 1/T$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ток, периодически меняющий направление и величину, называется ___.",
+        "hints": [],
+        "solution": "Его получают генераторами.",
+        "accepted": ["переменным", "переменный"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n1",
+          "kind": "choice",
+          "values": [100, 500, 1000]
+        },
+        {
+          "name": "n2",
+          "kind": "choice",
+          "values": [50, 2000, 5000]
+        },
+        {
+          "name": "u1",
+          "kind": "choice",
+          "values": [220, 110]
+        }
+      ],
+      "constraints": [],
+      "answer": "u1 * n2 / n1",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Трансформатор: первичная обмотка {{n1}} витков, вторичная {{n2}}. Напряжение на первичной {{u1}} В. Найдите напряжение на вторичной.",
+        "hints": [],
+        "solution": "$\\dfrac{U_2}{U_1} = \\dfrac{N_2}{N_1}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [10, 20, 55]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [220, 1100]
+        }
+      ],
+      "constraints": [],
+      "answer": "u / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Коэффициент трансформации {{k}} (понижающий). Входное напряжение {{u}} В. Найдите выходное.",
+        "hints": [],
+        "solution": "$U_2 = U_1/k$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Трансформатор повышает напряжение в 10 раз. Как изменится сила тока во вторичной обмотке (потерь нет)?",
+        "hints": [],
+        "solution": "Мощность сохраняется: $U_1I_1 = U_2I_2$.",
+        "options": [
+          "Уменьшится в 10 раз",
+          "Увеличится в 10 раз",
+          "Не изменится",
+          "Станет равной нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о правиле Ленца.",
+        "hints": [],
+        "solution": "Правило Ленца.",
+        "options": [
+          "Индукционный ток противодействует изменению магнитного потока",
+          "Это следствие закона сохранения энергии",
+          "При вдвигании магнита катушка его отталкивает",
+          "Индукционный ток усиливает изменение потока",
+          "Правило относится к постоянному току"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "df",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.1, 0.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "df / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мВ"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Магнитный поток через контур изменился на {{df}} мВб за {{t}} с. Найдите ЭДС индукции (мВ).",
+        "hints": [],
+        "solution": "$\\mathcal{E} = \\dfrac{\\Delta\\Phi}{\\Delta t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "df",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.1, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * df / 1000 / t",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Катушка из {{n}} витков, магнитный поток через каждый виток меняется на {{df}} мВб за {{t}} с. Найдите ЭДС (В).",
+        "hints": [],
+        "solution": "$\\mathcal{E} = N\\dfrac{\\Delta\\Phi}{\\Delta t}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица магнитного потока — ___.",
+        "hints": [],
+        "solution": "1 Вб = 1 Тл · м².",
+        "accepted": ["вебер", "Вб"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: трансформатор с $U_1 = 220$ В.",
+        "hints": [],
+        "solution": "$U_2 = U_1 N_2/N_1$.",
+        "options": ["$N_2/N_1 = 1/10$", "$N_2/N_1 = 2$", "$N_2/N_1 = 1/55$", "$N_2/N_1 = 50$"],
+        "matches": ["22 В", "440 В", "4 В", "11 кВ"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите в порядке передачи электроэнергии от ТЭС к квартире.",
+        "hints": [],
+        "solution": "Схема энергосистемы.",
+        "options": [
+          "Генератор станции",
+          "Повышающий трансформатор",
+          "ЛЭП высокого напряжения",
+          "Понижающий трансформатор, сеть 220 В"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ЛЭП работают при высоком напряжении?",
+        "hints": [],
+        "solution": "$P_{пот} = I^2R$.",
+        "options": [
+          "При той же мощности ток меньше и меньше потери на нагрев проводов",
+          "Так безопаснее",
+          "Так дешевле генераторы",
+          "Ток быстрее доходит"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [0.25, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 / t2",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Магнит вдвигают в катушку за {{t1}} с, затем за {{t2}} с. Во сколько раз ЭДС во втором случае больше?",
+        "hints": [],
+        "solution": "ЭДС обратно пропорциональна времени изменения потока."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о генераторе переменного тока.",
+        "hints": [],
+        "solution": "Устройство генератора.",
+        "options": [
+          "В нём вращается рамка (или магнит)",
+          "Механическая энергия превращается в электрическую",
+          "Частота тока зависит от частоты вращения",
+          "Генератор работает без затрат энергии",
+          "Генератор даёт только постоянный ток"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u1",
+          "kind": "choice",
+          "values": [220]
+        },
+        {
+          "name": "i1",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "u2",
+          "kind": "choice",
+          "values": [11, 22, 44]
+        }
+      ],
+      "constraints": [],
+      "answer": "u1 * i1 / u2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Трансформатор: $U_1 = {{u1}}$ В, $I_1 = {{i1}}$ А, $U_2 = {{u2}}$ В. Найдите $I_2$ (без потерь).",
+        "hints": [],
+        "solution": "$U_1I_1 = U_2I_2$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Явление возникновения ЭДС в катушке при изменении тока в ней самой называется ___.",
+        "hints": [],
+        "solution": "Проявляется при размыкании цепи.",
+        "accepted": ["самоиндукцией", "самоиндукция"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "u * b / a",
+      "variables": ["u", "a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите выходное напряжение трансформатора через входное $u$ и числа витков $a$ (первичная) и $b$ (вторичная).",
+        "hints": [],
+        "solution": "$U_2 = U_1\\dfrac{N_2}{N_1}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.2, 0.5, 1]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.1, 0.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "b * l * v",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проводник длиной {{l}} м движется перпендикулярно полю {{b}} Тл со скоростью {{v}} м/с. Найдите ЭДС индукции ($\\mathcal{E} = Blv$).",
+        "hints": [],
+        "solution": "$\\mathcal{E} = Blv$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [0, 2]
+        },
+        {
+          "name": "f2",
+          "kind": "choice",
+          "values": [8, 10]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "abs(f2 - f1) / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Магнитный поток через рамку меняется от {{f1}} до {{f2}} мВб за {{t}} мс. Найдите среднюю ЭДС (В).",
+        "hints": [],
+        "solution": "$\\mathcal{E} = \\dfrac{|\\Delta\\Phi|}{\\Delta t}$ (мВб/мс = В)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "b * s / 10000 * 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мВб"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Площадь рамки {{s}} см², поле {{b}} Тл перпендикулярно рамке. Найдите магнитный поток (мВб).",
+        "hints": [],
+        "solution": "$\\Phi = BS$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рамку поворачивают в однородном поле так, что её плоскость становится параллельна линиям поля. Что с потоком?",
+        "hints": [],
+        "solution": "$\\Phi = BS\\cos\\alpha$.",
+        "options": ["Уменьшается до нуля", "Растёт", "Не меняется", "Удваивается"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [95, 98]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [10, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * e / 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД трансформатора {{e}} %, мощность на входе {{p}} кВт. Найдите мощность на выходе (кВт).",
+        "hints": [],
+        "solution": "$P_2 = \\eta P_1$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите способы увеличить ЭДС генератора.",
+        "hints": [],
+        "solution": "$\\mathcal{E} \\sim N B S \\omega$.",
+        "options": [
+          "Увеличить частоту вращения",
+          "Увеличить число витков",
+          "Усилить магнитное поле",
+          "Уменьшить число витков",
+          "Замедлить вращение"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [10, 100]
+        },
+        {
+          "name": "u",
+          "kind": "choice",
+          "values": [110, 220, 500]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1e6 / (u * 1000)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ток в ЛЭП мощностью {{p}} МВт при напряжении {{u}} кВ? (А)",
+        "hints": [],
+        "solution": "$I = P/U$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между процессом и направлением индукционного тока в катушке (по правилу Ленца).",
+        "hints": [],
+        "solution": "Индукционный ток противодействует изменению.",
+        "options": [
+          "Северный полюс вдвигают",
+          "Северный полюс выдвигают",
+          "Южный полюс вдвигают",
+          "Магнит неподвижен"
+        ],
+        "matches": [
+          "Катушка обращена к магниту северным полюсом (отталкивает)",
+          "Катушка обращена к магниту южным полюсом (притягивает)",
+          "Катушка обращена к магниту южным полюсом (отталкивает)",
+          "Тока нет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Магнитный поток через контур равен $\\Phi = BS\\cos\\alpha$, где $\\alpha$ — угол между вектором $B$ и ___ к контуру.",
+        "hints": [],
+        "solution": "Определение потока.",
+        "accepted": ["нормалью", "перпендикуляром"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию потери в ЛЭП (сопротивление 10 Ом, мощность 1 МВт) при напряжении:",
+        "hints": [],
+        "solution": "Потери $\\sim 1/U^2$.",
+        "options": ["500 кВ", "220 кВ", "110 кВ", "10 кВ"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему алюминиевое кольцо отталкивается от катушки при включении тока в ней?",
+        "hints": [],
+        "solution": "Правило Ленца (опыт Томсона).",
+        "options": [
+          "В кольце индуцируется ток, противодействующий изменению потока",
+          "Алюминий магнит",
+          "Кольцо нагревается",
+          "Ток в катушке постоянный"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "50 / p * 60",
+      "tolerance": {},
+      "unit": "об/мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Генератор вырабатывает ток частотой 50 Гц. Ротор имеет {{p}} пар полюсов. С какой частотой (об/мин) он вращается?",
+        "hints": [],
+        "solution": "$\\nu = p n$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о переменном токе.",
+        "hints": [],
+        "solution": "Свойства переменного тока.",
+        "options": [
+          "Его легко трансформировать",
+          "В сети 50 Гц ток меняет направление 100 раз в секунду",
+          "Действующее значение напряжения сети 220 В",
+          "Его нельзя использовать для нагрева",
+          "Он течёт только в одну сторону"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "b * l * v",
+      "variables": ["b", "l", "v"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проводник длиной $l$ движется со скоростью $v$ перпендикулярно полю $b$. Запишите ЭДС индукции.",
+        "hints": [],
+        "solution": "$\\mathcal{E} = Blv$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * b * s / 10000 / t * 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мВ"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Катушка из {{n}} витков площадью {{s}} см² в поле, которое равномерно растёт от 0 до {{b}} Тл за {{t}} с. Найдите ЭДС (мВ).",
+        "hints": [],
+        "solution": "$\\mathcal{E} = N S\\dfrac{\\Delta B}{\\Delta t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "b * l * v / r",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "А"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проводник длиной {{l}} м скользит по рельсам со скоростью {{v}} м/с в поле {{b}} Тл; сопротивление цепи {{r}} Ом. Найдите ток (А).",
+        "hints": [],
+        "solution": "$I = \\dfrac{Blv}{R}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "b^2 * l^2 * v / r",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В условиях предыдущей задачи найдите силу, тормозящую проводник ($F = BIl$), при $l$ = {{l}} м, $v$ = {{v}} м/с, $B$ = {{b}} Тл, $R$ = {{r}} Ом.",
+        "hints": [],
+        "solution": "$F = BIl = \\dfrac{B^2l^2v}{R}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Магнит падает внутри медной трубы медленнее, чем снаружи. Почему?",
+        "hints": [],
+        "solution": "Вихревые токи и правило Ленца.",
+        "options": [
+          "В стенках трубы возникают индукционные токи, тормозящие магнит",
+          "Медь притягивает магнит",
+          "В трубе меньше воздуха",
+          "Это неверно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "u2",
+          "kind": "choice",
+          "values": [11, 22, 44]
+        },
+        {
+          "name": "n2",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        }
+      ],
+      "constraints": [],
+      "answer": "220 * n2 / u2",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "витков"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Трансформатор понижает 220 В до {{u2}} В. Вторичная обмотка {{n2}} витков. Сколько витков в первичной?",
+        "hints": [],
+        "solution": "$N_1 = N_2\\dfrac{U_1}{U_2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о вихревых токах.",
+        "hints": [],
+        "solution": "Токи Фуко.",
+        "options": [
+          "Они возникают в сплошных проводниках в переменном поле",
+          "Их используют в индукционных плитах",
+          "Сердечники трансформаторов делают из пластин, чтобы уменьшить их",
+          "Они не нагревают проводник",
+          "Они возникают только в постоянном поле"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [100, 500]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "u1",
+          "kind": "choice",
+          "values": [10, 35]
+        },
+        {
+          "name": "u2",
+          "kind": "choice",
+          "values": [110, 220]
+        }
+      ],
+      "constraints": [],
+      "answer": "(u2 / u1)^2",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "ЛЭП передаёт {{p}} кВт по проводам сопротивлением {{r}} Ом. Во сколько раз уменьшатся потери, если повысить напряжение с {{u1}} до {{u2}} кВ?",
+        "hints": [],
+        "solution": "$P_{пот} = \\dfrac{P^2R}{U^2}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги работы индукционной плиты.",
+        "hints": [],
+        "solution": "Принцип индукционного нагрева.",
+        "options": [
+          "Переменный ток идёт по катушке под стеклом",
+          "Возникает переменное магнитное поле",
+          "В дне металлической посуды наводятся вихревые токи",
+          "Посуда нагревается по закону Джоуля — Ленца"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: рамка $S = 100$ см² в поле 0,2 Тл, угол между нормалью и полем.",
+        "hints": [],
+        "solution": "$\\Phi = BS\\cos\\alpha$.",
+        "options": ["0°", "60°", "90°", "180°"],
+        "matches": ["2 мВб", "1 мВб", "0", "−2 мВб"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Закон электромагнитной индукции: ЭДС равна скорости изменения магнитного ___, взятой со знаком минус.",
+        "hints": [],
+        "solution": "$\\mathcal{E} = -\\dfrac{\\Delta\\Phi}{\\Delta t}$.",
+        "accepted": ["потока"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.1, 0.5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * b * s / 10000 * 2 * 3.14 * f",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "В"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Рамка площадью {{s}} см² из {{n}} витков вращается в поле {{b}} Тл с частотой {{f}} об/с. Найдите максимальную ЭДС (В), $\\mathcal{E}_{max} = NBS\\omega$, $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$\\omega = 2\\pi\\nu$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при размыкании цепи с большой катушкой проскакивает искра?",
+        "hints": [],
+        "solution": "Самоиндукция.",
+        "options": [
+          "Из-за ЭДС самоиндукции, препятствующей исчезновению тока",
+          "Из-за перегрева",
+          "Из-за статического заряда",
+          "Из-за трения контактов"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.1, 0.5, 2]
+        },
+        {
+          "name": "i",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "l * i^2 / 2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Энергия магнитного поля катушки индуктивностью {{l}} Гн при токе {{i}} А ($W = LI^2/2$)?",
+        "hints": [],
+        "solution": "$W = \\dfrac{LI^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о трансформаторе.",
+        "hints": [],
+        "solution": "Свойства трансформатора.",
+        "options": [
+          "Повышающий имеет больше витков во вторичной обмотке",
+          "Мощность на выходе не больше мощности на входе",
+          "Частота тока не меняется",
+          "Он повышает и напряжение, и ток одновременно",
+          "Он работает на постоянном токе"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию ЭДС в катушке из 100 витков при изменении потока на 10 мВб за:",
+        "hints": [],
+        "solution": "1; 2; 10; 100 В.",
+        "options": ["1 с", "0,5 с", "0,1 с", "0,01 с"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "b * v / r",
+      "variables": ["b", "v", "r"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Проводник длиной 1 м скользит со скоростью $v$ в поле $b$, сопротивление цепи $r$. Запишите силу индукционного тока.",
+        "hints": [],
+        "solution": "$I = \\dfrac{Blv}{R}$ при $l = 1$ м."
+      }
+    }
+  }
+]

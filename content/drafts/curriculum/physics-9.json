@@ -1,0 +1,23 @@
+{
+  "subject": "physics",
+  "grade": 9,
+  "note": "Предложение раскладки тем банка по четвертям (порядок утверждённого списка Ф9.1–Ф9.12). Владелец правит в студии. Уже стоящие в КТП темы не переносятся.",
+  "sections": [
+    {
+      "quarter": 1,
+      "title": "Кинематика",
+      "topics": ["accelerated-motion", "free-fall", "projectile-motion", "circular-motion"]
+    },
+    {
+      "quarter": 2,
+      "title": "Динамика. Законы сохранения",
+      "topics": ["newton-laws", "gravitation", "momentum", "work-energy"]
+    },
+    { "quarter": 3, "title": "Колебания и волны", "topics": ["pendulums", "waves-sound"] },
+    {
+      "quarter": 4,
+      "title": "Электромагнитная индукция. Атом и ядро",
+      "topics": ["electromagnetic-induction", "atom-nucleus"]
+    }
+  ]
+}
