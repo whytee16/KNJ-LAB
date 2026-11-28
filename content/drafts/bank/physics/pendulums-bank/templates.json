@@ -1,0 +1,1494 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20, 30, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "t / n",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Маятник совершил {{n}} колебаний за {{t}} с. Найдите период.",
+        "hints": [],
+        "solution": "$T = t/N$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Гц"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите частоту колебаний, если период {{t}} с.",
+        "hints": [],
+        "solution": "$\\nu = 1/T$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 5, 50]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "n * t",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Частота колебаний {{n}} Гц. Сколько колебаний будет за {{t}} с?",
+        "hints": [],
+        "solution": "$N = \\nu t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t * 2"],
+        "y": ["-a * 1.3", "a * 1.3"],
+        "functions": [
+          {
+            "expr": "a * sin(2 * pi * x / t)"
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "x, см"
+        }
+      },
+      "answer": "a",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику (см. рисунок) найдите амплитуду колебаний.",
+        "hints": [],
+        "solution": "Амплитуда — наибольшее отклонение от положения равновесия."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t * 2"],
+        "y": ["-a * 1.3", "a * 1.3"],
+        "functions": [
+          {
+            "expr": "a * sin(2 * pi * x / t)"
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "x, см"
+        }
+      },
+      "answer": "t",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику (см. рисунок) найдите период колебаний.",
+        "hints": [],
+        "solution": "Период — время одного полного колебания."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что называют амплитудой колебаний?",
+        "hints": [],
+        "solution": "Обозначается $A$.",
+        "options": [
+          "Наибольшее отклонение от положения равновесия",
+          "Время одного колебания",
+          "Число колебаний в секунду",
+          "Путь за одно колебание"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Число колебаний за единицу времени называется ___.",
+        "hints": [],
+        "solution": "Единица — герц.",
+        "accepted": ["частотой", "частота"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры механических колебаний.",
+        "hints": [],
+        "solution": "Колебания — периодически повторяющиеся движения.",
+        "options": [
+          "Качели",
+          "Маятник часов",
+          "Струна гитары",
+          "Падение камня",
+          "Равномерное движение поезда"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и единицей.",
+        "hints": [],
+        "solution": "Единицы.",
+        "options": ["Период", "Частота", "Амплитуда", "Жёсткость пружины"],
+        "matches": ["с", "Гц", "м", "Н/м"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Где скорость маятника наибольшая?",
+        "hints": [],
+        "solution": "Потенциальная энергия переходит в кинетическую.",
+        "options": ["В положении равновесия", "В крайних точках", "Везде одинакова", "На полпути"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию частоту колебаний при периоде:",
+        "hints": [],
+        "solution": "0,5; 1; 2; 10 Гц.",
+        "options": ["2 с", "1 с", "0,5 с", "0,1 с"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "4 * a",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Амплитуда {{a}} см. Какой путь проходит тело за один период?",
+        "hints": [],
+        "solution": "За период тело проходит 4 амплитуды."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как называются колебания, происходящие только за счёт начального запаса энергии?",
+        "hints": [],
+        "solution": "Без внешней периодической силы.",
+        "options": ["Свободные", "Вынужденные", "Автоколебания", "Резонансные"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Резкое возрастание амплитуды вынужденных колебаний при совпадении частот называется ___.",
+        "hints": [],
+        "solution": "Опасен для мостов, полезен в музыкальных инструментах.",
+        "accepted": ["резонансом", "резонанс"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится период нитяного маятника, если увеличить массу груза?",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{l/g}$ — масса не входит.",
+        "options": ["Не изменится", "Увеличится", "Уменьшится", "Удвоится"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.4, 0.9, 1.6, 2.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(l / 10)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите период математического маятника длиной {{l}} м. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{l/g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.4, 1]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [10, 40, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(m / k)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите период пружинного маятника: масса {{m}} кг, жёсткость {{k}} Н/м. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{m/k}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится период математического маятника, если длину увеличить в 4 раза?",
+        "hints": [],
+        "solution": "$T \\sim \\sqrt{l}$.",
+        "options": ["Увеличится в 2 раза", "В 4 раза", "В 16 раз", "Не изменится"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится период пружинного маятника, если массу увеличить в 4 раза?",
+        "hints": [],
+        "solution": "$T \\sim \\sqrt{m}$.",
+        "options": ["Увеличится в 2 раза", "В 4 раза", "Уменьшится в 2 раза", "Не изменится"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * t^2 / (4 * 3.14^2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой длины должен быть маятник с периодом {{t}} с? Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$l = \\dfrac{gT^2}{4\\pi^2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о гармонических колебаниях.",
+        "hints": [],
+        "solution": "Свойства колебаний.",
+        "options": [
+          "В крайней точке скорость равна нулю",
+          "В положении равновесия ускорение равно нулю",
+          "Полная энергия сохраняется без трения",
+          "В крайней точке ускорение равно нулю",
+          "Период зависит от амплитуды (малые колебания)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.5, 1]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "4 * 3.14^2 * m / t^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н/м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг на пружине колеблется с периодом {{t}} с. Найдите жёсткость пружины. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$k = \\dfrac{4\\pi^2 m}{T^2}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Период малых колебаний математического маятника не зависит от ___ колебаний и массы груза.",
+        "hints": [],
+        "solution": "Изохронность (Галилей).",
+        "accepted": ["амплитуды"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие ($\\pi \\approx 3{,}14$, $g = 10$).",
+        "hints": [],
+        "solution": "Формулы периодов.",
+        "options": [
+          "Маятник 0,4 м",
+          "Маятник 1,6 м",
+          "Пружинный: 1 кг, 100 Н/м",
+          "Пружинный: 0,25 кг, 100 Н/м"
+        ],
+        "matches": ["≈ 1,26 с", "≈ 2,51 с", "≈ 0,63 с", "≈ 0,31 с"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию период математического маятника длиной:",
+        "hints": [],
+        "solution": "$T \\sim \\sqrt{l}$.",
+        "options": ["0,1 м", "0,4 м", "1 м", "2,5 м"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 400]
+        }
+      ],
+      "constraints": [],
+      "answer": "k * (a / 100)^2 / 2",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружинный маятник колеблется с амплитудой {{a}} см, жёсткость {{k}} Н/м. Найдите полную энергию колебаний.",
+        "hints": [],
+        "solution": "$E = \\dfrac{kA^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему маятниковые часы на Луне шли бы медленнее?",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{l/g}$.",
+        "options": [
+          "Ускорение свободного падения меньше, период больше",
+          "Там холоднее",
+          "Нет воздуха",
+          "Маятник тяжелее"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.4, 1, 2.5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * 60 / (2 * 3.14 * sqrt(l / 10))",
+      "tolerance": {
+        "abs": 1
+      },
+      "decimals": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько колебаний совершит маятник длиной {{l}} м за {{t}} мин? Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$N = t/T$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры резонанса.",
+        "hints": [],
+        "solution": "Совпадение частот.",
+        "options": [
+          "Раскачивание качелей толчками в такт",
+          "Звучание гитары через корпус",
+          "Разрушение моста при маршировке в ногу",
+          "Падение мяча",
+          "Нагрев воды"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * pi * sqrt(m / k)",
+      "variables": ["m", "k"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите период пружинного маятника через массу $m$ и жёсткость $k$.",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{m/k}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.4, 1]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [40, 100, 400]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "a / 100 * sqrt(k / m)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите наибольшую скорость груза пружинного маятника: масса {{m}} кг, жёсткость {{k}} Н/м, амплитуда {{a}} см.",
+        "hints": [],
+        "solution": "$\\dfrac{kA^2}{2} = \\dfrac{mv^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l1",
+          "kind": "choice",
+          "values": [0.25, 0.5, 1]
+        },
+        {
+          "name": "l2",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(l2 / l1)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два маятника: длины {{l1}} и {{l2}} м. Найдите отношение их периодов $T_2/T_1$.",
+        "hints": [],
+        "solution": "$T \\sim \\sqrt{l}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [21, 44, 69]
+        }
+      ],
+      "constraints": [],
+      "answer": "(sqrt(1 + p / 100) - 1) * 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длину маятника увеличили на {{p}} %. На сколько процентов увеличился период?",
+        "hints": [],
+        "solution": "$T \\sim \\sqrt{l}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Маятниковые часы отстают. Что нужно сделать с маятником?",
+        "hints": [],
+        "solution": "Уменьшить период.",
+        "options": ["Укоротить", "Удлинить", "Утяжелить груз", "Облегчить груз"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [1, 2.5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(x / 100 / 10)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз на пружине растянул её на {{x}} см в положении равновесия. Найдите период колебаний. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$kx = mg$ ⇒ $\\dfrac{m}{k} = \\dfrac{x}{g}$, $T = 2\\pi\\sqrt{x/g}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения об энергии колебаний пружинного маятника.",
+        "hints": [],
+        "solution": "Превращения энергии.",
+        "options": [
+          "В крайних точках вся энергия потенциальная",
+          "В положении равновесия вся энергия кинетическая",
+          "Полная энергия пропорциональна квадрату амплитуды",
+          "Полная энергия пропорциональна амплитуде",
+          "Кинетическая энергия постоянна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k1",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "k2",
+          "kind": "choice",
+          "values": [50, 150]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(m / (k1 + k2))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружины жёсткостью {{k1}} и {{k2}} Н/м соединили параллельно и подвесили груз {{m}} кг. Найдите период. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Параллельно: $k = k_1 + k_2$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между изменением и периодом математического маятника.",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{l/g}$.",
+        "options": ["Длина ×4", "Масса ×4", "g ×4", "Амплитуда ×2 (малая)"],
+        "matches": ["×2", "не изменится", "÷2", "не изменится"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Колебания, амплитуда которых уменьшается из-за трения, называются ___.",
+        "hints": [],
+        "solution": "Энергия переходит во внутреннюю.",
+        "accepted": ["затухающими", "затухающие"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию период пружинного маятника (k = 100 Н/м) при массе:",
+        "hints": [],
+        "solution": "$T \\sim \\sqrt{m}$.",
+        "options": ["0,01 кг", "0,25 кг", "1 кг", "4 кг"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * sqrt(10 / 3.7)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение свободного падения на Марсе 3,7 м/с². Каков на Марсе период маятника, имеющего на Земле ($g = 10$) период {{t}} с?",
+        "hints": [],
+        "solution": "$T \\sim 1/\\sqrt{g}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Солдатам запрещают идти в ногу по мосту. Почему?",
+        "hints": [],
+        "solution": "Совпадение частоты шагов с собственной частотой моста.",
+        "options": [
+          "Может возникнуть резонанс и разрушение моста",
+          "Чтобы не шуметь",
+          "Мост скользкий",
+          "Так быстрее"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(l / (10 + a))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Маятник длиной {{l}} м в лифте, поднимающемся с ускорением {{a}} м/с². Найдите период. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Эффективное ускорение $g + a$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о вынужденных колебаниях.",
+        "hints": [],
+        "solution": "Вынужденные колебания.",
+        "options": [
+          "Они происходят под действием периодической силы",
+          "Их частота равна частоте внешней силы",
+          "При совпадении частот возможен резонанс",
+          "Их частота равна собственной всегда",
+          "Они не требуют энергии"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * pi * sqrt(x / g)",
+      "variables": ["x", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружина растянута грузом на $x$ в равновесии. Запишите период колебаний ($g$).",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{x/g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.4, 1, 2.5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "a / 100 * sqrt(10 / l)",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Маятник длиной {{l}} м отклонили на угол с малой амплитудой {{a}} см. Найдите наибольшую скорость. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Для малых колебаний $v_{max} = A\\omega = A\\sqrt{g/l}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k1",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "k2",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(m * (k1 + k2) / (k1 * k2))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружины {{k1}} и {{k2}} Н/м соединили последовательно, груз {{m}} кг. Найдите период. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Последовательно: $k = \\dfrac{k_1k_2}{k_1 + k_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14^2 * m * (a / 100)^2 * (n / t)^2",
+      "tolerance": {},
+      "decimals": 3,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружинный маятник за {{t}} с совершает {{n}} колебаний. Масса груза {{m}} кг. Найдите энергию колебаний при амплитуде {{a}} см. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$k = 4\\pi^2 m\\nu^2$, $E = kA^2/2$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Часы с маятником подняли на гору. Как изменится их ход?",
+        "hints": [],
+        "solution": "$g$ уменьшается с высотой.",
+        "options": ["Отстают: $g$ меньше, период больше", "Спешат", "Не изменится", "Остановятся"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 5, 10]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(l / sqrt(100 + a^2))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Математический маятник в автомобиле, движущемся горизонтально с ускорением {{a}} м/с². Найдите период, если длина {{l}} м. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Эффективное ускорение $\\sqrt{g^2 + a^2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о периоде пружинного маятника.",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{m/k}$.",
+        "options": [
+          "Он не зависит от $g$",
+          "На Луне он тот же, что на Земле",
+          "Он зависит от массы и жёсткости",
+          "Он зависит от длины нити",
+          "В невесомости колебания невозможны"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [1.5, 3, 4]
+        }
+      ],
+      "constraints": ["t2 > t"],
+      "answer": "(t2 / t)^2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Период колебаний пружинного маятника {{t}} с. К грузу добавили ещё груз, и период стал {{t2}} с. Во сколько раз увеличилась масса?",
+        "hints": [],
+        "solution": "$T \\sim \\sqrt{m}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию период маятника длиной 1 м на телах:",
+        "hints": [],
+        "solution": "$T \\sim 1/\\sqrt{g}$.",
+        "options": ["Юпитер (25 м/с²)", "Земля (9,8)", "Марс (3,7)", "Луна (1,6)"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: пружинный маятник $m = 1$ кг, $k = 100$ Н/м, $A = 0{,}1$ м.",
+        "hints": [],
+        "solution": "$E = kA^2/2$, $v = A\\omega$, $a = A\\omega^2$.",
+        "options": [
+          "Полная энергия",
+          "Наибольшая скорость",
+          "Наибольшее ускорение",
+          "Циклическая частота"
+        ],
+        "matches": ["0,5 Дж", "1 м/с", "10 м/с²", "10 рад/с"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Величина $\\omega = 2\\pi/T$ называется ___ частотой.",
+        "hints": [],
+        "solution": "Единица — рад/с.",
+        "accepted": ["циклической", "круговой", "угловой"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [67, 98]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(l / 10)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Маятник Фуко длиной {{l}} м. Найдите его период. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$T = 2\\pi\\sqrt{l/g}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему качели раскачиваются сильнее, если толкать их в такт?",
+        "hints": [],
+        "solution": "Подкачка энергии в резонанс.",
+        "options": [
+          "Внешняя сила совершает положительную работу каждый период — резонанс",
+          "Так меньше трение",
+          "Качели легче",
+          "Так короче цепь"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * a / 100 / v",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз на пружине колеблется: наибольшая скорость {{v}} м/с, амплитуда {{a}} см. Найдите период. Примите $\\pi \\approx 3{,}14$, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$v_{max} = A\\omega$, $T = 2\\pi A/v_{max}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о графике $x(t) = A\\sin\\omega t$.",
+        "hints": [],
+        "solution": "Анализ графика.",
+        "options": [
+          "Это гармоническое колебание",
+          "В момент $t = 0$ тело в положении равновесия",
+          "Скорость максимальна при $x = 0$",
+          "Ускорение максимально при $x = 0$",
+          "Период равен $\\omega$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * pi * sqrt(m * (a + b) / (a * b))",
+      "variables": ["m", "a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две пружины жёсткостью $a$ и $b$ соединены последовательно, груз $m$. Запишите период.",
+        "hints": [],
+        "solution": "Последовательное соединение пружин."
+      }
+    }
+  }
+]

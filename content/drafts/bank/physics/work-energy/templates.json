@@ -1,0 +1,1594 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * v^2 / 2",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите кинетическую энергию тела массой {{m}} кг при скорости {{v}} м/с.",
+        "hints": [],
+        "solution": "$E_к = mv^2/2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [3, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите потенциальную энергию тела массой {{m}} кг на высоте {{h}} м. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$E_п = mgh$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 400]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "k * (x / 100)^2 / 2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите энергию пружины жёсткостью {{k}} Н/м, растянутой на {{x}} см.",
+        "hints": [],
+        "solution": "$E = \\dfrac{kx^2}{2}$, $x$ в метрах."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * s * 0.5",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила {{f}} Н направлена под углом 60° к перемещению {{s}} м. Найдите работу ($\\cos 60° = 0{,}5$).",
+        "hints": [],
+        "solution": "$A = Fs\\cos\\alpha$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чему равна работа силы, перпендикулярной перемещению?",
+        "hints": [],
+        "solution": "$\\cos 90° = 0$.",
+        "options": ["Нулю", "Fs", "−Fs", "Fs/2"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Работа равнодействующей силы равна изменению ___ энергии тела.",
+        "hints": [],
+        "solution": "Теорема о кинетической энергии.",
+        "accepted": ["кинетической"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Знак работы и энергии.",
+        "options": [
+          "Работа силы трения скольжения отрицательна",
+          "Работа силы тяжести при подъёме отрицательна",
+          "Кинетическая энергия не может быть отрицательной",
+          "Потенциальная энергия всегда положительна",
+          "Работа всегда положительна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и формулой.",
+        "hints": [],
+        "solution": "Формулы энергии и работы.",
+        "options": [
+          "Кинетическая энергия",
+          "Потенциальная энергия в поле тяжести",
+          "Энергия упругой деформации",
+          "Работа постоянной силы"
+        ],
+        "matches": ["$mv^2/2$", "$mgh$", "$kx^2/2$", "$Fs\\cos\\alpha$"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию кинетическую энергию тела 2 кг при скорости:",
+        "hints": [],
+        "solution": "1, 9, 25, 100 Дж.",
+        "options": ["1 м/с", "3 м/с", "5 м/с", "10 м/с"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * t * 60",
+      "tolerance": {},
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мощность двигателя {{p}} кВт. Какую работу он совершит за {{t}} мин (в кДж)?",
+        "hints": [],
+        "solution": "$A = Pt$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каком случае механическая энергия тела сохраняется?",
+        "hints": [],
+        "solution": "Консервативные силы.",
+        "options": [
+          "Когда действуют только сила тяжести и сила упругости",
+          "Всегда",
+          "При трении",
+          "При торможении"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сумма кинетической и потенциальной энергии тела — полная ___ энергия.",
+        "hints": [],
+        "solution": "$E = E_к + E_п$.",
+        "accepted": ["механическая"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг падает с высоты {{h}} м. Найдите его кинетическую энергию у земли. $g = 10$ м/с², сопротивления нет.",
+        "hints": [],
+        "solution": "$E_к = mgh$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится кинетическая энергия при увеличении скорости вдвое?",
+        "hints": [],
+        "solution": "$E_к \\sim v^2$.",
+        "options": ["Увеличится в 4 раза", "В 2 раза", "Не изменится", "В 8 раз"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "e",
+          "expr": "k * x^2 / 2"
+        }
+      ],
+      "answer": "2 * e / x^2",
+      "tolerance": {},
+      "unit": "Н/м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Энергия пружины {{e}} Дж при растяжении на {{x}} м. Найдите жёсткость.",
+        "hints": [],
+        "solution": "$k = 2E/x^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "-m * v^2 / 2",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг, двигаясь со скоростью {{v}} м/с, остановилось под действием силы трения. Найдите работу силы трения.",
+        "hints": [],
+        "solution": "Теорема о кинетической энергии: $A = 0 - mv^2/2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 14, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / 20",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен вверх со скоростью {{v}} м/с. На какую высоту он поднимется? $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$mv^2/2 = mgh$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20, 45]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(20 * h / 100)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик на нити отклонили на высоту {{h}} см и отпустили. Найдите скорость в нижней точке. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$v = \\sqrt{2gh}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [200, 400, 800]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "x / 100 * sqrt(k / (m / 1000))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружинный пистолет с пружиной {{k}} Н/м, сжатой на {{x}} см, выстреливает шарик массой {{m}} г. Найдите скорость шарика.",
+        "hints": [],
+        "solution": "$\\dfrac{kx^2}{2} = \\dfrac{mv^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Санки съезжают с горки без трения. От чего зависит их скорость у подножия?",
+        "hints": [],
+        "solution": "$v = \\sqrt{2gh}$.",
+        "options": [
+          "Только от высоты горки",
+          "От массы санок",
+          "От формы склона",
+          "От длины склона"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [15, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * (v2^2 - v1^2) / 2 / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль массой {{m}} т разогнался с {{v1}} до {{v2}} м/с. Найдите работу равнодействующей силы (кДж).",
+        "hints": [],
+        "solution": "$A = \\Delta E_к$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч брошен вверх (без сопротивления). Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Закон сохранения энергии.",
+        "options": [
+          "Полная механическая энергия постоянна",
+          "В верхней точке кинетическая энергия минимальна",
+          "Потенциальная энергия максимальна в верхней точке",
+          "Кинетическая энергия постоянна",
+          "Механическая энергия убывает"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * v",
+      "tolerance": {},
+      "unit": "Вт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите мощность подъёмника, поднимающего груз {{m}} кг со скоростью {{v}} м/с. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$P = Fv = mgv$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Силы, работа которых не зависит от формы траектории (тяжести, упругости), называются ___.",
+        "hints": [],
+        "solution": "Для них определена потенциальная энергия.",
+        "accepted": ["консервативными", "потенциальными"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: тело 1 кг, $g = 10$.",
+        "hints": [],
+        "solution": "$E = mgh + mv^2/2$.",
+        "options": [
+          "На высоте 5 м в покое",
+          "На земле со скоростью 6 м/с",
+          "На высоте 2 м со скоростью 4 м/с",
+          "На высоте 3 м со скоростью 2 м/с"
+        ],
+        "matches": ["50 Дж", "18 Дж", "28 Дж", "32 Дж"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию высоту подъёма мяча, брошенного вверх со скоростью ($g = 10$):",
+        "hints": [],
+        "solution": "1,25; 5; 11,25; 20 м.",
+        "options": ["5 м/с", "10 м/с", "15 м/с", "20 м/с"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [6, 8]
+        }
+      ],
+      "constraints": ["v^2 < 20 * h"],
+      "answer": "m * v^2 / 2 - m * 10 * h",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг соскользнуло с высоты {{h}} м и внизу имело скорость {{v}} м/с. Найдите работу силы трения. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$A_{тр} = E_2 - E_1$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему поезд перед подъёмом разгоняется?",
+        "hints": [],
+        "solution": "Кинетическая энергия переходит в потенциальную.",
+        "options": [
+          "Запас кинетической энергии помогает подняться",
+          "Чтобы быстрее приехать",
+          "Чтобы уменьшить трение",
+          "Это не нужно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "e",
+          "kind": "choice",
+          "values": [25, 40]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [10, 50]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * t * 3600 / (e / 100) / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "МДж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "КПД двигателя {{e}} %, полезная мощность {{p}} кВт. Найдите затраченную энергию за {{t}} ч (МДж).",
+        "hints": [],
+        "solution": "$W = \\dfrac{Pt}{\\eta}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "x * sqrt(k / m)",
+      "variables": ["x", "k", "m"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружина жёсткостью $k$ сжата на $x$ и выстреливает шарик массой $m$. Запишите скорость шарика.",
+        "hints": [],
+        "solution": "$kx^2 = mv^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 * m * 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик на нити длиной {{l}} м отклонили на 90° и отпустили. Найдите натяжение нити в нижней точке, если масса {{m}} кг. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$v^2 = 2gl$, $T - mg = \\dfrac{mv^2}{l} = 2mg$ ⇒ $T = 3mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (10 + a) * h",
+      "tolerance": {},
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг подняли на {{h}} м с ускорением {{a}} м/с². Найдите работу силы натяжения. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$T = m(g + a)$, $A = Th$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(v^2 + 20 * h)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Камень бросили под углом к горизонту со скоростью {{v}} м/с с высоты {{h}} м. С какой скоростью он упадёт? $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Закон сохранения энергии не зависит от угла."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [9, 10]
+        },
+        {
+          "name": "v1",
+          "kind": "choice",
+          "values": [600, 800]
+        },
+        {
+          "name": "v2",
+          "kind": "choice",
+          "values": [200, 400]
+        },
+        {
+          "name": "d",
+          "kind": "choice",
+          "values": [3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 1000 * (v1^2 - v2^2) / 2 / (d / 100)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля массой {{m}} г, летевшая {{v1}} м/с, пробила доску и вылетела со скоростью {{v2}} м/с. Найдите среднюю силу сопротивления, если толщина доски {{d}} см.",
+        "hints": [],
+        "solution": "$F d = \\dfrac{m(v_1^2 - v_2^2)}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело соскальзывает без трения по жёлобу «мёртвой петли». С какой наименьшей высоты нужно пустить шарик, чтобы он прошёл петлю радиусом R?",
+        "hints": [],
+        "solution": "В верхней точке $v^2 \\ge gR$; $mgh = mg \\cdot 2R + mv^2/2$.",
+        "options": ["2,5R", "2R", "R", "3R"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о работе силы тяжести.",
+        "hints": [],
+        "solution": "Консервативная сила.",
+        "options": [
+          "Она не зависит от формы траектории",
+          "На замкнутом пути она равна нулю",
+          "Она равна убыли потенциальной энергии",
+          "Она зависит от длины пути",
+          "Она всегда положительна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "x1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "x2",
+          "kind": "choice",
+          "values": [6, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "k * ((x2 / 100)^2 - (x1 / 100)^2) / 2",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Дж"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружину жёсткостью {{k}} Н/м растянули с {{x1}} до {{x2}} см. Найдите работу внешней силы.",
+        "hints": [],
+        "solution": "$A = \\dfrac{k(x_2^2 - x_1^2)}{2}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между процессом и знаком работы силы тяжести.",
+        "hints": [],
+        "solution": "Работа силы тяжести $-mg\\Delta h$.",
+        "options": [
+          "Подъём груза",
+          "Падение камня",
+          "Горизонтальное движение",
+          "Движение по замкнутому пути"
+        ],
+        "matches": ["Отрицательна", "Положительна", "Равна нулю", "Равна нулю (в сумме)"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Работа силы упругости при деформации от $x_1$ до $x_2$ равна $-\\dfrac{k(x_2^2 - x_1^2)}{___}$.",
+        "hints": [],
+        "solution": "Убыль потенциальной энергии.",
+        "accepted": ["2"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию тормозной путь автомобиля (сила торможения одинакова) при скорости:",
+        "hints": [],
+        "solution": "Путь пропорционален $v^2$.",
+        "options": ["36 км/ч", "54 км/ч", "72 км/ч", "108 км/ч"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [25, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / (2 * 10 * s)",
+      "tolerance": {},
+      "decimals": 3
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шайба, скользя по льду со скоростью {{v}} м/с, остановилась, пройдя {{s}} м. Найдите коэффициент трения. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$\\mu mg s = \\dfrac{mv^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится высота подъёма мяча, брошенного вверх, если начальную скорость увеличить в 3 раза?",
+        "hints": [],
+        "solution": "$h \\sim v^2$.",
+        "options": ["Увеличится в 9 раз", "В 3 раза", "Не изменится", "В 6 раз"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1000, 2000]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 * sqrt(2 * m * 10 * h / k)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг падает с высоты {{h}} м на пружину жёсткостью {{k}} Н/м. Найдите наибольшее сжатие (см), пренебрегая изменением высоты при сжатии. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$mgh = kx^2/2$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о мощности.",
+        "hints": [],
+        "solution": "Определение мощности.",
+        "options": [
+          "$P = A/t$",
+          "$P = Fv$ при силе вдоль скорости",
+          "Единица — ватт",
+          "Мощность — это работа",
+          "Мощность измеряется в джоулях"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "v^2 / (2 * g * s)",
+      "variables": ["v", "g", "s"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шайба со скоростью $v$ остановилась на пути $s$. Запишите коэффициент трения ($g$).",
+        "hints": [],
+        "solution": "$\\mu g s = v^2/2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [3]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(2 * 10 * h - 2 * mu * 10 * sqrt(l^2 - h^2))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг соскальзывает с наклонной плоскости высотой {{h}} м и длиной {{l}} м, коэффициент трения {{mu}}. Найдите скорость внизу. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$mgh - \\mu mg\\cos\\alpha \\cdot l = \\dfrac{mv^2}{2}$, $l\\cos\\alpha = \\sqrt{l^2 - h^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [9, 10]
+        },
+        {
+          "name": "qm",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "qm / (m / 1000 + qm) * 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "%"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля массой {{m}} г застревает в бруске {{qm}} кг на нити, брусок поднимается на {{h}} см. Найдите долю (%) кинетической энергии пули, перешедшую во внутреннюю.",
+        "hints": [],
+        "solution": "При неупругом ударе теряется доля $\\dfrac{M}{m + M}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.4, 0.9, 1.6]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(2 * 10 * l * 0.5)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик на нити длиной {{l}} м отклонили на 60° и отпустили. Найдите скорость в нижней точке. $g = 10$ м/с², $\\cos 60° = 0{,}5$.",
+        "hints": [],
+        "solution": "$h = l(1 - \\cos\\alpha)$, $v = \\sqrt{2gh}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мяч упал с высоты 1 м и подпрыгнул на 0,8 м. Какая доля механической энергии потеряна при ударе?",
+        "hints": [],
+        "solution": "$\\dfrac{1 - 0{,}8}{1}$.",
+        "options": ["20 %", "80 %", "0", "10 %"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.05, 0.1]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [36, 54, 72]
+        },
+        {
+          "name": "fr",
+          "kind": "choice",
+          "values": [500, 1000]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m * 1000 * 10 * s + fr) * v / 3.6 / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль массой {{m}} т едет в гору с уклоном (sin α = {{s}}) с постоянной скоростью {{v}} км/ч. Сила сопротивления {{fr}} Н. Найдите мощность (кВт). $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$F = mg\\sin\\alpha + F_с$, $P = Fv$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о «мёртвой петле» без трения.",
+        "hints": [],
+        "solution": "Анализ петли.",
+        "options": [
+          "В верхней точке нужна скорость не меньше $\\sqrt{gR}$",
+          "Наименьшая высота старта $2{,}5R$",
+          "В нижней точке сила давления больше веса",
+          "В верхней точке тело невесомо всегда",
+          "Высота старта не важна"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [40, 60]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 * h / l",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Санки массой {{m}} кг скатились с горки высотой {{h}} м и проехали по горизонтали {{s}} м до остановки. Найдите среднюю силу трения на всём пути длиной {{l}} м. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Вся $mgh$ ушла на работу против трения: $F L = mgh$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи с законом сохранения энергии и трением.",
+        "hints": [],
+        "solution": "Алгоритм.",
+        "options": [
+          "Выбрать нулевой уровень потенциальной энергии",
+          "Записать энергию в начальном положении",
+          "Записать энергию в конечном положении",
+          "Приравнять разность работе сил трения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: шарик на нити длиной 1 м, $g = 10$, отклонён на угол…",
+        "hints": [],
+        "solution": "$v = \\sqrt{2gl(1 - \\cos\\alpha)}$.",
+        "options": ["90°", "60°", "180° (вверх, без начальной скорости)", "0°"],
+        "matches": ["≈ 4,5 м/с", "≈ 3,2 м/с", "≈ 6,3 м/с", "0"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Энергия не возникает из ничего и не исчезает — это закон ___ энергии.",
+        "hints": [],
+        "solution": "Фундаментальный закон природы.",
+        "accepted": ["сохранения"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 50]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [100, 200]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * 10 * v / 1e6",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "МВт"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ракета массой {{m}} т поднимается вертикально с постоянной скоростью {{v}} м/с. Какую полезную мощность развивают двигатели (МВт)? Сопротивлением пренебречь, $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Сила тяги $mg$, $P = mgv$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему гидроэлектростанции строят на горных реках?",
+        "hints": [],
+        "solution": "$E = mgh$.",
+        "options": [
+          "Большой перепад высот — больше потенциальная энергия воды",
+          "Вода в горах чище",
+          "В горах больше рек",
+          "Это не так"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [20]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [16, 18]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m * v^2 / 2 - m * 10 * h) / h",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг бросили вверх со скоростью {{v}} м/с; оно поднялось на {{h}} м. Найдите среднюю силу сопротивления воздуха. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$\\dfrac{mv^2}{2} - mgh = F_с h$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о соударениях и энергии.",
+        "hints": [],
+        "solution": "Законы сохранения.",
+        "options": [
+          "При упругом ударе кинетическая энергия сохраняется",
+          "При неупругом — часть переходит во внутреннюю",
+          "Импульс сохраняется в обоих случаях (замкнутая система)",
+          "При неупругом ударе энергия возрастает",
+          "При упругом ударе импульс не сохраняется"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "sqrt(2 * g * l * (1 - c))",
+      "variables": ["g", "l", "c"],
+      "range": [0.1, 0.9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик на нити длиной $l$ отклонили на угол с косинусом $c$. Запишите скорость в нижней точке ($g$).",
+        "hints": [],
+        "solution": "$h = l(1 - \\cos\\alpha)$."
+      }
+    }
+  }
+]
