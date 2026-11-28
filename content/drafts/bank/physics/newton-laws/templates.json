@@ -1,0 +1,1600 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 5, 10]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "m * a"
+        }
+      ],
+      "answer": "f / m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На тело массой {{m}} кг действует сила {{f}} Н. Найдите ускорение.",
+        "hints": [],
+        "solution": "Второй закон Ньютона: $a = F/m$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 2, 5, 50]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * a",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какая сила сообщает телу массой {{m}} кг ускорение {{a}} м/с²?",
+        "hints": [],
+        "solution": "$F = ma$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 3, 8]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "m * a"
+        }
+      ],
+      "answer": "f / a",
+      "tolerance": {},
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила {{f}} Н сообщает телу ускорение {{a}} м/с². Найдите массу тела.",
+        "hints": [],
+        "solution": "$m = F/a$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое утверждение выражает первый закон Ньютона?",
+        "hints": [],
+        "solution": "Закон инерции.",
+        "options": [
+          "Тело сохраняет скорость, если на него не действуют силы или они скомпенсированы",
+          "F = ma",
+          "Силы действия и противодействия равны",
+          "Все тела притягиваются"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое утверждение выражает третий закон Ньютона?",
+        "hints": [],
+        "solution": "Действие равно противодействию.",
+        "options": [
+          "Тела действуют друг на друга с силами, равными по модулю и противоположными по направлению",
+          "F = ma",
+          "Закон инерции",
+          "Сила трения пропорциональна давлению"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Свойство тела сохранять скорость при отсутствии действия других тел называется ___.",
+        "hints": [],
+        "solution": "Мера инертности — масса.",
+        "accepted": ["инерцией", "инерция"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры явления инерции.",
+        "hints": [],
+        "solution": "Тела сохраняют своё движение.",
+        "options": [
+          "Пассажиры подаются вперёд при торможении автобуса",
+          "Отряхивание пыли с одежды",
+          "Насаживание молотка на рукоятку ударом о пол",
+          "Падение камня",
+          "Нагревание воды"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между законом и формулировкой.",
+        "hints": [],
+        "solution": "Законы механики.",
+        "options": [
+          "Первый закон Ньютона",
+          "Второй закон Ньютона",
+          "Третий закон Ньютона",
+          "Закон всемирного тяготения"
+        ],
+        "matches": [
+          "Существуют инерциальные системы отсчёта",
+          "$F = ma$",
+          "$F_{12} = -F_{21}$",
+          "$F = Gm_1m_2/r^2$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение тела направлено…",
+        "hints": [],
+        "solution": "$\\vec{a} = \\vec{F}/m$.",
+        "options": [
+          "Так же, как равнодействующая сил",
+          "Против равнодействующей",
+          "По скорости всегда",
+          "Перпендикулярно силе"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию ускорение тела массой 2 кг под действием силы:",
+        "hints": [],
+        "solution": "0,5; 2; 5; 10 м/с².",
+        "options": ["1 Н", "4 Н", "10 Н", "20 Н"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лошадь тянет телегу. С какой силой телега тянет лошадь?",
+        "hints": [],
+        "solution": "Третий закон Ньютона.",
+        "options": [
+          "С такой же по модулю, противоположной по направлению",
+          "С меньшей",
+          "С большей",
+          "Не тянет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "k",
+      "tolerance": {},
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится ускорение тела, если силу увеличить в {{k}} раза?",
+        "hints": [],
+        "solution": "$a \\sim F$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица силы ньютон: 1 Н = 1 кг · м/___.",
+        "hints": [],
+        "solution": "$F = ma$.",
+        "accepted": ["с²", "с^2", "с2"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при резком торможении автобуса пассажиры наклоняются вперёд?",
+        "hints": [],
+        "solution": "Инерция.",
+        "options": [
+          "По инерции продолжают двигаться вперёд",
+          "Их толкает водитель",
+          "Автобус наклоняется",
+          "Из-за силы тяжести"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "0",
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Равнодействующая сил на тело массой {{m}} кг равна нулю. Каково ускорение?",
+        "hints": [],
+        "solution": "Первый закон Ньютона."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * v / t / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль массой {{m}} т разгоняется с места до {{v}} м/с за {{t}} с. Найдите равнодействующую силу (кН).",
+        "hints": [],
+        "solution": "$a = v/t$, $F = ma$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "ft",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": 0,
+            "size": "f",
+            "label": "F"
+          },
+          {
+            "angle": 180,
+            "size": "ft",
+            "label": "F тр"
+          },
+          {
+            "angle": 90,
+            "size": "m * 10",
+            "label": "N"
+          },
+          {
+            "angle": -90,
+            "size": "m * 10",
+            "label": "mg"
+          }
+        ]
+      },
+      "answer": "(f - ft) / m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг тянут по столу силой {{f}} Н, сила трения {{ft}} Н (см. рисунок). Найдите ускорение.",
+        "hints": [],
+        "solution": "$a = \\dfrac{F - F_{тр}}{m}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 50, 100]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (10 + a)",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг поднимают вертикально с ускорением {{a}} м/с². Найдите силу натяжения троса. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$T - mg = ma$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 50, 100]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (10 - a)",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг опускают на тросе с ускорением {{a}} м/с² (вниз). Найдите силу натяжения. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$mg - T = ma$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Под действием одной и той же силы тело массой 2 кг получает ускорение 6 м/с². Какое ускорение получит тело массой 3 кг?",
+        "hints": [],
+        "solution": "$F = 12$ Н, $a = 12/3$.",
+        "options": ["4 м/с²", "9 м/с²", "6 м/с²", "2 м/с²"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 70]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (10 + a)",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите вес человека массой {{m}} кг в лифте, движущемся с ускорением {{a}} м/с² вверх. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$P = m(g + a)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 70]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (10 - a)",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите вес того же человека ({{m}} кг) в лифте с ускорением {{a}} м/с² вниз. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$P = m(g - a)$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о силах действия и противодействия.",
+        "hints": [],
+        "solution": "Третий закон Ньютона.",
+        "options": [
+          "Они приложены к разным телам",
+          "Они одной природы",
+          "Они не уравновешивают друг друга",
+          "Они приложены к одному телу",
+          "Они разной природы"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": ["m * a > f1"],
+      "answer": "m * a - f1",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг движется с ускорением {{a}} м/с² под действием двух сил, направленных в одну сторону. Одна сила {{f1}} Н. Найдите вторую.",
+        "hints": [],
+        "solution": "$F_1 + F_2 = ma$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Системы отсчёта, в которых выполняется закон инерции, называются ___.",
+        "hints": [],
+        "solution": "Например, связанные с Землёй (приближённо).",
+        "accepted": ["инерциальными", "инерциальные"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: лифт с человеком 60 кг ($g = 10$).",
+        "hints": [],
+        "solution": "Вес в движущемся лифте.",
+        "options": [
+          "Покоится",
+          "Ускоряется вверх 2 м/с²",
+          "Ускоряется вниз 2 м/с²",
+          "Свободно падает"
+        ],
+        "matches": ["600 Н", "720 Н", "480 Н", "0 Н"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию вес человека в лифте:",
+        "hints": [],
+        "solution": "$P = m(g \\pm a)$.",
+        "options": [
+          "Свободное падение",
+          "Ускорение 3 м/с² вниз",
+          "Равномерное движение",
+          "Ускорение 3 м/с² вверх"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему ракета движется в космосе, где не от чего оттолкнуться?",
+        "hints": [],
+        "solution": "Реактивное движение.",
+        "options": [
+          "Она отталкивает газы, а газы толкают ракету (третий закон)",
+          "Её притягивают звёзды",
+          "Её толкает свет",
+          "Космос не пуст"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * v / f",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через какое время тело массой {{m}} кг под действием силы {{f}} Н разгонится из покоя до {{v}} м/с?",
+        "hints": [],
+        "solution": "$a = F/m$, $t = v/a$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m * (g + a)",
+      "variables": ["m", "g", "a"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите силу натяжения троса $f$, поднимающего груз массой $m$ с ускорением $a$ ($g$).",
+        "hints": [],
+        "solution": "$T = m(g + a)$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        }
+      ],
+      "constraints": ["f > mu * m * 10"],
+      "answer": "(f - mu * m * 10) / m",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг тянут силой {{f}} Н по столу с коэффициентом трения {{mu}}. Найдите ускорение. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$a = \\dfrac{F - \\mu mg}{m}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [12, 24]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * m2 / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два бруска {{m1}} и {{m2}} кг, связанные нитью, тянут по гладкому столу силой {{f}} Н, приложенной к первому. Найдите натяжение нити.",
+        "hints": [],
+        "solution": "Общее ускорение $a = F/(m_1 + m_2)$; нить разгоняет второй: $T = m_2 a$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 1.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [36, 54, 72]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [20, 25, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 1000 * (v / 3.6)^2 / (2 * s) / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль массой {{m}} т тормозит с {{v}} км/ч до остановки на пути {{s}} м. Найдите силу торможения (кН).",
+        "hints": [],
+        "solution": "$a = \\dfrac{v^2}{2s}$, $F = ma$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * (m2 - m1) / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через неподвижный блок перекинута нить с грузами {{m1}} и {{m2}} кг (машина Атвуда). Найдите ускорение грузов. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$a = g\\dfrac{m_2 - m_1}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему трудно сдвинуть с места тяжёлый шкаф, а лёгкий стул легко?",
+        "hints": [],
+        "solution": "Инертность и трение.",
+        "options": [
+          "Масса шкафа больше — нужна большая сила для того же ускорения (и больше трение)",
+          "Шкаф прибит",
+          "Стул легче притягивается",
+          "Это неверно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * 0.5",
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело массой {{m}} кг соскальзывает без трения с наклонной плоскости с углом 30°. Найдите ускорение. $g = 10$ м/с², $\\sin 30° = 0{,}5$.",
+        "hints": [],
+        "solution": "$a = g\\sin\\alpha$ — масса не важна."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок лежит на столе. Выберите верные утверждения о силах.",
+        "hints": [],
+        "solution": "Пара «действие — противодействие»: брусок давит на стол (вес), стол на брусок (реакция).",
+        "options": [
+          "Сила тяжести бруска и сила реакции стола уравновешены",
+          "Вес бруска приложен к столу",
+          "Сила реакции и вес — пара по третьему закону",
+          "Сила тяжести и вес — пара по третьему закону",
+          "Вес и сила тяжести приложены к одному телу"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [-2, -1, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "m * (10 + a)"
+        }
+      ],
+      "answer": "p / m - 10",
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек массой {{m}} кг стоит на весах в лифте, весы показывают {{p}} Н. С каким ускорением (со знаком, вверх «+») движется лифт? $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$P = m(g + a)$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: машина Атвуда ($g = 10$), грузы…",
+        "hints": [],
+        "solution": "$a = g(m_2 - m_1)/(m_1 + m_2)$.",
+        "options": ["1 и 1 кг", "1 и 3 кг", "2 и 3 кг", "1 и 4 кг"],
+        "matches": ["0", "5 м/с²", "2 м/с²", "6 м/с²"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мера инертности тела — его ___.",
+        "hints": [],
+        "solution": "Чем больше масса, тем меньше ускорение при той же силе.",
+        "accepted": ["масса"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи динамики.",
+        "hints": [],
+        "solution": "Алгоритм.",
+        "options": [
+          "Сделать рисунок и показать силы",
+          "Выбрать оси координат",
+          "Записать второй закон Ньютона в проекциях",
+          "Решить систему уравнений"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [60, 80, 100]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (10 - a)",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Парашютист массой {{m}} кг опускается с ускорением {{a}} м/с². Найдите силу сопротивления воздуха. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$mg - F_с = ma$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело движется с постоянной скоростью. Что можно сказать о силах?",
+        "hints": [],
+        "solution": "Первый закон Ньютона.",
+        "options": [
+          "Равнодействующая равна нулю",
+          "Сил нет",
+          "Есть сила в направлении движения",
+          "Равнодействующая направлена по скорости"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о массе.",
+        "hints": [],
+        "solution": "Масса и вес — разные величины.",
+        "options": [
+          "Масса — мера инертности",
+          "Масса не зависит от скорости в классической механике",
+          "Масса измеряется в килограммах",
+          "Масса — это вес",
+          "Масса на Луне меньше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "g * (b - a) / (a + b)",
+      "variables": ["g", "a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Машина Атвуда: грузы массами $a < b$. Запишите ускорение ($g$).",
+        "hints": [],
+        "solution": "$a = g\\dfrac{m_2 - m_1}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [3, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * m1 * m2 * 10 / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Машина Атвуда: грузы {{m1}} и {{m2}} кг. Найдите силу натяжения нити. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$T = \\dfrac{2m_1m_2 g}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2]
+        }
+      ],
+      "constraints": ["m2 > mu * m1"],
+      "answer": "10 * (m2 - mu * m1) / (m1 + m2)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок {{m1}} кг на столе связан нитью через блок с висящим грузом {{m2}} кг. Коэффициент трения бруска {{mu}}. Найдите ускорение. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$a = g\\dfrac{m_2 - \\mu m_1}{m_1 + m_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * (0.5 - mu * 0.87)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок соскальзывает с наклонной плоскости с углом 30°, коэффициент трения {{mu}}. Найдите ускорение. $g = 10$ м/с², $\\sin 30° = 0{,}5$, $\\cos 30° \\approx 0{,}87$.",
+        "hints": [],
+        "solution": "$a = g(\\sin\\alpha - \\mu\\cos\\alpha)$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек тянет верёвку, привязанную к стене, силой 200 Н. Затем два человека тянут ту же верёвку в разные стороны по 200 Н каждый. Сравните натяжение верёвки.",
+        "hints": [],
+        "solution": "Стена действует так же, как второй человек.",
+        "options": [
+          "Одинаково: 200 Н",
+          "Во втором случае 400 Н",
+          "Во втором случае 0",
+          "В первом 400 Н"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [9, 15, 30]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * 2 / 3",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Три бруска по {{m}} кг связаны нитями и тянутся силой {{f}} Н по гладкому столу. Найдите натяжение нити между первым (к которому приложена сила) и вторым.",
+        "hints": [],
+        "solution": "Нить разгоняет два бруска: $T = 2m \\cdot \\dfrac{F}{3m}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о машине Атвуда.",
+        "hints": [],
+        "solution": "Анализ системы.",
+        "options": [
+          "Ускорения грузов равны по модулю",
+          "Натяжение нити одинаково по обе стороны идеального блока",
+          "Натяжение меньше веса тяжёлого груза",
+          "Натяжение равно весу тяжёлого груза",
+          "Лёгкий груз опускается"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [500, 800]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 4, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * (10 + 2 * h / t^2)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лифт массой {{m}} кг с начальной скоростью 0 за {{t}} с поднялся на {{h}} м равноускоренно. Найдите силу натяжения троса. $g = 10$ м/с².",
+        "hints": [],
+        "solution": "$a = 2h/t^2$, $T = m(g + a)$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию ускорение бруска на наклонной плоскости без трения при угле:",
+        "hints": [],
+        "solution": "$a = g\\sin\\alpha$.",
+        "options": ["10°", "30°", "45°", "60°"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: брусок $m = 2$ кг, сила 10 Н, трение $\\mu$ ($g = 10$).",
+        "hints": [],
+        "solution": "$F_{тр} = \\mu mg$; при $\\mu mg \\ge F$ брусок не разгоняется.",
+        "options": ["μ = 0", "μ = 0,25", "μ = 0,5", "μ = 0,6"],
+        "matches": ["5 м/с²", "2,5 м/с²", "0 (равномерно или покой)", "0 (не сдвинется)"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Силы, о которых говорится в третьем законе Ньютона, приложены к ___ телам.",
+        "hints": [],
+        "solution": "Поэтому они не уравновешиваются.",
+        "accepted": ["разным"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.4]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * 10 * (m1 + m2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На гладком столе брусок {{m1}} кг, на нём брусок {{m2}} кг, коэффициент трения между ними {{mu}}. Какую наибольшую горизонтальную силу можно приложить к нижнему, чтобы верхний не скользил? $g = 10$ м/с².",
+        "hints": [],
+        "solution": "Верхний разгоняется только трением: $a_{max} = \\mu g$; $F = (m_1 + m_2)\\mu g$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему опытный водитель плавно тормозит перед поворотом, а не в нём?",
+        "hints": [],
+        "solution": "Сила трения ограничена $\\mu N$.",
+        "options": [
+          "В повороте часть силы трения нужна для центростремительного ускорения",
+          "Так красивее",
+          "В повороте тормоза не работают",
+          "Чтобы не сломать руль"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 30]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": ["f > m * 5"],
+      "answer": "(f - m * 10 * 0.5) / m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок втаскивают вверх по наклонной плоскости с углом 30° силой {{f}} Н вдоль плоскости, масса {{m}} кг, трения нет. Найдите ускорение. $g = 10$ м/с², $\\sin 30° = 0{,}5$.",
+        "hints": [],
+        "solution": "$F - mg\\sin\\alpha = ma$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите неинерциальные системы отсчёта.",
+        "hints": [],
+        "solution": "Системы с ускорением.",
+        "options": [
+          "Разгоняющийся автобус",
+          "Поворачивающий автомобиль",
+          "Тормозящий поезд",
+          "Поезд, идущий равномерно по прямой",
+          "Покоящийся дом"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "g * b / (a + b)",
+      "variables": ["g", "a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой $a$ на гладком столе связан нитью через блок с грузом массой $b$. Запишите ускорение ($g$).",
+        "hints": [],
+        "solution": "$a = \\dfrac{m_2 g}{m_1 + m_2}$."
+      }
+    }
+  }
+]
