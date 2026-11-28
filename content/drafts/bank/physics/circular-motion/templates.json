@@ -1,0 +1,1448 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "t / n",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Колесо делает {{n}} оборотов за {{t}} с. Найдите период вращения.",
+        "hints": [],
+        "solution": "$T = \\dfrac{t}{N}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 20, 60]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "n / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "об/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Колесо делает {{n}} оборотов за {{t}} с. Найдите частоту вращения.",
+        "hints": [],
+        "solution": "$\\nu = \\dfrac{N}{t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Гц"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Период вращения {{t}} с. Найдите частоту.",
+        "hints": [],
+        "solution": "$\\nu = 1/T$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [1, 2, 5, 10]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / r",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело движется по окружности радиусом {{r}} м со скоростью {{v}} м/с. Найдите центростремительное ускорение.",
+        "hints": [],
+        "solution": "$a = \\dfrac{v^2}{r}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Куда направлено центростремительное ускорение при равномерном движении по окружности?",
+        "hints": [],
+        "solution": "Отсюда название.",
+        "options": ["К центру окружности", "По касательной", "От центра", "Вдоль оси вращения"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Куда направлена скорость тела, движущегося по окружности?",
+        "hints": [],
+        "solution": "Искры от точильного камня летят по касательной.",
+        "options": ["По касательной к окружности", "К центру", "От центра", "Вертикально"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Время одного полного оборота называется ___ вращения.",
+        "hints": [],
+        "solution": "Обозначается $T$.",
+        "accepted": ["периодом", "период"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и единицей.",
+        "hints": [],
+        "solution": "Единицы величин.",
+        "options": ["Период", "Частота", "Центростремительное ускорение", "Линейная скорость"],
+        "matches": ["с", "Гц (об/с)", "м/с²", "м/с"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело равномерно движется по окружности. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Равномерное движение по окружности — движение с ускорением.",
+        "options": [
+          "Модуль скорости постоянен",
+          "Направление скорости меняется",
+          "Ускорение направлено к центру",
+          "Ускорение равно нулю",
+          "Скорость направлена к центру"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [6, 12, 30]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "l / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длина окружности {{l}} м, период обращения {{t}} с. Найдите скорость.",
+        "hints": [],
+        "solution": "$v = \\dfrac{2\\pi r}{T} = \\dfrac{l}{T}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию период вращения при частоте:",
+        "hints": [],
+        "solution": "0,02; 0,1; 0,5; 2 с.",
+        "options": ["50 Гц", "10 Гц", "2 Гц", "0,5 Гц"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему движение по окружности с постоянной по модулю скоростью — движение с ускорением?",
+        "hints": [],
+        "solution": "Ускорение характеризует изменение вектора скорости.",
+        "options": [
+          "Направление скорости меняется",
+          "Модуль скорости растёт",
+          "Тело тормозит",
+          "Это неверно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [60, 120, 300, 3000]
+        }
+      ],
+      "constraints": [],
+      "answer": "n / 60",
+      "tolerance": {},
+      "unit": "об/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Частота вращения {{n}} об/мин. Сколько это об/с?",
+        "hints": [],
+        "solution": "Делим на 60."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Число оборотов за единицу времени называется ___ вращения.",
+        "hints": [],
+        "solution": "$\\nu = N/t$.",
+        "accepted": ["частотой", "частота"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Луна обращается вокруг Земли за 27 суток. Что это за величина?",
+        "hints": [],
+        "solution": "Время одного оборота.",
+        "options": ["Период обращения", "Частота", "Скорость", "Ускорение"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.5]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * r * n",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Точка на ободе колеса радиусом {{r}} м делает {{n}} об/с. Найдите её скорость. Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$v = 2\\pi r\\nu$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "4 * 3.14^2 * r / t^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите центростремительное ускорение точки на ободе колеса радиусом {{r}} м при периоде {{t}} с. Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$a = \\dfrac{4\\pi^2 r}{T^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [36, 54, 72]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v / 3.6)^2 / r",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль проходит поворот радиусом {{r}} м со скоростью {{v}} км/ч. Найдите центростремительное ускорение.",
+        "hints": [],
+        "solution": "Скорость в м/с, $a = v^2/r$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2, 5, 8]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(a * r)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С какой скоростью движется тело по окружности радиусом {{r}} м, если центростремительное ускорение {{a}} м/с²?",
+        "hints": [],
+        "solution": "$v = \\sqrt{ar}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится центростремительное ускорение, если скорость увеличить в 2 раза (радиус тот же)?",
+        "hints": [],
+        "solution": "$a \\sim v^2$.",
+        "options": ["Увеличится в 4 раза", "В 2 раза", "Не изменится", "Уменьшится"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится ускорение, если радиус увеличить в 2 раза при той же скорости?",
+        "hints": [],
+        "solution": "$a \\sim 1/r$.",
+        "options": [
+          "Уменьшится в 2 раза",
+          "Увеличится в 2 раза",
+          "Уменьшится в 4 раза",
+          "Не изменится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [1, 2, 3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * l * 10 / 60",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "мм/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Секундная стрелка часов длиной {{l}} см. Найдите скорость её конца (мм/с). Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$v = \\dfrac{2\\pi r}{T}$, $T = 60$ с."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две точки на диске: на краю и на половине радиуса. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Все точки диска имеют один период; $v = 2\\pi r/T$, $a = 4\\pi^2 r/T^2$.",
+        "options": [
+          "Периоды одинаковы",
+          "Скорость точки на краю вдвое больше",
+          "Ускорение точки на краю вдвое больше",
+          "Скорости одинаковы",
+          "Частоты разные"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.2, 0.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "w * r",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Угловая скорость {{w}} рад/с, радиус {{r}} м. Найдите линейную скорость.",
+        "hints": [],
+        "solution": "$v = \\omega r$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Связь линейной и угловой скорости: $v = \\omega \\cdot ___$.",
+        "hints": [],
+        "solution": "$v = \\omega r$.",
+        "accepted": ["r", "R"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие для колеса радиусом 0,5 м, вращающегося с периодом 1 с ($\\pi \\approx 3{,}14$).",
+        "hints": [],
+        "solution": "Связь величин.",
+        "options": [
+          "Частота",
+          "Скорость точки обода",
+          "Угловая скорость",
+          "Число оборотов за 10 с"
+        ],
+        "matches": ["1 Гц", "3,14 м/с", "6,28 рад/с", "10"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию центростремительное ускорение при скорости 10 м/с и радиусе:",
+        "hints": [],
+        "solution": "2, 5, 10, 50 м/с².",
+        "options": ["50 м", "20 м", "10 м", "2 м"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему на крутых поворотах дорогу делают с наклоном внутрь?",
+        "hints": [],
+        "solution": "Горизонтальная составляющая силы реакции направлена к центру.",
+        "options": [
+          "Чтобы сила реакции дороги помогала создать центростремительное ускорение",
+          "Для стока воды",
+          "Чтобы машины ехали медленнее",
+          "Для красоты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [20, 25]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [600, 1000, 1200]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * r / 100 * n / 60",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Барабан стиральной машины радиусом {{r}} см делает {{n}} об/мин. Найдите скорость точки барабана. Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$v = 2\\pi r\\nu$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "4 * pi^2 * r / t^2",
+      "variables": ["r", "t"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите центростремительное ускорение через радиус $r$ и период $t$ (используйте $\\pi$).",
+        "hints": [],
+        "solution": "$a = \\dfrac{4\\pi^2 r}{T^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * 3.14 * 150000000 / (365 * 86400)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "км/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Земля обращается вокруг Солнца по орбите радиусом 150 млн км за 365 сут. Найдите её скорость (км/с). Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$v = \\dfrac{2\\pi R}{T}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 6, 10]
+        },
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.3, 0.35]
+        }
+      ],
+      "constraints": [],
+      "answer": "v / (2 * 3.14 * r)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "об/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипед едет со скоростью {{v}} м/с, радиус колеса {{r}} м. Сколько оборотов в секунду делает колесо? Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "Колесо катится без проскальзывания: $v = 2\\pi r\\nu$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r1",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "r2",
+          "kind": "choice",
+          "values": [6, 10]
+        },
+        {
+          "name": "n1",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "n1 * r1 / r2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "об/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две шестерни сцеплены: радиусы {{r1}} и {{r2}} см, первая делает {{n1}} об/с. Сколько оборотов в секунду делает вторая?",
+        "hints": [],
+        "solution": "Скорости точек сцепления равны: $r_1\\nu_1 = r_2\\nu_2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * sqrt(r / a)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Карусель радиусом {{r}} м вращается так, что ускорение крайних сидений {{a}} м/с². Найдите период. Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$a = \\dfrac{4\\pi^2 r}{T^2}$ ⇒ $T = 2\\pi\\sqrt{r/a}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что произойдёт с камнем, раскручиваемым на верёвке, если верёвка оборвётся?",
+        "hints": [],
+        "solution": "Сохраняется направление скорости в момент обрыва.",
+        "options": [
+          "Полетит по касательной к окружности",
+          "Полетит к центру",
+          "Полетит от центра по радиусу",
+          "Остановится"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.3, 0.4, 0.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / r",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Колесо радиусом {{r}} м катится без проскальзывания со скоростью {{v}} м/с. Найдите центростремительное ускорение точек обода относительно оси.",
+        "hints": [],
+        "solution": "Относительно оси точки обода движутся со скоростью $v$: $a = v^2/r$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Точка равномерно движется по окружности. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Путь и перемещение по окружности.",
+        "options": [
+          "За один период перемещение равно нулю",
+          "За один период путь равен $2\\pi r$",
+          "За половину периода перемещение равно $2r$",
+          "Средняя скорость перемещения за период равна $v$",
+          "Ускорение направлено по касательной"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1.2, 1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "k * 12",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Минутная стрелка в {{k}} раза длиннее часовой. Во сколько раз скорость конца минутной больше?",
+        "hints": [],
+        "solution": "Периоды 1 ч и 12 ч; $v \\sim r/T$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между вращением и периодом.",
+        "hints": [],
+        "solution": "Периоды вращения.",
+        "options": ["Секундная стрелка", "Минутная стрелка", "Часовая стрелка", "Земля вокруг оси"],
+        "matches": ["60 с", "3600 с", "12 ч", "24 ч"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Угол поворота за единицу времени называется ___ скоростью.",
+        "hints": [],
+        "solution": "$\\omega = 2\\pi/T$.",
+        "accepted": ["угловой"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию линейную скорость точки на краю диска радиусом 10 см при частоте:",
+        "hints": [],
+        "solution": "$v = 2\\pi r\\nu$.",
+        "options": ["1 Гц", "5 Гц", "10 Гц", "50 Гц"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ремённая передача: шкивы разного радиуса. Что одинаково у точек на ободах?",
+        "hints": [],
+        "solution": "Ремень не проскальзывает.",
+        "options": [
+          "Линейная скорость",
+          "Частота вращения",
+          "Период",
+          "Центростремительное ускорение"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [6.6, 7, 7.5]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [90, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * 3.14 * r * 1000 / (t * 60)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "км/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Спутник обращается по орбите радиусом {{r}} тыс. км с периодом {{t}} мин. Найдите его скорость (км/с). Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$v = 2\\pi r/T$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные формулы для равномерного движения по окружности.",
+        "hints": [],
+        "solution": "Основные формулы.",
+        "options": [
+          "$v = 2\\pi r/T$",
+          "$a = v^2/r$",
+          "$\\omega = 2\\pi\\nu$",
+          "$a = v \\cdot r$",
+          "$T = \\nu$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "n * a / b",
+      "variables": ["n", "a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шестерни сцеплены, радиусы $a$ и $b$, первая вращается с частотой $n$. Запишите частоту второй.",
+        "hints": [],
+        "solution": "$a\\nu_1 = b\\nu_2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.3, 0.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Точка на ободе колеса радиусом {{r}} м, катящегося без проскальзывания со скоростью {{v}} м/с. Найдите скорость верхней точки обода относительно земли.",
+        "hints": [],
+        "solution": "Скорость точки = скорость центра + скорость вращения: $2v$ вверху, $0$ внизу."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [200, 300, 500]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [360, 540]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v / 3.6)^2 / r / 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "раз"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самолёт делает «мёртвую петлю» радиусом {{r}} м со скоростью {{v}} км/ч. Во сколько раз центростремительное ускорение больше $g = 10$ м/с²?",
+        "hints": [],
+        "solution": "$a = v^2/r$, делим на $g$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "4 * 3.14^2 * 6400000 / (86400)^2 * 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "мм/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Центростремительное ускорение точек экватора Земли (радиус 6400 км, период 24 ч)? Ответ в мм/с². Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "$a = \\dfrac{4\\pi^2 R}{T^2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему при движении по окружности ускорение есть, а работа центростремительной силы равна нулю?",
+        "hints": [],
+        "solution": "Модуль скорости не меняется.",
+        "options": [
+          "Сила перпендикулярна скорости",
+          "Скорость равна нулю",
+          "Ускорение равно нулю",
+          "Это неверно"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [5, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "t1 * t2 / (t2 - t1)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две точки движутся по одной окружности в одном направлении с периодами {{t1}} и {{t2}} с. Через сколько секунд быстрая догонит медленную, если стартовали вместе?",
+        "hints": [],
+        "solution": "Обгон на целый оборот: $\\dfrac{t}{T_1} - \\dfrac{t}{T_2} = 1$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о колесе, катящемся без проскальзывания.",
+        "hints": [],
+        "solution": "Сложение движений.",
+        "options": [
+          "Нижняя точка в данный момент неподвижна относительно земли",
+          "Верхняя точка движется со скоростью $2v$",
+          "Центр движется со скоростью $v$",
+          "Все точки обода движутся со скоростью $v$ относительно земли",
+          "Нижняя точка движется со скоростью $2v$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(10 * l * 0.71)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик на нити длиной {{l}} м вращается в горизонтальной плоскости, нить образует угол 45° с вертикалью. Найдите скорость шарика ($g = 10$ м/с², $\\sin 45° = \\cos 45° \\approx 0{,}71$).",
+        "hints": [],
+        "solution": "Конический маятник: $\\operatorname{tg}\\alpha = \\dfrac{v^2}{gr}$, $r = l\\sin\\alpha$; при 45°: $v^2 = g l \\sin 45°$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию угловую скорость:",
+        "hints": [],
+        "solution": "Периоды 43 200 с, 3600 с, 60 с, 1 с.",
+        "options": ["Часовая стрелка", "Минутная стрелка", "Секундная стрелка", "Колесо 1 об/с"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие для колеса $r = 0{,}5$ м, катящегося со скоростью 4 м/с.",
+        "hints": [],
+        "solution": "Качение без проскальзывания.",
+        "options": [
+          "Скорость центра",
+          "Скорость верхней точки",
+          "Скорость нижней точки",
+          "Частота вращения ($\\pi \\approx 3{,}14$)"
+        ],
+        "matches": ["4 м/с", "8 м/с", "0", "≈ 1,27 об/с"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение, направленное по касательной и изменяющее модуль скорости, называется ___.",
+        "hints": [],
+        "solution": "При неравномерном движении по окружности.",
+        "accepted": ["тангенциальным", "касательным"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [0.3, 0.35, 0.5]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [1, 2, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "s * 1000 / (2 * 3.14 * r)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "об."
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сколько оборотов сделает колесо радиусом {{r}} м, проехав {{s}} км? Примите $\\pi \\approx 3{,}14$.",
+        "hints": [],
+        "solution": "Число оборотов = путь / длина окружности."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Где на Земле центростремительное ускорение из-за суточного вращения наибольшее?",
+        "hints": [],
+        "solution": "Радиус вращения наибольший.",
+        "options": ["На экваторе", "На полюсах", "На широте 45°", "Везде одинаково"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [],
+      "constraints": [],
+      "answer": "720 / 11",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мин"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Часовая и минутная стрелки совпали в 12:00. Через сколько минут они совпадут снова?",
+        "hints": [],
+        "solution": "$\\dfrac{t}{60} - \\dfrac{t}{720} = 1$ ⇒ $t = \\dfrac{720}{11}$ мин."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о спутнике на круговой орбите.",
+        "hints": [],
+        "solution": "Круговая орбита.",
+        "options": [
+          "Он движется с центростремительным ускорением",
+          "Ускорение создаётся силой тяготения",
+          "Модуль скорости постоянен",
+          "Ускорение равно нулю",
+          "Скорость направлена к Земле"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "a * b / (b - a)",
+      "variables": ["a", "b"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две точки движутся по окружности в одну сторону с периодами $a < b$. Запишите время до первой встречи.",
+        "hints": [],
+        "solution": "$t(1/a - 1/b) = 1$."
+      }
+    }
+  }
+]
