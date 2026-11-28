@@ -1,0 +1,1694 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [4, 5, 10]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "a * t"
+        }
+      ],
+      "answer": "v / t",
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль за {{t}} с разогнался из состояния покоя до {{v}} м/с. Найдите ускорение.",
+        "hints": [],
+        "solution": "$a = \\dfrac{v - v_0}{t}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0.5, 2, 3]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [4, 6, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело движется с ускорением {{a}} м/с² из состояния покоя. Какую скорость оно наберёт за {{t}} с?",
+        "hints": [],
+        "solution": "$v = at$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * t^2 / 2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело начало движение из покоя с ускорением {{a}} м/с². Какой путь оно пройдёт за {{t}} с?",
+        "hints": [],
+        "solution": "$s = \\dfrac{at^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [2, 5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [4, 6, 10]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "v0 + a * t"
+        }
+      ],
+      "answer": "(v - v0) / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость тела увеличилась с {{v0}} до {{v}} м/с за {{t}} с. Найдите ускорение.",
+        "hints": [],
+        "solution": "$a = \\dfrac{v - v_0}{t}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое движение называют равноускоренным?",
+        "hints": [],
+        "solution": "Ускорение постоянно.",
+        "options": [
+          "Движение, при котором скорость за любые равные промежутки времени меняется одинаково",
+          "Движение с постоянной скоростью",
+          "Движение по окружности",
+          "Любое движение"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Единица ускорения в СИ — м/___.",
+        "hints": [],
+        "solution": "Метр в секунду за секунду.",
+        "accepted": ["с²", "с^2", "с2"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [0, 2]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v1",
+          "expr": "v0 + a * t1"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t1 * 1.25"],
+        "y": [0, "(v1) * 1.25 + 1"],
+        "lines": [
+          {
+            "points": [
+              [0, "v0"],
+              ["t1", "v1"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "v, м/с"
+        }
+      },
+      "answer": "(v1 - v0) / t1",
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику скорости (см. рисунок) найдите ускорение тела.",
+        "hints": [],
+        "solution": "$a = \\dfrac{v_1 - v_0}{t_1}$ по точкам графика."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль тормозит. Как направлено ускорение?",
+        "hints": [],
+        "solution": "Скорость уменьшается.",
+        "options": [
+          "Противоположно скорости",
+          "По скорости",
+          "Перпендикулярно скорости",
+          "Ускорение равно нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и формулой (движение из покоя).",
+        "hints": [],
+        "solution": "Формулы равноускоренного движения.",
+        "options": ["Скорость", "Путь", "Ускорение", "Связь без времени"],
+        "matches": ["$at$", "$\\dfrac{at^2}{2}$", "$\\dfrac{v}{t}$", "$v^2 = 2as$"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры движения с ускорением.",
+        "hints": [],
+        "solution": "Ускорение есть, когда меняется скорость.",
+        "options": [
+          "Разгон автобуса",
+          "Торможение велосипедиста",
+          "Падение камня",
+          "Равномерное движение поезда по прямой",
+          "Покой"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "v0 / a",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд тормозит с ускорением {{a}} м/с², начальная скорость {{v0}} м/с. Через сколько секунд он остановится?",
+        "hints": [],
+        "solution": "$t = \\dfrac{v_0}{a}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию ускорение:",
+        "hints": [],
+        "solution": "Сравниваем числа.",
+        "options": ["0,5 м/с²", "2 м/с²", "9,8 м/с²", "30 м/с²"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Что показывает ускорение?",
+        "hints": [],
+        "solution": "$a = \\Delta v/\\Delta t$.",
+        "options": [
+          "Как быстро меняется скорость",
+          "Пройденный путь",
+          "Скорость тела",
+          "Время движения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [4, 6, 8]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "v / t",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость велосипедиста {{v}} м/с, через {{t}} с он остановился. Найдите модуль ускорения.",
+        "hints": [],
+        "solution": "$|a| = \\dfrac{v}{t}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Величина, равная изменению скорости за единицу времени, называется ___.",
+        "hints": [],
+        "solution": "$a = \\dfrac{\\Delta v}{\\Delta t}$.",
+        "accepted": ["ускорением", "ускорение"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [2, 5, 10]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [4, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "v0 * t + a * t^2 / 2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело движется с начальной скоростью {{v0}} м/с и ускорением {{a}} м/с². Найдите путь за {{t}} с.",
+        "hints": [],
+        "solution": "$s = v_0t + \\dfrac{at^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "v0^2 / (2 * a)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль, двигаясь со скоростью {{v0}} м/с, начал тормозить с ускорением {{a}} м/с². Найдите тормозной путь.",
+        "hints": [],
+        "solution": "$s = \\dfrac{v_0^2}{2a}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 2.5, 4]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [60, 70, 80]
+        }
+      ],
+      "constraints": [],
+      "answer": "v^2 / (2 * a)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Самолёт разгоняется с ускорением {{a}} м/с² и отрывается при скорости {{v}} м/с. Найдите длину разбега.",
+        "hints": [],
+        "solution": "$s = \\dfrac{v^2}{2a}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [18, 36]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [54, 72, 90]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v - v0) / 3.6 / t",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Скорость автомобиля выросла с {{v0}} до {{v}} км/ч за {{t}} с. Найдите ускорение (м/с²).",
+        "hints": [],
+        "solution": "Переведите км/ч в м/с, делением на 3,6."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [4, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v1",
+          "expr": "v0 + a * t1"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "t1 * 1.25"],
+        "y": [0, "(v1) * 1.25 + 1"],
+        "lines": [
+          {
+            "points": [
+              [0, "v0"],
+              ["t1", "v1"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "t, с",
+          "y": "v, м/с"
+        }
+      },
+      "answer": "(v0 + v1) / 2 * t1",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику скорости (см. рисунок) найдите путь за {{t1}} с.",
+        "hints": [],
+        "solution": "Путь — площадь трапеции под графиком: $\\dfrac{v_0 + v_1}{2} t$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится путь, пройденный из покоя с постоянным ускорением, если время увеличить вдвое?",
+        "hints": [],
+        "solution": "$s \\sim t^2$.",
+        "options": ["Увеличится в 4 раза", "В 2 раза", "Не изменится", "В 8 раз"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * (2 * n - 1) / 2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какое расстояние проходит тело из покоя за {{n}}-ю секунду при ускорении {{a}} м/с²?",
+        "hints": [],
+        "solution": "$s_n = \\dfrac{a(2n - 1)}{2}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело движется из покоя равноускоренно. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Закономерности равноускоренного движения.",
+        "options": [
+          "Пути за последовательные равные промежутки относятся как 1 : 3 : 5 : …",
+          "Скорость пропорциональна времени",
+          "Путь пропорционален квадрату времени",
+          "Скорость постоянна",
+          "Путь пропорционален времени"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [16, 32, 48]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "v",
+          "expr": "round(sqrt(v0^2 + 2 * a * s), 1)"
+        }
+      ],
+      "answer": "sqrt(v^2 - 2 * a * s)",
+      "tolerance": {
+        "abs": 0.15
+      },
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело, двигаясь с ускорением {{a}} м/с², прошло {{s}} м и набрало скорость {{v}} м/с. Найдите начальную скорость.",
+        "hints": [],
+        "solution": "$v^2 - v_0^2 = 2as$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "При торможении проекция ускорения на направление скорости ___.",
+        "hints": [],
+        "solution": "Скорость уменьшается.",
+        "accepted": ["отрицательна", "отрицательная", "меньше нуля"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4, 8]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [16, 64, 100]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(2 * s / a)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Через какое время тело, двигаясь из покоя с ускорением {{a}} м/с², пройдёт {{s}} м?",
+        "hints": [],
+        "solution": "$t = \\sqrt{2s/a}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между графиком $v(t)$ и движением.",
+        "hints": [],
+        "solution": "Чтение графиков.",
+        "options": [
+          "Горизонтальная прямая",
+          "Прямая из начала координат вверх",
+          "Прямая вниз до нуля",
+          "Прямая на оси времени"
+        ],
+        "matches": ["Равномерное", "Разгон из покоя", "Торможение до остановки", "Покой"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию тормозной путь при одинаковом ускорении 5 м/с² и скорости:",
+        "hints": [],
+        "solution": "10; 22,5; 40; 90 м.",
+        "options": ["10 м/с", "15 м/с", "20 м/с", "30 м/с"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему на мокрой дороге тормозной путь больше?",
+        "hints": [],
+        "solution": "$s = v^2/(2a)$, $a$ уменьшается.",
+        "options": [
+          "Меньше трение, меньше ускорение торможения",
+          "Больше скорость",
+          "Тяжелее машина",
+          "Вода толкает машину"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "v * t + a * t^2 / 2",
+      "variables": ["v", "a", "t"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Запишите путь $s$ при движении с начальной скоростью $v$, ускорением $a$ за время $t$.",
+        "hints": [],
+        "solution": "$s = v_0 t + \\dfrac{at^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v0 * (1 + k) / 2 * t"
+        }
+      ],
+      "answer": "2 * s / (t * (1 + k))",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль за {{t}} с прошёл {{s}} м, увеличив скорость в {{k}} раза. Найдите начальную скорость.",
+        "hints": [],
+        "solution": "$s = \\dfrac{v_0 + kv_0}{2}t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [1, 2, 2.5]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "s1 * n^2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело за первую секунду прошло {{s1}} м (движение из покоя). Какой путь оно пройдёт за {{n}} с?",
+        "hints": [],
+        "solution": "$s_1 = a/2$, $s_n = \\dfrac{an^2}{2} = s_1 n^2$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "s",
+          "expr": "v0 * t / 2"
+        }
+      ],
+      "answer": "2 * s / t",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд при торможении прошёл {{s}} м за {{t}} с до остановки. Найдите начальную скорость.",
+        "hints": [],
+        "solution": "Средняя скорость $v_0/2$: $s = \\dfrac{v_0}{2} t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a1",
+          "kind": "choice",
+          "values": [3, 4]
+        },
+        {
+          "name": "a2",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "(a1 - a2) * t^2 / 2",
+      "tolerance": {},
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два автомобиля стартуют одновременно из одной точки: первый с ускорением {{a1}} м/с², второй — {{a2}} м/с². Каким будет расстояние между ними через {{t}} с?",
+        "hints": [],
+        "solution": "Разность путей $\\dfrac{(a_1 - a_2)t^2}{2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено вверх. Как направлено его ускорение в верхней точке?",
+        "hints": [],
+        "solution": "Ускорение свободного падения всегда направлено вниз.",
+        "options": ["Вниз", "Вверх", "Равно нулю", "Горизонтально"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [8, 10]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [20, 30, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v^2 - v0^2) / (2 * s)",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Велосипедист съезжает с горы, его скорость выросла с {{v0}} до {{v}} м/с на пути {{s}} м. Найдите ускорение.",
+        "hints": [],
+        "solution": "$a = \\dfrac{v^2 - v_0^2}{2s}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль равномерно тормозит до остановки. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Анализ формул.",
+        "options": [
+          "Средняя скорость равна половине начальной",
+          "Тормозной путь пропорционален квадрату скорости",
+          "Время торможения пропорционально начальной скорости",
+          "Путь не зависит от ускорения",
+          "Скорость уменьшается квадратично"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "x0",
+          "kind": "choice",
+          "values": [0, 5, 10]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "v0 + 2 * h * t",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Координата тела $x = {{x0}} + {{v0}}t + {{h}}t^2$ (м, с). Найдите скорость через {{t}} с.",
+        "hints": [],
+        "solution": "Сравните с $x = x_0 + v_0t + \\dfrac{at^2}{2}$: $a = 2 \\cdot {{h}}$; $v = v_0 + at$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие для уравнения $x = 5 + 2t + 3t^2$.",
+        "hints": [],
+        "solution": "Чтение уравнения движения.",
+        "options": [
+          "Начальная координата",
+          "Начальная скорость",
+          "Ускорение",
+          "Скорость через 1 с"
+        ],
+        "matches": ["5 м", "2 м/с", "6 м/с²", "8 м/с"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Площадь под графиком скорости $v(t)$ численно равна пройденному ___.",
+        "hints": [],
+        "solution": "Геометрический смысл.",
+        "accepted": ["пути", "путь"]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию путь за 4 с из покоя при ускорении:",
+        "hints": [],
+        "solution": "4; 8; 16; 40 м.",
+        "options": ["0,5 м/с²", "1 м/с²", "2 м/с²", "5 м/с²"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 2.5]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [36]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [72, 108]
+        }
+      ],
+      "constraints": [],
+      "answer": "(v - v0) / 3.6 / a",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "За какое время автомобиль, двигаясь с ускорением {{a}} м/с², увеличит скорость с {{v0}} до {{v}} км/ч?",
+        "hints": [],
+        "solution": "$t = \\dfrac{v - v_0}{a}$, скорость в м/с."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отношение путей, пройденных телом из покоя за 1-ю и за 3-ю секунды:",
+        "hints": [],
+        "solution": "Пути за последовательные секунды 1 : 3 : 5.",
+        "options": ["1 : 5", "1 : 3", "1 : 9", "1 : 2"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [0.5, 0.6, 0.8]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [400, 600, 800]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * l / v * 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "мс"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пуля в стволе длиной {{l}} м разгоняется до {{v}} м/с. Найдите время движения в стволе (мс), считая ускорение постоянным.",
+        "hints": [],
+        "solution": "Средняя скорость $v/2$: $t = \\dfrac{2l}{v}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * s / t",
+      "variables": ["s", "t"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело тормозит до остановки на пути $s$ за время $t$. Запишите начальную скорость.",
+        "hints": [],
+        "solution": "$s = \\dfrac{v_0}{2}t$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [3, 4, 5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "sn",
+          "expr": "a * (2 * n - 1) / 2"
+        }
+      ],
+      "answer": "2 * sn / (2 * n - 1)",
+      "tolerance": {},
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело, двигаясь равноускоренно из покоя, за {{n}}-ю секунду прошло {{sn}} м. Найдите ускорение.",
+        "hints": [],
+        "solution": "$s_n = \\dfrac{a(2n - 1)}{2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [100, 120]
+        },
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [10, 12]
+        },
+        {
+          "name": "t2",
+          "kind": "choice",
+          "values": [5, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * s * (t1 - t2) / (t1 * t2 * (t1 + t2))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль проехал два одинаковых участка по {{s}} м: первый за {{t1}} с, второй за {{t2}} с, двигаясь равноускоренно. Найдите ускорение.",
+        "hints": [],
+        "solution": "Из уравнений пути для двух участков: $a = \\dfrac{2s(t_1 - t_2)}{t_1 t_2(t_1 + t_2)}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2, 2.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v / a",
+      "tolerance": {},
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Первый автомобиль едет равномерно со скоростью {{v}} м/с. В момент, когда он проезжает мимо второго, второй трогается с ускорением {{a}} м/с². Через сколько секунд второй догонит первого?",
+        "hints": [],
+        "solution": "$vt = \\dfrac{at^2}{2}$, $t = \\dfrac{2v}{a}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * v",
+      "tolerance": {},
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В условиях предыдущей ситуации (скорость {{v}} м/с, ускорение {{a}} м/с²) найдите скорость второго автомобиля в момент встречи.",
+        "hints": [],
+        "solution": "В момент встречи $at = 2v$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "При равноускоренном движении из покоя средняя скорость за время t равна…",
+        "hints": [],
+        "solution": "$v_{ср} = \\dfrac{0 + v}{2}$.",
+        "options": ["половине конечной скорости", "конечной скорости", "ускорению", "нулю"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [30, 60, 90]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "sqrt(2 * a * s / (k^2 - 1))",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м/с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело прошло путь {{s}} м с ускорением {{a}} м/с², конечная скорость в {{k}} раза больше начальной. Найдите начальную скорость.",
+        "hints": [],
+        "solution": "$k^2v_0^2 - v_0^2 = 2as$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Тело брошено вертикально вверх (без сопротивления). Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Симметрия движения.",
+        "options": [
+          "Время подъёма равно времени падения до точки броска",
+          "Скорость в момент возвращения равна начальной по модулю",
+          "Ускорение постоянно на всём пути",
+          "В верхней точке ускорение равно нулю",
+          "Время подъёма больше времени падения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "s1",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 * s1",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шарик скатывается по жёлобу из покоя: за первые {{t1}} с проходит {{s1}} см. Сколько он пройдёт за следующие {{t1}} с (см)?",
+        "hints": [],
+        "solution": "Пути за равные последовательные промежутки 1 : 3."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи «догонялки» (равномерное и равноускоренное).",
+        "hints": [],
+        "solution": "Алгоритм.",
+        "options": [
+          "Записать координаты обоих тел как функции времени",
+          "Приравнять координаты",
+          "Решить уравнение относительно времени",
+          "Найти место и скорость в момент встречи"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "hard",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие: $v_0 = 10$ м/с, $a = -2$ м/с².",
+        "hints": [],
+        "solution": "Торможение.",
+        "options": ["Время до остановки", "Путь до остановки", "Скорость через 2 с", "Путь за 2 с"],
+        "matches": ["5 с", "25 м", "6 м/с", "16 м"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "hard",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Уравнение координаты при равноускоренном движении: $x = x_0 + v_0t + \\dfrac{a t^2}{___}$.",
+        "hints": [],
+        "solution": "$x = x_0 + v_0t + at^2/2$.",
+        "accepted": ["2"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "ql",
+          "kind": "choice",
+          "values": [300, 400]
+        },
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [10, 15]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "(-v0 + sqrt(v0^2 + 2 * a * (l + ql))) / a",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд длиной {{l}} м въезжает на мост длиной {{ql}} м со скоростью {{v0}} м/с и, ускоряясь с {{a}} м/с², полностью съезжает. За какое время (с)?",
+        "hints": [],
+        "solution": "Нужно пройти $l + L$: $v_0t + \\dfrac{at^2}{2} = l + L$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "График скорости тела — прямая, пересекающая ось времени. Что это значит?",
+        "hints": [],
+        "solution": "Проекция скорости меняет знак при постоянном ускорении.",
+        "options": [
+          "Тело остановилось и начало двигаться в обратную сторону",
+          "Тело остановилось навсегда",
+          "Тело движется равномерно",
+          "Ускорение меняет знак"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v0",
+          "kind": "choice",
+          "values": [36, 54, 72]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [20, 30, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * s / (v0 / 3.6)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "с"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль тормозит с {{v0}} км/ч до остановки на пути {{s}} м. Найдите время торможения.",
+        "hints": [],
+        "solution": "$s = \\dfrac{v_0}{2}t$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "2 * v / a",
+      "variables": ["v", "a"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Первое тело движется равномерно со скоростью $v$, второе стартует из той же точки с ускорением $a$. Запишите время встречи.",
+        "hints": [],
+        "solution": "$vt = at^2/2$."
+      }
+    }
+  }
+]
