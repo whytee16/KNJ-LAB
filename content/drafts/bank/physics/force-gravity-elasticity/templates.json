@@ -1,0 +1,1885 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 5, 7, 12, 40]
+        }
+      ],
+      "constraints": [],
+      "answer": "10 * m",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите силу тяжести, действующую на тело массой {{m}} кг. Примите $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$F = mg = {{m}} \\cdot 10$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [30, 50, 120, 450, 700]
+        }
+      ],
+      "constraints": [],
+      "answer": "f / 10",
+      "tolerance": {},
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На тело действует сила тяжести {{f}} Н. Найдите массу тела. Примите $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$m = \\dfrac{F}{g} = \\dfrac{ {{f}} }{10}$ кг."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [150, 200, 250, 300]
+        }
+      ],
+      "constraints": [],
+      "answer": "m / 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите силу тяжести, действующую на яблоко массой {{m}} г. Примите $g = 10$ Н/кг.",
+        "hints": ["Сначала переведите граммы в килограммы."],
+        "solution": "$m = {{m}}$ г $= {{m}} : 1000$ кг; $F = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "dl",
+          "kind": "choice",
+          "values": [2, 4, 5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "k * dl / 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Жёсткость пружины {{k}} Н/м. Какая сила растянет её на {{dl}} см?",
+        "hints": [],
+        "solution": "$\\Delta l = {{dl}}$ см $= {{dl}} : 100$ м; $F = k\\Delta l$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [50, 100, 200, 400]
+        },
+        {
+          "name": "dl",
+          "kind": "choice",
+          "values": [0.02, 0.05, 0.1]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "k * dl"
+        }
+      ],
+      "answer": "f / dl",
+      "tolerance": {},
+      "unit": "Н/м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Под действием силы {{f}} Н пружина удлинилась на {{dl}} м. Найдите жёсткость пружины.",
+        "hints": [],
+        "solution": "$k = \\dfrac{F}{\\Delta l} = \\dfrac{ {{f}} }{ {{dl}} }$ Н/м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 400]
+        },
+        {
+          "name": "dl",
+          "kind": "choice",
+          "values": [1, 2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "k * dl / 100"
+        }
+      ],
+      "answer": "100 * f / k",
+      "tolerance": {},
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружину жёсткостью {{k}} Н/м растягивают силой {{f}} Н. На сколько сантиметров она удлинится?",
+        "hints": [],
+        "solution": "$\\Delta l = \\dfrac{F}{k} = \\dfrac{ {{f}} }{ {{k}} }$ м; умножаем на 100."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких единицах измеряется сила в СИ?",
+        "hints": [],
+        "solution": "Единица силы в СИ — ньютон, названа в честь Исаака Ньютона.",
+        "options": ["Ньютон (Н)", "Килограмм (кг)", "Джоуль (Дж)", "Паскаль (Па)"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Куда направлена сила тяжести?",
+        "hints": [],
+        "solution": "Сила тяжести всегда направлена вертикально вниз — к центру Земли.",
+        "options": [
+          "Вертикально вниз, к центру Земли",
+          "Вертикально вверх",
+          "По направлению движения тела",
+          "Перпендикулярно опоре всегда вверх"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "К чему приложен вес тела?",
+        "hints": [],
+        "solution": "Вес — сила, с которой тело давит на опору или растягивает подвес; она приложена к опоре или подвесу.",
+        "options": [
+          "К опоре или подвесу",
+          "К самому телу",
+          "К центру Земли",
+          "Ни к чему: это масса"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Прибор для измерения силы называется ___.",
+        "hints": [],
+        "solution": "Силу измеряют динамометром — пружинным прибором со шкалой в ньютонах.",
+        "accepted": ["динамометр", "динамометром"]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и её единицей в СИ.",
+        "hints": [],
+        "solution": "Жёсткость $k = F/\\Delta l$ измеряется в Н/м.",
+        "options": ["Сила", "Масса", "Жёсткость пружины", "Удлинение"],
+        "matches": ["Н", "кг", "Н/м", "м"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1.5, 2, 2.5, 3.5, 4.5]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "dynamometer",
+        "min": 0,
+        "max": 5,
+        "step": 0.5,
+        "label": 1,
+        "value": "f",
+        "unit": "Н"
+      },
+      "answer": "f / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "К динамометру подвесили груз (см. рисунок). Найдите массу груза. Примите $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "Динамометр показывает вес груза {{f}} Н; $m = \\dfrac{P}{g} = \\dfrac{ {{f}} }{10}$ кг."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о силе.",
+        "hints": [],
+        "solution": "Сила — векторная величина; $F_{тяж} = mg$ растёт с массой; единица силы — ньютон.",
+        "options": [
+          "Сила — мера взаимодействия тел",
+          "Сила характеризуется модулем, направлением и точкой приложения",
+          "Чем больше масса тела, тем больше сила тяжести",
+          "Сила тяжести не зависит от массы тела",
+          "Силу измеряют в килограммах"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1.5, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": -90,
+            "size": "m",
+            "label": "mg = ?"
+          },
+          {
+            "angle": 90,
+            "size": "m",
+            "label": "N"
+          }
+        ]
+      },
+      "answer": "10 * m",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг лежит на столе (см. рисунок). Найдите силу тяжести, действующую на брусок. Примите $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "$F = mg = {{m}} \\cdot 10$ Н."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Примерно с какой силой тяжести Земля притягивает тело массой 1 кг?",
+        "hints": [],
+        "solution": "$F = mg = 1 \\cdot 9{,}8 \\approx 10$ Н.",
+        "options": ["≈ 10 Н", "1 Н", "100 Н", "0,1 Н"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2.5, 4, 12, 50, 65]
+        }
+      ],
+      "constraints": [],
+      "answer": "9.8 * m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите силу тяжести, действующую на тело массой {{m}} кг ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$F = mg = {{m}} \\cdot 9{,}8$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 8, 10, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "9.8 * v",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите вес воды в ведре объёмом {{v}} л ($g = 9{,}8$ Н/кг, плотность воды 1000 кг/м³). Ведро стоит на полу.",
+        "hints": [],
+        "solution": "Масса воды $m = \\rho V = 1000 \\cdot {{v}} \\cdot 0{,}001 = {{v}}$ кг; $P = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "7.8 * v * 9.8",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Найдите силу тяжести, действующую на стальную деталь объёмом {{v}} дм³ (плотность стали 7800 кг/м³, $g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$m = \\rho V = 7800 \\cdot {{v}} \\cdot 0{,}001$ кг; $F = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [49, 98, 196]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.2, 0.5, 1]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 * 9.8 * m / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "К пружине жёсткостью {{k}} Н/м подвесили груз массой {{m}} кг. На сколько сантиметров удлинилась пружина ($g = 9{,}8$ Н/кг)?",
+        "hints": [],
+        "solution": "В равновесии $k\\Delta l = mg$, $\\Delta l = \\dfrac{mg}{k}$ м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 400]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "k * x / 100"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "x * 1.25"],
+        "y": [0, "f * 1.25"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["x", "f"]
+            ]
+          }
+        ],
+        "axes": {
+          "x": "Δl, см",
+          "y": "f, Н"
+        }
+      },
+      "answer": "k",
+      "tolerance": {},
+      "unit": "Н/м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "По графику зависимости силы упругости от удлинения пружины (см. рисунок) найдите её жёсткость.",
+        "hints": [],
+        "solution": "При удлинении {{x}} см $= {{x}}/100$ м сила равна {{f}} Н: $k = \\dfrac{F}{\\Delta l}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1, 2, 3, 4]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [40, 50, 100]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "scale",
+        "instrument": "dynamometer",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "label": 1,
+        "value": "f",
+        "unit": "Н"
+      },
+      "answer": "100 * f / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружина динамометра имеет жёсткость {{k}} Н/м. На сколько сантиметров растянута пружина, если динамометр показывает силу, изображённую на рисунке?",
+        "hints": [],
+        "solution": "Показание {{f}} Н; $\\Delta l = \\dfrac{F}{k} = \\dfrac{ {{f}} }{ {{k}} }$ м."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "К пружине подвесили груз, затем ещё один такой же. Как изменилось удлинение пружины (деформация упругая)?",
+        "hints": [],
+        "solution": "По закону Гука $\\Delta l = F/k$: сила выросла вдвое, удлинение тоже.",
+        "options": [
+          "Увеличилось в 2 раза",
+          "Не изменилось",
+          "Увеличилось в 4 раза",
+          "Уменьшилось в 2 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [80, 150, 750, 840]
+        }
+      ],
+      "constraints": [],
+      "answer": "1.6 * m",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ускорение свободного падения на Луне 1,6 Н/кг. Найдите силу тяжести, действующую на Луне на луноход массой {{m}} кг.",
+        "hints": [],
+        "solution": "$F = m g_Л = {{m}} \\cdot 1{,}6$ Н."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "medium",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите тела в порядке возрастания действующей на них силы тяжести.",
+        "hints": [],
+        "solution": "Сила тяжести $F = mg$ пропорциональна массе.",
+        "options": ["Яблоко 200 г", "Книга 0,5 кг", "Кот 4 кг", "Школьник 40 кг", "Мотоцикл 150 кг"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила упругости прямо пропорциональна удлинению пружины — это закон ___.",
+        "hints": [],
+        "solution": "Закон Гука: $F_{упр} = k\\Delta l$ (для упругих деформаций).",
+        "accepted": ["Гука"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о весе тела.",
+        "hints": [],
+        "solution": "Вес — сила, его измеряют в ньютонах; масса — в килограммах.",
+        "options": [
+          "Вес приложен к опоре или подвесу",
+          "У тела, покоящегося на горизонтальной опоре, $P = mg$",
+          "При свободном падении вес тела равен нулю",
+          "Вес измеряют в килограммах",
+          "Вес и масса — одно и то же"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l0",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1, 2, 3, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "l0 + 100 * f / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Длина пружины без груза {{l0}} см, жёсткость {{k}} Н/м. Какой станет длина пружины, если подвесить груз весом {{f}} Н?",
+        "hints": [],
+        "solution": "$\\Delta l = \\dfrac{F}{k}$ м $= \\dfrac{100F}{k}$ см; $L = L_0 + \\Delta l$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "d1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "f2",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "d1 * f2 / f1",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Под действием силы {{f1}} Н пружина удлинилась на {{d1}} см. На сколько сантиметров она удлинится под действием силы {{f2}} Н?",
+        "hints": [],
+        "solution": "По закону Гука удлинение пропорционально силе: $\\Delta l_2 = \\Delta l_1 \\dfrac{F_2}{F_1}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "figure": {
+        "kind": "forces",
+        "body": "ball",
+        "surface": "none",
+        "forces": [
+          {
+            "angle": -90,
+            "size": 1,
+            "label": "mg"
+          },
+          {
+            "angle": 90,
+            "size": 1,
+            "label": "F упр"
+          }
+        ]
+      },
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шар висит на нити (см. рисунок). Какие силы на него действуют?",
+        "hints": [],
+        "solution": "Земля притягивает шар (сила тяжести), натянутая нить действует на него вверх (сила упругости). Вес приложен к нити, а не к шару.",
+        "options": [
+          "Сила тяжести и сила упругости нити",
+          "Только сила тяжести",
+          "Вес и сила тяжести",
+          "Только сила упругости нити"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "f / x",
+      "variables": ["f", "x"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Закон Гука: $f = kx$, где $f$ — сила упругости, $x$ — удлинение. Выразите жёсткость $k$ через $f$ и $x$.",
+        "hints": [],
+        "solution": "$k = \\dfrac{f}{x}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [40, 100, 300]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "k2",
+          "expr": "2 * k"
+        },
+        {
+          "name": "kh",
+          "expr": "k / 2"
+        },
+        {
+          "name": "k4",
+          "expr": "4 * k"
+        }
+      ],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружину жёсткостью {{k}} Н/м разрезали пополам. Какова жёсткость половины?",
+        "hints": [],
+        "solution": "Под той же силой каждая половина удлиняется вдвое меньше, поэтому её жёсткость вдвое больше.",
+        "options": ["{{k2}} Н/м", "{{k}} Н/м", "{{kh}} Н/м", "{{k4}} Н/м"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [49, 98, 196]
+        }
+      ],
+      "constraints": [],
+      "answer": "9.8 * m / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} г подвесили к пружине жёсткостью {{k}} Н/м. Найдите удлинение пружины в миллиметрах ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$\\Delta l = \\dfrac{mg}{k} = \\dfrac{ {{m}} \\cdot 0{,}001 \\cdot 9{,}8}{ {{k}} }$ м; в миллиметрах умножаем на 1000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k1",
+          "kind": "choice",
+          "values": [300, 400, 600]
+        },
+        {
+          "name": "k2",
+          "kind": "choice",
+          "values": [100, 150, 200]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [4, 5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f1",
+          "expr": "k1 * x / 100"
+        },
+        {
+          "name": "f2",
+          "expr": "k2 * x / 100"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "x * 1.25"],
+        "y": [0, "f1 * 1.2"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["x", "f1"]
+            ],
+            "label": "1"
+          },
+          {
+            "points": [
+              [0, 0],
+              ["x", "f2"]
+            ],
+            "label": "2"
+          }
+        ],
+        "axes": {
+          "x": "Δl, см",
+          "y": "F, Н"
+        }
+      },
+      "answer": "k1 / k2",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "На графике (см. рисунок) показана зависимость силы упругости от удлинения для двух пружин. Во сколько раз жёсткость пружины 1 больше жёсткости пружины 2?",
+        "hints": [],
+        "solution": "При удлинении {{x}} см силы равны {{f1}} Н и {{f2}} Н; $\\dfrac{k_1}{k_2} = \\dfrac{F_1}{F_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [5, 10, 20]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [4, 5, 10]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "2700 * a * b * c / 1000000 * 9.8",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Алюминиевый брусок размерами {{a}} × {{b}} × {{c}} см лежит на столе. Плотность алюминия 2700 кг/м³, $g = 9{,}8$ Н/кг. Найдите вес бруска.",
+        "hints": [],
+        "solution": "$V = {{a}} \\cdot {{b}} \\cdot {{c}}$ см³ $= V \\cdot 10^{-6}$ м³; $m = \\rho V$; $P = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 10, 25, 60]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "9.8 * m"
+        }
+      ],
+      "answer": "1.6 * m",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Вес покоящегося на Земле тела {{p}} Н ($g = 9{,}8$ Н/кг). Каким будет его вес на Луне, где $g = 1{,}6$ Н/кг?",
+        "hints": [],
+        "solution": "Масса $m = \\dfrac{P}{9{,}8} = {{m}}$ кг не меняется; $P_Л = m \\cdot 1{,}6$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [100, 200, 300]
+        },
+        {
+          "name": "d1",
+          "kind": "choice",
+          "values": [2, 4]
+        },
+        {
+          "name": "d2",
+          "kind": "choice",
+          "values": [3, 5, 6, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m1 * d2 / d1",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "г"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m1}} г растягивает пружину на {{d1}} см. Какой массы груз растянет её на {{d2}} см?",
+        "hints": [],
+        "solution": "Удлинение пропорционально силе, а сила тяжести — массе: $m_2 = m_1 \\dfrac{\\Delta l_2}{\\Delta l_1}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m0",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [8, 10, 12]
+        }
+      ],
+      "constraints": [],
+      "answer": "9.8 * (m0 + v)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пустое ведро массой {{m0}} кг заполнили водой объёмом {{v}} л. Найдите вес ведра с водой на полу ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "Масса воды {{v}} кг; общая масса $m_0 + {{v}}$ кг; $P = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "r",
+          "kind": "choice",
+          "values": [2700, 7800, 8900]
+        },
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [10, 20, 50]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "r * v * 0.00001"
+        }
+      ],
+      "answer": "f / (v * 0.00001)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кг/м³"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Металлический брусок объёмом {{v}} см³ подвешен к динамометру, который показывает {{f}} Н. Найдите плотность металла ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$m = \\dfrac{P}{g}$, $V = {{v}} \\cdot 10^{-6}$ м³; $\\rho = \\dfrac{P}{gV}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между выражением и величиной, которую оно задаёт.",
+        "hints": [],
+        "solution": "$F_{тяж} = mg$, $F_{упр} = k\\Delta l$, $k = F/\\Delta l$, $m = F/g$.",
+        "options": ["$mg$", "$k\\Delta l$", "$F/\\Delta l$", "$F/g$"],
+        "matches": ["Сила тяжести", "Сила упругости", "Жёсткость пружины", "Масса тела"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [5, 12, 20, 35]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": -90,
+            "size": "m",
+            "label": "mg"
+          },
+          {
+            "angle": 90,
+            "size": "m",
+            "label": "N = ?"
+          }
+        ]
+      },
+      "answer": "9.8 * m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик массой {{m}} кг покоится на полу (см. рисунок). Найдите силу упругости $N$, с которой пол действует на ящик ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "Ящик покоится: $N = mg = {{m}} \\cdot 9{,}8$ Н."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о законе Гука.",
+        "hints": [],
+        "solution": "Жёсткость — характеристика пружины; при неупругих деформациях закон Гука нарушается.",
+        "options": [
+          "Он выполняется только при упругих деформациях",
+          "Жёсткость зависит от материала и размеров пружины",
+          "Сила пропорциональна удлинению, а не длине пружины",
+          "Жёсткость зависит от приложенной силы",
+          "Закон выполняется при любых деформациях"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "fm",
+          "kind": "choice",
+          "values": [490, 980, 1470, 2940]
+        }
+      ],
+      "constraints": [],
+      "answer": "fm / 9.8",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Трос выдерживает силу натяжения {{fm}} Н. Груз какой наибольшей массы можно на нём неподвижно подвесить ($g = 9{,}8$ Н/кг)?",
+        "hints": [],
+        "solution": "Груз покоится: $T = mg \\le F_{max}$, $m_{max} = \\dfrac{F_{max}}{g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l0",
+          "kind": "choice",
+          "values": [10, 12, 15]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "l1",
+          "expr": "l0 + a"
+        },
+        {
+          "name": "l2",
+          "expr": "l0 + 3 * a"
+        }
+      ],
+      "answer": "l1 - (l2 - l1) / 2",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "С грузом 100 г длина пружины {{l1}} см, с грузом 300 г — {{l2}} см. Найдите длину пружины без груза.",
+        "hints": [],
+        "solution": "Добавка 200 г удлиняет пружину на ${{l2}} - {{l1}}$ см, значит, 100 г — на половину этого; $L_0 = L_1 - \\dfrac{L_2 - L_1}{2}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги опыта по определению жёсткости пружины.",
+        "hints": [],
+        "solution": "Удлинение — разность длин; сила упругости в равновесии равна весу груза.",
+        "options": [
+          "Измерить длину пружины без груза",
+          "Подвесить груз известной массы",
+          "Измерить новую длину и найти удлинение",
+          "Вычислить силу тяжести груза $mg$",
+          "Найти жёсткость $k = mg/\\Delta l$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5]
+        },
+        {
+          "name": "dl",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "9.8 * m * 100 / dl",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н/м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} кг растянул пружину на {{dl}} см. Найдите жёсткость пружины ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$k = \\dfrac{mg}{\\Delta l} = \\dfrac{ {{m}} \\cdot 9{,}8}{ {{dl}}/100 }$ Н/м."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k1",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "k2",
+          "kind": "choice",
+          "values": [200, 400, 500]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [2, 4, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 * (f / k1 + f / k2)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две пружины жёсткостью {{k1}} Н/м и {{k2}} Н/м соединили последовательно и растянули силой {{f}} Н. На сколько сантиметров удлинилась вся система?",
+        "hints": [],
+        "solution": "В последовательном соединении каждая пружина растянута той же силой $F$: $\\Delta l = \\dfrac{F}{k_1} + \\dfrac{F}{k_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [4, 6, 10]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 * f / (2 * k)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз весом {{f}} Н подвешен на двух одинаковых параллельных пружинах жёсткостью {{k}} Н/м каждая. Найдите удлинение пружин в сантиметрах.",
+        "hints": [],
+        "solution": "Каждая пружина держит половину веса: $\\Delta l = \\dfrac{F}{2k}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [50, 100]
+        },
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "1000 * f / (n * k)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружину жёсткостью {{k}} Н/м разрезали на {{n}} равные части и к одной части подвесили груз весом {{f}} Н. Найдите удлинение этой части в миллиметрах.",
+        "hints": [],
+        "solution": "Жёсткость части в $n$ раз больше: $k_n = nk$; $\\Delta l = \\dfrac{F}{nk}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k1",
+          "kind": "choice",
+          "values": [200, 400]
+        },
+        {
+          "name": "k2",
+          "kind": "choice",
+          "values": [100, 200]
+        },
+        {
+          "name": "x",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f1",
+          "expr": "k1 * x / 100"
+        },
+        {
+          "name": "f2",
+          "expr": "k2 * x / 100"
+        }
+      ],
+      "figure": {
+        "kind": "plot",
+        "x": [0, "x * 1.25"],
+        "y": [0, "f1 * 1.2"],
+        "lines": [
+          {
+            "points": [
+              [0, 0],
+              ["x", "f1"]
+            ],
+            "label": "1"
+          },
+          {
+            "points": [
+              [0, 0],
+              ["x", "f2"]
+            ],
+            "label": "2"
+          }
+        ],
+        "axes": {
+          "x": "Δl, см",
+          "y": "f, Н"
+        }
+      },
+      "answer": "f / k1 * 100 + f / k2 * 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружины 1 и 2 (их графики на рисунке) соединили последовательно и растянули силой {{f}} Н. Найдите общее удлинение в сантиметрах.",
+        "hints": [],
+        "solution": "По графикам $k_1 = \\dfrac{ {{f1}} }{ {{x}}/100 }$, $k_2 = \\dfrac{ {{f2}} }{ {{x}}/100 }$; $\\Delta l = \\dfrac{F}{k_1} + \\dfrac{F}{k_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 * 8900 * (a / 100)^3 * 9.8 / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "К пружине жёсткостью {{k}} Н/м подвесили медный кубик с ребром {{a}} см (плотность меди 8900 кг/м³, $g = 9{,}8$ Н/кг). Найдите удлинение пружины в сантиметрах.",
+        "hints": [],
+        "solution": "$m = \\rho a^3$ (ребро в метрах), $\\Delta l = \\dfrac{mg}{k}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [16, 32, 48]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 9.8 / 1.6",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек на Земле может удержать груз массой {{m}} кг. Груз какой массы он удержит на Луне с той же силой ($g_З = 9{,}8$ Н/кг, $g_Л = 1{,}6$ Н/кг)?",
+        "hints": [],
+        "solution": "Сила одна и та же: $M g_З = M_Л g_Л$, $M_Л = M \\dfrac{9{,}8}{1{,}6}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 4, 6]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p2",
+          "expr": "p / 2"
+        }
+      ],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два одинаковых динамометра соединили последовательно и подвесили к нижнему груз весом {{p}} Н (весом динамометров пренебречь). Что покажут динамометры?",
+        "hints": [],
+        "solution": "Каждая пружина в цепочке растянута одной и той же силой — весом груза.",
+        "options": [
+          "Оба по {{p}} Н",
+          "Оба по {{p2}} Н",
+          "Верхний {{p}} Н, нижний 0",
+          "Верхний {{p}} Н, нижний {{p2}} Н"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [100, 200, 400]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "100 * n * f / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Цепочка из {{n}} одинаковых пружин жёсткостью {{k}} Н/м соединена последовательно. На сколько сантиметров она удлинится под силой {{f}} Н?",
+        "hints": [],
+        "solution": "Каждая пружина растянута силой $F$: $\\Delta l = n\\dfrac{F}{k}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружину с грузом разрезали пополам и подвесили тот же груз к одной половине. Как изменилось удлинение по сравнению с целой пружиной?",
+        "hints": [],
+        "solution": "Жёсткость половины вдвое больше, при той же силе удлинение вдвое меньше.",
+        "options": [
+          "Уменьшилось в 2 раза",
+          "Не изменилось",
+          "Увеличилось в 2 раза",
+          "Уменьшилось в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "l0",
+          "kind": "choice",
+          "values": [10, 12, 20]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        },
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "df",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f2",
+          "expr": "f1 + df"
+        },
+        {
+          "name": "l1",
+          "expr": "l0 + 100 * f1 / k"
+        },
+        {
+          "name": "l2",
+          "expr": "l0 + 100 * f2 / k"
+        }
+      ],
+      "answer": "(f2 - f1) / ((l2 - l1) / 100)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н/м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Под силой {{f1}} Н длина пружины {{l1}} см, под силой {{f2}} Н — {{l2}} см. Найдите жёсткость пружины.",
+        "hints": [],
+        "solution": "$k = \\dfrac{F_2 - F_1}{L_2 - L_1}$ (разность длин в метрах)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "v",
+          "kind": "choice",
+          "values": [5, 10, 15, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "13.6 * v * 9.8 / 1000",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "В пробирку налили {{v}} см³ ртути (плотность 13 600 кг/м³). Найдите вес ртути ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$m = \\rho V = 13{,}6$ г/см³ $\\cdot {{v}}$ см³; переводим в килограммы; $P = mg$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз неподвижно висит на пружине. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Груз в равновесии: $F_{упр} = mg$. Вес — сила, с которой груз растягивает пружину.",
+        "options": [
+          "Сила упругости пружины равна силе тяжести груза",
+          "Сила тяжести приложена к грузу",
+          "Вес груза приложен к пружине",
+          "Вес груза приложен к самому грузу",
+          "Сила упругости пружины больше силы тяжести груза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [100, 200, 250]
+        },
+        {
+          "name": "dl",
+          "kind": "choice",
+          "values": [8, 10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [50, 150, 300]
+        }
+      ],
+      "constraints": [],
+      "answer": "dl * m2 / m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "мм"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Груз массой {{m}} г растягивает пружину на {{dl}} мм. На сколько ещё миллиметров удлинится пружина, если добавить груз массой {{m2}} г?",
+        "hints": [],
+        "solution": "Удлинение пропорционально массе: добавка $\\Delta l \\dfrac{m_2}{m}$."
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "m * g / k",
+      "variables": ["m", "g", "k"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите удлинение пружины $x$ через массу груза $m$, ускорение свободного падения $g$ и жёсткость $k$ (груз висит неподвижно).",
+        "hints": [],
+        "solution": "В равновесии $kx = mg$, отсюда $x = \\dfrac{mg}{k}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [98, 196, 490]
+        },
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "dl",
+          "expr": "1000 * 9.8 * m / k"
+        }
+      ],
+      "answer": "k * dl / 1000 / 9.8",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пружина жёсткостью {{k}} Н/м растянулась на {{dl}} мм под грузом. Найдите массу груза ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$mg = k\\Delta l$, $m = \\dfrac{k\\Delta l}{g}$ (удлинение в метрах)."
+      }
+    }
+  }
+]

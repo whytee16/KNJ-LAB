@@ -1,0 +1,1831 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [20, 50, 100, 200]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.3, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * n",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила нормального давления $N = {{n}}$ Н, коэффициент трения скольжения {{mu}}. Найдите силу трения скольжения.",
+        "hints": [],
+        "solution": "$F_{тр} = \\mu N = {{mu}} \\cdot {{n}}$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 5, 10]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.4]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * m * 10",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг скользит по горизонтальному столу. Коэффициент трения {{mu}}, $g = 10$ Н/кг. Найдите силу трения.",
+        "hints": [],
+        "solution": "На горизонтальной поверхности $N = mg$; $F_{тр} = \\mu mg = {{mu}} \\cdot {{m}} \\cdot 10$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [20, 40, 50, 100]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.25, 0.4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "ff",
+          "expr": "mu * n"
+        }
+      ],
+      "answer": "ff / n",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила трения скольжения {{ff}} Н, сила нормального давления {{n}} Н. Найдите коэффициент трения.",
+        "hints": [],
+        "solution": "$\\mu = \\dfrac{F_{тр}}{N} = \\dfrac{ {{ff}} }{ {{n}} }$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "ft",
+          "kind": "choice",
+          "values": [15, 30, 45, 60]
+        },
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [100, 150]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": 0,
+            "size": "ft",
+            "label": "F тяги"
+          },
+          {
+            "angle": 180,
+            "size": "ft",
+            "label": "F тр = ?"
+          },
+          {
+            "angle": 90,
+            "size": "w",
+            "label": "N"
+          },
+          {
+            "angle": -90,
+            "size": "w",
+            "label": "mg"
+          }
+        ]
+      },
+      "answer": "ft",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик равномерно тянут по полу (см. рисунок), сила тяги {{ft}} Н. Чему равна сила трения?",
+        "hints": [],
+        "solution": "При равномерном движении силы уравновешены: $F_{тр} = F_{тяги} = {{ft}}$ Н."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Куда направлена сила трения скольжения?",
+        "hints": [],
+        "solution": "Сила трения скольжения направлена вдоль поверхности против относительного движения.",
+        "options": [
+          "Против движения тела относительно поверхности",
+          "По направлению движения",
+          "Вертикально вниз",
+          "Перпендикулярно поверхности"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Каким прибором измеряют силу трения при равномерном движении бруска?",
+        "hints": [],
+        "solution": "При равномерном движении динамометр показывает силу тяги, равную силе трения.",
+        "options": ["Динамометром", "Весами", "Линейкой", "Мензуркой"]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Трение, при котором тело не сдвигается с места, называется трением ___.",
+        "hints": [],
+        "solution": "Трение покоя удерживает тело, пока сила тяги не превысит максимальное значение $\\mu N$.",
+        "accepted": ["покоя"]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите способы уменьшить трение.",
+        "hints": [],
+        "solution": "Песок и шипы трение увеличивают — это полезное трение.",
+        "options": [
+          "Смазка трущихся поверхностей",
+          "Замена скольжения качением (подшипники, колёса)",
+          "Полировка поверхностей",
+          "Посыпать лёд песком",
+          "Шипы на обуви"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой вид трения обычно меньше при одинаковой нагрузке?",
+        "hints": [],
+        "solution": "Поэтому тяжёлые грузы перевозят на колёсах и катках.",
+        "options": [
+          "Трение качения",
+          "Трение скольжения",
+          "Они всегда равны",
+          "Трение покоя максимальное всегда меньше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между примером и видом трения.",
+        "hints": [],
+        "solution": "Пока тело неподвижно относительно поверхности — трение покоя.",
+        "options": [
+          "Шкаф стоит, его толкают, но он не двигается",
+          "Санки едут по снегу",
+          "Колесо катится по дороге",
+          "Книга лежит на наклонной парте и не съезжает"
+        ],
+        "matches": [
+          "Трение покоя",
+          "Трение скольжения",
+          "Трение качения",
+          "Трение покоя (на наклонной опоре)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "ft",
+          "kind": "choice",
+          "values": [8, 12, 20, 25]
+        }
+      ],
+      "constraints": [],
+      "answer": "ft",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы равномерно двигать санки по снегу, нужна сила {{ft}} Н. Какую силу трения преодолевают санки?",
+        "hints": [],
+        "solution": "Равномерное движение: сила тяги равна силе трения."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему зимой дороги посыпают песком?",
+        "hints": [],
+        "solution": "Песок делает поверхность шероховатой, трение растёт — колёса меньше скользят.",
+        "options": [
+          "Чтобы увеличить трение между колёсами и дорогой",
+          "Чтобы уменьшить трение",
+          "Чтобы растопить лёд",
+          "Чтобы уменьшить вес машин"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.25, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "1 / mu",
+      "tolerance": {},
+      "decimals": 1
+    },
+    "texts": {
+      "ru": {
+        "statement": "Коэффициент трения {{mu}}. Во сколько раз сила трения скольжения меньше силы нормального давления?",
+        "hints": [],
+        "solution": "$\\dfrac{N}{F_{тр}} = \\dfrac{1}{\\mu}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "От чего НЕ зависит сила трения скольжения (в школьной модели)?",
+        "hints": [],
+        "solution": "В модели $F_{тр} = \\mu N$ площадь соприкосновения не входит.",
+        "options": [
+          "От площади соприкосновения тел",
+          "От силы нормального давления",
+          "От материала поверхностей",
+          "От качества обработки поверхностей"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги опыта по измерению силы трения.",
+        "hints": [],
+        "solution": "Показание равно силе трения только при равномерном движении.",
+        "options": [
+          "Положить брусок на горизонтальную доску",
+          "Прицепить к бруску динамометр",
+          "Тянуть брусок равномерно вдоль доски",
+          "Снять показание динамометра — это сила трения"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2, 5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.4]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * m * 9.8",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг тянут равномерно по горизонтальному столу. Коэффициент трения {{mu}}, $g = 9{,}8$ Н/кг. Какую силу показывает динамометр?",
+        "hints": [],
+        "solution": "$F = F_{тр} = \\mu mg = {{mu}} \\cdot {{m}} \\cdot 9{,}8$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20, 25]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.25, 0.3, 0.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "ft",
+          "expr": "round(mu * m * 9.8, 1)"
+        },
+        {
+          "name": "w",
+          "expr": "9.8 * m"
+        }
+      ],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": 0,
+            "size": "ft",
+            "label": "F тяги"
+          },
+          {
+            "angle": 180,
+            "size": "ft",
+            "label": "F тр = ?"
+          },
+          {
+            "angle": 90,
+            "size": "w",
+            "label": "N"
+          },
+          {
+            "angle": -90,
+            "size": "w",
+            "label": "mg"
+          }
+        ]
+      },
+      "answer": "ft / (9.8 * m)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик массой {{m}} кг равномерно передвигают по полу силой {{ft}} Н (см. рисунок). Найдите коэффициент трения ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$F_{тр} = F_{тяги}$, $N = mg$, $\\mu = \\dfrac{F_{тяги}}{mg}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 60, 80, 100]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.3, 0.4, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * m * 10",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шкаф массой {{m}} кг стоит на полу; коэффициент трения {{mu}}, $g = 10$ Н/кг. Какую наименьшую горизонтальную силу нужно приложить, чтобы сдвинуть шкаф? (Наибольшую силу трения покоя считайте равной $\\mu N$.)",
+        "hints": [],
+        "solution": "Шкаф сдвинется, когда сила превысит $\\mu mg = {{mu}} \\cdot {{m}} \\cdot 10$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20, 30]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.4, 0.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "fmax",
+          "expr": "mu * m * 10"
+        },
+        {
+          "name": "f",
+          "expr": "round(fmax * 0.6)"
+        }
+      ],
+      "answer": "f",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Коробку массой {{m}} кг толкают горизонтальной силой {{f}} Н, но она не сдвигается. Коэффициент трения {{mu}}, $g = 10$ Н/кг. Чему равна сила трения покоя?",
+        "hints": ["Сравните силу с наибольшей силой трения покоя $\\mu mg$."],
+        "solution": "Наибольшая сила трения покоя $\\mu mg = {{fmax}}$ Н больше {{f}} Н, коробка покоится. Силы уравновешены: $F_{тр} = F = {{f}}$ Н."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок равномерно тянули по доске, лежащей плашмя, затем поставили на ребро (меньшая площадь) и снова тянули равномерно. Как изменилось показание динамометра?",
+        "hints": [],
+        "solution": "$F_{тр} = \\mu N$, а $N = mg$ не изменилась; площадь опоры в формулу не входит.",
+        "options": ["Не изменилось", "Уменьшилось", "Увеличилось", "Стало равным нулю"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "На брусок положили второй такой же брусок. Как изменилась сила трения скольжения?",
+        "hints": [],
+        "solution": "Сила нормального давления выросла вдвое, значит, и $F_{тр} = \\mu N$ — вдвое.",
+        "options": [
+          "Увеличилась в 2 раза",
+          "Не изменилась",
+          "Уменьшилась в 2 раза",
+          "Увеличилась в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [4, 5, 6]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [20, 25, 30]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.05, 0.1]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * (m + m2) * 9.8",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Санки массой {{m}} кг с ребёнком массой {{m2}} кг равномерно тянут по снегу. Коэффициент трения {{mu}}, $g = 9{,}8$ Н/кг. Найдите силу тяги.",
+        "hints": [],
+        "solution": "$F = \\mu (m + m_2) g$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок покоится на горизонтальном столе, к нему горизонтально приложили маленькую силу, и он не сдвинулся. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Трение покоя подстраивается под внешнюю силу до наибольшего значения $\\mu N$.",
+        "options": [
+          "Сила трения покоя равна приложенной силе",
+          "Сила трения покоя направлена против приложенной силы",
+          "Сила трения покоя равна $\\mu N$ всегда",
+          "Если силу немного увеличить, сила трения покоя тоже увеличится (пока тело не сдвинется)",
+          "Сила трения покоя равна нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "mu * m * 10"
+        }
+      ],
+      "answer": "f / (10 * m)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы сдвинуть брусок массой {{m}} кг, нужна горизонтальная сила {{f}} Н. Найдите коэффициент трения ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$\\mu = \\dfrac{F}{mg} = \\dfrac{ {{f}} }{ {{m}} \\cdot 10}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Отношение силы трения скольжения к силе нормального давления называется коэффициентом ___.",
+        "hints": [],
+        "solution": "$\\mu = F_{тр}/N$ — безразмерная величина.",
+        "accepted": ["трения"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [0.6, 0.7, 0.8]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [0.3, 0.4]
+        }
+      ],
+      "constraints": [],
+      "answer": "m1 / m2",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Коэффициент трения резины по сухому асфальту {{m1}}, по мокрому — {{m2}}. Во сколько раз уменьшается сила трения при торможении юзом на мокром асфальте?",
+        "hints": [],
+        "solution": "При той же массе $\\dfrac{F_1}{F_2} = \\dfrac{\\mu_1}{\\mu_2}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок тянут по столу и динамометр показывает 3 Н, но брусок разгоняется. Какое утверждение верно?",
+        "hints": [],
+        "solution": "Тело разгоняется, значит, сила тяги больше силы трения; равны они только при равномерном движении.",
+        "options": [
+          "Сила трения меньше 3 Н",
+          "Сила трения равна 3 Н",
+          "Сила трения больше 3 Н",
+          "Сила трения равна нулю"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [200, 400, 500]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.25, 0.4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "mu * m / 100"
+        }
+      ],
+      "answer": "f / (m / 1000 * 10)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} г равномерно тянут по столу силой {{f}} Н. Найдите коэффициент трения ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$m = {{m}}$ г $= {{m}}/1000$ кг; $\\mu = \\dfrac{F}{mg}$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между ситуацией и силой трения (тело на горизонтальной поверхности, $N = 100$ Н, $\\mu = 0{,}3$).",
+        "hints": [],
+        "solution": "Трение покоя равно приложенной силе (до 30 Н); при скольжении $\\mu N = 30$ Н; без внешней силы трения нет.",
+        "options": [
+          "Тело тянут силой 10 Н, оно покоится",
+          "Тело тянут силой 20 Н, оно покоится",
+          "Тело скользит",
+          "Никакая горизонтальная сила не действует"
+        ],
+        "matches": ["10 Н", "20 Н", "30 Н", "0 Н"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "f / n",
+      "variables": ["f", "n"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите коэффициент трения $u$ через силу трения $f$ и силу нормального давления $n$.",
+        "hints": [],
+        "solution": "$\\mu = \\dfrac{F_{тр}}{N}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [3, 5, 8, 12, 15]
+        }
+      ],
+      "constraints": ["abs(f - fmax) > 0.5"],
+      "derived": [
+        {
+          "name": "fmax",
+          "expr": "mu * m * 10"
+        }
+      ],
+      "answer": "min(f, mu * m * 10)",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг тянут горизонтальной силой {{f}} Н. Коэффициент трения {{mu}}, $g = 10$ Н/кг. Найдите силу трения.",
+        "hints": ["Сначала найдите наибольшую силу трения покоя."],
+        "solution": "Наибольшая сила трения покоя $\\mu mg = {{fmax}}$ Н. Если $F \\le \\mu mg$, брусок покоится и $F_{тр} = F$; иначе он скользит и $F_{тр} = \\mu mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 4, 5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "ft",
+          "expr": "mu * m * 10"
+        },
+        {
+          "name": "w",
+          "expr": "m * 10"
+        }
+      ],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": 0,
+            "size": "ft",
+            "label": "F тяги"
+          },
+          {
+            "angle": 180,
+            "size": "ft",
+            "label": "F тр = ?"
+          },
+          {
+            "angle": 90,
+            "size": "w",
+            "label": "N"
+          },
+          {
+            "angle": -90,
+            "size": "w",
+            "label": "mg"
+          }
+        ]
+      },
+      "answer": "ft / (10 * m)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок тянут по столу (см. рисунок) с силой {{ft}} Н, он движется равномерно. Масса бруска {{m}} кг, $g = 10$ Н/кг. Найдите коэффициент трения.",
+        "hints": [],
+        "solution": "$F_{тр} = F_{тяги}$, $N = mg$; $\\mu = \\dfrac{ {{ft}} }{ {{m}} \\cdot 10}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [2, 3, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * (m + m2) / m",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На брусок массой {{m}} кг, равномерно движущийся по столу под действием силы {{f}} Н, положили груз массой {{m2}} кг. Какую силу нужно приложить, чтобы движение снова было равномерным?",
+        "hints": [],
+        "solution": "Коэффициент трения $\\mu = \\dfrac{F}{mg}$ не меняется; новая сила $F\\dfrac{m + m_2}{m}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.4, 0.5, 0.6]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * t * 9.8",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Автомобиль массой {{t}} т тормозит юзом на горизонтальной дороге. Коэффициент трения {{mu}}, $g = 9{,}8$ Н/кг. Найдите силу трения в килоньютонах.",
+        "hints": [],
+        "solution": "$m = {{t}} \\cdot 1000$ кг; $F_{тр} = \\mu mg$; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок равномерно тянут по столу. Как изменится сила трения, если тянуть его вдвое быстрее (тоже равномерно)?",
+        "hints": [],
+        "solution": "В школьной модели $F_{тр} = \\mu N$ от скорости не зависит.",
+        "options": [
+          "Не изменится",
+          "Увеличится в 2 раза",
+          "Уменьшится в 2 раза",
+          "Увеличится в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [40, 60, 90]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [1.5, 2, 3]
+        }
+      ],
+      "constraints": [],
+      "answer": "f1 * k",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы равномерно двигать по полу ящик, нужна сила {{f1}} Н. Какая сила нужна для ящика из того же материала, но массой в {{k}} раза больше?",
+        "hints": [],
+        "solution": "$F = \\mu mg$ пропорциональна массе."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры полезного трения.",
+        "hints": [],
+        "solution": "Износ и нагрев — вредные проявления трения.",
+        "options": [
+          "Колёса автомобиля не буксуют на дороге",
+          "Гвоздь держится в доске",
+          "Мы можем ходить, не поскальзываясь",
+          "Износ деталей двигателя",
+          "Нагрев оси колеса"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "3 * mu * m * 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Две одинаковые книги массой {{m}} кг каждая лежат стопкой. Нижнюю книгу равномерно вытягивают, удерживая верхнюю на месте. Коэффициент трения между книгами и между книгой и столом {{mu}}, $g = 10$ Н/кг. Какую силу нужно приложить?",
+        "hints": [],
+        "solution": "На нижнюю книгу действуют две силы трения: со стороны верхней книги $\\mu mg$ и со стороны стола $\\mu \\cdot 2mg$. Сумма $3\\mu mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "round(mu * m * 10 * 1.2, 1)"
+        }
+      ],
+      "answer": "mu * m * 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг покоится на столе. К нему прикладывают горизонтальную силу, медленно её увеличивая. При силе {{f}} Н брусок сдвинулся. Какой станет сила трения сразу после начала скольжения, если коэффициент трения скольжения {{mu}}? ($g = 10$ Н/кг)",
+        "hints": [],
+        "solution": "При скольжении $F_{тр} = \\mu mg = {{mu}} \\cdot {{m}} \\cdot 10$ Н."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите по возрастанию силу трения, действующую на брусок массой 1 кг ($\\mu = 0{,}4$, $g = 10$ Н/кг), когда его тянут горизонтально силой:",
+        "hints": [],
+        "solution": "Трение покоя равно приложенной силе до 4 Н; при скольжении сила трения 4 Н.",
+        "options": [
+          "0 Н",
+          "1 Н (брусок покоится)",
+          "3 Н (брусок покоится)",
+          "6 Н (брусок скользит)"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 70]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.02, 0.05, 0.1]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * m * 9.8",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лыжник массой {{m}} кг равномерно скользит по горизонтальной лыжне, коэффициент трения {{mu}}. Какую силу развивает лыжник ($g = 9{,}8$ Н/кг)?",
+        "hints": [],
+        "solution": "Равномерное движение: $F = \\mu mg$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему шины автомобиля делают с рисунком протектора?",
+        "hints": [],
+        "solution": "Протектор увеличивает сцепление шины с дорогой, особенно на мокром покрытии.",
+        "options": [
+          "Чтобы увеличить сцепление (трение) с дорогой и отводить воду",
+          "Чтобы уменьшить трение",
+          "Для красоты",
+          "Чтобы уменьшить массу шины"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 80, 100]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.25, 0.3]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [0.4, 0.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f1",
+          "expr": "round(mu * m * 10 * p)"
+        },
+        {
+          "name": "f2",
+          "expr": "mu * m * 10 - f1"
+        }
+      ],
+      "answer": "(f1 + f2) / (10 * m)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик массой {{m}} кг равномерно тянут два человека силами {{f1}} Н и {{f2}} Н в одном направлении по горизонтальному полу. Найдите коэффициент трения ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Сила тяги $F_1 + F_2$ равна силе трения $\\mu mg$."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между изменением условий и силой трения скольжения.",
+        "hints": [],
+        "solution": "В модели $F = \\mu N$ важны сила давления и состояние поверхностей.",
+        "options": [
+          "Массу тела увеличили вдвое",
+          "Площадь опоры уменьшили вдвое",
+          "Поверхность смазали",
+          "Тело поставили на колёса"
+        ],
+        "matches": [
+          "Увеличится вдвое",
+          "Не изменится",
+          "Уменьшится",
+          "Заменится трением качения — станет намного меньше"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "При равномерном движении сила тяги равна силе ___.",
+        "hints": [],
+        "solution": "Равнодействующая сил равна нулю, поэтому сила тяги уравновешена силой трения.",
+        "accepted": ["трения"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [2, 3, 5]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.4]
+        },
+        {
+          "name": "f1",
+          "kind": "choice",
+          "values": [10, 15, 20]
+        },
+        {
+          "name": "f2",
+          "kind": "choice",
+          "values": [4, 6, 12]
+        }
+      ],
+      "constraints": ["abs(abs(f1 - f2) - fmax) > 0.5", "f1 != f2"],
+      "derived": [
+        {
+          "name": "fmax",
+          "expr": "mu * m * 10"
+        }
+      ],
+      "answer": "min(abs(f1 - f2), mu * m * 10)",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг лежит на столе, коэффициент трения {{mu}}. На него действуют две горизонтальные силы в противоположные стороны: {{f1}} Н и {{f2}} Н. Найдите силу трения ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Равнодействующая приложенных сил $|F_1 - F_2|$; если она не больше $\\mu mg = {{fmax}}$ Н, брусок покоится и $F_{тр} = |F_1 - F_2|$; иначе $F_{тр} = \\mu mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [0.5, 1]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 1.5, 2]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * (2 * m1 + m2) * 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Нижнюю из двух лежащих стопкой книг массами {{m1}} кг (сверху) и {{m2}} кг тянут равномерно, верхнюю удерживают нитью на месте. Коэффициент трения во всех местах {{mu}}, $g = 10$ Н/кг. Найдите силу тяги.",
+        "hints": [],
+        "solution": "Трение о верхнюю книгу $\\mu m_1 g$, о стол $\\mu (m_1 + m_2) g$; сумма $\\mu(2m_1 + m_2)g$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m1",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.25]
+        }
+      ],
+      "constraints": [],
+      "answer": "mu * m2 * 10",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два бруска массами {{m1}} кг и {{m2}} кг связаны нитью и равномерно тянутся по столу силой, приложенной к первому. Коэффициент трения {{mu}}, $g = 10$ Н/кг. Найдите силу натяжения нити.",
+        "hints": [],
+        "solution": "Нить тянет второй брусок и уравновешивает только его силу трения: $T = \\mu m_2 g$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "mu * m * 10"
+        },
+        {
+          "name": "f2",
+          "expr": "mu * (m + m2) * 10"
+        }
+      ],
+      "answer": "(f2 - f) / (m2 * 10)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок, к которому прикреплён динамометр, тянут равномерно. Показание {{f}} Н. На брусок положили груз массой {{m2}} кг, и показание стало {{f2}} Н. Найдите коэффициент трения ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Прирост силы трения $\\Delta F = \\mu m_2 g$, $\\mu = \\dfrac{F_2 - F}{m_2 g}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой 2 кг на столе ($\\mu = 0{,}3$, $g = 10$ Н/кг) тянут силой, которая медленно растёт от 0 до 10 Н. Как меняется сила трения?",
+        "hints": [],
+        "solution": "Пока $F \\le \\mu mg = 6$ Н, трение покоя равно $F$; после начала скольжения $F_{тр} = 6$ Н.",
+        "options": [
+          "Растёт вместе с силой до 6 Н, затем остаётся 6 Н",
+          "Всё время равна 6 Н",
+          "Всё время равна приложенной силе",
+          "Растёт до 10 Н"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [20, 40]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [20, 40, 60]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [40, 60, 80]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "f * (m + m2) / m / k",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сани массой {{m}} кг равномерно тянут по горизонтали, сила тяги {{f}} Н. Какую силу тяги нужно приложить, если на сани положить груз {{m2}} кг и тянуть по льду, где коэффициент трения в {{k}} раза меньше?",
+        "hints": [],
+        "solution": "$\\mu = \\dfrac{F}{mg}$; новая сила $\\dfrac{\\mu}{k}(m + m_2)g = F \\dfrac{m + m_2}{mk}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [60, 120, 150, 300]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "f / (mu * 10)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую массу груза можно равномерно перемещать по горизонтальному полу силой {{f}} Н, если коэффициент трения {{mu}} ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$F = \\mu mg$, $m = \\dfrac{F}{\\mu g}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик покоится на полу, его толкают горизонтально силой, недостаточной для сдвига. Затем силу увеличили, но ящик всё ещё не сдвинулся. Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Тело в покое: силы уравновешены; трение покоя подстраивается под приложенную силу.",
+        "options": [
+          "Сила трения покоя увеличилась",
+          "Сила трения покоя равна новой приложенной силе",
+          "Сила трения стала равна $\\mu N$ обязательно",
+          "Равнодействующая сил, действующих на ящик, равна нулю",
+          "Сила трения направлена туда же, куда толкают"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 3]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.3, 0.5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [2, 4, 7, 10, 12]
+        }
+      ],
+      "constraints": ["abs(f - mu * m * 10) > 0.5"],
+      "answer": "max(0, f - mu * m * 10)",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На горизонтальном столе брусок массой {{m}} кг. Его тянут горизонтальной силой {{f}} Н, коэффициент трения {{mu}}, $g = 10$ Н/кг. Найдите равнодействующую силу, действующую на брусок.",
+        "hints": [],
+        "solution": "Если $F \\le \\mu mg$, брусок покоится и равнодействующая равна 0; иначе $F - \\mu mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [500, 1000, 2000]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * 9.8 * p / 100",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кН"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Поезд массой {{t}} т идёт равномерно по горизонтальному пути. Сила сопротивления движению составляет {{p}} % от веса поезда ($g = 9{,}8$ Н/кг). Найдите силу тяги локомотива в килоньютонах.",
+        "hints": [],
+        "solution": "Вес $P = mg = {{t}} \\cdot 1000 \\cdot 9{,}8$ Н; $F = \\dfrac{p}{100} P$; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек идёт по полу. Куда направлена сила трения, действующая на подошву опорной ноги со стороны пола?",
+        "hints": [],
+        "solution": "Нога отталкивается от пола назад, а трение покоя на подошву направлено вперёд — оно и двигает человека.",
+        "options": [
+          "Вперёд, по направлению движения человека",
+          "Назад, против движения",
+          "Вертикально вверх",
+          "Трения нет"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.4, 0.5]
+        },
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [60, 80, 100]
+        }
+      ],
+      "constraints": ["fmax >= m * 10"],
+      "derived": [
+        {
+          "name": "fmax",
+          "expr": "mu * f"
+        }
+      ],
+      "answer": "m * 10",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг прижали к вертикальной стене горизонтальной силой {{f}} Н. Коэффициент трения {{mu}}, $g = 10$ Н/кг. Найдите силу трения, если брусок неподвижен.",
+        "hints": ["Сила трения на стене направлена вверх и уравновешивает силу тяжести."],
+        "solution": "Наибольшая сила трения покоя $\\mu F = {{fmax}}$ Н не меньше силы тяжести, брусок неподвижен. Трение покоя уравновешивает силу тяжести: $F_{тр} = mg$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "mu",
+          "kind": "choice",
+          "values": [0.2, 0.4, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / mu",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой наименьшей горизонтальной силой нужно прижать к вертикальной стене брусок массой {{m}} кг, чтобы он не соскальзывал? Коэффициент трения {{mu}}, $g = 10$ Н/кг.",
+        "hints": [],
+        "solution": "Нужно $\\mu F \\ge mg$, $F_{min} = \\dfrac{mg}{\\mu}$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите ситуации по возрастанию силы трения, действующей на брусок массой 2 кг ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Трение: 0 Н; 3 Н (трение покоя); 4 Н; 12 Н.",
+        "options": [
+          "Брусок покоится, горизонтальных сил нет",
+          "Брусок покоится, его тянут силой 3 Н",
+          "Брусок скользит по дереву, $\\mu = 0{,}2$",
+          "Брусок скользит по резине, $\\mu = 0{,}6$"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "u * m * g",
+      "variables": ["u", "m", "g"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой $m$ равномерно тянут по горизонтальной поверхности. Выразите силу тяги $f$ через $m$, $g$ и коэффициент трения $u$.",
+        "hints": [],
+        "solution": "$F = F_{тр} = \\mu mg$."
+      }
+    }
+  }
+]

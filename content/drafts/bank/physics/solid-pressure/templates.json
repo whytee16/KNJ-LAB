@@ -1,0 +1,1710 @@
+[
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 2, 4, 5]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [100, 250, 400, 1000]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "p * s"
+        }
+      ],
+      "answer": "f / s",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила {{f}} Н действует перпендикулярно поверхности площадью {{s}} м². Найдите давление.",
+        "hints": [],
+        "solution": "$p = \\dfrac{F}{S} = \\dfrac{ {{f}} }{ {{s}} }$ Па."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [200, 500, 1000, 2000]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5, 2]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * s",
+      "tolerance": {},
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление {{p}} Па, площадь опоры {{s}} м². Найдите силу давления.",
+        "hints": [],
+        "solution": "$F = pS = {{p}} \\cdot {{s}}$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [500, 1000, 2000]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.4, 2]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "p * s"
+        }
+      ],
+      "answer": "f / p",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Сила давления {{f}} Н создаёт давление {{p}} Па. Найдите площадь опоры.",
+        "hints": [],
+        "solution": "$S = \\dfrac{F}{p}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 5, 12.5, 101]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите давление {{p}} кПа в паскалях.",
+        "hints": [],
+        "solution": "1 кПа = 1000 Па."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [50, 200, 400, 2500]
+        }
+      ],
+      "constraints": [],
+      "answer": "s / 10000",
+      "tolerance": {},
+      "decimals": 4,
+      "unit": "м²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите площадь {{s}} см² в квадратных метрах.",
+        "hints": [],
+        "solution": "1 м² = 10 000 см², делим на 10 000."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "В каких единицах измеряется давление в СИ?",
+        "hints": [],
+        "solution": "$1\\ \\text{Па} = 1\\ \\text{Н/м}^2$.",
+        "options": ["Паскаль (Па)", "Ньютон (Н)", "Н·м²", "кг/м³"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Как изменится давление, если площадь опоры уменьшить в 2 раза, не меняя силу?",
+        "hints": [],
+        "solution": "$p = F/S$: при уменьшении $S$ вдвое давление вдвое растёт.",
+        "options": [
+          "Увеличится в 2 раза",
+          "Уменьшится в 2 раза",
+          "Не изменится",
+          "Увеличится в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 4]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите примеры, где давление стремятся увеличить.",
+        "hints": [],
+        "solution": "Уменьшение площади увеличивает давление; гусеницы и лыжи, наоборот, уменьшают его.",
+        "options": [
+          "Заточка ножа",
+          "Острая игла",
+          "Широкие гусеницы трактора",
+          "Лыжи",
+          "Острые зубы хищников"
+        ]
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "easy",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление равно отношению силы, действующей перпендикулярно поверхности, к ___ этой поверхности.",
+        "hints": [],
+        "solution": "$p = F/S$.",
+        "accepted": ["площади"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.2, 0.25, 0.5]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [400, 800, 1200]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "f",
+          "expr": "p * s"
+        }
+      ],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": -90,
+            "size": 1,
+            "label": "P = {{f}} Н"
+          },
+          {
+            "angle": 90,
+            "size": 1,
+            "label": "N"
+          }
+        ]
+      },
+      "answer": "f / s",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик весом {{f}} Н стоит на полу (см. рисунок), площадь дна {{s}} м². Найдите давление ящика на пол.",
+        "hints": [],
+        "solution": "$p = \\dfrac{P}{S} = \\dfrac{ {{f}} }{ {{s}} }$ Па."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему лыжник не проваливается в рыхлый снег, а пешеход проваливается?",
+        "hints": [],
+        "solution": "При той же силе большая площадь опоры даёт меньшее давление.",
+        "options": [
+          "Лыжи увеличивают площадь опоры и уменьшают давление",
+          "Лыжник легче пешехода",
+          "Лыжи уменьшают вес",
+          "Лыжи увеличивают давление"
+        ]
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "easy",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между величиной и единицей.",
+        "hints": [],
+        "solution": "$p = F/S$: Н/м² = Па.",
+        "options": ["Давление", "Сила давления", "Площадь", "Масса"],
+        "matches": ["Па", "Н", "м²", "кг"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "easy",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2500, 15000, 40000, 101300]
+        }
+      ],
+      "constraints": [],
+      "answer": "p / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите давление {{p}} Па в килопаскалях.",
+        "hints": [],
+        "solution": "Делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "easy",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Одинаковые кирпичи кладут на стол разными гранями. Когда давление кирпича на стол наибольшее?",
+        "hints": [],
+        "solution": "Вес тот же, а площадь опоры наименьшая — давление наибольшее.",
+        "options": [
+          "Когда он стоит на самой маленькой грани",
+          "Когда лежит на самой большой грани",
+          "Давление одинаково",
+          "Когда лежит на средней грани"
+        ]
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "easy",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите давления по возрастанию.",
+        "hints": [],
+        "solution": "500 Па < 2000 Па < 10 000 Па < 100 000 Па.",
+        "options": ["500 Па", "2 кПа", "10 000 Па", "0,1 МПа"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [40, 45, 50, 60]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [250, 300, 400, 500]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / (s / 10000)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мальчик массой {{m}} кг стоит на полу. Площадь подошв обеих ног {{s}} см². Найдите давление мальчика на пол ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$F = mg$, $S = {{s}}$ см² $= {{s}}/10000$ м²; $p = \\dfrac{F}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [3.6, 3.9, 4.2]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / (0.25 * 0.12)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кирпич размерами 25 × 12 × 6,5 см и массой {{m}} кг лежит на столе самой большой гранью. Найдите давление ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Наибольшая грань $S = 0{,}25 \\cdot 0{,}12 = 0{,}03$ м²; $p = \\dfrac{mg}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 6, 10, 12]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [1.2, 1.5, 2, 2.4]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * 1000 * 10 / s / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Трактор массой {{t}} т опирается на гусеницы общей площадью {{s}} м². Найдите давление трактора на почву в кПа ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$F = mg = {{t}} \\cdot 1000 \\cdot 10$ Н; $p = F/S$; делим на 1000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.01, 0.02, 0.05]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [50, 100, 200]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * s",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "Н"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Острие иглы имеет площадь {{s}} мм². С какой силой нужно давить на иглу, чтобы создать давление {{p}} МПа?",
+        "hints": [],
+        "solution": "$S = {{s}} \\cdot 10^{-6}$ м², $p = {{p}} \\cdot 10^6$ Па; $F = pS = {{p}} \\cdot {{s}}$ Н."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.5, 1, 1.5, 2]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [20, 50, 90]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000 * s / 10",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какую наибольшую массу может иметь груз, чтобы при площади опоры {{s}} м² давление на лёд не превысило {{p}} кПа ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$mg \\le pS$, $m_{max} = \\dfrac{pS}{g}$."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек стоял на двух ногах, затем встал на одну. Как изменилось давление на пол?",
+        "hints": [],
+        "solution": "Сила (вес) та же, площадь опоры уменьшилась вдвое.",
+        "options": [
+          "Увеличилось примерно в 2 раза",
+          "Уменьшилось в 2 раза",
+          "Не изменилось",
+          "Увеличилось в 4 раза"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 16, 20, 24]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [4, 5, 8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / (4 * s / 10000)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стол массой {{m}} кг стоит на четырёх ножках, площадь каждой {{s}} см². Найдите давление стола на пол ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Площадь опоры $4 \\cdot {{s}}$ см² $= \\dfrac{4 \\cdot {{s}}}{10000}$ м²; $p = \\dfrac{mg}{S}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 2]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выберите верные утверждения о давлении.",
+        "hints": [],
+        "solution": "$p = F/S$.",
+        "options": [
+          "Давление тем больше, чем больше сила при той же площади",
+          "Давление тем больше, чем меньше площадь при той же силе",
+          "$1\\ \\text{Па} = 1\\ \\text{Н/м}^2$",
+          "Давление не зависит от площади",
+          "Давление измеряют в ньютонах"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [20, 25, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "m * 10 / (s / 10000)"
+        }
+      ],
+      "answer": "m * 10 / p * 10000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "см²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок массой {{m}} кг давит на стол с давлением {{p}} Па. Найдите площадь опоры бруска в см² ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$S = \\dfrac{mg}{p}$ м²; умножаем на 10 000."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 70]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [1.5, 1.6, 2]
+        },
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [8, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / (2 * l * w / 100)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лыжник массой {{m}} кг стоит на лыжах длиной {{l}} м и шириной {{w}} см. Найдите давление на снег ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Площадь двух лыж $S = 2 \\cdot {{l}} \\cdot {{w}}/100$ м²; $p = \\dfrac{mg}{S}$."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "medium",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Чтобы уменьшить давление, нужно ___ площадь опоры.",
+        "hints": [],
+        "solution": "При той же силе большая площадь даёт меньшее давление.",
+        "accepted": ["увеличить"]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "medium",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Почему у тяжёлых грузовиков много колёс?",
+        "hints": [],
+        "solution": "Больше колёс — больше площадь опоры, меньше давление на покрытие.",
+        "options": [
+          "Чтобы уменьшить давление на дорогу",
+          "Чтобы увеличить давление",
+          "Чтобы уменьшить массу",
+          "Для красоты"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "medium",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [4, 6, 8]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [1.6, 2, 2.5]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "t * 10 / s"
+        }
+      ],
+      "answer": "t * 10 / p",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "м²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление гусеничного трактора на почву {{p}} кПа, масса {{t}} т. Найдите площадь опоры гусениц ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$S = \\dfrac{mg}{p} = \\dfrac{ {{t}} \\cdot 1000 \\cdot 10}{ {{p}} \\cdot 1000 }$ м²."
+      }
+    }
+  },
+  {
+    "type": "matching",
+    "difficulty": "medium",
+    "spec": {
+      "type": "matching",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Установите соответствие между изменением условий и давлением (сила давления не меняется, кроме специально указанного).",
+        "hints": [],
+        "solution": "$p = F/S$.",
+        "options": [
+          "Площадь увеличили в 2 раза",
+          "Площадь уменьшили в 3 раза",
+          "Силу увеличили в 2 раза",
+          "Силу и площадь увеличили в 2 раза"
+        ],
+        "matches": [
+          "Уменьшилось в 2 раза",
+          "Увеличилось в 3 раза",
+          "Увеличилось в 2 раза",
+          "Не изменилось"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "medium",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "p * s",
+      "variables": ["p", "s"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Выразите силу давления $f$ через давление $p$ и площадь $s$.",
+        "hints": [],
+        "solution": "$F = pS$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "h",
+          "kind": "choice",
+          "values": [2, 3, 4, 5, 6]
+        }
+      ],
+      "constraints": [],
+      "answer": "2700 * 10 * h / 1000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Мраморная колонна высотой {{h}} м стоит на основании. Плотность мрамора 2700 кг/м³, $g = 10$ Н/кг. Найдите давление колонны на основание в кПа.",
+        "hints": ["Масса колонны $m = \\rho S h$."],
+        "solution": "$p = \\dfrac{mg}{S} = \\dfrac{\\rho S h g}{S} = \\rho g h$ — площадь сокращается."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [2, 5, 10, 20]
+        }
+      ],
+      "constraints": [],
+      "answer": "7800 * 10 * a / 100",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Стальной куб с ребром {{a}} см стоит на столе. Плотность стали 7800 кг/м³, $g = 10$ Н/кг. Найдите давление.",
+        "hints": [],
+        "solution": "Для куба $p = \\rho g a$ (ребро в метрах)."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 3, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "k",
+      "tolerance": {}
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два кубика из одного материала стоят на столе. Ребро первого в {{k}} раза больше. Во сколько раз давление первого больше?",
+        "hints": [],
+        "solution": "$p = \\rho g a$: давление пропорционально ребру."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1, 1.2, 2]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [0.5, 0.8]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.3]
+        }
+      ],
+      "constraints": [],
+      "answer": "2600 * 10 * min(a, b, c) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Гранитная плита размерами {{a}} × {{b}} × {{c}} м лежит на земле самой большой гранью. Плотность гранита 2600 кг/м³, $g = 10$ Н/кг. Найдите давление на землю в кПа.",
+        "hints": [],
+        "solution": "Для прямоугольной плиты $p = \\rho g h$, где $h$ — высота над опорой; на большой грани это наименьший размер."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [5, 10, 15]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.25, 0.5]
+        }
+      ],
+      "constraints": [],
+      "figure": {
+        "kind": "forces",
+        "body": "box",
+        "surface": "floor",
+        "forces": [
+          {
+            "angle": -90,
+            "size": "m + m2",
+            "label": "P"
+          },
+          {
+            "angle": 90,
+            "size": "m + m2",
+            "label": "N"
+          }
+        ]
+      },
+      "answer": "(m + m2) * 10 / s",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Ящик массой {{m}} кг стоит на полу. Сверху на него поставили ящик массой {{m2}} кг. Площадь дна нижнего ящика {{s}} м². Найдите давление на пол ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "На пол давит вес обоих ящиков: $p = \\dfrac{(m + m_2) g}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [100, 200, 500]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [1, 2, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000 * s / 10000 / 10",
+      "tolerance": {},
+      "decimals": 2,
+      "unit": "кг"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Какой массы груз нужно положить на дощечку площадью {{s}} см², чтобы давление на стол стало {{p}} кПа? Массой дощечки пренебречь ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$m = \\dfrac{pS}{g}$ (площадь в м²)."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кирпич лежит на столе гранью 25 × 12 см. Его поставили на грань 12 × 6,5 см. Во сколько раз увеличилось давление?",
+        "hints": [],
+        "solution": "$\\dfrac{p_2}{p_1} = \\dfrac{S_1}{S_2} = \\dfrac{300}{78} \\approx 3{,}8$.",
+        "options": ["Примерно в 3,8 раза", "В 2 раза", "Не изменилось", "В 6,5 раза"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 70]
+        },
+        {
+          "name": "mr",
+          "kind": "choice",
+          "values": [5, 8, 10]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [300, 400, 500]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m + mr) * 10 / (s / 10000) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек массой {{m}} кг держит рюкзак массой {{mr}} кг. Площадь подошв {{s}} см². Найдите давление на пол в кПа ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$p = \\dfrac{(m + m_р) g}{S}$, площадь в м²."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [500, 800, 1200]
+        }
+      ],
+      "constraints": [],
+      "answer": "2 * p",
+      "tolerance": {},
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление на пол двух одинаковых стоящих рядом ящиков равно {{p}} Па. Каким станет давление, если поставить один ящик на другой?",
+        "hints": [],
+        "solution": "Вес на пол тот же, а площадь опоры уменьшилась вдвое."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 4]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Столб давит на основание. Что увеличит давление на основание?",
+        "hints": [],
+        "solution": "Давление растёт с силой и уменьшением площади; плита увеличивает площадь.",
+        "options": [
+          "Поставить на столб груз",
+          "Уменьшить площадь основания столба при той же массе",
+          "Положить под столб широкую плиту",
+          "Заменить столб более лёгким того же размера",
+          "Сделать столб выше из того же материала"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "f",
+          "kind": "choice",
+          "values": [20, 30, 50]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [0.1, 0.2, 0.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "f / s",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "МПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Гвоздь забивают с силой {{f}} Н. Площадь острия {{s}} мм². Найдите давление острия в МПа.",
+        "hints": [],
+        "solution": "$p = \\dfrac{F}{S} = \\dfrac{ {{f}} }{ {{s}} \\cdot 10^{-6}}$ Па $= \\dfrac{ {{f}} }{ {{s}} }$ МПа."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите в порядке возрастания давления на опору (вес одинаковый).",
+        "hints": [],
+        "solution": "Чем меньше площадь, тем больше давление: 2 м² > 0,5 м² > 0,04 м² > 0,005 м².",
+        "options": ["Площадь опоры 2 м²", "Площадь 0,5 м²", "Площадь 400 см²", "Площадь 50 см²"]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [5, 6, 8]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [1.2, 1.5, 2]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * 10 / s",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Лёд выдерживает давление {{p}} кПа. Сможет ли пройти по нему трактор массой {{t}} т, если площадь гусениц {{s}} м²? Найдите давление трактора в кПа ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$p = \\dfrac{mg}{S} = \\dfrac{ {{t}} \\cdot 10^4}{ {{s}} }$ Па; сравните с {{p}} кПа."
+      }
+    }
+  },
+  {
+    "type": "cloze_word",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "cloze_word",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Давление однородного прямого столба на основание равно $\\rho g h$ и не зависит от ___ основания.",
+        "hints": [],
+        "solution": "Масса столба $\\rho S h$, сила тяжести делится на ту же площадь $S$.",
+        "accepted": ["площади"]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "sufficient",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "d * g * h",
+      "variables": ["d", "g", "h"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Однородный прямой столб высотой $h$ из материала плотностью $d$ стоит на основании. Запишите давление на основание (ускорение свободного падения $g$).",
+        "hints": [],
+        "solution": "$p = \\dfrac{\\rho S h g}{S} = \\rho g h$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [1.5, 2, 3, 4.5]
+        }
+      ],
+      "constraints": [],
+      "answer": "a * 8900 / 2700",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "см"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Медный кубик ($8900$ кг/м³) и алюминиевый кубик ($2700$ кг/м³) оказывают на стол одинаковое давление. Ребро медного {{a}} см. Найдите ребро алюминиевого.",
+        "hints": [],
+        "solution": "$\\rho_1 g a_1 = \\rho_2 g a_2$, $a_2 = a_1 \\dfrac{\\rho_1}{\\rho_2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "(m + m2) * 10 / (a / 100)^2",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На столе стоит кубик массой {{m}} кг с ребром {{a}} см, на нём — кубик массой {{m2}} кг с ребром {{b}} см. Найдите давление нижнего кубика на стол ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "На стол давит вес двух кубиков, площадь опоры — грань нижнего: $p = \\dfrac{(m + m_2)g}{a^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [1, 2, 4]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [10, 20]
+        },
+        {
+          "name": "m2",
+          "kind": "choice",
+          "values": [0.5, 1, 2]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [5, 8]
+        }
+      ],
+      "constraints": [],
+      "answer": "m2 * 10 / (b / 100)^2",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "На столе стоит кубик массой {{m}} кг с ребром {{a}} см, на нём — кубик массой {{m2}} кг с ребром {{b}} см. Найдите давление верхнего кубика на нижний ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "Верхний кубик давит своим весом на площадь своей грани (она меньше грани нижнего): $p = \\dfrac{m_2 g}{b^2}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [180, 360, 540, 900]
+        }
+      ],
+      "constraints": [],
+      "answer": "p * 1000 / (1800 * 10)",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "м"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кирпичная стена (плотность кирпича 1800 кг/м³) стоит на фундаменте. Фундамент выдерживает давление {{p}} кПа. Какой наибольшей высоты может быть стена ($g = 10$ Н/кг)?",
+        "hints": [],
+        "solution": "$p = \\rho g h$, $h_{max} = \\dfrac{p}{\\rho g}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [20, 25]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [8, 10, 12]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [4, 5]
+        }
+      ],
+      "constraints": [],
+      "answer": "max(a, b, c) / min(a, b, c)",
+      "tolerance": {},
+      "decimals": 2
+    },
+    "texts": {
+      "ru": {
+        "statement": "Брусок размерами {{a}} × {{b}} × {{c}} см лежит на столе. Отношение наибольшего давления к наименьшему, которое он может оказывать при разных положениях, равно?",
+        "hints": [],
+        "solution": "Давление $p = \\rho g h$, где $h$ — размер по вертикали; наибольшее при вертикальном наибольшем размере, наименьшее — при наименьшем."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [50, 60, 80]
+        },
+        {
+          "name": "p",
+          "kind": "choice",
+          "values": [2, 2.5, 4]
+        }
+      ],
+      "constraints": [],
+      "answer": "m * 10 / (p * 1000) * 10000",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "см²"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Человек массой {{m}} кг стоит на снегу. Снег выдерживает давление {{p}} кПа. Какой наименьшей площади нужны лыжи (обе вместе), чтобы не проваливаться? Ответ в см² ($g = 10$ Н/кг).",
+        "hints": [],
+        "solution": "$S_{min} = \\dfrac{mg}{p}$; переводим м² в см²."
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Цилиндр поставили на основание, затем распилили по высоте пополам и поставили половину рядом. Как изменилось давление каждой половины на стол?",
+        "hints": [],
+        "solution": "$p = \\rho g h$ — высота не изменилась.",
+        "options": [
+          "Не изменилось",
+          "Уменьшилось вдвое",
+          "Увеличилось вдвое",
+          "Уменьшилось вчетверо"
+        ]
+      }
+    }
+  },
+  {
+    "type": "single_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "single_choice",
+      "params": [],
+      "constraints": [],
+      "correct": 0
+    },
+    "texts": {
+      "ru": {
+        "statement": "Цилиндр поставили на основание, затем распилили поперёк на две равные по высоте части и поставили одну часть на стол. Как изменилось давление на стол?",
+        "hints": [],
+        "solution": "$p = \\rho g h$ — высота уменьшилась вдвое.",
+        "options": [
+          "Уменьшилось вдвое",
+          "Не изменилось",
+          "Увеличилось вдвое",
+          "Уменьшилось вчетверо"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "m",
+          "kind": "choice",
+          "values": [60, 80]
+        },
+        {
+          "name": "s",
+          "kind": "choice",
+          "values": [4, 5]
+        },
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [5, 10]
+        }
+      ],
+      "constraints": [],
+      "answer": "a^2 / s",
+      "tolerance": {},
+      "decimals": 1
+    },
+    "texts": {
+      "ru": {
+        "statement": "Шкаф массой {{m}} кг стоит на четырёх ножках, площадь каждой {{s}} см². Под ножки подложили квадратные пластины со стороной {{a}} см. Во сколько раз уменьшилось давление на пол? Массой пластин пренебречь.",
+        "hints": [],
+        "solution": "Сила та же; площадь каждой опоры выросла с {{s}} до ${{a}}^2$ см²."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "a",
+          "kind": "choice",
+          "values": [40, 50]
+        },
+        {
+          "name": "b",
+          "kind": "choice",
+          "values": [20, 25]
+        },
+        {
+          "name": "c",
+          "kind": "choice",
+          "values": [5, 10]
+        },
+        {
+          "name": "p1",
+          "kind": "choice",
+          "values": [500, 1000]
+        }
+      ],
+      "constraints": [],
+      "answer": "p1 * a / c",
+      "tolerance": {},
+      "decimals": 0,
+      "unit": "Па"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Однородная плита оказывает давление {{p1}} Па, лёжа на грани {{a}} × {{b}} см. Какое давление она окажет, если её поставить на грань {{b}} × {{c}} см?",
+        "hints": [],
+        "solution": "$\\dfrac{p_2}{p_1} = \\dfrac{S_1}{S_2} = \\dfrac{ab}{bc} = \\dfrac{a}{c}$."
+      }
+    }
+  },
+  {
+    "type": "multi_choice",
+    "difficulty": "hard",
+    "spec": {
+      "type": "multi_choice",
+      "params": [],
+      "constraints": [],
+      "correct": [0, 1, 3]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Два бруска одинаковой массы лежат на столе: первый на площади 50 см², второй на площади 100 см². Выберите верные утверждения.",
+        "hints": [],
+        "solution": "Вес равный; $p_1 = 2p_2$; два бруска на площади 50 см² — $2P/50 = 4 \\cdot P/100$.",
+        "options": [
+          "Силы давления брусков равны",
+          "Давление первого вдвое больше",
+          "Давление второго вдвое больше",
+          "Если поставить второй брусок на первый, давление на стол станет вчетверо больше давления второго бруска",
+          "Давления равны"
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "t",
+          "kind": "choice",
+          "values": [6, 8, 10]
+        },
+        {
+          "name": "l",
+          "kind": "choice",
+          "values": [2, 2.4, 2.5]
+        },
+        {
+          "name": "w",
+          "kind": "choice",
+          "values": [30, 40, 50]
+        }
+      ],
+      "constraints": [],
+      "answer": "t * 1000 * 9.8 / (2 * l * w / 100) / 1000",
+      "tolerance": {},
+      "decimals": 1,
+      "unit": "кПа"
+    },
+    "texts": {
+      "ru": {
+        "statement": "Гусеничный трактор массой {{t}} т имеет две гусеницы длиной {{l}} м и шириной {{w}} см. Найдите давление на почву в кПа ($g = 9{,}8$ Н/кг).",
+        "hints": [],
+        "solution": "$S = 2 \\cdot {{l}} \\cdot {{w}}/100$ м², $p = \\dfrac{mg}{S}$."
+      }
+    }
+  },
+  {
+    "type": "number",
+    "difficulty": "hard",
+    "spec": {
+      "type": "number",
+      "params": [
+        {
+          "name": "n",
+          "kind": "choice",
+          "values": [10, 12, 20]
+        },
+        {
+          "name": "p0",
+          "kind": "choice",
+          "values": [1000, 1500]
+        },
+        {
+          "name": "k",
+          "kind": "choice",
+          "values": [2, 4]
+        }
+      ],
+      "constraints": [],
+      "derived": [
+        {
+          "name": "p",
+          "expr": "n * p0"
+        },
+        {
+          "name": "p2",
+          "expr": "n * p0 / k"
+        }
+      ],
+      "answer": "n - n * p2 / p",
+      "tolerance": {},
+      "unit": "шт."
+    },
+    "texts": {
+      "ru": {
+        "statement": "Пирамида из {{n}} одинаковых кирпичей, сложенных стопкой, давит на опору с давлением {{p}} Па. Сколько кирпичей нужно убрать, чтобы давление стало {{p2}} Па?",
+        "hints": [],
+        "solution": "Давление пропорционально числу кирпичей: $n_2 = n \\dfrac{p_2}{p}$; убрать $n - n_2$."
+      }
+    }
+  },
+  {
+    "type": "ordering",
+    "difficulty": "hard",
+    "spec": {
+      "type": "ordering",
+      "params": [],
+      "constraints": []
+    },
+    "texts": {
+      "ru": {
+        "statement": "Расположите шаги решения задачи «найти давление стола на пол».",
+        "hints": [],
+        "solution": "Сила — вес стола, площадь — суммарная площадь ножек.",
+        "options": [
+          "Найти силу тяжести стола $mg$",
+          "Найти площадь одной ножки в м²",
+          "Умножить на число ножек",
+          "Разделить силу на общую площадь"
+        ]
+      }
+    }
+  },
+  {
+    "type": "formula",
+    "difficulty": "hard",
+    "spec": {
+      "type": "formula",
+      "params": [],
+      "constraints": [],
+      "answer": "d * g * a",
+      "variables": ["d", "g", "a"],
+      "range": [1, 9]
+    },
+    "texts": {
+      "ru": {
+        "statement": "Кубик с ребром $a$ сделан из материала плотностью $d$. Запишите давление кубика на стол (ускорение свободного падения $g$).",
+        "hints": [],
+        "solution": "$p = \\dfrac{\\rho a^3 g}{a^2} = \\rho g a$."
+      }
+    }
+  }
+]
